@@ -1,0 +1,170 @@
+@charset "utf-8";
+
+/* download category filter */
+p.download-filter { margin: 1em 0 2em 0; }
+p.download-filter a { padding: 0 4px 1px 4px; color: #363535; display: inline-block; zoom: 1; text-decoration: underline; font-weight: bold; font-size: 11px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; }
+p.download-filter a:hover,
+p.download-filter a:focus,
+p.download-filter a:active { background: #aaa; color: #202020; }
+p.download-filter a.active,
+p.download-filter a.active:hover,
+p.download-filter a.active:focus,
+p.download-filter a.active:active { color: #fff; background: #565c67; text-decoration: none; }
+
+/* game region select */
+div.game-region { text-align: right; color: #2f2f2f; font-size: 14px; width: 460px; padding-top: 6px; padding-bottom: 3em; float: right; }
+div.game-region label { display: inline-block; line-height: 30px; vertical-align: top; }
+div.game-region .ui-dropdown { float: none; display: inline-block; text-align: left; vertical-align: top; }
+
+/* download tables */
+div.category.hidden { display: none; }
+div.category .additional-info { padding 15px 0 15px 15px; margin: 1em 0 0 0; background: #4d606d; color: #c4d2db; }
+div.category .additional-info .columns-2 { margin: 0; }
+div.category .additional-info p { margin: 0; padding-right: 15px; }
+div.category table { width: 100%; padding:0; margin: 1em 0 3em 0; border-collapse: collapse; font-size: 11px; }
+div.category table tr.hidden { display: none; }
+div.category table th,
+div.category table td { text-align: left; vertical-align: top; padding: 13px; }
+div.category table thead { display: none; }
+div.category table tfoot p { line-height: 1.5; }
+div.category table tfoot p.hidden { display: none; }
+div.category table tbody th,
+div.category table tbody td { background-color: #e5e4e3; }
+div.category table tbody tr.full th,
+div.category table tbody tr.full td,
+div.category table tbody tr.beta th,
+div.category table tbody tr.beta td,
+div.category table tbody tr.trial th,
+div.category table tbody tr.trial td,
+div.category table tbody tr.starter th,
+div.category table tbody tr.starter td,
+div.category table tbody tr.guide th,
+div.category table tbody tr.guide td,
+div.category table tbody tr.classic th,
+div.category table tbody tr.classic td { border-bottom: 3px solid #d3d1ce; }
+div.category table tbody th.details { padding-left: 64px; background-repeat: no-repeat; background-position: 13px 13px; }
+div.category table tbody tr.full th.details { background-image: url("../../local-common/images/game-icons/full-client-32.png"); }
+div.category table tbody tr.beta th.details { background-image: url("../../local-common/images/game-icons/beta-client-32.png"); }
+div.category table tbody tr.trial th.details { background-image: url("../../local-common/images/game-icons/free-trial-32.png"); }
+div.category table tbody tr.starter th.details { background-image: url("../../local-common/images/game-icons/starter-client-32.png"); }
+div.category table tbody tr.guide th.details { background-image: url("../../local-common/images/game-icons/guide-32.png"); }
+div.category table tbody tr.d2dv th.details { background-image: url("../../local-common/images/game-icons/d2dv-32.png"); }
+div.category table tbody tr.d2xp th.details { background-image: url("../../local-common/images/game-icons/d2xp-32.png"); }
+div.category table tbody tr.star th.details { background-image: url("../../local-common/images/game-icons/star-32.png"); }
+div.category table tbody tr.war3 th.details { background-image: url("../../local-common/images/game-icons/war3-32.png"); }
+div.category table tbody tr.w3xp th.details { background-image: url("../../local-common/images/game-icons/w3xp-32.png"); }
+div.category table tbody tr.language-pack.hidden { display: none; }
+div.category table tbody tr.language-pack th.details { background-image: url("../../local-common/images/game-icons/language-pack-32.png"); }
+div.category table tbody tr:hover th,
+div.category table tbody tr:hover td { background-color: #ededec; }
+div.category table tbody tr.hover th,
+div.category table tbody tr.hover td { background-color: #ededec; }
+
+th.details h4 { text-transform: none; font-size: 14px; font-weight: bold; font-family: "Trebuchet MS", Arial, sans-serif; color: #202020; }
+th.details .language-selection { color: #999; }
+th.details .language-selection .active-language { color: #4a4a4a; }
+th.details .language-selection a.change-language.hidden { display: none; }
+
+th.details .region-selection { padding: 8px; background: #bfbfbe; position: relative; zoom: 1; }
+th.details .region-selection.hidden { display: none; }
+th.details .available-languages.hidden { display: none; }
+th.details .region-selection p { line-height: 1.5; color: #737373; }
+th.details .region-selection p.selection { margin-bottom: 1em; }
+th.details .region-selection p.languages { margin-bottom: 0; }
+th.details .region-selection p strong { color: #363535; font-weight: normal; }
+th.details .region-selection p.selection a { padding: 0 4px 1px 4px; color: #363535; display: inline-block; zoom: 1; text-decoration: underline; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; font-weight: bold; }
+th.details .region-selection p.selection a:hover,
+th.details .region-selection p.selection a:focus,
+th.details .region-selection p.selection a:active { background: #aaa; color: #202020; }
+th.details .region-selection p.selection a.active,
+th.details .region-selection p.selection a.active:hover,
+th.details .region-selection p.selection a.active:focus,
+th.details .region-selection p.selection a.active:active { color: #fff; background: #565c67; text-decoration: none; }
+
+th.details .region-selection p.controls { position: absolute; top: 8px; right: 8px; text-align: right; text-transform: uppercase; }
+th.details .region-selection p.controls a { padding: 0 8px 1px 4px; display: inline-block; }
+th.details .region-selection p.controls a.save { border-right: 1px solid #adadad; }
+
+div.category table td.language { text-align: right; vertical-align: top; line-height: 32px; width: 130px; }
+
+div.category table tbody td.download { width: 100px; }
+td.download a { color: #014663; display: block; height: 32px; line-height: 32px; padding-left: 36px; position: relative; z-index: 1; }
+td.download a.disabled-download { cursor: default; }
+td.download a.hidden { display: none; }
+td.download a:hover,
+td.download a:focus,
+td.download a:active { color: #007ca5; }
+td.download a.disabled-download,
+td.download a.disabled-download:hover,
+td.download a.disabled-download:focus,
+td.download a.disabled-download:active, { color: #7f7e7d; cursor: default; }
+
+td.download a .icon { display: block; width: 32px; height: 32px; overflow: hidden; background: url("../../images/icons/os.png") no-repeat 0 0; position: absolute; z-index: 2; top: 0; left: 0; }
+
+td.download.win a .icon { background-position: 0 0; }
+td.download.win a:hover .icon,
+td.download.win a:focus .icon
+td.download.win a:active .icon { background-position: 0 -32px; }
+td.download.win a.disabled-download .icon,
+td.download.win a.disabled-download:hover .icon,
+td.download.win a.disabled-download:focus .icon,
+td.download.win a.disabled-download:active .icon { background-position: 0 -64px; }
+
+td.download.win a.unavailable-download .icon { background-position: -64px 0; }
+td.download.win a.unavailable-download:hover .icon,
+td.download.win a.unavailable-download:focus .icon
+td.download.win a.unavailable-download:active .icon { background-position: -64px -32px; }
+td.download.win a.disabled-download.unavailable-download .icon,
+td.download.win a.disabled-download.unavailable-download:hover .icon,
+td.download.win a.disabled-download.unavailable-download:focus .icon,
+td.download.win a.disabled-download.unavailable-download:active .icon { background-position: -64px -64px; }
+
+td.download.mac a .icon { background-position: -32px 0; }
+td.download.mac a:hover .icon,
+td.download.mac a:focus .icon
+td.download.mac a:active .icon { background-position: -32px -32px; }
+td.download.mac a.disabled-download .icon,
+td.download.mac a.disabled-download:hover .icon,
+td.download.mac a.disabled-download:focus .icon,
+td.download.mac a.disabled-download:active .icon { background-position: -32px -64px; }
+
+td.download.mac a.unavailable-download .icon { background-position: -64px 0; }
+td.download.mac a.unavailable-download:hover .icon,
+td.download.mac a.unavailable-download:focus .icon
+td.download.mac a.unavailable-download:active .icon { background-position: -64px -32px; }
+td.download.mac a.disabled-download.unavailable-download .icon,
+td.download.mac a.disabled-download.unavailable-download:hover .icon,
+td.download.mac a.disabled-download.unavailable-download:focus .icon,
+td.download.mac a.disabled-download.unavailable-download:active .icon { background-position: -64px -64px; }
+
+td.download.pdf a .icon { background-position: -96px 0; }
+td.download.pdf a:hover .icon,
+td.download.pdf a:focus .icon
+td.download.pdf a:active .icon { background-position: -96px -32px; }
+td.download.pdf a.disabled-download .icon,
+td.download.pdf a.disabled-download:hover .icon,
+td.download.pdf a.disabled-download:focus .icon,
+td.download.pdf a.disabled-download:active .icon { background-position: -96px -64px; }
+
+td.download.pdf a.unavailable-download .icon { background-position: -64px 0; }
+td.download.pdf a.unavailable-download:hover .icon,
+td.download.pdf a.unavailable-download:focus .icon
+td.download.pdf a.unavailable-download:active .icon { background-position: -64px -32px; }
+td.download.pdf a.disabled-download.unavailable-download .icon,
+td.download.pdf a.disabled-download.unavailable-download:hover .icon,
+td.download.pdf a.disabled-download.unavailable-download:focus .icon,
+td.download.pdf a.disabled-download.unavailable-download:active .icon { background-position: -64px -64px; }
+
+div.category table tbody td.no-downloads,
+div.category table tbody td.logged-out { text-align: center; vertical-align: middle; }
+
+/* headers */
+div.category .header { height: 48px; overflow: hidden; border-bottom: 1px solid #b2b0af; position: relative; padding: 0 0 0 56px; }
+div.category .header img { border-right: 1px solid #b2b0af; position: absolute; left: 0; top: 0; }
+
+/* age gate */
+div.category .age-gate { padding: 13px; margin: 1em 0 3em 0; background: #bfbfbf; }
+div.category .age-gate .caption { margin: 0 0 .5em 0; }
+div.category .age-gate select.input { height: 32px; display: inline-block; vertical-align: middle; margin-right: .5em; padding: 4px 6px 6px 6px; }
+div.category .age-gate .button1 { display: inline-block; vertical-align: middle; padding: 0; }
+.age-gate .button1.disabled span { background: #888; }

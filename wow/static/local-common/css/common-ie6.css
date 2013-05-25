@@ -1,0 +1,92 @@
+/* utility classes */
+.clear { height: 0; line-height: 100%; overflow: hidden; }
+
+/* ui */
+.ui-tooltip { float: left; }
+.ui-dropdown .dropdown-wrapper { right: -1px }
+.ui-pagination li { float: left; display: block; margin-right: 2px; }
+.ui-pagination li a { float: left; }
+
+.ie6 #posts .post-pages { text-align:left }
+.ie6 #posts .post-pages .ui-pagination { float:right; margin-top:10px; position:relative; top:-6px; }
+.ie6 #posts .post-pages .ui-pagination li { float:left; display:block; }
+.ie6 #posts .post-pages .ui-pagination li a { padding:0 }
+
+#toast-container { position: absolute; }
+.flyout-menu ul li a { display: inline-block; }
+.trending-topics .topic { line-height: 150%; }
+.trending-topics a,
+.articles-list a,
+.ui-context,
+.ui-context .context { zoom: 1; }
+.ui-context .context .close { zoom: 1; z-index: 101; float: right; }
+
+/* service bar */
+.service-cell { display: inline; background-image: url("../images/service-bar/background-msie.png"); }
+.service-home a { background-image: url("../images/service-bar/background-msie.png"); }
+.service-support-enhanced { background-position: 100% -240px; }
+.service-support a.service-link-dropdown { background-image: url("../images/service-bar/background-msie.png"); }
+.service-support a.active,
+.service-support a.active:hover,
+.service-support a.active:focus { background: url("../images/service-bar/background-msie.png") repeat-x 100% -320px; }
+.service-explore a.dropdown { background-image: url("../images/service-bar/background-msie.png"); }
+.service-explore a.dropdown:link,
+.service-explore a.dropdown:visited { color: #FFF; }
+.service-language a { background-image: url("../images/service-bar/map.gif"); }
+.explore-menu { right: -1px; }
+.support-primary { background-image: url("../images/service-bar/support-menu-msie.png"); }
+.support-secondary { background-image: url("../images/service-bar/support-menu-msie.png"); }
+.explore-primary { background-image: url("../images/service-bar/explore-menu-msie.png"); }
+.explore-secondary { background-image: url("../images/service-bar/explore-menu-msie.png"); }
+.explore-links li,
+.explore-links a { height: 1%; }
+.explore-game a:hover,
+.explore-game a:focus { background-image: url("../images/service-bar/explore-menu-msie.png"); }
+#breaking-news { padding: 0 0 7px 0; background: url("../images/service-bar/background-msie.png") 0 -200px no-repeat; }
+.service-bar .service-news a,
+.service-bar .service-news.opened a,
+.service-bar .service-news.opened a:hover,
+.service-bar .service-news.opened a:focus { height: 33px; display: block; border-right: 1px solid #33373B; border-left: 0; width: 50px; background: url("../images/service-bar/background-msie.png") repeat-x -117px -160px; }
+.open-support-tickets { background: url("../images/service-bar/background-msie.png") repeat-x -188px -168px; }
+.ticket-summary li a .icon-ticket-status { background: url("../images/icons/sprite-msie.png") -256px -128px;  left: -32px; }
+.ticket-summary li a:hover .icon-ticket-status,
+.ticket-summary li a:focus .icon-ticket-status,
+.ticket-summary li a:active .icon-ticket-status { background: url("../images/icons/sprite-msie.png") -256px -160px; }
+
+/* warnings */
+#warnings-wrapper { margin: 0; float: right; width: 425px; }
+.warning { margin: 0 9px 0 0; zoom: 1; }
+.warning .warning-inner2 { padding: 10px 10px 10px 40px !important; background: url("../images/icons/warning.gif") 10px 7px no-repeat; zoom: 1; }
+#i18n-warning .warning-inner2 { background: url("../images/service-bar/globe.gif") 12px 17px no-repeat; }
+#i18n-warning .warning-inner2 span { margin-left: 9px; }
+
+/* footer */
+#sitemap .column { width: 247px; }
+#sitemap .column ul a { display: block; width: 100%; }
+#sitemap h3 { background: url("../images/icons/footer.gif") no-repeat }
+#sitemap h3.bnet { background-position: 0 0 }
+#sitemap h3.games { background-position: 5px -50px }
+#sitemap h3.classic { background-position: 0 -100px }
+#sitemap h3.account { background-position: 5px -150px }
+#sitemap h3.support { background-position: 0 -200px }
+#footer, #copyright { zoom: 1; }
+
+/* i18n switcher */
+#change-language span { display: inline-block; }
+
+/* Home */
+.deleted .post-character { z-index:40; position:relative;  }
+div.post-options .respond .button2 img { vertical-align:sub }
+
+/* CMS */
+.page-comment-interior * { zoom:1; } /* Nested Reply bug */
+#content .rate-action a { line-height:auto;  zoom:1; display:block;  } /* rating line-height */
+.karma .dropdown-wrapper, .karma .ui-dropdown { width:136px !important; }
+
+.actions-panel {  zoom:1; }
+#thread { clear:both;}
+.mod-actions a, .user-details { background-image:url(../images/icons/modactions.gif) !important; }
+#forum-content input { background:none; }
+#news-updates .news-article .comments-link {    background-position-y: -15px; }
+
+#forum-content .forum-actions { z-index:1001; }

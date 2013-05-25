@@ -1,0 +1,34 @@
+
+/* header */
+#header { z-index: 90; position: relative; zoom: 1; }
+#header .card-render { float: left; left: 0; }
+
+/* content */
+.media-frame { display: inline; }
+.tab-menu li { float: left; }
+.data-options .ui-pagination { display: block; padding-top: 10px; }
+
+/* feeds */
+.profile-section .activity-feed li { height:17px }
+.profile-section .activity-feed dd { width:auto; float:left}
+.profile-section .activity-feed dt { float:left}
+
+/*guild news*/
+#news-list .activity-feed li { position:static; padding-left:15px }
+#news-list .activity-feed li .icon-frame { left: -5px; position: relative; top: 0; }
+
+/* Lists filter */
+.list-filter .input { position:relative; top:14px; left:8px}
+
+
+.pandaria-sub #footer { margin:0 auto; }
+.pandaria-sub #incense-wrapper { position:absolute; left:182px; bottom: 181px; }
+.pandaria-sub.feature #content .content-bot { height:1450px !important }
+.pandaria-sub.pandaren #content .content-bot { height:1550px !important }
+.pandaria-sub.monk #content .content-bot { height:1400px !important }
+.pandaria-sub.challenge-modes #content .content-bot { height:1500px !important }
+.pandaria-sub.zone #content .content-bot { height:2000px !important }
+.pandaria-sub.pet-battle #content .content-bot { height:1350px !important }
+
+.frame-wrapper.races .frame-contents { height: 380px; }
+.frame-wrapper.class .frame-contents { height: 240px; }

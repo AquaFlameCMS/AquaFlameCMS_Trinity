@@ -1,0 +1,5 @@
+.scroll-pane { overflow:hidden }
+.scroll-pane .scroll-bar-wrap { clear:left; padding:0 4px 0 2px }
+.scroll-pane .scroll-bar-wrap .ui-slider { height:12px; margin:0 auto; position:relative; text-align:left }
+.scroll-pane .scroll-bar-wrap .ui-handle-helper-parent { position:relative; width:100%; height:100%; margin:0 auto }
+.scroll-pane .ui-slider-handle { position:absolute; display:block; height:100% }

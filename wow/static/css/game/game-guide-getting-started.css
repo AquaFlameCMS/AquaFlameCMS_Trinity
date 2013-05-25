@@ -1,0 +1,106 @@
+@charset "utf-8";
+
+.game-guide-getting-started #content .content-top { background: url("../../images/game/guide/getting-started/bg-page-top.jpg") 100% 0 no-repeat; }
+
+
+.guide-intro-part {min-height:610px;}
+
+p {width:428px; margin:0;}
+.ui-button {margin-left:3px;}
+
+.step1-div {background: url("../../images/game/guide/getting-started/bg-contents-p-01.jpg") 100% 0 no-repeat; width:100%;}
+.step1-div .left-col {width:480px; float:left;}
+.step1-div .right-col {width:421px; float:left;}
+.step1-div .sever-type-list {margin-left:46px;}
+.step1-div .choose-realm-desc .media-frame {margin:21px 0 20px 0;}
+.step1-div .sever-type-list .guide-sub-desc {margin:0;}
+.step1-div .sever-type-list ul {margin:30px 0 0 26px; width:364px;}
+.step1-div .sever-type-list ul li {color:#967648; font-size:12px; line-height:18px; margin-bottom:30px;}
+.step1-div .sever-type-list ul li span {color:#e9bd7f; font:normal 20px/29px Palatino Linotype, serif; display:block; margin-bottom:4px;}
+.step1-div .sever-type-list ul li em {color:#b94829; font:normal 11px Arial, Sans-serif; display:inline-block; margin-left:10px;}
+.step1-div .wrapper {background: url("../../images/game/guide/getting-started/bg-p-01.jpg") 100% 100% no-repeat; width:100%; }
+.step1-div  .raf-desc {width:421px; margin:58px 10px 0 0; font-size:12px; line-height:22px; min-height:300px;}
+.step1-div  .raf-desc p {margin:35px 0 0 50px; padding-bottom:24px;}
+.step1-div  .interface {width:100%; height:613px; background: url("../../images/game/guide/getting-started/bg-contents-p-02.jpg") 100% 100% no-repeat; position:relative;}
+.step1-div  .interface .guide-content-subtitle {padding-top:33px; margin-left:71px; display:block;}
+.step1-div  .interface .media-frame {position:absolute; top:79px; left:72px; }
+.step1-div  .interface #interface-viewer {width:642px; height:405px; background: url("../../images/game/guide/getting-started/bg-interface-box.jpg") 0 0 no-repeat;}
+.step1-div  .interface #interface-viewer a { cursor: help; background:none; position:absolute; display:block;}
+.step1-div  .interface #interface-viewer a:hover, .step1-div  .interface #interface-viewer a.over {background: url("../../images/game/guide/getting-started/interface-divs.jpg") 0 0 no-repeat;}
+.step1-div  .interface #interface-viewer #div01 {top:16px; left:16px; width:107px; height:189px;}
+.step1-div  .interface #interface-viewer #div02 {top:212px; left:16px; width:107px; height:35px;}
+.step1-div  .interface #interface-viewer #div03 {top:254px; left:16px; width:107px; height:46px;}
+.step1-div  .interface #interface-viewer #div04 {top:307px; left:16px; width:107px; height:105px;}
+.step1-div  .interface #interface-viewer #div05 {top:307px; left:129px; width:44px; height:105px;}
+.step1-div  .interface #interface-viewer #div06 {top:349px; left:290px; width:98px; height:63px;}
+.step1-div  .interface #interface-viewer #div07 {top:70px; right:14px; width:113px; height:155px;}
+.step1-div  .interface #interface-viewer #div08 {top:232px; right:14px; width:113px; height:155px;}
+.step1-div  .interface #interface-viewer #div01:hover, .step1-div  .interface #interface-viewer #div01.over {background-position:0 0;}
+.step1-div  .interface #interface-viewer #div02:hover, .step1-div  .interface #interface-viewer #div02.over {background-position:0 -196px;}
+.step1-div  .interface #interface-viewer #div03:hover, .step1-div  .interface #interface-viewer #div03.over {background-position:0 -238px;}
+.step1-div  .interface #interface-viewer #div04:hover, .step1-div  .interface #interface-viewer #div04.over {background-position:0 -291px;}
+.step1-div  .interface #interface-viewer #div05:hover, .step1-div  .interface #interface-viewer #div05.over {background-position:100% 100%;}
+.step1-div  .interface #interface-viewer #div06:hover, .step1-div  .interface #interface-viewer #div06.over {background-position:-108px 0;}
+.step1-div  .interface #interface-viewer #div07:hover, .step1-div  .interface #interface-viewer #div07.over {background-position:-108px -79px;}
+.step1-div  .interface #interface-viewer #div08:hover, .step1-div  .interface #interface-viewer #div08.over {background-position:-108px -241px;}
+#interface-list {position:absolute; right:67px; top:81px; width:173px;}
+#interface-list a {cursor: help; background: url("../../images/game/guide/getting-started/interface-numbers.gif") 0 0 no-repeat; padding-left:27px; font-size:12px; line-height:30px; display:block;}
+#interface-list .l-01 {background-position:0 8px;}
+#interface-list .l-02 {background-position:0 -30px;}
+#interface-list .l-03 {background-position:0 -68px;}
+#interface-list .l-04 {background-position:0 -104px;}
+#interface-list .l-05 {background-position:0 -142px;}
+#interface-list .l-06 {background-position:0 -180px;}
+#interface-list .l-07 {background-position:0 -218px;}
+#interface-list .l-08 {background-position:0 -256px;}
+#interface-list .l-01:hover, #interface-list .l-01.over {background-position:0 -292px; color:#fff;}
+#interface-list .l-02:hover, #interface-list .l-02.over {background-position:0 -330px; color:#fff;}
+#interface-list .l-03:hover, #interface-list .l-03.over {background-position:0 -368px; color:#fff;}
+#interface-list .l-04:hover, #interface-list .l-04.over {background-position:0 -404px; color:#fff;}
+#interface-list .l-05:hover, #interface-list .l-05.over {background-position:0 -442px; color:#fff;}
+#interface-list .l-06:hover, #interface-list .l-06.over {background-position:0 -480px; color:#fff;}
+#interface-list .l-07:hover, #interface-list .l-07.over {background-position:0 -518px; color:#fff;}
+#interface-list .l-08:hover, #interface-list .l-08.over {background-position:0 -556px; color:#fff;}
+
+
+.step2-div {background: url("../../images/game/guide/getting-started/bg-p-04.jpg") 100% 0 no-repeat;}
+.races-list {width:904px; height:355px; background: url("../../images/game/guide/getting-started/bg-contents-p-03.jpg") 0 0 no-repeat; margin:0 auto;}
+.step2-div .guide-sub-desc {min-height:268px;}
+.step2-div .races-group {width:421px; height:235px;}
+.step2-div .races-group .guide-content-subtitle {margin-left:20px; line-height:78px;}
+.step2-div .alliance-group {float:left; min-height:228px; margin-left:6px; padding-top:5px;}
+.step2-div .horde-group {float:right; min-height:228px; margin-right:0; padding-top:5px;}
+.step2-div .races-group  ul {margin-left:20px;}
+.step2-div .races-group  ul li, .step3-div .class-group ul li {width:129px; display:block; float:left; margin-bottom:22px;}
+.step2-div .races-group  ul li span, .step3-div .class-group ul li span {display:block; float:left; line-height:30px;}
+.step2-div .races-group  ul li .list-title, .step3-div .class-group ul li .list-title {padding-left:10px; width:70px; line-height:17px;}
+
+.step3-div {background: url("../../images/game/guide/getting-started/bg-p-05.jpg") 100% 0 no-repeat; min-height:930px;}
+.step3-div .content-col-left {float:left; width:495px;}
+.step3-div .content-col-right {float:right; width:488px;}
+.step3-div .class-group {background: url("../../images/game/guide/getting-started/bg-contents-p-04.jpg") 0 12px no-repeat; width:434px; height:441px; margin-left:45px; padding-top:12px;}
+.step3-div .class-group .guide-content-subtitle {margin-left:27px; line-height:78px;}
+.step3-div .class-group ul {margin:0 0 30px 27px;}
+.step3-div .class-group ul li .list-title {width:70px; line-height:19px;}
+
+.step3-div .content-col-right .guide-content-subtitle {margin:0;}
+.step3-div .class-role .guide-detail-desc p {display:block;}
+.step3-div .class-role .class-role-title {margin:0 0 10px 0; padding-left:53px; line-height:43px; display:block; font-size:16px; text-transform:uppercase; color:#e9bd7f;}
+.step3-div .class-role .tank .class-role-title {background: url("../../images/game/guide/getting-started/icon-class-role-tank.gif") 0 0 no-repeat;}
+.step3-div .class-role .healer .class-role-title {background: url("../../images/game/guide/getting-started/icon-class-role-healer.gif") 0 10px no-repeat; padding-top:10px;}
+.step3-div .class-role .dealer .class-role-title {background: url("../../images/game/guide/getting-started/icon-class-role-dealer.gif") 0 0 no-repeat;}
+
+.step3-div .class-role .tank {background: url("../../images/game/guide/getting-started/class-role-tank.png") 100% 0 no-repeat; min-height:256px; margin-top:18px;}
+.step3-div .class-role .tank .guide-detail-desc p {width:223px;}
+.step3-div .class-role .healer {padding-left:222px; background: url("../../images/game/guide/getting-started/class-role-healer.png") 0 0 no-repeat; min-height:234px;}
+.step3-div .class-role .healer .guide-detail-desc p {width:215px;}
+.step3-div .class-role .dealer {background: url("../../images/game/guide/getting-started/class-role-dealer.png") 257px 0 no-repeat; min-height:249px; margin-top:45px;}
+.step3-div .class-role .dealer .guide-detail-desc p {width:220px;}
+
+
+.step4-div {background: url("../../images/game/guide/getting-started/bg-p-06.jpg") 100% 0 no-repeat; min-height:559px;}
+.step5-div {background: url("../../images/game/guide/getting-started/bg-p-07.jpg") 100% 0 no-repeat; min-height:299px;}
+
+
+
+

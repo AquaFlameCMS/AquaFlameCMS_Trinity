@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+#content .content-top { background: url("../../images/game/guide/late-game/bg.jpg") 0 0 no-repeat; }
+
+.box .guide-content-subtitle { background: url("../../images/game/guide/late-game/icons.png") 0 0 no-repeat; }
+
+/* Dungeons */
+#dungeons { padding-top: 50px; min-height: 900px; position: relative; background: url("../../images/game/guide/late-game/bg-dungeons.jpg") 0 50% no-repeat; }
+#dungeons .dungeon-info { width: 375px; padding: 25px; position: absolute; top: 0; right: 50px; background: url("../../images/game/guide/late-game/dungeon-box.jpg") 0 0 no-repeat; }
+#dungeons .dungeon-info .box { height: auto; min-height: inherit; padding-bottom: 25px; }
+#dungeons .media-frame { position: absolute; left: 50px; top: 675px; }
+#dungeons .dungeon-instance .guide-content-subtitle { background-position: 0 0; }
+#dungeons .dungeon-monsters .guide-content-subtitle { background-position: 0 -55px; }
+#dungeons .dungeon-wipe .guide-content-subtitle { background-position: 0 -110px; }
+#dungeons .dungeon-loot .guide-content-subtitle { background-position: 0 -165px; }
+#dungeons .dungeon-finder .guide-content-subtitle { background-position: 0 -220px; }
+
+/* Raids */
+#raids { padding-top: 50px; background: url("../../images/game/guide/late-game/bg-raids.jpg") 100% 0 no-repeat; }
+#raids .raid-challenge .guide-content-subtitle { background-position: 0 -275px; }
+#raids .raid-experience .guide-content-subtitle { background-position: 0 -330px; }
+#raids .raid-reward .guide-content-subtitle { background-position: 0 -385px; }
+
+/* Pvp */
+#pvp { padding-top: 50px; background: url("../../images/game/guide/late-game/bg-pvp.jpg") 100% 0 no-repeat; }
+#pvp .pvp-world .guide-content-subtitle { background-position: 0 -440px; }
+#pvp .pvp-bg .guide-content-subtitle { background-position: 0 -495px; }
+#pvp .pvp-objective .guide-content-subtitle { background-position: 0 -550px; }
+#pvp .pvp-arena .guide-content-subtitle { background-position: 0 -605px; }
+#pvp .pvp-duels .guide-content-subtitle { background-position: 0 -660px; }
+
+/* New */
+#finale { padding-top: 50px; background: url("../../images/game/guide/late-game/bg-new.jpg") 100% 0 no-repeat; }

@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+#content .content-top { background:url("../../images/game/comparison/content-top.jpg") no-repeat scroll 50% 0 transparent; }
+
+#filter-table { display: none; margin-top: 15px; clear:both }
+#filter-table input[type=text], #filter-table select { width: 150px; }
+#filter-table input[type=text] { color:#666; font-style:italic; }
+#filter-table input.active { color: #000; font-style:normal; }
+#filter-table #filter-status { width: auto }
+
+#realm-status { padding: 20px; }
+#realm-status .tab-menu { float: left; }
+#realm-status .filter-toggle { float: right; }
+#realm-filters .filter { margin-bottom: 0; }
+
+.table .status { width: 50px; text-align: center; }
+.table .name { width: auto; font-weight:bold; }
+.table .type { width: 90px; text-align: center; }
+.table .population { width: 130px; text-align: center; }
+.table .locale { width: 110px; text-align: center; }
+.table .queue { width: 90px; text-align: center; }
+
+.filter-text { display:none; }
+.table td.status { padding-top:0; padding-bottom:0; }
+.status-icon { background:url(../../images/icons/status.gif) 0 0 no-repeat; margin:0 auto; height:28px; width:27px; }
+.status-icon.up { background-position:-110px 0; }
+
+td.type span,
+td.population span { color:#ebdba2; }
+.type .pvp,
+.population .high,
+.population .full { color:#C33 }
+.type .rp,
+.population .low { color:#3C3; }
+.population .new,
+.population .newplayers { color:#09C; }
+
+.no-results { display:none; text-align:center; font-style:italic; font-size:120%; padding:10px 0; }
+.rowFiltered { display:none; }

@@ -1,0 +1,70 @@
+@charset "utf-8";
+
+#content .content-top { background: url("../../images/game/guide/playing-together/bg.jpg") 0 0 no-repeat; }
+
+.container { color: #967648; margin: 0 auto; width: 815px; padding: 40px 40px 0 40px; background: url("../../images/game/guide/playing-together/container.jpg") 50% 0 no-repeat; }
+.container ul { float: left; width: 50%; line-height: 175%; }
+.container li { padding: 0 50px 50px 75px; position: relative; }
+.container h3 { color: #e9bd7f; text-transform: uppercase; font-weight: normal; font-size: 14px; margin-bottom: 5px; }
+.container .icon { width: 60px; height: 75px; position: absolute; top: 0; left: 0; }
+
+.box .guide-content-subtitle { background: url("../../images/game/guide/playing-together/icons.png") 0 0 no-repeat; }
+
+/* chat */
+#chat { padding-top: 75px; background: url("../../images/game/guide/playing-together/bg-chat.jpg") 100% 0 no-repeat; }
+#chat .chat-other { padding: 0 50px; height: 700px; background: url("../../images/game/guide/playing-together/bg-chat-2.jpg") 0 0 no-repeat; }
+#chat .chat-other .dialog { width: 250px; height: 200px; padding: 20px; cursor: help; position: absolute; bottom: 0; background: url("../../images/game/guide/playing-together/chat-boxes.jpg") 0 0 no-repeat; }
+#chat .chat-other .dialog h3 { color: #d28000; text-transform: uppercase; font-weight: normal; line-height: 100%; padding: 0 0 10px 25px; }
+#chat .chat-other .dialog:hover { color:#E9BD7F; }
+#chat .chat-other .dialog:hover h3 { color: #fff; }
+#chat .chat-other .dialog.d1 { left: 50px; }
+#chat .chat-other .dialog.d1:hover { background-position: 0 -241px; }
+#chat .chat-other .dialog.d2 { background-position: -301px 0; left: 350px; }
+#chat .chat-other .dialog.d2:hover { background-position: -301px -241px; }
+#chat .chat-other .dialog.d3 { background-position: -602px 0; left: 650px; }
+#chat .chat-other .dialog.d3:hover { background-position: -602px -241px; }
+#chat .chat-other .bubble { position: absolute; display: none; background: transparent url("../../images/game/guide/playing-together/chat-bubbles.png") 0 0 no-repeat; }
+#chat .chat-other #bubble-1-1 { width: 99px; height: 40px; background-position: 0 -102px; left: 616px; top: 106px; }
+#chat .chat-other #bubble-1-2 { width: 163px; height: 14px; background-position: 0 -87px; left: 37px; top: 374px; }
+#chat .chat-other #bubble-2-1 { width: 202px; height: 40px; background-position: 0 -46px; left: 62px; top: 116px; }
+#chat .chat-other #bubble-2-2 { width: 288px; height: 14px; background-position: 0 -31px; left: 35px; top: 388px; }
+#chat .chat-other #bubble-3-1 { width: 327px; height: 30px; left: 35px; top: 345px; }
+#chat .chat-channel .guide-content-subtitle { background-position: 0 0; }
+#chat .chat-voice .guide-content-subtitle { background-position: 0 -55px; }
+#chat .chat-other .guide-content-subtitle { background-position: 0 -110px; }
+
+/* party and raids */
+#party { padding-top: 75px; background: url("../../images/game/guide/playing-together/bg-party.jpg") 0 0 no-repeat; }
+#party .left { padding: 0 0 0 50px; width: 420px; float: left; }
+#party .right { padding: 0 50px 0 0; width: 420px; float: right; }
+#party .party-rules .icon { background: url("../../images/game/guide/playing-together/party-rules.png") 0 0 no-repeat; }
+#party .party-rules .ffa .icon { background-position: 0 0; }
+#party .party-rules .robin { margin-bottom: 60px; }
+#party .party-rules .robin .icon { background-position: -60px -52px; }
+#party .party-rules .looter .icon { background-position: 0 -105px; }
+#party .party-rules .group .icon { background-position: -60px -170px; }
+#party .party-rules .greed .icon { background-position: 0 -235px; }
+#party .party-form .guide-content-subtitle { background-position: 0 -165px; }
+#party .party-leader .guide-content-subtitle { background-position: 0 -220px; }
+#party .party-rule .guide-content-subtitle { background-position: 0 -275px; }
+
+/* guilds */
+#guild { padding-top: 75px; background: url("../../images/game/guide/playing-together/bg-guild.jpg") 0 0 no-repeat; }
+#guild .guild-roles { padding-bottom: 40px }
+#guild .guild-roles .icon { background: url("../../images/game/guide/playing-together/guild-roles.png") 0 0 no-repeat; }
+#guild .guild-roles .ranks .icon { background-position: 0 0; }
+#guild .guild-roles .promote .icon { background-position: 0 -85px; }
+#guild .guild-roles .manage .icon { background-position: 0 -165px; }
+#guild .guild-roles .leader .icon { background-position: 0 -250px; }
+#guild .guild-tabard .guide-content-subtitle { background-position: 0 -330px; }
+#guild .guild-leader .guide-content-subtitle { background-position: 0 -385px; }
+#guild .guild-bank .guide-content-subtitle { background-position: 0 -440px; }
+#guild .guild-chat .guide-content-subtitle { background-position: 0 -495px; }
+#guild .guild-advance .guide-content-subtitle { background-position: 0 -550px; }
+
+/* friends */
+#friends { min-height: 525px; padding: 50px 0; position: relative; background: url("../../images/game/guide/playing-together/bg-friends.jpg") 0 85% no-repeat; }
+#friends .friends { position: absolute; top: 50px; right: 50px; width: 355px; min-height: 375px; padding: 35px; background: url("../../images/game/guide/playing-together/friends-box.jpg") 0 0 no-repeat; }
+#friends .friends .guide-content-subtitle { background: none; padding: 0 0 10px 0; height: auto; }
+#friends .friends-list { padding-left: 185px; padding-bottom: 50px; }
+#friends .real-id { float: right; margin-left: 15px; }

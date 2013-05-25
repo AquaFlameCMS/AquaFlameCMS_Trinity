@@ -1,0 +1,41 @@
+
+.icon-heroic-skull,
+.icon-daily-quest,
+.icon-faction-0,
+.icon-faction-1 { zoom: 1; }
+.icon-faction-0 { background: url("../images/icons/alliance.gif") left center no-repeat; }
+.icon-faction-1 { background: url("../images/icons/horde.gif") left center no-repeat; }
+
+.ui-tooltip { background: #0F0F0F; zoom: 1; }
+.ui-typeahead .group-title { background-image: url("../images/layout/search/search_icons.gif"); }
+.character-spec li { display: block; position: relative; zoom: 1; }
+
+#content,
+#content .content-top,
+#content .content-bot { zoom: 1 }
+
+/* forms */
+.input.disabled { filter: alpha(opacity=30) }
+
+.sort-link, .sort-tab,
+.sort-link span, .sort-tab span { zoom: 1; }
+
+/* page sub nav */
+#sub-nav li {float:left;}
+
+/* flyout */
+.flyout-menu ul li { border-bottom-width: expression(this.nextSibling==null ? 0 : 1); }
+.flyout-menu ul li .flyout-menu ul {
+	width: expression(this.nextSibling==null ? '200px' : '199px');
+	border-right-width: expression(this.nextSibling==null ? 0 : 1); }
+
+#header .user-plate a.profile-link .hover { display: none; }
+#header .user-plate a.profile-link:hover .hover { display: block; }
+
+#server-error { height: 900px; }
+
+.table-filters { zoom: 1; background: url("../images/form/filter-bg.jpg") no-repeat; }
+
+/* main sidebar navigation list */
+.dynamic-menu li.has-submenu a .arrow { background: url("../images/profile/sidebar-menu-arrows.gif") 100% 9px no-repeat; }
+.dynamic-menu li.back-to a .arrow { background: url("../images/profile/sidebar-menu-arrows.gif") 2px -91px no-repeat; }
