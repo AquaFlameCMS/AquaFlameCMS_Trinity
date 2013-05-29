@@ -311,15 +311,16 @@ if (!isset($_SESSION['username'])) {
         </script>
         <?php
     }else {
-        echo'
-  <div class="user-plate ajax-update">
-    <div class="card-nochars">
-	   <div class="player-name">
-	     ' . $userInfo['firstName'] . '
-	   </div>
-     ' . $uplate['nochars'] . '
-    </div>
-  </div>';
+        echo'<div class="user-plate">
+			<div class="card-character plate-default no-wow">
+			</div>
+			<div class="meta-wrapper meta-no-wow ajax-update">
+			<div class="meta">
+			<div class="player-name">' . $userInfo['firstName'] . '</div>
+			' . $uplate['nochars'] . '
+			</div>
+			</div>
+			</div>';
     }
 }
 mysql_select_db($server_db, $connection_setup) or die(mysql_error());
