@@ -11,7 +11,6 @@ require_once("../configs.php");
 <![endif]-->
 <meta name="robots" content="none" />
 <meta http-equiv="refresh" content="8;url=../account_log.php"/>
-<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" href="<?php echo $website['root'];?>wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
 <!--[if LT IE 9]>
 <link rel="shortcut icon" type="image/x-icon" href="images/root.ico" />

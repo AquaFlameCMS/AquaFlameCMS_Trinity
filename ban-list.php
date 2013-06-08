@@ -121,7 +121,7 @@ while($raw = mysql_fetch_array($response)) {
 echo '
 <tbody>
 <tr class="parent-row">
-<td valign="top" class="align-center" data-raw="20"><span class="icon-frame frame-14 " data-tooltip="' .$_SESSION['username']. '"><a href="">'.$raw['id'].'</a></span></td>
+<td valign="top" class="align-center" data-raw="20"><a href="">'.$raw['id'].'</a></span></td>
 <td valign="top" class="align-center" data-raw="20"><a href="">'.$raw['bannedby'].'</a></td>
 <td valign="top" class="align-center" data-raw="20"><span>'.$unban.'</time></span></td>
 <td valign="top" class="align-center" data-raw="20"><strong data-service-id="null">'.$bantime.'</strong></td>
