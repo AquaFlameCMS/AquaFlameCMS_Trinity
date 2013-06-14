@@ -617,7 +617,7 @@ var Core = {
 		if (Core.isIE(6)) {
 			$(context).find('button.ui-button').hover(
 				function() {
-					if (!this.hasAttribute('disabled') || this.className.indexOf('disabled') == -1)
+					if (!$(this).hasAttribute('disabled') || this.className.indexOf('disabled') == -1)
 						$(this).addClass('hover');
 				},
 				function() {
@@ -698,6 +698,14 @@ var Core = {
 			return '-' + result;
 
 		return result;
+	},
+
+	/**
+	 * Fire a Google Analytics event asynchronously.
+	 */
+	trackEvent: function(eventCategory, eventAction, eventLabel) {
+		window._gaq = window._gaq || [];
+		_gaq.push(['_trackEvent', eventCategory, eventAction, eventLabel]);
 	},
 
 	/**
@@ -977,7 +985,7 @@ var App = {
 	showSidebar: function() {
 		App.forceLoad = false;
 
-		var sidebar = $('#sidebar').find('.sidebar-bot');
+		var sidebar = $('#sidebar .sidebar-bot');
 
 		for (var i = 0; i < App.totalModules; i++) {
 			if (App.modules[i]) {
@@ -989,6 +997,11 @@ var App = {
 			sidebar.find('.sidebar-module').fadeIn();
 			$(this).remove();
 		});
+
+		// Reset
+		App.modules = [];
+		App.totalModules = 0;
+		App.totalLoaded = 0;
 	},
 
 	/**
@@ -998,10 +1011,10 @@ var App = {
 	 * @param index
 	 */
 	loadModule: function(module, index) {
-		var sidebar = $('#sidebar').find('.sidebar-bot');
+		var sidebar = $('#sidebar .sidebar-bot');
 
 		$.ajax({
-			url: Core.baseUrl +'/sidebar/'+ module.type + (module.query || ""),
+			url: Core.baseUrl + '/sidebar/' + module.type + (module.query || ""),
 			type: 'GET',
 			dataType: 'html',
 			cache: true,
@@ -1155,7 +1168,7 @@ var Input = {
 		var field = $(target);
 
 		field.focus(Input.activate).blur(Input.reset);
-		field.parentsUntil('form').parent().submit(function() {
+		field.closest('form').submit(function() {
 			return Input.submit(field);
 		});
 	},
@@ -1488,7 +1501,7 @@ var Tickets = {
 				jsonpCallback: 'getStatus',
 				data: {
 					supportToken: supportToken
-				},				
+				},
 				success: function(json) {
 					Tickets.updateTotal(json.total);
 					Tickets.updateSummary(json.details, json.total);
@@ -1679,7 +1692,6 @@ var Blackout = {
         }
 
         // Show blackout
-	Blackout.element.html('<div><div style="background:url(wow/static/images/close.png)no-repeat;height:32px;width:32px;margin-top:230px;margin-left:825px;cursor:pointer;"></div>');
         Blackout.element.show();
 
         // Call optional functions
@@ -1722,7 +1734,13 @@ var CharSelect = {
 		$('div.scrollbar-wrapper').css('overflow', 'hidden');
 		$('input.character-filter')
 			.blur(function() { Toggle.keepOpen = false; })
-			.keyup(CharSelect.filter);
+			.keyup(CharSelect.filter)
+			.keydown(function(e) {
+				if (e.which == KeyCode.enter) {
+					e.stopPropagation();
+					e.preventDefault();
+				}
+			});
 
 		Input.bind('.character-filter');
 	},
@@ -1801,10 +1819,10 @@ var CharSelect = {
 				target;
 
 			if (self.attr('id')) {
-				target = '#'+ self.attr('id');
+				target = '#' + self.attr('id');
 			} else {
 				target = self.attr('class').replace('ajax-update', '').trim();
-				target = '.'+ target.split(' ')[0];
+				target = '.' + target.split(' ')[0];
 			}
 
 			var clone = pageData.find(target + '.ajax-update').clone(),
@@ -2036,7 +2054,7 @@ var Flash = {
      */
     initialize: function() {
          //set flash base and rating image
-         Flash.defaultVideoParams.base          = Flash.videoBase;
+         //Flash.defaultVideoParams.base          = Flash.videoBase;
          Flash.defaultVideoFlashVars.ratingPath = Flash.ratingImage;
          Flash.defaultVideoFlashVars.locale     = Core.locale;
          Flash.defaultVideoFlashVars.dateFormat = Core.shortDateFormat;
@@ -2057,9 +2075,22 @@ var Flash = {
      * Default flash vars for videos
      */
     defaultVideoFlashVars: {
-        ratingFadeTime: "2",
-        ratingShowTime: "1",
+        ratingFadeTime: "1",
+        ratingShowTime: "4", //min requirement for ESRB
         autoPlay:       true
+    },
+
+    /**
+     * Get Flash Error
+     *
+     * @returns flash error msgs
+     */
+    getFlashError: function () {
+    	var errorDiv = $("<div id=\"flash-error\" class=\"align-center\" />");
+    	errorDiv.append("<h3 class=\"subheader\">" + Msg.ui.flashErrorHeader + "</h3>" +
+        		"<p><a href=\"" + Msg.ui.flashErrorUrl + "\">" + Msg.ui.flashErrorText +"</a></p>");
+
+    	return errorDiv;
     }
 };
 
@@ -2206,10 +2237,7 @@ var Toast = {
 	 * @return object
 	 */
 	create: function(content) {
-		var toast = $('<div/>')
-			.addClass('ui-toast')
-			.hide()
-			.appendTo(Toast.container);
+		var toast = $('<div/>').addClass('ui-toast');
 
 		$('<div/>').addClass('toast-arrow').appendTo(toast);
 		$('<div/>').addClass('toast-top').appendTo(toast);
@@ -2228,6 +2256,9 @@ var Toast = {
 					$(this).remove();
 				});
 			});
+
+        // Snapshot height with content before hiding
+        toast.appendTo(Toast.container).css({height: toast.height()}).hide();
 
 		return toast;
 	},
@@ -2569,14 +2600,15 @@ var UserAgent = {
 	version: null,
 
 	/**
-	 * Extracte the browser and version.
+	 * Extract the browser and version.
 	 *
 	 * @constructor
 	 */
 	initialize: function() {
 		var userAgent = UserAgent.header,
-			version,
-			browser;
+			version = ['other/0.0', '0'],
+			browser = UserAgent.browser,
+			className;
 
 		// Browser
 		if (userAgent.indexOf('firefox') != -1)
@@ -2610,10 +2642,16 @@ var UserAgent = {
 		else if (browser == 'safari')
 			version = /safari\/([-.0-9]+)/.exec(userAgent);
 
-		UserAgent.browser = browser;
-		UserAgent.version = version[1].substring(0, 1);
+		// version can be null if userAgent == 'firefox/', &c.
+		if (version === null) {
+			version = [browser + '/0.0', '0.0'];
+		}
 
-		var className = browser;
+		UserAgent.browser = browser;
+
+		UserAgent.version = (/(\d*)\D/.exec(version[1])) || '0';
+
+		className = browser;
 
 		if (UserAgent.version)
 			className += ' '+ browser + UserAgent.version;
@@ -2855,7 +2893,10 @@ var Overlay = {
 			// Look in cache
             if (Overlay.cache[content]) {
 				Overlay.show(Overlay.cache[content]);
-            } else {
+				// fire overlayLoaded event (ajaxComplete is nonspecific)
+				$('#overlay').trigger('overlayLoaded');
+			}
+			else {
 				$.ajax({
 					type: "GET",
 					url: content,
@@ -2867,6 +2908,8 @@ var Overlay = {
 					success: function(data, status) {
 						Overlay.cache[content] = data;
 						Overlay.setContent(data);
+						$('#overlay').trigger('overlayLoaded');
+
 					}
 				});
 			}
@@ -2876,7 +2919,8 @@ var Overlay = {
             Overlay.show($(content).html());
 
         // Content: Text
-        } else {
+		}
+		else {
             Overlay.show(content);
         }
 	},
@@ -2955,10 +2999,16 @@ var Overlay = {
 	 * @param content
 	 */
 	setContent: function(content) {
-		if (content != null)
+		if (content != null) {
+			// for empty content, empty the container so we don't have leftovers such as orphan events
+			if (content === '') {
+				Overlay.wrapper.find('overlay-middle').empty();
+			}
+			else {
 			Overlay.wrapper.find('.overlay-middle').html(content);
 	}
-
+		}
+	}
 };
 
 /**
@@ -3365,3 +3415,278 @@ $.ajaxSetup({
 		return true;
 	}
 });
+
+
+/*
+	Feedback Form
+*/
+var Feedback = {
+	form: null,
+
+	// map field IDs to the name attributes sent in request
+	ID_MAP: {
+		'url': 'feedback-page-url',
+		'email': 'feedback-email',
+		'subject': 'feedback-subject',
+		'body': 'feedback-body'
+	},
+
+	overlayInstance: null,
+
+	pageErrorMsg: '',
+	pageReferring: '',
+
+	feedbackUrl: '',
+
+	initialize: function () {
+		// if we're looking at the fallback version of the page, don't do anything.
+		if ($('#feedback-page').length) {
+			return;
+		}
+
+		this.feedbackUrl = '/' + Core.locale + '/feedback/';
+
+		// assign event handlers to form callers/buttons
+
+		var feedbackSuggestionLinks = $('.feedback-suggestion-open'),
+			feedbackErrorLinks = $('.feedback-error-open'),
+			self = this;
+
+		feedbackSuggestionLinks.each(function () {
+			this.onclick = function () {
+				self.open('suggestion');
+				return false;
+			};
+		});
+
+		feedbackErrorLinks.each(function () {
+			this.onclick = function () {
+				self.open('bug');
+				return false;
+			};
+		});
+
+		this.overlayInstance = Overlay;
+	},
+
+	open: function (type) {
+		var self = this;
+
+		self.overlayInstance.open(self.feedbackUrl + 'feedback-form.frag', {
+			ajax: true,
+			className:'feedback-overlay',
+			bindClose: false
+		});
+
+		$('#overlay').unbind('overlayLoaded');
+
+		// custom event 'overlayLoaded' added to Overlay
+		$('#overlay').bind('overlayLoaded', function () {
+			var overlayWrapper = $(self.overlayInstance.wrapper);
+
+			self.overlayInstance.position(); // Position is calculated wrong initially, possibly due to ajax not being complete
+
+			// Overlay does not give us an option to set position, so override it here
+			overlayWrapper.css('position', 'absolute');
+
+			// make sure the overlay isn't positioned offscreen
+			if (parseInt(overlayWrapper.css('top'), 10) < 0) {
+				overlayWrapper.css('top', 0);
+			}
+
+			self.form = document.getElementById('website-feedback');
+
+			var headline = $('.feedback-wrapper h2'),
+				introText = $('#feedback-intro-message'),
+				submitBtn = document.getElementById('feedback-submit'),
+				//cancelBtn = document.getElementById('feedback-cancel'),
+				subjectField = document.getElementById('feedback-subject'),
+				pageUrlField = document.getElementById('feedback-page-url'),
+				pageUrlSystemField = document.getElementById('page-url-system'),
+				bodyLabel = $('.feedback-body-label #body-label-text'),
+				bodyField = document.getElementById('feedback-body'),
+				charCount = $('#feedback-body-char-count'),
+				maxCount = bodyField.getAttribute('maxlength');
+
+			// override the X close button in the overlay to use our cancel method
+			$('.overlay-close').unbind('click').bind('click', function (e) {
+				e.preventDefault();
+				self.cancel();
+			});
+
+
+			if (type === 'suggestion') {
+				headline.html(Feedback.titleWebsiteSuggestion);
+				introText.html(Feedback.introFeedback);
+			}
+			else {
+				headline.html(Feedback.titleWebsiteFeedback);
+				introText.html(Feedback.introError);
+				bodyLabel.html(Feedback.feedbackError);
+			}
+
+			self.form.setAttribute('action', self.feedbackUrl + type);
+
+			// show cancel button
+			//cancelBtn.style.display = 'inline-block';
+
+			// prepopulate Subject field with page error msg if available
+			subjectField.value = self.pageErrorMsg;
+
+			// prepopulate Page URL field with referring page URL
+			pageUrlField.value = self.pageReferring;
+			pageUrlSystemField.value = self.pageReferring;
+
+			// move focus to the overlay
+			$(pageUrlField).focus();
+
+			// keep focus in overlay
+			$('#blackout').bind('click.feedback', function (e) {
+				$(pageUrlField).focus();
+			});
+
+			$(submitBtn).keydown(function (e) {
+				if (e.which === 9 && !(e.shiftKey)) {
+					e.preventDefault();
+					$(pageUrlField).focus();
+				}
+			});
+
+			$(pageUrlField).keydown(function (e) {
+				if (e.which === 9 && e.shiftKey) {
+					e.preventDefault();
+					$(submitBtn).focus();
+				}
+			});
+
+			submitBtn.onclick = function () {
+				if (!self.submit()) {
+					return false;
+				}
+			};
+
+			// textarea character counter
+			charCount[0].parentNode.style.display = 'block';
+			charCount[0].firstChild.nodeValue = maxCount;
+			bodyField.onkeyup = function () {
+				if (this.value.length > maxCount) {
+					$(this).addClass('.feedback-error');
+					charCount.addClass('error');
+				}
+				else {
+					charCount.removeClass('error');
+				}
+				charCount.html(maxCount - this.value.length);
+			};
+		});
+	},
+
+	submit: function () {
+		var submitUrl = this.form.getAttribute('action'),
+			emailField = document.getElementById('feedback-email'),
+			charCount = document.getElementById('feedback-body-char-count'),
+			feedbackBody = document.getElementById('feedback-body'),
+			feedbackSupportsite = $('#feedback-supportsite'),
+			introText = $('#feedback-intro-message'),
+			self = this;
+
+		// clear error states
+		$('.feedback-error').each(function () {
+			var $this = $(this);
+
+			$this.removeClass('feedback-error');
+			if ($this.attr('id') !== 'feedback-body-char-count') {
+			$this.next('.feedback-error-msg').hide();
+			}
+			$(charCount).removeClass('error');
+		});
+
+		if (feedbackBody.value.length > (feedbackBody.hasAttribute('maxlength') ? feedbackBody.getAttribute('maxlength') : 2000)) {
+			$(feedbackBody).addClass('feedback-error');
+			$(charCount).addClass('error');
+		}
+
+		// validate each field with .feedback-required
+		var requiredFields = $('.feedback-required', this.form);
+
+		requiredFields.each(function () {
+			var el = $(this);
+			if ((el.val() === null) || ($.trim(el.val()) === '')) {
+				el.addClass('feedback-error');
+				el.next('.feedback-error-msg').show();
+			}
+		});
+
+		// return user to form if required fields left empty or any errors
+		if ($('.feedback-error').length === 0) {
+
+			var serializedForm = $(self.form).serializeArray();
+
+			if ($.trim(emailField.value) === '') {
+				for (var i = 0, iLen = serializedForm.length; i < iLen; i += 1) {
+					if (serializedForm[i].name === 'email') {
+						serializedForm[i].value = 'no_email_given@blizzard.com';
+			}
+				}
+			}
+
+			$.ajax({
+				type: 'POST',
+				url: submitUrl,
+				data: serializedForm,
+				success: function () {
+					var successMsg = document.getElementById('feedback-success'),
+					closeBtn = document.getElementById('feedback-close');
+
+					self.form.style.display = 'none';
+					successMsg.style.display = 'block';
+					introText.hide();
+					feedbackSupportsite.hide();
+
+					closeBtn.onclick = function () {
+						self.cancel();
+					};
+				},
+				error: function (data) {
+					var response;
+					try {
+						response = JSON.parse(data.responseText);
+						if (response) {
+					$.each(response.fieldErrors, function (key, val) {
+						$('#' + self.ID_MAP[key]).addClass('feedback-error').next('.feedback-error-msg').show();
+					});
+
+					return false;
+				}
+						else {
+							throw "Invalid response";
+						}
+					}
+					catch (e) {
+						var failMsg = document.getElementById('feedback-fail'),
+							failCloseBtn = document.getElementById('feedback-fail-close');
+
+						self.form.style.display = 'none';
+						failMsg.style.display = 'block';
+
+						failCloseBtn.onclick = function () {
+							self.cancel();
+						};
+						return false;
+					}
+				}
+			});
+			return false;
+		}
+		else {
+		}
+	},
+
+	cancel: function () {
+		$('.feedback-wrapper').remove();
+		$('#blackout').unbind('click.feedback');
+		this.overlayInstance.close();
+		this.overlayInstance.cache = {};
+		return false;
+	}
+};
