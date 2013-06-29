@@ -45,19 +45,28 @@ try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
 <div class="content-trail">
 <ol class="ui-breadcrumb">
 <li>
-<a href="index.php" rel="np">
-<?php echo $website['title']; ?>
-</a>
+<a href="index.php" rel="np"><?php echo $website['title']; ?></a>
+<span class="breadcrumb-arrow"></span>
 </li>
 <li>
-<a href="services.php" rel="np">
-Services
-</a>
+<a href="services.php" rel="np">Services</a>
+<span class="breadcrumb-arrow"></span>
 </li>
-<li class="last">
-<a href="" rel="np">
-<?php echo $character->getObjectInfo()->name;?> @ <?php echo @$name_realm1['realm']; ?>
-</a>
+<li>
+<a href="search.php" rel="np">Search</a>
+<span class="breadcrumb-arrow"></span>
+</li>
+<li class="last children"><a href="threed.php?name=<?php echo $character->getObjectInfo()->name;?>" rel="np"><?php echo $character->getObjectInfo()->name;?> @ <?php echo @$name_realm1['realm']; ?></a>
+</li>
+</ol>
+</div>
+<div class="content-trail">
+<ol class="ui-breadcrumb">
+<li>
+<a href="index.php" rel="np"><?php echo $website['title']; ?></a>
+<span class="breadcrumb-arrow"></span>
+</li>
+<li class="last children"><a href="status.php" rel="np"><?php echo $Status['RealmStat']; ?></a>
 </li>
 </ol>
 </div>

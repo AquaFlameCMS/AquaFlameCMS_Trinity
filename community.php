@@ -55,8 +55,12 @@ include("header.php");
 <div class="content-top">
 <div class="content-trail">
 <ol class="ui-breadcrumb">
-<li><a href="index.php" rel="np"><?php echo $website['title']; ?></a></li>
-<li class="last"><a href="community.php" rel="np"><?php $Community['Community']; ?></a></li>
+<li>
+<a href="index.php" rel="np"><?php echo $website['title']; ?></a>
+<span class="breadcrumb-arrow"></span>
+</li>
+<li class="last children"><a href="community.php" rel="np"><?php $Community['Community']; ?></a></a>
+</li>
 </ol>
 </div>
 <div class="content-bot">			
@@ -265,7 +269,7 @@ include("header.php");
     background: url("wow/static/images/community/001.png") no-repeat;
 }
 							</style>
-								<li><a href="http://www.strawberry-pr0jcts.com/forum/" id="wow" target="_blank"><span class="content-title">AquaFlame CMS</span><span class="content-desc"><?php echo $Community['comm14']; ?></span></a></li></ul>
+								<li><a href="http://www.aquaflame.org/" id="wow" target="_blank"><span class="content-title">AquaFlame CMS</span><span class="content-desc"><?php echo $Community['comm14']; ?></span></a></li></ul>
 								
 								
 						</div>

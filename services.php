@@ -34,8 +34,12 @@ try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
 <div class="content-top">
 <div class="content-trail">
 <ol class="ui-breadcrumb">
-<li><a href="index.php" rel="np" class=""><?php echo $website['title']; ?></a></li>
-<li class="last"><a href="services.php" rel="np"><?php echo $Serv['Serv']; ?></a></li>
+<li>
+<a href="index.php" rel="np"><?php echo $website['title']; ?></a>
+<span class="breadcrumb-arrow"></span>
+</li>
+<li class="last children"><a href="services.php" rel="np"><?php echo $Serv['Serv']; ?></a>
+</li>
 </ol>
 </div>
 <div class="content-bot">	

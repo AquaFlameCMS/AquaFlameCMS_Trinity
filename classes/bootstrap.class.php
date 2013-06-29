@@ -4,7 +4,7 @@ class Configuration
 {
     private $_dbHost = "localhost";
     private $_dbUser = "root";
-    private $_dbPass = "kabeli";
+    private $_dbPass = "password";
     
     private $_dbName = array("Character" => array("characters"),"World" => "world","Realm" => "auth");
     

@@ -72,10 +72,14 @@ include("header.php");
 <div class="content-top">
 <div class="content-trail">
 <ol class="ui-breadcrumb">
-<li><a href="index.php" rel="np"><?php echo $website['title']; ?></a></li>
-<li><a href="services.php" rel="np">Services</a></li>
-<li><a href="search.php" rel="np">Search</a></li>
-<li class="last"><a href="guild.php" rel="np">GUILD @ REALM</a></li>
+<li>
+<a href="index.php" rel="np"><?php echo $website['title']; ?></a>
+<span class="breadcrumb-arrow"></span>
+</li>
+<li><a href="services.php" rel="np">Services</a><span class="breadcrumb-arrow"></span></li>
+<li><a href="search.php" rel="np">Search</a><span class="breadcrumb-arrow"></span></li>
+<li class="last children"><a href="guild.php" rel="np">GUILD @ REALM</a></a>
+</li>
 </ol>
 </div>
 <div class="content-bot">

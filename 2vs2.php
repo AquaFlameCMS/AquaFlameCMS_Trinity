@@ -52,10 +52,20 @@ _gaq.push(['_trackPageview']);
 <div class="content-top">
 <div class="content-trail">
 <ol class="ui-breadcrumb">
-<li><a href="index.php" rel="np"><?php echo $website['title']; ?></a></li>
-<li><a href="status.php" rel="np">Status</a></li>
-<li><a href="status.php" rel="np">Arena</a></li>
-<li class="last"><a href="2vs2.php" rel="np">Top 2vs2</a></li>
+<li>
+<a href="index.php" rel="np"><?php echo $website['title']; ?></a>
+<span class="breadcrumb-arrow"></span>
+</li>
+<li>
+<a href="status.php" rel="np">Status</a>
+<span class="breadcrumb-arrow"></span>
+</li>
+<li>
+<a href="status.php" rel="np">Arena</a>
+<span class="breadcrumb-arrow"></span>
+</li>
+<li class="last children"><a href="2vs2.php" rel="np">Top 2vs2</a>
+</li>
 </ol>
 </div>
 <div class="content-bot">
