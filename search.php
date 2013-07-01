@@ -6,25 +6,26 @@ require_once("forum/functions/post_toHtml.php");
 $page_cat = "services";
 ?>
 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb">
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+ <html lang="en-gb">
 <head>
 <title>Search - <?php echo $website['title']; ?></title>
 <meta content="false" http-equiv="imagetoolbar" />
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
 <link rel="shortcut icon" href="wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
-<link rel="stylesheet" type="text/css" media="all" href="wow/static/local-common/css/common.css" />
-<!--[if IE]> <link rel="stylesheet" type="text/css" media="all" href="/wow/static/local-common/css/common-ie.css?v35" /><![endif]-->
-<!--[if IE 6]> <link rel="stylesheet" type="text/css" media="all" href="/wow/static/local-common/css/common-ie6.css?v35" /><![endif]-->
-<!--[if IE 7]> <link rel="stylesheet" type="text/css" media="all" href="/wow/static/local-common/css/common-ie7.css?v35" /><![endif]-->
+<link rel="stylesheet" href="wow/static/local-common/css/common.css" />
+
 <link title="World of Warcraft - News" href="feed/newshtml.html" type="application/atom+xml" rel="alternate"/>
-<link rel="stylesheet" type="text/css" media="all" href="wow/static/css/wow.css" />
-<link rel="stylesheet" type="text/css" media="all" href="wow/static/local-common/css/cms/search.css" />
-<link rel="stylesheet" type="text/css" media="all" href="wow/static/css/search.css" />
-<!--[if IE]> <link rel="stylesheet" type="text/css" media="all" href="/wow/static/css/wow-ie.css?v18" /><![endif]--><!--[if IE 6]> <link rel="stylesheet" type="text/css" media="all" href="/wow/static/css/wow-ie6.css?v18" /><![endif]-->
-<!--[if IE 7]> <link rel="stylesheet" type="text/css" media="all" href="/wow/static/css/wow-ie7.css?v18" /><![endif]-->
-<script type="text/javascript" src="wow/static/local-common/js/third-party/jquery-1.4.4.min.js"></script>
-<script type="text/javascript" src="wow/static/local-common/js/core.js"></script>
-<script type="text/javascript" src="wow/static/local-common/js/tooltip.js"></script>
+<link rel="stylesheet" href="wow/static/css/wow.css" />
+<link rel="stylesheet" href="wow/static/local-common/css/cms/search.css" />
+<link rel="stylesheet" href="wow/static/css/search.css" />
+<script src="wow/static/local-common/js/third-party/jquery-1.4.4.min.js"></script>
+<script src="wow/static/local-common/js/core.js"></script>
+<script src="wow/static/local-common/js/tooltip.js"></script>
 <!--[if IE 6]> <script type="text/javascript">
 //<![CDATA[try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}//]]>
 </script>
@@ -64,17 +65,19 @@ _gaq.push(['_trackPageLoadTime']);
     include("functions/search/summary.php");?>
   	<div id="content">
       <div class="content-top">
-		<div class="content-trail">
-<ol class="ui-breadcrumb">
-<li>
-<a href="index.php" rel="np"><?php echo $website['title']; ?></a>
-<span class="breadcrumb-arrow"></span>
-</li>
-<li><a href="services.php" rel="np"><?php echo $Services['Services']; ?></a><span class="breadcrumb-arrow"></span></li>
-<li class="last children"><a href="search.php" rel="np"><?php echo $Ind['Ind2']; ?></a>
-</li>
-</ol>
-</div>
+      	<div class="content-trail">
+        	<ol class="ui-breadcrumb">
+          	<li>
+            	<a href="index.php" rel="np">World of Warcraft</a>
+          	</li>
+          	<li>
+            	<a href="services.php" rel="np"><?php echo $Services['Services']; ?></a>
+          	</li>
+          	<li class="last">
+            	<a href="search.php" rel="np"><?php echo $Ind['Ind2']; ?></a>
+          	</li>
+        	</ol>
+      	</div>
       	<div class="content-bot">
         	<div class="search">
           	<div class="search-left">
@@ -302,8 +305,8 @@ other: 'Other'
 };
 //]]>
 </script>
-<script type="text/javascript" src="/wow/static/local-common/js/menu.js?v35"></script>
-<script type="text/javascript" src="/wow/static/js/wow.js?v18"></script>
+<script src="/wow/static/local-common/js/menu.js?v35"></script>
+<script src="/wow/static/js/wow.js?v18"></script>
 <script type="text/javascript">
 //<![CDATA[
 $(function(){
@@ -312,9 +315,9 @@ Search.initialize('/ta/lookup');
 });
 //]]>
 </script>
-<script type="text/javascript" src="/wow/static/local-common/js/utility/dynamic-menu.js?v35"></script>
-<script type="text/javascript" src="/wow/static/js/character/guild-tabard.js?v18"></script>
-<script type="text/javascript" src="/wow/static/js/character/arena-flag.js?v18"></script>
+<script src="/wow/static/local-common/js/utility/dynamic-menu.js?v35"></script>
+<script src="/wow/static/js/character/guild-tabard.js?v18"></script>
+<script src="/wow/static/js/character/arena-flag.js?v18"></script>
 <script type="text/javascript">
 //<![CDATA[
 Core.load("/wow/static/local-common/js/third-party/jquery-ui-1.8.6.custom.min.js?v35");

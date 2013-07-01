@@ -1,25 +1,23 @@
 <?php require_once("configs.php"); ?>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" xmlns:xml="http://www.w3.org/XML/1998/namespace">
+<!DOCTYPE html> 
+<html lang="en-gb">
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
 <title><?php echo $website['title']; ?> - <?php echo $Services['Services']; ?></title>
 <meta content="false" http-equiv="imagetoolbar" />
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
 <link rel="shortcut icon" href="wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
 <link rel="search" type="application/opensearchdescription+xml" href="http://eu.battle.net/en-gb/data/opensearch" title="Battle.net Search" />
-<link rel="stylesheet" type="text/css" media="all" href="wow/static/local-common/css/common.css?v15" />
-<!--[if IE]><link rel="stylesheet" type="text/css" media="all" href="wow/static/local-common/css/common-ie.css?v15" /><![endif]-->
-<!--[if IE 6]><link rel="stylesheet" type="text/css" media="all" href="wow/static/local-common/css/common-ie6.css?v15" /><![endif]-->
-<!--[if IE 7]><link rel="stylesheet" type="text/css" media="all" href="wow/static/local-common/css/common-ie7.css?v15" /><![endif]-->
+<link rel="stylesheet" href="wow/static/local-common/css/common.css?v15" />
 <link title="World of Warcraft - News" href="wow/en/feed/news" type="application/atom+xml" rel="alternate" />
-<link rel="stylesheet" type="text/css" media="all" href="wow/static/css/wow.css?v4" />
-<link rel="stylesheet" type="text/css" media="all" href="wow/static/css/services/services-index.css?v4" />
-<!--[if IE 6]><link rel="stylesheet" type="text/css" media="all" href="wow/static/css/services/services-ie6.css?v4" /><![endif]-->
-<!--[if IE]><link rel="stylesheet" type="text/css" media="all" href="wow/static/css/wow-ie.css?v4" /><![endif]-->
-<!--[if IE 6]><link rel="stylesheet" type="text/css" media="all" href="wow/static/css/wow-ie6.css?v4" /><![endif]-->
-<!--[if IE 7]><link rel="stylesheet" type="text/css" media="all" href="wow/static/css/wow-ie7.css?v4" /><![endif]-->
-<script type="text/javascript" src="wow/static/local-common/js/third-party/jquery-1.4.4.min.js"></script>
-	<script type="text/javascript" src="wow/static/local-common/js/core.js?v15"></script>
-	<script type="text/javascript" src="wow/static/local-common/js/tooltip.js?v15"></script>
+<link rel="stylesheet" href="wow/static/css/wow.css?v4" />
+<link rel="stylesheet" href="wow/static/css/services/services-index.css?v4" />
+<script src="wow/static/local-common/js/third-party/jquery-1.4.4.min.js"></script>
+<script src="wow/static/local-common/js/core.js?v15"></script>
+<script src="wow/static/local-common/js/tooltip.js?v15"></script>
 <!--[if IE 6]> <script type="text/javascript">
 //<![CDATA[
 try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
@@ -34,12 +32,8 @@ try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
 <div class="content-top">
 <div class="content-trail">
 <ol class="ui-breadcrumb">
-<li>
-<a href="index.php" rel="np"><?php echo $website['title']; ?></a>
-<span class="breadcrumb-arrow"></span>
-</li>
-<li class="last children"><a href="services.php" rel="np"><?php echo $Serv['Serv']; ?></a>
-</li>
+<li><a href="index.php" rel="np" class=""><?php echo $website['title']; ?></a></li>
+<li class="last"><a href="services.php" rel="np"><?php echo $Serv['Serv']; ?></a></li>
 </ol>
 </div>
 <div class="content-bot">	

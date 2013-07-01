@@ -2,40 +2,42 @@
 require_once("configs.php");
 $page_cat = "home";
 ?>
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <HTML>
 <head>
 	<title><?php echo $website['title']; ?></title>
-	<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
-	<link rel="shortcut icon" href="wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
-	<link rel="search" type="application/opensearchdescription+xml" href="http://eu.battle.net/en-gb/data/opensearch" title="Battle.net Search" />
-	<link rel="stylesheet" type="text/css" media="all" href="wow/static/local-common/css/common.css?v15" />
-	<!--[if IE]><link rel="stylesheet" type="text/css" media="all" href="wow/static/local-common/css/common-ie.css?v15" /><![endif]-->
-	<!--[if IE 6]><link rel="stylesheet" type="text/css" media="all" href="wow/static/local-common/css/common-ie6.css?v15" /><![endif]-->
-	<!--[if IE 7]><link rel="stylesheet" type="text/css" media="all" href="wow/static/local-common/css/common-ie7.css?v15" /><![endif]-->
-	<link title="World of Warcraft - News" href="wow/en/feed/news" type="application/atom+xml" rel="alternate"/>
-	<link rel="stylesheet" type="text/css" media="all" href="wow/static/css/wow.css?v4" />
-	<link rel="stylesheet" type="text/css" media="all" href="wow/static/local-common/css/cms/homepage.css?v15" />
-	<link rel="stylesheet" type="text/css" media="all" href="wow/static/local-common/css/cms/blog.css?v15" />
-	<link rel="stylesheet" type="text/css" media="all" href="wow/static/css/status.css?v1" />
-	<link rel="stylesheet" type="text/css" media="all" href="wow/static/local-common/css/cms/cms-common.css?v15" />
-	<link rel="stylesheet" type="text/css" media="all" href="wow/static/css/cms.css?v4" />
-	<!--[if IE 6]><link rel="stylesheet" type="text/css" media="all" href="wow/static/css/cms-ie6.css?v4" /><![endif]-->
-	<!--[if IE]><link rel="stylesheet" type="text/css" media="all" href="wow/static/css/wow-ie.css?v4" /><![endif]-->
-	<!--[if IE 6]><link rel="stylesheet" type="text/css" media="all" href="wow/static/css/wow-ie6.css?v4" /><![endif]-->
-	<!--[if IE 7]><link rel="stylesheet" type="text/css" media="all" href="wow/static/css/wow-ie7.css?v4" /><![endif]-->
-	<script type="text/javascript" src="wow/static/local-common/js/third-party/jquery-1.4.4-p1.min.js"></script>
-	<script type="text/javascript" src="wow/static/local-common/js/core.js?v15"></script>
-	<script type="text/javascript" src="wow/static/local-common/js/tooltip.js?v15"></script>
-	<script type="text/javascript" src="http://static.wowhead.com/widgets/power.js"></script>
+	<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+	<meta name="viewport" content="width=device-width">
+	<link rel="shortcut icon" href="wow/static/local-common/images/favicons/wow.png" type="image/x-icon">
+	<link rel="search" type="application/opensearchdescription+xml" href="http://eu.battle.net/en-gb/data/opensearch" title="Battle.net Search">
+	<link rel="stylesheet" type="text/css" media="all" href="wow/static/local-common/css/common.css?v15">
+	<link title="World of Warcraft - News" href="wow/en/feed/news" type="application/atom+xml" rel="alternate">
+	<link rel="stylesheet"  href="wow/static/css/wow.css?v4">
+	<link rel="stylesheet"  href="wow/static/local-common/css/cms/homepage.css?v15">
+	<link rel="stylesheet"  href="wow/static/local-common/css/cms/blog.css?v15">
+	<link rel="stylesheet"  href="wow/static/css/status.css?v1">
+	<link rel="stylesheet"  href="wow/static/local-common/css/cms/cms-common.css?v15">
+	<link rel="stylesheet"  href="wow/static/css/cms.css?v4">
+	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+	<script src="wow/static/local-common/js/third-party/jquery-1.4.4-p1.min.js"></script>
+	<script src="wow/static/local-common/js/core.js?v15"></script>
+	<script src="wow/static/local-common/js/tooltip.js?v15"></script>
+	<script src="http://static.wowhead.com/widgets/power.js"></script>
 	<!--[if IE 6]> <script type="text/javascript">
 	//<![CDATA[
 	try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
 	//]]>
 	</script>
 	<![endif]-->
-</head>
-
-<body class="en-us homepage" onUnload="opener.location=('index.php')">
+	</head>
+	<body class="en-us homepage" onUnload="opener.location=('index.php')">
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
 
 <div id="wrapper">
 	<?php include("header.php"); ?>
@@ -44,8 +46,8 @@ $page_cat = "home";
 			<div class="content-bot">	
 				<div id="homepage">
 					<div id="left">
-						<script type="text/javascript" src="wow/static/local-common/js/slideshow.js"></script>
-						<script type="text/javascript" src="wow/static/local-common/js/third-party/swfobject.js"></script>
+						<script src="wow/static/local-common/js/slideshow.js"></script>
+						<script src="wow/static/local-common/js/third-party/swfobject.js"></script>
 						<div id="slideshow" class="ui-slideshow">
 							<div class="slideshow">
 							<?php

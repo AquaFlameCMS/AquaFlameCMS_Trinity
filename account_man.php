@@ -7,6 +7,11 @@ if (!isset($_SESSION['username'])) {
 }
 ?>
 
+<!doctype html> 
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <html>
 <head>
 <title><?php echo $website['title']; ?><?php echo @$Man['Man']; ?></title>
@@ -14,27 +19,22 @@ if (!isset($_SESSION['username'])) {
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
 <link rel="shortcut icon" href="wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
 <link rel="search" type="application/opensearchdescription+xml" href="http://eu.battle.net/en-gb/data/opensearch" title="Battle.net Search" />
-<link rel="stylesheet" type="text/css" media="all" href="wow/static/local-common/css/management/common.css" />
-<!--[if IE]><link rel="stylesheet" type="text/css" media="all" href="local-common/css/common-ie.css" /><![endif]-->
-<!--[if IE 6]><link rel="stylesheet" type="text/css" media="all" href="local-common/css/common-ie6.css" /><![endif]-->
-<!--[if IE 7]><link rel="stylesheet" type="text/css" media="all" href="local-common/css/common-ie7.css" /><![endif]-->
-<link rel="stylesheet" type="text/css" media="all" href="wow/static/css/bnet.css" />
-<link rel="stylesheet" type="text/css" media="print" href="wow/static/css/bnet-print.css" />
-<link rel="stylesheet" type="text/css" media="all" href="wow/static/css/management/dashboard.css" />
-<link rel="stylesheet" type="text/css" media="all" href="wow/static/css/management/wow/dashboard.css" />
-<!--[if IE]><link rel="stylesheet" type="text/css" media="all" href="/css/management/wow/dashboard-ie.css" /><![endif]-->
-<!--[if IE 6]><link rel="stylesheet" type="text/css" media="all" href="/css/management/dashboard-ie6.css" /><![endif]-->
-<!--[if IE]><link rel="stylesheet" type="text/css" media="all" href="css/bnet-ie.css" /><![endif]-->
-<!--[if IE 6]><link rel="stylesheet" type="text/css" media="all" href="css/bnet-ie6.css" /><![endif]-->
-<script type="text/javascript" src="wow/static/local-common/js/third-party/jquery-1.4.4-p1.min.js"></script>
-<script type="text/javascript" src="wow/static/local-common/js/core.js"></script>
-<script type="text/javascript" src="wow/static/local-common/js/tooltip.js"></script>
-<script type="text/javascript" src="wow/static/local-common/js/third-party/swfobject.js?v37"></script>
-<script type="text/javascript" src="wow/static/js/management/dashboard.js?v23"></script>
-<script type="text/javascript" src="wow/static/js/management/wow/dashboard.js?v23"></script>
-<script type="text/javascript" src="wow/static/js/bam.js?v23"></script>
-<script type="text/javascript" src="wow/static/local-common/js/tooltip.js?v37"></script>
-<script type="text/javascript" src="wow/static/local-common/js/menu.js?v37"></script>
+<link rel="stylesheet" href="wow/static/local-common/css/management/common.css" />
+
+<link rel="stylesheet" href="wow/static/css/bnet.css" />
+<link rel="stylesheet" href="wow/static/css/bnet-print.css" />
+<link rel="stylesheet" href="wow/static/css/management/dashboard.css" />
+<link rel="stylesheet" href="wow/static/css/management/wow/dashboard.css" />
+
+<script src="wow/static/local-common/js/third-party/jquery-1.4.4-p1.min.js"></script>
+<script src="wow/static/local-common/js/core.js"></script>
+<script src="wow/static/local-common/js/tooltip.js"></script>
+<script src="wow/static/local-common/js/third-party/swfobject.js?v37"></script>
+<script src="wow/static/js/management/dashboard.js?v23"></script>
+<script src="wow/static/js/management/wow/dashboard.js?v23"></script>
+<script src="wow/static/js/bam.js?v23"></script>
+<script src="wow/static/local-common/js/tooltip.js?v37"></script>
+<script src="wow/static/local-common/js/menu.js?v37"></script>
 <script type="text/javascript">
 $(function() {
 Menu.initialize();
@@ -371,7 +371,7 @@ var times = new DateTime();
 <?php include("functions/footer_man.php"); ?>
 </div>
 </div>
-<script type="text/javascript" src="wow/static/local-common/js/search.js?v37"></script>
+<script src="wow/static/local-common/js/search.js?v37"></script>
 <script type="text/javascript">
 //<![CDATA[
 var xsToken = '';
@@ -480,9 +480,9 @@ Login.embeddedUrl = 'https://eu.battle.net/login/login.frag';
 });
 //]]>
 </script>
-<script type="text/javascript" src="wow/static/js/bam.js?v23"></script>
-<script type="text/javascript" src="wow/static/local-common/js/tooltip.js?v37"></script>
-<script type="text/javascript" src="wow/static/local-common/js/menu.js?v37"></script>
+<script src="wow/static/js/bam.js?v23"></script>
+<script src="wow/static/local-common/js/tooltip.js?v37"></script>
+<script src="wow/static/local-common/js/menu.js?v37"></script>
 <script type="text/javascript">
 $(function() {
 Menu.initialize();
@@ -494,9 +494,9 @@ Locale.dataPath = 'data/i18n.frag.xml';
 <script type="text/javascript" src="wow/static/local-common/js/third-party/jquery.pngFix.pack.js?v37"></script>
 <script type="text/javascript">$('.png-fix').pngFix();</script>
 <![endif]-->
-<script type="text/javascript" src="wow/static/local-common/js/third-party/swfobject.js?v37"></script>
-<script type="text/javascript" src="wow/static/js/management/dashboard.js?v23"></script>
-<script type="text/javascript" src="wow/static/js/management/wow/dashboard.js?v23"></script>
+<script src="wow/static/local-common/js/third-party/swfobject.js?v37"></script>
+<script src="wow/static/js/management/dashboard.js?v23"></script>
+<script src="wow/static/js/management/wow/dashboard.js?v23"></script>
 <!--[if lt IE 8]> <script type="text/javascript" src="wow/static/local-common/js/third-party/jquery.pngFix.pack.js?v37"></script>
 <script type="text/javascript">
 //<![CDATA[

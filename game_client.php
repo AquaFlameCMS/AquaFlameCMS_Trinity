@@ -3,27 +3,25 @@ include("configs.php");
 $page_cat = "gamesncodes";
 ?>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
- <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb">
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+ <html lang="en-gb">
 <head>
 <title><?php echo $website['title']; ?> - Download Games</title>
 <meta content="false" http-equiv="imagetoolbar" />
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
 <link rel="shortcut icon" href="wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
 <link rel="search" type="application/opensearchdescription+xml" href="http://eu.battle.net/en-gb/data/opensearch" title="Battle.net Search" />
-<link rel="stylesheet" type="text/css" media="all" href="wow/static/local-common/css/common.css?v22" />
-<!--[if IE]><link rel="stylesheet" type="text/css" media="all" href="wow/static/local-common/css/common-ie.css?v22" /><![endif]-->
-<!--[if IE 6]><link rel="stylesheet" type="text/css" media="all" href="wow/static/local-common/css/common-ie6.css?v22" /><![endif]-->
-<!--[if IE 7]><link rel="stylesheet" type="text/css" media="all" href="wow/static/local-common/css/common-ie7.css?v22" /><![endif]-->
-<link rel="stylesheet" type="text/css" media="all" href="wow/static/css/bnet.css?v21" />
-<link rel="stylesheet" type="text/css" media="print" href="wow/static/css/bnet-print.css?v21" />
-<link rel="stylesheet" type="text/css" media="all" href="wow/static/css/download/download.css?v21" />
-<!--[if IE 6]><link rel="stylesheet" type="text/css" media="all" href="wow/static/css/download/download-ie6.css?v21" /><![endif]-->
-<!--[if IE]><link rel="stylesheet" type="text/css" media="all" href="wow/static/css/bnet-ie.css?v21" /><![endif]-->
-<!--[if IE 6]><link rel="stylesheet" type="text/css" media="all" href="wow/static/css/bnet-ie6.css?v21" /><![endif]-->
-<script type="text/javascript" src="wow/static/local-common/js/third-party/jquery-1.4.4-p1.min.js"></script>
-<script type="text/javascript" src="wow/static/local-common/js/core.js?v22"></script>
-<script type="text/javascript" src="wow/static/local-common/js/tooltip.js?v22"></script>
+<link rel="stylesheet" href="wow/static/local-common/css/common.css?v22" />
+<link rel="stylesheet" href="wow/static/css/bnet.css?v21" />
+<link rel="stylesheet" href="wow/static/css/bnet-print.css?v21" />
+<link rel="stylesheet" href="wow/static/css/download/download.css?v21" />
+<script src="wow/static/local-common/js/third-party/jquery-1.4.4-p1.min.js"></script>
+<script src="wow/static/local-common/js/core.js?v22"></script>
+<script src="wow/static/local-common/js/tooltip.js?v22"></script>
 <!--[if IE 6]> <script type="text/javascript">
 //<![CDATA[
 try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
@@ -464,9 +462,9 @@ pet: 'pet'
 };
 //]]>
 </script>
-<script type="text/javascript" src="wow/static/js/bam.js?v21"></script>
-<script type="text/javascript" src="wow/static/local-common/js/tooltip.js?v22"></script>
-<script type="text/javascript" src="wow/static/local-common/js/menu.js?v22"></script>
+<script src="wow/static/js/bam.js?v21"></script>
+<script src="wow/static/local-common/js/tooltip.js?v22"></script>
+<script src="wow/static/local-common/js/menu.js?v22"></script>
 <script type="text/javascript">
 $(function() {
 Menu.initialize();
@@ -478,8 +476,8 @@ Locale.dataPath = 'data/i18n.frag.xml';
 <script type="text/javascript" src="wow/static/local-common/js/third-party/jquery.pngFix.pack.js?v22"></script>
 <script type="text/javascript">$('.png-fix').pngFix();</script>
 <![endif]-->
-<script type="text/javascript" src="wow/static/js/download/download.js?v21"></script>
-<script type="text/javascript" src="wow/static/js/management/d3/dashboard.js?v21"></script>
+<script src="wow/static/js/download/download.js?v21"></script>
+<script src="wow/static/js/management/d3/dashboard.js?v21"></script>
 <script type="text/javascript">
 //<![CDATA[
 Core.load("wow/static/local-common/js/overlay.js?v22");

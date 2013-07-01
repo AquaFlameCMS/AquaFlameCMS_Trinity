@@ -1,13 +1,17 @@
 <?php include("configs.php"); ?>
-<!DOCTYPE html>
-  <html xmlns="http://www.w3.org/1999/xhtml">
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+ <html lang="en-gb">
   <head>
     <title>World of Warcraft</title>
 	<link rel="shortcut icon" href="wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
-    <link rel="stylesheet" type="text/css" href="wow/static/local-common/css/common.css?v15"/>
-    <link rel="stylesheet" type="text/css" href="wow/static/_themes/bam/css/master.css?v1"/>
-    <script type="text/javascript" src="wow/static/local-common/js/third-party/jquery-1.4.2.min.js?v15"></script>
-    <script type="text/javascript" src="wow/static/local-common/js/core.js?v15"></script>
+    <link rel="stylesheet" href="wow/static/local-common/css/common.css?v15"/>
+    <link rel="stylesheet" href="wow/static/_themes/bam/css/master.css?v1"/>
+    <script src="wow/static/local-common/js/third-party/jquery-1.4.2.min.js?v15"></script>
+    <script src="wow/static/local-common/js/core.js?v15"></script>
 
     <script>
       var targetOrigin = "<?php echo $website['address']; ?>";

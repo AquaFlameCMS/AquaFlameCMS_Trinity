@@ -2,23 +2,22 @@
 require_once("configs.php");
 ?>
 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" xmlns:xml="http://www.w3.org/XML/1998/namespace" class="chrome chrome8">
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<html lang="en-gb" xmlns:xml="http://www.w3.org/XML/1998/namespace" class="chrome chrome8">
 <head>
 <title><?php echo $website['title']; ?> - Status</title>
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
 <link rel="shortcut icon" href="wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
-<link rel="stylesheet" type="text/css" media="all" href="wow/static/local-common/css/common.css?v15" />
-<!--[if IE]><link rel="stylesheet" type="text/css" media="all" href="/wow/static/local-common/css/common-ie.css?v17" /><![endif]-->
-<!--[if IE 6]><link rel="stylesheet" type="text/css" media="all" href="/wow/static/local-common/css/common-ie6.css?v17" /><![endif]-->
-<!--[if IE 7]><link rel="stylesheet" type="text/css" media="all" href="/wow/static/local-common/css/common-ie7.css?v17" /><![endif]-->
-<link rel="stylesheet" type="text/css" media="all" href="wow/static/css/wow.css?v7" />
-<link rel="stylesheet" type="text/css" media="all" href="wow/static/css/status/realmstatus.css?v7" />
-<!--[if IE]><link rel="stylesheet" type="text/css" media="all" href="/wow/static/css/wow-ie.css?v7" /><![endif]-->
-<!--[if IE 6]><link rel="stylesheet" type="text/css" media="all" href="/wow/static/css/wow-ie6.css?v7" /><![endif]-->
-<!--[if IE 7]><link rel="stylesheet" type="text/css" media="all" href="/wow/static/css/wow-ie7.css?v7" /><![endif]-->
-<script type="text/javascript" src="wow/static/local-common/js/third-party/jquery-1.4.4.min.js"></script>
-<script type="text/javascript" src="wow/static/local-common/js/core.js?v15"></script>
-<script type="text/javascript" src="wow/static/local-common/js/tooltip.js?v15"></script>
+<link rel="stylesheet" href="wow/static/local-common/css/common.css?v15" />
+<link rel="stylesheet" href="wow/static/css/wow.css?v7" />
+<link rel="stylesheet" href="wow/static/css/status/realmstatus.css?v7" />
+<script src="wow/static/local-common/js/third-party/jquery-1.4.4.min.js"></script>
+<script src="wow/static/local-common/js/core.js?v15"></script>
+<script src="wow/static/local-common/js/tooltip.js?v15"></script>
 
 <!--[if IE 6]> <script type="text/javascript">
 //<![CDATA[
@@ -52,20 +51,10 @@ _gaq.push(['_trackPageview']);
 <div class="content-top">
 <div class="content-trail">
 <ol class="ui-breadcrumb">
-<li>
-<a href="index.php" rel="np"><?php echo $website['title']; ?></a>
-<span class="breadcrumb-arrow"></span>
-</li>
-<li>
-<a href="status.php" rel="np">Status</a>
-<span class="breadcrumb-arrow"></span>
-</li>
-<li>
-<a href="status.php" rel="np">Arena</a>
-<span class="breadcrumb-arrow"></span>
-</li>
-<li class="last children"><a href="2vs2.php" rel="np">Top 2vs2</a>
-</li>
+<li><a href="index.php" rel="np"><?php echo $website['title']; ?></a></li>
+<li><a href="status.php" rel="np">Status</a></li>
+<li><a href="status.php" rel="np">Arena</a></li>
+<li class="last"><a href="2vs2.php" rel="np">Top 2vs2</a></li>
 </ol>
 </div>
 <div class="content-bot">

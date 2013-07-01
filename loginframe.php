@@ -3,15 +3,19 @@ $page="loginframe.php";
 include("configs.php");
 ?>
 
-<!DOCTYPE html>
-  <html xmlns="http://www.w3.org/1999/xhtml">
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+ <html lang="en-gb">
   <head>
 		<title></title>
 		<link rel="shortcut icon" href="wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
-		<link rel="stylesheet" type="text/css" href="wow/static/login/static/local-common/css/common.css?v22"/>
-		<link rel="stylesheet" type="text/css" href="wow/static/login/static/_themes/bam/css/master.css?v1"/>
-		<script type="text/javascript" src="wow/static/login/static/local-common/js/third-party/jquery.js"></script>
-		<script type="text/javascript" src="wow/static/login/static/local-common/js/core.js?v22"></script>
+		<link rel="stylesheet" href="wow/static/login/static/local-common/css/common.css?v22"/>
+		<link rel="stylesheet" href="wow/static/login/static/_themes/bam/css/master.css?v1"/>
+		<script src="wow/static/login/static/local-common/js/third-party/jquery.js"></script>
+		<script src="wow/static/login/static/local-common/js/core.js?v22"></script>
 		<style type="text/css">
 		.wuaha {
 		text-shadow:0px 0px 6px #000;

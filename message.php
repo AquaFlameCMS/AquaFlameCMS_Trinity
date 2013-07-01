@@ -1,27 +1,25 @@
 <?php require_once("configs.php"); ?>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" xmlns:xml="http://www.w3.org/XML/1998/namespace" class="chrome chrome8">
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+ <html lang="en-gb">
 <head>
 <title><?php echo $website['title']; ?></title>
 <meta content="false" http-equiv="imagetoolbar" />
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
 <link rel="shortcut icon" href="wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
 <link rel="search" type="application/opensearchdescription+xml" href="http://us.battle.net/en-us/data/opensearch" title="Battle.net Search" />
-<link rel="stylesheet" type="text/css" media="all" href="wow/static/local-common/css/common.css?v15" />
-<!--[if IE]><link rel="stylesheet" type="text/css" media="all" href="wow/static/local-common/css/common-ie.css?v15" /><![endif]-->
-<!--[if IE 6]><link rel="stylesheet" type="text/css" media="all" href="wow/static/local-common/css/common-ie6.css?v15" /><![endif]-->
-<!--[if IE 7]><link rel="stylesheet" type="text/css" media="all" href="wow/static/local-common/css/common-ie7.css?v15" /><![endif]-->
+<link rel="stylesheet" href="wow/static/local-common/css/common.css?v15" />
 <link title="World of Warcraft - News" href="wow/en/feed/news" type="application/atom+xml" rel="alternate"/>
-<link rel="stylesheet" type="text/css" media="all" href="wow/static/css/wow.css?v2" />
-<link rel="stylesheet" type="text/css" media="all" href="wow/static/local-common/css/cms/forums.css?v15" />
-<link rel="stylesheet" type="text/css" media="all" href="wow/static/local-common/css/cms/cms-common.css?v15" />
-<link rel="stylesheet" type="text/css" media="all" href="wow/static/css/cms.css?v2" />
-<!--[if IE 6]><link rel="stylesheet" type="text/css" media="all" href="wow/static/css/cms-ie6.css?v2" /><![endif]-->
-<!--[if IE]><link rel="stylesheet" type="text/css" media="all" href="wow/static/css/wow-ie.css?v2" /><![endif]-->
-<!--[if IE 6]><link rel="stylesheet" type="text/css" media="all" href="wow/static/css/wow-ie6.css?v2" /><![endif]-->
-<!--[if IE 7]><link rel="stylesheet" type="text/css" media="all" href="wow/static/css/wow-ie7.css?v2" /><![endif]-->
-<script type="text/javascript" src="wow/static/local-common/js/third-party/jquery-1.4.4.min.js"></script>
-<script type="text/javascript" src="wow/static/local-common/js/core.js?v15"></script>
-<script type="text/javascript" src="wow/static/local-common/js/tooltip.js?v15"></script>
+<link rel="stylesheet" href="wow/static/css/wow.css?v2" />
+<link rel="stylesheet" href="wow/static/local-common/css/cms/forums.css?v15" />
+<link rel="stylesheet" href="wow/static/local-common/css/cms/cms-common.css?v15" />
+<link rel="stylesheet" href="wow/static/css/cms.css?v2" />
+<script src="wow/static/local-common/js/third-party/jquery-1.4.4.min.js"></script>
+<script src="wow/static/local-common/js/core.js?v15"></script>
+<script src="wow/static/local-common/js/tooltip.js?v15"></script>
 <!--[if IE 6]> <script type="text/javascript">
 //<![CDATA[
 try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
@@ -51,10 +49,7 @@ Flash.ratingImage = 'http://us.media.blizzard.com/wow/player/rating-en-us.jpg';
 <div class="content-top">
 <div class="content-trail">
 <ol class="ui-breadcrumb">
-<li>
-<a href="index.php" rel="np"><?php echo $website['title']; ?></a>
-<span class="breadcrumb-arrow"></span>
-</li>
+<li><a href="/index.html" rel="np"><?php echo $website['title']; ?></a></li>
 <?php
 if($_GET['mId'] == ""){
 $error=1;
@@ -69,8 +64,7 @@ $get_message = mysql_query("SELECT * FROM messages WHERE id = '".$messagex."'");
 $message = mysql_fetch_assoc($get_message);
 }
 ?>
-<li class="last children"><a href="#" rel="np">Website Message</a>
-</li>
+<li class="last"><a href="#" rel="np">Website Message</a></li>
 </ol>
 </div>
 <div class="content-bot">

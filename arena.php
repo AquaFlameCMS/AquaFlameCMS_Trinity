@@ -4,29 +4,26 @@ $page_cat = "services";
 include("functions/arena_items_func.php");
 ?>
 
+<!doctype html>
+<html lang="en-gb">
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <html>
 <head>
 <title><?php echo $name = $_GET['name'];?> - <?php echo $website['title']; ?></title>
 <link rel="shortcut icon" href="wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
 <link rel="search" type="application/opensearchdescription+xml" href="http://eu.battle.net/en-gb/data/opensearch" title="Battle.net Search" />
-<link rel="stylesheet" type="text/css" media="all" href="wow/static/local-common/css/armory/common.css?" />
-<!--[if IE]> <link rel="stylesheet" type="text/css" media="all" href="/wow/static/local-common/css/common-ie.css?" /><![endif]-->
-<!--[if IE 6]> <link rel="stylesheet" type="text/css" media="all" href="/wow/static/local-common/css/common-ie6.css?" /><![endif]-->
-<!--[if IE 7]> <link rel="stylesheet" type="text/css" media="all" href="/wow/static/local-common/css/common-ie7.css?" /><![endif]-->
+<link rel="stylesheet" href="wow/static/local-common/css/armory/common.css?" />
 <link title="World of Warcraft - News" href="http://eu.battle.net/wow/en/feed/news" type="application/atom+xml" rel="alternate"/>
-<link rel="stylesheet" type="text/css" media="all" href="wow/static/css/wow.css?" />
-<link rel="stylesheet" type="text/css" media="all" href="wow/static/css/armory/profile.css?" />
-<!--[if IE]> <link rel="stylesheet" type="text/css" media="all" href="/wow/static/css/profile-ie.css?" /><![endif]-->
-<!--[if IE 6]> <link rel="stylesheet" type="text/css" media="all" href="/wow/static/css/profile-ie6.css?" /><![endif]-->
+<link rel="stylesheet" href="wow/static/css/wow.css?" />
+<link rel="stylesheet" href="wow/static/css/armory/profile.css?" />
 <link rel="stylesheet" type="text/css" media="all" href="wow/static/css/armory/arena/arena.css?" />
 <link rel="stylesheet" type="text/css" media="all" href="wow/static/css/armory/arena/summary.css?" />
-<!--[if IE 6]> <link rel="stylesheet" type="text/css" media="all" href="/wow/static/css/arena/summary-ie6.css?" /><![endif]-->
-<!--[if IE]> <link rel="stylesheet" type="text/css" media="all" href="/wow/static/css/wow-ie.css?" /><![endif]-->
-<!--[if IE 6]> <link rel="stylesheet" type="text/css" media="all" href="/wow/static/css/wow-ie6.css?" /><![endif]-->
-<!--[if IE 7]> <link rel="stylesheet" type="text/css" media="all" href="/wow/static/css/wow-ie7.css?" /><![endif]-->
-<script type="text/javascript" src="wow/static/local-common/js/third-party/jquery-1.4.4.min.js"></script>
-<script type="text/javascript" src="wow/static/local-common/js/core.js"></script>
-<script type="text/javascript" src="wow/static/local-common/js/tooltip.js"></script>
+<script src="wow/static/local-common/js/third-party/jquery-1.4.4.min.js"></script>
+<script src="wow/static/local-common/js/core.js"></script>
+<script src="wow/static/local-common/js/tooltip.js"></script>
 <!--[if IE 6]> <script type="text/javascript">
 //<![CDATA[
 try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
@@ -67,24 +64,22 @@ _gaq.push(['_trackPageLoadTime']);
 	<?php include("header.php"); ?>
 	<div id="content">
 	<div class="content-top">
-<div class="content-trail">
-<ol class="ui-breadcrumb">
-<li>
-<a href="index.php" rel="np"><?php echo $website['title']; ?></a>
-<span class="breadcrumb-arrow"></span>
-</li>
-<li>
-<a href="services.php" rel="np">Services</a>
-<span class="breadcrumb-arrow"></span>
-</li>
-<li>
-<a href="search.php" rel="np">Search</a>
-<span class="breadcrumb-arrow"></span>
-</li>
-<li class="last children"><a href="arena.php" rel="np"><?php echo $name = $_GET['name'];?></a>
-</li>
-</ol>
-</div>
+	<div class="content-trail">
+	<ol class="ui-breadcrumb">
+	<li>
+	<a href="index.php" rel="np">World of Warcraft</a>
+	</li>
+	<li>
+	<a href="services.php" rel="np">Services</a>
+	</li>
+	<li>
+	<a href="search.php" rel="np">Search</a>
+	</li>
+	<li class="last">
+	<a href="arena.php" rel="np"><?php echo $name = $_GET['name'];?></a>
+	</li>
+	</ol>
+	</div>
 	<div class="content-bot">
 
 
@@ -399,7 +394,7 @@ _gaq.push(['_trackPageLoadTime']);
 </div>
 </div>
 <?php include("footer.php") ?>
-<script type="text/javascript" src="wow/static/local-common/js/search.js?"></script>
+<script src="wow/static/local-common/js/search.js?"></script>
 <script type="text/javascript">
 //<![CDATA[
 var xsToken = '';
@@ -507,8 +502,8 @@ Login.embeddedUrl = '<?php echo $website['root'];?>loginframe.php';
 });
 //]]>
 </script>
-<script type="text/javascript" src="wow/static/local-common/js/menu.js?"></script>
-<script type="text/javascript" src="wow/static/js/wow.js?"></script>
+<script src="wow/static/local-common/js/menu.js?"></script>
+<script src="wow/static/js/wow.js?"></script>
 <script type="text/javascript">
 //<![CDATA[
 $(function() {
@@ -517,9 +512,9 @@ Search.initialize('/ta/lookup');
 });
 //]]>
 </script>
-<script type="text/javascript" src="wow/static/js/profile.js?"></script>
-<script type="text/javascript" src="wow/static/local-common/js/table.js?"></script>
-<script type="text/javascript" src="wow/static/js/character/arena-flag.js?"></script>
+<script src="wow/static/js/profile.js?"></script>
+<script src="wow/static/local-common/js/table.js?"></script>
+<script src="wow/static/js/character/arena-flag.js?"></script>
 <script type="text/javascript" src="wow/static/local-common/js/dropdown.js?"></script>
 <script type="text/javascript" src="wow/static/js/armory/pvp/arena.js?"></script>
 <!--[if lt IE 8]> <script type="text/javascript" src="/wow/static/local-common/js/third-party/jquery.pngFix.pack.js?"></script>

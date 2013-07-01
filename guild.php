@@ -2,6 +2,12 @@
 require_once("configs.php");
 ?>
 
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+ <html lang="en-gb">
 <html>
 <head>
 <title>GUILD @ REALM - <?php echo $website['title']; ?></title>
@@ -9,24 +15,15 @@ require_once("configs.php");
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
 <link rel="shortcut icon" href="wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
 <link rel="search" type="application/opensearchdescription+xml" href="http://eu.battle.net/en-gb/data/opensearch" title="Battle.net Search" />
-<link rel="stylesheet" type="text/css" media="all" href="wow/static/local-common/css/common.css" />
-<!--[if IE]> <link rel="stylesheet" type="text/css" media="all" href="/wow/static/local-common/css/common-ie.css" /><![endif]-->
-<!--[if IE 6]> <link rel="stylesheet" type="text/css" media="all" href="/wow/static/local-common/css/common-ie6.css" /><![endif]-->
-<!--[if IE 7]> <link rel="stylesheet" type="text/css" media="all" href="/wow/static/local-common/css/common-ie7.css" /><![endif]-->
+<link rel="stylesheet" href="wow/static/local-common/css/common.css" />
 <link title="World of Warcraft - News" href="http://eu.battle.net/wow/en/feed/news" type="application/atom+xml" rel="alternate"/>
-<link rel="stylesheet" type="text/css" media="all" href="wow/static/css/wow.css" />
-<link rel="stylesheet" type="text/css" media="all" href="wow/static/css/armory/profile.css" />
-<!--[if IE]> <link rel="stylesheet" type="text/css" media="all" href="/wow/static/css/profile-ie.css" /><![endif]-->
-<!--[if IE 6]> <link rel="stylesheet" type="text/css" media="all" href="/wow/static/css/profile-ie6.css" /><![endif]-->
-<link rel="stylesheet" type="text/css" media="all" href="wow/static/css/guild/guild.css" />
-<link rel="stylesheet" type="text/css" media="all" href="wow/static/css/guild/summary.css" />
-<!--[if IE 6]> <link rel="stylesheet" type="text/css" media="all" href="/wow/static/css/guild/summary-ie6.css" /><![endif]-->
-<!--[if IE]> <link rel="stylesheet" type="text/css" media="all" href="/wow/static/css/wow-ie.css" /><![endif]-->
-<!--[if IE 6]> <link rel="stylesheet" type="text/css" media="all" href="/wow/static/css/wow-ie6.css" /><![endif]-->
-<!--[if IE 7]> <link rel="stylesheet" type="text/css" media="all" href="/wow/static/css/wow-ie7.css" /><![endif]-->
-<script type="text/javascript" src="wow/static/local-common/js/third-party/jquery6cc4.js"></script>
-<script type="text/javascript" src="wow/static/local-common/js/core6cc4.js"></script>
-<script type="text/javascript" src="wow/static/local-common/js/tooltip6cc4.js"></script>
+<link rel="stylesheet" href="wow/static/css/wow.css" />
+<link rel="stylesheet" href="wow/static/css/armory/profile.css" />
+<link rel="stylesheet" href="wow/static/css/guild/guild.css" />
+<link rel="stylesheet" href="wow/static/css/guild/summary.css" />
+<script src="wow/static/local-common/js/third-party/jquery6cc4.js"></script>
+<script src="wow/static/local-common/js/core6cc4.js"></script>
+<script src="wow/static/local-common/js/tooltip6cc4.js"></script>
 <!--[if IE 6]> <script type="text/javascript">
 //<![CDATA[
 try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
@@ -72,14 +69,10 @@ include("header.php");
 <div class="content-top">
 <div class="content-trail">
 <ol class="ui-breadcrumb">
-<li>
-<a href="index.php" rel="np"><?php echo $website['title']; ?></a>
-<span class="breadcrumb-arrow"></span>
-</li>
-<li><a href="services.php" rel="np">Services</a><span class="breadcrumb-arrow"></span></li>
-<li><a href="search.php" rel="np">Search</a><span class="breadcrumb-arrow"></span></li>
-<li class="last children"><a href="guild.php" rel="np">GUILD @ REALM</a></a>
-</li>
+<li><a href="index.php" rel="np"><?php echo $website['title']; ?></a></li>
+<li><a href="services.php" rel="np">Services</a></li>
+<li><a href="search.php" rel="np">Search</a></li>
+<li class="last"><a href="guild.php" rel="np">GUILD @ REALM</a></li>
 </ol>
 </div>
 <div class="content-bot">
@@ -830,8 +823,8 @@ Login.embeddedUrl = '<?php echo $website['root'];?>loginframe.php';
 });
 //]]>
 </script>
-<script type="text/javascript" src="wow/static/local-common/js/menu6cc4.js"></script>
-<script type="text/javascript" src="wow/static/js/wow2e13.js"></script>
+<script src="wow/static/local-common/js/menu6cc4.js"></script>
+<script src="wow/static/js/wow2e13.js"></script>
 <script type="text/javascript">
 //<![CDATA[
 $(function() {
@@ -840,8 +833,8 @@ Search.initialize('/ta/lookup');
 });
 //]]>
 </script>
-<script type="text/javascript" src="wow/static/js/profile2e13.js"></script>
-<script type="text/javascript" src="wow/static/js/character/guild-tabard2e13.js"></script>
+<script src="wow/static/js/profile2e13.js"></script>
+<script src="wow/static/js/character/guild-tabard2e13.js"></script>
 <!--[if lt IE 8]> <script type="text/javascript" src="/wow/static/local-common/js/third-party/jquery.pngFix.pack.js"></script>
 <script type="text/javascript">
 //<![CDATA[

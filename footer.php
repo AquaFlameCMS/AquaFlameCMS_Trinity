@@ -384,7 +384,8 @@ other: 'Other'
 //]]>
 </script>
 
-<script type="text/javascript" src="<?php echo $website['root'];?>wow/static/local-common/js/search.js?v37"></script>
+<!doctype html>
+<script src="<?php echo $website['root'];?>wow/static/local-common/js/search.js?v37"></script>
 
 <script type="text/javascript">
 //<![CDATA[
@@ -396,8 +397,8 @@ Login.embeddedUrl = '<?php echo $website['root']; ?>loginframe.php';
 </script>
 
 
-<script type="text/javascript" src="<?php echo $website['root'];?>wow/static/local-common/js/menu.js?v37"></script>
-<script type="text/javascript" src="<?php echo $website['root'];?>wow/static/js/wow.js?v19"></script>
+<script src="<?php echo $website['root'];?>wow/static/local-common/js/menu.js?v37"></script>
+<script src="<?php echo $website['root'];?>wow/static/js/wow.js?v19"></script>
 <script type="text/javascript">
 //<![CDATA[
 $(function() {
@@ -405,7 +406,7 @@ Menu.initialize('<?php echo $website['root'];?>data/menu.json');
 });
 //]]>
 </script>
-<script type="text/javascript" src="<?php echo $website['root'];?>wow/static/local-common/js/cms.js?v37"></script>
+<script src="<?php echo $website['root'];?>wow/static/local-common/js/cms.js?v37"></script>
 
 <!--[if lt IE 8]> <script type="text/javascript" src="/wow/static/local-common/js/third-party/jquery.pngFix.pack.js?v37"></script>
 <script type="text/javascript">

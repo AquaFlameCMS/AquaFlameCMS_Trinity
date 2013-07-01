@@ -7,30 +7,25 @@ if (!isset($_SESSION['username'])) {
 }
 ?>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" class="en-us">
-<head xmlns:og="http://ogp.me/ns#" xmlns:fb="http://ogp.me/ns/fb#">
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+ <html lang="en-gb">
 <title><?php echo $website['title']; ?> - Vote Shop</title>
 <meta content="false" http-equiv="imagetoolbar" />
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
 <link rel="shortcut icon" href="wow/static/local-common/images/favicons/bam.ico" type="image/x-icon"/>
 <link rel="search" type="application/opensearchdescription+xml" href="http://eu.battle.net/en-us/data/opensearch" title="Battle.net Search" />
-<link rel="stylesheet" type="text/css" media="all" href="wow/static/local-common/css/common.css?v39" />
-<!--[if IE]> <link rel="stylesheet" type="text/css" media="all" href="wow/static/local-common/css/common-ie.css?v39" /><![endif]-->
-<!--[if IE 6]> <link rel="stylesheet" type="text/css" media="all" href="wow/static/local-common/css/common-ie6.css?v39" /><![endif]-->
-<!--[if IE 7]> <link rel="stylesheet" type="text/css" media="all" href="wow/static/local-common/css/common-ie7.css?v39" /><![endif]-->
-<link rel="stylesheet" type="text/css" media="all" href="wow/static/css/bnet.css?v26" />
-<link rel="stylesheet" type="text/css" media="print" href="wow/static/css/bnet-print.css?v26" />
-<link rel="stylesheet" type="text/css" media="all" href="wow/static/css/management/get-game.css?v26" />
-<!--[if IE]><link rel="stylesheet" type="text/css" media="all" href="wow/static/css/management/get-game-ie.css?v26" /><![endif]-->
-<!--[if IE 6]><link rel="stylesheet" type="text/css" media="all" href="wow/static/css/management/get-game-ie6.css?v26" /><![endif]-->
-<!--[if IE 7]><link rel="stylesheet" type="text/css" media="all" href="wow/static/css/management/get-game-ie7.css?v26" /><![endif]-->
-<link rel="stylesheet" type="text/css" media="all" href="wow/static/css/management/get-game-ie8.css?v26" />
-<!--[if IE]><link rel="stylesheet" type="text/css" media="all" href="wow/static/css/bnet-ie.css?v26" /><![endif]-->
-<!--[if IE 6]><link rel="stylesheet" type="text/css" media="all" href="wow/static/css/bnet-ie6.css?v26" /><![endif]-->
-<!--[if IE 7]><link rel="stylesheet" type="text/css" media="all" href="wow/static/css/bnet-ie7.css?v26" /><![endif]-->
-<script type="text/javascript" src="wow/static/local-common/js/third-party/jquery.js?v39"></script>
-<script type="text/javascript" src="wow/static/local-common/js/core.js?v39"></script>
-<script type="text/javascript" src="wow/static/local-common/js/tooltip.js?v39"></script>
+<link rel="stylesheet" href="wow/static/local-common/css/common.css?v39" />
+<link rel="stylesheet" href="wow/static/css/bnet.css?v26" />
+<link rel="stylesheet" href="wow/static/css/bnet-print.css?v26" />
+<link rel="stylesheet" href="wow/static/css/management/get-game.css?v26" />
+<link rel="stylesheet" href="wow/static/css/management/get-game-ie8.css?v26" />
+<script src="wow/static/local-common/js/third-party/jquery.js?v39"></script>
+<script src="wow/static/local-common/js/core.js?v39"></script>
+<script src="wow/static/local-common/js/tooltip.js?v39"></script>
 <!--[if IE 6]> <script type="text/javascript">
 //<![CDATA[
 try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
@@ -239,7 +234,7 @@ var digitalGames = new DigitalGames('#digital-games');
 <?php include("functions/footer_man.php"); ?>
 </div>
 </div>
-<script type="text/javascript" src="wow/static/local-common/js/search.js?v39"></script>
+<script src="wow/static/local-common/js/search.js?v39"></script>
 <script type="text/javascript">
 //<![CDATA[
 var xsToken = '9d875366-e8b3-46e0-a17f-431c939fa3b7';
@@ -348,10 +343,10 @@ Login.embeddedUrl = 'https://eu.battle.net/login/login.frag';
 });
 //]]>
 </script>
-<script type="text/javascript" src="wow/static/js/bam.js?v26"></script>
-<script type="text/javascript" src="wow/static/local-common/js/tooltip.js?v39"></script>
-<script type="text/javascript" src="wow/static/local-common/js/menu.js?v39"></script>
-<script type="text/javascript" src="wow/static/local-common/js/third-party/jquery-ui-1.8.6.custom.min.js?v39"></script>
+<script src="wow/static/js/bam.js?v26"></script>
+<script src="wow/static/local-common/js/tooltip.js?v39"></script>
+<script src="wow/static/local-common/js/menu.js?v39"></script>
+<script src="wow/static/local-common/js/third-party/jquery-ui-1.8.6.custom.min.js?v39"></script>
 <script type="text/javascript">
 $(function() {
 Locale.dataPath = 'data/i18n.frag.xml';
@@ -361,7 +356,7 @@ Locale.dataPath = 'data/i18n.frag.xml';
 <script type="text/javascript" src="wow/static/local-common/js/third-party/jquery.pngFix.pack.js?v39"></script>
 <script type="text/javascript">$('.png-fix').pngFix();</script>
 <![endif]-->
-<script type="text/javascript" src="wow/static/js/management/get-game.js?v26"></script>
+<script src="wow/static/js/management/get-game.js?v26"></script>
 <!--[if lt IE 8]> <script type="text/javascript" src="wow/static/local-common/js/third-party/jquery.pngFix.pack.js?v39"></script>
 <script type="text/javascript">
 //<![CDATA[

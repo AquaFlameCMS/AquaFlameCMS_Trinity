@@ -1,30 +1,29 @@
 <?php
 require_once("configs.php");
 ?>
+
+<!doctype html>
+<html lang="en-gb">
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <html>
 <head>
 <title><?php echo $website['title']; ?> - <?php $Community['Community']; ?></title>
 <link rel="shortcut icon" href="wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
 <link rel="search" type="application/opensearchdescription+xml" href="http://eu.battle.net/en-gb/data/opensearch" title="Battle.net Search" />
-<link rel="stylesheet" type="text/css" media="all" href="wow/static/local-common/css/common.css?v15" />
-<!--[if IE]><link rel="stylesheet" type="text/css" media="all" href="wow/static/local-common/css/common-ie.css?v15" /><![endif]-->
-<!--[if IE 6]><link rel="stylesheet" type="text/css" media="all" href="wow/static/local-common/css/common-ie6.css?v15" /><![endif]-->
-<!--[if IE 7]><link rel="stylesheet" type="text/css" media="all" href="wow/static/local-common/css/common-ie7.css?v15" /><![endif]-->
-<link rel="stylesheet" type="text/css" media="all" href="wow/static/css/wow.css?v3" />
-<link rel="stylesheet" type="text/css" media="all" href="wow/static/css/community/community-index.css" />
-<!--[if IE]><link rel="stylesheet" type="text/css" media="all" href="wow/static/css/community/community-ie.css?v3" /><![endif]-->
-<!--[if IE 6]><link rel="stylesheet" type="text/css" media="all" href="wow/static/css/community/community-ie6.css?v3" /><![endif]-->
-<!--[if IE]><link rel="stylesheet" type="text/css" media="all" href="wow/static/css/wow-ie.css?v3" /><![endif]-->
-<!--[if IE 6]><link rel="stylesheet" type="text/css" media="all" href="wow/static/css/wow-ie6.css?v3" /><![endif]-->
-<!--[if IE 7]><link rel="stylesheet" type="text/css" media="all" href="wow/static/css/wow-ie7.css?v3" /><![endif]-->
+<link rel="stylesheet" href="wow/static/local-common/css/common.css?v15" />
+<link rel="stylesheet" href="wow/static/css/wow.css?v3" />
+<link rel="stylesheet" href="wow/static/css/community/community-index.css" />
 <style type="text/css">
 .bnr04 .banner-title, .bnr04 .banner-desc, .bnr04:hover .banner-desc  {color:#625841;}
 .bnr04 {border:1px solid #261e16; cursor:default;}
 .bnr04:hover {background-position:0 0; border:1px solid #261e16; cursor:default;}
 </style>
-<script type="text/javascript" src="wow/static/local-common/js/third-party/jquery-1.4.4.min.js"></script>
-<script type="text/javascript" src="wow/static/local-common/js/core.js?v15"></script>
-<script type="text/javascript" src="wow/static/local-common/js/tooltip.js?v15"></script>
+<script src="wow/static/local-common/js/third-party/jquery-1.4.4.min.js"></script>
+<script src="wow/static/local-common/js/core.js?v15"></script>
+<script src="wow/static/local-common/js/tooltip.js?v15"></script>
 <!--[if IE 6]> <script type="text/javascript">
 //<![CDATA[
 try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
@@ -55,18 +54,14 @@ include("header.php");
 <div class="content-top">
 <div class="content-trail">
 <ol class="ui-breadcrumb">
-<li>
-<a href="index.php" rel="np"><?php echo $website['title']; ?></a>
-<span class="breadcrumb-arrow"></span>
-</li>
-<li class="last children"><a href="community.php" rel="np"><?php $Community['Community']; ?></a></a>
-</li>
+<li><a href="index.php" rel="np"><?php echo $website['title']; ?></a></li>
+<li class="last"><a href="community.php" rel="np"><?php $Community['Community']; ?></a></li>
 </ol>
 </div>
 <div class="content-bot">			
 	<div class="top-banner">
-    <script type="text/javascript" src="wow/static/local-common/js/slideshow.js"></script>
-    <script type="text/javascript" src="wow/static/local-common/js/third-party/swfobject.js"></script>
+    <script src="wow/static/local-common/js/slideshow.js"></script>
+    <script src="wow/static/local-common/js/third-party/swfobject.js"></script>
 
      <div id="slideshow" class="ui-slideshow">
         <div class="slideshow">
@@ -269,7 +264,7 @@ include("header.php");
     background: url("wow/static/images/community/001.png") no-repeat;
 }
 							</style>
-								<li><a href="http://www.aquaflame.org/" id="wow" target="_blank"><span class="content-title">AquaFlame CMS</span><span class="content-desc"><?php echo $Community['comm14']; ?></span></a></li></ul>
+								<li><a href="http://www.strawberry-pr0jcts.com/forum/" id="wow" target="_blank"><span class="content-title">AquaFlame CMS</span><span class="content-desc"><?php echo $Community['comm14']; ?></span></a></li></ul>
 								
 								
 						</div>

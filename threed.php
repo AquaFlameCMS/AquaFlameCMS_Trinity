@@ -6,30 +6,25 @@ include("classes/armory.class.php");
 $character = Factory_Armory::createCharacter($_GET['name']);
 ?>
 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb">
+<!DOCTYPE html> 
+<html lang="en-gb">
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
 <title><?php echo $website['title']; ?> - Armory</title>
 <meta content="false" http-equiv="imagetoolbar" />
 <link rel="shortcut icon" href="wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
-<link rel="stylesheet" type="text/css" media="all" href="wow/static/local-common/css/common.css" />
-<!--[if IE]> <link rel="stylesheet" type="text/css" media="all" href="/wow/static/local-common/css/common-ie.css" /><![endif]-->
-<!--[if IE 6]> <link rel="stylesheet" type="text/css" media="all" href="/wow/static/local-common/css/common-ie6.css" /><![endif]-->
-<!--[if IE 7]> <link rel="stylesheet" type="text/css" media="all" href="/wow/static/local-common/css/common-ie7.css" /><![endif]-->
+<link rel="stylesheet" href="wow/static/local-common/css/common.css" />
 <link title="World of Warcraft - News" href="wow/en/feed/news" type="application/atom+xml" rel="alternate"/>
-<link rel="stylesheet" type="text/css" media="all" href="wow/static/css/wow.css" />
-<link rel="stylesheet" type="text/css" media="all" href="wow/static/css/view.css" />
-<!--[if IE]> <link rel="stylesheet" type="text/css" media="all" href="/wow/static/css/profile-ie.css" /><![endif]-->
-<!--[if IE 6]> <link rel="stylesheet" type="text/css" media="all" href="/wow/static/css/profile-ie6.css" /><![endif]-->
-<link rel="stylesheet" type="text/css" media="all" href="wow/static/css/character/character.css" />
-<!--[if IE]> <link rel="stylesheet" type="text/css" media="all" href="/wow/static/css/character/summary-ie.css" /><![endif]-->
-<!--[if IE 6]> <link rel="stylesheet" type="text/css" media="all" href="/wow/static/css/character/summary-ie6.css" /><![endif]-->
-<!--[if IE]> <link rel="stylesheet" type="text/css" media="all" href="/wow/static/css/wow-ie.css" /><![endif]-->
-<!--[if IE 6]> <link rel="stylesheet" type="text/css" media="all" href="/wow/static/css/wow-ie6.css" /><![endif]-->
-<!--[if IE 7]> <link rel="stylesheet" type="text/css" media="all" href="/wow/static/css/wow-ie7.css" /><![endif]-->
-<script type="text/javascript" src="wow/static/local-common/js/third-party/jquery-1.4.4.min.js"></script>
-<script type="text/javascript" src="wow/static/local-common/js/core.js"></script>
-<script type="text/javascript" src="wow/static/local-common/js/tooltip.js"></script>
-<script type="text/javascript" src="http://static.wowhead.com/widgets/power.js"></script>
+<link rel="stylesheet" href="wow/static/css/wow.css" />
+<link rel="stylesheet" href="wow/static/css/view.css" />
+<link rel="stylesheet" href="wow/static/css/character/character.css" />
+<script src="wow/static/local-common/js/third-party/jquery-1.4.4.min.js"></script>
+<script src="wow/static/local-common/js/core.js"></script>
+<script src="wow/static/local-common/js/tooltip.js"></script>
+<script src="http://static.wowhead.com/widgets/power.js"></script>
 <!--[if IE 6]> <script type="text/javascript">
 //<![CDATA[
 try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
@@ -45,28 +40,19 @@ try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
 <div class="content-trail">
 <ol class="ui-breadcrumb">
 <li>
-<a href="index.php" rel="np"><?php echo $website['title']; ?></a>
-<span class="breadcrumb-arrow"></span>
+<a href="index.php" rel="np">
+<?php echo $website['title']; ?>
+</a>
 </li>
 <li>
-<a href="services.php" rel="np">Services</a>
-<span class="breadcrumb-arrow"></span>
+<a href="services.php" rel="np">
+Services
+</a>
 </li>
-<li>
-<a href="search.php" rel="np">Search</a>
-<span class="breadcrumb-arrow"></span>
-</li>
-<li class="last children"><a href="threed.php?name=<?php echo $character->getObjectInfo()->name;?>" rel="np"><?php echo $character->getObjectInfo()->name;?> @ <?php echo @$name_realm1['realm']; ?></a>
-</li>
-</ol>
-</div>
-<div class="content-trail">
-<ol class="ui-breadcrumb">
-<li>
-<a href="index.php" rel="np"><?php echo $website['title']; ?></a>
-<span class="breadcrumb-arrow"></span>
-</li>
-<li class="last children"><a href="status.php" rel="np"><?php echo $Status['RealmStat']; ?></a>
+<li class="last">
+<a href="" rel="np">
+<?php echo $character->getObjectInfo()->name;?> @ <?php echo @$name_realm1['realm']; ?>
+</a>
 </li>
 </ol>
 </div>
@@ -2035,8 +2021,8 @@ other: 'Other'
 };
 //]]>
 </script>
-<script type="text/javascript" src="<?php echo $website['root']; ?>wow/static/local-common/js/menu.js"></script>
-<script type="text/javascript" src="<?php echo $website['root']; ?>wow/static/js/wow.js"></script>
+<script src="<?php echo $website['root']; ?>wow/static/local-common/js/menu.js"></script>
+<script src="<?php echo $website['root']; ?>wow/static/js/wow.js"></script>
 <script type="text/javascript">
 //<![CDATA[
 $(function(){
@@ -2045,8 +2031,8 @@ Search.initialize('/ta/lookup');
 });
 //]]>
 </script>
-<script type="text/javascript" src="<?php echo $website['root']; ?>wow/static/js/profile.js"></script>
-<script type="text/javascript" src="<?php echo $website['root']; ?>wow/static/js/character/summary.js"></script>
+<script src="<?php echo $website['root']; ?>wow/static/js/profile.js"></script>
+<script src="<?php echo $website['root']; ?>wow/static/js/character/summary.js"></script>
 <script type="text/javascript">
 //<![CDATA[
 Core.load("<?php echo $website['root']; ?>wow/static/local-common/js/third-party/jquery-ui-1.8.6.custom.min.js");
