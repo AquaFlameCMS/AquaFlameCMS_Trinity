@@ -91,8 +91,9 @@ shim.style.display = 'block';
 </li>
 </ul>
 </div>
-<script type="text/javascript" src="wow/static/local-common/js/menu.js?v15"></script>
-<script type="text/javascript" src="wow/static/js/wow.js?v4"></script>
+<!DOCTYPE html>
+<script src="wow/static/local-common/js/menu.js?v15"></script>
+<script src="wow/static/js/wow.js?v4"></script>
 <script type="text/javascript"> 
 friendData = [];
 $(function(){
@@ -103,7 +104,7 @@ Search.init('ta/lookup');
 <!--[if lt IE 8]> <script type="text/javascript" src="wow/static/local-common/js/third-party/jquery.pngFix.pack.js?v15"></script>
 <script type="text/javascript">$('.png-fix').pngFix();</script>
 <![endif]-->
-<script type="text/javascript" src="wow/static/local-common/js/cms.js?v15?v2"></script>
+<script src="wow/static/local-common/js/cms.js?v15?v2"></script>
 <script type="text/javascript">
 //<![CDATA[
 Core.load("<?php echo $website['root'];?>wow/static/local-common/js/third-party/jquery-ui-1.8.6.custom.min.js?v15");

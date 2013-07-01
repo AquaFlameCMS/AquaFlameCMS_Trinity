@@ -15,7 +15,7 @@ require_once("../configs.php");
 <!--[if LT IE 9]>
 <link rel="shortcut icon" type="image/x-icon" href="images/root.ico" />
 <![endif]-->
-<link rel="stylesheet" type="text/css" href="<?php echo $website['root'];?>wow/static/css/error/error.css"/>
+<link rel="stylesheet" href="<?php echo $website['root'];?>wow/static/css/error/error.css"/>
 <!--[if LT IE 9]>
 <style>
 .info .twitter { background-image: url("images/twitter.png"); }

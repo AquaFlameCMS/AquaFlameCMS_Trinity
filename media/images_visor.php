@@ -3,37 +3,28 @@ require_once("../configs.php");
 $page_cat="media";
 $type = intval($_GET['type']);
 ?>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" xmlns:xml="http://www.w3.org/XML/1998/namespace" class="chrome chrome8">
-<head><link rel="stylesheet" type="text/css" href="/s7.addthis.com/static/r07/widget49.css" media="all" />
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="/s7.addthis.com/static/r07/widget49.css" media="all" />
 <title>Media - World of Warcraft</title>
 <meta content="false" http-equiv="imagetoolbar" />
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
 <link rel="shortcut icon" href="../wow/static/local-common/images/favicons/wow.ico" type="image/x-icon"/>
-<link rel="stylesheet" type="text/css" media="all" href="../wow/static/local-common/css/common.css?v39" />
-<!--[if IE]> <link rel="stylesheet" type="text/css" media="all" href="../wow/static/local-common/css/common-ie.css?v39" />
-<![endif]-->
-<!--[if IE 6]> <link rel="stylesheet" type="text/css" media="all" href="../wow/static/local-common/css/common-ie6.css?v39" />
-<![endif]-->
-<!--[if IE 7]> <link rel="stylesheet" type="text/css" media="all" href="../wow/static/local-common/css/common-ie7.css?v39" />
-<![endif]-->
+<link rel="stylesheet" href="../wow/static/local-common/css/common.css?v39" />
 <link title="World of Warcraft - Noticias" href="../wow/es/feed/news" type="application/atom+xml" rel="alternate"/>
-<link rel="stylesheet" type="text/css" media="all" href="../wow/static/css/wow.css?v23" />
-<link rel="stylesheet" type="text/css" media="all" href="../wow/static/local-common/css/media-gallery.css?v39" />
-<link rel="stylesheet" type="text/css" media="all" href="../wow/static/css/media/media.css?v23" />
-<!--[if IE 6]> <link rel="stylesheet" type="text/css" media="all" href="/wow/static/css/media/media-ie6.css?v23" />
-<![endif]-->
-<link rel="stylesheet" type="text/css" media="all" href="../wow/static/local-common/css/cms/comments.css?v39" />
-<link rel="stylesheet" type="text/css" media="all" href="../wow/static/css/cms.css?v23" />
-<!--[if IE]> <link rel="stylesheet" type="text/css" media="all" href="../wow/static/css/wow-ie.css?v23" />
-<![endif]-->
-<!--[if IE 6]> <link rel="stylesheet" type="text/css" media="all" href="../wow/static/css/wow-ie6.css?v23" />
-<![endif]-->
-<!--[if IE 7]> <link rel="stylesheet" type="text/css" media="all" href="../wow/static/css/wow-ie7.css?v23" />
-<![endif]-->
-
-<script type="text/javascript" src="../wow/static/local-common/js/third-party/jquery.js?v39"></script>
-<script type="text/javascript" src="../wow/static/local-common/js/core.js?v39"></script>
-<script type="text/javascript" src="../wow/static/local-common/js/tooltip.js?v39"></script>
+<link rel="stylesheet" href="../wow/static/css/wow.css?v23" />
+<link rel="stylesheet" href="../wow/static/local-common/css/media-gallery.css?v39" />
+<link rel="stylesheet" href="../wow/static/css/media/media.css?v23" />
+<link rel="stylesheet" href="../wow/static/local-common/css/cms/comments.css?v39" />
+<link rel="stylesheet" href="../wow/static/css/cms.css?v23" />
+<script src="../wow/static/local-common/js/third-party/jquery.js?v39"></script>
+<script src="../wow/static/local-common/js/core.js?v39"></script>
+<script src="../wow/static/local-common/js/tooltip.js?v39"></script>
 <!--[if IE 6]> <script type="text/javascript">
 //<![CDATA[
 try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}

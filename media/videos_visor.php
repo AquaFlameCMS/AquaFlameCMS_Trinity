@@ -1,31 +1,30 @@
 <?php
 require_once("../configs.php");
 ?>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" xmlns:xml="http://www.w3.org/XML/1998/namespace" class="chrome chrome8">
-<head><link rel="stylesheet" type="text/css" href="/s7.addthis.com/static/r07/widget49.css" media="all" />
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="/s7.addthis.com/static/r07/widget49.css" media="all" />
 <title><?php echo $website['title']; ?></title>
 <meta content="false" http-equiv="imagetoolbar" />
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
 <link rel="shortcut icon" href="../wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
 <link rel="search" type="application/opensearchdescription+xml" href="http://eu.battle.net/en-gb/data/opensearch" title="WoW Search" />
-<link rel="stylesheet" type="text/css" media="all" href="../wow/static/local-common/css/common.css?v15" />
-<!--[if IE]><link rel="stylesheet" type="text/css" media="all" href="wow/static/local-common/css/common-ie.css?v15" /><![endif]-->
-<!--[if IE 6]><link rel="stylesheet" type="text/css" media="all" href="wow/static/local-common/css/common-ie6.css?v15" /><![endif]-->
-<!--[if IE 7]><link rel="stylesheet" type="text/css" media="all" href="wow/static/local-common/css/common-ie7.css?v15" /><![endif]-->
-<link rel="stylesheet" type="text/css" media="all" href="../wow/static/css/wow.css?v3" />
-<link rel="stylesheet" type="text/css" media="all" href="../wow/static/css/lightbox.css?v7" />
-<!--[if IE 6]><link rel="stylesheet" type="text/css" media="all" href="wow/static/css/lightbox-ie6.css?v7" /><![endif]-->
-<link rel="stylesheet" type="text/css" media="all" href="../wow/static/local-common/css/cms/blog.css?v15" />
-<link rel="stylesheet" type="text/css" media="all" href="../wow/static/local-common/css/cms/comments.css?v15" />
-<link rel="stylesheet" type="text/css" media="all" href="../wow/static/css/cms.css?v3" />
-<link href="../wow/static/css/media/media.css" rel="stylesheet" type="text/css">
-<!--[if IE 6]><link rel="stylesheet" type="text/css" media="all" href="wow/static/css/cms-ie6.css?v3" /><![endif]-->
-<!--[if IE]><link rel="stylesheet" type="text/css" media="all" href="wow/static/css/wow-ie.css?v3" /><![endif]-->
-<!--[if IE 6]><link rel="stylesheet" type="text/css" media="all" href="wow/static/css/wow-ie6.css?v3" /><![endif]-->
-<!--[if IE 7]><link rel="stylesheet" type="text/css" media="all" href="wow/static/css/wow-ie7.css?v3" /><![endif]-->
-<script type="text/javascript" src="../wow/static/local-common/js/third-party/jquery-1.4.4.min.js"></script>
-<script type="text/javascript" src="../wow/static/local-common/js/core.js?v15"></script>
-<script type="text/javascript" src="../wow/static/local-common/js/tooltip.js?v15"></script>
+<link rel="stylesheet" href="../wow/static/local-common/css/common.css?v15" />
+<link rel="stylesheet" href="../wow/static/css/wow.css?v3" />
+<link rel="stylesheet" href="../wow/static/css/lightbox.css?v7" />
+<link rel="stylesheet" href="../wow/static/local-common/css/cms/blog.css?v15" />
+<link rel="stylesheet" href="../wow/static/local-common/css/cms/comments.css?v15" />
+<link rel="stylesheet" href="../wow/static/css/cms.css?v3" />
+<link rel="stylesheet" href="../wow/static/css/media/media.css" />
+<script src="../wow/static/local-common/js/third-party/jquery-1.4.4.min.js"></script>
+<script src="../wow/static/local-common/js/core.js?v15"></script>
+<script src="../wow/static/local-common/js/tooltip.js?v15"></script>
 <!--[if IE 6]> <script type="text/javascript">
 //<![CDATA[
 try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
@@ -288,12 +287,12 @@ _gaq.push(['_trackPageview']);
 					</div>
 				</div>
 			</div>
-	<script type="text/javascript" src="wow/static/local-common/js/cms.js"></script>
-	<script type="text/javascript" src="wow/static/local-common/js/menu.js"></script>
-	<script type="text/javascript" src="wow/static/js/wow.js"></script>
-	<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js"></script>
-	<script type="text/javascript" src="wow/static/local-common/js/cms.js?v17?v7"></script>
-	<script type="text/javascript" src="wow/static/local-common/js/lightbox.js?v17?v7"></script>
+	<script src="wow/static/local-common/js/cms.js"></script>
+	<script src="wow/static/local-common/js/menu.js"></script>
+	<script src="wow/static/js/wow.js"></script>
+	<script src="http://s7.addthis.com/js/250/addthis_widget.js"></script>
+	<script src="wow/static/local-common/js/cms.js?v17?v7"></script>
+	<script src="wow/static/local-common/js/lightbox.js?v17?v7"></script>
 	<?php include("../footer.php"); ?>
 </div>
 </body>

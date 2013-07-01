@@ -1,33 +1,25 @@
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb">
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<html>
 <head>
+    <meta charset="utf-8">
 <title>Im looking for someone to play with - Forums - World of Warcraft</title>
 <meta content="false" http-equiv="imagetoolbar" />
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" href="/wow/static/local-common/images/favicons/wow.ico" type="image/x-icon"/>
 <link rel="search" type="application/opensearchdescription+xml" href="http://eu.battle.net/en-gb/data/opensearch" title="Battle.net Search" />
-<link rel="stylesheet" type="text/css" media="all" href="/wow/static/local-common/css/common.css?v37" />
-<!--[if IE]> <link rel="stylesheet" type="text/css" media="all" href="/wow/static/local-common/css/common-ie.css?v37" />
-<![endif]-->
-<!--[if IE 6]> <link rel="stylesheet" type="text/css" media="all" href="/wow/static/local-common/css/common-ie6.css?v37" />
-<![endif]-->
-<!--[if IE 7]> <link rel="stylesheet" type="text/css" media="all" href="/wow/static/local-common/css/common-ie7.css?v37" />
-<![endif]-->
+<link rel="stylesheet" href="/wow/static/local-common/css/common.css?v37" />
 <link title="World of Warcraft - News" href="/wow/en/feed/news" type="application/atom+xml" rel="alternate"/>
-<link rel="stylesheet" type="text/css" media="all" href="/wow/static/css/wow.css?v19" />
-<link rel="stylesheet" type="text/css" media="all" href="/wow/static/local-common/css/cms/forums.css?v37" />
-<link rel="stylesheet" type="text/css" media="all" href="/wow/static/local-common/css/cms/cms-common.css?v37" />
-<link rel="stylesheet" type="text/css" media="all" href="/wow/static/css/cms.css?v19" />
-<!--[if IE 6]> <link rel="stylesheet" type="text/css" media="all" href="/wow/static/css/cms-ie6.css?v19" />
-<![endif]-->
-<!--[if IE]> <link rel="stylesheet" type="text/css" media="all" href="/wow/static/css/wow-ie.css?v19" />
-<![endif]-->
-<!--[if IE 6]> <link rel="stylesheet" type="text/css" media="all" href="/wow/static/css/wow-ie6.css?v19" />
-<![endif]-->
-<!--[if IE 7]> <link rel="stylesheet" type="text/css" media="all" href="/wow/static/css/wow-ie7.css?v19" />
-<![endif]-->
-<script type="text/javascript" src="/wow/static/local-common/js/third-party/jquery.js?v37"></script>
-<script type="text/javascript" src="/wow/static/local-common/js/core.js?v37"></script>
+<link rel="stylesheet" href="/wow/static/css/wow.css?v19" />
+<link rel="stylesheet" href="/wow/static/local-common/css/cms/forums.css?v37" />
+<link rel="stylesheet" href="/wow/static/local-common/css/cms/cms-common.css?v37" />
+<link rel="stylesheet" href="/wow/static/css/cms.css?v19" />
+<script src="/wow/static/local-common/js/third-party/jquery.js?v37"></script>
+<script src="/wow/static/local-common/js/core.js?v37"></script>
 
 
 
@@ -72,7 +64,7 @@
 <div class="editor1" id="post-edit">
 <a id="editorMax" rel="5000"></a>
 <textarea id="detail" name="detail" class="post-editor" cols="78" rows="13"></textarea>
-<script type="text/javascript" src="/wow/static/local-common/js/bml.js"></script>
+<script src="/wow/static/local-common/js/bml.js"></script>
 
 
 
@@ -275,8 +267,8 @@ other: 'Other'
 //]]>
 </script>
 
-<script type="text/javascript" src="/wow/static/js/wow.js?v19"></script>
-<script type="text/javascript" src="/wow/static/local-common/js/cms.js?v37"></script>
+<script src="/wow/static/js/wow.js?v19"></script>
+<script src="/wow/static/local-common/js/cms.js?v37"></script>
 
 </body>
 </html>

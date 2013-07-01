@@ -3,6 +3,7 @@ $page_cat = "forums";
 require_once("../../configs.php");
 require_once("../functions/post_toHtml.php");
 ?>
+<!doctype html>
 <head>
 <title><?php echo $website['title']; ?></title>
 <meta content="false" http-equiv="imagetoolbar" />
@@ -10,21 +11,21 @@ require_once("../functions/post_toHtml.php");
 <link rel="shortcut icon" href="<?php echo $website['root'];?>wow/static/local-common/images/favicons/wow.ico" type="image/x-icon" />
 <link rel="search" type="application/opensearchdescription+xml" href="http://eu.battle.net/en-gb/data/opensearch" title="Battle.net Search" />
 <link rel="stylesheet" type="text/css" media="all" href="<?php echo $website['root'];?>wow/static/local-common/css/common.css?v15" />
-<!--[if IE]><link rel="stylesheet" type="text/css" media="all" href="<?php echo $website['root'];?>wow/static/local-common/css/common-ie.css?v15" /><![endif]-->
-<!--[if IE 6]><link rel="stylesheet" type="text/css" media="all" href="<?php echo $website['root'];?>wow/static/local-common/css/common-ie6.css?v15" /><![endif]-->
-<!--[if IE 7]><link rel="stylesheet" type="text/css" media="all" href="<?php echo $website['root'];?>wow/static/local-common/css/common-ie7.css?v15" /><![endif]-->
-<link rel="stylesheet" type="text/css" media="all" href="<?php echo $website['root'];?>wow/static/css/wow.css?v4" />
-<link rel="stylesheet" type="text/css" media="all" href="<?php echo $website['root'];?>wow/static/local-common/css/cms/forums.css?v15" />
-<link rel="stylesheet" type="text/css" media="all" href="<?php echo $website['root'];?>wow/static/local-common/css/cms/cms-common.css?v15" />
-<link rel="stylesheet" type="text/css" media="all" href="<?php echo $website['root'];?>wow/static/css/cms.css?v4" />
-<!--[if IE 6]><link rel="stylesheet" type="text/css" media="all" href="<?php echo $website['root'];?>wow/static/css/cms-ie6.css?v4" /><![endif]-->
-<!--[if IE]><link rel="stylesheet" type="text/css" media="all" href="<?php echo $website['root'];?>wow/static/css/wow-ie.css?v4" /><![endif]-->
-<!--[if IE 6]><link rel="stylesheet" type="text/css" media="all" href="<?php echo $website['root'];?>wow/static/css/wow-ie6.css?v4" /><![endif]-->
-<!--[if IE 7]><link rel="stylesheet" type="text/css" media="all" href="<?php echo $website['root'];?>wow/static/css/wow-ie7.css?v4" /><![endif]-->
-<script type="text/javascript" src="<?php echo $website['root'];?>wow/static/local-common/js/third-party/jquery-1.4.4.min.js"></script>
-<script type="text/javascript" src="<?php echo $website['root'];?>wow/static/local-common/js/core.js?v15"></script>
-<script type="text/javascript" src="<?php echo $website['root'];?>wow/static/local-common/js/tooltip.js?v15"></script>
-<script type="text/javascript" src="<?php echo $website['root'];?>wow/static/local-common/js/cms.js"></script>
+<!--[if IE]><link rel="stylesheet"  href="<?php echo $website['root'];?>wow/static/local-common/css/common-ie.css?v15" /><![endif]-->
+<!--[if IE 6]><link rel="stylesheet"  href="<?php echo $website['root'];?>wow/static/local-common/css/common-ie6.css?v15" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="<?php echo $website['root'];?>wow/static/local-common/css/common-ie7.css?v15" /><![endif]-->
+<link rel="stylesheet" href="<?php echo $website['root'];?>wow/static/css/wow.css?v4" />
+<link rel="stylesheet" href="<?php echo $website['root'];?>wow/static/local-common/css/cms/forums.css?v15" />
+<link rel="stylesheet" href="<?php echo $website['root'];?>wow/static/local-common/css/cms/cms-common.css?v15" />
+<link rel="stylesheet" href="<?php echo $website['root'];?>wow/static/css/cms.css?v4" />
+<!--[if IE 6]><link rel="stylesheet" href="<?php echo $website['root'];?>wow/static/css/cms-ie6.css?v4" /><![endif]-->
+<!--[if IE]><link rel="stylesheet" href="<?php echo $website['root'];?>wow/static/css/wow-ie.css?v4" /><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" href="<?php echo $website['root'];?>wow/static/css/wow-ie6.css?v4" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="<?php echo $website['root'];?>wow/static/css/wow-ie7.css?v4" /><![endif]-->
+<script src="<?php echo $website['root'];?>wow/static/local-common/js/third-party/jquery-1.4.4.min.js"></script>
+<script src="<?php echo $website['root'];?>wow/static/local-common/js/core.js?v15"></script>
+<script src="<?php echo $website['root'];?>wow/static/local-common/js/tooltip.js?v15"></script>
+<script src="<?php echo $website['root'];?>wow/static/local-common/js/cms.js"></script>
 <!--[if IE 6]> <script type="text/javascript">
 //<![CDATA[
 try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
@@ -44,8 +45,8 @@ Flash.videoBase = 'http://eu.media.blizzard.com/wow/media/videos';
 Flash.ratingImage = 'http://eu.media.blizzard.com/wow/player/rating-pegi.jpg';
 //]]>
 </script>
-<script type="text/javascript" src="<?php echo $website['root'];?>wow/static/local-common/js/menu.js?v15"></script>
-<script type="text/javascript" src="<?php echo $website['root'];?>wow/static/js/wow.js?v4"></script>
+<script src="<?php echo $website['root'];?>wow/static/local-common/js/menu.js?v15"></script>
+<script src="<?php echo $website['root'];?>wow/static/js/wow.js?v4"></script>
 </head>
 <body class="en-gb logged-in">
 

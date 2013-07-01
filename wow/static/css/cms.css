@@ -288,7 +288,7 @@ div.forum-options a.active { color:#fff; font-weight: bold; }
 
 
 /* sidebar */
-.sidebar-module { padding: 0; margin-bottom: 35px; }
+.sidebar-module { padding: 0; margin-bottom: 25px; }
 .sidebar-module .sidebar-title { margin-bottom: 6px; border-bottom: 2px solid #552b12; padding-bottom: 6px; }
 .sidebar-module .sidebar-title h3 { color: #FEF092; text-transform: uppercase; font-size: 14px; font-weight: normal; }
 #right .sidebar-module .sidebar-title h3 a { color: #FEF092; padding-right: 20px; background: url("../images/icons/next.gif") 100% 50% no-repeat; }
@@ -339,41 +339,6 @@ div.forum-options a.active { color:#fff; font-weight: bold; }
 #sidebar-friends strong { color: #BD8100; }
 #sidebar-friends a:hover strong { color: white;}
 
-a.sidebar-esports { display: block; width: 285px; height: 97px; border: 1px solid #372511; background: url("../images/sidebar/esports.jpg") no-repeat 0 0;
-	border-radius: 5px; margin: 10px auto 0 auto; }
-a.sidebar-esports:hover { background-position: left bottom; border-color: #ffb100; }
-
-#sidebar-under-dev a.sidebar-under-dev { display: block; width: 295px; height: 110px; border: 1px solid #372511; background: url("../images/sidebar/under-dev/under-dev.jpg") no-repeat 0 0;
-	border-radius: 5px; margin: 10px auto 0 auto; }
-.es-mx #sidebar-under-dev  a.sidebar-under-dev { background: url("../images/sidebar/under-dev/under-dev_es-mx.jpg") no-repeat 0 0; }
-.es-es #sidebar-under-dev  a.sidebar-under-dev { background: url("../images/sidebar/under-dev/under-dev_es-es.jpg") no-repeat 0 0; }
-.it-it #sidebar-under-dev a.sidebar-under-dev { background: url("../images/sidebar/under-dev/under-dev_it-it.jpg") no-repeat 0 0; }
-.ru-ru #sidebar-under-dev a.sidebar-under-dev { background: url("../images/sidebar/under-dev/under-dev_ru-ru.jpg") no-repeat 0 0; }
-.de-de #sidebar-under-dev a.sidebar-under-dev { background: url("../images/sidebar/under-dev/under-dev_de-de.jpg") no-repeat 0 0; }
-.fr-fr #sidebar-under-dev a.sidebar-under-dev { background: url("../images/sidebar/under-dev/under-dev_fr-fr.jpg") no-repeat 0 0; }
-.pt-pt #sidebar-under-dev a.sidebar-under-dev,
-.pt-br #sidebar-under-dev a.sidebar-under-dev { background: url("../images/sidebar/under-dev/under-dev_pt-pt.jpg") no-repeat 0 0; }
-.zh-cn #sidebar-under-dev a.sidebar-under-dev { background: url("../images/sidebar/under-dev/under-dev_zh-cn.jpg") no-repeat 0 0; }
-.ko-kr #sidebar-under-dev a.sidebar-under-dev { background: url("../images/sidebar/under-dev/under-dev_ko-kr.jpg") no-repeat 0 0; }
-.zh-tw #sidebar-under-dev a.sidebar-under-dev { background: url("../images/sidebar/under-dev/under-dev_zh-tw.jpg") no-repeat 0 0; }
-#sidebar-under-dev a.sidebar-under-dev:hover { background-position: left bottom; border-color: #ffb100; }
-
-#sidebar-under-dev a.latest-patch { display: block; width: 295px; height: 110px; border: 1px solid #372511; background: url("../images/sidebar/under-dev/latest-patch.jpg") no-repeat 0 0;
-	border-radius: 5px; margin: 10px auto 0 auto; }
-.es-mx #sidebar-under-dev  a.latest-patch { background: url("../images/sidebar/under-dev/latest-patch_es-mx.jpg") no-repeat 0 0; }
-.es-es #sidebar-under-dev a.latest-patch { background: url("../images/sidebar/under-dev/latest-patch_es-es.jpg") no-repeat 0 0; }
-.it-it #sidebar-under-dev  a.latest-patch { background: url("../images/sidebar/under-dev/latest-patch_it-it.jpg") no-repeat 0 0; }
-.ru-ru #sidebar-under-dev a.latest-patch { background: url("../images/sidebar/under-dev/latest-patch_ru-ru.jpg") no-repeat 0 0; }
-.de-de #sidebar-under-dev a.latest-patch { background: url("../images/sidebar/under-dev/latest-patch_de-de.jpg") no-repeat 0 0; }
-.fr-fr #sidebar-under-dev a.latest-patch { background: url("../images/sidebar/under-dev/latest-patch_fr-fr.jpg") no-repeat 0 0; }
-.pt-pt #sidebar-under-dev  a.latest-patch,
-.pt-br #sidebar-under-dev  a.latest-patch { background: url("../images/sidebar/under-dev/latest-patch_pt-br.jpg") no-repeat 0 0; }
-.zh-cn #sidebar-under-dev a.latest-patch { background: url("../images/sidebar/under-dev/latest-patch_zh-cn.jpg") no-repeat 0 0; }
-.ko-kr #sidebar-under-dev a.latest-patch { background: url("../images/sidebar/under-dev/latest-patch_ko-kr.jpg") no-repeat 0 0; }
-.zh-tw #sidebar-under-dev a.latest-patch { background: url("../images/sidebar/under-dev/latest-patch_zh-tw.jpg") no-repeat 0 0; }
-#sidebar-under-dev a.latest-patch:hover { background-position: left bottom; border-color: #ffb100; }
-
-
 #sidebar-expansion .sidebar-content { border: 1px solid #372511; border-radius: 5px; margin-top: 10px; background: #1e140f; width: 300px; }
 #sidebar-expansion .sidebar-content ul { padding: 10px; }
 #sidebar-expansion .sidebar-content ul li { margin: 5px; background: url("../images/icons/bullet2.gif") 0 4px no-repeat; padding-left: 14px; }
@@ -381,11 +346,6 @@ a.sidebar-esports:hover { background-position: left bottom; border-color: #ffb10
 #sidebar-expansion .sidebar-content .learn-more { padding: 10px 28px 10px 10px; border: 1px solid #372511; display: block; margin: -1px; text-align: right;
 	background: #150c06 url("../images/icons/flyout-arrows-new.png") 96% 14px no-repeat; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; }
 #sidebar-expansion .sidebar-content .learn-more:hover { background-position: 96% -42px; }
-
-#sidebar-expansion-alt .sidebar-content { width: 300px; }
-#sidebar-expansion-alt .sidebar-content .learn-more { margin-top:10px; padding: 0 12px 0 0; display: block; text-align: right; background:url("../images/icons/more-arrows.gif") no-repeat 100% 5px; line-height:1.8em }
-#sidebar-expansion-alt .sidebar-content .learn-more:hover { background-position: 100% -42px }
-#sidebar-expansion-alt .sidebar-content .topic .date { display:block; font-weight:normal; line-height:115%; margin-top:4px; height:14px }
 
 .sidebar-content .featured-news { padding-top: 0; line-height: 16px; }
 .sidebar-content .featured-news a { color: #bd8100; }
@@ -412,8 +372,14 @@ a.sidebar-esports:hover { background-position: left bottom; border-color: #ffb10
 .sidebar-bot { min-height: 200px; position: relative; }
 .sidebar-loading { padding: 100px 25px; width: 250px; color: #71401F; text-align: center; position: absolute; top: 0; left: 0; background: url("../images/loaders/loader.gif") 50% 75% no-repeat; }
 
-.poptopic-list a,
-.poptopic-list a:first-child { padding-left: 8px; display: block; border-bottom: 1px solid #271b15; }
+.poptopic-list a, .poptopic-list a:first-child { padding-left: 8px; display: block; border-bottom: 1px solid #271b15; }
+
+.sidebar-module .mop-preview { margin: -1px; display: block; width: 300px; height: 100px; border: 1px solid #372511; background: url("../images/sidebar/share/vote-preview.jpg") 0 0 no-repeat;
+	-moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px;
+	-moz-box-shadow: 0 0 5px #000 inset; -webkit-box-shadow: 0 0 5px #000 inset; box-shadow: 0 0 5px #000 inset; }
+.sidebar-module .mop-preview:hover { background-position: 0 -100px; border-color: #cd9000; }
+
+
 .poptopic-list a:hover { background-color: #2b1507; }
 .poptopic-list a .int { padding: 6px 0; padding-right: 20px; background: url(../images/layout/cms/arrow_r_hover.png) 100% -5px no-repeat; }
 .poptopic-list a:hover .int { background-position: 100% -53px; }
@@ -421,12 +387,6 @@ a.sidebar-esports:hover { background-position: left bottom; border-color: #ffb10
 .ff .poptopic-list a .title {white-space:normal; word-wrap:break-word; height:19px;}
 .poptopic-list a .desc { color: #71401f; font-weight: normal; }
 .poptopic-list a:last-child { border-bottom: 0; }
-
-/* vote panel */
-.sidebar-module .mop-preview { margin: -1px; display: block; width: 300px; height: 100px; border: 1px solid #372511; background: url("../images/sidebar/share/vote-preview.jpg") 0 0 no-repeat;
-	-moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px;
-	-moz-box-shadow: 0 0 5px #000 inset; -webkit-box-shadow: 0 0 5px #000 inset; box-shadow: 0 0 5px #000 inset; }
-.sidebar-module .mop-preview:hover { background-position: 0 -100px; border-color: #cd9000; }
 
 /* sidebar promos */
 .promo { width: 300px; height: 250px; display: block; position: relative; margin: 0 0 25px 3px; -moz-box-shadow: #000 0 0 15px; -webkit-box-shadow: #000 0 0 15px; box-shadow: #000 0 0 15px; overflow: hidden; }

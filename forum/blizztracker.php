@@ -2,28 +2,29 @@
 require_once("../configs.php");
 $page_cat = "forums";
 ?>
+<!doctype html>
 <head>
 <title><?php echo $website['title']; ?></title>
 <meta content="false" http-equiv="imagetoolbar" />
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
 <link rel="shortcut icon" href="../wow/static/local-common/images/favicons/wow.ico" type="image/x-icon" />
 <link rel="search" type="application/opensearchdescription+xml" href="http://eu.battle.net/en-gb/data/opensearch" title="Battle.net Search" />
-<link rel="stylesheet" type="text/css" media="all" href="../wow/static/local-common/css/common.css?v15" />
-<!--[if IE]><link rel="stylesheet" type="text/css" media="all" href="../wow/static/local-common/css/common-ie.css?v15" /><![endif]-->
-<!--[if IE 6]><link rel="stylesheet" type="text/css" media="all" href="../wow/static/local-common/css/common-ie6.css?v15" /><![endif]-->
-<!--[if IE 7]><link rel="stylesheet" type="text/css" media="all" href="../wow/static/local-common/css/common-ie7.css?v15" /><![endif]-->
-<link rel="stylesheet" type="text/css" media="all" href="../wow/static/css/wow.css?v4" />
-<link rel="stylesheet" type="text/css" media="all" href="../wow/static/local-common/css/cms/forums.css?v15" />
-<link rel="stylesheet" type="text/css" media="all" href="../wow/static/local-common/css/cms/cms-common.css?v15" />
-<link rel="stylesheet" type="text/css" media="all" href="../wow/static/css/cms.css?v4" />
-<!--[if IE 6]><link rel="stylesheet" type="text/css" media="all" href="../wow/static/css/cms-ie6.css?v4" /><![endif]-->
-<!--[if IE]><link rel="stylesheet" type="text/css" media="all" href="../wow/static/css/wow-ie.css?v4" /><![endif]-->
-<!--[if IE 6]><link rel="stylesheet" type="text/css" media="all" href="../wow/static/css/wow-ie6.css?v4" /><![endif]-->
-<!--[if IE 7]><link rel="stylesheet" type="text/css" media="all" href="../wow/static/css/wow-ie7.css?v4" /><![endif]-->
-<script type="text/javascript" src="../wow/static/local-common/js/third-party/jquery-1.4.4.min.js"></script>
-<script type="text/javascript" src="../wow/static/local-common/js/core.js?v15"></script>
-<script type="text/javascript" src="../wow/static/local-common/js/tooltip.js?v15"></script>
-<script type="text/javascript" src="../wow/static/local-common/js/cms.js"></script>
+<link rel="stylesheet" href="../wow/static/local-common/css/common.css?v15" />
+<!--[if IE]><link rel="stylesheet" href="../wow/static/local-common/css/common-ie.css?v15" /><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" href="../wow/static/local-common/css/common-ie6.css?v15" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="../wow/static/local-common/css/common-ie7.css?v15" /><![endif]-->
+<link rel="stylesheet" href="../wow/static/css/wow.css?v4" />
+<link rel="stylesheet" href="../wow/static/local-common/css/cms/forums.css?v15" />
+<link rel="stylesheet" href="../wow/static/local-common/css/cms/cms-common.css?v15" />
+<link rel="stylesheet" href="../wow/static/css/cms.css?v4" />
+<!--[if IE 6]><link rel="stylesheet" href="../wow/static/css/cms-ie6.css?v4" /><![endif]-->
+<!--[if IE]><link rel="stylesheet" href="../wow/static/css/wow-ie.css?v4" /><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" href="../wow/static/css/wow-ie6.css?v4" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="../wow/static/css/wow-ie7.css?v4" /><![endif]-->
+<script src="../wow/static/local-common/js/third-party/jquery-1.4.4.min.js"></script>
+<script src="../wow/static/local-common/js/core.js?v15"></script>
+<script src="../wow/static/local-common/js/tooltip.js?v15"></script>
+<script src="../wow/static/local-common/js/cms.js"></script>
 <!--[if IE 6]> <script type="text/javascript">
 //<![CDATA[
 try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}

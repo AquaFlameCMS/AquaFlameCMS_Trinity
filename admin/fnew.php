@@ -36,9 +36,10 @@ if(isset($_POST['save'])){
 }  
 ?>      
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!doctype html>
+<html>
 <head>
+		<meta charset="utf-8">
 		<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
 		<title>AquaFlame CMS Admin Panel</title>
 		<link href="css/styles.css" rel="stylesheet" type="text/css" media="all" />
@@ -63,12 +64,12 @@ if(isset($_POST['save'])){
 	 );
  });
 </script>
-    <script type="text/javascript" src="js/DD_roundies_0.0.2a-min.js"></script>
+    <script src="js/DD_roundies_0.0.2a-min.js"></script>
     <script type="text/javascript">
 DD_roundies.addRule('#tabsPanel', '5px 5px 5px 5px', true);
 
 </script>
-    <script type="text/javascript" src="js/script-carasoul.js"></script>
+    <script src="js/script-carasoul.js"></script>
     <script src="js/jquery.uniform.js" type="text/javascript" charset="utf-8"></script>
     <script type="text/javascript" charset="utf-8">
       $(function(){
@@ -77,7 +78,7 @@ DD_roundies.addRule('#tabsPanel', '5px 5px 5px 5px', true);
     </script>
     <link rel="stylesheet" href="css/uniform.defaultstyle2.css" type="text/css" media="screen" />
     <link rel="stylesheet" type="text/css" href="css/jquery.cleditor.css" />
-    <script type="text/javascript" src="js/jquery.cleditor.js"></script>
+    <script src="js/jquery.cleditor.js"></script>
     <script type="text/javascript">
       $(document).ready(function() {
         $("#input").cleditor(
