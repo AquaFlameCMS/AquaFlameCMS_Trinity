@@ -18,12 +18,11 @@ if (!isset($_SESSION['username'])) {
 <meta content="false" http-equiv="imagetoolbar" />
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
 <link rel="shortcut icon" href="wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
-<link rel="search" type="application/opensearchdescription+xml" href="http://eu.battle.net/en-gb/data/opensearch" title="Battle.net Search" />
-<link rel="stylesheet" href="wow/static/local-common/css/common.css?v22" />
-<link rel="stylesheet" href="wow/static/css/bnet.css?v21" />
-<link rel="stylesheet" href="wow/static/css/bnet-print.css?v21" />
-<link rel="stylesheet" href="wow/static/css/management/address-book.css?v21" />
-<link rel="stylesheet" href="wow/static/css/ui.css?v21" />
+<link rel="stylesheet" media="all" href="wow/static/local-common/css/common.css?v22" />
+<link rel="stylesheet" media="all" href="wow/static/css/bnet.css?v21" />
+<link rel="stylesheet" media="print" href="wow/static/css/bnet-print.css?v21" />
+<link rel="stylesheet" media="all" href="wow/static/css/management/address-book.css?v21" />
+<link rel="stylesheet" media="all" href="wow/static/css/ui.css?v21" />
 <script src="wow/static/local-common/js/third-party/jquery-1.4.4-p1.min.js"></script>
 <script src="wow/static/local-common/js/core.js?v22"></script>
 <script src="wow/static/local-common/js/tooltip.js?v22"></script>
@@ -69,41 +68,28 @@ _gaq.push(['_trackPageLoadTime']);
 <div id="content">
 <div id="page-header">
 <h2 class="subcategory">Account Settings</h2>
-<h3 class="headline">Your Contact &amp; General Information</h3>
+<h3 class="headline">General &amp; Account Information</h3>
 </div>
 <div id="page-content" class="page-content">
-<p>Your Primary Contact is the address and phone number that you wish to be associated with this <?php echo $website['title']; ?> account. Edit this address by clicking the button to its right.</p>
-<p>These information given to <?php echo $website['title']; ?> will be associated to help us for the Donations. To be sure we always check your information before any usage of your Credit Card or Paypal.</p>
-<p>If you wish to add additional shipping addresses to this <?php echo $website['title']; ?> account, simply select the option below. You can save only 2 addresses.</p>
-<fieldset class="ui-controls section-buttons" >
-<a
-class="ui-button button1 "
-href="wow/static/management/add-address.html"
->
-<span>
-<span>Add New Shipping Address</span>
-</span>
-</a>
-</fieldset>
+<p>These are your default account information when you registered first time on <?php echo $website['title']; ?></p>
 <div class="address-book" id="address-book">
 <div id="address-1" class="address-box primary-address border-5">
 <h4 class="caption">
-<?php 
-$conn = mysql_connect("$serveraddress", "$serveruser", "$serverpass")or die("Couldn't connect to database"); 
-$account_info = mysql_query("SELECT email,joindate,last_ip,recruiter  FROM `".$server_adb."`.`account` WHERE username='".$_SESSION['username']."'")or die(mysql_error());
+<?php
+$account_info = mysql_query("SELECT email,joindate,last_ip,recruiter FROM $server_adb.account WHERE username = '".$_SESSION['username']."'")or die(mysql_error());
 while($get = mysql_fetch_array($account_info)) 
 ?>
 Joined at: <?php echo $get["joindate"] ?>
 
 </h4><br />
-<h4>Username: </h4><font color='#66CE21'><?php echo strtolower($_SESSION['username']); ?></font>
+<h4>Username: </h4><font color='#66CE21'><?php echo strtolower($_SESSION['username']); ?>,</font>
 <p></p>
 <h4>E-mail:</h4>
-<p><?php echo $get["email"] ?><p>
+<p><?php echo $get["email"] ?>,<p>
 Town: <Font color="#A00000">Unavailable</font>, 
-<p>Last IP: <Font color="#A00000">Unavailable</font>,</p>
-<p>Has a Recruit: <Font color="#A00000">Unavailable</font></p>
-<h4>Primary Phone: <Font color="#A00000">Unavailable</font></h4>
+<p>Last IP: <Font color="#A00000"><?php echo $get["last_ip"] ?></font>,</p>
+<p><h4>Full Name: <Font color="#A00000">Unavailable</font>,</h4></p>
+<p>Number of Recruits: <Font color="#A00000"><?php echo $get["recruiter"] ?></font>.</p>
 <p></p>
 <div class="activate-primary">
 <div id="primary-address">This is currently your main shipping address</div>

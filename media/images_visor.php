@@ -43,12 +43,12 @@ try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
 <a href="../index.php" rel="np">
 <?php echo $website['title']; ?>
 </a>
-</li>
+<span class="breadcrumb-arrow"></span></li>
 <li>
 <a href="../media.php" rel="np">
 Media
 </a>
-</li>
+<span class="breadcrumb-arrow"></span></li>
 <li class="last childless">
 <a href="images_index.php?type=<?php echo $type; ?>" rel="np">
 <?php

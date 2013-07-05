@@ -17,12 +17,11 @@ if (!isset($_SESSION['username'])) {
 <meta content="false" http-equiv="imagetoolbar" />
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
 <link rel="shortcut icon" href="wow/static/local-common/images/favicons/bam.ico" type="image/x-icon"/>
-<link rel="search" type="application/opensearchdescription+xml" href="http://eu.battle.net/en-us/data/opensearch" title="Battle.net Search" />
-<link rel="stylesheet" href="wow/static/local-common/css/common.css?v39" />
-<link rel="stylesheet" href="wow/static/css/bnet.css?v26" />
-<link rel="stylesheet" href="wow/static/css/bnet-print.css?v26" />
-<link rel="stylesheet" href="wow/static/css/management/get-game.css?v26" />
-<link rel="stylesheet" href="wow/static/css/management/get-game-ie8.css?v26" />
+<link rel="stylesheet" media="all" href="wow/static/local-common/css/common.css?v39" />
+<link rel="stylesheet" media="all" href="wow/static/css/bnet.css?v26" />
+<link rel="stylesheet" media="print" href="wow/static/css/bnet-print.css?v26" />
+<link rel="stylesheet" media="all" href="wow/static/css/management/get-game.css?v26" />
+<link rel="stylesheet" media="all" href="wow/static/css/management/get-game-ie8.css?v26" />
 <script src="wow/static/local-common/js/third-party/jquery.js?v39"></script>
 <script src="wow/static/local-common/js/core.js?v39"></script>
 <script src="wow/static/local-common/js/tooltip.js?v39"></script>

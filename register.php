@@ -8,18 +8,19 @@ $page_cat = "account";
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
- <html lang="en-gb">
+<html lang="en-gb">
 <head>
 <title><?php echo $re['re']; ?> <?php echo $website['title']; ?></title>
 <link rel="shortcut icon" href="wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
-<link rel="stylesheet" href="wow/static/local-common/css/common.css" />
-<link rel="stylesheet" href="wow/static/css/bnet.css" />
-<link rel="stylesheet" href="wow/static/css/bnet-print.css" />
-<link rel="stylesheet" href="wow/static/css/inputs.css" />
-<link rel="stylesheet" href="wow/static/css/account-reg/streamlined-creation.css" />
+<link rel="stylesheet" media="all" href="wow/static/local-common/css/common.css" />
+<link rel="stylesheet" media="all" href="wow/static/css/bnet.css" />
+<link rel="stylesheet" media="print" href="wow/static/css/bnet-print.css" />
+<link rel="stylesheet" media="all" href="wow/static/css/inputs.css" />
+<link rel="stylesheet" media="all" href="wow/static/css/account-reg/streamlined-creation.css" />
 <script src="wow/static/local-common/js/third-party/jquery-1.4.4-p1.min.js"></script>
 <script src="wow/static/local-common/js/core.js"></script>
 <script type="text/javascript" src="wow/static/local-common/js/tooltip.js"></script>
+
 <!--[if IE 6]> <script type="text/javascript">
 //<![CDATA[
 try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
@@ -209,14 +210,14 @@ _gaq.push(['_trackPageLoadTime']);
 <select name="country" id="country" class="small border-5 glow-shadow-2 form-disabled" tabindex="1"  >
 <optgroup label="">
 <option value="CHL">Chile</option>
-<option value="ESP">Espa�a</option>
+<option value="ESP">Espa&#241;a</option>
 <option value="GBR" selected="selected">United Kingdom</option>
 <option value="FRA">France</option>
 <option value="DEU">Germany</option>
 <option value="RUS">Russian Federation</option>
 </optgroup>
 <option value="AFG">Afghanistan</option>
-<option value="ALA">Åland Islands</option>
+<option value="ALA">&#197;land Islands</option>
 <option value="ALB">Albania</option>
 <option value="DZA">Algeria</option>
 <option value="ASM">American Samoa</option>
@@ -391,7 +392,7 @@ _gaq.push(['_trackPageLoadTime']);
 <option value="REU">Reunion</option>
 <option value="ROU">Romania</option>
 <option value="RWA">Rwanda</option>
-<option value="BLM">Saint Barthélemy</option>
+<option value="BLM">Saint Barth&#233;lemy</option>
 <option value="SHN">Saint Helena</option>
 <option value="KNA">Saint Kitts And Nevis</option>
 <option value="LCA">Saint Lucia</option>

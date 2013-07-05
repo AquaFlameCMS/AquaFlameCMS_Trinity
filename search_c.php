@@ -40,10 +40,12 @@ try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
       	<div class="content-trail">
         	<ol class="ui-breadcrumb">
           	<li>
-            	<a href="index.php" rel="np">World of Warcraft</a>
-          	</li>
+            	<a href="index.php" rel="np"><?php echo $website['title']; ?></a>
+          	<span class="breadcrumb-arrow"></span>
+			</li>
           	<li>
             	<a href="services.php" rel="np"><?php echo $Services['Services']; ?></a>
+				<span class="breadcrumb-arrow"></span>
           	</li>
           	<li class="last">
             	<a href="search.php" rel="np"><?php echo $Ind['Ind2']; ?></a>

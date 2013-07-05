@@ -57,8 +57,8 @@ _gaq.push(['_trackPageview']);
 		<div class="content-top">
 			<div class="content-trail">
 			<ol class="ui-breadcrumb">
-				<li><a href="../index.php" rel="np"><?php echo $website['title']; ?></a></li>
-				<li><a href="../media.php" rel="np"><?php echo $Media['Media']; ?></a></li>
+				<li><a href="../index.php" rel="np"><?php echo $website['title']; ?></a><span class="breadcrumb-arrow"></span></li>
+				<li><a href="../media.php" rel="np"><?php echo $Media['Media']; ?></a><span class="breadcrumb-arrow"></span></li>
                 <li class="last"><a href="videos_index.php" rel="np"><?php echo $Media['Videos']; ?></a></li>
 			</ol>
 			</div>

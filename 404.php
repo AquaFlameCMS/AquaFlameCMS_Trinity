@@ -43,9 +43,7 @@ $page_cat = "home";
 <div class="content-trail">
 <ol class="ui-breadcrumb">
 <li class="last">
-<a href="/wow/en/" rel="np">
-World of Warcraft
-</a>
+<a href="index.php" rel="np"><?php echo $website['title']; ?></a>
 </li>
 </ol>
 </div>

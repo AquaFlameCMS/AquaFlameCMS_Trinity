@@ -21,9 +21,9 @@ Information about the Footer.
 # |Based on:                             |http://eu.battle.net |
 # --------------------------------------------------------------
 # |Database version:                             |    0.7.0    |
-# |Website Version:                              |    0.6.0    |
+# |Website Version:                              |    0.7.0    |
 # |Release Date:                                 | 2010-05-17  |
-# |Latest Update:                                | 2012-09-14  |
+# |Latest Update:                                | 2013-05-07  |
 # ----------------------------TEAM------------------------------
-# |Team: FailZorD, xazinji, MrBillys, netcho, theadriann       |
+# |Team: FailZorD					       |
 # --------------------------------------------------------------

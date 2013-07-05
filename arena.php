@@ -67,16 +67,18 @@ _gaq.push(['_trackPageLoadTime']);
 	<div class="content-trail">
 	<ol class="ui-breadcrumb">
 	<li>
-	<a href="index.php" rel="np">World of Warcraft</a>
+	<a href="index.php" rel="np"><?php echo $website['title']; ?></a>
+	<span class="breadcrumb-arrow"></span>
 	</li>
 	<li>
 	<a href="services.php" rel="np">Services</a>
+	<span class="breadcrumb-arrow"></span>
 	</li>
 	<li>
 	<a href="search.php" rel="np">Search</a>
+	<span class="breadcrumb-arrow"></span>
 	</li>
-	<li class="last">
-	<a href="arena.php" rel="np"><?php echo $name = $_GET['name'];?></a>
+	<li class="last children"><a href="arena.php" rel="np"><?php echo $name = $_GET['name'];?></a>
 	</li>
 	</ol>
 	</div>

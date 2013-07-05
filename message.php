@@ -49,7 +49,10 @@ Flash.ratingImage = 'http://us.media.blizzard.com/wow/player/rating-en-us.jpg';
 <div class="content-top">
 <div class="content-trail">
 <ol class="ui-breadcrumb">
-<li><a href="/index.html" rel="np"><?php echo $website['title']; ?></a></li>
+<li>
+<a href="index.php" rel="np"><?php echo $website['title']; ?></a>
+<span class="breadcrumb-arrow"></span>
+</li>
 <?php
 if($_GET['mId'] == ""){
 $error=1;
@@ -64,7 +67,8 @@ $get_message = mysql_query("SELECT * FROM messages WHERE id = '".$messagex."'");
 $message = mysql_fetch_assoc($get_message);
 }
 ?>
-<li class="last"><a href="#" rel="np">Website Message</a></li>
+<li class="last children"><a href="#" rel="np">Website Message</a>
+</li>
 </ol>
 </div>
 <div class="content-bot">

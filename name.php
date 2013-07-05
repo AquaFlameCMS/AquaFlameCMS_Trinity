@@ -17,13 +17,12 @@ if (!isset($_SESSION['username'])) {
 <meta content="false" http-equiv="imagetoolbar" />
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
 <link rel="shortcut icon" href="wow/static/local-common/images/favicons/bam.ico" type="image/x-icon"/>
-<link rel="stylesheet" href="wow/static/local-common/css/management/common.css" />
-<link rel="stylesheet" href="wow/static/css/bnet.css" />
-<link rel="stylesheet" href="wow/static/css/bnet-print.css" />
-<link rel="stylesheet" href="wow/static/css/management/dashboard.css" />
-<link rel="stylesheet" href="wow/static/css/management/services.css" />
-<link rel="stylesheet" href="wow/static/css/ui.css" />
-
+<link rel="stylesheet" media="all" href="wow/static/local-common/css/management/common.css" />
+<link rel="stylesheet" media="all" href="wow/static/css/bnet.css" />
+<link rel="stylesheet" media="print" href="wow/static/css/bnet-print.css" />
+<link rel="stylesheet" media="all" href="wow/static/css/management/dashboard.css" />
+<link rel="stylesheet" media="all" href="wow/static/css/management/services.css" />
+<link rel="stylesheet" media="all" href="wow/static/css/ui.css" />
 <script src="wow/static/local-common/js/third-party/jquery-1.4.4-p1.min.js"></script>
 <script src="wow/static/local-common/js/core.js"></script>
 <script src="wow/static/local-common/js/tooltip.js"></script>

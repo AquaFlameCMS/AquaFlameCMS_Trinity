@@ -229,7 +229,8 @@ $realm_count = mysql_num_rows($realms);
 <div class="content-top">
 <div class="content-trail">
 <ol class="ui-breadcrumb">
-<li><a href="index.php" rel="np"><?php echo $website['title']; ?></a></li>
+<li><a href="index.php" rel="np"><?php echo $website['title']; ?></a>
+<span class="breadcrumb-arrow"></span></li>
 <li class="last"><a href="" rel="np"><?php echo $Status['RlmStat']; ?></a></li>
 </ol>
 </div>

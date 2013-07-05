@@ -165,7 +165,7 @@ include("header.php");
 						</div>
 						
 						<div class="inside-section forum">
-							<a href="javascript:;" class="main-link" style="background-image:url('wow/static/images/community/thumbnails/thumb-forum.jpg');">
+							<a href="forum/" class="main-link" style="background-image:url('wow/static/images/community/thumbnails/thumb-forum.jpg');">
 								<span>
 									<span class="wrapper">
 										<span class="banner-title"><?php echo $Forums['Forums']; ?> </span>
@@ -178,7 +178,7 @@ include("header.php");
 						<span class="clear"><!-- --></span>
 						
 						<div class="inside-section fanart">
-							<a href="javascript:;" class="main-link" style="background-image:url('wow/static/images/community/thumbnails/thumb-fanart.jpg');">
+							<a href="media.php" class="main-link" style="background-image:url('wow/static/images/community/thumbnails/thumb-fanart.jpg');">
 								<span class="panel">
 									<span class="wrapper">
 										<span class="banner-title"><?php echo $Community['FanArt']; ?></span>
@@ -186,7 +186,7 @@ include("header.php");
 									</span>
 								</span>
 							</a>
-								<a href="#" class="tosubmit external"><?php echo $Community['comm5']; ?></a>
+								<a href="media.php" class="tosubmit external"><?php echo $Community['comm5']; ?></a>
 						</div>
 						
 						<div class="inside-section comics">
@@ -204,7 +204,7 @@ include("header.php");
 						<span class="clear"><!-- --></span>
 						
 						<div class="inside-section screenshot">
-							<a href="javascript:;" class="main-link" style="background-image:url('wow/static/images/community/thumbnails/thumb-screenshot.jpg');">
+							<a href="media.php" class="main-link" style="background-image:url('wow/static/images/community/thumbnails/thumb-screenshot.jpg');">
 								<span class="panel">
 									<span class="wrapper">
 										<span class="banner-title"><?php echo $Community['Screenshots']; ?> <em>(1)</em></span>
@@ -212,11 +212,11 @@ include("header.php");
 									</span>
 								</span>
 							</a>
-								<a href="javascript:;" class="tosubmit external"><?php echo $Community['comm7']; ?></a>
+								<a href="media.php" class="tosubmit external"><?php echo $Community['comm7']; ?></a>
 						</div>
 						
 						<div class="inside-section wallpaper">
-							<a href="javascript:;" class="main-link" style="background-image:url('wow/static/images/community/thumbnails/thumb-wallpaper.jpg');">
+							<a href="media.php" class="main-link" style="background-image:url('wow/static/images/community/thumbnails/thumb-wallpaper.jpg');">
 								<span class="panel">
 									<span class="wrapper">
 										<span class="banner-title"><?php echo $Community['Wallpap']; ?> <em>(0)</em></span>
@@ -224,7 +224,7 @@ include("header.php");
 									</span>
 								</span>
 							</a>
-								<a href="javascript:;" class="tosubmit external"><?php echo $Community['comm8']; ?></a>
+								<a href="media.php" class="tosubmit external"><?php echo $Community['comm8']; ?></a>
 						</div>
 						
 						<span class="clear"><!-- --></span>
@@ -240,16 +240,10 @@ include("header.php");
 						</div>
 						<div class="content-block">
 							<ul>
-							<style type="text/css">
-							#wow {
-    background: url("wow/static/images/community/001.png") no-repeat;
-}
-							</style>
+							<style type="text/css">#wow { background: url("wow/static/images/community/001.png") no-repeat; }</style>
 								<li><a href="<?php echo $comun_link['Facebook']; ?>" class="facebook" target="_blank"><span class="content-title"><?php echo $website['title']; ?> Facebook</span><span class="content-desc"><?php echo $Community['comm10']; ?></span></a></li>
-								<li><a href="<?php echo $comun_link['Twitter']; ?>" class="Twitter" target="_blank"><span class="content-title"><?php echo $website['title']; ?> Twitter</span><span class="content-desc"><?php echo $Community['comm11']; ?></span></a></li>
-								<li><a href="<?php echo $comun_link['Youtube']; ?>" class="Youtube" target="_blank"><span class="content-title"><?php echo $website['title']; ?> Youtube</span><span class="content-desc"><?php echo $Community['comm12']; ?></span></a></li>
-								
-								
+								<li><a href="<?php echo $comun_link['Twitter']; ?>" class="twitter" target="_blank"><span class="content-title"><?php echo $website['title']; ?> Twitter</span><span class="content-desc"><?php echo $Community['comm11']; ?></span></a></li>
+								<li><a href="<?php echo $comun_link['Youtube']; ?>" class="youtube" target="_blank"><span class="content-title"><?php echo $website['title']; ?> Youtube</span><span class="content-desc"><?php echo $Community['comm12']; ?></span></a></li>
 						</div>
 						<span class="clear"><!-- --></span>
 						<br></br>
@@ -259,14 +253,8 @@ include("header.php");
 						</div>
 						<div class="content-block">
 							<ul>
-							<style type="text/css">
-							#wow {
-    background: url("wow/static/images/community/001.png") no-repeat;
-}
-							</style>
-								<li><a href="http://www.strawberry-pr0jcts.com/forum/" id="wow" target="_blank"><span class="content-title">AquaFlame CMS</span><span class="content-desc"><?php echo $Community['comm14']; ?></span></a></li></ul>
-								
-								
+							<style type="text/css">#wow { background: url("wow/static/images/community/001.png") no-repeat; }</style>
+							<li><a href="http://aquaflame.org" id="wow" target="_blank"><span class="content-title">AquaFlame.NET</span><span class="content-desc"><?php echo $Community['comm14']; ?></span></a></li></ul>
 						</div>
 					</div>
 					

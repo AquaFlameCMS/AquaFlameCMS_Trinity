@@ -55,13 +55,16 @@ _gaq.push(['_trackPageview']);
 		
 		<div id="content">
 			<div class="content-top">
-				<div class="content-trail">
-					<ol class="ui-breadcrumb">
-						<li><a href="index.php" rel="np"><?php echo $website['title']; ?></a></li>
-						<li class="last"><a href="media.php" rel="np"><?php echo $Media['Media']; ?></a></li>
-					</ol>
-				</div>
-				
+			<div class="content-trail">
+			<ol class="ui-breadcrumb">
+			<li>
+			<a href="index.php" rel="np"><?php echo $website['title']; ?></a>
+			<span class="breadcrumb-arrow"></span>
+			</li>
+			<li class="last children"><a href="media.php" rel="np"><?php echo $Media['Media']; ?></a>
+			</li>
+			</ol>
+			</div>
 				<div class="content-bot">
 					<div class="media-content">
 						<div id="media-index">

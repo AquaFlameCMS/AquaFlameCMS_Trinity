@@ -46,19 +46,18 @@ try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
 <div class="content-trail">
 <ol class="ui-breadcrumb">
 <li>
-<a href="index.php" rel="np">
-<?php echo $website['title']; ?>
-</a>
+<a href="index.php" rel="np"><?php echo $website['title']; ?></a>
+<span class="breadcrumb-arrow"></span>
 </li>
 <li>
-<a href="services.php" rel="np">
-Services
-</a>
+<a href="services.php" rel="np">Services</a>
+<span class="breadcrumb-arrow"></span>
 </li>
-<li class="last">
-<a href="" rel="np">
-<?php echo $character->getObjectInfo()->name;?> @ <?php echo @$name_realm1['realm']; ?>
-</a>
+<li>
+<a href="search.php" rel="np">Search</a>
+<span class="breadcrumb-arrow"></span>
+</li>
+<li class="last children"><a href="advanced.php?name=<?php echo $character->getObjectInfo()->name;?>" rel="np"><?php echo $character->getObjectInfo()->name;?> @ <?php echo @$name_realm1['realm']; ?></a>
 </li>
 </ol>
 </div>
@@ -178,9 +177,9 @@ Services
 	<div class="summary-top-right">
 	<ul class="profile-view-options" id="profile-view-options-summary">
 	<li>
-	<a href="threed.php?name=<?php echo $character->getObjectInfo()->name;?>" rel="np" class="threed"><?php echo $armory['3d']; ?></a></li>
+	<a href="threed.php?name=<?php echo $_GET['name']; ?>" rel="np" class="threed"><?php echo $armory['3d']; ?></a></li>
 	<li class="current">
-	<a href="advanced.php?name=<?php echo $character->getObjectInfo()->name;?>" rel="np" class="advanced"><?php echo $armory['advanced']; ?></a></li>
+	<a href="advanced.php?name=<?php echo $_GET['name']; ?>" rel="np" class="advanced"><?php echo $armory['advanced']; ?></a></li>
 	</ul>
 	<div class="summary-averageilvl">
 	<div class="rest"><?php echo $armory['itemlevel']; ?><br/>(<span class="equipped">20</span> <?php echo $armory['equipped']; ?>)

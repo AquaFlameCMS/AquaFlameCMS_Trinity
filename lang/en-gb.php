@@ -262,7 +262,7 @@ $Log['Log13'] = "Sign up now";
 $Log['Log14'] = "Learn how to ";
 $Log['Log15'] = "protect your account";
 $Log['Log16'] = "Already Logged in?";
-$Log['Log17'] = "If you are already logged but ths page does not redirect you to the account then press the following button: ";
+$Log['Log17'] = "If you are already logged in and that page doesn't redirect you, then please press the following button: ";
 $Log['Log18'] = "Account Management";
 $Log['Log19'] = "Processing&#8230;";
 // Finishing Account Log

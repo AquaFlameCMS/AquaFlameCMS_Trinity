@@ -63,19 +63,22 @@ _gaq.push(['_trackPageview']);
 		<div id="content">
 			<div class="content-top">
 				<div class="content-trail">
-					<ol class="ui-breadcrumb">
-					<li><a href="index.php"><?php echo $website['title']; ?></a></li>
-					<?php
-					$news_id = intval($_GET['id']);
-					if($news_id != 0) $error=0; else $error=1;
-					$news_query = mysql_query("SELECT * FROM news WHERE id = '".$news_id."'")or $error=1;
-					$news = mysql_fetch_assoc($news_query)or $error=1;
-					$date = $news['date'];
-					?>
-					<li class="last"><a href="#" rel="np"><?php echo $news['title']; ?></a></li>
-					</ol>
+				<ol class="ui-breadcrumb">
+				<li>
+				<a href="index.php" rel="np"><?php echo $website['title']; ?></a>
+				<span class="breadcrumb-arrow"></span>
+				</li>
+				<?php
+									$news_id = intval($_GET['id']);
+									if($news_id != 0) $error=0; else $error=1;
+									$news_query = mysql_query("SELECT * FROM news WHERE id = '".$news_id."'")or $error=1;
+									$news = mysql_fetch_assoc($news_query)or $error=1;
+									$date = $news['date'];
+									?>
+				<li class="last children"><a href="#" rel="np"><?php echo $news['title']; ?></a>
+				</li>
+				</ol>
 				</div>
-				
 				<div class="content-bot">	
 				
 					<script type="text/javascript">

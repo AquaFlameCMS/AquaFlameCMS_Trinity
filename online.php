@@ -55,16 +55,19 @@ include("header.php");
 <div class="content-top">
 <div class="content-trail">
 <ol class="ui-breadcrumb">
-<li><a href="../index.php" rel="np"><?php echo $website['title']; ?></a></li>
-<li><a href="../status.php" rel="np"><?php echo $status['status']; ?></a></li>
-<li><a href="status.php" rel="np"><?php echo $Status['RealmStat']; ?></a></li>
-<li class="last"><a href="servername1.php" rel="np">
-<?php
+<li>
+<a href="index.php" rel="np"><?php echo $website['title']; ?></a>
+<span class="breadcrumb-arrow"></span>
+</li>
+<li><a href="status.php" rel="np"><?php echo $status['status']; ?></a><span class="breadcrumb-arrow"></span></li>
+<li><a href="status.php" rel="np"><?php echo $Status['RealmStat']; ?></a><span class="breadcrumb-arrow"></span></li>
+<li class="last children"><a href="servername1.php" rel="np"><?php echo $news['title']; ?><?php
 $realm_extra = mysql_fetch_assoc(mysql_query("SELECT * FROM realms WHERE id = '".$realmid."'"));
 if(!$realm_extra) $realm_extra = mysql_fetch_assoc(mysql_query("SELECT * FROM realms WHERE id = '1'"));
 $realm = mysql_fetch_assoc(mysql_query("SELECT * FROM $server_adb.realmlist WHERE id = '".$realm_extra['realmid']."'"));
 echo $realm['name']; 
-?></a></li>
+?></a>
+</li>
 </ol>
 </div>
 <div class="content-bot">
@@ -153,7 +156,6 @@ echo $realm['name'];
 
 				<div class="filter">
 					<label for="filter-population"><?php echo $Status['Class']; ?></label>
-
 					<select id="filter-population" class="input select" data-filter="column" data-column="3">
 						<option value=""><?php echo $Status['All']; ?></option>
 							<option value="high"><?php echo $Status['Warrior']; ?></option>
