@@ -40,7 +40,6 @@ try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
 	<div class="bg-body">
 		<div class="bg-bottom">		
 			<div class="contents-wrapper">
-			
 				<div class="left-col" align="left">
 					<div class="section-title">
 					<?php
@@ -63,7 +62,6 @@ try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
 					<span><?php echo $website['title']; ?><?php echo $Serv['Serv1']; ?></span>
 					<p><?php echo $Serv['Serv2']; ?></p>
 					</div>
-					
 					<div class="main-services">
 					<a href="account_log.php" class="main-services-banner left-bnr" style="background-image:url('wow/static/images/services/thumbnails/thumb-main-services-1.jpg');">
 						<span class="banner-title"><?php echo $Serv['Serv3']; ?></span>
@@ -114,9 +112,9 @@ try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
 									<span><?php echo $Serv['Serv17']; ?></span>
 								</div>
 								<ul>
-										<li><a href="javascript:;" class="c4-l1"><span><?php echo $Friends['Keepthem']; ?></span></a></li>
-										<!--<li><a href="javascript:;" class="c4-l2"><span>World of Warcraft Magazine</span></a></li>-->
-										<li><a href="javascript:;" class="c4-l3"><span><?php echo $Serv['Serv18']; ?></span></a></li>
+									<li><a href="javascript:;" class="c4-l1"><span><?php echo $Friends['Keepthem']; ?></span></a></li>
+									<!--<li><a href="javascript:;" class="c4-l2"><span>World of Warcraft Magazine</span></a></li>-->
+									<li><a href="javascript:;" class="c4-l3"><span><?php echo $Serv['Serv18']; ?></span></a></li>
 								</ul>					
 							</div>
 							<div class="sub-services-section">
@@ -124,13 +122,13 @@ try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
 									<span><?php echo $Serv['Serv19']; ?></span>
 								</div>
 								<ul>
-										<li><a href="javascript:;" class="c3-l1"><span><?php echo $Serv['Serv20']; ?></span></a></li>
-										<li><a href="javascript:;" class="c3-l2"><span><?php echo $Serv['Serv21']; ?></span></a></li>
-										<li><a href="javascript:;" class="c3-l3"><span><?php echo $Serv['Serv22']; ?></span></a></li>
-										<li><a href="javascript:;" class="c3-l4"><span><?php echo $Serv['Serv23']; ?></span></a></li>
-										<li><a href="javascript:;" class="c3-l5"><span><?php echo $Serv['Serv24']; ?></span></a></li>
-										<!--<li><a href="javascript:;" class="c3-l6"><span>Free Character Migration</span></a></li>-->
-										<!--<li><a href="javascript:;" class="c3-l7"><span>Public Test Realm</span></a></li>-->
+									<li><a href="javascript:;" class="c3-l1"><span><?php echo $Serv['Serv20']; ?></span></a></li>
+									<li><a href="javascript:;" class="c3-l2"><span><?php echo $Serv['Serv21']; ?></span></a></li>
+									<li><a href="javascript:;" class="c3-l3"><span><?php echo $Serv['Serv22']; ?></span></a></li>
+									<li><a href="javascript:;" class="c3-l4"><span><?php echo $Serv['Serv23']; ?></span></a></li>
+									<li><a href="javascript:;" class="c3-l5"><span><?php echo $Serv['Serv24']; ?></span></a></li>
+									<!--<li><a href="javascript:;" class="c3-l6"><span>Free Character Migration</span></a></li>-->
+									<!--<li><a href="javascript:;" class="c3-l7"><span>Public Test Realm</span></a></li>-->
 								</ul>					
 							</div>
 							<div class="sub-services-section">
@@ -143,7 +141,7 @@ try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
 								<li><a href="javascript:;" class="c2-l2"><span><?php echo $Serv['Serv28']; ?></span></a></li>
 								<li><a href="javascript:;" class="c2-l3"><span><?php echo $Serv['Serv29']; ?></span></a></li>
 								<li><a href="game_client.php" class="c2-l4"><span><?php echo $Serv['Serv30']; ?></span></a></li>
-										<!--<li><a href="javascript:;" class="c2-l5"><span>Download Language Pack</span></a></li>-->
+								<!--<li><a href="javascript:;" class="c2-l5"><span>Download Language Pack</span></a></li>-->
 								</ul>
                             </div>
 							<div class="sub-services-section">
@@ -151,13 +149,11 @@ try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
 									<span><?php echo $Media['Multimedia']; ?></span>
 								</div>
 								<ul>
-										<li><a href="<?php echo $website['root']; ?>media/send_media.php" class="c1-l3"><span><?php echo $Media['SendMedia']; ?></span></a></li>
-										
+								<li><a href="<?php echo $website['root']; ?>media/send_media.php" class="c1-l3"><span><?php echo $Media['SendMedia']; ?></span></a></li>		
 								</ul>					
 							</div>                                					
-							</div>
-					</div>	
-				
+					</div>
+				</div>	
 				<br />
 				<span class="clear"><!-- --></span>
 				<span class="clear"><!-- --></span>

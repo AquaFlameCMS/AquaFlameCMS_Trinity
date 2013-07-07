@@ -238,11 +238,7 @@ $realm_count = mysql_num_rows($realms);
 <span class="clear"><!-- --></span><div class="content-header">
 <h2 class="header "><?php echo $Status['RlmStat']; ?></h2></div>
 <div class="desc" style="padding: 10px;"><?php echo $Status['Stat5']; ?><?php echo $realm['name']; ?><?php echo $Status['Stat6']; ?><a href="forum/category/?f=27"><?php echo $Status['Stat7']; ?></a><?php echo $Status['Stat8']; ?></div>
-	
-
-
-		<span class="clear"><!-- --></span>
-	
+	<span class="clear"><!-- --></span>
 <?php
 	
 	if (isset($_GET['page'])) {
@@ -451,10 +447,9 @@ $realm_count = mysql_num_rows($realms);
 				 <center>".@$str[$lang]['44']."</center>
 				 <br>";}
 ?>
-
 <div class="mb_top" style="padding: 10px;"><?php echo @$str[$lang]['59'];?> <strong><?php echo $realm['name'];?></strong> Realm</div>
 <div class="mb_main">
-	<?php echo $statistics_page;?>
+<?php echo $statistics_page;?>
 </div>
 <div class="mb_down"></div>
 <br><span class="clear"><!-- --></span><br><br>
@@ -463,22 +458,14 @@ $realm_count = mysql_num_rows($realms);
 <span class='icon-frame frame-32' data-tooltip='Pandaren'><img src="wow/static/local-common/images/icons/panda.jpg" height="32" width="32"></span><br>
 <span class="req mists"><?php echo $Status['ReqMistPand']; ?></span><Br>
 <span class="req cataclysm"><?php echo $Status['PandNoAval']; ?></span></center></div>
-<br><span class="clear"><!-- --></span>
-	
-	
-
-	<span class="clear"><!-- --></span>
-
+<br>
+<span class="clear"><!-- --></span>
+<span class="clear"><!-- --></span>
 <br><br><br><br>
-		<div id="all-realms">
-	<div class="table full-width">
-		<table>
-		</table>
-	</div>
-		</div>
-
-	<span class="clear"><!-- --></span>
-
+<div id="all-realms">
+	<div class="table full-width"><table></table></div>
+</div>
+<span class="clear"><!-- --></span>
 </div>
 </div>
 </div>

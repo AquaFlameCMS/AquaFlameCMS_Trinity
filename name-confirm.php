@@ -85,13 +85,11 @@ _gaq.push(['_trackPageLoadTime']);
 <a href="wow/static/management/wow/dashboard.html?region=EU&amp;accountName=PAP123"><img src="wow/static/local-common/images/game-icons/wow.png" alt="World of Warcraft" width="48" height="48" /></a>
 </div>
 <div class="service-wrapper">
-
 <p class="service-nav">
     <a href="" class="active">Service</a>
     <!--<a href="">History/Status</a>-->
     <a href="account_man.php">Return to dashboard</a>
 </p>
-
 <?php
 $guid = intval($_POST['character']);
 

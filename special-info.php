@@ -132,29 +132,16 @@ Your Current Name:
 </span>
 </div>
 <fieldset class="ui-controls " >
-<button
-class="ui-button button1 "
-type="submit"
-name="unstuck"
-value="Unstuck!"
-id="merge-submit"
-tabindex="1">
-<span>
-<span>Continue</span>
-</span>
+<button class="ui-button button1 " type="submit" name="unstuck" value="Unstuck!" id="merge-submit" tabindex="1">
+	<span>
+	    <span>Continue</span>
+	</span>
 </button>
-<a class="ui-cancel "
-href="/account/"
-tabindex="1">
-<span>
-Cancel </span>
-</a>
+<a class="ui-cancel " href="/account/" tabindex="1"> <span> Cancel </span></a>
 </fieldset>
 </form>
 </table>
 </div>
-
-
 <script type="text/javascript">
 //<![CDATA[
 (function() {

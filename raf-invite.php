@@ -58,9 +58,9 @@ _gaq.push(['_trackPageLoadTime']);
 </script>
 </head>
 <body class="en-gb logged-in">
-        <div id="layout-top">
-            <div class="wrapper">
-                <div id="header">
+<div id="layout-top">
+    <div class="wrapper">
+        <div id="header">
     <?php include("functions/header_account.php"); ?>
 	<?php include("functions/footer_man_nav.php"); ?>
         <div id="layout-middle">
@@ -76,10 +76,10 @@ _gaq.push(['_trackPageLoadTime']);
 			</div>
 			<div class="service-wrapper">
     <p class="service-nav">
-            <a href="" class="active"><?php echo $friend['5']; ?></a>
-            <a href=""><?php echo $friend['6']; ?></a>
-            <a href=""><?php echo $friend['7']; ?></a>
-            <a href=""><?php echo $friend['8']; ?></a>
+        <a href="" class="active"><?php echo $friend['5']; ?></a>
+        <a href=""><?php echo $friend['6']; ?></a>
+        <a href=""><?php echo $friend['7']; ?></a>
+        <a href=""><?php echo $friend['8']; ?></a>
     </p>
 	<div class="raf-service-info">
     <?php echo $friend['9']; ?><a href=""><?php echo $friend['10']; ?></a><?php echo $friend['11']; ?>

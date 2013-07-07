@@ -78,13 +78,11 @@ _gaq.push(['_trackPageLoadTime']);
 <a href=""><img src="wow/static/local-common/images/game-icons/wow.png" alt="World of Warcraft" width="48" height="48" /></a>
 </div>
 <div class="service-wrapper">
-
 <p class="service-nav">
     <a href="" class="active">Service</a>
     <!--<a href="">History/Status</a>-->
     <a href="account_man.php">Return to dashboard</a>
 </p>
-
 <?php
 $guid = intval($_GET['character']);
 $realmid = intval($_GET['realm']);
@@ -130,7 +128,6 @@ function classtxt($class){
     }
 }
 ?>
-
 <div class="service-info">
     <div class="service-tag">
         <div class="service-tag-contents border-3">
@@ -140,17 +137,14 @@ function classtxt($class){
                     else echo '<img src="'.$website['root'].'images/avatars/2d/0-0.jpg" width="64" height="64" alt="" />';
                 ?>
             </div>
-            
             <div class="service-tag-description">
                 <span class="character-name caption"><?php echo $character['name']; ?></span>
                 <span class="character-class"> <?php echo $character['level'] . ' ' . racetxt($character['race']) . ' ' . classtxt($character['class']); ?></span>
                 <span class="character-realm"> <?php echo $realm['name']; ?></span>
             </div>
-            
             <span class="clear"><!-- --></span>
         </div>
     </div>
-    
     <div class="service-summary">
         <p class="service-price headline">
         <?php
@@ -162,11 +156,9 @@ function classtxt($class){
         </p>
     </div>
 </div>
-
 <div class="service-form">
     <div class="service-interior">
         <h2 class="caption">Name Change</h2>
-        
         <div class="tos-left full-width">
             <ul>
                 <?php
@@ -176,15 +168,11 @@ function classtxt($class){
                 <li>Please read the conditions and disclaimers below, thank you.</li>
             </ul>
         </div>
-        
         <span class="clear"><!-- --></span>
     </div>
-    
     <br />
-    
     <div class="service-interior">
         <h2 class="caption">CONDITIONS AND DISCLAIMERS</h2>
-        
         <div class="tos-left full-width">
             <ul>
                 <li>The race change process is immediate, your character will be only become available as a new Race to play, only if you are not online. Under normal conditions the process should take less than a minute, but please remember to be offline while you are doing customization.</li>
@@ -194,7 +182,6 @@ function classtxt($class){
                 <li>A character can only change races once every 12 hours.</li>
             </ul>
         </div>
-        
         <span class="clear"><!-- --></span>
         
         <form method="POST" action="name-confirm.php">

@@ -72,24 +72,17 @@ _gaq.push(['_trackPageLoadTime']);
 <div id="layout-middle">
 	<div class="wrapper">
 	<div id="content">
-
-
      <!--[if lte IE 7]>  <style type="text/css">
     .raf-step3-arrow { position:relative; width:176px; height:61px; background:url('wow/static/images/services/wow/raf/step_3_arrow_b.png') 0 0 no-repeat!important; top:-540px; left:105px; }
     .raf-step5-arrow { position:relative; width:155px; height:57px; background:url('wow/static/images/services/wow/raf/step_5_arrow_b.png') 0 0 no-repeat!important; top:-163px; left:150px; }
      </style>  <![endif]-->
-
-
 	<div class="dashboard service">
-
 		<div class="primary">
-
 			<div class="header">
 				<h2 class="subcategory"><?php echo $Vote['Vote']; ?></h2>
 				<h3 class="headline">Vote System</h3>
 				<a href=""><img src="wow/static/local-common/images/game-icons/wow.png" alt="World of Warcraft" width="48" height="48" /></a>
 			</div>
-
 			<div class="service-wrapper">
 			<p class="service-nav">
 				<a href=""><?php echo $Vote['Vote2']; ?></a> <!-- Spend Points -->
@@ -262,37 +255,26 @@ _gaq.push(['_trackPageLoadTime']);
 						}
 				
 				?>
-				
-				<br><br><br>
-				
-				<div class="subsection">
-					<div class="middle">?</div>
-					<div class="right">
-						<h2 class="caption" id="howitworks"><a href="#"><?php echo $Vote['Vote4']; ?></a></h2>
-						<p><?php echo $Vote['Vote30']; ?></p>
-						<P><?php echo $Vote['Vote31']; ?></p>
-						<p><?php echo $Vote['Vote32']; ?></p>
+					<br><br><br>
+					<div class="subsection">
+						<div class="middle">?</div>
+						<div class="right">
+							<h2 class="caption" id="howitworks"><a href="#"><?php echo $Vote['Vote4']; ?></a></h2>
+							<p><?php echo $Vote['Vote30']; ?></p>
+							<P><?php echo $Vote['Vote31']; ?></p>
+							<p><?php echo $Vote['Vote32']; ?></p>
+						</div>
 					</div>
-				</div>
-            <div class="raf-step3-arrow"></div>
-            <div class="raf-step5-arrow"></div>
-        </div>
-
-
-
-	<span class="clear"><!-- --></span>
+				<div class="raf-step3-arrow"></div>
+				<div class="raf-step5-arrow"></div>
 			</div>
-
+			<span class="clear"><!-- --></span>
+		    </div>
 		</div>
 	</div>
-
-
-
-
-				</div>
-            </div>
-        </div>
-
+</div>
+</div>
+</div>
 <div id="layout-bottom">
 <?php include("functions/footer_man.php"); ?>
 </div>

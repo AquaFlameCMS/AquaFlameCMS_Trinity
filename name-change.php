@@ -143,14 +143,10 @@ _gaq.push(['_trackPageLoadTime']);
     </div>
 </div>
 
-
 <div class="payment-overview">
-    
     <div id="payment-toggle">
         <div>
             <div class="section-header drop-shadow border-4">Name Change </div>
-            
-            
             <?php
             if(isset($_POST['payment'])){
                 if($_POST['payment'] == "pay"){
@@ -251,9 +247,7 @@ _gaq.push(['_trackPageLoadTime']);
                         </p>
                         <span class="clear"></span>
                     </div>
-                    
                     <fieldset class="ui-controls section-buttons">
-                    
                         <?php if(count($errors) > 0) echo '<button class="ui-button button1 disabled" type="submit" id="tos-submit" tabindex="1" disabled="disabled"><span><span>Continue</span></span></button>';
                         else  echo '<button class="ui-button button1" type="submit" id="tos-submit" tabindex="1"><span><span>Continue</span></span></button>'; ?>
                         <a class="ui-cancel " href="name.php" tabindex="1">
@@ -270,9 +264,7 @@ _gaq.push(['_trackPageLoadTime']);
                 </div>
             </div>
             </form>
-            
             <?php } ?>
-            
         </div>
     </div>
     <div id="payment-toggle-loading">

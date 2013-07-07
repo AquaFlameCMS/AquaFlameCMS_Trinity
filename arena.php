@@ -84,15 +84,11 @@ _gaq.push(['_trackPageLoadTime']);
 	</div>
 	<div class="content-bot">
 
-
 	<div id="profile-wrapper" class="profile-wrapper profile-wrapper">
-
 		<div class="profile-sidebar-anchor">
 			<div class="profile-sidebar-outer">
 				<div class="profile-sidebar-inner">
 					<div class="profile-sidebar-contents">
-
-
 
 		<div class="profile-info-anchor">
 		<div class="arenateam-flag">
@@ -127,70 +123,51 @@ _gaq.push(['_trackPageLoadTime']);
 				?>
 				<div class="under-name">
 					<span class="teamsize"><b><?php echo $type ?></b></span> <span class="faction"><?php echo $faction; ?></span> Arena Team<span class="comma">,</span>
-
 					<span class="text" data-tooltip="<?php echo $website['title']; ?>">
 					<a href=""><font color=""><?php echo $website['title'];?></font></a> <!-- There should be Battlegroup name -->
 					</span>
-					
 				</div>
 
-				<div class="rank">
-					
-					Last week's ranking: <span class="ranked"><?php echo $team_row['rank']; ?>°</span>
+				<div class="rank">Last week's ranking: <span class="ranked"><?php echo $team_row['rank']; ?>°</span>
 				</div>
-
 			</div>
 		</div>
-
-
-
 	<ul class="profile-sidebar-menu" id="profile-sidebar-menu">
 			<li class="">
-
 	<a href="search.php" class="back-to" rel="np"><span class="arrow"><span class="icon">Search</span></span></a>
 
 			</li>
 
 			<li class=" active">
 
-		<a href="index.html" class="" rel="np">
-			<span class="arrow"><span class="icon">
-				<?php echo $name = $_GET['name'];?>
-			</span></span>
-		</a>
-
+			<a href="index.html" class="" rel="np">
+				<span class="arrow"><span class="icon">
+					<?php echo $name = $_GET['name'];?>
+				</span></span>
+			</a>
 			</li>
-
-		
 	</ul>
-					</div>
-				</div>
-			</div>
-		</div>
+</div>
+</div>
+</div>
+</div>
 		
 		<div class="profile-contents">
-
 		<div class="summary">
-
 			<div class="profile-section">
-
 					<div class="summary-stats">
 	<div class="arenateam-stats table">
 		<table>
 			<thead>
 				<tr>
-					<th class="align-left">	<span class="sort-tab">&#0160;</span>
-</th>
-					<th width="23%" class="align-center">	<span class="sort-tab">Matches</span>
-</th>
-					<th width="23%" class="align-center">	<span class="sort-tab">Win - Loss</span>
-</th>
-					<th width="23%" class="align-center">	<span class="sort-tab">Team Rating</span>
-</th>
+					<th class="align-left">	<span class="sort-tab">&#0160;</span></th>
+					<th width="23%" class="align-center">	<span class="sort-tab">Matches</span></th>
+					<th width="23%" class="align-center">	<span class="sort-tab">Win - Loss</span></th>
+					<th width="23%" class="align-center">	<span class="sort-tab">Team Rating</span></th>
 				</tr>
 			</thead>
 			<tbody>
-	
+
 	<tr class="row2">
 		<td class="align-left">
 			<strong class="week">This Week</strong>
@@ -204,7 +181,6 @@ _gaq.push(['_trackPageLoadTime']);
 				<span class="arenateam-rating"><?php echo $team_row['rating']; ?></span>
 		</td>
 	</tr>
-	
 	<tr class="row1">
 		<td class="align-left">
 			<strong class="season">Season</strong>
@@ -218,50 +194,35 @@ _gaq.push(['_trackPageLoadTime']);
 				<span class="arenateam-rating"><?php echo $team_row['rating']; ?></span>
 		</td>
 	</tr>
-			</tbody>
+	</tbody>
 		</table>
 	</div>
-					</div>
+</div>
 
-					<div class="summary-roster">
-					<div class="ui-dropdown" id="filter-timeframe">
-						<select>
-							<option value="season">Season</option>
-							<option value="weekly">Weekly</option>
-						</select>
-					</div>
-
-							<h3 class="category "><b>Roster</b></h3>
-
-
+	<div class="summary-roster">
+		<div class="ui-dropdown" id="filter-timeframe">
+			<select>
+				<option value="season">Season</option>
+				<option value="weekly">Weekly</option>
+			</select>
+		</div>
+	<h3 class="category "><b>Roster</b></h3>
 	<div class="arenateam-roster table" id="arena-roster">
 		<table>
 			<thead>
 				<tr>
-					<th>	<a href="javascript:;" class="sort-link">
-		<span class="arrow">Name</span>
-	</a>
-</th>
+					<th><a href="javascript:;" class="sort-link">
+						<span class="arrow">Name</span></a></th>
 					<th style="display: none" class="align-center season">	<a href="javascript:;" class="sort-link numeric">
-		<span class="arrow">Season Played</span>
-	</a>
-</th>
+						<span class="arrow">Season Played</span></a></th>
 					<th style="display: none" class="align-center season">	<a href="javascript:;" class="sort-link numeric">
-		<span class="arrow">Season Win – Loss</span>
-	</a>
-</th>
+						<span class="arrow">Season Win – Loss</span></a></th>
 					<th class="align-center weekly">	<a href="javascript:;" class="sort-link numeric">
-		<span class="arrow">Played</span>
-	</a>
-</th>
+						<span class="arrow">Played</span></a></th>
 					<th class="align-center weekly">	<a href="javascript:;" class="sort-link numeric">
-		<span class="arrow">Win – Loss</span>
-	</a>
-</th>
+						<span class="arrow">Win – Loss</span></a></th>
 					<th class="align-center">	<a href="javascript:;" class="sort-link numeric">
-		<span class="arrow">Rating</span>
-	</a>
-</th>
+						<span class="arrow">Rating</span></a></th>
 				</tr>
 			</thead>
 			<tbody>
