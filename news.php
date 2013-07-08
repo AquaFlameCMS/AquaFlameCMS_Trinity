@@ -80,7 +80,6 @@ _gaq.push(['_trackPageview']);
 				</ol>
 				</div>
 				<div class="content-bot">	
-				
 					<script type="text/javascript">
 					//<![CDATA[
 						var addthis_config = {
@@ -106,12 +105,9 @@ _gaq.push(['_trackPageview']);
 									<?php
 									}
 									?>
-
 									<span class="clear"></span>
 								</div>
-		
 								<div id="blog">
-								
 									<?php
 									if($error == 0){
 									
@@ -304,7 +300,6 @@ ended
 <div id="poll-ajax-error"></div>
 </td></tr></table>-->
 								</div>
-								
 								<script type="text/javascript">
 								//<![CDATA[
 									$(function(){
@@ -312,7 +307,6 @@ ended
 									});
 								//]]>
 								</script>
-								
 								<!--[if IE 6]>
 								<script type="text/javascript">
 								//<![CDATA[
@@ -322,7 +316,6 @@ ended
 								//]]>
 								</script>
 								<![endif]-->
-
 								<div id="report-post">
 										<table id="report-table">
 											<tr>
@@ -334,15 +327,15 @@ ended
 												<td class="report-desc"><div>Reason</div></td>
 												<td class="report-detail">
 													<select id="report-reason">
-																<option value="SPAMMING">Spamming</option>
-																<option value="REAL_LIFE_THREATS">Real Life Threats</option>
-																<option value="BAD_LINK">Bad Link</option>
-																<option value="ILLEGAL">Illegal</option>
-																<option value="ADVERTISING_STRADING">Advertising</option>
-																<option value="HARASSMENT">Harassment</option>
-																<option value="OTHER">Other</option>
-																<option value="NOT_SPECIFIED">Not Specified</option>
-																<option value="TROLLING">Trolling</option>
+														<option value="SPAMMING">Spamming</option>
+														<option value="REAL_LIFE_THREATS">Real Life Threats</option>
+														<option value="BAD_LINK">Bad Link</option>
+														<option value="ILLEGAL">Illegal</option>
+														<option value="ADVERTISING_STRADING">Advertising</option>
+														<option value="HARASSMENT">Harassment</option>
+														<option value="OTHER">Other</option>
+														<option value="NOT_SPECIFIED">Not Specified</option>
+														<option value="TROLLING">Trolling</option>
 													</select>
 												</td>
 												<td></td>
@@ -367,7 +360,6 @@ ended
 											[<a href="javascript:;" onclick="$(&quot;#report-post&quot;).hide()">Close</a>]
 										</div>
 								</div>
-								
 								<?php if($show_comment == true){ ?>
 								<span id="comments"></span>
 								<div id="page-comments">
@@ -418,28 +410,23 @@ ended
 																			<span></span>
 																		</div>
 																		
-																		<div class="context-links">
-																		</div>
+																		<div class="context-links"></div>
 																	</div>
 																</div>
-																
 																<a href="#" class="context-link" rel="np"><?php echo ucfirst($user['firstName']); ?></a>
-																
 															</div>
 														</div>
-														
 														<div class="content">
 															<div class="comment-ta">
 															<textarea id="comment-ta-reply" cols="78" rows="3" name="detail" onfocus="textAreaFocused = true;" onblur="textAreaFocused = false;"></textarea>
 															</div>
 															
 															<div class="action">
-															
 																<div class="cancel">
 																	<span class="spacer">|</span>
 																	<a href="javascript:;" onclick="$('#comment-form-reply').slideUp();">Cancel</a>
 																</div>
-																
+													
 																<div class="submit">
 																	<button class="ui-button button1 comment-submit " type="submit">
 																		<span>

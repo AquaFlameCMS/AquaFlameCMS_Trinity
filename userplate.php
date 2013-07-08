@@ -302,7 +302,6 @@ if (!isset($_SESSION['username'])) {
             </div>
         </div>
         <script type="text/javascript">
-
             //<![CDATA[
             $(document).ready(function() {
                 Tooltip.bind('#header .user-meta .character-name', {location: 'topCenter'});

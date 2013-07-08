@@ -62,65 +62,42 @@ _gaq.push(['_trackPageview']);
 </div>
 <div class="content-bot">
 	<div class="content-header">
-				<h2 class="header "><?php echo $Status['RealmStat']; ?></h2>
-
-
+		<h2 class="header "><?php echo $Status['RealmStat']; ?></h2>
 		<div class="desc"><?php echo $Status['Stat1']; ?><a href="forum/category/?f=27"><?php echo $Status['ServStat']; ?></a><?php echo $Status['Stat2']; ?></div>
-	<span class="clear"><!-- --></span>
+	    <span class="clear"><!-- --></span>
 	</div>
-
 	<div id="realm-status">	
 <?php include("functions/status_nav.php"); ?>
 		<div class="filter-toggle">
-			<a href="javascript:;" class="selected" onclick="RealmStatus.filterToggle(this)">
-				
-			</a>
+			<a href="javascript:;" class="selected" onclick="RealmStatus.filterToggle(this)">	</a>
 		</div>
-
 	<span class="clear"><!-- --></span>
-
 		<div id="realm-filters" class="table-filters">
 			<form action="#">
 				<div class="filter">
 					<label for="filter-status"><?php echo $Status['Status']; ?></label>
-					
 					<select id="filter-status" class="input select" data-filter="column" data-column="0">
 						<option value=""><?php echo $Status['All']; ?></option>
 						<option value="up"><?php echo $Status['Up']; ?></option>
 						<option value="down"><?php echo $Status['Down']; ?></option>
 					</select>
 				</div>
-
 				<div class="filter">
 					<label for="filter-name"><?php echo $Status['RealmName']; ?></label>
-
-					<input type="text" class="input" id="filter-name" 
-						   data-filter="column" data-column="1" />
+					<input type="text" class="input" id="filter-name" data-filter="column" data-column="1" />
 				</div>
-
 				<div class="filter">
 					<label for="filter-type"><?php echo $Status['Type']; ?></label>
-
 					<select id="filter-type" class="input select" data-filter="column" data-column="2">
 						<option value=""><?php echo $Status['All']; ?></option>
-							<option value="pve">
-								PvE
-							</option>
-							<option value="rppvp">
-								RP PvP
-							</option>
-							<option value="pvp">
-								PvP
-							</option>
-							<option value="rp">
-								RP
-							</option>
+						<option value="pve">PvE</option>
+						<option value="rppvp">RP PvP</option>
+						<option value="pvp">PvP</option>
+						<option value="rp">RP</option>
 					</select>
 				</div>
-
 				<div class="filter">
 					<label for="filter-population"><?php echo $status['population']; ?></label>
-
 					<select id="filter-population" class="input select" data-filter="column" data-column="3">
 						<option value=""><?php echo $Status['All']; ?></option>
 							<option value="high"><?php echo $status['high']; ?></option>
@@ -129,57 +106,35 @@ _gaq.push(['_trackPageview']);
 							<option value="low"><?php echo $status['low']; ?></option>
 					</select>
 				</div>
-
 				<div class="filter">
 					<label for="filter-locale">Locale</label>
-
 					<select id="filter-locale" class="input select" data-column="4" data-filter="column">
 						<option value=""><?php echo $Status['Locale']; ?></option>
-							<option value="spanish"><?php echo $Status['spanish']; ?></option>
-							<option value="german"><?php echo $Status['german']; ?></option>
-							<option value="french"><?php echo $Status['french']; ?></option>
-							<option value="tournament"><?php echo $Status['tournament']; ?></option>
-							<option value="russian"><?php echo $Status['russian']; ?></option>
-							<option value="english"><?php echo $Status['english']; ?></option>
+						<option value="spanish"><?php echo $Status['spanish']; ?></option>
+						<option value="german"><?php echo $Status['german']; ?></option>
+						<option value="french"><?php echo $Status['french']; ?></option>
+						<option value="tournament"><?php echo $Status['tournament']; ?></option>
+						<option value="russian"><?php echo $Status['russian']; ?></option>
+						<option value="english"><?php echo $Status['english']; ?></option>
 					</select>
 				</div>
-
 				<div class="filter">
 					<label for="filter-queue"><?php echo $Status['Queue']; ?></label>
-
 					<input type="checkbox" id="filter-queue" class="input" value="true" data-column="5" data-filter="column" />
 				</div>
-
 				<div class="filter" style="margin: 5px 0 5px 15px">
-					
-
-	<button
-		class="ui-button button1 "
-			type="button"
-			
-		
-		id="filter-button"
-		
-		onclick="RealmStatus.reset();"
-		
-		
-		>
-		<span>
-			<span><?php echo $Status['Reset']; ?></span>
-		</span>
-	</button>
-
+					<button class="ui-button button1 " type="button" id="filter-button" onclick="RealmStatus.reset();" >
+						<span>
+							<span><?php echo $Status['Reset']; ?></span>
+						</span>
+					</button>
 				</div>
-
-	<span class="clear"><!-- --></span>
+	            <span class="clear"><!-- --></span>
 			</form>
 		</div>
 	</div>
-
 	<span class="clear"><!-- --></span>
-
-
-		<div id="all-realms">
+	<div id="all-realms">
 	<div class="table full-width">
 		<table>
 			<thead>
@@ -306,50 +261,27 @@ _gaq.push(['_trackPageview']);
 					</tr>';
 					}
 
-					?>
-					
-					<!-- Removed or add the ( --> <!-- ) Only if you know what they are doing -->
-					
-			<!-- Removed the ( --> <!-- ) Only if you know what they are doing -->
-			<!-- This is the 3rd (Third) Server on the Status, its Local -->
+					?>					
+				<!-- Removed or add the ( --> <!-- ) Only if you know what they are doing -->
+				<!-- Removed the ( --> <!-- ) Only if you know what they are doing -->
+				<!-- This is the 3rd (Third) Server on the Status, its Local -->
 					<!--<tr class="row1">
-						<td class="status" data-raw="up">
-							<div class="status-icon up"
-								 onmouseover="Tooltip.show(this, 'Local')">
-							</div>
-						</td>
-						<td class="name">
-							Local
-						</td>
-						<td class="type" data-raw="pvp">
-							<span class="normal">
-									(Normal)
-							</span>
-						</td>
-						<td class="population" data-raw="Low">
-							<span class="Low">
-									Currently Local
-							</span>
-						</td>
-						<td class="locale">
-							Cataclysm
-						</td>
-						<td class="queue" data-raw="false">
-						Local
-						</td>
+						<td class="status" data-raw="up"><div class="status-icon up" onmouseover="Tooltip.show(this, 'Local')"></div></td>
+						<td class="name">Local</td>
+						<td class="type" data-raw="pvp"><span class="normal">(Normal)</span></td>
+						<td class="population" data-raw="Low"><span class="Low">Currently Local</span></td>
+						<td class="locale">Cataclysm</td>
+						<td class="queue" data-raw="false">Local</td>
 					</tr>-->
-																<!--Server No.3-->
-															
+				<!--Server No.3-->					
 				<tr class="no-results" style="display: none">
 					<td colspan="6"><?php echo $status['noResults']; ?></td>
 				</tr>
 			</tbody>
 		</table>
 	</div>
-		</div>
-
-	<span class="clear"><!-- --></span>
-
+</div>
+<span class="clear"><!-- --></span>
 </div>
 </div>
 </div>

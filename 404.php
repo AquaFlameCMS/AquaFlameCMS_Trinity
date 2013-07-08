@@ -35,15 +35,18 @@ $page_cat = "home";
 	<![endif]-->
 </head>
 <body class="en-gb server-error logged-in">
-
 <div id="wrapper">
-	<?php include("header.php"); ?>
+<?php include("header.php"); ?>
 <div id="content">
 <div class="content-top">
 <div class="content-trail">
 <ol class="ui-breadcrumb">
 <li class="last">
+<<<<<<< HEAD
 <a href="index.php" rel="np"><?php echo $website['title']; ?></a>
+=======
+<a href="/wow/en/" rel="np">World of Warcraft</a>
+>>>>>>> Code style
 </li>
 </ol>
 </div>
@@ -51,13 +54,9 @@ $page_cat = "home";
 	<div id="server-error">
 		<h2 class="http">Four,<br /> oh: four.</h2>
 		<h3>Page Not Found</h3>
-
 		<p>There was<br /> a <strong>PAGE</strong><br /> here.<br />It's gone now.<br /><br /><em>(Is this what happens to pages that wander into the forest?)</em></p>
-
-
 		<!-- http : 404 -->
 	</div>
-	
 </div>
 </div>
 </div>

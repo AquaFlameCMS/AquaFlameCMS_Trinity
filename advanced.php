@@ -293,32 +293,24 @@ try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
 		});
         //]]>
         </script>
-
-				</div>
-
-		
-
+		</div>
 			<div class="summary-middle">
 				<div class="summary-middle-inner">
-
 					<div class="summary-middle-right">
 						<div class="summary-audit" id="summary-audit">
 							<div class="category-right"><span class="tip" id="summary-audit-whatisthis"><?php echo $armory['what']; ?></span></div>
 								<h3 class="category "><?php echo $armory['audit']; ?></h3>
-
 							<div class="profile-box-simple">
-
-	<ul class="summary-audit-list">
-	<li>
-				<span class="number">1</span> <?php echo $armory['emptyGlyph']; ?>
-	</li>
-	<li data-slots="2,15">
-				<span class="tip">
-					<span class="number">2</span> <?php echo $armory['unenchanted']; ?>
-				</span>
-	</li>
-	</ul>
-
+							<ul class="summary-audit-list">
+							<li>
+								<span class="number">1</span> <?php echo $armory['emptyGlyph']; ?>
+							</li>
+							<li data-slots="2,15">
+								<span class="tip">
+									span class="number">2</span> <?php echo $armory['unenchanted']; ?>
+								</span>
+							</li>
+	                        </ul>
         <script type="text/javascript">
         //<![CDATA[
 		$(document).ready(function() {
@@ -335,186 +327,119 @@ try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
 							</div>
 						</div>
 						<div id="summary-reforging" class="summary-reforging">
-								<h3 class="category "><?php echo $armory['reforging']; ?></h3>
-
-							<div class="profile-box-simple">
-
-		No items have been reforged.
-							</div>
+							<h3 class="category "><?php echo $armory['reforging']; ?></h3>
+						    <div class="profile-box-simple">No items have been reforged.</div>
 						</div>
 					</div>
 				
 					<div class="summary-middle-left">
 						<div class="summary-bonus-tally">
-								<h3 class="category "><?php echo $armory['enchant']; ?></h3>
-
-							<div class="profile-box-simple">
-
-
-		<div class="numerical">
-			<ul>
-					<li>
-						<span class="value">+0</span> <?php echo $armory['armour']; ?>
-					</li>
-					<li>
-						<span class="value">+0</span> <?php echo $armory['stamina']; ?>
-					</li>
-					<li>
-						<span class="value">+0</span> <?php echo $armory['strength']; ?>
-					</li>
-			</ul>
-		</div>
-	
-		
-							</div>
+						<h3 class="category "><?php echo $armory['enchant']; ?></h3>
+						<div class="profile-box-simple">
+						<div class="numerical">
+							<ul>
+									<li>
+										<span class="value">+0</span> <?php echo $armory['armour']; ?>
+									</li>
+									<li>
+										<span class="value">+0</span> <?php echo $armory['stamina']; ?>
+									</li>
+									<li>
+										<span class="value">+0</span> <?php echo $armory['strength']; ?>
+									</li>
+							</ul>
 						</div>
-
+						</div>
+						</div>
 						<div class="summary-gems">
-								<h3 class="category "><?php echo $armory['gems']; ?></h3>
-
-							<div class="profile-box-simple">
-
-		<?php echo $armory['noGems']; ?>
-							</div>
+							<h3 class="category "><?php echo $armory['gems']; ?></h3>
+						<div class="profile-box-simple"><?php echo $armory['noGems']; ?></div>
 						</div>
 
-	<span class="clear"><!-- --></span>
+	                <span class="clear"><!-- --></span>
 					</div>
-	<span class="clear"><!-- --></span>
+	            <span class="clear"><!-- --></span>
 				</div>
 			</div>
-
 			<div class="summary-bottom">
-
 				<div class="profile-recentactivity">
-	<h3 class="category ">						<?php echo $armory['activity']; ?>
-</h3>
-					<div class="profile-box-simple">
-					<p><?php echo $armory['noActivity']; ?></p>
-					<?php echo $armory['disable']; ?>
+	<h3 class="category "><?php echo $armory['activity']; ?></h3>
+		<div class="profile-box-simple">
+		<p><?php echo $armory['noActivity']; ?></p>
+		<?php echo $armory['disable']; ?>
 	<ul class="activity-feed">
-
-
-
 	<li class="ach ">
 	<dl>
-		<dd>
-
-		<a href="achievement#97:14777:a627" data-achievement="627">
-
-
-
-
+	<dd>
+	<a href="achievement#97:14777:a627" data-achievement="627">
 		<!--<span  class="icon-frame frame-18 " style='background-image: url("http://eu.media.blizzard.com/wow/icons/18/achievement_zone_dunmorogh.jpg");'>
 		</span>
 		</a>
-
 	Earned the achievement <a href="achievement#97:14777:a627" data-achievement="627">Explore Dun Morogh</a> for 10 points.
-</dd>
+    </dd>
 		<dt>17/04/2011</dt>
 	</dl>
 	</li>
-
-
-
 	<li class="ach ">
 	<dl>
 		<dd>
-
 		<a href="achievement#97:14778:a736" data-achievement="736">
-
-
-
 
 		<span  class="icon-frame frame-18 " style='background-image: url("http://eu.media.blizzard.com/wow/icons/18/achievement_zone_mulgore_01.jpg");'>
 		</span>
 		</a>
-
 	Earned the achievement <a href="achievement#97:14778:a736" data-achievement="736">Explore Mulgore</a> for 10 points.
-</dd>
+    </dd>
 		<dt>17/04/2011</dt>
 	</dl>
 	</li>
-
-
-
 	<li class="ach ">
 	<dl>
 		<dd>
-
 		<a href="achievement#97:14778:a750" data-achievement="750">
-
-
-
-
 		<span  class="icon-frame frame-18 " style='background-image: url("http://eu.media.blizzard.com/wow/icons/18/achievement_zone_barrens_01.jpg");'>
 		</span>
 		</a>
-
 	Earned the achievement <a href="achievement#97:14778:a750" data-achievement="750">Explore Northern Barrens</a> for 10 points.
-</dd>
+    </dd>
 		<dt>17/04/2011</dt>
 	</dl>
 	</li>
-
-
-
 	<li class="ach ">
 	<dl>
 		<dd>
-
 		<a href="achievement#97:14777:a768" data-achievement="768">
-
-
-
-
 		<span  class="icon-frame frame-18 " style='background-image: url("http://eu.media.blizzard.com/wow/icons/18/achievement_zone_tirisfalglades_01.jpg");'>
 		</span>
 		</a>
-
 	Earned the achievement <a href="achievement#97:14777:a768" data-achievement="768">Explore Tirisfal Glades</a> for 10 points.
-</dd>
+    </dd>
 		<dt>17/04/2011</dt>
 	</dl>
 	</li>
-
-
-
 	<li class="ach ">
 	<dl>
 		<dd>
-
 		<a href="achievement#97:14777:a769" data-achievement="769">
-
-
-
-
 		<span  class="icon-frame frame-18 " style='background-image: url("http://eu.media.blizzard.com/wow/icons/18/achievement_zone_silverpine_01.jpg");'>
 		</span>
 		</a>
-
 	Earned the achievement <a href="achievement#97:14777:a769" data-achievement="769">Explore Silverpine Forest</a> for 10 points.
-</dd>
+    </dd>
 		<dt>17/04/2011</dt>-->
-		
 	</dl>
 	</li>
 	</ul>
 	<div class="profile-linktomore">	
 		<a href="" rel="np"><?php echo $armory['early']; ?></a>
 	</div>
-
 	<span class="clear"><!-- --></span>
-					</div>
-
-				</div>
-
-				<div class="summary-bottom-left">
-
-					<div class="summary-talents" id="summary-talents">
+	</div>
+</div>
+<div class="summary-bottom-left">
+<div class="summary-talents" id="summary-talents">
 	<ul>
-
-	<li class="summary-talents-0">
+    <li class="summary-talents-0">
 		<a href=""><span class="inner">
 			<span class="icon"><img src="wow/static/images/icons/talents/<?php echo $talentS; ?>.jpg" alt="" /><span class="frame"></span></span>
 				<span class="roles">
@@ -527,12 +452,11 @@ try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
             ?>	
          </span>		
       <span class="name-build">
-				<span class="name"><?php echo $armory['branch'.$talentS]; ?></span>
-				<span class="build">0<ins>/</ins>0<ins>/</ins>0</span>
-			</span>
+			<span class="name"><?php echo $armory['branch'.$talentS]; ?></span>
+			<span class="build">0<ins>/</ins>0<ins>/</ins>0</span>
+		</span>
 		</span></a>
 	</li>
-
 	<li class="summary-talents-1">
 		<a href="" class="active"><span class="inner">
 				<span class="checkmark"></span>
@@ -553,9 +477,8 @@ try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
 		</span></a>
 	</li>
 	</ul>
-					</div>
-
-					<div class="summary-health-resource">
+</div>
+<div class="summary-health-resource">
 	<ul>
 		<li class="health" id="summary-health" data-id="health">
 		<table width="100%">
@@ -565,7 +488,6 @@ try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
       </tr>
     </table>
     </li>
-    	
 		<?php 
 		if($classNum == 2 || $classNum == 7 || $classNum == 8 || $classNum == 9 || $classNum == 11 || $classNum == 5 || $classNum == 7)
 		{
@@ -594,14 +516,12 @@ try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
 		}                                                                                                                               //runic is 1000 in db
 		 ?></table></li>
 	</ul>
-					</div>
+</div>
+<div class="summary-stats-profs-bgs">
 
-					<div class="summary-stats-profs-bgs">
-
-
-	<div class="summary-stats" id="summary-stats">
-			<div id="summary-stats-advanced" class="summary-stats-advanced">
-				<div class="summary-stats-advanced-base">
+<div class="summary-stats" id="summary-stats">
+	<div id="summary-stats-advanced" class="summary-stats-advanced">
+	<div class="summary-stats-advanced-base">
 	<div class="summary-stats-column">
 		<h4>Base</h4>
 		<ul>
@@ -627,612 +547,298 @@ try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
 	</li>
 		</ul>
 	</div>
-				</div>
-				<div class="summary-stats-advanced-role">
+	</div>
+<div class="summary-stats-advanced-role">
 	<div class="summary-stats-column">
 		<h4><?php echo $armory['Other']; ?></h4>
 		<ul>
-
-	 
-
-
-
 
 	<li data-id="meleeattackpower" class="">
 		<span class="name"><?php echo $armory['AP']; ?></span>
 		<span class="value color-q2"><?php echo $character->getStatInfo()->attackPower; ?></span>
 	<span class="clear"><!-- --></span>
 	</li>
-
-	 
-
-	
-
 	<li data-id="parry" class="">
 		<span class="name"><?php echo $armory['Parry']; ?></span>
 		<span class="value"><?php echo number_format($character->getStatInfo()->parryPct,2,".",","); ?> %</span>
 	<span class="clear"><!-- --></span>
 	</li>
-
-	 
-
-
-
-
-
 	<li data-id="meleehaste" class="">
 		<span class="name"><?php echo $armory['Haste']; ?></span>
 		<span class="value">--</span>
 	<span class="clear"><!-- --></span>
 	</li>
-
-	 
-
-
-
-
-
 	<li data-id="meleehit" class="">
 		<span class="name"><?php echo $armory['Hit']; ?></span>
 		<span class="value">--</span>
 	<span class="clear"><!-- --></span>
 	</li>
-
-	 
-
-
-
-
-
 	<li data-id="meleecrit" class="">
 		<span class="name"><?php echo $armory['Crit']; ?></span>
 		<span class="value"><?php echo number_format($character->getStatInfo()->critPct,2,".",","); ?> %</span>
 	<span class="clear"><!-- --></span>
 	</li>
-		</ul>
-	</div>
-				</div>
-				<div class="summary-stats-end"></div>
-			</div>
-
-		<div id="summary-stats-simple" class="summary-stats-simple" style=" display: none">
-			<div class="summary-stats-simple-base">
-
-
+</ul>
+</div>
+</div>
+<div class="summary-stats-end"></div>
+</div>
+	<div id="summary-stats-simple" class="summary-stats-simple" style=" display: none">
+	<div class="summary-stats-simple-base">
 	<div class="summary-stats-column">
 		<h4><?php echo $armory['Base']; ?></h4>
 		<ul>
-
-	 
-
-
-
-
-
 	<li data-id="strength" class="">
 		<span class="name"><?php echo $armory['strength']; ?></span>
 		<span class="value color-q2"><?php echo $character->getStatInfo()->strength; ?></span>
 	<span class="clear"><!-- --></span>
 	</li>
-
-	 
-
-
-
-
-
 	<li data-id="agility" class="">
 		<span class="name"><?php echo $armory['Agility']; ?></span>
 		<span class="value"><?php echo $character->getStatInfo()->agility; ?></span>
 	<span class="clear"><!-- --></span>
 	</li>
-
-	 
-
-
-
-
-
 	<li data-id="stamina" class="">
 		<span class="name"><?php echo $armory['stamina']; ?></span>
 		<span class="value color-q2"><?php echo $character->getStatInfo()->stamina; ?></span>
 	<span class="clear"><!-- --></span>
 	</li>
-
-	 
-
-
-
-
-
 	<li data-id="intellect" class="">
 		<span class="name"><?php echo $armory['Intellect']; ?></span>
 		<span class="value color-q2"><?php echo $character->getStatInfo()->intellect; ?></span>
 	<span class="clear"><!-- --></span>
 	</li>
-
-	 
-
-
-
-
-
 	<li data-id="spirit" class="">
 		<span class="name"><?php echo $armory['Spirit']; ?></span>
 		<span class="value"><?php echo $character->getStatInfo()->spirit; ?></span>
 	<span class="clear"><!-- --></span>
 	</li>
-
-	 
-
-
-
-
-
 	<li data-id="mastery" class="">
 		<span class="name"><?php echo $armory['Mastery']; ?></span>
 		<span class="value">--</span>
 	<span class="clear"><!-- --></span>
 	</li>
-		</ul>
-	</div>
-			</div>
-			<div class="summary-stats-simple-other">
-				<a id="summary-stats-simple-arrow" class="summary-stats-simple-arrow" href="javascript:;"></a>
-
-
+</ul>
+</div>
+</div>
+	<div class="summary-stats-simple-other">
+	<a id="summary-stats-simple-arrow" class="summary-stats-simple-arrow" href="javascript:;"></a>
 	<div class="summary-stats-column">
 		<h4><?php echo $armory['Melee']; ?></h4>
 		<ul>
-
-	 
-
-	
-
 	<li data-id="meleedamage" class="">
 		<span class="name"><?php echo $armory['Damage'];?></span>
 		<span class="value">--</span>
 	<span class="clear"><!-- --></span>
 	</li>
-
-	 
-
-	
-
 	<li data-id="meleedps" class="">
 		<span class="name">DPS</span>
 		<span class="value">--</span>
 	<span class="clear"><!-- --></span>
 	</li>
-
-	 
-
-
-
-
 	<li data-id="meleeattackpower" class="">
 		<span class="name"><?php echo $armory['AP'];?></span>
 		<span class="value color-q2"><?php echo $character->getStatInfo()->attackPower; ?></span>
 	<span class="clear"><!-- --></span>
 	</li>
-
-	 
-
-	
-
 	<li data-id="meleespeed" class="">
 		<span class="name"><?php echo $armory['Speed'];?></span>
 		<span class="value">--</span>
 	<span class="clear"><!-- --></span>
 	</li>
-
-	 
-
-
-
-
-
 	<li data-id="meleehaste" class="">
 		<span class="name"><?php echo $armory['Haste'];?></span>
 		<span class="value">--</span>
 	<span class="clear"><!-- --></span>
 	</li>
-
-	 
-
-
-
-
-
 	<li data-id="meleehit" class="">
 		<span class="name"><?php echo $armory['Hit'];?></span>
 		<span class="value">--</span>
 	<span class="clear"><!-- --></span>
 	</li>
-
-	 
-
-
-
-
-
 	<li data-id="meleecrit" class="">
 		<span class="name"><?php echo $armory['Crit'];?></span>
 		<span class="value"><?php echo number_format($character->getStatInfo()->critPct,2,".",","); ?> %</span>
 	<span class="clear"><!-- --></span>
 	</li>
-
-	 
-
-	
-
 	<li data-id="expertise" class="">
 		<span class="name"><?php echo $armory['Expertise'];?></span>
 		<span class="value">--</span>
 	<span class="clear"><!-- --></span>
 	</li>
-		</ul>
-	</div>
-
-
+</ul>
+</div>
 	<div class="summary-stats-column" style="display: none">
 		<h4><?php echo $armory['Ranged']; ?></h4>
 		<ul>
-
-	 
-
-	
-
 	<li data-id="rangeddamage" class=" no-tooltip">
 		<span class="name"><?php echo $armory['Damage'];?></span>
 		<span class="value color-q0">--</span>
 	<span class="clear"><!-- --></span>
 	</li>
 
-	 
-
-
-
-
-
 	<li data-id="rangeddps" class=" no-tooltip">
 		<span class="name">DPS</span>
 		<span class="value color-q0"->-</span>
 	<span class="clear"><!-- --></span>
 	</li>
-
-	 
-
-
-
-
 	<li data-id="rangedattackpower" class="">
 		<span class="name"><?php echo $armory['AP'];?></span>
 		<span class="value color-q2"><?php echo $character->getStatInfo()->rangedAttackPower; ?></span>
 	<span class="clear"><!-- --></span>
 	</li>
-
-	 
-
-
-
-
-
 	<li data-id="rangedspeed" class=" no-tooltip">
 		<span class="name"><?php echo $armory['Speed'];?></span>
 		<span class="value color-q0">--</span>
 	<span class="clear"><!-- --></span>
 	</li>
-
-	 
-
-
-
-
-
 	<li data-id="rangedhaste" class="">
 		<span class="name"><?php echo $armory['Haste'];?></span>
 		<span class="value">--</span>
 	<span class="clear"><!-- --></span>
 	</li>
-
-	 
-
-
-
-
-
 	<li data-id="rangedhit" class="">
 		<span class="name"><?php echo $armory['Hit'];?></span>
 		<span class="value">--</span>
 	<span class="clear"><!-- --></span>
 	</li>
-
-	 
-
-
-
-
-
 	<li data-id="rangedcrit" class="">
 		<span class="name"><?php echo $armory['Crit'];?></span>
 		<span class="value"><?php echo number_format($character->getStatInfo()->rangedCritPct,2,".",","); ?> %</span>
 	<span class="clear"><!-- --></span>
 	</li>
-		</ul>
+	</ul>
 	</div>
-
-
 	<div class="summary-stats-column" style="display: none">
 		<h4><?php echo $armory['Spell']; ?></h4>
 		<ul>
-
-	 
-
-
-
-
-
 	<li data-id="spellpower" class="">
 		<span class="name"><?php echo $armory['AP'];?></span>
 		<span class="value"><?php echo $character->getStatInfo()->spellPower; ?></span>
 	<span class="clear"><!-- --></span>
 	</li>
-
-	 
-
-
-
-
-
 	<li data-id="spellhaste" class="">
 		<span class="name"><?php echo $armory['Haste'];?></span>
 		<span class="value">--</span>
 	<span class="clear"><!-- --></span>
 	</li>
-
-	 
-
-
-
-
-
 	<li data-id="spellhit" class="">
 		<span class="name"><?php echo $armory['Hit'];?></span>
 		<span class="value">--</span>
 	<span class="clear"><!-- --></span>
 	</li>
-
-	 
-
-
-
-
-
 	<li data-id="spellcrit" class="">
 		<span class="name"><?php echo $armory['Crit'];?></span>
 		<span class="value"><?php echo number_format($character->getStatInfo()->SpellCritPct,2,".",","); ?> %</span>
 	<span class="clear"><!-- --></span>
 	</li>
-
-	 
-
-
-
-
-
 	<li data-id="spellpenetration" class="">
 		<span class="name"><?php echo $armory['Penetration'];?></span>
 		<span class="value">--</span>
 	<span class="clear"><!-- --></span>
 	</li>
-
-	 
-
-
-
-
-
 	<li data-id="manaregen" class="">
 		<span class="name"><?php echo $armory['manaReg'];?></span>
 		<span class="value">--</span>
 	<span class="clear"><!-- --></span>
 	</li>
-
-	 
-
-
-
-
-
 	<li data-id="combatregen" class="">
 		<span class="name"><?php echo $armory['combatReg'];?></span>
 		<span class="value">--</span>
 	<span class="clear"><!-- --></span>
 	</li>
-		</ul>
+	</ul>
 	</div>
-
-
 	<div class="summary-stats-column" style="display: none">
 		<h4><?php echo $armory['Defense'] ?></h4>
 		<ul>
-
-	 
-
-
-
-
-
 	<li data-id="armor" class="">
 		<span class="name"><?php echo $armory['armour'];?></span>
 		<span class="value color-q2"><?php echo $character->getStatInfo()->armor; ?></span>
 	<span class="clear"><!-- --></span>
 	</li>
-
-	 
-
-
-
-
-
 	<li data-id="dodge" class="">
 		<span class="name"><?php echo $armory['Dodge'];?></span>
 		<span class="value"><?php echo number_format($character->getStatInfo()->dodgePct,2,".",","); ?> %</span>
 	<span class="clear"><!-- --></span>
 	</li>
-
-	 
-
-
-
-
-
 	<li data-id="parry" class="">
 		<span class="name"><?php echo $armory['Parry'];?></span>
 		<span class="value"><?php echo number_format($character->getStatInfo()->parryPct,2,".",","); ?> %</span>
 	<span class="clear"><!-- --></span>
 	</li>
-
-	 
-
-
-
-
-
 	<li data-id="block" class="">
 		<span class="name"><?php echo $armory['Block'];?></span>
 		<span class="value"><?php echo number_format($character->getStatInfo()->parryPct,2,".",","); ?> %</span>
 	<span class="clear"><!-- --></span>
 	</li>
-
-	 
-
-
-
-
-
 	<li data-id="resilience" class="">
 		<span class="name"><?php echo $armory['Resilience'];?></span>
 		<span class="value">--</span>
 	<span class="clear"><!-- --></span>
 	</li>
-		</ul>
+	</ul>
 	</div>
-
-
 	<div class="summary-stats-column" style="display: none">
 		<h4><?php echo $armory['Resis']; ?></h4>
 		<ul>
-
-	 
-
-
-
-
-
 	<li data-id="arcaneres" class=" has-icon">
-			<span class="icon">
-
-
-
+	<span class="icon">
 		<span class="icon-frame frame-12 ">
 			<img src="http://eu.media.blizzard.com/wow/icons/18/resist_arcane.jpg" alt="" width="12" height="12" />
 		</span>
-</span>
+    </span>
 		<span class="name"><?php echo $armory['Arcane']; ?></span>
 		<span class="value"><?php echo $character->getStatInfo()->resArcane; ?></span>
 	<span class="clear"><!-- --></span>
 	</li>
-
-	 
-
-
-
-
-
 	<li data-id="fireres" class=" has-icon">
-			<span class="icon">
-
-
-
+		<span class="icon">
 		<span class="icon-frame frame-12 ">
 			<img src="http://eu.media.blizzard.com/wow/icons/18/resist_fire.jpg" alt="" width="12" height="12" />
 		</span>
-</span>
+        </span>
 		<span class="name"><?php echo $armory['Fire']; ?></span>
 		<span class="value"><?php echo $character->getStatInfo()->resFire; ?></span>
 	<span class="clear"><!-- --></span>
 	</li>
-
-	 
-
-
-
-
-
 	<li data-id="frostres" class=" has-icon">
-			<span class="icon">
-
-
-
+		<span class="icon">
 		<span class="icon-frame frame-12 ">
 			<img src="http://eu.media.blizzard.com/wow/icons/18/resist_frost.jpg" alt="" width="12" height="12" />
 		</span>
-</span>
+        </span>
 		<span class="name"><?php echo $armory['Frost']; ?></span>
 		<span class="value"><?php echo $character->getStatInfo()->resFrost; ?></span>
 	<span class="clear"><!-- --></span>
 	</li>
-
-	 
-
-
-
-
-
 	<li data-id="natureres" class=" has-icon">
-			<span class="icon">
-
-
-
+		<span class="icon">
 		<span class="icon-frame frame-12 ">
 			<img src="http://eu.media.blizzard.com/wow/icons/18/resist_nature.jpg" alt="" width="12" height="12" />
 		</span>
-</span>
+        </span>
 		<span class="name"><?php echo $armory['Nature']; ?></span>
 		<span class="value"><?php echo $character->getStatInfo()->resNature; ?></span>
 	<span class="clear"><!-- --></span>
 	</li>
-
-	 
-
-
-
-
-
 	<li data-id="shadowres" class=" has-icon">
-			<span class="icon">
-
-
-
+		<span class="icon">
 		<span class="icon-frame frame-12 ">
 			<img src="http://eu.media.blizzard.com/wow/icons/18/resist_shadow.jpg" alt="" width="12" height="12" />
 		</span>
-</span>
+        </span>
 		<span class="name"><?php echo $armory['Shadow']; ?></span>
 		<span class="value"><?php echo $character->getStatInfo()->resShadow; ?></span>
 	<span class="clear"><!-- --></span>
 	</li>
-		</ul>
+	</ul>
 	</div>
-			</div>
-			<div class="summary-stats-end"></div>
-		</div>
-
-			<a href="javascript:;" id="summary-stats-toggler" class="summary-stats-toggler"><span class="inner"><span class="arrow"><?php echo $armory['showAll']; ?></span></span></a>
-	</div>
-
+</div>
+<div class="summary-stats-end"></div>
+</div>
+<a href="javascript:;" id="summary-stats-toggler" class="summary-stats-toggler"><span class="inner"><span class="arrow"><?php echo $armory['showAll']; ?></span></span></a>
+</div>
         <script type="text/javascript">
         //<![CDATA[
 		$(document).ready(function() {
@@ -1390,60 +996,41 @@ try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
 		});
         //]]>
         </script>
-
-
-						<div class="summary-stats-bottom">
-
-							<div class="summary-battlegrounds">
+<div class="summary-stats-bottom">
+	<div class="summary-battlegrounds">
 	<ul>
-		<li class="rating"><span class="name">Total Honor</span><span class="value"><?php echo @$honor ?></span><span class="clear"><!-- --></span>
-</li>
-		<li class="kills"><span class="name">Total Conquest</span><span class="value"><?php echo @$conq ?></span><span class="clear"><!-- --></span>
-</li>
+		<li class="rating"><span class="name">Total Honor</span><span class="value"><?php echo @$honor ?></span><span class="clear"><!-- --></span></li>
+		<li class="kills"><span class="name">Total Conquest</span><span class="value"><?php echo @$conq ?></span><span class="clear"><!-- --></span></li>
 	</ul>
-							</div>
-
-							<div class="summary-professions">
+</div>
+<div class="summary-professions">
 	<ul>
-				<li>
-
-	    
-	
-
+	<li>
 	<div class="profile-progress border-3" >
 		<div class="bar border-3 hover" style="width: 1%"></div>
-			<div class="bar-contents">						<a class="profession-details" href="">
-							<span class="icon">
-
-
-
+			<div class="bar-contents">						
+			<a class="profession-details" href="">
+			<span class="icon">
 		<span class="icon-frame frame-12 ">
 			<img src="http://eu.media.blizzard.com/wow/icons/18/trade_herbalism.jpg" alt="" width="12" height="12" />
 		</span>
 </span>
-							<span class="name">Herbalism</span>
-							<span class="value">0</span>
-							</a>
+		<span class="name">Herbalism</span>
+		<span class="value">0</span>
+		</a>
 </div>
 	</div>
-				</li>
-				<li>
-
-	    
-	
-
+	</li>
+	<li>
 	<div class="profile-progress border-3" >
 		<div class="bar border-3 hover" style="width: 1%"></div>
 			<div class="bar-contents">						<a class="profession-details" href="">
 							<span class="icon">
-
-
-
 		<span class="icon-frame frame-12 ">
 			<img src="http://eu.media.blizzard.com/wow/icons/18/inv_pick_02.jpg" alt="" width="12" height="12" />
 		</span>
 </span>
-							<span class="name">Mining</span>
+				<span class="name">Mining</span>
 							<span class="value">0</span>
 							</a>
 </div>
@@ -1451,31 +1038,17 @@ try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
 				</li>
 	</ul>
 							</div>
-
 	<span class="clear"><!-- --></span>
-
 						</div>
 					</div>
-
 				</div>
-
 	<span class="clear"><!-- --></span>
-
-
 	<span class="clear"><!-- --></span>
-
-				<div class="summary-lastupdate">
-					Last updated on 09/08/2011
-				</div>
-
+				<div class="summary-lastupdate">Last updated on 09/08/2011</div>
 			</div>
-
-
 		</div>
-
 	<span class="clear"><!-- --></span>
-	</div>
-
+</div>
         <script type="text/javascript">
         //<![CDATA[
 		$(function() {

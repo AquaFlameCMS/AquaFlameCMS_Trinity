@@ -91,7 +91,6 @@ _gaq.push(['_trackPageLoadTime']);
 <!-- This is a testing SMS Donation Iframe, change it when you need. Better to use one from http://www.recursosmoviles.com/ -->
 <!-- This is a testing SMS Donation Iframe, change it when you need. Better to use one from http://www.recursosmoviles.com/ -->
 <div class="address-book" id="address-book">
-
 <script type="text/javascript">
 //<![CDATA[
 $(function() {

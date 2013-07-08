@@ -177,25 +177,15 @@ function pop(action){
 </strong>
 <span class="form-required">*</span>
 </label>
-<input type="password" id="newPasswordVerify" name="passwordNew1" value="" class=" input border-5 glow-shadow-2
-" maxlength="16" tabindex="1" />
+<input type="password" id="newPasswordVerify" name="passwordNew1" value="" class="input border-5 glow-shadow-2" maxlength="16" tabindex="1" />
 </div>
 <fieldset class="ui-controls " >
-<button
-class="ui-button button1 "
-type="submit"
-name="submit"
-
-id="settings-submit"
-value="Cambiar Contrase&ntilde;a"
-tabindex="1">
-<span>
-<span><?php echo $Reg['Reg35']; ?></span>
-</span>
+<button class="ui-button button1" type="submit" name="submit" id="settings-submit" value="Cambiar Contrase&ntilde;a" tabindex="1">
+	<span>
+	    <span><?php echo $Reg['Reg35']; ?></span>
+	</span>
 </button>
-<a class="ui-cancel "
-href="account_man.php"
-tabindex="1">
+<a class="ui-cancel " href="account_man.php"tabindex="1" >
 <span>
 <?php echo $Reg['Reg36']; ?></span>
 </a>

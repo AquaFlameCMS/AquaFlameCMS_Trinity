@@ -168,10 +168,6 @@ include("configs.php");
 			});
 		</script>
 	</form>
-
-  
     </div>
   </body>
   </html>
-
-

@@ -69,8 +69,7 @@ _gaq.push(['_trackPageview']);
 </div>
 <div class="content-bot">
 	<div class="content-header">
-				<h2 class="header ">Top 5vs5</h2>
-
+		<h2 class="header ">Top 5vs5</h2>
 		<div class="desc">This page lists all available World of Failure Players inside the <?php
 					$get_realms = mysql_query("SELECT * FROM $server_adb.realmlist ORDER BY `id` ASC");
 					while($realm = mysql_fetch_array($get_realms)){
@@ -82,154 +81,94 @@ _gaq.push(['_trackPageview']);
 					echo $realm['name'];
 
 					}?> Realm as well as the stats of each. The Character can be listed as either Horde or Alliance. Let us apologize in advance if you find any player that is not listed, it takes 5 seconds to refresh the list.</div>
-<span class="clear"><!-- --></span>
+    <span class="clear"><!-- --></span>
 	</div>
-
 <div id="realm-status">	
 <?php include("functions/status_nav.php"); ?>
 		<div class="filter-toggle">
-			<a href="javascript:;" class="selected" onclick="RealmStatus.filterToggle(this)">
-				
-			</a>
+			<a href="javascript:;" class="selected" onclick="RealmStatus.filterToggle(this)"></a>
 		</div>
-
 	<span class="clear"><!-- --></span>
-
 		<div id="realm-filters" class="table-filters">
 			<form action="#">
 				<div class="filter">
 					<label for="filter-status">Faction</label>
-					
 					<select id="filter-status" class="input select" data-filter="column" data-column="0">
 						<option value="">All</option>
 						<option value="up">Alliance</option>
 						<option value="down">Horde</option>
 					</select>
 				</div>
-
 				<div class="filter">
 					<label for="filter-name">Name</label>
-
-					<input type="text" class="input" id="filter-name" 
-						   data-filter="column" data-column="1" />
+					<input type="text" class="input" id="filter-name" data-filter="column" data-column="1" />
 				</div>
-
 				<div class="filter">
 					<label for="filter-type">Race</label>
-
 					<select id="filter-type" class="input select" data-filter="column" data-column="2">
 						<option value="">All</option>
-							<option value="pve">
-								Human
-							</option>
-							<option value="rppvp">
-								Dwarf
-							</option>
-							<option value="pvp">
-								Night Elf
-							</option>
-							<option value="rp">
-								Gnome
-							</option>
-							<option value="rp">
-								Draenei
-							</option>
-							<option value="rp">
-								Worgen
-							</option>
-							<option value="rp">
-								Orc
-							</option>
-							<option value="rp">
-								Troll
-							</option>
-							<option value="rp">
-								Tauren
-							</option>
-							<option value="rp">
-								Undead
-							</option>
-							<option value="rp">
-								Blood Elf
-							</option>
-							<option value="rp">
-								Goblin
-							</option>
+						<option value="pve">Human</option>
+						<option value="rppvp">Dwarf</option>
+						<option value="pvp">Night Elf</option>
+						<option value="rp">Gnome</option>
+						<option value="rp">Draenei</option>
+						<option value="rp">Worgen</option>
+						<option value="rp">Orc</option>
+						<option value="rp">Troll</option>
+						<option value="rp">Tauren</option>
+						<option value="rp">Undead</option>
+						<option value="rp">Blood Elf</option>
+						<option value="rp">Goblin</option>
 					</select>
 				</div>
-
 				<div class="filter">
 					<label for="filter-population">Class</label>
-
 					<select id="filter-population" class="input select" data-filter="column" data-column="3">
 						<option value="">All</option>
-							<option value="high">Warrior</option>
-							<option value="medium">Paladin</option>
-							<option value="n/a">Rogue</option>
-							<option value="low">Mage</option>
-							<option value="low">Druid</option>
-							<option value="low">Warlock</option>
-							<option value="low">Hunter</option>
-							<option value="low">Shaman</option>
-							<option value="low">Priest</option>
-							<option value="low">Death Knight</option>
+						<option value="high">Warrior</option>
+						<option value="medium">Paladin</option>
+						<option value="n/a">Rogue</option>
+						<option value="low">Mage</option>
+						<option value="low">Druid</option>
+						<option value="low">Warlock</option>
+						<option value="low">Hunter</option>
+						<option value="low">Shaman</option>
+						<option value="low">Priest</option>
+						<option value="low">Death Knight</option>
 					</select>
 				</div>
-
 				<div class="filter">
 					<label for="filter-locale">Level</label>
-
 					<select id="filter-locale" class="input select" data-column="4" data-filter="column">
 						<option value="">All</option>
 							<option value="spanish">Cataclysm Levels</option>
 							<option value="german">WoTLK Levels</option>
 							<option value="french">Burning Crusade Levels</option>
 							<option value="tournament">Vanilla Levels</option>
-							
 					</select>
 				</div>
-
 				<div class="filter">
 					<label for="filter-queue">Location</label>
-
 					<input type="checkbox" id="filter-queue" class="input" value="true" data-column="5" data-filter="column" />
 				</div>
-
 				<div class="filter" style="margin: 5px 0 5px 15px">
-					
-
-	<button
-		class="ui-button button1 "
-			type="button"
-			
-		
-		id="filter-button"
-		
-		onclick="RealmStatus.reset();"
-		
-		
-		>
-		<span>
-			<span>Reset</span>
-		</span>
-	</button>
-
+					<button class="ui-button button1 " type="button" id="filter-button" onclick="RealmStatus.reset();" >
+						<span>
+							<span>Reset</span>
+						</span>
+					</button>
 				</div>
 
-	<span class="clear"><!-- --></span>
+	        <span class="clear"><!-- --></span>
 			</form>
 		</div>
 	</div>
-
 	<span class="clear"><!-- --></span>
-
-
-		<div id="all-realms">
+	<div id="all-realms">
 	<div class="table full-width">
 		<table>
 			<thead>
 				<tr>
-
 <?php
 $con = mysql_connect($serveraddress, $serveruser, $serverpass, $serverport) or die(mysql_error());
 mysql_select_db($server_cdb, $con) or die (mysql_error());
@@ -272,87 +211,35 @@ else
 {
 echo "<b>There are no Arena Teams right now.</b>";
 }
-?>
-					
-				
+?>	
 			<tbody>
-			
 					<tr class="row1">
-						
-						<td class="name">
-							
-						</td>
-						<td class="type" data-raw="pvp">
-							<span class="pvp">
-									
-							</span>
-						</td>
-						<td class="population" data-raw="Low">
-							<span class="Low">
-									
-							</span>
-						</td>
-						<td class="locale">
-							
-						</td>
-						<td class="queue" data-raw="false">
-						
-						</td>
+						<td class="name"></td>
+						<td class="type" data-raw="pvp"><span class="pvp"></span></td>
+						<td class="population" data-raw="Low"><span class="Low"></span></td>
+						<td class="locale"></td>
+						<td class="queue" data-raw="false"></td>
 					</tr>
 					<tr class="row2">
-						
-						<td class="name">
-							
-						</td>
-						<td class="type" data-raw="pve">
-							<span class="pve">
-									
-							</span>
-						</td>
-						<td class="population" data-raw="medium">
-							<span class="medium">
-									
-							</span>
-						</td>
-						<td class="locale">
-							
-						</td>
-						<td class="queue" data-raw="false">
-						
-						</td>
+						<td class="name"></td>
+						<td class="type" data-raw="pve"><span class="pve"></span></td>
+						<td class="population" data-raw="medium"><span class="medium"></span></td>
+						<td class="locale"></td>
+						<td class="queue" data-raw="false"></td>
 					</tr>
 					<tr class="row1">
-						
-						<td class="name">
-							
-						</td>
-						<td class="type" data-raw="pvp">
-							<span class="normal">
-									
-							</span>
-						</td>
-						<td class="population" data-raw="Low">
-							<span class="Low">
-									
-							</span>
-						</td>
-						<td class="locale">
-							
-						</td>
-						<td class="queue" data-raw="false">
-						
-						</td>
+						<td class="name"></td>
+						<td class="type" data-raw="pvp"><span class="normal"></span></td>
+						<td class="population" data-raw="Low"><span class="Low"></span></td>
+						<td class="locale"></td>
+						<td class="queue" data-raw="false"></td>
 					</tr>
-				<tr class="no-results" style="display: none">
-					<td colspan="6"></td>
-				</tr>
+				<tr class="no-results" style="display: none"><td colspan="6"></td></tr>
 			</tbody>
 		</table>
 	</div>
-		</div>
-
-	<span class="clear"><!-- --></span>
-
+</div>
+<span class="clear"><!-- --></span>
 </div>
 </div>
 </div>

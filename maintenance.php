@@ -40,8 +40,7 @@ body.zh-cn .info .twitter { background-image: url("/static/maintenance/wow/image
 <div class="info">
 <h2 class="title">We will be back soon!</h2>
 <p class="short"><?php echo $website['title']; ?> family of websites is currently undergoing maintenance to improve your browsing experience. Thank you for your patience!</p>
-<div class="twitter">
-For updates, follow <a tabindex="1" target="_blank" href="http://www.twitter.com/test">@<?php echo $website['title']; ?></a> on Twitter.
+<div class="twitter">For updates, follow <a tabindex="1" target="_blank" href="http://www.twitter.com/test">@<?php echo $website['title']; ?></a> on Twitter.
 </div>
 </div>
 </div>

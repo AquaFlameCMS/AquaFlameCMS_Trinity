@@ -209,6 +209,7 @@ _gaq.push(['_trackPageLoadTime']);
 <span class="input-select input-select-small">
 <select name="country" id="country" class="small border-5 glow-shadow-2 form-disabled" tabindex="1"  >
 <optgroup label="">
+<<<<<<< HEAD
 <option value="CHL">Chile</option>
 <option value="ESP">Espa&#241;a</option>
 <option value="GBR" selected="selected">United Kingdom</option>
@@ -218,6 +219,17 @@ _gaq.push(['_trackPageLoadTime']);
 </optgroup>
 <option value="AFG">Afghanistan</option>
 <option value="ALA">&#197;land Islands</option>
+=======
+	<option value="CHL">Chile</option>
+	<option value="ESP">Espa&ntilde;a</option>
+	<option value="GBR" selected="selected">United Kingdom</option>
+	<option value="FRA">France</option>
+	<option value="DEU">Germany</option>
+	<option value="RUS">Russian Federation</option>
+</optgroup>
+<option value="AFG">Afghanistan</option>
+<option value="ALA">&#192;land Islands</option>
+>>>>>>> Code style
 <option value="ALB">Albania</option>
 <option value="DZA">Algeria</option>
 <option value="ASM">American Samoa</option>
@@ -456,14 +468,10 @@ _gaq.push(['_trackPageLoadTime']);
 </select>
 <span class="inline-message" id="country-message"> </span>
 </span>
-<button
-class="ui-button button1 "
-type="submit"
-id="country-submit"
-tabindex="1">
-<span>
-<span>Change Country</span>
-</span>
+<button class="ui-button button1 " type="submit" id="country-submit" tabindex="1">
+	<span>
+	    <span>Change Country</span>
+	</span>
 </button>
 </span>
 </div>
@@ -472,49 +480,32 @@ tabindex="1">
 <div id="countryGlobal" class="input-note-content">
 <p class="caption">If you change your country, you will get different form fields for account creation and address entry that may not match your situation. Proceed?</p>
 <p>
-<a
-class="ui-button button1 "
-href=""
-tabindex="1">
-<span>
-<span>Change Country</span>
-</span>
+<a class="ui-button button1 " href="" tabindex="1">
+	<span>
+	    <span>Change Country</span>
+	</span>
 </a>
-<a class="ui-cancel "
-href=""
-tabindex="1">
-<span>
-Cancel </span>
+<a class="ui-cancel " href="" tabindex="1">
+<span> Cancel </span>
 </a>
 </p>
 </div>
 <div id="countryCHINA" class="input-note-content">
 <p class="caption">You are on the Taiwanese regional Battle.net website. Only account holders who have a Taiwanese World of Warcraft account should create a Battle.net account here. If you have a Chinese World of Warcraft account, go to Battle.net China instead.</p>
 <p>
-<a
-class="ui-button button1 "
-href="?country=CHINA"
-id="stayTaiwan"
-tabindex="1">
-<span>
-<span>YES, I HAVE A TAIWANESE WORLD OF WARCRAFT ACCOUNT</span>
-</span>
+<a class="ui-button button1 " href="?country=CHINA" id="stayTaiwan" tabindex="1">
+	<span>
+	    <span>YES, I HAVE A TAIWANESE WORLD OF WARCRAFT ACCOUNT</span>
+	</span>
 </a>
 <br />
-<a
-class="ui-button button1 "
-href="http://www.battlenet.com.cn"
-id="gotoChina"
-tabindex="1">
-<span>
-<span>GO TO BATTLE.NET IN CHINA</span>
-</span>
+<a class="ui-button button1 " href="http://www.battlenet.com.cn" id="gotoChina" tabindex="1">
+	<span>
+	    <span>GO TO BATTLE.NET IN CHINA</span>
+	</span>
 </a>
-<a class="ui-cancel "
-href=""
-tabindex="1">
-<span>
-Cancel </span>
+<a class="ui-cancel " href="" tabindex="1">
+<span> Cancel </span>
 </a>
 </p>
 </div>
