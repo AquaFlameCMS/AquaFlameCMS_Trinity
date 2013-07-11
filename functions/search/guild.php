@@ -5,7 +5,7 @@ if (isset($_GET['search']) && !empty($_GET['search'])) {    //Here starts the se
     $size_page=25; 
     //Look for the number page, if not then first
     if (!isset($_GET["page"])) { 
-   	    $start = 0; //the first result to show, 1, 26... 
+         $start = 0; //the first result to show, 1, 26... 
    	    $page=1; //If no page found then first page
     } 
     else { 
@@ -33,7 +33,7 @@ if (isset($_GET['search']) && !empty($_GET['search'])) {    //Here starts the se
     $total = $num_char+$num_guild+$num_arena+$num_forum; //To know is show no results found
         
     $num_pages = ceil($num_guild / $size_page);   //calculate number of pages, now works just with characters
-    $sql = "SELECT guildid,G.name,G.level,C.race FROM `" . $server_cdb .
+    $sql = "SELECT guildid,G.name,C.race FROM `" . $server_cdb .
         "`.`guild` G,`" . $server_cdb ."`.`characters` C WHERE leaderguid=C.guid AND
         G.name LIKE '%" . mysql_real_escape_string($term) . "%' LIMIT $start,$size_page"; //Now the search for current page
     $result = mysql_query($sql, $conn) or die(mysql_error());
