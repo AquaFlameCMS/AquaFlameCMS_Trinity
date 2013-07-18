@@ -1074,4 +1074,18 @@ $race['7'] = "Purchase";
 $race['8'] = "Cancel";
 //Finish Change Character Race
 
+//Donation Panel
+$donar['1'] = " - Donation Panel";
+$donar['2'] = "Donation SYSTEM & SIMPLE";
+$donar['3'] = "Donation Panel";
+$donar['4'] = "Donate Via SMS";
+$donar['5'] = "Donate via SMS and receive great rewards";
+$donar['6'] = "Donate Via Paypal";
+$donar['7'] = "Donate via SMS and receive great rewards";
+$donar['8'] = "Voting Store";
+$donar['9'] = "Exchange your points for great rewards";
+$donar['10'] = "Donation Store";
+$donar['11'] = "Exchange your points for great rewards";
+$donar['12'] = "READ TERMS AND CONDITIONS OF DONATION ";
+//Donation Panel
 ?>
