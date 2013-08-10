@@ -1089,4 +1089,12 @@ $donar['10'] = "Donation Store";
 $donar['11'] = "Exchange your points for great rewards";
 $donar['12'] = "READ TERMS AND CONDITIONS OF DONATION ";
 //Donation Panel
+
+// SMS
+$sms['1'] = " - SMS Donation";
+$sms['2'] = "Donation Settings";
+$sms['3'] = "SMS Donation";
+$sms['4'] = "This SMS Donation Module may not be available at some Countries.";
+$sms['5'] = "Read Terms and Conditions of SMS Donation";
+// SMS
 ?>

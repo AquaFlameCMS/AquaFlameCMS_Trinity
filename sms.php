@@ -1,32 +1,33 @@
 <?php
 include("configs.php");
-$page_cat = "gamesncodes";
+$page_cat = 'gamesncodes';
 // Check, if username session is NOT set then this page will jump to login page
 if (!isset($_SESSION['username'])) {
         header('Location: account_log.php');		
 }
 ?>
 
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en-gb">
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
-<title><?php echo $website['title']; ?> - Account Information</title>
+<title><?php echo $website['title']; ?><?php echo $donar['1']; ?></title>
 <meta content="false" http-equiv="imagetoolbar" />
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
 <link rel="shortcut icon" href="wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
-<link rel="search" type="application/opensearchdescription+xml" href="http://eu.battle.net/en-gb/data/opensearch" title="Battle.net Search" />
-<link rel="stylesheet" href="wow/static/local-common/css/common.css?v22" />
-<link rel="stylesheet" href="wow/static/css/bnet.css?v21" />
-<link rel="stylesheet" href="wow/static/css/bnet-print.css?v21" />
-<link rel="stylesheet" href="wow/static/css/management/address-book.css?v21" />
-<link rel="stylesheet" href="wow/static/css/ui.css?v21" />
-<script src="wow/static/local-common/js/third-party/jquery-1.4.4-p1.min.js"></script>
-<script src="wow/static/local-common/js/core.js?v22"></script>
-<script src="wow/static/local-common/js/tooltip.js?v22"></script>
+<link rel="stylesheet" media="all" href="wow/static/local-common/css/common.css" />
+<link rel="stylesheet" media="all" href="wow/static/css/bnet.css" />
+<link rel="stylesheet" media="print" href="wow/static/css/bnet-print.css" />
+<link rel="stylesheet" media="all" href="wow/static/css/management/get-game.css" />
+<link rel="stylesheet" media="all" href="wow/static/css/management/get-game-ie8.css" />
+<link rel="stylesheet" media="all" href="wow/static/css/management/dashboard.css" />
+<script src="wow/static/local-common/js/third-party/jquery.js"></script>
+<script src="wow/static/local-common/js/core.js"></script>
+<script src="wow/static/local-common/js/tooltip.js"></script>
+
 <!--[if IE 6]> <script type="text/javascript">
 //<![CDATA[
 try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
@@ -38,26 +39,31 @@ try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
 Core.staticUrl = '/account';
 Core.sharedStaticUrl= 'wow/static/local-common';
 Core.baseUrl = '/account';
+Core.projectUrl = '/account';
+Core.cdnUrl = 'http://eu.media.blizzard.com';
 Core.supportUrl = 'http://eu.battle.net/support/';
 Core.secureSupportUrl= 'https://eu.battle.net/support/';
 Core.project = 'bam';
-Core.locale = 'en-gb';
+Core.locale = 'en-us';
+Core.language = 'en';
 Core.buildRegion = 'eu';
-Core.shortDateFormat= 'dd/MM/yyyy';
-Core.dateTimeFormat = 'dd/MM/yyyy HH:mm';
+Core.region = 'eu';
+Core.shortDateFormat= 'MM/dd/yyyy';
+Core.dateTimeFormat = 'MM/dd/yyyy hh:mm a';
 Core.loggedIn = true;
 Flash.videoPlayer = 'http://eu.media.blizzard.com/global-video-player/themes/bam/video-player.swf';
 Flash.videoBase = 'http://eu.media.blizzard.com/bam/media/videos';
-Flash.ratingImage = 'http://eu.media.blizzard.com/global-video-player/ratings/bam/rating-pegi.jpg';
+Flash.ratingImage = 'http://eu.media.blizzard.com/global-video-player/ratings/bam/rating-en-us.jpg';
 Flash.expressInstall= 'http://eu.media.blizzard.com/global-video-player/expressInstall.swf';
 var _gaq = _gaq || [];
 _gaq.push(['_setAccount', 'UA-544112-16']);
+_gaq.push(['_setDomainName', '.blizzard.net']);
 _gaq.push(['_trackPageview']);
 _gaq.push(['_trackPageLoadTime']);
 //]]>
 </script>
 </head>
-<body class="en-gb logged-in">
+<body class="en-us logged-in">
 <div id="layout-top">
 <div class="wrapper">
 <div id="header">
@@ -65,14 +71,22 @@ _gaq.push(['_trackPageLoadTime']);
 <?php include("functions/footer_man_nav.php"); ?>
 </div>
 <div id="layout-middle">
-<div class="wrapper">
-<div id="content">
-<div id="page-header">
-<h2 class="subcategory">Donation Settings</h2>
-<h3 class="headline">SMS Donation</h3>
+    <div class="wrapper">
+    <div id="content">
+     <!--[if lte IE 7]>  <style type="text/css">
+    .raf-step3-arrow { position:relative; width:176px; height:61px; background:url('wow/static/images/services/wow/raf/step_3_arrow_b.png') 0 0 no-repeat!important; top:-540px; left:105px; }
+    .raf-step5-arrow { position:relative; width:155px; height:57px; background:url('wow/static/images/services/wow/raf/step_5_arrow_b.png') 0 0 no-repeat!important; top:-163px; left:150px; }
+     </style>  <![endif]-->
+	<div class="dashboard service">
+	<div class="header">
+		<h2 class="subcategory"><?php echo $sms['2']; ?></h2>
+		<h3 class="headline"><?php echo $sms['3']; ?></h3>
+            <a href=""><img src="wow/static/local-common/images/game-icons/wow.png" alt="World of Warcraft" width="48" height="48" /></a>
+    </div>
+    </div>
 </div>
 <div id="page-content" class="page-content">
-<p>This SMS Donation Module may not be available at some Countries, we are sorry to announce that. In the meantime, try using any other Donation Way if you like.</p>
+<p><?php echo $sms['4']; ?></p>
 <!-- Change here if you change iFrame supporter -->
 <!-- Change here if you change iFrame supporter -->
 <fieldset class="ui-controls section-buttons" >
@@ -81,15 +95,34 @@ _gaq.push(['_trackPageLoadTime']);
 <a class="ui-button button1" href="http://www.recursosmoviles.com/terms-and-conditions.html"><span>
 <!-- Change here if you change iFrame supporter -->
 <!-- Change here if you change iFrame supporter -->
-<span>Read Terms and Conditions of SMS Donation</span>
+<span><?php echo $sms['5']; ?></span>
 </span>
 </a>
 </fieldset>
 <!-- This is a testing SMS Donation Iframe, change it when you need. Better to use one from http://www.recursosmoviles.com/ -->
 <!-- This is a testing SMS Donation Iframe, change it when you need. Better to use one from http://www.recursosmoviles.com/ -->
-<div align="center"><iframe src="http://iframes.recursosmoviles.com/index.php?wmid=2954&cid=14223" width="940" height="330" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" allowTransparency="true" ></iframe></div>
+<!-- For sites with standard transfer protocol (HTTP) -->
+<!-- ¡IMPORTANT! They have to create their own services -->
+<div align="center">
+    <frame>
+	    <script src="http://iframes.recursosmoviles.com/v2/?wmid=8291&cid=26454" type="text/javascript"></script>
+	</frame>
+</div>
+<!-- For sites with standard transfer protocol (HTTP) -->
+<!-- They have to create their own services -->
 <!-- This is a testing SMS Donation Iframe, change it when you need. Better to use one from http://www.recursosmoviles.com/ -->
+<!-- <!-- For sites with standard transfer protocol (HTTPS) -->
+<!--<div align="center">
+    <frame>
+	    <script src="https://iframes.recursosmoviles.com/v2/?wmid=8291&cid=26454" type="text/javascript"></script>
+	</frame>
+</div>-->
+<!-- For sites with standard transfer protocol (HTTPS) -->
 <!-- This is a testing SMS Donation Iframe, change it when you need. Better to use one from http://www.recursosmoviles.com/ -->
+<br>
+</br>
+<br>
+</br>
 <div class="address-book" id="address-book">
 <script type="text/javascript">
 //<![CDATA[
