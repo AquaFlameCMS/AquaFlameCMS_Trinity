@@ -24,10 +24,10 @@ $serverpass = "password";
 $serverport	= "3306";
 
 $server_db = "website";
-$server_adb = "auth";
+$server_adb = "trinity_auth";
 
-$server_cdb = "characters";
-$server_wdb = "world";
+$server_cdb = "trinity_chars";
+$server_wdb = "sky_world";
 
 ######################
 
@@ -49,7 +49,7 @@ $comun_link['Youtube'] = "http://www.youtube.com/";            // Your adress of
 $website['title'] = "AquaFlameCMS 1.0";
 $website['slogan'] = "AquaFlameCMS 1.0, the best of the best!";
 $website['address'] = "http://localhost";
-$website['root'] = "/";
+$website['root'] = "/AquaFlameCMS_Trinity/";
 
 ######################
 

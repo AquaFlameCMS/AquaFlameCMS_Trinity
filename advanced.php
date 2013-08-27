@@ -57,13 +57,13 @@ try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
 <a href="search.php" rel="np">Search</a>
 <span class="breadcrumb-arrow"></span>
 </li>
-<li class="last children"><a href="advanced.php?name=<?php echo $character->getObjectInfo()->name;?>" rel="np"><?php echo $character->getObjectInfo()->name;?> @ <?php echo @$name_realm1['realm']; ?></a>
+<li class="last children"><a href="advanced.php?name=<?php echo $_GET["name"]; ?>" rel="np"><?php echo $_GET["name"]; ?> @ <?php echo @$name_realm1['realm']; ?></a>
 </li>
 </ol>
 </div>
 <div class="content-bot">
   <?php
-  $raceNum= $character->getObjectInfo()->race;               //Numbre race for all armory references
+  @$raceNum = $character->getObjectInfo()->race; //Number race for all armory references
   echo'<div id="profile-wrapper" class="profile-wrapper profile-wrapper-advanced profile-wrapper-';  //Show horde/ally back image
   if (translateLet($raceNum) == 0){
     echo'alliance">';}
@@ -75,7 +75,7 @@ try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
 	<div class="profile-sidebar-contents">
 	<div class="profile-info-anchor">
 	<div class="profile-info">
-	<div class="name"><a href="" rel="np"><?php echo $character->getObjectInfo()->name;?></a></div>
+	<div class="name"><a href="" rel="np"><?php echo $_GET["name"]; ?></a></div>
 	<div class="title-guild">
 	<div class="title">
   <?php
@@ -92,7 +92,7 @@ try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
 	<a href="#">
   <?php
     mysql_select_db($server_cdb,$connection_setup)or die(mysql_error());   //Gets guild name, connection have to change to title
-    $sql =  mysql_query("SELECT guid FROM characters WHERE name = '".$character->getObjectInfo()->name."'");
+    $sql =  mysql_query("SELECT guid FROM characters WHERE name = '".$_GET["name"]."'");
     $guid = mysql_fetch_array($sql);
     $sql = mysql_query("SELECT name FROM guild WHERE guildid =(SELECT guildid FROM guild_member WHERE guid = '".$guid['guid']."')");
     if (mysql_num_rows($sql)>0){
@@ -105,7 +105,7 @@ try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
 	</div>
 
 	<span class="clear"><!-- --></span>
-	<div class="under-name color-c<?php echo @$character->getObjectInfo()->class; ?>">
+	<div class="under-name color-c<?php echo $_GET["class"]; ?>">
 	<span class="level"><strong><?php echo @$character->getObjectInfo()->level; ?></strong></span> <a href="#" class="race"><?php
   echo @$armory['race'.$raceNum];
   ?></a> <a id="profile-info-spec" href="#" class="spec tip"><?php
@@ -484,7 +484,7 @@ try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
 		<table width="100%">
 		  <tr>
         <td><span class="name"><?php echo $armory['Health']; ?></span></td>
-        <td align="right"><span class="value"><?php echo $character->getStatInfo()->maxhealth; ?>&nbsp;&nbsp;&nbsp;</span></td>
+        <td align="right"><span class="value"><?php echo @$character->getStatInfo()->maxhealth; ?>&nbsp;&nbsp;&nbsp;</span></td>
       </tr>
     </table>
     </li>

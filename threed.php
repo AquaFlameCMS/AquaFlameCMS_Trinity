@@ -39,7 +39,6 @@ try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
 <div class="content-top">
 <div class="content-trail">
 <ol class="ui-breadcrumb">
-<<<<<<< HEAD
 <li>
 <a href="index.php" rel="np">
 <?php echo $website['title']; ?>
@@ -57,11 +56,9 @@ Services
 <?php echo $character->getObjectInfo()->name;?> @ <?php echo @$name_realm1['realm']; ?>
 </a>
 </li>
-=======
 	<li><a href="index.php" rel="np"><?php echo $website['title']; ?></a></li>
 	<li><a href="services.php" rel="np">Services</a></li>
 	<li class="last"><a href="" rel="np"><?php echo $character->getObjectInfo()->name;?> @ <?php echo @$name_realm1['realm']; ?></a></li>
->>>>>>> Code style
 </ol>
 </div>
 <div class="content-bot">
