@@ -68,8 +68,7 @@ $population = array(
 );
 
 function getPlayers($server_cdb) {
-	$query = @mysql_query("SELECT online FROM $server_cdb.characters WHERE online = '1'");
-	return @mysql_num_rows($query);
+return mysql_num_rows(mysql_query("SELECT 1 FROM $server_cdb.characters WHERE online = '1'"));
 }
 
 function doFaction($server_cdb,$a) {
