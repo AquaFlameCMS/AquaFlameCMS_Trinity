@@ -383,7 +383,7 @@ a.ui-button.imgbutton span span span { padding: 0 5px; }
 .warning p { margin: 10px 0 0 0; }
 .warning .warning-inner { min-width: 380px; padding: 15px 10px 15px 15px; }
 .warning .warning-inner2 { min-width: 380px; background: url("../images/icons/warning.png") 7px 11px no-repeat; padding: 15px 10px 10px 40px; position: relative; }
-.warning .warning-close { margin: 4px 0 0 10px; display: block; position: absolute; top: 10px; right: 10px; width: 10px; height: 10px; overflow: hidden; background: url("../images/service-bar/close.gif"); }
+.warning .warning-close { margin: 4px 0 0 10px; display: block; position: absolute; top: 10px; right: 18px; width: 10px; height: 10px; overflow: hidden; background: url("../images/service-bar/close.gif"); }
 .warning.warning-orange { background: #efa800 url("../images/service-bar/bg-orange.gif") 0 0 repeat-x; color:#6F3900; }
 .warning.warning-green { background: #4c7141 url("../images/service-bar/bg-green.gif") 0 0 repeat-x }
 .warning.warning-red { background: #742E03 url("../images/service-bar/bg-red.gif") 0 0 repeat-x }
@@ -436,9 +436,9 @@ a.ui-button.imgbutton span span span { padding: 0 5px; }
 #change-language span { display: inline-block; background: url("../images/icons/map-small.gif") 0 50% no-repeat; padding: 2px 0 2px 35px }
 
 /* embedded login */
-#login-embedded { height: 410px; width: 410px; position: fixed; top: 50%; left: 50%; padding: 0; margin: -200px; z-index: 9005; background: #000; border: 5px solid #525e67; border-radius: 3px; box-shadow: #000 0 0 20px; }
+#login-embedded { width: 400px; position: fixed; top: 50%; left: 50%; padding: 0; margin: -200px; z-index: 9005; height: 300px; background: #000; border: 5px solid #525e67; border-radius: 3px; box-shadow: #000 0 0 20px; }
 #login-embedded object,
-#login-embedded iframe { height: 410px; width: 410px; margin: 0; padding: 0; border: none; }
+#login-embedded iframe { width: 400px; margin: 0; padding: 0; border: none; }
 #embedded-loader { width: 200px; height: 200px; position: fixed; top: 50%; left: 50%; margin: -100px; z-index: 9005; background: url("../images/loaders/uber-loading.gif") 50% 50% no-repeat; }
 
 /* bml */
@@ -517,6 +517,8 @@ a.ui-button.imgbutton span span span { padding: 0 5px; }
 #sidebar-social-media .sidebar-content .social-media .youtube a:hover { background-position:-93px -31px }
 #sidebar-social-media .sidebar-content .social-media .twitter a { background-position:-62px 0; width:31px }
 #sidebar-social-media .sidebar-content .social-media .twitter a:hover { background-position:-62px -31px; width:31px }
+#sidebar-social-media .sidebar-content .social-media .reddit a { background-position:-372px 0 }
+#sidebar-social-media .sidebar-content .social-media .reddit a:hover { background-position:-372px -31px }
 #sidebar-social-media .sidebar-content .social-media .atom-feed a { background-position:0 0 }
 #sidebar-social-media .sidebar-content .social-media .atom-feed a:hover { background-position:0 -31px }
 #sidebar-social-media .sidebar-content .social-media .plurk a { background-position:-155px 0 }
