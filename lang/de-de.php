@@ -1,5 +1,4 @@
 <?php
-
 $adb['adb'] = "Es konnte keine Verbindung zur Account-Datenbank hergestellt werden.";
 $db['db'] = "Es konnte keine Verbindung zur Website-Datenbank hergestellt werden.";
 $home['home'] = "Hauptseite";
@@ -7,7 +6,7 @@ $status['status'] = "Status";
 $Community['Community'] = "Community";
 $Media['Media'] = "Media";
 $Forums['Forums'] = "Foren";
-$Services['Services'] = "Dienste";
+$Services['Services'] = "Shop";
 $Wow['Wow'] = "World Of Warcraft ";
 $Wow3['Wow3'] = " - Vollst&auml;ndige Welt"; // TODO: Find correct translation
 $Latest['Latest'] = "Zuletzt geschriebene Post";
