@@ -24,10 +24,10 @@ $serverpass = "password";
 $serverport	= "3306";
 
 $server_db = "website";
-$server_adb = "auth";
+$server_adb = "trinity_auth";
 
-$server_cdb = "characters";
-$server_wdb = "world";
+$server_cdb = "trinity_chars";
+$server_wdb = "sky_world";
 
 ######################
 
@@ -40,16 +40,17 @@ $mysql_cod = 'cp1251';
 
 # Comunity Links ############
 
-$comun_link['Facebook'] = "http://www.facebook.com/";          // Your adress of Facebook comunity
-$comun_link['Twitter'] = "http://twitter.com//";               // Your adress of Twitter comunity
-$comun_link['Youtube'] = "http://www.youtube.com/";            // Your adress of Youtube comunity
+$comun_link['Facebook'] = "http://www.facebook.com/";          // Your address of Facebook community link
+$comun_link['Twitter'] = "http://twitter.com//";               // Your address of Twitter community link
+$comun_link['Youtube'] = "http://www.youtube.com/";            // Your address of Youtube community link
+$comun_link['Reddit'] = "http://www.reddit.com/"; 			   // Your address of Reddit community link
 
 # Important #############
 
 $website['title'] = "AquaFlameCMS 1.0";
 $website['slogan'] = "AquaFlameCMS 1.0, the best of the best!";
 $website['address'] = "http://localhost";
-$website['root'] = "/";
+$website['root'] = "/AquaFlameCMS_Trinity/";
 
 ######################
 

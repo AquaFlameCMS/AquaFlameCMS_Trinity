@@ -169,7 +169,7 @@ $('#checkall').toggleClass('clicked');
         <tbody>
       <?php
       while ($row = mysql_fetch_assoc($sql_query)){
-      $author = mysql_fetch_assoc(mysql_query("SELECT username FROM auth.account WHERE id = '".$row['author']."'"));
+      $author = mysql_fetch_assoc(mysql_query("SELECT username FROM $server_adb.account WHERE id = '".$row['author']."'"));
       echo'
         <tr>
           <td class="chk"><input type="checkbox" /></td>   
