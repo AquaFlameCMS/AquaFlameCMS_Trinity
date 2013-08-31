@@ -1,5 +1,5 @@
 
-.community-home #content .content-bot { background: url("../../images/homepage/shadow.png") repeat-y 0 0 transparent; }
+#content .content-bot { background: url("../../images/homepage/shadow.png") repeat-y 0 0 transparent; }
 
 #left { width: 646px; float: left; }
 #right { width: 307px; float: right; padding-right: 18px;}
@@ -39,7 +39,7 @@
 #sidebar-leaderboards .group .group-desc { color: #874d25; font-size: 11px; display:block; }
 #sidebar-leaderboards .group a:hover .group-desc { color: #fff; }
 #sidebar-leaderboards .group .group-thumbnail { border: 1px solid #493221; display: inline-block; vertical-align:middle; overflow: hidden; width: 38px; height: 38px; margin: 1px 11px 1px 1px;
-	background-color: #3b1c11; background-image: url("../../local-common/images/icons/thumbnails.png"); background-repeat: no-repeat;
+	background-color: #3b1c11; background-image: url("../../images/wiki/zone/thumbnails.png"); background-repeat: no-repeat;
 	-moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px;
 	-moz-box-shadow: #0d0703 0 0 5px; -webkit-box-shadow: #0d0703 0 0 5px; box-shadow: #0d0703 0 0 5px; }
 #sidebar-leaderboards .group a:hover .group-thumbnail { border: 1px solid #ffb100; }
