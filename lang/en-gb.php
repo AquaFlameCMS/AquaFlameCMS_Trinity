@@ -196,7 +196,7 @@ $re['error9']="The E-mail directions doesn't match!";
 $re['error10']="You must select a secret question and answer!";
 $re['scc1']="Succes!";
 $re['scc2']="Your account and preferences has been resgitrated succesfull";
-$re['goPanel']="Go back to Account management";
+$re['goPanel']="Navigate back to the ACM";
 $re['back']="Back";
 $re['day']="Day";
 $re['month']="Month";
@@ -227,7 +227,7 @@ $Reg['Reg19'] = "Old Password:";
 $Reg['Reg20'] = "New Password:";
 $Reg['Reg21'] = "Password Rules";
 $Reg['Reg22'] = "Your password may only contain ";
-$Reg['Reg23'] = "alphabetic characters (A–Z), numeric characters (0–9), and punctuation.";
+$Reg['Reg23'] = "alphabetic characters (A-Z), numeric characters (0-9), and punctuation.";
 $Reg['Reg24'] = "Your password ";
 $Reg['Reg25'] = "must";
 $Reg['Reg26'] = " contain at least one alphabetic character ";
@@ -412,7 +412,7 @@ $Uns['Uns6'] = "The World of Warcraft account merge process is not yet available
 $Uns['Uns7'] = "If you lost your authenticator, please detach it before proceeding. (Security card service ended 8/13/2010 and was automatically detached.) ";
 $Uns['Uns8'] = "If you use Phone Lock: please unlock your World of Warcraft account before merging.";
 $Uns['Uns9'] = "Taiwan: 0800-303-585";
-$Uns['Uns10'] = "(Not available 10–11AM every first Wed of the month)";
+$Uns['Uns10'] = "(Not available 10ï¿½11AM every first Wed of the month)";
 $Uns['Uns11'] = "Hong Kong &amp; Macau: 396-54666";
 $Uns['Uns12'] = " Required";
 $Uns['Uns13'] = "Game Management";
@@ -460,6 +460,31 @@ $Ind['Ind21'] = "Map / GPS is: ";
 $Ind['Ind22'] = "Online!";
 $Ind['Ind23'] = "Check Online Now!";
 // Finishing Index
+
+// Starting Shop
+$Shop['shop'] = "Shop";
+$Shop['shop_2'] = "Cataclysm Supported";
+$Shop['shop_3'] = "Finally<br />want to Play?";
+$Shop['shop_4'] = "Play Free Now";
+$Shop['shop_5'] = "Free Services";
+$Shop['shop_6'] = "Recruit-A-Friend";
+$Shop['shop_7'] = "Unstuck Character";
+$Shop['shop_8'] = "Item Restoration";
+$Shop['shop_9'] = "Avatar Change";
+$Shop['shop_10'] = "Account Security";
+$Shop['shop_11'] = "Paid Services";
+$Shop['shop_12'] = "Character Transfer";
+$Shop['shop_13'] = "Faction Change";
+$Shop['shop_14'] = "Race Change";
+$Shop['shop_15'] = "Appearance Change";
+$Shop['shop_16'] = "Name Change";
+$Shop['shop_17'] = "Recruit a friend,<br />Earn epic rewards!";
+$Shop['shop_18'] = "Change Expansion Pack";
+$Shop['shop_19'] = "Change Now";
+$Shop['shop_20'] = "is a free to play World of Warcraft Private Server. Explore the game's";
+$Shop['shop_21'] = "shop and membership options</a> and decide which one is best for you, or you can start playing for free without any further due.";
+$Shop['shop_22'] = "Vote Shop";
+// Finishing Shop
 
 // Starting Services
 $Serv['Serv'] = "Services";
@@ -729,11 +754,14 @@ $armory['Shadow']="Shadow";
 $armory['showAll']="Show all the stats";
 $armory['showMain']="Show just the main stats";
 $armory['Faction1'] = "Horde";
-$armory['Faction0'] = "Aliance";
+$armory['Faction0'] = "Alliance";
 //Finish Armory
 
 //Others
-$globalInfoVar['Anonymous']="Anonymous";
+if(isset($_SESSION['username']))
+$globalInfoVar['Anonymous']=$_SESSION['username'];
+else
+$globalInfoVar['Anonymous']='Anonymous';
 $status['chars']="Characters";
 $status['low']="Low";
 $status['high']="High";
@@ -875,8 +903,8 @@ $Status['Uptime:'] = "Uptime:";
 $Status['Tipe'] = "Type: ";
 $Status['PjCreat'] = "Created Characters: ";
 $Status['Drop'] = "Drop: ";
-$Status['PjConect'] = "Conected characters: ";
-$Status['Exp'] = "Experiencie: ";
+$Status['PjConect'] = "Connected characters: ";
+$Status['Exp'] = "Experience: ";
 $Status['Ali'] = "Aliance";
 $Status['Horde'] = "Horde";
 $Status['PlOnLine'] = "Online.";
@@ -922,7 +950,7 @@ $Status['Gilneas'] = "Gilneas City";
 $Status['Kalimdor'] = "Kalimdor";
 $Status['Outland'] = "Outland";
 $Status['Northrend'] = "Northrend";
-$Status['NotConected'] = "There are no players connected right now.";
+$Status['NotConected'] = "There is none connected right now.";
 $Status['RlmStat'] = "Realm Statistics";
 $Status['Stat5'] = "This page lists all available Information for the Players - Characters that are created on ";
 $Status['Stat6'] = " realm as well as the status of each. A realm can have unlimited characters and can host more that 5000 players. Messages related to realm status and scheduled maintenance will be posted in the ";

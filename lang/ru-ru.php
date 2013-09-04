@@ -460,6 +460,31 @@ $Ind['Ind22'] = "Online!";
 $Ind['Ind23'] = "Check Online Now!";
 // Finishing Index
 
+// Starting Shop
+$Shop['shop'] = "Shop";
+$Shop['shop_2'] = "Cataclysm Supported";
+$Shop['shop_3'] = "Finally<br />want to Play?";
+$Shop['shop_4'] = "Play Free Now";
+$Shop['shop_5'] = "Free Services";
+$Shop['shop_6'] = "Recruit-A-Friend";
+$Shop['shop_7'] = "Unstuck Character";
+$Shop['shop_8'] = "Item Restoration";
+$Shop['shop_9'] = "Avatar Change";
+$Shop['shop_10'] = "Account Security";
+$Shop['shop_11'] = "Paid Services";
+$Shop['shop_12'] = "Character Transfer";
+$Shop['shop_13'] = "Faction Change";
+$Shop['shop_14'] = "Race Change";
+$Shop['shop_15'] = "Appearance Change";
+$Shop['shop_16'] = "Name Change";
+$Shop['shop_17'] = "Recruit a friend,<br />Earn epic rewards!";
+$Shop['shop_18'] = "Change Expansion Pack";
+$Shop['shop_19'] = "Change Now";
+$Shop['shop_20'] = "is a free to play World of Warcraft Private Server. Explore the game's";
+$Shop['shop_21'] = "shop and membership options</a> and decide which one is best for you, or you can start playing for free without any further due.";
+$Shop['shop_22'] = "Vote Shop";
+// Finishing Shop
+
 // Starting Services
 $Serv['Serv'] = "Services";
 $Serv['Serv1'] = " Account Services";
