@@ -30,7 +30,7 @@ try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
 <div id="wrapper">
 <?php $page_cat="services"; include("header.php"); ?>
 <div id="content">
-<div class="content-top">
+<div class="content-top-serv">
 <div class="content-trail">
 <ol class="ui-breadcrumb">
 <li><a href="index.php" rel="np" class=""><?php echo $website['title']; ?></a><span class="breadcrumb-arrow"></span></li>
