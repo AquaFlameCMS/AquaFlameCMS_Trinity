@@ -461,6 +461,30 @@ $Ind['Ind22'] = "Online!";
 $Ind['Ind23'] = "·Comprueba la gente que está online en la web!";
 // Finishing Index
 
+// Starting Shop
+$Shop['shop'] = "Tienda";
+$Shop['shop_2'] = "Soporta Cataclismo";
+$Shop['shop_3'] = "¿Eres nuevo en<br />World of Warcraft?";
+$Shop['shop_4'] = "Juega Gratis";
+$Shop['shop_5'] = "Servicios Gratuitos";
+$Shop['shop_6'] = "Recluta a un Amigo";
+$Shop['shop_7'] = "Desatascar Personaje";
+$Shop['shop_8'] = "Restauración de Objetos";
+$Shop['shop_9'] = "Cambiar Avatar";
+$Shop['shop_10'] = "Seguridad de Cuenta";
+$Shop['shop_11'] = "Servicios de Paga";
+$Shop['shop_12'] = "Transferencia de Personajes";
+$Shop['shop_13'] = "Cambio de Facción";
+$Shop['shop_14'] = "Cambio de Raza";
+$Shop['shop_15'] = "Modificación de Personajes";
+$Shop['shop_16'] = "Cambio de Nombre";
+$Shop['shop_17'] = "Recluta a un Amigo,<br />¡obtén recompensas épicas!";
+$Shop['shop_18'] = "Cambia de Expansión";
+$Shop['shop_19'] = "Cambiar Ahora";
+$Shop['shop_20'] = "es un juego en línea de suscripción del género fantástico que está constituido por un juego base y adiciones importantes de contenido denominadas expansiones. Echa un vistazo a las";
+$Shop['shop_21'] = "opciones de compra y suscripción</a> para que puedas decidir cual es la mejor para ti.";
+// Finishing Shop
+
 // Starting Services
 $Serv['Serv'] = "Servicios";
 $Serv['Serv1'] = " Servicios de cuentas de World of Warcraft";
