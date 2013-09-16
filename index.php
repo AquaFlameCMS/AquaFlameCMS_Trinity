@@ -171,7 +171,7 @@ $page_cat = "home";
 
 									<div class="article-right">
 										<div class="article-summary">
-										<p>'. substr(strip_tags($news['content'],'<p><a><br><li><ol><ul>'),0,310)."...".'</p>'; //Needed striptags for not closed tags
+										<p>'. substr(strip_tags($news['content'],'<p><a><br><li><ol><ul>'),0,305)."...".'</p>'; //Needs Strip tags for not closed tags
 										
 										if($news['contentlnk'] != NULL)
 											echo '<a href="'.$news['contentlnk'].'" class="more">'.$More['More'].'</a>';
