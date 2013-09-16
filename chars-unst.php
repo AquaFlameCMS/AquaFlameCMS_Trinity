@@ -161,173 +161,78 @@ $m = $home['map'];//Map
 //Unstuck Character
 $unstuck = mysql_query("UPDATE $server_cdb.characters SET position_x = '$px', position_y = '$py', position_z = '$pz', zone = '$z', map = '$m' WHERE name='$character'") or die('UnStuck Failed: ' . mysql_error());
 print'Your character is unlocked.';
-	
 //Success
- 	 
-print''.$Uns['Uns28'].'';
- 		
+print''.$Uns['Uns28'].'';	
 }}}}}}}}
- 	
 print'<table align="center">
- 	
 <form action="" method="post">
- 	
 <tr>
- 
 <div id="wowLogin">
- 		
 <div class="input-row input-row-text">
- 	
 <span class="input-left">
- 		
 <label for="username">
- 		
 <span class="label-text">
- 	
 '.$Uns['Uns16'].'
- 	
-</span>
- 	
-<span class="input-required">*</span>
- 	
+</span>	
+<span class="input-required">*</span>	
 </label>
- 	
 </span>
- 	 
 <span class="input-right">
- 	
 <span class="input-text input-text-small">
- 		
 <input type="text" name="username" value="'.strtolower($_SESSION['username']).'" id="username" class="input border-5 glow-shadow-2 form-disabled" autocomplete="off" tabindex="1" required="required" disabled="disabled" />
-	
 <span class="inline-message" id="username-message"></span>
- 		
 </span>
- 	 	
+</span>	
+</div>	
+<div id="wowLogin">	
+<div class="input-row input-row-text">	
+<span class="input-left"> 	
+<label for="username">	
+<span class="label-text">	
+'.$Uns['Uns17'].'	
 </span>
- 		
-</div>
- 		
-<div id="wowLogin">
- 		
-<div class="input-row input-row-text">
- 		
-<span class="input-left">
- 	 	
-<label for="username">
- 		
-<span class="label-text">
- 		
-'.$Uns['Uns17'].'
- 		
-</span>
- 	
 <span class="input-required">*</span>
- 	
 </label>
- 	
 </span>
- 	
 <span class="input-right">
- 
 <span class="input-text input-text-small">
- 	
 <input type="text" name="char" value="" id="char" class="small border-5 glow-shadow-2" autocomplete="off" tabindex="1" required="required" />
- 		
 <span class="inline-message" id="username-message"></span>
- 		
 </span>
- 	
-</span>
- 		
+</span>	
 </div>
- 	
 <div class="input-row input-row-text">
- 
 <span class="input-left">
- 	
 <label for="password">
- 
 <span class="label-text">
- 		
 '.$Uns['Uns18'].'
- 	
 </span>
- 	
 <span class="input-required">*</span>
- 		
 </label>
- 	
 </span>
- 	
 <span class="input-right">
- 		
 <span class="input-text input-text-small">
- 
-<input type="password" id="password" name="password" value="" class="small border-5 glow-shadow-2" autocomplete="off" onpaste="return false;" maxlength="16" tabindex="1" required="required" />
- 		
+<input type="password" id="password" name="password" value="" class="small border-5 glow-shadow-2" autocomplete="off" onpaste="return false;" maxlength="16" tabindex="1" required="required" />		
 <span class="inline-message" id="password-message"><a id="pwLink" class="icon-external" href="" onclick="window.open(this.href);return false" tabindex="1">
- 	
 '.$Uns['Uns19'].'
- 
 </a>
- 
 <p id="pwLinkNo" style="display:none;">'.$Uns['Uns20'].' <a href="" target="_blank">'.$Uns['Uns21'].'</a>.</p>
- 	
 </span>
-	
 </span>
- 		
-</span>
- 		
+</span>	
 </div>
- 	
-<fieldset class="ui-controls " >
- 		
-<button
- 	
-class="ui-button button1 "
-
-type="submit"
-	
-name="unstuck"
- 		
-value="Unstuck!"
- 	
-id="merge-submit"
- 	
-tabindex="1">
-
-<span>
-
-<span>'.$Uns['Uns29'].'</span>
-	
-</span>
-	
+<fieldset class="ui-controls " >	
+<button class="ui-button button1 " type="submit" name="unstuck" value="Unstuck!" id="merge-submit" tabindex="1">
+<span><span>'.$Uns['Uns29'].'</span></span>
 </button>
-
-<a class="ui-cancel "
-	
-href="/account/"
-	
-tabindex="1">
-	
-<span>'.$Uns['Uns23'].'</span>
-	
-</a>
-
+<a class="ui-cancel" href= "account_man.php" tabindex="1">
+<span>'.$Uns['Uns23'].'</span></a>
 </fieldset>
-
 </form>
-
 </table>
-
 <center>';
-
 char_unstuck();
-
 print'</center>';
-	
 ?>
 </div>
 <script type="text/javascript">
