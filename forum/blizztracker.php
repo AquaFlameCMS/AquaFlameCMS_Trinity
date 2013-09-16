@@ -53,7 +53,7 @@ Flash.ratingImage = 'http://eu.media.blizzard.com/wow/player/rating-pegi.jpg';
 <div class="content-trail">
 <ol class="ui-breadcrumb">
 <li>
-<a href="../index.php" rel="np">World of Warcraft</a></li>
+<a href="../index.php" rel="np">World of Warcraft</a><span class="breadcrumb-arrow"></span></li>
 <li class="last"><a href="index.php" rel="np">Forums</a></li>
 </ol>
 </div>

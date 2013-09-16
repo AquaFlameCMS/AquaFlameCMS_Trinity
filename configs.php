@@ -24,9 +24,9 @@ $serverpass = "password";
 $serverport	= "3306";
 
 $server_db = "website";
-$server_adb = "trinity_auth";
+$server_adb = "sky_auth";
 
-$server_cdb = "trinity_chars";
+$server_cdb = "sky_chars";
 $server_wdb = "sky_world";
 
 ######################
