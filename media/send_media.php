@@ -18,6 +18,7 @@ if (!isset($_SESSION['username'])) {
 <link rel="stylesheet" media="all" href="../wow/static/css/bnet.css" />
 <link rel="stylesheet" media="print" href="../wow/static/css/bnet-print.css" />
 <link rel="stylesheet" media="all" href="../wow/static/css/management/dashboard.css" />
+<link rel="stylesheet" media="all" href="../wow/static/css/management/order-history.css" />
 <link rel="stylesheet" media="all" href="../wow/static/css/management/wow/dashboard.css" />
 <script src="../wow/static/local-common/js/third-party/jquery-1.4.4-p1.min.js"></script>
 <script src="../wow/static/local-common/js/core.js"></script>
