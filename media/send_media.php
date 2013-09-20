@@ -10,22 +10,31 @@ if (!isset($_SESSION['username'])) {
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-<title><?php echo $Media['SendMedia']; ?> - <?php echo $website['title']; ?></title>
-<meta content="false" http-equiv="imagetoolbar" />
-<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+<html>
+<head>
+<title><?php echo $website['title']; ?><?php echo @$Man['Man']; ?></title>
 <link rel="shortcut icon" href="../wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
-<link rel="search" type="application/opensearchdescription+xml" href="http://eu.battle.net/en-us/data/opensearch" title="Battle.net Search" />
-<link rel="stylesheet" href="../wow/static/local-common/css/common.css" />
-<link rel="stylesheet" href="../wow/static/css/bnet.css" />
-<link rel="stylesheet" href="../wow/static/css/bnet-print.css" />
-<link rel="stylesheet" href="../wow/static/css/management/order-history.css" />
-<link rel="stylesheet" href="../wow/static/css/management/services.css" />
+<link rel="stylesheet" media="all" href="../wow/static/local-common/css/management/common.css" />
+<link rel="stylesheet" media="all" href="../wow/static/css/bnet.css" />
+<link rel="stylesheet" media="print" href="../wow/static/css/bnet-print.css" />
+<link rel="stylesheet" media="all" href="../wow/static/css/management/dashboard.css" />
+<link rel="stylesheet" media="all" href="../wow/static/css/management/wow/dashboard.css" />
 <script src="../wow/static/local-common/js/third-party/jquery-1.4.4-p1.min.js"></script>
-<script src="../wow/static/local-common/js/core.js?v22"></script>
-<script src="../wow/static/local-common/js/tooltip.js?v22"></script>
+<script src="../wow/static/local-common/js/core.js"></script>
+<script src="../wow/static/local-common/js/tooltip.js"></script>
+<script src="../wow/static/local-common/js/third-party/swfobject.js?v37"></script>
+<script src="../wow/static/js/management/dashboard.js?v23"></script>
+<script src="../wow/static/js/management/wow/dashboard.js?v23"></script>
+<script src="../wow/static/js/bam.js?v23"></script>
+<script src="../wow/static/local-common/js/tooltip.js?v37"></script>
+<script src="../wow/static/local-common/js/menu.js?v37"></script>
+<script type="text/javascript">
+$(function() {
+Menu.initialize();
+Menu.config.colWidth = 190;
+Locale.dataPath = 'data/i18n.frag.xml';
+});
+</script>
 <!--[if IE 6]> <script type="text/javascript">
 //<![CDATA[
 try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
@@ -113,8 +122,8 @@ if (isset($_POST['send'])){
     $path = '../images/wallpapers/';                                   //relative route
     
     if ((($_FILES["file"]["type"] == "image/gif") || ($_FILES["file"]["type"] == "image/jpeg") 
-        || ($_FILES["file"]["type"] == "image/pjpeg") || ($_FILES["file"]["type"] == "image/bmp")
-        || ($_FILES["file"]["type"] == "image/png")) && ($_FILES["file"]["size"] < $_POST['MAX_SIZE'])){
+        || ($_FILES["file"]["type"] == "image/pjpeg") || ($_FILES["file"]["type"] == "image/bmp") 
+		|| ($_FILES["file"]["type"] == "image/jpg") || ($_FILES["file"]["type"] == "image/png")) && ($_FILES["file"]["size"] < $_POST['MAX_SIZE'])){
         //allowed extensions: jpg,jpeg,bmp,png,gif
       if ($_FILES["file"]["error"] > 0){
         echo "Error: " . $_FILES["file"]["error"] . ". File couldn't be sent.<br />";

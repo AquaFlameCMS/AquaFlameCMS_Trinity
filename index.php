@@ -212,6 +212,7 @@ $page_cat = "home";
 						}else
 						include("panel/vote_offline.php");
 						include("panel/server_information.php");
+						include("panel/sotd.php");
 						include("panel/services.php");
 						include("panel/popular_topics.php");
 					?>
