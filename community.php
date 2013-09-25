@@ -209,6 +209,29 @@ $(document).ready(function(){
 </ul>
 </div>
 </div>
+<div class="sidebar-module " id="sidebar-fan-contributions">
+<div class="sidebar-title">
+	<h3 class="category title-fan-contributions">Game Guide</h3>
+</div>
+<div class="sidebar-content">
+<ul>
+	<li>
+	<a href="#" class="fanart block" target="_blank">
+	<span class="content-thumb"></span>
+	<span class="content-title">Items</span>
+	<span class="clear"><!-- --></span>
+	</a>
+	</li>
+	<li>
+	<a href="search.php" class="fanart block" target="_blank">
+	<span class="content-thumb"></span>
+	<span class="content-title">Armory</span>
+	<span class="clear"><!-- --></span>
+	</a>
+	</li>
+</ul>
+</div>
+</div>
 <div class="sidebar-module " id="sidebar-social-media">
 <div class="sidebar-title">
 	<h3 class="category title-social-media">Stay Connected</h3>
