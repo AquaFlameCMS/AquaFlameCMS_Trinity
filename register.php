@@ -75,8 +75,8 @@ _gaq.push(['_trackPageLoadTime']);
 			
           function valid_email($email) {         //Small function to validate the email
                 $result = TRUE;
-                if(!eregi("^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$", $email)) {
-                              $result = FALSE;
+                if(!preg_match("/^([a-zA-Z0-9])+([a-zA-Z0-9\._-])*@([a-zA-Z0-9_-])+([a-zA-Z0-9\._-]+)+$/", $email)) {
+				$result = FALSE;
                 }
                 return $result;
           }
@@ -163,7 +163,8 @@ _gaq.push(['_trackPageLoadTime']);
                 {
                     $sha_pass_hash= sha1(strtoupper($accountName ) . ":" . strtoupper($accountPass));
                     $register_logon = mysql_query("INSERT INTO account (username,sha_pass_hash,email,last_ip,expansion) VALUES (UPPER('".$accountName."'),  CONCAT('".$sha_pass_hash."'),'".$accountEmail."','".$ip."','3')")or die(mysql_error());
-              
+					$register_logon = mysql_query("INSERT INTO rbac_account_groups (groupId) VALUES ('1')")or die(mysql_error());
+
                     mysql_select_db($server_adb,$connection_setup)or die(mysql_error());
 					          $accountinfo = mysql_fetch_assoc(mysql_query("SELECT * FROM account WHERE username = UPPER('".$accountName."')"));
                     mysql_select_db($server_db,$connection_setup)or die(mysql_error());
@@ -209,7 +210,6 @@ _gaq.push(['_trackPageLoadTime']);
 <span class="input-select input-select-small">
 <select name="country" id="country" class="small border-5 glow-shadow-2 form-disabled" tabindex="1"  >
 <optgroup label="">
-<<<<<<< HEAD
 <option value="CHL">Chile</option>
 <option value="ESP">Espa&#241;a</option>
 <option value="GBR" selected="selected">United Kingdom</option>
@@ -219,7 +219,6 @@ _gaq.push(['_trackPageLoadTime']);
 </optgroup>
 <option value="AFG">Afghanistan</option>
 <option value="ALA">&#197;land Islands</option>
-=======
 	<option value="CHL">Chile</option>
 	<option value="ESP">Espa&ntilde;a</option>
 	<option value="GBR" selected="selected">United Kingdom</option>
@@ -229,7 +228,6 @@ _gaq.push(['_trackPageLoadTime']);
 </optgroup>
 <option value="AFG">Afghanistan</option>
 <option value="ALA">&#192;land Islands</option>
->>>>>>> Code style
 <option value="ALB">Albania</option>
 <option value="DZA">Algeria</option>
 <option value="ASM">American Samoa</option>
@@ -277,7 +275,7 @@ _gaq.push(['_trackPageLoadTime']);
 <option value="COL">Colombia</option>
 <option value="COM">Comoros</option>
 <option value="COG">Congo</option>
-<option value="COD">Congo, Democratic Republic Of The</option>
+<option value="COD">Democratic Republic Of The Congo</option>
 <option value="COK">Cook Islands</option>
 <option value="CRI">Costa Rica</option>
 <option value="CIV">Cote D'Ivoire</option>
@@ -326,7 +324,7 @@ _gaq.push(['_trackPageLoadTime']);
 <option value="ISL">Iceland</option>
 <option value="IND">India</option>
 <option value="IDN">Indonesia</option>
-<option value="IRN">Iran, Islamic Republic Of</option>
+<option value="IRN">Islamic Republic Of Iran</option>
 <option value="IRQ">Iraq</option>
 <option value="IRL">Ireland</option>
 <option value="IMN">Isle Of Man</option>
@@ -339,7 +337,7 @@ _gaq.push(['_trackPageLoadTime']);
 <option value="KAZ">Kazakhstan</option>
 <option value="KEN">Kenya</option>
 <option value="KIR">Kiribati</option>
-<option value="KOR">Korea, Republic Of</option>
+<option value="KOR">Republic Of Korea</option>
 <option value="KWT">Kuwait</option>
 <option value="KGZ">Kyrgyzstan</option>
 <option value="LAO">Lao People'S Democratic Republic</option>
@@ -352,7 +350,7 @@ _gaq.push(['_trackPageLoadTime']);
 <option value="LTU">Lithuania</option>
 <option value="LUX">Luxembourg</option>
 <option value="MAC">Macao</option>
-<option value="MKD">Macedonia, The Former Yugoslav Republic Of</option>
+<option value="MKD">The Former Yugoslav Republic Of Macedonia</option>
 <option value="MDG">Madagascar</option>
 <option value="MWI">Malawi</option>
 <option value="MYS">Malaysia</option>
@@ -364,8 +362,8 @@ _gaq.push(['_trackPageLoadTime']);
 <option value="MUS">Mauritius</option>
 <option value="MYT">Mayotte</option>
 <option value="MEX">Mexico</option>
-<option value="FSM">Micronesia, Federated States Of</option>
-<option value="MDA">Moldova, Republic Of</option>
+<option value="FSM">Federated States Of Micronesia</option>
+<option value="MDA">Republic Of Moldova</option>
 <option value="MCO">Monaco</option>
 <option value="MNG">Mongolia</option>
 <option value="MNE">Montenegro</option>
@@ -436,7 +434,7 @@ _gaq.push(['_trackPageLoadTime']);
 <option value="SYR">Syrian Arab Republic</option>
 <option value="TWN">Taiwan</option>
 <option value="TJK">Tajikistan</option>
-<option value="TZA">Tanzania, United Republic Of</option>
+<option value="TZA">United Republic Of Tanzania</option>
 <option value="THA">Thailand</option>
 <option value="TGO">Togo</option>
 <option value="TKL">Tokelau</option>
@@ -456,7 +454,7 @@ _gaq.push(['_trackPageLoadTime']);
 <option value="UZB">Uzbekistan</option>
 <option value="VUT">Vanuatu</option>
 <option value="VAT">Vatican City State</option>
-<option value="VEN">Venezuela, Bolivarian Republic Of</option>
+<option value="VEN">Bolivarian Republic Of Venezuela</option>
 <option value="VNM">Viet Nam</option>
 <option value="VGB">Virgin Islands, British</option>
 <option value="VIR">Virgin Islands, U.S.</option>
