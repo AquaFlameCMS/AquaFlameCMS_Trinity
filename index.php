@@ -152,8 +152,21 @@ $page_cat = "home";
 								
 								$posterInfo = mysql_fetch_assoc(mysql_query("SELECT * FROM $server_db.users WHERE id = '".$news['author']."'"));
 								require_once("functions/custom.php");
-								
-								
+								if($news['summup'] == "")
+								{
+									$news['content'] = substr(strip_tags($news['content'],'<p><a><br><li><ol><ul>'),0,310);
+									if (substr($news['content'], -1) == '<') 
+									{
+	    								$news['content'] = substr($news['content'], 0, -1);
+									}  
+
+									$content = $news['content'];
+								}
+								else
+								{
+									$content = substr(strip_tags($news['summup']),0,310);
+								}
+  
 								if($news['contentlnk'] != NULL)
 									echo '<h3><a href="'.$news['contentlnk'].'">'.$news['title'].'</a></h3>';
 								else
@@ -171,7 +184,7 @@ $page_cat = "home";
 
 									<div class="article-right">
 										<div class="article-summary">
-										<p>'. substr(strip_tags($news['content']),0,310)."...".'</p>'; //Needed striptags for not closed tags
+										<p>'.$content."...".'</p>'; //Needs Strip tags for not closed tags
 										
 										if($news['contentlnk'] != NULL)
 											echo '<a href="'.$news['contentlnk'].'" class="more">'.$More['More'].'</a>';
@@ -209,8 +222,8 @@ $page_cat = "home";
 						{
 							echo '<br><br>';
 							include("panel/vote.php");
-						}else
-						include("panel/vote_offline.php");
+						}
+						include("panel/sotd.php");
 						include("panel/server_information.php");
 						include("panel/services.php");
 						include("panel/popular_topics.php");

@@ -183,28 +183,26 @@ if (!isset($_SESSION['username'])) {
                                     <br />
                                     <span class="realm
 									<?php
-                                        $get_realms = mysql_query("SELECT * FROM $server_adb.realmlist ORDER BY `id` DESC");
-                                        if ($get_realms) {
-                                            while ($realm = mysql_fetch_array($get_realms)) {
+                                                $get_realms = mysql_query("SELECT * FROM $server_adb.realmlist ORDER BY `id` DESC");
+                                                if ($get_realms) {
+                                                    while ($realm = mysql_fetch_array($get_realms)) {
                                                 $realm_extra = mysql_fetch_assoc(mysql_query("SELECT * FROM realms WHERE realmid = '" . $realm['id'] . "'"));
                                                 $server_cdb = $realm_extra['char_db'];
                                                 $check_chars = mysql_query("SELECT * FROM $server_cdb.characters WHERE account = '" . $account_information['id'] . "' ORDER BY `guid` DESC");
                                                 $current_realm = mysql_fetch_assoc(mysql_query("SELECT * FROM realms WHERE id = '" . $account_extra['char_realm'] . "'"));
                                                 if ($check_chars) {
                                                     while ($char = mysql_fetch_array($check_chars)) {
-                                                    $host = $realm['address'];
-                                                    $world_port = $realm['port'];
-                                                    $world = @fsockopen($host, $world_port, $err, $errstr, 2);
-
-                                                    if (!$world)
-                                                    echo ' down';
-
-                                                    echo '">' . $realm['name'] . '</span>';
+                                                $host = $realm['address'];
+                                                $world_port = $realm['port'];
+                                                $world = @fsockopen($host, $world_port, $err, $errstr, 2);
+                                                if (!$world)
+                                                echo ' down';
                                                     }
-                                                }
+                                                echo '">' . $realm['name'] . '</span>';
                                             }
                                         }
-                                    ?>
+                                    }
+                                ?>
                                 </div>
                                 <div class="context-links">
                                     <a href="<?php echo $website['root']; ?>advanced.php?name=<?php echo $actualchar["name"]; ?>" title="<?php echo $uplate['profile']; ?>" rel="np" class="icon-profile link-first">

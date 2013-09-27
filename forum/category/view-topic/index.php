@@ -92,10 +92,10 @@ if($_GET['t'] != ""){
 	if(isset($_SESSION['username'])){ $userInfo = mysql_fetch_assoc(mysql_query("SELECT * FROM users WHERE id = '".$account_information['id']."'")); }
 	
 	echo '
-	<li><a href="'.$website['root'].'index.php" rel="np">'.$website['title'].'</a></li>
-	<li><a href="'.$website['root'].'forum" rel="np">Forums</a></li>
-	<li><a href="'.$website['root'].'forum" rel="np">'.$category['name'].'</a></li>
-	<li><a href="'.$website['root'].'forum/category/?f='.$forum['id'].'" rel="np">'.$forum['name'].'</a></li>
+	<li><a href="'.$website['root'].'index.php" rel="np">'.$website['title'].'</a><span class="breadcrumb-arrow"></span></li>
+	<li><a href="'.$website['root'].'forum" rel="np">Forums</a><span class="breadcrumb-arrow"></span></li>
+	<li><a href="'.$website['root'].'forum" rel="np">'.$category['name'].'</a><span class="breadcrumb-arrow"></span></li>
+	<li><a href="'.$website['root'].'forum/category/?f='.$forum['id'].'" rel="np">'.$forum['name'].'</a><span class="breadcrumb-arrow"></span></li>
 	<li class="last"><a href="../?t='.$thread['id'].'" rel="np">'.$thread['name'].'</a></li>
 	';
 	

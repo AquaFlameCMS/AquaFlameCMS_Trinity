@@ -75,9 +75,9 @@ Flash.ratingImage = 'http://eu.media.blizzard.com/wow/player/rating-pegi.jpg';
 	}
 	$get_allthreads = mysql_query("SELECT * FROM forum_threads WHERE forumid = '".$forum['id']."'");
 	echo '
-	<li><a href="'.$website['root'].'index.php" rel="np">'.$website['title'].'</a></li>
-	<li><a href="'.$website['root'].'forum" rel="np">Forums</a></li>
-	<li><a href="'.$website['root'].'forum" rel="np">'.$category['name'].'</a></li>
+	<li><a href="'.$website['root'].'index.php" rel="np">'.$website['title'].'</a><span class="breadcrumb-arrow"></span></li>
+	<li><a href="'.$website['root'].'forum" rel="np">Forums</a><span class="breadcrumb-arrow"></span></li>
+	<li><a href="'.$website['root'].'forum" rel="np">'.$category['name'].'</a><span class="breadcrumb-arrow"></span></li>
 	<li class="last"><a href="#" rel="np">'.$forum['name'].'</a></li>
 	';
 	

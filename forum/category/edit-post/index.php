@@ -139,10 +139,10 @@ $page_cat = "forums";
 
 		echo '
 		<ol class="ui-breadcrumb">
-		<li><a href="'.$website['root'].'index.php" rel="np">'.$website['title'].'</a></li>
-		<li><a href="'.$website['root'].'forum" rel="np">Forums</a></li>
-		<li><a href="'.$website['root'].'forum" rel="np">'.$category['name'].'</a></li>
-		<li><a href="'.$website['root'].'forum/category/?f='.$forum['id'].'" rel="np">'.$forum['name'].'</a></li>
+		<li><a href="'.$website['root'].'index.php" rel="np">'.$website['title'].'</a><span class="breadcrumb-arrow"></span></li>
+		<li><a href="'.$website['root'].'forum" rel="np">Forums</a><span class="breadcrumb-arrow"></span></li>
+		<li><a href="'.$website['root'].'forum" rel="np">'.$category['name'].'</a><span class="breadcrumb-arrow"></span></li>
+		<li><a href="'.$website['root'].'forum/category/?f='.$forum['id'].'" rel="np">'.$forum['name'].'</a><span class="breadcrumb-arrow"></span></li>
 		<li class="last"><a href="create-topic/?f='.$forum['id'].'" rel="np">'.$Forum['Forum8'].'</a></li>
 		</ol>';
 
@@ -153,7 +153,7 @@ $page_cat = "forums";
 	if($error == 1){
 		echo '
 		<ol class="ui-breadcrumb">
-		<li><a href="/" rel="np">World of Warcraft</a></li>
+		<li><a href="/" rel="np">World of Warcraft</a><span class="breadcrumb-arrow"></span></li>
 		<li class="last"><a href="'.$website['root'].'forum" rel="np">Forums</a></li>
 		</ol>
 		';

@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Error 404</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
+  <link rel="shortcut icon" href="../wow/static/local-common/images/wow.png">
+  <!---CSS Files-->
+  <link rel="stylesheet" href="css/core.css">
+  <link rel="stylesheet" href="css/ui.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!---jQuery Files-->
+  <script src="js/jquery.js"></script>
+  <script src="js/functions.js"></script>
+  <script src="js/inputs.js"></script>
+</head>
+<body>
+
+  <div id="wrapper">
+
+    <div class="err-cont">
+
+      <div class="error-head">
+        <div id="logo"></div>
+        <h1>ERROR</h1>
+      </div>
+
+    <h1 class="error-nr">404</h1>
+
+    <p class="error-msg">Page not found.</p>
+    <p class="error-desc">
+      We went into the page's room and found a streak of blood. <br>
+      We have alerted the police, but they are not optimistic.
+    </p>
+    <span class="error-act">
+      <a href="dashboard.html" class="button orange has-icon">
+        <span class="icon arrow">%</span> Go back
+      </a>
+    </span>
+
+    </div>
+
+  </div><!--END WRAPPER-->
+
+  <span id="load">
+    <img src="img/load.png"><img src="img/spinner.png" id="spinner">
+  </span>
+
+  <!---jQuery Code-->
+  <script type='text/javascript'>
+
+    // LOAD FUNCTIONS
+
+    $.fn.loadfns();
+
+    if (document.referrer != '') $('.error-act a').attr('href', document.referrer);
+
+  </script>
+</body>
+</html>
