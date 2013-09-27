@@ -75,7 +75,7 @@ _gaq.push(['_trackPageLoadTime']);
 			
           function valid_email($email) {         //Small function to validate the email
                 $result = TRUE;
-                if(!eregi("^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$", $email)) {
+                if(!preg_match("/^([a-zA-Z0-9])+([a-zA-Z0-9\._-])*@([a-zA-Z0-9_-])+([a-zA-Z0-9\._-]+)+$/", $email)) {
 				$result = FALSE;
                 }
                 return $result;
