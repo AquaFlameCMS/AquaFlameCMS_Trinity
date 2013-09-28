@@ -1,11 +1,8 @@
-<div class="sidebar-module " id="sidebar-expansion" style="">
+<div class="sidebar-module " id="sidebar-events" style="">
 <div class="sidebar-title">
-<h3 class="category title-expansion"><a href="vote.php"><?php echo $Vote['VotePanel']; ?></a></h3>
-</div>
+<h3 class="category title-events"><a href="vote.php"><?php echo $Vote['VotePanel']; ?></a></h3></div>
 <div class="sidebar-content">
-<a class="mop-preview"></a>
-<ul>
-	<?php	$votes = mysql_query("SELECT * FROM $server_db.vote ORDER BY `id` ASC");
+<?php		$votes = mysql_query("SELECT * FROM $server_db.vote ORDER BY `id` ASC");
 			while($vote = mysql_fetch_array($votes))
 			{	
 			$votedx = mysql_query("SELECT * FROM $server_db.votes WHERE voteid = '".$vote['ID']."' AND userid = '".$account_information['id']."' ORDER BY `date` DESC");
@@ -40,18 +37,26 @@
 			if($timp['sec'] > 1) $in_time = 'in '.$timp['sec'].' seconds';
 			else $in_time = ''.$timp['sec'].' second';
 			else $voteable = 1;
-			}		
-			} else $voteable = 1;	
-			echo'					
-			<li>';
-			if($voteable == 1) echo '<a target="_blank" href="'.$vote['Link'].'" onclick="window.location = \'vote.php?id='.$vote['ID'].'\'" rel="np">';
+			}
+			}
+			else $voteable = 1;	
 			echo'
+			<div class="sidebar-events"><h4>Today</h4>
+			<ul class="sidebar-list today">
+			<li data-id="1379664000000" class="event-summary sidebar-tile system-event">';		
+			if($voteable == 1) echo '<a onclick="window.location = \'vote.php?id='.$vote['ID'].'\'" rel="np">';
+			echo'
+			<span class="icon-frame ">
+			<img src="http://media.blizzard.com/wow/assets/calendar/calendar_brewfeststart.png" alt="" width="27" height="27" />
+			<span class="frame"></span>
+			</span>
 			<span class="info-wrapper clear-after">
-			<span class="title">'.$vote['Name'].'</span></br>';
-			if($voteable == 1) echo '<span class="date">'.$Vote['CanVoteNow'].'</span>';
-			else echo '<span class="date">'.$Vote['CanVoteIn'].''.$in_time.'</span></br>
-			<small>Time & Date to Vote:</small>
-			<span class="date date-status">'.date('H:i:s & d/m',$whenIcanvote).'</span>';
+			<span class="title">'.$vote['Name'].'</span>
+			
+			</span>';
+			if($voteable == 1) echo '<span class="date date-status">'.$Vote['CanVoteNow'].'</span>';
+			else echo '<span class="date date-status">'.$Vote['CanVoteIn'].''.$in_time.'</span>
+			<span class="date">'.date('H:i:s & d/m',$whenIcanvote).'</span>';
 			echo'
 			</span>
 			<span class="clear"><!-- --></span>';
@@ -62,11 +67,35 @@
 		}
 	?>
 </ul>
-<a class="learn-more">
-<span style="float-left">
-<span class="icon-gold"><?php echo $account_extra['vote_points']; ?> VP</span>
+</div>
+<span class="clear"><!-- --></span>
+<div class="sidebar-module " id="sidebar-auctions" style="">
+<div class="sidebar-content">
+<div class="sidebar-cell">
+<a><?php echo $Vote['Earned']; ?></a>
+<ul>
+<li>Gold <a href="#"><span>0</span></a></li>
+<li>Silver <a href="#"><span><?php echo $account_extra['vote_points']; ?></span></a></li>
+</ul>
+</div>		
+<div class="sidebar-cell">
+<a>Can Earn</a>
+<ul>
+<li>Gold <a href="#"><span>0</span></a></li>
+<li>Silver <a href="#"><span>0</span></a></li>	
+</ul>
+</div>
+<span class="clear"><!-- --></span>
+<ul class="sidebar-list">
+<li>
+<span class="float-right">
+<span class="icon-gold">--</span>
+<span class="icon-silver"><?php echo $account_extra['vote_points']; ?></span>
 </span>
 <?php echo $Vote['Earned']; ?>
-</a>
+</li>
+</ul>
+</div>
+</div>
 </div>
 </div>

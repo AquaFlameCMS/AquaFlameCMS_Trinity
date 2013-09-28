@@ -1,9 +1,6 @@
-<div id="sidebar-marketing" class="sidebar-module">
-	<div class="sidebar-title">
-		<h3 class="title-bnet-ads">
-			<?php echo $Status['StatRealms']; ?>
-		</h3>
-	</div>
+<div class="sidebar-module " id="sidebar-sotd" style="">
+<div class="sidebar-title">
+<h3 class="category title-sotd"><a href="/wow/en/media/screenshots/screenshot-of-the-day/mists-of-pandaria"><?php echo $Status['StatRealms']; ?></a></h3></div>
     <div style="font-size:12px">
 		<?php echo $Ind['Ind5']; ?><font color='#FF0000'><?php echo $website['realm']; ?></font>
 	</div>
@@ -13,9 +10,8 @@
 		$acc = mysql_result($acct_sql,0,0);
 		echo ("<font color='#FF0000'>$acc</font>");
 		?>
-		<?php echo $Ind['Ind8']; ?></span><br />
+		<?php echo $Ind['Ind8']; ?></span>
 </div>
-
 <?php
 
 $type = array(
@@ -111,10 +107,7 @@ while($realm = mysql_fetch_array($get_realms)){
     $server_cdb = $realm_config['char_db'];
     $server_wdb = $realm_config['world_db'];
 ?>
-    
-    
-    
-    <div class="realm-cuadro">
+<div class="realm-panel">
     	<div id="sidebar-marketing" class="sidebar-module">
         	<div style="font-size:18px; color:#FEF092">
         	  <h3 class="title-bnet-ads">
@@ -215,6 +208,7 @@ while($realm = mysql_fetch_array($get_realms)){
     		</div>
     	</div>
     </div>
+	<br />
 <?php
 }
 ?>

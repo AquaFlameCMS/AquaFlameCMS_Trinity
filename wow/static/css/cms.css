@@ -47,7 +47,6 @@ a.comments-link { background-image:url("../images/layout/cms/blog_icons.gif"); }
 #blog.damocles-edit { background-color:#1A0F08; }
 
 h3.blog-title { font-size:24px; color:#fdeea4; font-weight:bold; }
-.header-image img { margin-bottom:-4px;}
 #blog .header-image { overflow: hidden; -moz-box-shadow:0 0 20px #000; -webkit-box-shadow:0 0 20px #000; box-shadow:0 0 20px #000; padding:0; margin-top: 10px; }
 #blog .detail { padding: 20px 0; }
 #blog .detail strong { color:#f4ce98; }
@@ -288,7 +287,7 @@ div.forum-options a.active { color:#fff; font-weight: bold; }
 
 
 /* sidebar */
-.sidebar-module { padding: 0; margin-bottom: 35px; }
+.sidebar-module { padding: 0; margin-bottom: 25px; }
 .sidebar-module .sidebar-title { margin-bottom: 6px; border-bottom: 2px solid #552b12; padding-bottom: 6px; }
 .sidebar-module .sidebar-title h3 { color: #FEF092; text-transform: uppercase; font-size: 14px; font-weight: normal; }
 #right .sidebar-module .sidebar-title h3 a { color: #FEF092; padding-right: 20px; background: url("../images/icons/next.gif") 100% 50% no-repeat; }
@@ -422,12 +421,6 @@ a.sidebar-esports:hover { background-position: left bottom; border-color: #ffb10
 .poptopic-list a .desc { color: #71401f; font-weight: normal; }
 .poptopic-list a:last-child { border-bottom: 0; }
 
-/* vote panel */
-.sidebar-module .mop-preview { margin: -1px; display: block; width: 300px; height: 100px; border: 1px solid #372511; background: url("../images/sidebar/share/vote-preview.jpg") 0 0 no-repeat;
-	-moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px;
-	-moz-box-shadow: 0 0 5px #000 inset; -webkit-box-shadow: 0 0 5px #000 inset; box-shadow: 0 0 5px #000 inset; }
-.sidebar-module .mop-preview:hover { background-position: 0 -100px; border-color: #cd9000; }
-
 /* sidebar promos */
 .promo { width: 300px; height: 250px; display: block; position: relative; margin: 0 0 25px 3px; -moz-box-shadow: #000 0 0 15px; -webkit-box-shadow: #000 0 0 15px; box-shadow: #000 0 0 15px; overflow: hidden; }
 .promo.promo-wow .kr-promo {         background-image: url("../images/sidebar/bg-wow-kr.jpg"); width: 300px; height: 250px;  }
@@ -474,7 +467,7 @@ a.sidebar-esports:hover { background-position: left bottom; border-color: #ffb10
 	.promo.wow-merge-tw a { display: block; height: 240px; width: 300px; background: url("../images/sidebar/wow-tw-merge.jpg") no-repeat; }
 
 /* static sidebar ad */
-#sidebar-links.promo-ad a { border: none; display: block; width: 300px; height: 85px; margin: 10px auto; }
+#sidebar-links.promo-ad a { border: none; display: block; width: 300px; height: 85px; margin: 10px auto 10px auto; }
 #sidebar-links.promo-ad a.promo-authenticator { background: url("../images/sidebar/promos/eu-authenticator.jpg") no-repeat 0 0; color: #eee;}
 #sidebar-links.promo-ad a.promo-authenticator:hover { background-position: 0 -85px; }
 #sidebar-links.promo-ad a .buy-now-cart { display: block; float: left; height: 16px; left: 8px; line-height: 16px; padding-left: 28px; padding-right: 28px; position: relative; top: 51px; text-shadow: 1px 1px 1px #000000;}

@@ -184,7 +184,7 @@ $page_cat = "home";
 
 									<div class="article-right">
 										<div class="article-summary">
-										<p>'.$content."...".'</p>'; //Needs Strip tags for not closed tags
+										<p>'.$content."...".'</p>';
 										
 										if($news['contentlnk'] != NULL)
 											echo '<a href="'.$news['contentlnk'].'" class="more">'.$More['More'].'</a>';
@@ -212,30 +212,34 @@ $page_cat = "home";
 							<?php }?>
 						</div>
 					</div>
-				
-					<!-- Right Panel -->
-
-					<div id="right" class="ajax-update">
-					<?php
-						include("panel/promo.php");
-						if(isset($_SESSION['username']))
-						{
-							echo '<br><br>';
-							include("panel/vote.php");
-						}
-						include("panel/sotd.php");
-						include("panel/server_information.php");
-						include("panel/services.php");
-						include("panel/popular_topics.php");
-					?>
-					</div>
-					<span class="clear"><!-- --></span>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<?php include("footer.php"); ?>
+<!-- Right Panel -->
+<div id="right" class="ajax-update">
+<?php
+include("panel/promo.php");
+include("panel/connect.php");
+?>
+<div class="sidebar" id="sidebar">
+<div class="sidebar-top">
+<div class="sidebar-bot">
+<?php
+if(isset($_SESSION['username']))
+{
+include("panel/vote.php");
+}
+include("panel/server_information.php");
+include("panel/sotd.php");
+include("panel/popular_topics.php");
+?>
+</div>
+</div>
+</div>
+</div>
+<span class="clear"><!-- --></span>
+</div>
+</div>
+</div>
+</div>
+<?php include("footer.php"); ?>
 </div>
 </body>
 </html>
