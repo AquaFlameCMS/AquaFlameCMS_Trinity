@@ -155,6 +155,18 @@ try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
 <h2 class="header"><a href="#"><?php echo $Shop['shop_22']; ?></a></h2>
 <div class="product-block">
 <div id="pet-mount-list" class="companion-container" style="width: 1440px;">
+	<a  href="#" class="product-item crown-of-eternal-winter" data-tooltip="Buy Now" data-tooltip-options="{&quot;location&quot;: &quot;mouse&quot;}">
+		<span class="thumb"></span>
+		<span class="name">Dual-Wield<br />Fangs of the Father</span>
+	</a>
+	<a href="#" class="product-item jewel-of-the-firelord" data-tooltip="Buy Now" data-tooltip-options="{&quot;location&quot;: &quot;mouse&quot;}">
+		<span class="thumb"></span>
+		<span class="name">Dragonwrath,<br />Tarecgosa's Rest</span>
+	</a>
+	<a href="#" class="product-item hood-of-hungering-darkness" data-tooltip="Buy Now" data-tooltip-options="{&quot;location&quot;: &quot;mouse&quot;}">
+		<span class="thumb"></span>
+		<span class="name">Two-Hand<br />Shadowmourne</span>
+	</a>
 	<a href="#" class="product-item blossoming-ancient" data-tooltip="Buy Now" data-tooltip-options="{&quot;location&quot;: &quot;mouse&quot;}">
 		<span class="thumb"></span>
 		<span class="name">Blossoming<br /> Ancient</span>
