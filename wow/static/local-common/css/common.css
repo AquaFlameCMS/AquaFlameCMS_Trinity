@@ -436,11 +436,12 @@ a.ui-button.imgbutton span span span { padding: 0 5px; }
 #change-language span { display: inline-block; background: url("../images/icons/map-small.gif") 0 50% no-repeat; padding: 2px 0 2px 35px }
 
 /* embedded login */
-#login-embedded { width: 400px; position: fixed; top: 50%; left: 50%; padding: 0; margin: -200px; z-index: 9005; height: 300px; background: #000; border: 5px solid #525e67; border-radius: 3px; box-shadow: #000 0 0 20px; }
+#login-embedded { width: 400px; position: fixed; top: 50%; left: 50%; padding: 0; margin: -200px; z-index: 9005; height: 391px; background: #000; border: 5px solid #525e67; border-radius: 3px; box-shadow: #000 0 0 20px; }
 #login-embedded object,
-#login-embedded iframe { width: 400px; margin: 0; padding: 0; border: none; }
-#embedded-loader { width: 200px; height: 200px; position: fixed; top: 50%; left: 50%; margin: -100px; z-index: 9005; background: url("../images/loaders/uber-loading.gif") 50% 50% no-repeat; }
+#login-embedded iframe { width: 400px; height: 391px; margin: 0; padding: 0; border: none; }
+#embedded-loader { width: 200px; height: 390px; position: fixed; top: 50%; left: 50%; margin: -100px; z-index: 9005; background: url
 
+("../images/loaders/uber-loading.gif") 50% 50% no-repeat; }
 /* bml */
 .bml-toolbar button { width: 34px; height: 26px; padding: 0; text-indent: -9999px; border: none; background-repeat:no-repeat; margin: 0 2px 5px 0; cursor: pointer; }
 .bml-toolbar .bml-bold:hover,
