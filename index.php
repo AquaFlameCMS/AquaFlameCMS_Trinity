@@ -152,7 +152,7 @@ $page_cat = "home";
 								
 								$posterInfo = mysql_fetch_assoc(mysql_query("SELECT * FROM $server_db.users WHERE id = '".$news['author']."'"));
 								require_once("functions/custom.php");
-								if($news['summup'] == "")
+								if($news['content'] == "")
 								{
 									$news['content'] = substr(strip_tags($news['content'],'<p><a><br><li><ol><ul>'),0,310);
 									if (substr($news['content'], -1) == '<') 
@@ -164,7 +164,7 @@ $page_cat = "home";
 								}
 								else
 								{
-									$content = substr(strip_tags($news['summup']),0,310);
+									$content = substr(strip_tags($news['content']),0,310);
 								}
   
 								if($news['contentlnk'] != NULL)
