@@ -163,7 +163,7 @@ _gaq.push(['_trackPageLoadTime']);
                 {
                     $sha_pass_hash= sha1(strtoupper($accountName ) . ":" . strtoupper($accountPass));
                     $register_logon = mysql_query("INSERT INTO account (username,sha_pass_hash,email,last_ip,expansion) VALUES (UPPER('".$accountName."'),  CONCAT('".$sha_pass_hash."'),'".$accountEmail."','".$ip."','".$expansion_wow."')")or die(mysql_error());
-					$register_logon = mysql_query("INSERT INTO rbac_account_groups (groupId) VALUES ('1')")or die(mysql_error());
+					$register_logon = mysql_query("INSERT INTO rbac_account_permissions (permissionId) VALUES ('6')")OR die(mysql_error());
 
                     mysql_select_db($server_adb,$connection_setup)or die(mysql_error());
 					          $accountinfo = mysql_fetch_assoc(mysql_query("SELECT * FROM account WHERE username = UPPER('".$accountName."')"));
