@@ -51,7 +51,7 @@ $page_cat = "home";
 						<div id="slideshow" class="ui-slideshow">
 							<div class="slideshow">
 							<?php
-							$slideshows = mysql_query("SELECT * FROM slideshows ORDER BY id DESC LIMIT 5");
+							$slideshows = mysql_query("SELECT * FROM slideshows ORDER BY id ASC LIMIT 5");
 							mysql_error($connection_setup);
 							$i=0; 
 							echo '<div class="container">';
@@ -73,7 +73,7 @@ $page_cat = "home";
               ?>
 							</div>
 							<?php
-							$slideshows = mysql_query("SELECT * FROM slideshows ORDER BY id DESC LIMIT 1");
+							$slideshows = mysql_query("SELECT * FROM slideshows ORDER BY id ASC LIMIT 1");
 							$slideshow = mysql_fetch_assoc($slideshows);
 							echo'<div class="caption">
 							<h3><a href="#" class="link">'.$slideshow['title'].'</a></h3>
@@ -85,7 +85,7 @@ $page_cat = "home";
 							<div class="mask"></div>
 						</div>
 						
-						<?php $slideshows = mysql_query("SELECT * FROM slideshows ORDER BY id DESC LIMIT 5"); ?>
+						<?php $slideshows = mysql_query("SELECT * FROM slideshows ORDER BY id ASC LIMIT 5"); ?>
 						<script type="text/javascript">
 						//<![CDATA[
 							$(function() {
