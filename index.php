@@ -51,7 +51,7 @@ $page_cat = "home";
 						<div id="slideshow" class="ui-slideshow">
 							<div class="slideshow">
 							<?php
-							$slideshows = mysql_query("SELECT * FROM slideshows ORDER BY id DESC LIMIT 5");
+							$slideshows = mysql_query("SELECT * FROM slideshows ORDER BY id ASC LIMIT 5");
 							mysql_error($connection_setup);
 							$i=0; 
 							echo '<div class="container">';
@@ -73,7 +73,7 @@ $page_cat = "home";
               ?>
 							</div>
 							<?php
-							$slideshows = mysql_query("SELECT * FROM slideshows ORDER BY id DESC LIMIT 1");
+							$slideshows = mysql_query("SELECT * FROM slideshows ORDER BY id ASC LIMIT 1");
 							$slideshow = mysql_fetch_assoc($slideshows);
 							echo'<div class="caption">
 							<h3><a href="#" class="link">'.$slideshow['title'].'</a></h3>
@@ -85,7 +85,7 @@ $page_cat = "home";
 							<div class="mask"></div>
 						</div>
 						
-						<?php $slideshows = mysql_query("SELECT * FROM slideshows ORDER BY id DESC LIMIT 5"); ?>
+						<?php $slideshows = mysql_query("SELECT * FROM slideshows ORDER BY id ASC LIMIT 5"); ?>
 						<script type="text/javascript">
 						//<![CDATA[
 							$(function() {
@@ -152,7 +152,7 @@ $page_cat = "home";
 								
 								$posterInfo = mysql_fetch_assoc(mysql_query("SELECT * FROM $server_db.users WHERE id = '".$news['author']."'"));
 								require_once("functions/custom.php");
-								if($news['summup'] == "")
+								if($news['content'] == "")
 								{
 									$news['content'] = substr(strip_tags($news['content'],'<p><a><br><li><ol><ul>'),0,310);
 									if (substr($news['content'], -1) == '<') 
@@ -164,7 +164,7 @@ $page_cat = "home";
 								}
 								else
 								{
-									$content = substr(strip_tags($news['summup']),0,310);
+									$content = substr(strip_tags($news['content']),0,310);
 								}
   
 								if($news['contentlnk'] != NULL)

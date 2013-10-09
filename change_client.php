@@ -90,7 +90,7 @@ if (isset($_POST['change'])){
   echo '<meta http-equiv="refresh" content="4;url=account_man.php"/>';
 }else{
 
-  $expansion = mysql_escape_string($_GET['client']);
+  $expansion = mysql_real_escape_string($_GET['client']);
   if (!isset($_GET['client']) || ($expansion<>'0' && $expansion<>'1' && $expansion<>'2' && $expansion<>'3')){
     $error = true;
     echo '<p><font color="red">Sorry you have to choose a valid game client to change your account.</font></p>';
@@ -113,7 +113,7 @@ if (isset($_POST['change'])){
         break;
     }
   }
-  if (!$error){
+  if (!$error=false){
     echo'
     <form method="post" action="">
       <input type="hidden" value="'.$expansion.'" name="expansion" />

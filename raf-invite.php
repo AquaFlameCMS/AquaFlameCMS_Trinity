@@ -8,25 +8,25 @@ if (!isset($_SESSION['username'])) {
 ?>
 
 <!doctype html>
+<html lang="en-gb">
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
- <html lang="en-gb">
 <head>
 <title><?php echo $website['title']; ?><?php echo $friend['1']; ?></title>
 <meta content="false" http-equiv="imagetoolbar" />
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
 <link rel="shortcut icon" href="wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
-<link rel="stylesheet" href="wow/static/local-common/css/common.css?v22" />
-<link rel="stylesheet" href="wow/static/css/bnet.css" />
-<link rel="stylesheet" href="wow/static/css/bnet-print.css" />
+<link rel="stylesheet" media="all" href="wow/static/local-common/css/management/common.css" />
+<link rel="stylesheet" media="all" href="wow/static/css/bnet.css" />
+<link rel="stylesheet" media="print" href="wow/static/css/bnet-print.css" />
 <link rel="stylesheet" href="wow/static/css/management/dashboard.css" />
 <link rel="stylesheet" href="wow/static/css/management/services.css" />
 <link rel="stylesheet" href="wow/static/css/management/wow/raf.css" />
 <script src="wow/static/local-common/js/third-party/jquery-1.4.4-p1.min.js"></script>
-<script src="wow/static/local-common/js/core.js?v22"></script>
-<script src="wow/static/local-common/js/tooltip.js?v22"></script>
+<script src="wow/static/local-common/js/core.js"></script>
+<script src="wow/static/local-common/js/tooltip.js"></script>
 <!--[if IE 6]> <script type="text/javascript">
 //<![CDATA[
 try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
@@ -95,15 +95,15 @@ _gaq.push(['_trackPageLoadTime']);
 	</div>
 	<div class="service-form">
     <?php echo $friend['20']; ?><a href=""><?php echo $friend['21']; ?></a>.
-                <form method="POST" action="raf-invite.php" id="raf-form">
-                    <input type="hidden" name="" value=""/>
-                    <input type="hidden" name="" value=""/>
+                <form autocomplete="off" method="POST" action="<?php echo $_SERVER['PHP_SELF'] ?>" id="raf-form">
+                    <input type="hidden" name="csrftoken" value=""/>
 <?php  
 include("configs.php");
 
 $link = mysql_connect($serveraddress,$serveruser,$serverpass)or die("Could not connect: " . mysql_error());
 mysql_select_db($server_adb) or die(mysql_error());
 mysql_select_db($server_cdb) or die(mysql_error());
+mysql_select_db($server_db) or die(mysql_error());
 
 /* SQL INJECTION */
 function protect($string){
@@ -124,8 +124,8 @@ return SHA1($user.':'.$pass);
 function random_string($counts){
 $str = "abcdefghijklmnopqrstuvwxyz";//Count 0-25
 for($i=0;$i<$counts;$i++){
-if ($o == 1){
-$output .= rand(0,9);
+if ($o = 1){
+$output = rand(0,9);
 $o = 0;
 }else{
 $o++;
@@ -180,7 +180,7 @@ $ip = getenv('REMOTE_ADDR');
   else
   {
      // Update
-     mysql_query("INSERT INTO `$server_adb`.`invite_member` (`account`,`character`,`inv_code`,`ip`) VALUE ('".$username."','".$guid."','".$rand."','".$ip."')") or die(mysql_error());
+     mysql_query("INSERT INTO `$server_db`.`invite_member` (`account`,`character`,`inv_code`,`ip`) VALUE ('".$username."','".$guid."','".$rand."','".$ip."')") or die(mysql_error());
      echo '<font color="yellow">Your Link :</font>  <font color="green">http://www.adictoswow.com/ucp.php?mode=register&i='.$rand.'</font><p></p>';
      echo '<font color="yellow">code :</font> <font color="green">'.$rand.'</font> keep it';
   }
@@ -259,19 +259,13 @@ mysql_close($link);
         <textarea rows="8" cols="30" name="customMessage" class="input border-5 glow-shadow-2" id="customMessage" tabindex="3" maxlength="255"><?php echo $friend['36']; ?></textarea>
         <p class="special-p"><?php echo $friend['37']; ?><a href=""><?php echo $friend['38']; ?></a></p>
         </div>
-	<fieldset class="ui-controls " >
-	<button
-		class="ui-button button1 disabled"
-			type="submit"
-			name="submit"
-		disabled="disabled"
-		id="submit1">
+	<fieldset class="ui-controls ">
+	<button class="ui-button button1" type="submit" name="submit" id="settings-submit" value="Send Invitation" tabindex="1">
 		<span>
 			<span><?php echo $friend['39']; ?></span>
 		</span>
 	</button>             
-	<a class="ui-cancel "
-		href="">
+	<a class="ui-cancel" href="raf-invite.php">
 		<span><?php echo $friend['40']; ?></span>
 	</a>
 	</fieldset>
