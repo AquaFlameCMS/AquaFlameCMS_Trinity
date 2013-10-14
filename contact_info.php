@@ -87,7 +87,7 @@ Joined at: <?php echo $get["joindate"] ?>
 <h4>E-mail:</h4>
 <p><?php echo $get["email"] ?>,<p>
 Town: <Font color="#A00000">Unavailable</font>, 
-<p>Last IP: <Font color="#A00000"><?php echo $get["last_ip"] ?></font>,</p>
+<p>Last IP: <Font color="#A00000"><?php echo $_SERVER['REMOTE_ADDR']; ?></font>,</p>
 <p><h4>Full Name: <Font color="#A00000">Unavailable</font>,</h4></p>
 <p>Number of Recruits: <Font color="#A00000"><?php echo $get["recruiter"] ?></font>.</p>
 <p></p>

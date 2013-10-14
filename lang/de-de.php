@@ -1089,4 +1089,11 @@ $sms['3'] = "SMS Spenden";
 $sms['4'] = "Dieses SMS Spenden Modul wird in einigen L&auml;ndern nicht verf&uuml;gbar sein.";
 $sms['5'] = "AGB DER SPENDEN LESEN ";
 // SMS
-?>
+
+// Image of the Day
+$sotd['1'] = "Screenshot of the Day";
+$sotd['2'] = "All Media";
+$sotd['3'] = "Submit Media";
+// Image of the Day
+
+/* End of file de-de.php */

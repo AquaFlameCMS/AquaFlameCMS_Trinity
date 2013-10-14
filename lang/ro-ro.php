@@ -1116,4 +1116,11 @@ $sms['3'] = "SMS Donation";
 $sms['4'] = "This SMS Donation Module may not be available at some Countries.";
 $sms['5'] = "Read Terms and Conditions of SMS Donation";
 // SMS
-?>
+
+// Image of the Day
+$sotd['1'] = "Screenshot of the Day";
+$sotd['2'] = "All Media";
+$sotd['3'] = "Submit Media";
+// Image of the Day
+
+/* End of file ro-ro.php */

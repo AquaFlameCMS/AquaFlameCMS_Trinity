@@ -482,7 +482,7 @@ INSERT INTO `version` (`Name`, `Number`, `Revision`, `DB_Version`, `Updates`) VA
 
 -- Dumping structure for table website.vote
 DROP TABLE IF EXISTS `vote`;
-CREATE TABLE `vote` (
+CREATE TABLE IF NOT EXISTS `vote` (
   `ID` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'ID has to be from 1 to 5',
   `Name` varchar(50) CHARACTER SET utf8 DEFAULT NULL COMMENT 'This is the Name of the Voting Site.',
   `Link` text CHARACTER SET utf8 COMMENT 'It must have http:// to work properly',

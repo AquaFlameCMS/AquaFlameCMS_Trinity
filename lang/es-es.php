@@ -2,7 +2,7 @@
 // Needs to be Translated
 $adb['adb'] = "Imposible conectar con la base de datos de las cuentas.";
 $db['db'] = "Imposible conectar con la base de datos de la web..";
-$home['home'] = "Inicio";
+$home['home'] = "Principal";
 $status['status'] = "Estado";
 $Community['Community'] = "Comunidad";
 $Media['Media'] = "Medios";
@@ -1121,4 +1121,11 @@ $sms['3'] = "Donación SMS";
 $sms['4'] = "Este módulo Donación SMS puede no estar disponible en algunos países.";
 $sms['5'] = "Leer Términos y Condiciones de Donación SMS";
 // SMS
-?>
+
+// Image of the Day
+$sotd['1'] = "Capturas de Pantalla del día";
+$sotd['2'] = "Enviar captura";
+$sotd['3'] = "Todos las capturas";
+// Image of the Day
+
+/* End of file es-es.php */
