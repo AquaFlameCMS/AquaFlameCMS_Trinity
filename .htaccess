@@ -1,5 +1,5 @@
 # Disable directories listing in browser
 Options -Indexes
-#ErrorDocument 403 /error.php?code=403
-#ErrorDocument 404 /error.php?code=404
-RewriteEngine On
+#ErrorDocument 403 /404.php?code=403
+#ErrorDocument 404 /404.php?code=404
+RewriteEngine on

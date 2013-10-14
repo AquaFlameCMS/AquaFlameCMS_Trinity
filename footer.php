@@ -1,6 +1,6 @@
 <div class="wrapper">
 <div id="footer">
-<div id="sitemap">
+<div id="sitemap" class="promotions">
 <div class="column">
 <h3 class="bnet">
 <a href="#" tabindex="100"><?php echo $website['title']; ?></a>
@@ -38,6 +38,27 @@
 <li><a href="#"><?php echo $Support3['Support3']; ?></a></li>
 <li><a href="#"><?php echo $Support4['Support4']; ?></a></li>
 </ul>
+</div>
+<div id="footer-promotions">
+<div class="sidebar-content"></div>
+<div id="sidebar-marketing" class="sidebar-module">
+<div class="bnet-offer">
+<!-- -->
+<div class="bnet-offer-bg">
+<a href="<?php echo $website['root'];?>register.php" target="_blank" id="ad3023837" class="bnet-offer-image" onclick="BnetAds.trackEvent('campaignId:3023837 - imgId:3023042', 'WoWtrialLatAm', 'wow', true);">
+<img src="<?php echo $website['root'];?>wow/static/images/footer/ad_300x100/promo.jpg" width="300" height="100" alt=""/>
+</a>
+</div>
+<script type="text/javascript">
+//<![CDATA[
+if(typeof (BnetAds.addEvent) != "undefined" )
+BnetAds.addEvent(window, 'load', function(){ BnetAds.trackEvent('campaignId:3023837 - imgId:3023042', 'WoWtrialLatAm', 'wow'); } );
+else
+BnetAds.trackEvent('3023837', 'WoWtrialLatAm', 'wow');
+//]]>
+</script>
+</div>
+</div>
 </div>
 <span class="clear"><!-- --></span>
 </div>
