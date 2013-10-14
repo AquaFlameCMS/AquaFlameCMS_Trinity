@@ -482,18 +482,19 @@ INSERT INTO `version` (`Name`, `Number`, `Revision`, `DB_Version`, `Updates`) VA
 
 -- Dumping structure for table website.vote
 DROP TABLE IF EXISTS `vote`;
-CREATE TABLE IF NOT EXISTS `vote` (
-  `ID` int(10) DEFAULT NULL COMMENT 'ID has to be from 1 to 5',
-  `Name` varchar(50) DEFAULT NULL COMMENT 'This is the Name of the Voting Site.',
-  `Link` text COMMENT 'It must have http:// to work properly',
-  `Description` text COMMENT 'Add the Description for the Voting'
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 COMMENT='This Table is all about the Infortmation for the Vote Panel.';
+CREATE TABLE `vote` (
+  `ID` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'ID has to be from 1 to 5',
+  `Name` varchar(50) CHARACTER SET utf8 DEFAULT NULL COMMENT 'This is the Name of the Voting Site.',
+  `Link` text CHARACTER SET utf8 COMMENT 'It must have http:// to work properly',
+  `Description` text CHARACTER SET utf8 COMMENT 'Add the Description for the Voting',
+  PRIMARY KEY (`ID`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1 COMMENT='This Table is all about the Infortmation for the Vote Panel.';
 
 -- Dumping data for table website.vote: 2 rows
 /*!40000 ALTER TABLE `vote` DISABLE KEYS */;
 INSERT INTO `vote` (`ID`, `Name`, `Link`, `Description`) VALUES
 	(1, 'Google', 'http://google.gr', 'Vote me jackass!'),
-	(1, 'AquaFlame', 'http://aquaflame.org', 'Just click me for cookies!');
+	(2, 'AquaFlame', 'http://aquaflame.org', 'Just click me for cookies!');
 /*!40000 ALTER TABLE `vote` ENABLE KEYS */;
 
 
