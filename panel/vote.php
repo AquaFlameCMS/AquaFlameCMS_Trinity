@@ -4,7 +4,7 @@
 <div class="sidebar-content">
 <?php		$votes = mysql_query("SELECT * FROM $server_db.vote ORDER BY `id` ASC");
 			while($vote = mysql_fetch_array($votes))
-			{	
+			{
 			$votedx = mysql_query("SELECT * FROM $server_db.votes WHERE voteid = '".$vote['ID']."' AND userid = '".$account_information['id']."' ORDER BY `date` DESC");
 			if(mysql_num_rows($votedx) > 0)
 			{
@@ -52,22 +52,19 @@
 			</span>
 			<span class="info-wrapper clear-after">
 			<span class="title">'.$vote['Name'].'</span>
-			
 			</span>';
 			if($voteable == 1) echo '<span class="date date-status">'.$Vote['CanVoteNow'].'</span>';
 			else echo '<span class="date date-status">'.$Vote['CanVoteIn'].''.$in_time.'</span>
 			<span class="date">'.date('H:i:s & d/m',$whenIcanvote).'</span>';
 			echo'
-			</span>
 			<span class="clear"><!-- --></span>';
 			if ($voteable == 1) echo '</a>';
 			echo '<span class="clear"><!-- --></span>
 			</li>
-			';
+			</ul>
+			</div>';
 		}
 	?>
-</ul>
-</div>
 <span class="clear"><!-- --></span>
 <div class="sidebar-module " id="sidebar-auctions" style="">
 <div class="sidebar-content">
