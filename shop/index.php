@@ -1,4 +1,4 @@
-<?php require_once("configs.php"); ?>
+<?php require_once("../configs.php"); ?>
 <!DOCTYPE html> 
 <html lang="en-gb">
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -9,16 +9,16 @@
 <title><?php echo $website['title']; ?> - <?php echo $Services['Services']; ?></title>
 <meta content="false" http-equiv="imagetoolbar" />
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
-<link rel="shortcut icon" href="wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
-<link rel="stylesheet" href="wow/static/local-common/css/common.css?v15" />
-<link rel="stylesheet" href="wow/static/css/shop/shop-index.css?v34" />
-<link rel="stylesheet" href="wow/static/css/wiki/wiki.css?v34" />
+<link rel="shortcut icon" href="../wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
+<link rel="stylesheet" href="../wow/static/local-common/css/common.css?v15" />
+<link rel="stylesheet" href="../wow/static/css/shop/shop-index.css?v34" />
+<link rel="stylesheet" href="../wow/static/css/wiki/wiki.css?v34" />
 <link title="World of Warcraft - News" href="wow/en/feed/news" type="application/atom+xml" rel="alternate" />
-<link rel="stylesheet" href="wow/static/css/wow.css?v4" />
-<link rel="stylesheet" href="wow/static/css/services/services-index.css?v4" />
-<script src="wow/static/local-common/js/third-party/jquery-1.4.4.min.js"></script>
-<script src="wow/static/local-common/js/core.js?v15"></script>
-<script src="wow/static/local-common/js/tooltip.js?v15"></script>
+<link rel="stylesheet" href="../wow/static/css/wow.css?v4" />
+<link rel="stylesheet" href="../wow/static/css/services/services-index.css?v4" />
+<script src="../wow/static/local-common/js/third-party/jquery-1.4.4.min.js"></script>
+<script src="../wow/static/local-common/js/core.js?v15"></script>
+<script src="../wow/static/local-common/js/tooltip.js?v15"></script>
 <!--[if IE 6]> <script type="text/javascript">
 //<![CDATA[
 try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
@@ -28,7 +28,7 @@ try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
 <body class="en-gb services-home logged-in">
 
 <div id="wrapper">
-<?php $page_cat="shop"; include("header.php"); ?>
+<?php $page_cat="shop"; include("../header.php"); ?>
 <div id="content">
 <div class="content-top-serv">
 <div class="content-trail">
@@ -286,5 +286,5 @@ try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
 </div>
 </div>
 </div>
-<?php include("footer.php"); ?></body>
+<?php include("../footer.php"); ?></body>
 </html>
