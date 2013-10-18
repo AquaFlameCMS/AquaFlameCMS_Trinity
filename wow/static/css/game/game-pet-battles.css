@@ -1,0 +1,97 @@
+/*  Main Theme Background */
+.pet-battles #content .content-top { background: url(../../images/game/guide/pet-battles/bg-top.jpg) 0 0 no-repeat; }
+
+/* Header */
+.pet-battles #content-subheader p { font-size:16px; line-height:35px; font-style:normal; color:#b79855; width:420px; font-family:Arial, Helvetica, sans-serif; margin-top:30px; letter-spacing: normal; position:relative; z-index:2; }
+
+/*  Layout */
+.pet-battles a { background:transparent}
+.pet-battles #content .content-bot #content-subheader { margin-top:0; width: 961px; overflow: hidden; position: relative; min-height:576px}
+.pet-battles .youtube-player { margin:27px 20px 5px; position: relative; z-index: 1; }
+.pet-battles .video-caption { display:block; text-align:center; font-family:Arial, Helvetica, sans-serif; color:#806d45; font-size:14px; display:block; letter-spacing:normal; width: 392px; }
+.pet-battles #flash-container p { background: url("../../images/game/guide/pet-battles/bg-top-fallback.jpg") no-repeat scroll 0 0 transparent; height: 490px; left: 59px; position: absolute; text-indent: -999em; top: -46px; width: 540px; z-index: 1;}
+.pet-battles h2 .title { float:left; display:block;}
+.pet-battles h3.pet-battle-titles { font-weight:bold; font-size:22px; text-transform:uppercase; color:#EFE3D2; margin-bottom:30px; }
+.pet-battles .get-started h3.pet-battle-titles { height: 60px; line-height: 59px; margin-bottom: 0;}
+.pet-battles .way-to-play p,
+.pet-battles .team p { font: normal 14px Arial, Sans-serif; color:#e9bd7f; }
+.pet-battles #flash-container { left: 337px; position: absolute; top: -19px; }
+.pet-battles #lightbox-container em { background: none repeat scroll 0 0 #000000; bottom: -4px; display: block; font-size: 13px; padding: 5px 0; position: absolute; text-align: center; width: 100%; z-index: 10000; }
+.pet-battles .button1 span { background-image: url("../../images/game/guide/pet-battles/button-1.png"); }
+
+/* How-to */
+.pet-battles .how-to { background: url(../../images/game/guide/pet-battles/bg-get-started.jpg) 0 0 no-repeat; float: left; padding: 19px 32px 30px; }
+.pet-battles .how-to li { background: url(../../images/game/guide/pet-battles/bg-steps.png) 0 0 no-repeat; float: left; height: 400px; margin-right: 48px; width: 278px; position:relative; }
+.pet-battles .how-to li:hover { background-position: -305px 0;}
+.pet-battles .how-to li.step3 { margin-right:0;}
+.pet-battles .how-to li div { background-image: url(../../images/game/guide/pet-battles/sprite_steps.png); background-repeat:no-repeat; }
+.pet-battles .how-to li.step1 div { background-position: -261px 16px }
+.pet-battles .how-to li.step2 div { background-position: -535px 15px }
+.pet-battles .how-to li.step3 div { background-position: 24px 14px }
+.pet-battles .how-to li h2 { margin-bottom: 17px; padding-top: 169px; text-align: center; }
+.pet-battles .how-to li h2 span { background-image: url("../../images/game/guide/pet-battles/steps-titles/steps-titles.png"); background-position: center -29px; background-repeat: no-repeat; display: block; height: 36px; text-indent: -999em;}
+.pet-battles .how-to li.step2 h2 span { background-position: center -105px; }
+.pet-battles .how-to li.step3 h2 span  {background-position: center -185px; }
+.pet-battles .how-to li p { color: #B79855; font-size: 14px; padding: 20px 37px 0; }
+.pet-battles .how-to a.scroll { height: 393px; left: 0; position: absolute; top: 0; width: 273px; background: transparent;}
+
+/* Assemble your team */
+.pet-battles .team { padding-left:25px; padding-top:30px; min-height:394px; background:#1d1109 url(../../images/game/guide/pet-battles/bg-assemble.jpg) 100% 0 no-repeat; float:left; width:969px; position:relative;}
+.pet-battles .team h3 { margin-bottom:20px; }
+.pet-battles .team div { float:right; width:485px; }
+.pet-battles .team ul.team-points { margin:10px 20px; width: 435px; min-height:167px;}
+.pet-battles .team .team-points li { padding: 10px 15px; font-size:14px; color:#B79855; background: url("../../images/icons/bullet2.gif") no-repeat 0 17px;}
+.pet-battles .team p, .pet-battles .team .team-points li strong { color:#B79855; }
+.pet-battles .team .links-gallery { position:relative; float:left; width: 570px; margin-left: -125px; padding-right:40px; background: url(../../images/game/guide/pet-battles/bg-button-assemble.png) 100% 0 no-repeat; min-height:122px; margin-top:15px; margin-bottom: 0;}
+.pet-battles .team .links-gallery a { display: inline-block; margin-left: 230px; margin-top: 35px;}
+.pet-battles .team .links-gallery a span { font-size: 14px; font-weight: bold; }
+
+/* Expand - Be The Best */
+.pet-battles .way-to-play { float:left;}
+.pet-battles .way-to-play h3 { margin-bottom:5px; padding-left:65px;padding-top: 27px; padding-bottom: 22px;}
+.pet-battles .way-to-play ul.way-to-play-container { background: url(../../images/game/guide/pet-battles/bg-essemble-bottom.jpg) 0 100% no-repeat; float:left; padding-bottom: 12px; }
+.pet-battles .way-to-play li.diff-way { float:left; padding-top:410px; padding-bottom:30px; }
+.pet-battles .way-to-play li div { line-height:25px; padding-left:18px; background: url(../../images/game/guide/pet-battles/bg-pvpve.jpg) 0 0 no-repeat; padding-right: 9px; }
+.pet-battles .way-to-play li.story1 { background: url(../../images/game/guide/pet-battles/expand-your-collection.jpg) 0 0 no-repeat; width:498px; }
+.pet-battles .way-to-play li.story1 div { margin-left:39px; height: 190px;}
+.pet-battles .way-to-play li.story1 h3 { background:url(../../images/game/guide/pet-battles/bg-title-content.png) 0 -54px no-repeat;}
+.pet-battles .way-to-play li.story2 { background: url(../../images/game/guide/pet-battles/be-the-best.jpg) 100% 0 no-repeat; width:496px; }
+.pet-battles .way-to-play li.story2 h3 { background:url(../../images/game/guide/pet-battles/bg-title-content.png) 0 19px no-repeat; }
+.pet-battles .way-to-play li.story2 div { background: url(../../images/game/guide/pet-battles/bg-pvpve-s2.jpg) 0 0 no-repeat; margin-left: 2px; min-height: 190px; }
+.pet-battles .way-to-play div ul li { background: url("../../images/icons/bullet2.gif") no-repeat 0 10px; color: #b79855; font-size: 14px; padding: 4px 41px 4px 18px; line-height:20px; }
+.pet-battles .way-to-play .item-link { font-weight:normal; }
+.pet-battles .way-to-play .has-tip { border-bottom: 1px dotted #565656; cursor: help; color:#F5EBD1; }
+
+/* Perks and benefits */
+.pet-battles .perks-benefits { padding-left:30px; padding-bottom:40px; background:#1a0f09 url(../../images/game/guide/pet-battles/bg-perks.jpg) 0 0 no-repeat; float:left;}
+.pet-battles .perks-benefits h3 { padding-top:40px;}
+.pet-battles .perks-benefits ul { margin-left:13px; float:left;}
+.pet-battles .perks-benefits li { float:left; width:455px; background:url(../../images/game/guide/pet-battles/perksbox-top.png) 0 0 no-repeat; }
+.pet-battles .perks-benefits li.perks5 { clear: both; }
+.pet-battles .perks-benefits li div { float:left; background:url(../../images/game/guide/pet-battles/perksbox-bottom.jpg) 0 100% no-repeat;padding: 20px 25px 20px 10px; }
+.pet-battles .perks-benefits h4 { font-size:15px; color:#EFE3D2; font-weight:bold; text-transform:uppercase; }
+.pet-battles .perks-benefits p { font-size:14px; margin-left:106px; min-height:70px; color:#B79855; }
+.pet-battles .perks-benefits .icon-frame-gloss { margin: 0 15px; background-image: url("../../images/game/guide/pet-battles/traits.jpg"); min-height:82px; }
+.pet-battles .perks-benefits .trait-1 { background-position: 0 0; }
+.pet-battles .perks-benefits .trait-2 { background-position: 0 -82px; }
+.pet-battles .perks-benefits .trait-3 { background-position: -78px -82px; }
+.pet-battles .perks-benefits .trait-4 { background-position: -156px 0; }
+.pet-battles .perks-benefits .trait-5 { background-position: -78px 0;}
+.pet-battles .perks-benefits .item-link { font-weight:normal; }
+.pet-battles .perks-benefits .has-tip { border-bottom: 1px dotted #565656; cursor: help; color:#F5EBD1; }
+
+/* Get starteds */
+.pet-battles .get-started { background:#22140b url(../../images/game/guide/pet-battles/bg-learn.jpg) 0 0 no-repeat; padding-left:30px; padding-bottom:15px; float:left; min-height: 320px;}
+.pet-battles .get-started h3 { margin-bottom: 20px; padding-left: 64px; margin-top: 30px; background:url(../../images/game/guide/pet-battles/bg-title-content.png) 1px -142px no-repeat } 
+.pet-battles .get-started p { width:437px; font-size:14px; float:left; color:#b79855; padding:20px 10px 0 10px}
+.pet-battles .get-started p strong { color:#FEF092; }
+.pet-battles #progression { float:right; width:507px; height:257px; margin-top:-89px}
+.pet-battles #progression .thumbs { height:auto; left:40px; top:53px}
+.pet-battles .thumbs { position: relative; top: 3px; width: 420px; height:314px; }
+.pet-battles .thumbs a { display:none; text-indent: -999em;}
+.pet-battles .thumbs a#level-1 { display:block; }
+.pet-battles #progression .thumbs .level { background: url("../../images/game/guide/pet-battles/slide-thumb.jpg") -60px -10px no-repeat; height: 240px; width: 395px; }
+
+/*Overrides*/
+.wiki .info { padding: 35px 25px 0; }
+.how-to li { padding-top: 0; }

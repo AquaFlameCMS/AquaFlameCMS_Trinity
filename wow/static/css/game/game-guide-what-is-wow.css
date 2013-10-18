@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-.game-guide-what-is-wow #content .content-top { background: url("../../images/game/guide/what-is-wow/bg-p-01.jpg") 50% 0 no-repeat; }
+.game-guide-what-is-wow #content .content-top { background: url("../../images/game/guide/what-is-wow/bg-p-01.jpg") 0 0 no-repeat; }
 
 .guide-intro-part {min-height:544px;}
 .guide-intro-part p {width:421px;}
@@ -45,3 +45,5 @@
 .part4-desc03 {width:360px; position:absolute; top:968px; left:80px;}
 
 .part5-desc01 {width:421px;}
+
+.pt-br .part4-div .guide-content-title { margin-bottom: 20px; }

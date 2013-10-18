@@ -79,7 +79,7 @@ echo '>'
 			<h3 style="padding-left:12px;" ><?php echo $Americas['Americas']; ?></h3>
 			<ul>
 			<li>
-			<a href="?Local=en-gb" tabindex="100" onclick="Locale.trackEvent('Change Language', 'en-gb to en-us'); return true;">
+			<a href="?Local=en-us" tabindex="100" onclick="Locale.trackEvent('Change Language', 'en-gb to en-us'); return true;">
 			<?php echo $English['English']; ?>
 			</a>
 			</li>
@@ -99,7 +99,7 @@ echo '>'
 			</a>
 			</li>
 			<li>
-			<a href="?Local=en-us" tabindex="100" onclick="Locale.trackEvent('Change Language', 'en-gb to en-gb'); return true;">
+			<a href="?Local=en-gb" tabindex="100" onclick="Locale.trackEvent('Change Language', 'en-gb to en-gb'); return true;">
 			<?php echo $English3['English3']; ?>
 			</a>
 			</li>

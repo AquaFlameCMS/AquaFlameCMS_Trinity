@@ -1,17 +1,16 @@
 @charset "utf-8";
 
-#content .content-top { background:url("../../images/game/comparison/content-top.jpg") no-repeat scroll 50% 0 transparent; }
+#content .content-top { background:url("../../images/game/comparison/content-top.jpg") no-repeat scroll 0 0 transparent; }
 
-#filter-table { display: none; margin-top: 15px; clear:both }
-#filter-table input[type=text], #filter-table select { width: 150px; }
-#filter-table input[type=text] { color:#666; font-style:italic; }
-#filter-table input.active { color: #000; font-style:normal; }
-#filter-table #filter-status { width: auto }
+#realm-filters { margin-top: 15px; clear:both }
+#realm-filters input[type=text],
+#realm-filters select { width: 150px; }
+#realm-filters #filter-status { width: auto; }
+#realm-filters .filter { margin-bottom: 0; }
 
 #realm-status { padding: 20px; }
 #realm-status .tab-menu { float: left; }
 #realm-status .filter-toggle { float: right; }
-#realm-filters .filter { margin-bottom: 0; }
 
 .table .status { width: 50px; text-align: center; }
 .table .name { width: auto; font-weight:bold; }
@@ -35,5 +34,4 @@ td.population span { color:#ebdba2; }
 .population .new,
 .population .newplayers { color:#09C; }
 
-.no-results { display:none; text-align:center; font-style:italic; font-size:120%; padding:10px 0; }
-.rowFiltered { display:none; }
+.no-results { font-style: italic; font-size: 120%; text-align: center; padding: 15px 0; color: #C09A67 }

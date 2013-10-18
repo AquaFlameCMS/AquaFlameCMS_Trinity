@@ -22,10 +22,13 @@
 .guide-top-nav a.btn-playing-together.selected {background-position:-575px -291px;}
 .guide-top-nav a.btn-late-game.selected {background-position:-763px -291px;}
 
+/*not used yet*/
+/*.headerplate-right-corner { height: 10px; width: 994px; background: url("../../images/layout/body-bg-baked-topright.jpg") no-repeat 0 0; position:absolute; top: -58px; left: 0; }*/
+
 .guide-intro-part {width:100%; padding-bottom:74px;}
 .guide-section-title a {border-right:1px solid #3f301b; display:inline-block; font-size:14px; line-height:15px; padding-right:9px; margin-left:50px;}
 .guide-section-title em {font-size:14px; line-height:15px; color:#e9bd7f; display:inline-block; margin-left:8px; font-style:normal;}
-.guide-section-title h4 {color:#efe3d2; font:normal 52px/61px Palatino Linotype, Sans-serif; letter-spacing:-2px; margin-left:50px;}
+.guide-section-title h4 {color:#efe3d2; font:normal 52px/61px Palatino Linotype, Sans-serif; letter-spacing:-2px; margin-left:50px; margin-top:3px; text-shadow: 0 0 5px #241209; color: #EFE3D2; }
 
 .guide-intro-text {margin-left:50px; width:430px; color:#b79855; font-size:16px; line-height:30px;}
 .guide-intro-text p strong {display:block; color:#efe3d2; text-transform:uppercase; font-weight:normal;}
@@ -35,7 +38,7 @@
 .guide-sub-desc p {margin:0; padding-bottom:24px;}
 .guide-detail-desc {color:#967648; font-size:12px; line-height:18px; margin:0 0 13px 0;}
 
-.guide-content-title {color:#efe3d2; font:normal 28px/29px Palatino Linotype, Sans-serif; margin:0 0 48px 50px; display:block;}
+.guide-content-title {color:#efe3d2; font:normal 28px/29px Palatino Linotype, Sans-serif; margin:0 0 48px 0; padding-left:50px; display:block;}
 .guide-content-subtitle {color:#f3ecc7; font:normal 16px Palatino Linotype, Sans-serif; margin-left:50px; letter-spacing:1.3px; text-transform:uppercase;}
 
 /* box sections */
@@ -48,3 +51,5 @@
 .box .media-frame { position: absolute; top: 0; }
 .box-left .media-frame { right: 50px; }
 .box-right .media-frame { left: 50px; }
+
+.ie67 .zh-tw .guide-content-title { zoom: 1; }

@@ -2,7 +2,9 @@
 
 #content-subheader {margin-top:46px }
 #content-subheader a {font-size:14px }
-#content-subheader h4 {font:normal 60px Palatino Linotype, Sans-serif; color:#fff; letter-spacing:-1.5px }
+#content-subheader h4 { color: #efe3d2; font: 60px "Palatino Linotype", Georgia, Times, sans-serif; letter-spacing: -1.5px; text-shadow: #241209 0 0 5px; }
+
+.circle-frame { border:none; -moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0; }
 
 .horde {color:#ee1919 }
 .alliance {color:#247faa }
@@ -41,13 +43,13 @@
 .available-info-box .list-title { float:left; display:block; height:36px; line-height:36px; padding-left:10px; }
 
 .faction-req { margin-left: 53px }
-.faction-req .group { font-size: 12px; line-height: 18px; display: inline-block; height: 20px; padding-left: 27px }
-.faction-req .horde { background: url(../../images/icons/faction/1.gif) no-repeat 0 0 }
-.faction-req .alliance { background: url(../../images/icons/faction/0.gif) no-repeat 0 0 }
+.faction-req .group { font-size: 12px; line-height: 18px; display: inline-block; height: 20px; padding-right: 20px }
+.faction-req .horde { background: url(../../images/icons/horde.png) no-repeat right 2px }
+.faction-req .alliance { background: url(../../images/icons/alliance.png) no-repeat right 2px }
 .faction-req .req { font-style: italic; font-size: 11px; margin-left: 10px; line-height:18px; vertical-align:top }
 .faction-req .req.bc { color: #5b9b17 }
 .faction-req .req.wow { color: #f7ad01 }
-.faction-req .req.wrath { color: #256782 }
+.faction-req .req.wrath { color: #2588c0 }
 .faction-req .req.cataclysm { color: #DD6800 }
 
 /* bottom page nav */
