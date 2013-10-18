@@ -210,7 +210,7 @@ mysql_close($link);
 	<span class="form-required">*</span>
 	</label>			
     <input type="text" id="email" name="email" value="" class="input border-5 glow-shadow-2" maxlength="255" tabindex="2"  />
-	<?php echo $friend['Function Unavailable']; ?>
+	<?php echo $friend['41']; ?>
 	</div>
 	<div class="form-row required">
 	<label for="email" class="label-full ">
