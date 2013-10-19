@@ -184,7 +184,17 @@ if (isset($_POST['send'])){
 }
 else{
 ?>
-              <h3 class="headline"><?php echo $Media['SendMedia']; ?></h3>
+	<div id="content">
+     <!--[if lte IE 7]>  <style type="text/css">
+    .raf-step3-arrow { position:relative; width:176px; height:61px; background:url('wow/static/images/services/wow/raf/step_3_arrow_b.png') 0 0 no-repeat!important; top:-540px; left:105px; }
+    .raf-step5-arrow { position:relative; width:155px; height:57px; background:url('wow/static/images/services/wow/raf/step_5_arrow_b.png') 0 0 no-repeat!important; top:-163px; left:150px; }
+     </style>  <![endif]-->
+	<div class="dashboard service">
+		<div class="primary">
+			<div class="header">
+				<h3 class="headline"><?php echo $Media['SendMedia']; ?></h3>
+				<a href=""><img src="../wow/static/local-common/images/game-icons/wow.png" alt="World of Warcraft" width="48" height="48" /></a>
+			</div>
               <p>&nbsp;</p>
               <div id="page-content">
                 <div class="filter">
@@ -227,8 +237,8 @@ else{
   </tr>
   <!-- Here will be have to add a catpcha recognition to prevent spam -->
 	<tr>
-    <td><button type="submit" class="ui-button button1 "  name="send"><span><span><?php echo $Media['SendVideo2']; ?></span></span></button></td>
-    <td><div align="right"><button class="ui-cancel "  type="reset"><span><?php echo $Media['DelFields']; ?></span></button></div></td>
+    <td><button type="submit" class="ui-button button1"  name="send"><span><span><?php echo $Media['SendVideo2']; ?></span></span></button></td>
+    <td><div align="right"><button class="ui-cancel"  type="reset"><span><?php echo $Media['DelFields']; ?></span></button></div></td>
   </tr>
 </table>
 </form>
@@ -239,6 +249,8 @@ else{
 ?>
 </div>
 
+</div>
+</div>
 </div>
 </div>
 </div>
