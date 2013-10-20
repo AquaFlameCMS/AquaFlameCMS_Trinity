@@ -132,17 +132,17 @@ Core.baseUrl = '/login/en/';
     echo "<h3><font color='green'>".$Log['Log10']."</font></h3>";
     echo '<meta http-equiv="refresh" content="2;url=account_man.php"';
   } ?>
-  <ul id="help-links">
-      <li class="icon-pass">
-        <a href="#"><?php echo $Log['Log11']; ?></a>
-      </li>
-        <li class="icon-signup">
-          <?php echo $Log['Log12']; ?><a href="register.php"><?php echo $Log['Log13']; ?></a>!
-        </li>
-      <li class="icon-secure">
-        <?php echo $Log['Log14']; ?><a href="#"><?php echo $Log['Log15']; ?></a>!
-      </li>
-  </ul>
+	  <ul id="help-links">
+		  <li class="icon-pass">
+			<a href="<?php echo $website['root']; ?>account/recover-pass/"><?php echo $Log['Log11']; ?></a>
+		  </li>
+			<li class="icon-signup">
+			  <?php echo $Log['Log12']; ?><a href="register.php"><?php echo $Log['Log13']; ?></a>!
+			</li>
+		  <li class="icon-secure">
+			<?php echo $Log['Log14']; ?><a href="#"><?php echo $Log['Log15']; ?></a>
+		  </li>
+	  </ul>
   <br /><br />
     <script type="text/javascript">
       $(function() {
@@ -180,33 +180,5 @@ $('#accountName').focus();
 </script>
 </div>
 <?php include("functions/footer_man.php"); ?>
-<script type="text/javascript" src="https://ssl.google-analytics.com/ga.js"></script>
-<script type="text/javascript">
-try {
-var pageTracker = _gat._getTracker('UA-544112-16');
-function _gaInit() {
-pageTracker._setDomainName(".battle.net");
-pageTracker._initData();
-pageTracker._trackPageview();
-}
-function _htmlDomInit(doc) {
-_htmlDom = doc;
-_gaInit();
-}
-/* Partial workaround for Firefox bug 230214 */
-if(typeof(document.cookie) == 'undefined') {
-var obj = document.createElementNS('http://www.w3.org/1999/xhtml', 'object');
-obj.setAttribute('style', 'display:none');
-obj.width = 0;
-obj.height = 0;
-obj.type = 'text/html';
-obj.data = 'data:text/html;charset=utf-8,%3Cscript%3Eparent._htmlDomInit%28document%29%3C/script%3E';
-document.getElementsByTagName('body')[0].appendChild(obj);
-document.__defineGetter__('cookie', function() { return _htmlDom.cookie; });
-document.__defineSetter__('cookie', function(c) { _htmlDom.cookie = c; });
-} else
-_gaInit();
-} catch(err) {}
-</script>
 </body>
 </html>
