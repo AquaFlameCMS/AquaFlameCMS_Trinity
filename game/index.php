@@ -348,7 +348,7 @@ try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
 										<?php echo $game['57']; ?></a>
 										</li>
 										<li>
-										<a href="<?php echo $website['root']; ?>status.php">
+										<a href="<?php echo $website['root']; ?>game/status">
 										<span class="icon-frame frame-14 ">
 										<img src="http://media.blizzard.com/wow/assets/misc/18/realm_status.gif" alt="" width="14" height="14"/>
 										</span>

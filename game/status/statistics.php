@@ -1,5 +1,5 @@
 <?php
-require_once("configs.php");
+require_once("../../configs.php");
 if(isset($_GET['realm'])) $realmid = intval($_GET['realm']); else $realmid = 1;
 ?>
 
@@ -12,16 +12,16 @@ if(isset($_GET['realm'])) $realmid = intval($_GET['realm']); else $realmid = 1;
 <head>
 <title><?php echo $website['title']; ?> - <?php echo $status['status']; ?></title>
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
-<link rel="shortcut icon" href="wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
-<link rel="stylesheet" href="wow/static/local-common/css/common.css?v17" />
-<link rel="stylesheet" href="wow/static/css/wow.css?v7" />
-<link rel="stylesheet" href="wow/static/css/status/stats.css?v7" />
-<script src="wow/static/local-common/js/third-party/jquery-1.4.4-p1.min.js"></script>
-<script src="wow/static/local-common/js/core.js?v17"></script>
-<script src="wow/static/local-common/js/tooltip.js?v17"></script>
-<script src="wow/static/local-common/js/stats_tooltip.js?v1"></script>
-<script src="wow/static/local-common/js/main.js"></script>
-<script src="wow/static/local-common/js/utils.js"></script>
+<link rel="shortcut icon" href="../../wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
+<link rel="stylesheet" href="../../wow/static/local-common/css/common.css?v17" />
+<link rel="stylesheet" href="../../wow/static/css/wow.css?v7" />
+<link rel="stylesheet" href="../../wow/static/css/status/stats.css?v7" />
+<script src="../../wow/static/local-common/js/third-party/jquery-1.4.4-p1.min.js"></script>
+<script src="../../wow/static/local-common/js/core.js?v17"></script>
+<script src="../../wow/static/local-common/js/tooltip.js?v17"></script>
+<script src="../../wow/static/local-common/js/stats_tooltip.js?v1"></script>
+<script src="../../wow/static/local-common/js/main.js"></script>
+<script src="../../wow/static/local-common/js/utils.js"></script>
 <!--[if IE 6]> <script type="text/javascript">
 //<![CDATA[
 try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
@@ -215,7 +215,7 @@ _gaq.push(['_trackPageview']);
 <div id="wrapper">
 <?php
 $page_cat="game";
-include("header.php");
+include("../../header.php");
 $realm_extra = mysql_fetch_assoc(mysql_query("SELECT * FROM realms WHERE id = '".$realmid."'"));
 if(!$realm_extra) $realm_extra = mysql_fetch_assoc(mysql_query("SELECT * FROM realms WHERE id = '1'"));
 $realm = mysql_fetch_assoc(mysql_query("SELECT * FROM $server_adb.realmlist WHERE id = '".$realm_extra['realmid']."'"));
@@ -346,7 +346,7 @@ $realm_count = mysql_num_rows($realms);
 					<td align=\"center\">
 					<div class=\"content-header\">
 				<h3 class=\"header\"><font color=\"2062A3\">".$Status['Ali']."</font></h3></div>
-						<img src=\"wow/static/images/character/summary/sidebar-bg-alliance.png\" onmouseover=\"Tip('".@$str[$lang]['40'][0]."', WIDTH, 150, OFFSETX, 10, OFFSETY, -40, STICKY, false);\"><br>
+						<img src=\"../../wow/static/images/character/summary/sidebar-bg-alliance.png\" onmouseover=\"Tip('".@$str[$lang]['40'][0]."', WIDTH, 150, OFFSETX, 10, OFFSETY, -40, STICKY, false);\"><br>
 						<br>
 						<font color=\"2062A3\">".$Status['Ali']."</font>".$Status['CharCreat']."$statistics_chars_count_a<br>
 						<font color=\"2062A3\">".$Status['Ali']."</font>".$Status['CharOn']." $online_chars_count_a
@@ -354,7 +354,7 @@ $realm_count = mysql_num_rows($realms);
 					<td align=\"center\">
 					<div class=\"content-header\">
 				<h3 class=\"header\"><font color=\"A22A1A\">".$Status['Horde']."</font></h3></div>
-						<img src=\"wow/static/images/character/summary/sidebar-bg-horde.png\" onmouseover=\"Tip('".@$str[$lang]['40'][1]."', WIDTH, 150, OFFSETX, 10, OFFSETY, -40, STICKY, false);\"><br>
+						<img src=\"../../wow/static/images/character/summary/sidebar-bg-horde.png\" onmouseover=\"Tip('".@$str[$lang]['40'][1]."', WIDTH, 150, OFFSETX, 10, OFFSETY, -40, STICKY, false);\"><br>
 						<br>
 						<font color=\"A22A1A\">".$Status['Horde']."</font>".$Status['CharCreat']."$statistics_chars_count_h<br>
 						<font color=\"A22A1A\">".$Status['Horde']."</font>".$Status['CharOn']."$online_chars_count_h
@@ -370,36 +370,36 @@ $realm_count = mysql_num_rows($realms);
 					<td align=\"center\">
 						<table align=\"center\" width=\"100\" border=\"0\" class=\"list_table\">
 							<tr>
-								<td width=\"100\" align=\"center\"><span class=/'icon-frame frame-14/' data-tooltip='".$Status['Warrior']."'><img src=\"wow/static/images/icons/big/1.gif\" height=\"32\" width=\"32\" ><br>".$statistics_class_count[1][0]."</td></span>
-								<td width=\"100\" align=\"center\"><span class=/'icon-frame frame-14/' data-tooltip='".$Status['Paladin']."'><img src=\"wow/static/images/icons/big/2.gif\" height=\"32\" width=\"32\" ><br>".$statistics_class_count[2][0]."</td></span>
-								<td width=\"100\" align=\"center\"><span class=/'icon-frame frame-14/' data-tooltip='".$Status['Hunter']."'><img src=\"wow/static/images/icons/big/3.gif\" height=\"32\" width=\"32\" ><br>".$statistics_class_count[3][0]."</td></span>
-								<td width=\"100\" align=\"center\"><span class=/'icon-frame frame-14/' data-tooltip='".$Status['Rogue']."'><img src=\"wow/static/images/icons/big/4.gif\" height=\"32\" width=\"32\" ><br>".$statistics_class_count[4][0]."</td></span>
-								<td width=\"100\" align=\"center\"><span class=/'icon-frame frame-14/' data-tooltip='".$Status['Priest']."'><img src=\"wow/static/images/icons/big/5.gif\" height=\"32\" width=\"32\" ><br>".$statistics_class_count[5][0]."</td></span>
+								<td width=\"100\" align=\"center\"><span class=/'icon-frame frame-14/' data-tooltip='".$Status['Warrior']."'><img src=\"../../wow/static/images/icons/big/1.gif\" height=\"32\" width=\"32\" ><br>".$statistics_class_count[1][0]."</td></span>
+								<td width=\"100\" align=\"center\"><span class=/'icon-frame frame-14/' data-tooltip='".$Status['Paladin']."'><img src=\"../../wow/static/images/icons/big/2.gif\" height=\"32\" width=\"32\" ><br>".$statistics_class_count[2][0]."</td></span>
+								<td width=\"100\" align=\"center\"><span class=/'icon-frame frame-14/' data-tooltip='".$Status['Hunter']."'><img src=\"../../wow/static/images/icons/big/3.gif\" height=\"32\" width=\"32\" ><br>".$statistics_class_count[3][0]."</td></span>
+								<td width=\"100\" align=\"center\"><span class=/'icon-frame frame-14/' data-tooltip='".$Status['Rogue']."'><img src=\"../../wow/static/images/icons/big/4.gif\" height=\"32\" width=\"32\" ><br>".$statistics_class_count[4][0]."</td></span>
+								<td width=\"100\" align=\"center\"><span class=/'icon-frame frame-14/' data-tooltip='".$Status['Priest']."'><img src=\"../../wow/static/images/icons/big/5.gif\" height=\"32\" width=\"32\" ><br>".$statistics_class_count[5][0]."</td></span>
 							</tr>
 							<tr>
-								<td width=\"100\" align=\"center\"><span class=/'icon-frame frame-14/' data-tooltip='".$Status['DeathKnight']."'><img src=\"wow/static/images/icons/big/6.gif\" height=\"32\" width=\"32\" ><br>".$statistics_class_count[6][0]."</td></span>
-								<td width=\"100\" align=\"center\"><span class=/'icon-frame frame-14/' data-tooltip='".$Status['Shaman']."'><img src=\"wow/static/images/icons/big/7.gif\" height=\"32\" width=\"32\" ><br>".$statistics_class_count[7][0]."</td></span>
-								<td width=\"100\" align=\"center\"><span class=/'icon-frame frame-14/' data-tooltip='".$Status['Mage']."'><img src=\"wow/static/images/icons/big/8.gif\" height=\"32\" width=\"32\" ><br>".$statistics_class_count[8][0]."</td></span>
-								<td width=\"100\" align=\"center\"><span class=/'icon-frame frame-14/' data-tooltip='".$Status['Warlock']."'><img src=\"wow/static/images/icons/big/9.gif\" height=\"32\" width=\"32\" ><br>".$statistics_class_count[9][0]."</td></span>
-								<td width=\"100\" align=\"center\"><span class=/'icon-frame frame-14/' data-tooltip='".$Status['Druid']."'><img src=\"wow/static/images/icons/big/11.gif\" height=\"32\" width=\"32\" ><br>".$statistics_class_count[11][0]."</td></span>
+								<td width=\"100\" align=\"center\"><span class=/'icon-frame frame-14/' data-tooltip='".$Status['DeathKnight']."'><img src=\"../../wow/static/images/icons/big/6.gif\" height=\"32\" width=\"32\" ><br>".$statistics_class_count[6][0]."</td></span>
+								<td width=\"100\" align=\"center\"><span class=/'icon-frame frame-14/' data-tooltip='".$Status['Shaman']."'><img src=\"../../wow/static/images/icons/big/7.gif\" height=\"32\" width=\"32\" ><br>".$statistics_class_count[7][0]."</td></span>
+								<td width=\"100\" align=\"center\"><span class=/'icon-frame frame-14/' data-tooltip='".$Status['Mage']."'><img src=\"../../wow/static/images/icons/big/8.gif\" height=\"32\" width=\"32\" ><br>".$statistics_class_count[8][0]."</td></span>
+								<td width=\"100\" align=\"center\"><span class=/'icon-frame frame-14/' data-tooltip='".$Status['Warlock']."'><img src=\"../../wow/static/images/icons/big/9.gif\" height=\"32\" width=\"32\" ><br>".$statistics_class_count[9][0]."</td></span>
+								<td width=\"100\" align=\"center\"><span class=/'icon-frame frame-14/' data-tooltip='".$Status['Druid']."'><img src=\"../../wow/static/images/icons/big/11.gif\" height=\"32\" width=\"32\" ><br>".$statistics_class_count[11][0]."</td></span>
 							</tr>
 						</table>
 					</td>
 					<td align=\"center\">
 						<table align=\"center\" width=\"100\" border=\"0\" class=\"list_table\">
 							<tr>
-								<td width=\"100\" align=\"center\"><span class=/'icon-frame frame-14/' data-tooltip='".$Status['Warrior']."'><img src=\"wow/static/images/icons/big/1.gif\" height=\"32\" width=\"32\" ><br>".$statistics_class_count[1][1]."</td></span>
-								<td width=\"100\" align=\"center\"><span class=/'icon-frame frame-14/' data-tooltip='".$Status['Paladin']."'><img src=\"wow/static/images/icons/big/2.gif\" height=\"32\" width=\"32\" ><br>".$statistics_class_count[2][1]."</td></span>
-								<td width=\"100\" align=\"center\"><span class=/'icon-frame frame-14/' data-tooltip='".$Status['Hunter']."'><img src=\"wow/static/images/icons/big/3.gif\" height=\"32\" width=\"32\" ><br>".$statistics_class_count[3][1]."</td></span>
-								<td width=\"100\" align=\"center\"><span class=/'icon-frame frame-14/' data-tooltip='".$Status['Rogue']."'><img src=\"wow/static/images/icons/big/4.gif\" height=\"32\" width=\"32\" ><br>".$statistics_class_count[4][1]."</td></span>
-								<td width=\"100\" align=\"center\"><span class=/'icon-frame frame-14/' data-tooltip='".$Status['Priest']."'><img src=\"wow/static/images/icons/big/5.gif\" height=\"32\" width=\"32\" ><br>".$statistics_class_count[5][1]."</td></span>
+								<td width=\"100\" align=\"center\"><span class=/'icon-frame frame-14/' data-tooltip='".$Status['Warrior']."'><img src=\"../../wow/static/images/icons/big/1.gif\" height=\"32\" width=\"32\" ><br>".$statistics_class_count[1][1]."</td></span>
+								<td width=\"100\" align=\"center\"><span class=/'icon-frame frame-14/' data-tooltip='".$Status['Paladin']."'><img src=\"../../wow/static/images/icons/big/2.gif\" height=\"32\" width=\"32\" ><br>".$statistics_class_count[2][1]."</td></span>
+								<td width=\"100\" align=\"center\"><span class=/'icon-frame frame-14/' data-tooltip='".$Status['Hunter']."'><img src=\"../../wow/static/images/icons/big/3.gif\" height=\"32\" width=\"32\" ><br>".$statistics_class_count[3][1]."</td></span>
+								<td width=\"100\" align=\"center\"><span class=/'icon-frame frame-14/' data-tooltip='".$Status['Rogue']."'><img src=\"../../wow/static/images/icons/big/4.gif\" height=\"32\" width=\"32\" ><br>".$statistics_class_count[4][1]."</td></span>
+								<td width=\"100\" align=\"center\"><span class=/'icon-frame frame-14/' data-tooltip='".$Status['Priest']."'><img src=\"../../wow/static/images/icons/big/5.gif\" height=\"32\" width=\"32\" ><br>".$statistics_class_count[5][1]."</td></span>
 							</tr>
 							<tr>
-								<td width=\"100\" align=\"center\"><span class=/'icon-frame frame-14/' data-tooltip='".$Status['DeathKnight']."'><img src=\"wow/static/images/icons/big/6.gif\" height=\"32\" width=\"32\" ><br>".$statistics_class_count[6][1]."</td></span>
-								<td width=\"100\" align=\"center\"><span class=/'icon-frame frame-14/' data-tooltip='".$Status['Shaman']."'><img src=\"wow/static/images/icons/big/7.gif\" height=\"32\" width=\"32\" ><br>".$statistics_class_count[7][1]."</td></span>
-								<td width=\"100\" align=\"center\"><span class=/'icon-frame frame-14/' data-tooltip='".$Status['Mage']."'><img src=\"wow/static/images/icons/big/8.gif\" height=\"32\" width=\"32\" ><br>".$statistics_class_count[8][1]."</td></span>
-								<td width=\"100\" align=\"center\"><span class=/'icon-frame frame-14/' data-tooltip='".$Status['Warlock']."'><img src=\"wow/static/images/icons/big/9.gif\" height=\"32\" width=\"32\" ><br>".$statistics_class_count[9][1]."</td></span>
-								<td width=\"100\" align=\"center\"><span class=/'icon-frame frame-14/' data-tooltip='".$Status['Druid']."'><img src=\"wow/static/images/icons/big/11.gif\" height=\"32\" width=\"32\" ><br>".$statistics_class_count[11][1]."</td></span>
+								<td width=\"100\" align=\"center\"><span class=/'icon-frame frame-14/' data-tooltip='".$Status['DeathKnight']."'><img src=\"../../wow/static/images/icons/big/6.gif\" height=\"32\" width=\"32\" ><br>".$statistics_class_count[6][1]."</td></span>
+								<td width=\"100\" align=\"center\"><span class=/'icon-frame frame-14/' data-tooltip='".$Status['Shaman']."'><img src=\"../../wow/static/images/icons/big/7.gif\" height=\"32\" width=\"32\" ><br>".$statistics_class_count[7][1]."</td></span>
+								<td width=\"100\" align=\"center\"><span class=/'icon-frame frame-14/' data-tooltip='".$Status['Mage']."'><img src=\"../../wow/static/images/icons/big/8.gif\" height=\"32\" width=\"32\" ><br>".$statistics_class_count[8][1]."</td></span>
+								<td width=\"100\" align=\"center\"><span class=/'icon-frame frame-14/' data-tooltip='".$Status['Warlock']."'><img src=\"../../wow/static/images/icons/big/9.gif\" height=\"32\" width=\"32\" ><br>".$statistics_class_count[9][1]."</td></span>
+								<td width=\"100\" align=\"center\"><span class=/'icon-frame frame-14/' data-tooltip='".$Status['Druid']."'><img src=\"../../wow/static/images/icons/big/11.gif\" height=\"32\" width=\"32\" ><br>".$statistics_class_count[11][1]."</td></span>
 							</tr>
 						</table>
 					</td>
@@ -414,13 +414,13 @@ $realm_count = mysql_num_rows($realms);
 					<td align=\"center\">
 						<table align=\"center\" width=\"100\" border=\"0\" class=\"list_table\">
 							<tr>
-								<td width=\"100\" align=\"center\"><span class=/'icon-frame frame-14/' data-tooltip='".$Status['Human']."'><img src=\"wow/static/images/icons/big/1-0.gif\" height=\"32\" width=\"32\" ><br>".$statistics_race_count[1]."</td></span>
-								<td width=\"100\" align=\"center\"><span class=/'icon-frame frame-14/' data-tooltip='".$Status['Dwarf']."'><img src=\"wow/static/images/icons/big/3-0.gif\" height=\"32\" width=\"32\" ><br>".$statistics_race_count[3]."</td></span>
-								<td width=\"100\" align=\"center\"><span class=/'icon-frame frame-14/' data-tooltip='".$Status['NightElf']."'><img src=\"wow/static/images/icons/big/4-0.gif\" height=\"32\" width=\"32\" ><br>".$statistics_race_count[4]."</td></span>
-								<td width=\"100\" align=\"center\"><span class=/'icon-frame frame-14/' data-tooltip='".$Status['Gnome']."'><img src=\"wow/static/images/icons/big/7-0.gif\" height=\"32\" width=\"32\" ><br>".$statistics_race_count[7]."</td></span>
-								<td width=\"100\" align=\"center\"><span class=/'icon-frame frame-14/' data-tooltip='".$Status['Draenei']."'><img src=\"wow/static/images/icons/big/11-0.gif\" height=\"32\" width=\"32\"><br>".$statistics_race_count[11]."</td></span>
-								<td width=\"100\" align=\"center\"><span class=/'icon-frame frame-14/' data-tooltip='".$Status['Worgen']."'><img src=\"wow/static/images/icons/big/22-0.gif\" height=\"32\" width=\"32\" ><br>".$statistics_race_count[22]."</td></span>
-								<td width=\"100\" align=\"center\"><span class=/'icon-frame frame-14/' data-tooltip='".$Status['Pandaren']."'><img src=\"wow/static/images/icons/big/26-0.gif\" height=\"32\" width=\"32\"><br>0</td>
+								<td width=\"100\" align=\"center\"><span class=/'icon-frame frame-14/' data-tooltip='".$Status['Human']."'><img src=\"../../wow/static/images/icons/big/1-0.gif\" height=\"32\" width=\"32\" ><br>".$statistics_race_count[1]."</td></span>
+								<td width=\"100\" align=\"center\"><span class=/'icon-frame frame-14/' data-tooltip='".$Status['Dwarf']."'><img src=\"../../wow/static/images/icons/big/3-0.gif\" height=\"32\" width=\"32\" ><br>".$statistics_race_count[3]."</td></span>
+								<td width=\"100\" align=\"center\"><span class=/'icon-frame frame-14/' data-tooltip='".$Status['NightElf']."'><img src=\"../../wow/static/images/icons/big/4-0.gif\" height=\"32\" width=\"32\" ><br>".$statistics_race_count[4]."</td></span>
+								<td width=\"100\" align=\"center\"><span class=/'icon-frame frame-14/' data-tooltip='".$Status['Gnome']."'><img src=\"../../wow/static/images/icons/big/7-0.gif\" height=\"32\" width=\"32\" ><br>".$statistics_race_count[7]."</td></span>
+								<td width=\"100\" align=\"center\"><span class=/'icon-frame frame-14/' data-tooltip='".$Status['Draenei']."'><img src=\"../../wow/static/images/icons/big/11-0.gif\" height=\"32\" width=\"32\"><br>".$statistics_race_count[11]."</td></span>
+								<td width=\"100\" align=\"center\"><span class=/'icon-frame frame-14/' data-tooltip='".$Status['Worgen']."'><img src=\"../../wow/static/images/icons/big/22-0.gif\" height=\"32\" width=\"32\" ><br>".$statistics_race_count[22]."</td></span>
+								<td width=\"100\" align=\"center\"><span class=/'icon-frame frame-14/' data-tooltip='".$Status['Pandaren']."'><img src=\"../../wow/static/images/icons/big/26-0.gif\" height=\"32\" width=\"32\"><br>0</td>
 							</tr>
 						</table>
 					</td>
@@ -428,13 +428,13 @@ $realm_count = mysql_num_rows($realms);
 						<table align=\"center\" width=\"100\" border=\"0\" class=\"list_table\">
 							<tr>
 							
-								<td width=\"100\" align=\"center\"><span class=/'icon-frame frame-14/' data-tooltip='".$Status['Orc']."'><img src=\"wow/static/images/icons/big/2-0.gif\" height=\"32\" width=\"32\" ><br>".$statistics_race_count[2]."</td>
-								<td width=\"100\" align=\"center\"><span class=/'icon-frame frame-14/' data-tooltip='".$Status['Undead']."'><img src=\"wow/static/images/icons/big/5-0.gif\" height=\"32\" width=\"32\" ><br>".$statistics_race_count[5]."</td>
-								<td width=\"100\" align=\"center\"><span class=/'icon-frame frame-14/' data-tooltip='".$Status['Tauren']."'><img src=\"wow/static/images/icons/big/6-0.gif\" height=\"32\" width=\"32\" ><br>".$statistics_race_count[6]."</td>
-								<td width=\"100\" align=\"center\"><span class=/'icon-frame frame-14/' data-tooltip='".$Status['Troll']."'><img src=\"wow/static/images/icons/big/8-0.gif\" height=\"32\" width=\"32\" ><br>".$statistics_race_count[8]."</td>
-								<td width=\"100\" align=\"center\"><span class=/'icon-frame frame-14/' data-tooltip='".$Status['BloodElf']."'><img src=\"wow/static/images/icons/big/10-0.gif\" height=\"32\" width=\"32\"><br>".$statistics_race_count[10]."</td>
-								<td width=\"100\" align=\"center\"><span class=/'icon-frame frame-14/' data-tooltip='".$Status['Goblin']."'><img src=\"wow/static/images/icons/big/9-0.gif\" height=\"32\" width=\"32\"><br>".$statistics_race_count[9]."</td>
-								<td width=\"100\" align=\"center\"><span class=/'icon-frame frame-14/' data-tooltip='".$Status['Pandaren']."'><img src=\"wow/static/images/icons/big/26-0.gif\" height=\"32\" width=\"32\"><br>0</td>
+								<td width=\"100\" align=\"center\"><span class=/'icon-frame frame-14/' data-tooltip='".$Status['Orc']."'><img src=\"../../wow/static/images/icons/big/2-0.gif\" height=\"32\" width=\"32\" ><br>".$statistics_race_count[2]."</td>
+								<td width=\"100\" align=\"center\"><span class=/'icon-frame frame-14/' data-tooltip='".$Status['Undead']."'><img src=\"../../wow/static/images/icons/big/5-0.gif\" height=\"32\" width=\"32\" ><br>".$statistics_race_count[5]."</td>
+								<td width=\"100\" align=\"center\"><span class=/'icon-frame frame-14/' data-tooltip='".$Status['Tauren']."'><img src=\"../../wow/static/images/icons/big/6-0.gif\" height=\"32\" width=\"32\" ><br>".$statistics_race_count[6]."</td>
+								<td width=\"100\" align=\"center\"><span class=/'icon-frame frame-14/' data-tooltip='".$Status['Troll']."'><img src=\"../../wow/static/images/icons/big/8-0.gif\" height=\"32\" width=\"32\" ><br>".$statistics_race_count[8]."</td>
+								<td width=\"100\" align=\"center\"><span class=/'icon-frame frame-14/' data-tooltip='".$Status['BloodElf']."'><img src=\"../../wow/static/images/icons/big/10-0.gif\" height=\"32\" width=\"32\"><br>".$statistics_race_count[10]."</td>
+								<td width=\"100\" align=\"center\"><span class=/'icon-frame frame-14/' data-tooltip='".$Status['Goblin']."'><img src=\"../../wow/static/images/icons/big/9-0.gif\" height=\"32\" width=\"32\"><br>".$statistics_race_count[9]."</td>
+								<td width=\"100\" align=\"center\"><span class=/'icon-frame frame-14/' data-tooltip='".$Status['Pandaren']."'><img src=\"../../wow/static/images/icons/big/26-0.gif\" height=\"32\" width=\"32\"><br>0</td>
 							</tr>
 						</table>
 					</td>
@@ -455,7 +455,7 @@ $realm_count = mysql_num_rows($realms);
 <br><span class="clear"><!-- --></span><br><br>
 <div class="faction-req">
 <center><span class="req mists"><?php echo $Status['Pandaren']; ?></span><br>
-<span class='icon-frame frame-32' data-tooltip='Pandaren'><img src="wow/static/local-common/images/icons/panda.jpg" height="32" width="32"></span><br>
+<span class='icon-frame frame-32' data-tooltip='Pandaren'><img src="../../wow/static/local-common/images/icons/panda.jpg" height="32" width="32"></span><br>
 <span class="req mists"><?php echo $Status['ReqMistPand']; ?></span><Br>
 <span class="req cataclysm"><?php echo $Status['PandNoAval']; ?></span></center></div>
 <br>
@@ -469,6 +469,6 @@ $realm_count = mysql_num_rows($realms);
 </div>
 </div>
 </div>
-<?php include("footer.php"); ?>
+<?php include("../../footer.php"); ?>
 <div id="fansite-menu" class="ui-fansite"></div><div id="menu-container"></div><ul class="ui-autocomplete ui-menu ui-widget ui-widget-content ui-corner-all" role="listbox" aria-activedescendant="ui-active-menuitem" style="z-index: 6; top: 0px; left: 0px; display: none; "></ul></body>
 </html>

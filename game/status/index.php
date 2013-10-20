@@ -1,5 +1,5 @@
 <?php
-require_once("configs.php");?>
+require_once("../../configs.php");?>
 
 <!DOCTYPE html> 
 <html lang="en-gb">
@@ -10,13 +10,13 @@ require_once("configs.php");?>
 <head>
 <title><?php echo $website['title']; ?> - <?php echo $status['status']; ?></title>
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
-<link rel="shortcut icon" href="wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
-<link rel="stylesheet" href="wow/static/local-common/css/common.css?v17" />
-<link rel="stylesheet" href="wow/static/css/wow.css?v7" />
-<link rel="stylesheet" href="wow/static/css/status/realmstatus.css?v7" />
-<script src="wow/static/local-common/js/third-party/jquery-1.4.4-p1.min.js"></script>
-<script src="wow/static/local-common/js/core.js?v17"></script>
-<script src="wow/static/local-common/js/tooltip.js?v17"></script>
+<link rel="shortcut icon" href="../../wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
+<link rel="stylesheet" href="../../wow/static/local-common/css/common.css?v17" />
+<link rel="stylesheet" href="../../wow/static/css/wow.css?v7" />
+<link rel="stylesheet" href="../../wow/static/css/status/realmstatus.css?v7" />
+<script src="../../wow/static/local-common/js/third-party/jquery-1.4.4-p1.min.js"></script>
+<script src="../../wow/static/local-common/js/core.js?v17"></script>
+<script src="../../wow/static/local-common/js/tooltip.js?v17"></script>
 <style type="text/css">
 .Good {text-shadow: 0 1px 0 green, 0 0 3px green, 0 0 3px green, 0 0 8px green, 0 0 8px green; margin-top:3px;}
 .Chars {text-shadow: 1px 2px 6px #004;}
@@ -30,9 +30,9 @@ try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
 <![endif]-->
 <script type="text/javascript">
 //<![CDATA[
-Core.staticUrl = '/wow/static';
-Core.sharedStaticUrl= '/wow/static/local-common';
-Core.baseUrl = '/wow/en';
+Core.staticUrl = '../../wow/static';
+Core.sharedStaticUrl= '../../wow/static/local-common';
+Core.baseUrl = '../..//wow/en';
 Core.project = 'wow';
 Core.locale = 'en-gb';
 Core.buildRegion = 'eu';
@@ -51,7 +51,7 @@ _gaq.push(['_trackPageview']);
 <body class="en-gb game-index"><div id="predictad_div" class="predictad" style="display: none; left: 788px; top: 104px; width: 321px; "></div>
 
 <div id="wrapper">
-<?php $page_cat="game"; include("header.php"); ?>
+<?php $page_cat="game"; include("../../header.php"); ?>
 <div id="content">
 <div class="content-top">
 <div class="content-trail">
@@ -67,7 +67,7 @@ _gaq.push(['_trackPageview']);
 	    <span class="clear"><!-- --></span>
 	</div>
 	<div id="realm-status">	
-<?php include("functions/status_nav.php"); ?>
+<?php include("../../functions/status_nav.php"); ?>
 		<div class="filter-toggle">
 			<a href="javascript:;" class="selected" onclick="RealmStatus.filterToggle(this)">	</a>
 		</div>
@@ -285,6 +285,6 @@ _gaq.push(['_trackPageview']);
 </div>
 </div>
 </div>
-<?php include("footer.php"); ?>
+<?php include("../../footer.php"); ?>
 <div id="fansite-menu" class="ui-fansite"></div><div id="menu-container"></div><ul class="ui-autocomplete ui-menu ui-widget ui-widget-content ui-corner-all" role="listbox" aria-activedescendant="ui-active-menuitem" style="z-index: 6; top: 0px; left: 0px; display: none; "></ul></body>
 </html>

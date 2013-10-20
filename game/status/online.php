@@ -1,5 +1,5 @@
 <?php
-require_once("configs.php");
+require_once("../../configs.php");
 if(isset($_GET['realm'])) $realmid = intval($_GET['realm']); else $realmid = 1;
 ?>
 
@@ -12,13 +12,13 @@ if(isset($_GET['realm'])) $realmid = intval($_GET['realm']); else $realmid = 1;
 <head>
 <title><?php echo $website['title']; ?> - <?php echo $status['status']; ?></title>
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
-<link rel="shortcut icon" href="wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
-<link rel="stylesheet" href="wow/static/local-common/css/common.css?v15" />
-<link rel="stylesheet" href="wow/static/css/wow.css?v7" />
-<link rel="stylesheet" href="wow/static/css/status/realmstatus.css?v7" />
-<script src="wow/static/local-common/js/third-party/jquery-1.4.4.min.js"></script>
-<script src="wow/static/local-common/js/core.js?v15"></script>
-<script src="wow/static/local-common/js/tooltip.js?v15"></script>
+<link rel="shortcut icon" href="../../wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
+<link rel="stylesheet" href="../../wow/static/local-common/css/common.css?v15" />
+<link rel="stylesheet" href="../../wow/static/css/wow.css?v7" />
+<link rel="stylesheet" href="../../wow/static/css/status/realmstatus.css?v7" />
+<script src="../../wow/static/local-common/js/third-party/jquery-1.4.4.min.js"></script>
+<script src="../../wow/static/local-common/js/core.js?v15"></script>
+<script src="../../wow/static/local-common/js/tooltip.js?v15"></script>
 
 <!--[if IE 6]> <script type="text/javascript">
 //<![CDATA[
@@ -49,7 +49,7 @@ _gaq.push(['_trackPageview']);
 <div id="wrapper">
 <?php 
 $page_cat="game";
-include("header.php");
+include("../../header.php");
 ?>
 <div id="content">
 <div class="content-top">
@@ -59,9 +59,9 @@ include("header.php");
 <a href="index.php" rel="np"><?php echo $website['title']; ?></a>
 <span class="breadcrumb-arrow"></span>
 </li>
-<li><a href="status.php" rel="np"><?php echo $status['status']; ?></a><span class="breadcrumb-arrow"></span></li>
-<li><a href="status.php" rel="np"><?php echo $Status['RealmStat']; ?></a><span class="breadcrumb-arrow"></span></li>
-<li class="last children"><a href="servername1.php" rel="np"><?php echo $news['title']; ?><?php
+<li><a href="<?php echo $website['root']; ?>game/status/" rel="np"><?php echo $status['status']; ?></a><span class="breadcrumb-arrow"></span></li>
+<li><a href="<?php echo $website['root']; ?>game/status/online.php" rel="np"><?php echo $Status['RealmStat']; ?></a><span class="breadcrumb-arrow"></span></li>
+<li class="last children"><a href="" rel="np"><?php
 $realm_extra = mysql_fetch_assoc(mysql_query("SELECT * FROM realms WHERE id = '".$realmid."'"));
 if(!$realm_extra) $realm_extra = mysql_fetch_assoc(mysql_query("SELECT * FROM realms WHERE id = '1'"));
 $realm = mysql_fetch_assoc(mysql_query("SELECT * FROM $server_adb.realmlist WHERE id = '".$realm_extra['realmid']."'"));
@@ -73,12 +73,12 @@ echo $realm['name'];
 <div class="content-bot">
 	<div class="content-header">
 		<h2 class="header ">
-		<?php 	require_once("configs.php");
+		<?php 	require_once("../../configs.php");
 				echo $realm['name']; 
 									?> 
 		<?php echo $status['status']; ?></h2>
 		<div class="desc"><?php echo $Status['Stat3']; ?>
-		<?php 	require_once("configs.php");
+		<?php 	require_once("../../configs.php");
 				echo $realm['name'];?>
 		<?php echo $Status['Stat4']; ?>
 		</div>
@@ -192,43 +192,43 @@ while($raw = mysql_fetch_array($sql)){
 $cclass = $raw['class'];
 if ($cclass == 1)
 {
-$class = "<img src='wow/static/images/icons/class/1.gif' width='18' height='18'/>";
+$class = "<img src='../../wow/static/images/icons/class/1.gif' width='18' height='18'/>";
 }
 elseif ($cclass == 2)
 {
-$class = "<img src='wow/static/images/icons/class/2.gif' width='18' height='18'/>";
+$class = "<img src='../../wow/static/images/icons/class/2.gif' width='18' height='18'/>";
 }
 elseif ($cclass == 3)
 {
-$class = "<img src='wow/static/images/icons/class/3.gif' width='18' height='18'/>";
+$class = "<img src='../../wow/static/images/icons/class/3.gif' width='18' height='18'/>";
 }
 elseif ($cclass == 4)
 {
-$class = "<img src='wow/static/images/icons/class/4.gif' width='18' height='18'/>";
+$class = "<img src='../../wow/static/images/icons/class/4.gif' width='18' height='18'/>";
 }
 elseif ($cclass == 5)
 {
-$class = "<img src='wow/static/images/icons/class/5.gif' width='18' height='18'/>";
+$class = "<img src='../../wow/static/images/icons/class/5.gif' width='18' height='18'/>";
 }
 elseif ($cclass == 6)
 {
-$class = "<img src='wow/static/images/icons/class/6.gif' width='18' height='18'/>";
+$class = "<img src='../../wow/static/images/icons/class/6.gif' width='18' height='18'/>";
 }
 elseif ($cclass == 7)
 {
-$class = "<img src='wow/static/images/icons/class/7.gif' width='18' height='18'/>";
+$class = "<img src='../../wow/static/images/icons/class/7.gif' width='18' height='18'/>";
 }
 elseif ($cclass == 8)
 {
-$class = "<img src='wow/static/images/icons/class/8.gif' width='18' height='18'/>";
+$class = "<img src='../../wow/static/images/icons/class/8.gif' width='18' height='18'/>";
 }
 elseif ($cclass == 9)
 {
-$class = "<img src='wow/static/images/icons/class/9.gif' width='18' height='18'/>";
+$class = "<img src='../../wow/static/images/icons/class/9.gif' width='18' height='18'/>";
 }
 elseif ($cclass == 11)
 {
-$class = "<img src='wow/static/images/icons/class/11.gif' width='18' height='18'/>";
+$class = "<img src='../../wow/static/images/icons/class/11.gif' width='18' height='18'/>";
 }
 //Character Race
 $rrace = $raw['race'];
@@ -321,11 +321,11 @@ $location = "<b>".$Status['Northrend']."</b>";
  // Alliance or Horde FLAG
 if($rrace == 1 || $rrace == 3 || $rrace == 4 || $rrace == 7 || $rrace == 11 || $rrace == 22)
 {
-$bg = "<img src='wow/static/images/icons/faction/ally.png' width='18' height='18'/>";
+$bg = "<img src='../../wow/static/images/icons/faction/ally.png' width='18' height='18'/>";
 }
 elseif($rrace == 2 || $rrace == 5 || $rrace == 6 || $rrace == 8 || $rrace == 9 || $rrace == 10)
 {
-$bg = "<img src='wow/static/images/icons/faction/horde.png' width='18' height='18'/>";
+$bg = "<img src='../../wow/static/images/icons/faction/horde.png' width='18' height='18'/>";
 }
  // Alliance or Horde FLAG
 if($rrace == 1 || $rrace == 3 || $rrace == 4 || $rrace == 7 || $rrace == 11 || $rrace == 22)
@@ -345,7 +345,7 @@ echo '
 </td>
 <td class="align-center">
 <span class="icon-frame frame-14 " data-tooltip="'.$race.' '.$gender.'">
-<img src="wow/static/images/icons/race/'.$raw['race'].'-'.$raw['gender'].'.gif" alt="" width="14" height="14" />
+<img src="../../wow/static/images/icons/race/'.$raw['race'].'-'.$raw['gender'].'.gif" alt="" width="14" height="14" />
 </span>
 </td>
 <td style="background-color: '.$bg.';"><center>'.@$class.'</center></td>
@@ -394,6 +394,6 @@ echo "<b>".$Status['NotConected']."</b>";
 </div>
 </div>
 </div>
-<?php include("footer.php"); ?>
+<?php include("../../footer.php"); ?>
 <div id="fansite-menu" class="ui-fansite"></div><div id="menu-container"></div><ul class="ui-autocomplete ui-menu ui-widget ui-widget-content ui-corner-all" role="listbox" aria-activedescendant="ui-active-menuitem" style="z-index: 6; top: 0px; left: 0px; display: none; "></ul></body>
 </html>

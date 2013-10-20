@@ -975,6 +975,7 @@ $Status['Gilneas']     = "Ciudad de Gilneas";
 $Status['Kalimdor']    = "Kalimdor";
 $Status['Outland']     = "Terrallende";
 $Status['Northrend']   = "Rasganorte";
+$Status['NotConected'] = "No hay conexión ahorita.";
 $Status['RlmStat']     = "Estadísticas del reino";
 $Status['Stat5']       = "Esta página muestra la información de los jugadores creados en el reino ";
 $Status['Stat6']       = " así como su estado. Un reino puede tener characters ilimitados y puede albergar más de 5000 jugadores. Los mensajes relacionados con el estado y el mantenimiento programado del reino se publicarán en el ";
