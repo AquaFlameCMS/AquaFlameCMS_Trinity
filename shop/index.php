@@ -52,7 +52,7 @@ try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
 <div id="free-services" class="services-column">
 <h2 class="header"><?php echo $Shop['shop_5']; ?></h2>			
 <ul>
-	<li><a href="<?php echo $website['root']; ?>raf-invite.php" class="free-services-raf">
+	<li><a href="<?php echo $website['root']; ?>shop/recruit-a-friend/" class="free-services-raf">
 	<span><?php echo $Shop['shop_6']; ?></span></a>
 	</li>
 	<li><a href="<?php echo $website['root']; ?>chars-unst.php" class="free-services-sor">
@@ -78,7 +78,7 @@ try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
 					}
 					}else{
 	?>
-	<li><a href="services/avatar.php" class="free-services-mobile-armory">
+	<li><a href="<?php echo $website['root']; ?>shop/#" class="free-services-mobile-armory">
 	<span><?php echo $Shop['shop_9']; ?></span></a>
 	</li>
 	<?php
@@ -92,7 +92,7 @@ try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
 <div id="paid-services" class="services-column">
 <h2 class="header"><?php echo $Shop['shop_11']; ?></h2>
 <ul>
-	<li><a href="<?php echo $website['root']; ?>" class="paid-services-character-transfer">
+	<li><a href="<?php echo $website['root']; ?>shop/character-transfer/" class="paid-services-character-transfer">
 	<span><?php echo $Shop['shop_12']; ?></span></a>
 	</li>
 	<li><a href="<?php echo $website['root']; ?>options/change_faction.php" class="paid-services-faction-change">

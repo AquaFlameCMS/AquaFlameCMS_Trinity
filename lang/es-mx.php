@@ -484,6 +484,34 @@ $Shop['shop_19'] = "Cambiar Ahora";
 $Shop['shop_20'] = "es un juego en línea de suscripción del género fantástico que está constituido por un juego base y adiciones importantes de contenido denominadas expansiones. Echa un vistazo a las";
 $Shop['shop_21'] = "opciones de compra y suscripción</a> para que puedas decidir cual es la mejor para ti.";
 $Shop['shop_22'] = "Tienda de Votación";
+$Shop['shop_23'] = "Transferencia de Personajes";
+$Shop['shop_24'] = "¿Te gustaría cambiar a un reino que se adecúe mejor a tu estilo de juego, o que te permita aventurarte con tus amigos? El servicio de Transferencia de Personajes te permite mover a cualquiera de tus personajes elegibles a otro reino en la misma región o a una cuenta de Battle.net distinta registrada a tu nombre.";
+$Shop['shop_25'] = "Cómo funciona: ";
+$Shop['shop_26'] = "Transferir ya";
+$Shop['shop_27'] = "PF";
+$Shop['shop_28'] = "Paso 1 - Elige tu Personaje";
+$Shop['shop_29'] = "Inicia sesión con tu <b>cuenta de ";
+$Shop['shop_30'] = " </b>, selecciona tu cuenta de <b>World of Warcraft</b> y haz clic en el botón de <b>Transferencia de Personajes</b> bajo <b>Servicios para Personaje y Hermandad</b>. Escoge el personaje que desees transferir a otro reino. Tienes la opción de mover tu personaje a otro reino, otra cuenta, o ambas.";
+$Shop['shop_31'] = "Paso 2 - Elige tu Reino Meta";
+$Shop['shop_32'] = "<p>Selecciona el nombre de tu reino meta. Por un costo adicional, también puedes cambiar de facción si marcas la casilla apropiada.</p><p>Puedes <b>dar seguimiento al estado de tu transferencia</b> desde la pestaña Historial.</p>";
+$Shop['shop_33'] = "Paso 3 - ¡Listo!";
+$Shop['shop_34'] = "Una vez que el estado de tu tranferencia muestre “<b>Completado</b>”, inicia sesión en World of Warcraft y encuentra a tu personaje en la capital de tu facción (Ventormenta para la Alianza y Orgrimmar para la Horda) en tu nuevo reino. ¡Felicidades!";
+$Shop['shop_35'] = "Recuerda que sólo los personajes de nivel 10 o más son elegibles para la Transferencia de Personaje.";
+$Shop['shop_36'] = "Para más información acerca de este servicio, consulta las ";
+$Shop['shop_37'] = "PF de Transferencia de Personaje";
+$Shop['shop_38'] = "Recluta a un Amigo";
+$Shop['shop_39'] = "Enviar invitación";
+$Shop['shop_40'] = "Envía una conveniente invitación por e-mail a amigos y familiares, simplificándoles así el proceso de crear una nueva cuenta y dar sus primeros pasos.";
+$Shop['shop_41'] = "Aventúrense juntos";
+$Shop['shop_42'] = "<p>Encuentra al recluta en Azeroth y disfruta de beneficios especiales en el juego por 90 días:</p><p class='summon'>La invocación entre amigos hace mucho más fácil viajar juntos</p><p class='bonus'>El bono de experiencia asegura que subirán de nivel más rápido</p>";
+$Shop['shop_43'] = "Obtén recompensas";
+$Shop['shop_44'] = "<p>Si tu amigo o familiar adquiere una copia completa de World of Warcraft y paga un mes de suscripción, recibirás 30 días de tiempo de juego GRATIS.</p><p>Si tu amigo o familiar paga por dos meses de tiempo de juego, recibirás un exclusivo</p><p class='mount'><a class='color-q4' href='http://www.wowhead.com/item=83086/'>Corazón de alanoche</a></p>";
+$Shop['shop_45'] = "¿Listo para traer refuerzos para tus batallas por Azeroth? Recluta a un Amigo para que se una a ti en World of Warcraft. Es fácil, divertido y trae grandes recompensas.";
+$Shop['shop_46'] = "Sólo inicia sesión con tu ";
+$Shop['shop_47'] = "cuenta</a> de <strong>AquaFlameCMS 1.0 </strong>, <strong>selecciona la licencia de World of Warcraft que desees utilizar, haz clic en el botón \"Invitaciones y Recompensas\", selecciona \"Recluta a un Amigo\"</strong>, e ingresa el nombre completo y la dirección de e-mail de tu amigo para enviar una invitación. Recibirán un mensaje que contiene <a href='#'>instrucciones</a> para empezar sus aventuras en World of Warcraft.";
+$Shop['shop_48'] = "Tu cuenta se vinculará con la de tu amigo y ésto les proporcionará beneficios a ambos, como un bono de experiencia y la capacidad de invocarse uno a otro desde cualquier parte del mundo.";
+$Shop['shop_49'] = "Si tu amigo actualiza a la versión completa de World of Warcraft, puedes esperar aún más recompensas.";
+$Shop['shop_50'] = "PF sobre Recluta a un Amigo";
 // Finishing Shop
 
 // Starting Services

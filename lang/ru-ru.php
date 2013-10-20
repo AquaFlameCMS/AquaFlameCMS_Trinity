@@ -483,6 +483,34 @@ $Shop['shop_19'] = "Change Now";
 $Shop['shop_20'] = "is a free to play World of Warcraft Private Server. Explore the game's";
 $Shop['shop_21'] = "shop and membership options</a> and decide which one is best for you, or you can start playing for free without any further due.";
 $Shop['shop_22'] = "Vote Shop";
+$Shop['shop_23'] = "Character Transfer";
+$Shop['shop_24'] = "Do you want to switch realms to better fit your playstyle, or to join your friends? The Character Transfer service enables you to move any of your eligible characters onto another realm in the same region, or to a different Battle.net account registered under your name.";
+$Shop['shop_25'] = "Here's how it works: ";
+$Shop['shop_26'] = "Transfer Now";
+$Shop['shop_27'] = "FAQ";
+$Shop['shop_28'] = "Step 1 - Select Your Character";
+$Shop['shop_29'] = "Connect to your <b> ";
+$Shop['shop_30'] = " Account</b>, select your <b>World of Warcraft</b> account and click the <b>\"Character Transfer\"</b> button under <b>\"Character & Guild Services\"</b>. Then choose the character you want to move to a different realm. You can move your character to a different realm, account, or both.";
+$Shop['shop_31'] = "Step 2 - Choose Your Destination";
+$Shop['shop_32'] = "<p>Type and select the name of the destination realm. You can also choose to change faction at the same time for an additional cost, by ticking the appropriate checkbox.</p><p>You can follow the status of your transfer from the <strong>History/Status tab</strong>.</p";
+$Shop['shop_33'] = "Step 3 - Ready to go!";
+$Shop['shop_34'] = "<p>Once your transfer status is marked as \"<b>Complete</b>\", you can log in to World of Warcraft to find your character in your faction’s capital (Stormwind for the Alliance, Orgrimmar for the Horde) on your newly chosen realm. Congratulations!</p>";
+$Shop['shop_35'] = "Keep in mind that only characters above level 10 are eligible for a Character Transfer, and that your character may not be available for some time while the Character Transfer completes.";
+$Shop['shop_36'] = "You will find more details about this service in the ";
+$Shop['shop_37'] = "Character Transfer FAQ";
+$Shop['shop_38'] = "Recruit a Friend";
+$Shop['shop_39'] = "Send Invitation";
+$Shop['shop_40'] = "Send a convenient e-mail invitation to friends and family members, making it easy for them to create a new account and get started.";
+$Shop['shop_41'] = "Adventure Together";
+$Shop['shop_42'] = "<p>Meet the new recruit in Azeroth and enjoy special in-game benefits for a full 90 days:</p><p class='summon'>Friend-to-friend summoning makes it easy to travel together</p><p class='bonus'>Bonus experience ensures faster leveling</p>";
+$Shop['shop_43'] = "Earn Rewards";
+$Shop['shop_44'] = "<p>If your friend/family member purchases a full copy of World of Warcraft and pays for a month of subscription time, you'll get 30 days of game time FREE!</p><p>If your friend/family member pays for two full months of game time, you'll receive an exclusive</p><p class='mount'><a class='color-q4' href='http://www.wowhead.com/item=83086/'>Heart of the Nightwing</a></p>";
+$Shop['shop_45'] = "Ready to bring backup to your battles for Azeroth? Recruit a friend to join you in World of Warcraft. It's easy and rewarding.";
+$Shop['shop_46'] = "Just log into your AquaFlameCMS 1.0 ";
+$Shop['shop_47'] = "account</a>, choose the WoW license you'd like to use, click the \"Referrals and Rewards\" button, select \"Recruit-A-Friend\", and enter your friend's name and e-mail address to send them an invitation. They'll receive an e-mail containing <a href='#'>instructions</a> on how to get started with World of Warcraft.</p>";
+$Shop['shop_48'] = "Your account will be linked with your friend's, giving you both benefits like bonus experience and the ability to summon each other nearly anywhere in the world.";
+$Shop['shop_49'] = "If your friend upgrades to the full version of World of Warcraft, you can expect even more rewards.";
+$Shop['shop_50'] = "Recruit a Friend FAQ";
 // Finishing Shop
 
 // Starting Services
