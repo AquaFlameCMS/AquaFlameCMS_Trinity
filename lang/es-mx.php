@@ -512,6 +512,28 @@ $Shop['shop_47'] = "cuenta</a> de <strong>AquaFlameCMS 1.0 </strong>, <strong>se
 $Shop['shop_48'] = "Tu cuenta se vinculará con la de tu amigo y ésto les proporcionará beneficios a ambos, como un bono de experiencia y la capacidad de invocarse uno a otro desde cualquier parte del mundo.";
 $Shop['shop_49'] = "Si tu amigo actualiza a la versión completa de World of Warcraft, puedes esperar aún más recompensas.";
 $Shop['shop_50'] = "PF sobre Recluta a un Amigo";
+$Shop['shop_51'] = "Cambio de Facción";
+$Shop['shop_52'] = "Si deseas cambiar de facción para unirte a amistades o familiares, o simplemente aventurar a través de Azeroth con un nuevo punto de vista, el servicio de Cambio de Facción te permite cambiar tu personaje de la Horda a la Alianza o viceversa. Cualquier montura, reputación, u objeto asociado con tu antigua facción automáticamente será convertido al equivalente para tu nueva facción.";
+$Shop['shop_53'] = "Cambiar de facción ya";
+$Shop['shop_54'] = "Paso 1 - Elige tu Personaje";
+$Shop['shop_55'] = "Inicia sesión con tu <b>cuenta de AquaFlameCMS 1.0</b>, selecciona tu cuenta de World of Warcraft. Haz clic en <b>Cambio de Facción</b> bajo <b>Servicios para Personaje y Hermandad</b>, entonces elige el personaje que te gustaría cambiar de facción.";
+$Shop['shop_56'] = "Paso 2 - Escoge tu Raza";
+$Shop['shop_57'] = "Inicia sesión en World of Warcraft. Deberás ver este botón:</p><div class='pfc-icon'></div><p>Haz clic en este botón para elegir tu nueva raza (mientras sea compatible con tu clase). Este servicio incluye, opcionalmente, un cambio de nombre y de apariencia.";
+$Shop['shop_58'] = "Paso 3 - ¡Inicia Sesión y Juega!";
+$Shop['shop_59'] = "Una vez tu personaje esté listo, inicia sesión en el juego y tu personaje aparecerá en la ciudad capital de tu nueva facción (Ventormenta para la Alianza y Orgrimmar para la Horda).";
+$Shop['shop_60'] = "Recuerda que tu personaje posiblemente no estará disponible por cierto tiempo mientras el Cambio de Facción es finalizado.</p><p>Para más información acerca del proceso de Cambio de Facción y las restricciones que pueden aplicar, por favor lee las <a href='#'>PF sobre Cambio de Facción</a>.";
+$Shop['shop_61'] = "PF acerca de Cambio de Facción";
+$Shop['shop_62'] = "Cambio de Raza";
+$Shop['shop_63'] = "¿Te gustaría cambiar la raza de tu personaje para tener una nueva apariencia, probar nuevas habilidades raciales, o simplemente aventurarte a través de Azeroth desde una perspectiva distinta? Este servicio te permite cambiar la raza de cualquiera de tus personajes dentro de la misma facción.";
+$Shop['shop_64'] = "Cambiar de Raza Ya";
+$Shop['shop_65'] = "Paso 1 - Elige tu Personaje";
+$Shop['shop_66'] = "Inicia sesión con tu <b>cuenta de AquaFlameCMS 1.0</b>, selecciona tu cuenta de World of Warcraft y haz clic en el botón de <b>Cambio de Raza</b> bajo <b>Servicios para Personaje y Hermandad</b>.</p><p> Selecciona el personaje que desees cambiar de raza.";
+$Shop['shop_67'] = "Paso 2 - Escoge Sabiamente";
+$Shop['shop_68'] = "Una vez que el estado del servicio muestre “<b>Completado</b>”, puedes iniciar sesión en el juego. Deberás ver el siguiente botón:</p><div class='prc-icon'></div><p>Haz clic en el botón y elige tu nueva raza (ésta tiene que ser compatible con tu clase). También puedes cambiar tu género, apariencia y nombre sin costo adicional.";
+$Shop['shop_69'] = "Paso 3 - ¡Disfruta de tu nueva raza!";
+$Shop['shop_70'] = "<b>Confirma tus cambios</b> y disfruta de tu nueva raza. ¡Felicidades!";
+$Shop['shop_71'] = "Recuerda que sólo los personajes de nivel 10 o mayor son elegibles para Cambio de Raza.</p><p>Encontrarás más información acerca de este servicio, incluyendo la conversión de monturas, reputación, objetos, títulos, misiones y más en las <a href='#'>PF acerca del Cambio de Raza</a>.";
+$Shop['shop_72'] = "PF acerca del Cambio de Raza";
 // Finishing Shop
 
 // Starting Services

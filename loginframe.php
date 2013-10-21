@@ -108,10 +108,8 @@ include("configs.php");
     <div>
       <p><label for="accountName" class="label"><?php echo $Log['Log6']; ?></label>
       <input id="accountName" value="" name="accountName" maxlength="320" type="text" tabindex="1" class="input" /></p>
-
       <p><label for="password" class="label"><?php echo $Log['Log7']; ?></label>
       <input id="password" name="password" maxlength="16" type="password" tabindex="2" autocomplete="off" class="input"/></p>
-
       <p>
         <span id="remember-me">
           <label for="persistLogin">
@@ -141,7 +139,7 @@ include("configs.php");
   } ?>
 	  <ul id="help-links">
 		  <li class="icon-pass">
-			<a href="#"><?php echo $Log['Log11']; ?></a>
+			<a href="<?php echo $website['root']; ?>account/recover-pass/"><?php echo $Log['Log11']; ?></a>
 		  </li>
 			<li class="icon-signup">
 			  <?php echo $Log['Log12']; ?><a href="register.php"><?php echo $Log['Log13']; ?></a>!

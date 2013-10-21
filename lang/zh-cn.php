@@ -496,6 +496,28 @@ $Shop['shop_47'] = "account</a>, choose the WoW license you'd like to use, click
 $Shop['shop_48'] = "Your account will be linked with your friend's, giving you both benefits like bonus experience and the ability to summon each other nearly anywhere in the world.";
 $Shop['shop_49'] = "If your friend upgrades to the full version of World of Warcraft, you can expect even more rewards.";
 $Shop['shop_50'] = "Recruit a Friend FAQ";
+$Shop['shop_51'] = "Faction Change";
+$Shop['shop_52'] = "Whether you’d like to switch factions to join friends or family, or simply to experience Azeroth from a new point of view, the Faction Change service enables you to switch your character from Horde to Alliance or vice versa. Any faction- or race-specific reputations, items or mounts will be automatically converted to your new faction’s equivalent.";
+$Shop['shop_53'] = "Change Faction Now";
+$Shop['shop_54'] = "Step 1 - Select Your Character";
+$Shop['shop_55'] = "Connect to your <b>AquaFlameCMS 1.0 account</b> and select your World of Warcraft account. Click \"<b>Faction Change</b>\" under \"<b>Character &amp; Guild Services</b>, then select the character you’d like to switch to the other faction.";
+$Shop['shop_56'] = "Step 2 - Choose Your Race";
+$Shop['shop_57'] = "Log in to World of Warcraft. You should now see the button below:</p><div class='pfc-icon'></div><p>Click on this button to choose your new race (compatible with your class). An optional name and appearance change are included in the service.";
+$Shop['shop_58'] = "Step 3 - Ready to go!";
+$Shop['shop_59'] = "Once your character is ready, enter the game and your character will appear at the main capital city of your new faction (Stormwind for the Alliance, Orgrimmar for the Horde). Congratulations, you’re done!";
+$Shop['shop_60'] = "Keep in mind that only characters above level 10 are eligible for a Faction Change, and that your character may not be available for some time while the Faction Change completes.</p><p>For more information about the Faction Change process and restrictions that can apply, please refer to our  <a href='#'>Faction Change FAQ</a>.";
+$Shop['shop_61'] = "Faction Change FAQ";
+$Shop['shop_62'] = "Race Change";
+$Shop['shop_63'] = "Would you like to change your character’s race to sport a new look, to try different racial abilities or simply to see Azeroth through different eyes? The Race Change service enables you to change the race of any character within the same faction.";
+$Shop['shop_64'] = "Change Race Now";
+$Shop['shop_65'] = "Step 1 - Select Your Character";
+$Shop['shop_66'] = "Connect to your <b>AquaFlameCMS 1.0 Account</b>, select your World of Warcraft account and click the \"<b>Race Change</b>\" button under \"<b>Character &amp; Guild Services</b>\".</p><p>Then choose the character whose race you wish to change.";
+$Shop['shop_67'] = "Step 2 - Choose Wisely";
+$Shop['shop_68'] = "Once the service status is \"<b>Complete</b>\", you can log in to World of Warcraft. You should now see the button :</p><div class='prc-icon'></div><p>Click on the button and choose your new race (must be compatible with your class). If you want, you can also change your gender, appearance and name at this time without additional cost.";
+$Shop['shop_69'] = "Step 3 - Enjoy Your New Race!";
+$Shop['shop_70'] = "<b>Confirm your changes</b>, and you can start playing with your newly chosen race. Congratulations!";
+$Shop['shop_71'] = "Keep in mind that only characters above level 10 are eligible for a Race Change, and that your character may not be available for some time while the Race Change completes.</p><p>You will find all information about this service, including the conversion of mounts, reputation, equipment, titles, quests and more in the <a href='#'>Race Change FAQ</a>";
+$Shop['shop_72'] = "Race Change FAQ";
 // Finishing Shop
 
 // Starting Services

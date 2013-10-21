@@ -8,7 +8,7 @@
 <html class="no-js">
 <!--<![endif]-->
 <head>
-<title><?php echo $website['title']; ?> - <?php echo $Shop['shop_23']; ?></title>
+<title><?php echo $website['title']; ?> - <?php echo $Shop['shop_62']; ?></title>
 <meta content="false" http-equiv="imagetoolbar"/>
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"/>
 <link rel="shortcut icon" href="../../wow/static/local-common/images/favicons/wow.png" type="image/x-icon"/>
@@ -32,7 +32,7 @@ try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
 </script>
 <![endif]-->
 </head>
-<body class="character-transfer">
+<body class="race-change">
 <div id="wrapper">
 	<?php $page_cat="shop"; include("../../header.php"); ?>
 	<div id="content">
@@ -43,57 +43,51 @@ try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
 					</a><span class="breadcrumb-arrow"></span></li>
 					<li class=""><a href="<?php echo $website['root']; ?>shop/" rel="np"><?php echo $Shop['shop']; ?>
 					</a><span class="breadcrumb-arrow"></span></li>
-					<li class="last"><a href="<?php echo $website['root']; ?>shop/character-transfer/" rel="np"><?php echo $Shop['shop_23']; ?></a></li>
+					<li class="last"><a href="<?php echo $website['root']; ?>shop/race-change/" rel="np"><?php echo $Shop['shop_62']; ?></a></li>
 				</ol>
 			</div>
 			<div class="content-bot">
 				<div class="summary">
 					<div class="page-titles">
-						<h2><?php echo $Shop['shop_23']; ?>
-						</h2>
+						<h2><?php echo $Shop['shop_62']; ?></h2>
 						<p>
-							<?php echo $Shop['shop_24']; ?>
+							 <?php echo $Shop['shop_63']; ?>
 						</p>
-						<em><?php echo $Shop['shop_25']; ?>
-						</em>
+						<em><?php echo $Shop['shop_25']; ?></em>
 					</div>
 					<div class="button-section">
-						<a class="ui-button button4 button-apply" href="#">
+						<a class="ui-button button4 button-apply " href="<?php echo $website['root']; ?>options/change_race.php">
 						<span>
-						<span><?php echo $Shop['shop_26']; ?>
-						</span>
+						<span><?php echo $Shop['shop_64']; ?></span>
 						</span>
 						</a>
 						<a class="ui-cancel " href="#">
 						<span>
-						<?php echo $Shop['shop_27']; ?>
-						</span>
+						<?php echo $Shop['shop_27']; ?> </span>
 						</a>
 					</div>
 				</div>
 				<div class="summary-top">
 					<div class="step step-1">
-						<h3><?php echo $Shop['shop_28']; ?>
-						</h3>
+						<h3><?php echo $Shop['shop_65']; ?></h3>
 						<p>
-							<?php echo $Shop['shop_29']; ?>
-							<?php echo $website['title']; ?>
-							<?php echo $Shop['shop_30']; ?>
+							 <?php echo $Shop['shop_66']; ?>
 						</p>
 						<span class="hover-area"></span>
 					</div>
 					<div class="step step-2">
-						<h3><?php echo $Shop['shop_31']; ?>
-						</h3>
-						<?php echo $Shop['shop_32']; ?>
+						<h3><?php echo $Shop['shop_67']; ?></h3>
+						<p>
+							 <?php echo $Shop['shop_68']; ?>
+						</p>
 						<span class="hover-area"></span>
 					</div>
 					<div class="step step-3">
-						<h3><?php echo $Shop['shop_33']; ?>
-						</h3>
+						<h3><?php echo $Shop['shop_69']; ?></h3>
 						<p>
-							<?php echo $Shop['shop_34']; ?>
+							<?php echo $Shop['shop_70']; ?>
 						</p>
+						<br/>
 						<span class="hover-area"></span>
 					</div>
 					<span class="clear">
@@ -103,25 +97,20 @@ try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
 				<div class="summary-bottom">
 					<div class="desc">
 						<p>
-							<?php echo $Shop['shop_35']; ?>
-							<br/><br/><?php echo $Shop['shop_36']; ?>
-							<a href="#"><?php echo $Shop['shop_37']; ?>
-							</a>.
+							 <?php echo $Shop['shop_71']; ?>
 						</p>
 						<div class="button-section">
 							<table class="dynamic-center ">
 							<tr>
 								<td>
-									<a class="ui-button button4 button-apply " href="#">
+									<a class="ui-button button4 button-apply " href="<?php echo $website['root']; ?>options/change_race.php">
 									<span>
-									<span><?php echo $Shop['shop_26']; ?>
-									</span>
+									<span><?php echo $Shop['shop_64']; ?></span>
 									</span>
 									</a>
 									<a class="ui-cancel " href="#">
 									<span>
-									<?php echo $Shop['shop_37']; ?>
-									</span>
+									 <?php echo $Shop['shop_72']; ?></span>
 									</a>
 								</td>
 							</tr>

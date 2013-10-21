@@ -95,10 +95,10 @@ try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
 	<li><a href="<?php echo $website['root']; ?>shop/character-transfer/" class="paid-services-character-transfer">
 	<span><?php echo $Shop['shop_12']; ?></span></a>
 	</li>
-	<li><a href="<?php echo $website['root']; ?>options/change_faction.php" class="paid-services-faction-change">
+	<li><a href="<?php echo $website['root']; ?>shop/faction-change/" class="paid-services-faction-change">
 	<span><?php echo $Shop['shop_13']; ?></span></a>
 	</li>
-	<li><a href="<?php echo $website['root']; ?>options/change_race.php" class="paid-services-race-change">
+	<li><a href="<?php echo $website['root']; ?>shop/race-change/" class="paid-services-race-change">
 	<span><?php echo $Shop['shop_14']; ?></span></a>
 	</li>
 	<li><a href="<?php echo $website['root']; ?>options/change_appear.php" class="paid-services-character-customization">
