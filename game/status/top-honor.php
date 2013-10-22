@@ -208,13 +208,13 @@ if($numrows > 0)
 		<table>
 			<thead>
 				<tr>
-					<th width="1%"><a href="javascript:;" class="sort-link"><span class="arrow">&#35;</span></a></th>
+					<th width="1%"><a href="javascript:;" class="sort-link"><span class="arrow">Top Ranking</span></a></th>
 					<th><a href="javascript:;" class="sort-link"><span class="arrow">Name</span></a></th>
 					<th><a href="javascript:;" class="sort-link"><span class="arrow">Level</span></a></th>
 					<th><a href="javascript:;" class="sort-link"><span class="arrow">Top Honor</span></a></th>
 					<th><a href="javascript:;" class="sort-link"><span class="arrow">Total Kills</span></a></th>
-					<th><a href="javascript:;" class="sort-link"><span class="arrow">Class</span></a></th>
-					<th><a href="javascript:;" class="sort-link"><span class="arrow">Server</span></a></th>
+					<th><a href="javascript:;" class="sort-link"><span class="arrow">Arena Points</span></a></th>
+					<th><a href="javascript:;" class="sort-link"><span class="arrow">Realm</span></a></th>
 					</tr>
 				</thead>
     <tbody>              
@@ -223,70 +223,21 @@ if($numrows > 0)
 while($rows = mysql_fetch_object($result))
  
 { 
+ $i = 0; 
  $i++; 
  $name = $rows->name; 
  $level = $rows->level;  
  $Total_Kills = $rows->totalKills;
  $Total_Honor = $rows->totalHonorPoints;
- while($rows = mysql_fetch_array($result))
- $cclass = $rows['class'];
- if ($cclass == 1)
- {
- $class = "<img src='../../wow/static/images/icons/class/1.gif' width='18' height='18'/>";
- }
- elseif ($cclass == 2)
- {
- $class = "<img src='../../wow/static/images/icons/class/2.gif' width='18' height='18'/>";
- }
- elseif ($cclass == 3)
- {
- $class = "<img src='../../wow/static/images/icons/class/3.gif' width='18' height='18'/>";
- }
- elseif ($cclass == 4)
- {
- $class = "<img src='../../wow/static/images/icons/class/4.gif' width='18' height='18'/>";
- }
- elseif ($cclass == 5)
- {
- $class = "<img src='../../wow/static/images/icons/class/5.gif' width='18' height='18'/>";
- }
- elseif ($cclass == 6)
- {
- $class = "<img src='../../wow/static/images/icons/class/6.gif' width='18' height='18'/>";
- }
- elseif ($cclass == 7)
- {
- $class = "<img src='../../wow/static/images/icons/class/7.gif' width='18' height='18'/>";
- }
- elseif ($cclass == 8)
- {
- $class = "<img src='../../wow/static/images/icons/class/8.gif' width='18' height='18'/>";
- }
- elseif ($cclass == 9)
- {
- $class = "<img src='../../wow/static/images/icons/class/9.gif' width='18' height='18'/>";
- }
- elseif ($cclass == 11)
- {
- $class = "<img src='../../wow/static/images/icons/class/11.gif' width='18' height='18'/>";
- }
- // Alliance or Horde FLAG
-if($rrace == 2 || $rrace == 5 || $rrace == 6 || $rrace == 8 || $rrace == 9 || $rrace == 10)
-{
-$bg = "<img src='../../wow/static/images/icons/faction/ally.gif' width='18' height='18'/>";
-}
-elseif($rrace == 1 || $rrace == 3 || $rrace == 4 || $rrace == 7 || $rrace == 11 || $rrace == 22)
-{
-$bg = "<img src='../../wow/static/images/icons/faction/horde.gif' width='18' height='18'/>";
-}
+ $Total_Arena = $rows->arenaPoints;
     echo " 
 	<tr>
  <td style=''>",$i,"</td>
- <td><center>".$bg."",$name,"</center></td>
+ <td><center>",$name,"</center></td>
  <td><center>",$level,"</center></td>
  <td><center>",$Total_Honor,"</center></td>
  <td><center>",$Total_Kills,"</center></td>
- <td><center>",$class,"</center></td>
+ <td><center>",$Total_Arena,"</center></td>
  <td>",$name_realm1['realm'],"</td>
   </tr>"; 
 echo '</tr>';
