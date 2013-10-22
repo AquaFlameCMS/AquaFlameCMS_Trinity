@@ -5,7 +5,7 @@
 					   <?php echo $statNav['AllRealms']; ?>
 					</a>
 					 
-					<a class="tab-inactive">
+					<a href="<?php echo $website['root']; ?>game/status/top-honor.php" class="tab-active">
 					   <?php echo $statNav['TopHonor']; ?>
 					</a>
 					 
