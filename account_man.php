@@ -109,12 +109,12 @@ return false;
 <div class="header">
 <h2 class="subcategory"><?php echo $Man['Man3']; ?></h2>
 <h3 class="headline"><?php echo $Man['Man4']; ?></h3>
-<a href=""><img src="wow/static/local-common/images/game-icons/wowx3.png" alt="World of Warcraft®" title="" width="48" height="48" /></a>
+<a href=""><img src="wow/static/local-common/images/game-icons/wowx3.png" alt="<?php echo $website['title']; ?>" title="" width="48" height="48" /></a>
 </div>
 <div class="account-summary">
 <div class="account-management">
 <div class="section box-art" id="box-art">
-<img src="wow/static/local-common/images/game-boxes/en-gb/wowx3-big.png" alt="World of Warcraft®" title="" width="242" height="288" id="box-img" />
+<img src="wow/static/local-common/images/game-boxes/en-gb/wowx4_big.png" alt="<?php echo $website['title']; ?>" title="" width="242" height="288" id="box-img" />
 </div>
 <div class="section account-details">
 <dl>
