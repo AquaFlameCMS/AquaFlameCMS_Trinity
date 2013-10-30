@@ -307,7 +307,7 @@ try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
 							</li>
 							<li data-slots="2,15">
 								<span class="tip">
-									span class="number">2</span> <?php echo $armory['unenchanted']; ?>
+									<span class="number">2</span> <?php echo $armory['unenchanted']; ?>
 								</span>
 							</li>
 	                        </ul>
