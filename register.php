@@ -70,130 +70,127 @@ _gaq.push(['_trackPageLoadTime']);
 <div id="content">
 <div id="page-header">
 <?php
-			?>
-			<?php
-			
-          function valid_email($email) {         //Small function to validate the email
-                $result = TRUE;
-                if(!preg_match("/^([a-zA-Z0-9])+([a-zA-Z0-9\._-])*@([a-zA-Z0-9_-])+([a-zA-Z0-9\._-]+)+$/", $email)) {
-				$result = FALSE;
-                }
-                return $result;
-          }
-          
-						  if(!isset($_SESSION['username'])){
-						  if(isset($_POST['reg'])){
-						  $accountName = mysql_real_escape_string($_POST['accountName']);
-						  $accountPass = mysql_real_escape_string($_POST['accountPass']);
-						  $accountEmail = mysql_real_escape_string(stripslashes($_POST['accountEmail']));
-						  $accountEmail2 = mysql_real_escape_string(stripslashes($_POST['accountEmail2']));
-						  mysql_select_db($server_adb,$connection_setup)or die(mysql_error());
-						  $check_query = mysql_query("SELECT * FROM account WHERE username = '".$accountName."'");
-						  $check = mysql_fetch_assoc($check_query);
-						  $firstName = mysql_real_escape_string(ucfirst(strtolower($_POST['firstName'])));
-						  $lastName = mysql_real_escape_string(ucfirst($_POST['lastName']));
-						  
-						  $country= $_POST['country'];
-						  $dobD= $_POST['dobDay'];
-						  $dobM= $_POST['dobMonth'];
-						  $dobY= $_POST['dobYear'];
-						  $dob= date ("Y-m-d", strtotime($dobY."-".$dobM."-".$dobD));  //YYYY-MM-DD
-							$question= $_POST['question1'];
-							$answer= mysql_real_escape_string($_POST['answer1']);
-							
-						  if(!$check){
 
-							if($accountPass != stripslashes($_POST['accountPassc'])){
-							  $error[]=$re['error2'];
-							}
-							
-							if(empty($firstName)) $error[] = $re['error3'];
-							if(empty($lastName)) $error[] = $re['error4'];
-							
-							if(empty($accountEmail) || !valid_email($accountEmail)){
-							  $error[]=$re['error5'];
-							}
-							
-							if($accountEmail != $accountEmail2){
-							  $error[]=$re['error9'];
-							}
+function valid_email($email) //Small function to validate the email
+{
+    $result = TRUE;
+    if (!preg_match("/^([a-zA-Z0-9])+([a-zA-Z0-9\._-])*@([a-zA-Z0-9_-])+([a-zA-Z0-9\._-]+)+$/", $email)) {
+        $result = FALSE;
+    }
+    return $result;
+}
 
-							if(empty($accountPass)){
-							  $error[]=$re['error6'];
-							}
-							
-              if($dobD == '0' || $dobY == '0' || $dobM == '0'){
-							  $error[]=$re['error8'];
-							}
-							
-							if($question == 0 || empty($answer)){
-							  $error[]=$re['error10'];
-							}
-							
-							if(strlen($_POST['accountPass']) < 5 || strlen($_POST['accountPass']) > 15 ){
+if (!isset($_SESSION['username'])) {
+    if (isset($_POST['reg'])) {
+        $accountName   = mysql_real_escape_string($_POST['accountName']);
+        $accountPass   = mysql_real_escape_string($_POST['accountPass']);
+        $accountEmail  = mysql_real_escape_string(stripslashes($_POST['accountEmail']));
+        $accountEmail2 = mysql_real_escape_string(stripslashes($_POST['accountEmail2']));
+        mysql_select_db($server_adb, $connection_setup) or die(mysql_error());
+        $check_query = mysql_query("SELECT * FROM account WHERE username = '" . $accountName . "'");
+        $check       = mysql_fetch_assoc($check_query);
+        $firstName   = mysql_real_escape_string(ucfirst(strtolower($_POST['firstName'])));
+        $lastName    = mysql_real_escape_string(ucfirst($_POST['lastName']));
+        
+        $country  = $_POST['country'];
+        $dobD     = $_POST['dobDay'];
+        $dobM     = $_POST['dobMonth'];
+        $dobY     = $_POST['dobYear'];
+        $dob      = date("Y-m-d", strtotime($dobY . "-" . $dobM . "-" . $dobD)); //YYYY-MM-DD
+        $question = $_POST['question1'];
+        $answer   = mysql_real_escape_string($_POST['answer1']);
+        
+        if (!$check) {
+            
+            if ($accountPass != stripslashes($_POST['accountPassc'])) {
+                $error[] = $re['error2'];
+            }
+            
+            if (empty($firstName))
+                $error[] = $re['error3'];
+            if (empty($lastName))
+                $error[] = $re['error4'];
+            
+            if (empty($accountEmail) || !valid_email($accountEmail)) {
+                $error[] = $re['error5'];
+            }
+            
+            if ($accountEmail != $accountEmail2) {
+                $error[] = $re['error9'];
+            }
+            
+            if (empty($accountPass)) {
+                $error[] = $re['error6'];
+            }
+            
+            if ($dobD == '0' || $dobY == '0' || $dobM == '0') {
+                $error[] = $re['error8'];
+            }
+            
+            if ($question == 0 || empty($answer)) {
+                $error[] = $re['error10'];
+            }
+            
+            if (strlen($_POST['accountPass']) < 5 || strlen($_POST['accountPass']) > 15) {
                 $chars = strlen($accountPass);
-                die("<p align='center'>".$Reg['Reg6']."<br><br>".$Reg['Reg9']."<br><br>".$Reg['Reg10']."".$chars." ".$Reg['Reg11']."<br><br>".$Reg['Reg12']."<br><br>".$Reg['Reg13']."</p><p align='center'><a href='register.php'><button class='ui-button button1' type='submit' value='back' tabindex='1'><span><span>".$back['back']."</span></span></button></a></p>");
-              }
-							
-						  }else{
-							$error[]=$re['error7'];
-						  }
-              
-              ?>
-			  <?php
-              if(isset($error) && count($error) > 0){
-                echo '<div class="errors" align="center">';
-                foreach($error as $errors){
-                echo "<font color='red'>*".$errors."</font><br />";
-                }
-                echo '</div>';
-                echo '<meta http-equiv="refresh" content="3"/>';
-              }
-              else
-              {
-	      
-              $ip = getenv("REMOTE_ADDR");
+                die("<p align='center'>" . $Reg['Reg6'] . "<br><br>" . $Reg['Reg9'] . "<br><br>" . $Reg['Reg10'] . "" . $chars . " " . $Reg['Reg11'] . "<br><br>" . $Reg['Reg12'] . "<br><br>" . $Reg['Reg13'] . "</p><p align='center'><a href='register.php'><button class='ui-button button1' type='submit' value='back' tabindex='1'><span><span>" . $back['back'] . "</span></span></button></a></p>");
+            }
+            
+        } else {
+            $error[] = $re['error7'];
+        }
+        
+?>
+<?php
+        if (isset($error) && count($error) > 0) {
+            echo '<div class="errors" align="center">';
+            foreach ($error as $errors) {
+                echo "<font color='red'>*" . $errors . "</font><br />";
+            }
+            echo '</div>';
+            echo '<meta http-equiv="refresh" content="3"/>';
+        } else {
+            
+            $ip = getenv("REMOTE_ADDR");
+            
+            
+            mysql_select_db($server_adb, $connection_setup) or die(mysql_error());
+            $accinfoq = mysql_query("SELECT * FROM account WHERE username = '" . $accountName . "'");
+            $accinfo  = mysql_num_rows($accinfoq);
+            
+            if ($accinfo == 0) {
+                $sha_pass_hash = sha1(strtoupper($accountName) . ":" . strtoupper($accountPass));
+                $register_logon = mysql_query("INSERT INTO account (username,sha_pass_hash,email,last_ip,expansion) VALUES (UPPER('" . $accountName . "'),  CONCAT('" . $sha_pass_hash . "'),'" . $accountEmail . "','" . $ip . "','" . $expansion_wow . "')") or die(mysql_error());
+                $alter_pem_auto_increment = mysql_query("ALTER TABLE `rbac_account_permissions` CHANGE `accountId` `accountId` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'Account id'") or die(mysql_error());
+                $register_logon = mysql_query("INSERT INTO rbac_account_permissions (permissionId) VALUES ('199')") or die(mysql_error());
+                $alter_pem_auto_increment = mysql_query("ALTER TABLE `rbac_account_permissions` CHANGE `accountId` `accountId` INT(10) UNSIGNED NOT NULL COMMENT 'Account id'") or die(mysql_error());
+                mysql_select_db($server_adb, $connection_setup) or die(mysql_error());
+                $accountinfo = mysql_fetch_assoc(mysql_query("SELECT * FROM account WHERE username = UPPER('" . $accountName . "')"));
+                mysql_select_db($server_db, $connection_setup) or die(mysql_error());
+                $register_cms = mysql_query("INSERT INTO users (id,class,firstName,lastName,registerIp,country,birth,quest1,ans1) VALUES ('" . mysql_real_escape_string($accountinfo['id']) . "','0','" . $firstName . "','" . $lastName . "','" . $ip . "','" . $country . "','" . $dob . "','" . $question . "',UPPER('" . $answer . "'))");
                 
-				
-	            mysql_select_db($server_adb,$connection_setup)or die(mysql_error());
-                $accinfoq = mysql_query("SELECT * FROM account WHERE username = '".$accountName."'");
-                $accinfo = mysql_num_rows($accinfoq);
-          
-                if ($accinfo == 0)
-                {
-                    $sha_pass_hash= sha1(strtoupper($accountName ) . ":" . strtoupper($accountPass));
-                    $register_logon = mysql_query("INSERT INTO account (username,sha_pass_hash,email,last_ip,expansion) VALUES (UPPER('".$accountName."'),  CONCAT('".$sha_pass_hash."'),'".$accountEmail."','".$ip."','".$expansion_wow."')")or die(mysql_error());
-					$register_logon = mysql_query("INSERT INTO rbac_account_permissions (permissionId) VALUES ('199')")or die(mysql_error());
-
-                    mysql_select_db($server_adb,$connection_setup)or die(mysql_error());
-					          $accountinfo = mysql_fetch_assoc(mysql_query("SELECT * FROM account WHERE username = UPPER('".$accountName."')"));
-                    mysql_select_db($server_db,$connection_setup)or die(mysql_error());
-                    $register_cms = mysql_query("INSERT INTO users (id,class,firstName,lastName,registerIp,country,birth,quest1,ans1) VALUES ('".mysql_real_escape_string($accountinfo['id'])."','0','".$firstName."','".$lastName."','".$ip."','".$country."','".$dob."','".$question."',UPPER('".$answer."'))");
-             
-                    if ($register_logon == true && $register_cms == true)
-                    {
-                        echo '<div class="alert-page" align="center">';
-                        echo '<div class="alert-page-message success-page">
-								<p class="text-green title"><strong>'.$re['scc1'].'</strong></p>
-								<p class="caption">'.$re['scc2'].'</p>
-								<p class="caption"><a href="account_man.php">'.$re['goPanel'].'</a></p>
+                if ($register_logon == true && $register_cms == true) {
+                    echo '<div class="alert-page" align="center">';
+                    echo '<div class="alert-page-message success-page">
+								<p class="text-green title"><strong>' . $re['scc1'] . '</strong></p>
+								<p class="caption">' . $re['scc2'] . '</p>
+								<p class="caption"><a href="account_man.php">' . $re['goPanel'] . '</a></p>
 								</div>';
-                        echo '</div>';
-                        $_SESSION['username'] = $accountName;
-                        echo '<meta http-equiv="refresh" content="3;url=account_man.php"/>';
-                    }
-                    else{ //MODIFIED TO DELETE THE ACCOUNT IF SOMETHING IS WRONG DURING THE REGISTRATION
-                        mysql_select_db($server_adb,$connection_setup)or die(mysql_error());
-                        $accdel= mysql_query("DELETE FROM account WHERE username = '".$accountName."'");
-                        echo '<div class="errors" align="center"><font color="red">'.$re['error1'].'</font><br><br />';
-                        echo'<a href="register.php"><button class="ui-button button1"  id="back" tabindex="1" /><span><span>'.$re['back'].'</span></span></button></a></div>'; 
-                    }
+                    echo '</div>';
+                    $_SESSION['username'] = $accountName;
+                    echo '<meta http-equiv="refresh" content="3;url=account_man.php"/>';
+                } else { //MODIFIED TO DELETE THE ACCOUNT IF SOMETHING IS WRONG DURING THE REGISTRATION
+                    mysql_select_db($server_adb, $connection_setup) or die(mysql_error());
+                    $accdel = mysql_query("DELETE FROM account WHERE username = '" . $accountName . "'");
+                    echo '<div class="errors" align="center"><font color="red">' . $re['error1'] . '</font><br><br />';
+                    echo '<a href="register.php"><button class="ui-button button1"  id="back" tabindex="1" /><span><span>' . $re['back'] . '</span></span></button></a></div>';
                 }
-              }
-              ?>
-			  <?php
+            }
+        }
+?>
+<?php
 						  }else{
-						  ?>
+?>
 <p class="privacy-message"><b><?php echo $re['re2']; ?><?php echo $website['title']; ?> <?php echo $re['re3']; ?><a href="" onclick="window.open(this.href); return false;"><?php echo $re['re4']; ?></a>.</p>
 </div>
 <form action="" method="post" id="creation">
