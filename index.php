@@ -12,6 +12,8 @@ $page_cat = "home";
 	<title><?php echo $website['title']; ?></title>
 	<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
 	<meta name="viewport" content="width=device-width">
+	<meta name="description" content="<?php echo $website['description']; ?>">
+    <meta name="keywords" content="<?php echo $website['keywords']; ?>">
 	<link rel="shortcut icon" href="wow/static/local-common/images/favicons/wow.png" type="image/x-icon">
 	<link rel="search" type="application/opensearchdescription+xml" href="http://eu.battle.net/en-gb/data/opensearch" title="Battle.net Search">
 	<link rel="stylesheet" type="text/css" media="all" href="wow/static/local-common/css/common.css?v15">

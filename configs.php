@@ -18,7 +18,8 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  **/
 
-if(!isset($_SESSION)) session_start();
+if (!isset($_SESSION))
+    session_start();
 
 /*
 |--------------------------------------------------------------------------
@@ -27,15 +28,34 @@ if(!isset($_SESSION)) session_start();
 | Default Locale Web
 |
 */
-if(isset($_GET['Local'])) $lang = $_GET['Local'];
-else if(isset($_SESSION['Local'])) $lang = $_SESSION['Local'];
-if(empty($lang)) $lang = 'en-us';
+if (isset($_GET['Local']))
+    $lang = $_GET['Local'];
+else if (isset($_SESSION['Local']))
+    $lang = $_SESSION['Local'];
+if (empty($lang))
+    $lang = 'en-us';
 
 $language = $lang;
-$langs = Array("en-us" => null, "ro-ro" => null, "en-gb" => null, "it-it" => null, "de-de" => null, "es-es" => null, "bu-bg" => null, "es-mx" => null, "gr-gr" => null, "ru-ru" => null, "zh-cn" => null, "zh-tw" => null, "fr-fr" => null);
+$langs    = Array(
+    "en-us" => null,
+    "ro-ro" => null,
+    "en-gb" => null,
+    "it-it" => null,
+    "de-de" => null,
+    "es-es" => null,
+    "bu-bg" => null,
+    "es-mx" => null,
+    "gr-gr" => null,
+    "ru-ru" => null,
+    "zh-cn" => null,
+    "zh-tw" => null,
+    "fr-fr" => null
+);
 
-if(array_key_exists($lang,$langs))require_once("lang/".$lang.".php");
-else require_once("/lang/en-us.php");
+if (array_key_exists($lang, $langs))
+    require_once("lang/" . $lang . ".php");
+else
+    require_once("/lang/en-us.php");
 $_SESSION['Local'] = $language;
 
 /*
@@ -50,9 +70,9 @@ $_SESSION['Local'] = $language;
 | 	$serverport	= "Port";
 */
 $serveraddress = "127.0.0.1";
-$serveruser = "root";
-$serverpass = "password";
-$serverport	= "3306";
+$serveruser    = "root";
+$serverpass    = "password";
+$serverport    = "3306";
 
 /*
 |--------------------------------------------------------------------------
@@ -68,7 +88,7 @@ $serverport	= "3306";
 $server_adb = "sky_auth";
 $server_wdb = "sky_world";
 $server_cdb = "sky_characters";
-$server_db = "website";
+$server_db  = "website";
 
 /*
 |--------------------------------------------------------------------------
@@ -87,9 +107,9 @@ $expansion_wow = "3";
 |--------------------------------------------------------------------------
 |
 */
-$website['realm'] = "Set Realmlist Your_Realmlist";
+$website['realm']     = "Set Realmlist Your_Realmlist";
 $name_realm1['realm'] = "Realm_Name";
-$mysql_cod = 'cp1251';
+$mysql_cod            = 'cp1251';
 
 /*
 |--------------------------------------------------------------------------
@@ -101,21 +121,24 @@ $mysql_cod = 'cp1251';
 |
 */
 $comun_link['Facebook'] = "http://www.facebook.com/";
-$comun_link['Twitter'] = "http://twitter.com/";
-$comun_link['Youtube'] = "http://www.youtube.com/";
-$comun_link['Reddit'] = "http://www.reddit.com/";
+$comun_link['Twitter']  = "http://twitter.com/";
+$comun_link['Youtube']  = "http://www.youtube.com/";
+$comun_link['Reddit']   = "http://www.reddit.com/";
 
 /*
 |--------------------------------------------------------------------------
-| Server name
+| Server name & Information
 |--------------------------------------------------------------------------
 |
 | Your Server Name Title.
 | For example: "AquaFlameCMS 1.0"
 |
-| Your Server Slogan
-| For example: "AquaFlameCMS 1.0, the best of the best!"
-| Por Ejemplo: nombre del servidor = 'World of Warcraft'
+| Server & Website Description
+| For example: "AquaFlameCMS 1.0, the best of the best server private!"
+|
+| Your keywords
+| Type your keywords for the web
+| For example: "AquaFlameCMS 1.0 , The Best CMS, Private Server, World Of WarCraft, WoW"
 |
 | Address
 | URL to your Server. Typically this will be your base URL,
@@ -128,10 +151,11 @@ $comun_link['Reddit'] = "http://www.reddit.com/";
 | For example: site is available at http://example.org/AquaFlameCMS_Trinity/
 | That means that you should set this variable as '/AquaFlameCMS_Trinity/'.
 */
-$website['title'] = "AquaFlameCMS 1.0";
-$website['slogan'] = "AquaFlameCMS 1.0, the best of the best!";
-$website['address'] = "http://localhost";
-$website['root'] = "/";
+$website['title']       = "AquaFlameCMS 1.0";
+$website['description'] = "AquaFlameCMS 1.0, the best of the best!";
+$website['keywords']    = "AquaFlameCMS 1.0, The Best CMS";
+$website['address']     = "http://localhost";
+$website['root']        = "/";
 
 /*
 |--------------------------------------------------------------------------
@@ -145,31 +169,31 @@ $website['root'] = "/";
 |
 */
 $maintenance = false;
-if($maintenance == true){
-  if($bucle_mant == 0 ){                        
-    header('Location: maintenance.php');
-  }
-}else{
-
-/*
-|--------------------------------------------------------------------------
-| No edit
-|--------------------------------------------------------------------------
-| From now on, we recommend not to change the code to maintain default operation script.
-| All changes must be made on data found above.
-|
-*/
-$teamsLimit = 50;				// Number of team to display on each page
-
-$connection_setup = mysql_connect($serveraddress . ':' . $serverport,$serveruser,$serverpass)or die(mysql_error());
-mysql_select_db($server_db,$connection_setup)or die(mysql_error());
-
-if(isset($_SESSION['username'])){
-	$username = mysql_real_escape_string($_SESSION['username']);
-	$account_information = mysql_fetch_assoc(mysql_query("SELECT * FROM $server_adb.account WHERE username = '".$username."'"));
-	$account_extra = mysql_fetch_assoc(mysql_query("SELECT * FROM $server_db.users WHERE id = '".$account_information['id']."'"));
-	mysql_select_db($server_db,$connection_setup)or die(mysql_error());
-}
-###########
+if ($maintenance == true) {
+    if ($bucle_mant == 0) {
+        header('Location: maintenance.php');
+    }
+} else {
+    
+    /*
+    |--------------------------------------------------------------------------
+    | No edit
+    |--------------------------------------------------------------------------
+    | From now on, we recommend not to change the code to maintain default operation script.
+    | All changes must be made on data found above.
+    |
+    */
+    $teamsLimit = 50; // Number of team to display on each page
+    
+    $connection_setup = mysql_connect($serveraddress . ':' . $serverport, $serveruser, $serverpass) or die(mysql_error());
+    mysql_select_db($server_db, $connection_setup) or die(mysql_error());
+    
+    if (isset($_SESSION['username'])) {
+        $username            = mysql_real_escape_string($_SESSION['username']);
+        $account_information = mysql_fetch_assoc(mysql_query("SELECT * FROM $server_adb.account WHERE username = '" . $username . "'"));
+        $account_extra       = mysql_fetch_assoc(mysql_query("SELECT * FROM $server_db.users WHERE id = '" . $account_information['id'] . "'"));
+        mysql_select_db($server_db, $connection_setup) or die(mysql_error());
+    }
+    ###########
 }
 ?>

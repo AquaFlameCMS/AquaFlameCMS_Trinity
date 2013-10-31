@@ -10,6 +10,8 @@ $page_cat = "account";
 <head>
 <title><?php echo $website['title']; ?><?php echo $Log['Log']; ?></title>
 <meta http-equiv="imagetoolbar" content="false"/>
+<meta name="description" content="<?php echo $website['description']; ?>">
+<meta name="keywords" content="<?php echo $website['keywords']; ?>">
 <link rel="shortcut icon" href="wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
 <link rel="stylesheet" href="wow/static/local-common/css/common.css?v22"/>
 <link rel="shortcut icon" href="wow/static/_themes/bam/img/favicon.ico" type="image/x-icon"/>

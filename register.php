@@ -11,6 +11,8 @@ $page_cat = "account";
 <html lang="en-gb">
 <head>
 <title><?php echo $re['re']; ?> <?php echo $website['title']; ?></title>
+<meta name="description" content="<?php echo $website['description']; ?>">
+<meta name="keywords" content="<?php echo $website['keywords']; ?>">
 <link rel="shortcut icon" href="wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
 <link rel="stylesheet" media="all" href="wow/static/local-common/css/common.css" />
 <link rel="stylesheet" media="all" href="wow/static/css/bnet.css" />

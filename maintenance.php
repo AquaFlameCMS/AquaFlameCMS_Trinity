@@ -12,6 +12,8 @@ require_once("configs.php");
 <![endif]-->
 <meta name="robots" content="none" />
 <meta http-equiv="refresh" content="120" />
+<meta name="description" content="<?php echo $website['description']; ?>">
+<meta name="keywords" content="<?php echo $website['keywords']; ?>">
 <link rel="shortcut icon" href="wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
 <!--[if LT IE 9]>
 <link rel="shortcut icon" type="image/x-icon" href="images/root.ico" />

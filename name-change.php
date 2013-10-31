@@ -16,6 +16,8 @@ if(!isset($_POST['newname'])) header('Location: account_log.php'); else if(!ctyp
 <title><?php echo $website['title']; ?> - Race Change</title>
 <meta content="false" http-equiv="imagetoolbar" />
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+<meta name="description" content="<?php echo $website['description']; ?>">
+<meta name="keywords" content="<?php echo $website['keywords']; ?>">
 <link rel="shortcut icon" href="wow/static/local-common/images/favicons/bam.ico" type="image/x-icon"/>
 <link rel="stylesheet" href="wow/static/local-common/css/management/common.css" />
 <link rel="stylesheet" href="account/css/bnet.css" />

@@ -15,6 +15,8 @@ $character = Factory_Armory::createCharacter($_GET['name']);
 <head>
 <title><?php echo $website['title']; ?> - Armory</title>
 <meta content="false" http-equiv="imagetoolbar" />
+<meta name="description" content="<?php echo $website['description']; ?>">
+<meta name="keywords" content="<?php echo $website['keywords']; ?>">
 <link rel="shortcut icon" href="wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
 <link rel="stylesheet" href="wow/static/local-common/css/common.css" />
 <link title="World of Warcraft - News" href="wow/en/feed/news" type="application/atom+xml" rel="alternate"/>

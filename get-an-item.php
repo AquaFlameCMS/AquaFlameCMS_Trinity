@@ -16,6 +16,8 @@ if (!isset($_SESSION['username'])) {
 <title><?php echo $website['title']; ?> - Vote Shop</title>
 <meta content="false" http-equiv="imagetoolbar" />
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+<meta name="description" content="<?php echo $website['description']; ?>">
+<meta name="keywords" content="<?php echo $website['keywords']; ?>">
 <link rel="shortcut icon" href="wow/static/local-common/images/favicons/bam.ico" type="image/x-icon"/>
 <link rel="stylesheet" media="all" href="wow/static/local-common/css/common.css?v39" />
 <link rel="stylesheet" media="all" href="wow/static/css/bnet.css?v26" />

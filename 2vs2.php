@@ -11,6 +11,8 @@ require_once("configs.php");
 <head>
 <title><?php echo $website['title']; ?> - Status</title>
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+<meta name="description" content="<?php echo $website['description']; ?>">
+<meta name="keywords" content="<?php echo $website['keywords']; ?>">
 <link rel="shortcut icon" href="wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
 <link rel="stylesheet" href="wow/static/local-common/css/common.css?v15" />
 <link rel="stylesheet" href="wow/static/css/wow.css?v7" />
