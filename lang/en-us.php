@@ -1117,6 +1117,7 @@ $appear['5'] = "Remember that Race Change is more powerful than Customization an
 $appear['6'] = "Account Name";
 $appear['7'] = "Select a Character";
 $appear['8'] = "Purchase";
+$appear['9'] = "Cancelar";
 //Finish Change Character Appearance
 
 //Start Change Character Faction

@@ -116,7 +116,7 @@ $page_cat = "home";
 						
 						<div class="featured-news">
 							<?php
-							$articles_query = mysql_query("SELECT * FROM news ORDER BY DATE desc LIMIT 4")or print("No Articles");
+							$articles_query = mysql_query("SELECT * FROM news ORDER BY DATE ASC LIMIT 4")or print("No Articles");
 							while($articles = mysql_fetch_array($articles_query)){
 							?>
 							<div class="featured">
@@ -141,7 +141,7 @@ $page_cat = "home";
 							}
 							
 							$news_first = $new ? $new : 9999999999;
-							$news_query = ("SELECT * FROM news WHERE id <= '".$news_first."' ORDER BY `id` desc LIMIT 6");
+							$news_query = ("SELECT * FROM news WHERE id <= '".$news_first."' ORDER BY `id` ASC LIMIT 6");
 							$news_query = mysql_query($news_query);
 							$counter = 1;
 							
