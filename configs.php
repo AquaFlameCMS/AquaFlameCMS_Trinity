@@ -18,8 +18,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  **/
 
-if (!isset($_SESSION))
-    session_start();
+if (!isset($_SESSION)) session_start();
 
 /*
 |--------------------------------------------------------------------------

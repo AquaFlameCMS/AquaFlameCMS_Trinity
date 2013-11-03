@@ -1264,4 +1264,13 @@ $game['79']   = "Intensificación del Conflicto (5.3)";
 $game['80']   = "El Rey del Trueno (5.2)";
 // Game Finish
 
+//Start Error page
+$Errors['400'] = "400";
+$Errors['401'] = "401";
+$Errors['403'] = "403";
+$Errors['404'] = "404";
+$Errors['500'] = "500";
+$Errors['503'] = "503";
+//Finish Error page
+
 /* End of file es-mx.php */

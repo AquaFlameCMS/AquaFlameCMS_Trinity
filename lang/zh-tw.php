@@ -1263,4 +1263,13 @@ $game['79']   = "Escalation (5.3)";
 $game['80']   = "The Thunder King (5.2)";
 // Game Finish
 
+//Start Error page
+$Errors['400'] = "400";
+$Errors['401'] = "401";
+$Errors['403'] = "403";
+$Errors['404'] = "404";
+$Errors['500'] = "500";
+$Errors['503'] = "503";
+//Finish Error page
+
 /* End of file zh-tw.php */
