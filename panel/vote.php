@@ -67,19 +67,32 @@
 	?>
 <span class="clear"><!-- --></span>
 <div class="sidebar-module " id="sidebar-auctions" style="">
-	<div class="sidebar-content">
-		<div class="sidebar-cell"></div>
-		<div class="sidebar-cell"></div>
-		<span class="clear"><!-- --></span>
-		<ul class="sidebar-list">
-			<li>
-				<span class="float-right">
-					<span class="icon-silver"><?php echo $account_extra['vote_points']; ?></span>
-				</span>
-				<a><?php echo $Vote['Earned']; ?></a>
-			</li>
-		</ul>
-	</div>
+<div class="sidebar-content">
+<div class="sidebar-cell">
+<a><?php echo $Vote['Earned']; ?></a>
+<ul>
+<li>Gold <a href="#"><span>0</span></a></li>
+<li>Silver <a href="#"><span><?php echo $account_extra['vote_points']; ?></span></a></li>
+</ul>
+</div>		
+<div class="sidebar-cell">
+<a>Can Earn</a>
+<ul>
+<li>Gold <a href="#"><span>0</span></a></li>
+<li>Silver <a href="#"><span>0</span></a></li>	
+</ul>
+</div>
+<span class="clear"><!-- --></span>
+<ul class="sidebar-list">
+<li>
+<span class="float-right">
+<span class="icon-gold">--</span>
+<span class="icon-silver"><?php echo $account_extra['vote_points']; ?></span>
+</span>
+<?php echo $Vote['Earned']; ?>
+</li>
+</ul>
+</div>
 </div>
 </div>
 </div>
