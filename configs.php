@@ -17,7 +17,8 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  **/
 
-if (!isset($_SESSION)) session_start();
+if (!isset($_SESSION))
+    session_start();
 
 /*
 |--------------------------------------------------------------------------
@@ -69,7 +70,7 @@ $_SESSION['Local'] = $language;
 */
 $serveraddress = "127.0.0.1";
 $serveruser    = "root";
-$serverpass    = "oneluiz1992";
+$serverpass    = "password";
 $serverport    = "3306";
 
 /*
@@ -83,9 +84,9 @@ $serverport    = "3306";
 | @access public
 |
 */
-$server_adb = "auth";
-$server_wdb = "world";
-$server_cdb = "characters";
+$server_adb = "sky_auth";
+$server_wdb = "sky_world";
+$server_cdb = "sky_characters";
 $server_db  = "website";
 
 /*
