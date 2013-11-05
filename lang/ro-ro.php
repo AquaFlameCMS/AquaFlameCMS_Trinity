@@ -347,6 +347,8 @@ $Man['Man75']  = "referrals remaining.";
 $Man['Man76']  = "Level together and faster";
 $Man['Man77']  = "Gain rewards if your friend subscribes";
 $Man['Man78']  = "Get a unique two-person mount";
+$Man['Man79']  = "Character Name Change";
+$Man['Man80']  = "Change your characters' names.";
 // Finishing Account Man
 
 // Starting Header acount
@@ -808,16 +810,25 @@ $armory['Faction0']    = "Aliance";
 //Finish Armory
 
 //Others
-$globalInfoVar['Anonymous'] = "Anonymous";
-$status['chars']            = "Characters";
-$status['low']              = "Low";
-$status['high']             = "High";
-$status['medium']           = "Medium";
-$status['population']       = "Population";
-$status['newP']             = "New Players";
-$status['new']              = "New";
-$status['noResults']        = "There is not match founds for this parameters.";
-$guild['Guilds']            = "Guilds";
+if (isset($_SESSION['username']))
+    $globalInfoVar['Anonymous'] = $_SESSION['username'];
+else
+$globalInfoVar['Anonymous'] = 'Anonymous';
+$status['chars']        = "Characters";
+$status['low']          = "Low";
+$status['high']         = "High";
+$status['medium']       = "Medium";
+$status['population']   = "Population";
+$status['newP']         = "New Players";
+$status['new']          = "New";
+$status['noResults']    = "There is not match founds for this parameters.";
+$guild['Guilds']        = "Guilds";
+$arena['Teams']         = "Arena Teams";
+$statNav['AllRealms']   = "All Realms";
+$statNav['TopHonor']    = "Top Honor";
+$statNav['TopConquest'] = "Top Conquest";
+$Index['NoArticles']    = "No Articles";
+$Index['By']            = "By";
 //Finish Others
 
 //Search

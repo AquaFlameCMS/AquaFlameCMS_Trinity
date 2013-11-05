@@ -176,7 +176,7 @@ $page_cat = "home";
 								
 								echo'
 									<div class="by-line">
-									'.$Index['By'].' <a href="#">'.$posterInfo['firstName'].'</a><span class="spacer"> // </span> '.ago(strtotime($news['date'])).'
+									'.$Index['By'].' <a href="#">'.$posterInfo['firstName'].'</a><span class="spacer"></span> '.ago(strtotime($news['date'])).'
 									<a href="news.php?id='.$news['id'].'#comments" class="comments-link">'.$news['comments'].'</a>
 									</div>
 									

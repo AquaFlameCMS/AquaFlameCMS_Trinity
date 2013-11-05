@@ -2,7 +2,7 @@
 include("../configs.php");
 $page_cat = "security";
 if (!isset($_SESSION['username'])) {
-        header('Location: account_log.php');		
+        header('Location: '.$website['root'].'account_log.php');		
 }
 ?>
 
@@ -11,8 +11,9 @@ if (!isset($_SESSION['username'])) {
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<html lang="en-gb">
 <head>
-<title><?php echo $website['title']; ?><?php echo $name['1']; ?></title>
+<title><?php echo $website['title']; ?><?php echo $faction['1']; ?></title>
 <meta content="false" http-equiv="imagetoolbar" />
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
 <meta name="description" content="<?php echo $website['description']; ?>">
@@ -76,16 +77,16 @@ _gaq.push(['_trackPageLoadTime']);
 <div id="content">
 <div id="page-header">
 <span class="float-right"><span class="form-req">*</span> <?php echo $Reg['Reg']; ?></span>
-<h2 class="subcategory"><?php echo $name['2']; ?></h2>
+<h2 class="subcategory"><?php echo $faction['2']; ?></h2>
 <?php
-  $price = mysql_fetch_assoc(mysql_query("SELECT * FROM $server_db.prices WHERE service = 'name-change'"));
-   if ($price['id']=='' || ($price['vp']==0 && $price['dp']==0)){
+  $price = mysql_fetch_assoc(mysql_query("SELECT * FROM $server_db.prices WHERE service = 'faction-change'"));
+  if ($price['id']=='' || ($price['vp']==0 && $price['dp']==0)){
    $free = 1;
   }else{
    $free = 0;
   }
 ?>
-<h3 class="headline"><?php echo $name['3']; ?>
+<h3 class="headline"><?php echo $faction['3']; ?>
 <?php
 if ($free!= 1 && ($price['vp'] > 0 || $price['dp'] > 0)){
   echo ' (';
@@ -102,8 +103,7 @@ if ($free!= 1 && ($price['vp'] > 0 || $price['dp'] > 0)){
 </h3>
 </div>
 <div id="page-content" class="page-content">
-<p><?php echo $Reg['Reg3']; ?><b><?php echo $Reg['Reg4']; ?></b><?php echo $name['4']; ?></p>
-<p><?php echo $name['5']; ?></p>
+<p><?php echo $Reg['Reg3']; ?><b><?php echo $Reg['Reg4']; ?></b><?php echo $faction['4']; ?></p>
 <form autocomplete="off" method="post" action="<?php echo $_SERVER['PHP_SELF'] ?>">
 <input type="hidden" name="csrftoken" value="" />
 <?php 
@@ -119,9 +119,9 @@ if(isset($_POST['submit']))
 		$method1="vote_points";
 		$method2="vote points";
 	}
-
+	
 	$buscarpuntos = mysql_fetch_array(mysql_query("SELECT * FROM $server_db.users WHERE id='".$account_information['id']."'"));
-
+	
 	$character = intval($_POST['character']);
 
 	$errors = Array();
@@ -131,15 +131,15 @@ if(isset($_POST['submit']))
 	$check = mysql_query("SELECT * FROM $server_cdb.characters WHERE guid = '".$character."' AND account = '".$account_information['id']."'");
 
 	if(empty($character) || mysql_num_rows($check) < 1) $errors[] = "You have not selected an eligible character for name change.";
-
+	
 	if ($buscarpuntos[$method1]<$price[$method]) $errors[] = "You dont have enough ".$method2;
 
 	if(count($errors) < 1){
 		$total=$buscarpuntos[$method1]-$price[$method];
 		$substract = mysql_query("UPDATE $server_db.users SET $method1=$total WHERE id='".$account_information['id']."'");
-		$change = mysql_query("UPDATE $server_cdb.characters SET at_login = '1' WHERE guid = '".$character."'");
+		$change = mysql_query("UPDATE $server_cdb.characters SET at_login = '64' WHERE guid = '".$character."'");
 		echo '<p align="center"><font color="green"><strong>Succes!</strong></font><br/>';
-		echo "<strong>You can now change your Character Name logining ingame.</strong>";
+		echo "<strong>You can now change your Character Faction logining ingame.</strong>";
 		echo '</p>';
 		echo '<meta http-equiv="refresh" content="2;url=../account_man.php"/>';
 
@@ -149,7 +149,7 @@ if(isset($_POST['submit']))
 			echo $error . '<br>';
 		}
 		echo '</p>';
-		echo '<meta http-equiv="refresh" content="2;url=change_name.php"/>';
+		echo '<meta http-equiv="refresh" content="2;url=change_faction.php"/>';
 
 	}
 
@@ -158,7 +158,7 @@ else{
 ?>
 	<div class="form-row required">
 		<label for="firstname" class="label-full ">
-			<strong><?php echo $name['6']; ?></strong>
+			<strong><?php echo $faction['5']; ?></strong>
 			<span class="form-required">*</span>
 		</label>
 		<input type="text" id="firstname" name="account" value="<?php echo strtolower($_SESSION['username']); ?>" class=" input border-5 glow-shadow-2 form-disabled" maxlength="16" tabindex="1" />
@@ -166,7 +166,7 @@ else{
 
 	<div class="form-row required">
 		<label for="character" class="label-full ">
-			<strong><?php echo $name['7']; ?></strong>
+			<strong><?php echo $faction['6']; ?></strong>
 			<span class="form-required">*</span>
 		</label>
 		
@@ -210,10 +210,10 @@ else{
 		elseif($online == 1) echo '*One of your characters is online<br><br><button class="ui-button button1 disabled" type="submit" name="submit" id="settings-submit" value="Continue" tabindex="1" disabled="disabled">';
     else echo '<button class="ui-button button1" type="submit" name="submit" id="settings-submit" value="Purchase" tabindex="1">';
 		?>
-		<span><span><?php echo $name['8']; ?></span></span>
+		<span><span><?php echo $faction['7']; ?></span></span>
 		</button>
 		
-		<a class="ui-cancel" href="../account_man.php" tabindex="1"><span><?php echo $name['9']; ?></span></a>
+		<a class="ui-cancel" href="../account_man.php" tabindex="1"><span><?php echo $faction['8']; ?></span></a>
 	</fieldset>
 
 </form>
@@ -233,13 +233,13 @@ var xsToken = 'b213c993-d61d-4957-9141-9da399fd7d54';
 var Msg = {
 support: {
 ticketNew: 'Ticket {0} was created.',
-ticketStatus: 'Ticket {0}?s status changed to {1}.',
+ticketStatus: 'Ticket {0}’s status changed to {1}.',
 ticketOpen: 'Open',
 ticketAnswered: 'Answered',
 ticketResolved: 'Resolved',
 ticketCanceled: 'Cancelled',
 ticketArchived: 'Archived',
-ticketInfo: 'Need Info',
+ticketInfo: 'Need Info',
 ticketAll: 'View All Tickets'
 },
 cms: {
@@ -277,10 +277,10 @@ urlPrompt: 'URL Address:'
 },
 ui: {
 viewInGallery: 'View in gallery',
-loading: 'Loading?',
+loading: 'Loading…',
 unexpectedError: 'An error has occurred',
-fansiteFind: 'Find this on?',
-fansiteFindType: 'Find {0} on?',
+fansiteFind: 'Find this on…',
+fansiteFindType: 'Find {0} on…',
 fansiteNone: 'No fansites available.'
 },
 grammar: {
@@ -311,9 +311,9 @@ pet: 'pet'
 };
 //]]>
 </script>
-<script src="wow/static/js/bam.js?v21"></script>
-<script src="wow/static/local-common/js/tooltip.js?v22"></script>
-<script src="wow/static/local-common/js/menu.js?v22"></script>
+<script src="../wow/static/js/bam.js?v21"></script>
+<script src="../wow/static/local-common/js/tooltip.js?v22"></script>
+<script src="../wow/static/local-common/js/menu.js?v22"></script>
 <script type="text/javascript">
 $(function() {
 Menu.initialize();
@@ -322,11 +322,11 @@ Locale.dataPath = 'data/i18n.frag.xml';
 });
 </script>
 <!--[if lt IE 8]>
-<script type="text/javascript" src="wow/static/local-common/js/third-party/jquery.pngFix.pack.js?v22"></script>
+<script type="text/javascript" src="../wow/static/local-common/js/third-party/jquery.pngFix.pack.js?v22"></script>
 <script type="text/javascript">$('.png-fix').pngFix();</script>
 <![endif]-->
-<script src="wow/static/js/settings/settings.js?v21"></script>
-<script src="wow/static/js/settings/password.js?v21"></script>
+<script src="../wow/static/js/settings/settings.js?v21"></script>
+<script src="../wow/static/js/settings/password.js?v21"></script>
 <script type="text/javascript">
 //<![CDATA[
 Core.load("wow/static/local-common/js/overlay.js?v22");

@@ -1,9 +1,9 @@
 <?php
-include("configs.php");
+include("../configs.php");
 $page_cat = "settings";
 // Check, if username session is NOT set then this page will jump to login page
 if (!isset($_SESSION['username'])) {
-        header('Location: account_log.php');		
+        header('Location: '.$website['root'].'account_log.php');		
 }
 ?>
 
@@ -19,13 +19,13 @@ if (!isset($_SESSION['username'])) {
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
 <meta name="description" content="<?php echo $website['description']; ?>">
 <meta name="keywords" content="<?php echo $website['keywords']; ?>">
-<link rel="shortcut icon" href="wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
-<link rel="stylesheet" media="all" href="wow/static/local-common/css/management/common.css" />
-<link rel="stylesheet" media="all" href="wow/static/css/bnet.css" />
-<link rel="stylesheet" media="print" href="wow/static/css/bnet-print.css" />
-<script src="wow/static/local-common/js/third-party/jquery-1.4.4-p1.min.js"></script>
-<script src="wow/static/local-common/js/core.js"></script>
-<script src="wow/static/local-common/js/tooltip.js"></script>
+<link rel="shortcut icon" href="../wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
+<link rel="stylesheet" media="all" href="../wow/static/local-common/css/management/common.css" />
+<link rel="stylesheet" media="all" href="../wow/static/css/bnet.css" />
+<link rel="stylesheet" media="print" href="../wow/static/css/bnet-print.css" />
+<script src="../wow/static/local-common/js/third-party/jquery-1.4.4-p1.min.js"></script>
+<script src="../wow/static/local-common/js/core.js"></script>
+<script src="../wow/static/local-common/js/tooltip.js"></script>
 <!--[if IE 6]> <script type="text/javascript">
 //<![CDATA[
 try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
@@ -60,8 +60,8 @@ _gaq.push(['_trackPageLoadTime']);
 <div id="layout-top">
 <div class="wrapper">
 <div id="header">
-<?php include("functions/header_account.php"); ?>
-<?php include("functions/footer_man_nav.php"); ?>
+<?php include("../functions/header_account.php"); ?>
+<?php include("../functions/footer_man_nav.php"); ?>
 </div>
 </div>
 </div>
@@ -169,7 +169,7 @@ function pop(action){
 <div class="note-arrow"></div> 
 </div>
 <a href="javascript:;" class="note-toggler" rel="newPassword-note" onclick="pop('open');">
-<img src="wow/static/images/icons/tooltip-help.gif" alt="?" width="16" height="16" />
+<img src="../wow/static/images/icons/tooltip-help.gif" alt="?" width="16" height="16" />
 </a>
 </div>
 </div>
@@ -201,7 +201,7 @@ function pop(action){
 </div>
 </div>
 <div id="layout-bottom">
-<?php include("functions/footer_man.php"); ?>
+<?php include("../functions/footer_man.php"); ?>
 </div>
 <script type="text/javascript">
 //<![CDATA[
@@ -287,9 +287,9 @@ pet: 'pet'
 };
 //]]>
 </script>
-<script src="wow/static/js/bam.js?v21"></script>
-<script src="wow/static/local-common/js/tooltip.js?v22"></script>
-<script src="wow/static/local-common/js/menu.js?v22"></script>
+<script src="../wow/static/js/bam.js?v21"></script>
+<script src="../wow/static/local-common/js/tooltip.js?v22"></script>
+<script src="../wow/static/local-common/js/menu.js?v22"></script>
 <script type="text/javascript">
 $(function() {
 Menu.initialize();
@@ -298,11 +298,11 @@ Locale.dataPath = 'data/i18n.frag.xml';
 });
 </script>
 <!--[if lt IE 8]>
-<script type="text/javascript" src="wow/static/local-common/js/third-party/jquery.pngFix.pack.js?v22"></script>
+<script type="text/javascript" src="../wow/static/local-common/js/third-party/jquery.pngFix.pack.js?v22"></script>
 <script type="text/javascript">$('.png-fix').pngFix();</script>
 <![endif]-->
-<script type="text/javascript" src="wow/static/js/settings/settings.js?v21"></script>
-<script type="text/javascript" src="wow/static/js/settings/password.js?v21"></script>
+<script type="text/javascript" src="../wow/static/js/settings/settings.js?v21"></script>
+<script type="text/javascript" src="../wow/static/js/settings/password.js?v21"></script>
 <script type="text/javascript">
 //<![CDATA[
 Core.load("wow/static/local-common/js/overlay.js?v22");

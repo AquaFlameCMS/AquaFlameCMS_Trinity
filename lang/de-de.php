@@ -8,10 +8,10 @@ $Media['Media_menu']                      = "Media";
 $Forums['Forums']                         = "Foren";
 $Services['Services']                     = "Shop";
 $Wow['Wow']                               = "World Of Warcraft ";
-$Wow3['Wow3']                             = " - gesammte Welt"; // corrected
+$Wow3['Wow3']                             = " - gesammte Welt";
 $Latest['Latest']                         = "Zuletzt geschriebene Post";
 $View_all['View_all']                     = "Zeige alle ";
-$all['all']                               = "Alle haupt Beitr&auml;ge"; // corrected
+$all['all']                               = "Alle haupt Beitr&auml;ge";
 $P_topics['P_topics']                     = "Beliebte Themen";
 $comments['comments']                     = "Kommentare";
 $loading_forum_sett['loading_forum_sett'] = "Lade Foreneinstellungen";
@@ -129,6 +129,7 @@ $Vote['VotePanel']  = "Vote Panel";
 $Vote['Vote39']     = "Einloggen zum Voten!";
 $Vote['Vote40']     = "Mehr erfahren!";
 // Finishing the voting translation
+
 // Starting the register.php translation
 $re['re']           = "Registrierung der";
 $re['re1']          = "Account Erstellung";
@@ -162,7 +163,7 @@ $re['re29']         = "Dein lieblings Team?";
 $re['re30']         = "Dein erster Arbeitgeber?";
 $re['re31']         = "Diese Information wird f&uuml;r Account-Sicherheit verwandte Themen wie zum Beispiel das Zur&uuml;cksetzen Ihres Passworts verwendet.";
 $re['re32']         = "Abkommen:";
-$re['re33']         = "Um Ihnen kostenloses Spielen zu erm&ouml;glichen werden ihre Privatnachrichten, wie die 'Flüstern' Funktion geloggt und eingesehen. Mit einem Klick auf das Kontrollk&auml;stchen best&auml;tigen Sie, dass Sie diese Regeln akzeptieren. Wir werden die gesammelten Informationen nicht ver&ouml;ffentlichen."; //corrected
+$re['re33']         = "Um Ihnen kostenloses Spielen zu erm&ouml;glichen werden ihre Privatnachrichten, wie die 'Flüstern' Funktion geloggt und eingesehen. Mit einem Klick auf das Kontrollk&auml;stchen best&auml;tigen Sie, dass Sie diese Regeln akzeptieren. Wir werden die gesammelten Informationen nicht ver&ouml;ffentlichen.";
 $re['re34']         = "Ich willige ein, ";
 $re['re35']         = " &Uuml;berwachung und / oder &Uuml;berpr&uuml;fung meiner pers&ouml;nlichen Nachrichten.";
 $re['re36']         = "Ich akzeptiere die ";
@@ -198,7 +199,8 @@ $re['back']         = "Zur&uuml;ck";
 $re['day']          = "Tag";
 $re['month']        = "Monat";
 $re['year']         = "Jahr";
-//Finishing the register.php translation
+//Finishing the register
+
 // Starting register
 $Reg['Reg']         = "Ben&ouml;tigt";
 $Reg['Reg1']        = "Account Einstellungen";
@@ -239,6 +241,7 @@ $Reg['Reg35']       = "Fortfahren";
 $Reg['Reg36']       = "Abbrechen ";
 $Reg['Reg37']       = " - Kennwort &auml;ndern";
 // Finishing register
+
 // Starting Account Log
 $Log['Log']         = " - Login";
 $Log['Log1']        = "Battle.net";
@@ -261,6 +264,7 @@ $Log['Log17']       = "Wenn Sie bereits angemeldet sind, aber diese Seite Sie ni
 $Log['Log18']       = "Account Management";
 $Log['Log19']       = "Lade&#8230;";
 // Finishing Account Log
+
 // Starting Acccount Man
 $Man['Man1']        = " - Account Management";
 $Man['Man2']        = "JavaScript muss aktiviert sein, um diese Seite nutzen zu k&ouml;nnen.";
@@ -318,18 +322,18 @@ $Man['Man52']       = "auf der Top-Liste sein.";
 $Man['Man53']       = "Beta Test Realm (Geschlossen)";
 $Man['Man54']       = "Arenapass Anmeldung ist derzeit geschlossen. Klicken Sie hier f&uuml;r weitere Informationen..";
 $Man['Man55']       = "Elterliche Freigabe";
-$Man['Man56']       = "Verwalten, &uuml;berwachen und beschr&auml;nken Sie Ihre Kinder Spielzeit."; //corrected
+$Man['Man56']       = "Verwalten, &uuml;berwachen und beschr&auml;nken Sie Ihre Kinder Spielzeit.";
 $Man['Man57']       = "Werbt einen Freund";
 $Man['Man58']       = "Verdiene Belohnungen und mehr, im Spiel, durch die Rekrutierung Ihrer Freunde und bringen Sie sie zum ultimativen Spielerlebniss.";
-$Man['Man59']       = "Werb einen Freund"; //corrected
+$Man['Man59']       = "Werb einen Freund";
 $Man['Man60']       = "Holen Sie sich mehr Freunde, um";
-$Man['Man61']       = ", um das ultimative Spielerlebniss zu genie&szlig;en."; //corrected
+$Man['Man61']       = ", um das ultimative Spielerlebniss zu genie&szlig;en.";
 $Man['Man62']       = "Spenden Abonnement";
 $Man['Man63']       = "Hinzuf&uuml;gen";
 $Man['Man64']       = " Donation Title to your account and unlock illuminative Rewards."; // This makes zero sense, even in english! 
 $Man['Man65']       = " entfernt";
 $Man['Man66']       = "Nutzen Sie alle Funktionen des Web-Auktionshaus von ";
-$Man['Man67']       = "Spenden Sie per SMS und sammeln Sie Bonuspunkte"; //corrected
+$Man['Man67']       = "Spenden Sie per SMS und sammeln Sie Bonuspunkte";
 $Man['Man68']       = "Einladungen senden";
 $Man['Man69']       = "Geschichte/Status";
 $Man['Man70']       = "Wie es funktioniert";
@@ -337,11 +341,14 @@ $Man['Man71']       = "Anleitung f&uuml;r den Empf&auml;nger";
 $Man['Man72']       = "Sie haben ";
 $Man['Man73']       = "Freunde";
 $Man['Man74']       = " im Zusammenhang mit Ihrem Konto und";
-$Man['Man75']       = "Verweise verbleibend."; //corrected
-$Man['Man76']       = "Levelt zusammen und schneller"; //corrected
-$Man['Man77']       = "Erhalte eine Belohnung, wenn dein Freund spendet "; //corrected
+$Man['Man75']       = "Verweise verbleibend.";
+$Man['Man76']       = "Levelt zusammen und schneller";
+$Man['Man77']       = "Erhalte eine Belohnung, wenn dein Freund spendet ";
 $Man['Man78']       = "Holen Sie sich ein einzigartiges Zweipersonen Epic Mount";
+$Man['Man79']  = "Character Name Change";
+$Man['Man80']  = "Change your characters' names.";
 // Finishing Account Man
+
 // Starting Header acount
 $ha['ha26']         = "Account";
 $ha['ha0']          = "&Uuml;bersicht";
@@ -353,10 +360,10 @@ $ha['ha5']          = "Elterliche Freigabe";
 $ha['ha6']          = "Meine Zahlungsoptionen";
 $ha['ha7']          = "Kontakt- & Versandadressen";
 $ha['ha8']          = "Spiele & Codes";
-$ha['ha9']          = "Vote Bereich"; // corrected
-$ha['ha10']         = "Spenden Bereich"; // corrected
-$ha['ha11']         = "SMS Spenden Bereich"; // corrected
-$ha['ha12']         = "V.i.P Item wechsel Bereich"; // corrected
+$ha['ha9']          = "Vote Bereich";
+$ha['ha10']         = "Spenden Bereich";
+$ha['ha11']         = "SMS Spenden Bereich";
+$ha['ha12']         = "V.i.P Item wechsel Bereich";
 $ha['ha13']         = "Spielclients herunterladen";
 $ha['ha14']         = "Beta-Profileinstellungen";
 $ha['ha15']         = "Code einl&ouml;sen";
@@ -371,6 +378,7 @@ $ha['ha23']         = "Konto&uuml;bersicht";
 $ha['ha24']         = "Werbt einen Freund";
 $ha['ha25']         = "Zur&uuml;ck zur Website";
 // Finishing Header Account
+
 //Starting Ban List
 $BanL['BanL1']      = "Gesperrt von:";
 $BanL['BanL2']      = "Entsperrdatum:";
@@ -384,6 +392,7 @@ $BanL['BanL9']      = "Account ID";
 $BanL['BanL10']     = "Derzeit gibt es keine gesperrten Benutzer.";
 $BanL['BanL11']     = "Gesperrte Spieler";
 // Finishing Ban List
+
 //Starting Chatbox
 $ChatB['ChatB1']    = "Die Nachricht war leer.";
 $ChatB['ChatB2']    = "Du musst eingeloggt sein um chatten zu k&ouml;nnen.";
@@ -391,11 +400,12 @@ $ChatB['ChatB3']    = "Seite:";
 $ChatB['ChatB4']    = "Voherige";
 $ChatB['ChatB5']    = "N&auml;chste";
 //Finishing Chatbox
+
 // Starting the Char Unstuck translation
 $Uns['Uns']         = " - Charakter freisetzen";
 $Uns['Uns1']        = "Fortschritt 100%";
 $Uns['Uns2']        = " [Schritt 1 von 1]";
-$Uns['Uns3']        = "Spielregion Warnung"; // is correct 
+$Uns['Uns3']        = "Spielregion Warnung"; 
 $Uns['Uns4']        = "You should change your country to Korea, republic of and verify your Personal Residence Number to use Korean games.";
 $Uns['Uns5']        = "Spielregion Warnung";
 $Uns['Uns6']        = "Das Zusammenf&uuml;hren ihres World of Warcraft Accounts ist im ihren Land nicht verf&uuml;gbar.";
@@ -423,29 +433,30 @@ $Uns['Uns27']       = "Das ist nicht Ihr Charakter.";
 $Uns['Uns28']       = "Your Character Is unlocked.";
 $Uns['Uns29']       = "Weiter";
 // Finishing the Char Unstuck translation
+
 // Starting Index
 $Ind['Ind']         = "N&auml;chste";
-$Ind['Ind1']        = "Such Leiste"; // corrected
+$Ind['Ind1']        = "Such Leiste";
 $Ind['Ind2']        = "Suche";
-$Ind['Ind3']        = "Werbung"; // corrected
+$Ind['Ind3']        = "Werbung";
 $Ind['Ind4']        = "Server Information: ";
 $Ind['Ind5']        = "Realmlist : ";
-$Ind['Ind6']        = "Patch Version: "; // corrected
-$Ind['Ind7']        = "Accounts: "; // corrected
-$Ind['Ind8']        = "registrierte Accounts"; // corrected
+$Ind['Ind6']        = "Patch Version: ";
+$Ind['Ind7']        = "Accounts: ";
+$Ind['Ind8']        = "registrierte Accounts";
 $Ind['Ind9']        = "Charakter: "; // TODO: Find use
 $Ind['Ind10']       = "Erstelle Charaktere"; // used: sidebox realm status (created characters)
 $Ind['Ind11']       = "Empfohlene Dienste";
 $Ind['Ind12']       = "Werbt einen Freund";
 $Ind['Ind13']       = "Seid ihr bereit, Unterst&uuml;tzung f&uuml;r eure Schlachten nach Azeroth zu bringen? Werbt einen Freund, der sich euch in World of Warcraft anschlie&szlig;t. Es ist einfach, macht Spa&szlig; und wird belohnt.";
-$Ind['Ind14']       = "Charakter transferieren"; // corrected
-$Ind['Ind15']       = "Transferieren Sie Ihren Charakter von einem Realm zu einem anderen!"; // corrected
-$Ind['Ind16']       = "Abstimmen, um den Tag zu retten"; // corrected
-$Ind['Ind17']       = "Abstimmung ist: "; // is correct
+$Ind['Ind14']       = "Charakter transferieren";
+$Ind['Ind15']       = "Transferieren Sie Ihren Charakter von einem Realm zu einem anderen!";
+$Ind['Ind16']       = "Abstimmen, um den Tag zu retten";
+$Ind['Ind17']       = "Abstimmung ist: ";
 $Ind['Ind18']       = "Online!"; // TODO: Find use
-$Ind['Ind19']       = "Jetzt abstimmen!"; // corrected
-$Ind['Ind20']       = "GPS /  Besucher Karte"; // is correct
-$Ind['Ind21']       = "Map / GPS ist: "; // is correct
+$Ind['Ind19']       = "Jetzt abstimmen!";
+$Ind['Ind20']       = "GPS /  Besucher Karte";
+$Ind['Ind21']       = "Map / GPS ist: ";
 $Ind['Ind22']       = "Online!"; // TODO: Find use
 $Ind['Ind23']       = "&Uuml;berpr&uuml;fen Sie jetzt wer online ist!"; // TODO: Find use
 // Finishing Index
@@ -539,7 +550,7 @@ $Serv['Serv9']                  = " Armory.";
 $Serv['Serv10']                 = "Werbt einen Freund";
 $Serv['Serv11']                 = "Verdienen Sie epische Belohnungen f&uuml;r jeden Spieler einladen, um zu spielen ";
 $Serv['Serv12']                 = "Spender Shop";
-$Serv['Serv13']                 = "Besuchen Sie den spenden Shop und erkunden Sie undsere Dienste / Geschenke / Preise / etc. "; // corrected
+$Serv['Serv13']                 = "Besuchen Sie den spenden Shop und erkunden Sie undsere Dienste / Geschenke / Preise / etc. ";
 $Serv['Serv14']                 = "Upgrade deinen Account";
 $Serv['Serv15']                 = "Upgrade deinen World of Warcraft Account!";
 $Serv['Serv16']                 = "Account Service";
@@ -556,41 +567,42 @@ $Serv['Serv26']                 = "&Auml;nder website Theme";
 $Serv['Serv27']                 = "&Auml;ndere Avatar";
 $Serv['Serv28']                 = "Anfrage GM Bewerbung";
 $Serv['Serv29']                 = "Anfrage GM Probe";
-$Serv['Serv30']                 = "WoW Client herunterladen"; // corrected
+$Serv['Serv30']                 = "WoW Client herunterladen";
 $Serv['Serv31']                 = "&Auml;ndere dein avatar";
 $Serv['Serv32']                 = "Sie k&ouml;nnen ihr avatar &auml;ndern.";
 $Serv['Serv33']                 = "&Auml;ndere Avatar";
 $Serv['Serv34']                 = "Error";
 $Serv['Serv35']                 = "Ihr Avatar wurde ge&auml;ndert.";
 $Serv['Serv36']                 = "Senden";
-$Serv['Serv37']                 = "Sie m&uuml;ssen angemeldet sein,um diesen Service nutzen zu können."; // corrected
+$Serv['Serv37']                 = "Sie m&uuml;ssen angemeldet sein,um diesen Service nutzen zu können.";
 // Finishing Services
+
 // Starting the Forum Translation
-$Forum['Forum']                 = "Realms"; // corrected
+$Forum['Forum']                 = "Realms";
 $Forum['Forum1']                = "AquaFlame CMS - Weiterleitung";
 $Forum['Forum2']                = "Grats.";
 $Forum['Forum3']                = " Sie haben es kaputt gemacht.";
-$Forum['Forum4']                = "Bitte warten Sie, w&auml;hrend wir Sie zum Account Management weiterleiten."; // corrected
+$Forum['Forum4']                = "Bitte warten Sie, w&auml;hrend wir Sie zum Account Management weiterleiten.";
 $Forum['Forum5']                = "oder";
 $Forum['Forum6']                = "Diese Seite existiert nicht oder ein anderer schrecklicher Fehler ist aufgetreten.";
 $Forum['Forum7']                = "Forum";
 $Forum['Forum8']                = "Neues Thema";
 $Forum['Forum9']                = "World of Warcraft";
 $Forum['Forum10']               = "Forum";
-$Forum['Forum11']               = "Leeres Thema Name"; // corrected
-$Forum['Forum12']               = "Leeres Thema Content"; // corrected
+$Forum['Forum11']               = "Leeres Thema Name";
+$Forum['Forum12']               = "Leeres Thema Content";
 $Forum['Forum13']               = "Interner Fehler";
-$Forum['Forum14']               = "Erstelle Thema..."; // corrected
+$Forum['Forum14']               = "Erstelle Thema...";
 $Forum['Forum15']               = "Konnte nicht gepostet werden!";
-$Forum['Forum16']               = "Thema wurde erfolgreich erstellt."; // corrected
-$Forum['Forum17']               = "Erstelle Thema"; // corrected
+$Forum['Forum16']               = "Thema wurde erfolgreich erstellt.";
+$Forum['Forum17']               = "Erstelle Thema";
 $Forum['Forum18']               = "Kein Realm";
 $Forum['Forum19']               = "Profile";
 $Forum['Forum20']               = "Level Rasse Klasse";
 $Forum['Forum21']               = "Vorschau";
-$Forum['Forum22']               = "&Auml;ndern"; // corrected
+$Forum['Forum22']               = "&Auml;ndern";
 $Forum['Forum23']               = "Senden";
-$Forum['Forum24']               = "Bitte melden Sie jegliche Verletzung der Forenrichtlinien, darunter:"; // corrected
+$Forum['Forum24']               = "Bitte melden Sie jegliche Verletzung der Forenrichtlinien, darunter:";
 $Forum['Forum25']               = "Androhung von Gewalt. ";
 $Forum['Forum26']               = "Wir nehmen dies sehr ernst und werden die entsprechenden Beh&ouml;rden einschalten.";
 $Forum['Forum27']               = "Beitr&auml;ge, die pers&ouml;nliche Informationen &uuml;ber andere Spieler. ";
@@ -599,14 +611,14 @@ $Forum['Forum29']               = "Beleidigende oder diskriminierende Sprache. "
 $Forum['Forum30']               = "Dies wird nicht toleriert werden.";
 $Forum['Forum31']               = "Klick ";
 $Forum['Forum32']               = "hier";
-$Forum['Forum33']               = " um die Forenrichtlinien zu sehen."; // corrected
+$Forum['Forum33']               = " um die Forenrichtlinien zu sehen.";
 $Forum['Forum34']               = "World of Warcraft";
 $Forum['Forum35']               = "Forum";
 $Forum['Forum36']               = "Anfrage-Forum existiert nicht ...";
 $Forum['Forum37']               = "Weiterleitung ...";
 $Forum['Forum38']               = "fortgeschritten";
 $Forum['Forum39']               = "Einfach";
-$Forum['Forum40']               = "Thema erstellen"; // corrected
+$Forum['Forum40']               = "Thema erstellen";
 $Forum['Forum41']               = "Antworten";
 $Forum['Forum42']               = "Aufrufe";
 $Forum['Forum43']               = "Letzter Verfasser";
@@ -619,7 +631,7 @@ $Forum['Forum49']               = "Author";
 $Forum['Forum50']               = "Zur ersten Blizzard Beitrag";
 $Forum['Forum51']               = "Letzter Eintrag von";
 $Forum['Forum52']               = "auf";
-$Forum['Forum53']               = "Beitrag bearbeiten"; // corrected
+$Forum['Forum53']               = "Beitrag bearbeiten";
 $Forum['Forum54']               = "Konnte nicht bearbeiten.";
 $Forum['Forum55']               = "Thema wurde erfolgreich bearbeitet.";
 $Forum['Forum56']               = "Thema";
@@ -627,29 +639,30 @@ $Forum['Forum57']               = "Beitrag";
 $Forum['Forum58']               = "Konnte die antwort nich Posten";
 $Forum['Forum59']               = "Anforderungsthread existiert nicht ...";
 $Forum['Forum60']               = "Thema";
-$Forum['Forum61']               = "Antwort hinzuf&uuml;gen"; // corrected
+$Forum['Forum61']               = "Antwort hinzuf&uuml;gen";
 $Forum['Forum62']               = "Beitr&auml;ge anzeigen";
-$Forum['Forum63']               = "Mitarbeiter"; // corrected
+$Forum['Forum63']               = "Mitarbeiter";
 $Forum['Forum64']               = "Moderator";
 $Forum['Forum65']               = "Keine Gilde";
-$Forum['Forum66']               = "Keine Character"; // corrected
+$Forum['Forum66']               = "Keine Character";
 $Forum['Forum67']               = "Bearbeitet von";
 $Forum['Forum68']               = "auf";
 $Forum['Forum69']               = "geschrieben am: : ";
-$Forum['Forum70']               = "Bewertungen sind deaktiviert."; // corrected
-$Forum['Forum71']               = "N&auml;chster Beitrag von Blizzard"; // corrected
+$Forum['Forum70']               = "Bewertungen sind deaktiviert.";
+$Forum['Forum71']               = "N&auml;chster Beitrag von Blizzard";
 $Forum['Forum72']               = "zitieren";
 $Forum['Forum73']               = "Antworten zu Thema";
 $Forum['Forum74']               = "Dieser Thread ist gesperrt";
-$Forum['Forum75']               = "Sie m&uuml;ssen eingeloggt sein, um einen Beitrag erstellen zu k&ouml;nnen"; // corrected
+$Forum['Forum75']               = "Sie m&uuml;ssen eingeloggt sein, um einen Beitrag erstellen zu k&ouml;nnen";
 $Forum['Forum76']               = "Forumsbeitrag erstellt ...";
-$Forum['Forum77']               = "Neueste Blizzard Beitr&auml;ge"; // corrected
-$Forum['Forum78']               = "Alle Beitr&auml;ge von Blizzard"; // corrected
+$Forum['Forum77']               = "Neueste Blizzard Beitr&auml;ge";
+$Forum['Forum78']               = "Alle Beitr&auml;ge von Blizzard";
 $Forum['Forum79']               = "Beliebte Themen";
 $Forum['Forum80']               = "in";
 // Finishing the Forum Translation
+
 //userplate
-$uplate['login']                = "<strong>Jetzt anmelden</strong> um deine Erfahrungen zu verbessern und personalisieren!"; // corrected to fit
+$uplate['login']                = "<strong>Jetzt anmelden</strong> um deine Erfahrungen zu verbessern und personalisieren!";
 $uplate['profile']              = "Profile";
 $uplate['post']                 = "Alle meine Beitr&auml;ge";
 $uplate['auction']              = "Meine Auktionen anzeigen";
@@ -660,9 +673,9 @@ $uplate['r1']                   = "Mensch";
 $uplate['r2']                   = "Orc";
 $uplate['r3']                   = "Zwerg";
 $uplate['r4']                   = "Nachtelf";
-$uplate['r5']                   = "Untoter"; // corrected
+$uplate['r5']                   = "Untoter";
 $uplate['r6']                   = "Tauren";
-$uplate['r7']                   = "Gnom"; // corrected
+$uplate['r7']                   = "Gnom";
 $uplate['r8']                   = "Troll";
 $uplate['r9']                   = "Goblin";
 $uplate['r10']                  = "Blutelf";
@@ -671,6 +684,7 @@ $uplate['r22']                  = "Worgen";
 $uplate['r']                    = "Alle Rassen";
 $uplate['nochars']              = "Keine WoW-Lizenz gefunden.";
 //finish userplate
+
 //Starting Armory
 $armory['talents']              = "Talente";
 $armory['APoints']              = "Arena";
@@ -678,19 +692,19 @@ $armory['summary']              = "Home";
 $armory['reputation']           = "Ruf";
 $armory['3d']                   = "3D Model";
 $armory['advanced']             = "Erweitert";
-$armory['itemlevel']            = "Durchschnittliche Gegenstandsstufe"; // corrected
+$armory['itemlevel']            = "Durchschnittliche Gegenstandsstufe";
 $armory['equipped']             = "ausgestattet";
-$armory['audit']                = "Character &Auml;nderung"; // corrected
+$armory['audit']                = "Character &Auml;nderung";
 $armory['what']                 = "Was ist das?";
 $armory['emptyGlyph']           = "leerer Glyphenplatz";
 $armory['unenchanted']          = "Nicht verzauberte Gegenst&auml;nde";
 $armory['reforging']            = "Umschmieden";
 $armory['enchant']              = "Verzauberungen und Boni";
-$armory['armour']               = "Verteidigung"; // corrected
+$armory['armour']               = "Verteidigung";
 $armory['stamina']              = "Ausdauer ";
 $armory['strength']             = "St&auml;rke";
 $armory['gems']                 = "Edelsteine";
-$armory['noGems']               = "Dieser Charakter hat keine Edelsteine."; // corrected
+$armory['noGems']               = "Dieser Charakter hat keine Edelsteine.";
 $armory['activity']             = "Letze Aktivit&auml;t";
 $armory['noActivity']           = "Es gibt keine neuen Aktivit&auml;ten.";
 $armory['disable']              = "Diese Funktion ist deaktiviert.";
@@ -699,9 +713,9 @@ $armory['race1']                = "Mensch";
 $armory['race2']                = "Orc";
 $armory['race3']                = "Zwerg";
 $armory['race4']                = "Nachtelf";
-$armory['race5']                = "Untoter"; // corrected
+$armory['race5']                = "Untoter";
 $armory['race6']                = "Tauren";
-$armory['race7']                = "Gnom"; // corrected
+$armory['race7']                = "Gnom";
 $armory['race8']                = "Troll";
 $armory['race9']                = "Goblin";
 $armory['race10']               = "Blutelf";
@@ -723,10 +737,10 @@ $armory['branch399']            = "Frost";
 $armory['branch400']            = "Unheilig";
 $armory['branch752']            = "Balance";
 $armory['branch750']            = "Wilder Kampf";
-$armory['branch748']            = "Widerherstellung"; // corrected
+$armory['branch748']            = "Widerherstellung";
 $armory['branch811']            = "Tierherrschaft";
 $armory['branch807']            = "Treffsicherheit";
-$armory['branch809']            = "&Uuml;berleben"; // corrected
+$armory['branch809']            = "&Uuml;berleben";
 $armory['branch799']            = "Arkan";
 $armory['branch851']            = "Feuer";
 $armory['branch823']            = "Frost";
@@ -740,7 +754,7 @@ $armory['branch182']            = "Assassination";
 $armory['branch181']            = "Kampf";
 $armory['branch184']            = "Subtlety";
 $armory['branch261']            = "Elemental";
-$armory['branch263']            = "Verzauberung"; // corrected
+$armory['branch263']            = "Verzauberung";
 $armory['branch262']            = "Wiederherstellung";
 $armory['branch871']            = "Leiden";
 $armory['branch867']            = "Demonologie";
@@ -756,7 +770,7 @@ $armory['Mastery']              = "Meisterschaft";
 $armory['Focus']                = "Focus";
 $armory['AP']                   = "Angriffskraft";
 $armory['Parry']                = "parieren";
-$armory['Haste']                = "Hast"; // corrected
+$armory['Haste']                = "Hast";
 $armory['Speed']                = "Geschwindigkeit";
 $armory['Hit']                  = "Hit";
 $armory['Crit']                 = "Kritisch";
@@ -770,7 +784,7 @@ $armory['combatReg']            = "Im Kampf Regeneration";
 $armory['Mana']                 = "Mana";
 $armory['Dodge']                = "Ausweichen";
 $armory['Block']                = "Block";
-$armory['Resilience']           = "Resistenz"; // corrected
+$armory['Resilience']           = "Resistenz";
 $armory['Other']                = "Andere";
 $armory['Base']                 = "Base";
 $armory['Melee']                = "Nahkampf";
@@ -779,7 +793,7 @@ $armory['Spell']                = "Zauber";
 $armory['Defense']              = "Verteidigung";
 $armory['Rage']                 = "Wut";
 $armory['Energy']               = "Energie";
-$armory['Runic']                = "Runisch"; // corrected
+$armory['Runic']                = "Runisch";
 $armory['Resis']                = "Resistenz";
 $armory['Arcane']               = "Arkan";
 $armory['Fire']                 = "Feuer";
@@ -792,24 +806,29 @@ $armory['showMain']             = "Zeigen Sie nur die wichtigsten Stats";
 $armory['Faction1']             = "Horde";
 $armory['Faction0']             = "Allianz";
 //Finish Armory
+
 //Others
-$globalInfoVar['Anonymous']     = "Anonymous";
-$status['chars']                = "Charakter";
-$status['low']                  = "Niedrig";
-$status['high']                 = "Hoch";
-$status['medium']               = "Mittel";
-$status['population']           = "Bev&ouml;lkerung"; // corrected
+if (isset($_SESSION['username']))
+    $globalInfoVar['Anonymous'] = $_SESSION['username'];
+else
+$globalInfoVar['Anonymous'] 	= 'Anonymous';
+$status['chars']        		= "Charakter";
+$status['low']          		= "Niedrig";
+$status['high']         		= "Hoch";
+$status['medium']       		= "Mittel";
+$status['population']           = "Bev&ouml;lkerung";
 $status['newP']                 = "Neue Spieler";
 $status['new']                  = "Neu";
 $status['noResults']            = "Es wurde keine &Uuml;bereinstimmung f&uuml;r diesen Parameter gefunden.";
 $guild['Guilds']                = "Gilden";
 $arena['Teams']                 = "Arena Teams";
-$statNav['AllRealms']           = "Alle Realme"; // corrected
+$statNav['AllRealms']           = "Alle Realme";
 $statNav['TopHonor']            = "Top Ehre";
-$statNav['TopConquest']         = "Top Arena"; // corrected
+$statNav['TopConquest']         = "Top Arena";
 $Index['NoArticles']            = "Keine Artikel";
 $Index['By']                    = "durch";
 //Finish Others
+
 //Search
 $search['Name']                 = "Name";
 $search['Level']                = "Level";
@@ -818,7 +837,7 @@ $search['Class']                = "Klasse";
 $search['Faction']              = "Fraktion";
 $search['Guild']                = "Gilde";
 $search['Realm']                = "Realm";
-$search['Battlegroup']          = "Arena Team"; // corrected
+$search['Battlegroup']          = "Arena Team";
 $search['Show']                 = "Showing";
 $search['Results']              = "Ergebnisse";
 $search['Of']                   = "von";
@@ -833,7 +852,7 @@ $search['noResults2']           = " hat keine &Uuml;bereinstimmungen.";
 $search['sugg']                 = "Vorschl&auml;ge f&uuml;r die Suche: ";
 $search['sugg1']                = "Sicherstellen, dass alle W&ouml;rter richtig geschrieben sind";
 $search['sugg2']                = "Versuchen Sie es mit mehr allgemeinen Suchw&ouml;rtern";
-$search['sugg3']                = "Wenn Sie den Charakter Namen und Realm kennen, verwenden Sie das Format Character@realm"; // corrected
+$search['sugg3']                = "Wenn Sie den Charakter Namen und Realm kennen, verwenden Sie das Format Character@realm";
 $search['summ']                 = "Home";
 $search['prev']                 = "Zur&uuml;ck";
 $search['articles']             = "Artikel";
@@ -842,6 +861,7 @@ $search['Rating']               = "Bewertung";
 $search['forumResults']         = "Forum Ergebnisse f&uuml;r";
 $search['publi']                = "Herausgegeben von ";
 //Finish Search
+
 //Styles
 $style['bold']                  = "fett";
 $style['italics']               = "kursiv";
@@ -858,10 +878,11 @@ $style['itemPrompt']            = "";
 $style['url']                   = "";
 $style['urlPrompt']             = "";
 //Finish Styles
+
 //Game Client
-$GameCli['Game1']               = "Spiel herunterladen"; // corrected
+$GameCli['Game1']               = "Spiel herunterladen";
 $GameCli['Game2']               = "Spiel Management";
-$GameCli['Game3']               = "Spiel Client herunterladen"; // corrected
+$GameCli['Game3']               = "Spiel Client herunterladen";
 $GameCli['Game4']               = "Datei Details";
 $GameCli['Game5']               = "Sprache";
 $GameCli['Game6']               = "Windows Link";
@@ -873,14 +894,15 @@ $GameCli['Game11']              = "&Ouml;ffentlicher Test Realm Client";
 $GameCli['Game12']              = "Kostenlose Starter Edition";
 $GameCli['Game13']              = "Anf&auml;nger Guide";
 $GameCli['Game14']              = "Europ&auml;ische Sprach Packete";
-$GameCli['Game15']              = "Wird benutzt, um einen Game Clienten mit einer anderen Sprache zu patchen."; // corrected
+$GameCli['Game15']              = "Wird benutzt, um einen Game Clienten mit einer anderen Sprache zu patchen.";
 $GameCli['Game16']              = "(Ben&ouml;tigt den europ&auml;ischen Spiel-Client.)";
 //Finish Game Client
+
 //Community
 $Community['comm1']             = "Gewinnspiele";
-$Community['comm2']             = "Kommende und laufende Inhalte, die Sie begutachten k&ouml;nnen. Jetzt ansehen!"; // corrected
+$Community['comm2']             = "Kommende und laufende Inhalte, die Sie begutachten k&ouml;nnen. Jetzt ansehen!";
 $Community['comm3']             = "Treten Sie in Kontakt mit anderen ";
-$Community['comm4']             = "Spieler in den offiziellen World of Warcraft Foren."; // corrected
+$Community['comm4']             = "Spieler in den offiziellen World of Warcraft Foren.";
 $Community['comm5']             = "Fan Art einsenden";
 $Community['comm6']             = "Medien einsenden";
 $Community['comm7']             = "Screenshots einsenden";
@@ -896,10 +918,11 @@ $Community['Screenshots']       = "Screenshots";
 $Community['Wallpap']           = "Wallpapers";
 $Community['Media']             = "Media";
 //Finish Community
+
 //Status
 $Status['RealmStat']            = "Realm Status";
-$Status['Stat1']                = "Diese Seite listet alle verf&uuml;gbaren World of Warcraft Realms sowie den Status auf.Der einzelne Realm kann entweder Online oder Offline aufgef&uuml;hrt werden. Meldungen im Zusammenhang mit Realm-Status und planm&auml;&szlig;ige Wartungsarbeiten werden gepostet im"; // corrected
-$Status['Stat2']                = "Lassen Sie uns im Voraus entschuldigen, wenn ihr Realm als Offline aufgef&uuml;hrt ist. Vermutlich arbeiten wir hart daran, diesen so schnell wie m&ouml;glich wieder online zu bringen."; // corrected
+$Status['Stat1']                = "Diese Seite listet alle verf&uuml;gbaren World of Warcraft Realms sowie den Status auf.Der einzelne Realm kann entweder Online oder Offline aufgef&uuml;hrt werden. Meldungen im Zusammenhang mit Realm-Status und planm&auml;&szlig;ige Wartungsarbeiten werden gepostet im";
+$Status['Stat2']                = "Lassen Sie uns im Voraus entschuldigen, wenn ihr Realm als Offline aufgef&uuml;hrt ist. Vermutlich arbeiten wir hart daran, diesen so schnell wie m&ouml;glich wieder online zu bringen.";
 $Status['ServStat']             = "Dienststatus forum.";
 $Status['Status']               = "Status";
 $Status['All']                  = "Alle";
@@ -917,10 +940,10 @@ $Status['english']              = "englisch";
 $Status['Queue']                = "Queue";
 $Status['Reset']                = "Zur&uuml;cksetzen";
 $Status['Information']          = "Information";
-$Status['Population']           = "Bev&ouml;lkerung"; // corrected
+$Status['Population']           = "Bev&ouml;lkerung";
 $Status['OnNow']                = "Jetzt online";
 $Status['ClickOnline']          = "Klicken Sie, um die Online Spieler zu sehen";
-$Status['Statistics']           = "Statistiken"; // corrected
+$Status['Statistics']           = "Statistiken";
 $Status['StatRealms']           = "Realm Status";
 $Status['Months']               = " Monate";
 $Status['Days']                 = " Tage";
@@ -928,9 +951,9 @@ $Status['Hours']                = " Stunden";
 $Status['Min']                  = " Minuten";
 $Status['Uptime:']              = "Uptime:";
 $Status['Tipe']                 = "Type: ";
-$Status['PjCreat']              = "Erstellte Charactere: "; // corrected
+$Status['PjCreat']              = "Erstellte Charactere: ";
 $Status['Drop']                 = "Drop: ";
-$Status['PjConect']             = "Verbundene Charactere: "; // corrected
+$Status['PjConect']             = "Verbundene Charactere: ";
 $Status['Exp']                  = "Erfahrung: ";
 $Status['Ali']                  = "Alianz";
 $Status['Horde']                = "Horde";
@@ -943,13 +966,13 @@ $Status['Race']                 = "Rasse";
 $Status['Human']                = "Mensch";
 $Status['Dwarf']                = "Zwerg";
 $Status['NightElf']             = "Nachtelf";
-$Status['Gnome']                = "Gnom"; // corrected
+$Status['Gnome']                = "Gnom";
 $Status['Draenei']              = "Draenei";
 $Status['Worgen']               = "Worgen";
 $Status['Orc']                  = "Orc";
 $Status['Troll']                = "Troll";
 $Status['Tauren']               = "Tauren";
-$Status['Undead']               = "Untoter"; // corrected
+$Status['Undead']               = "Untoter";
 $Status['BloodElf']             = "Blutelf";
 $Status['Goblin']               = "Goblin";
 $Status['Class']                = "Klasse";
@@ -977,7 +1000,7 @@ $Status['Gilneas']              = "Gilneas ";
 $Status['Kalimdor']             = "Kalimdor";
 $Status['Outland']              = "Outland";
 $Status['Northrend']            = "Nordend";
-$Status['NotConected']          = "Es sind im Moment keine Spieler verbunden."; // corrected
+$Status['NotConected']          = "Es sind im Moment keine Spieler verbunden.";
 $Status['RlmStat']              = "Realm Statistik";
 $Status['Stat5']                = "Diese Seite listet alle verf&uuml;gbaren Informationen f&uuml;r die Spieler - Characters, die erstellt wurden ";
 $Status['Stat6']                = " Gebiet sowie der Status eines jeden. Ein Realm kann unbegrenzt Charakt&auml;ren aufnehmen und kann mehr als 5000 Spieler hosten. Meldungen im Zusammenhang mit Realm-Status und geplante Wartung werden im Forum gepostet.";
@@ -991,6 +1014,7 @@ $Status['Pandaren']             = "Pandaren";
 $Status['ReqMistPand']          = "Ben&ouml;tigt Mist von Pandaria";
 $Status['PandNoAval']           = "Pandaren sind NICHT vorhanden.";
 //Finish Status
+
 //Media
 $Media['SendMedia']             = "Sende Multimedia";
 $Media['SendWallp']             = "Sende Wallpapers";
@@ -1020,6 +1044,7 @@ $Media['Previous']              = "Vorherige";
 $Media['Next']                  = "Folgende";
 $Media['Cancel']                = "Abbruch";
 //Finish Media
+
 //Start Mail
 $Mail['1']                      = "&Auml;ndere deine E-Mail-Adresse";
 $Mail['2']                      = "&Auml;ndere deine E-Mail-Adresse";
@@ -1032,52 +1057,54 @@ $Mail['8']                      = "Die neue E-Mail-Adresse ist nicht g&uuml;ltig
 $Mail['9']                      = "Ung&uuml;ltige Email-Adresse, bitte schreibe die Email-Addresse richtig auf.";
 $Mail['10']                     = "Die E-Mail f&uuml;r den Account";
 //Finish Mail
+
 //raf-invite
 $friend['1']                    = " Werb einen Freund";
 $friend['2']                    = "Erforderlich";
-$friend['3']                    = "VERBINDUNGEN &amp; BELOHNUNGEN"; // corrected
-$friend['4']                    = "Werb einen Freund"; // corrected
+$friend['3']                    = "VERBINDUNGEN &amp; BELOHNUNGEN";
+$friend['4']                    = "Werb einen Freund";
 $friend['5']                    = "Sende Einladungen";
 $friend['6']                    = "History/Status";
 $friend['7']                    = "Wie es funktioniert";
-$friend['8']                    = "Anleitungen f&uuml;r Empf&auml;nger"; // corrected
-$friend['9']                    = "Du hast "; // corrected
-$friend['10']                   = "0 freunde"; // corrected
-$friend['11']                   = " mit deinem Account verbunden und noch 20 Verbindungen &uuml;brig."; // corrected
-$friend['12']                   = "Levelt zusammen und schneller"; // corrected
-$friend['13']                   = "Erhalte Belohnungen, wenn dein Freund spendet"; // corrected
-$friend['14']                   = "Erhalte ein einzigartiges 2-Personen Reittier"; // corrected
-$friend['15']                   = "Mehr Details &uuml;ber die Funktionsweise..."; // corrected
-$friend['16']                   = "Es ist nicht erlaubt Freunde zu werben, die mal gespielt haben oder noch immer spielen."; // corrected
+$friend['8']                    = "Anleitungen f&uuml;r Empf&auml;nger";
+$friend['9']                    = "Du hast ";
+$friend['10']                   = "0 freunde";
+$friend['11']                   = " mit deinem Account verbunden und noch 20 Verbindungen &uuml;brig.";
+$friend['12']                   = "Levelt zusammen und schneller";
+$friend['13']                   = "Erhalte Belohnungen, wenn dein Freund spendet";
+$friend['14']                   = "Erhalte ein einzigartiges 2-Personen Reittier";
+$friend['15']                   = "Mehr Details &uuml;ber die Funktionsweise...";
+$friend['16']                   = "Es ist nicht erlaubt Freunde zu werben, die mal gespielt haben oder noch immer spielen.";
 $friend['17']                   = ""; // Remove, du to this makes no sense (see below)
 $friend['18']                   = ""; // This is this Sentence: You are not allowed to Refer friends who used to or still play, Use the Refer a Friend instead!
 $friend['19']                   = ""; // Remove, du to this makes no sense (see above)
-$friend['20']                   = "F&uuml;lle hier die Kontaktinformationen deines Freundes ein und eine pers&ouml;nliche Nachricht, die wir an die bereitgestellte Email-Addresse deines Freundes senden werden. Du kannst den Status jeder Einladung verfolgen "; // corrected
-$friend['21']                   = "hier"; // corrected
-$friend['22']                   = "Dein Account Name:"; // corrected
-$friend['23']                   = "Dein Passwort:"; // corrected
-$friend['24']                   = "Email-Addresse deines Freundes:"; // corrected
-$friend['25']                   = "Dein Charakter:"; // corrected
+$friend['20']                   = "F&uuml;lle hier die Kontaktinformationen deines Freundes ein und eine pers&ouml;nliche Nachricht, die wir an die bereitgestellte Email-Addresse deines Freundes senden werden. Du kannst den Status jeder Einladung verfolgen ";
+$friend['21']                   = "hier";
+$friend['22']                   = "Dein Account Name:";
+$friend['23']                   = "Dein Passwort:";
+$friend['24']                   = "Email-Addresse deines Freundes:";
+$friend['25']                   = "Dein Charakter:";
 $friend['26']                   = "Schl&uuml;ssel Region:";
 $friend['27']                   = "Russian";
 $friend['28']                   = "European";
 $friend['29']                   = "American";
 $friend['30']                   = "Method:";
-$friend['31']                   = "Manuell"; // corrected
-$friend['32']                   = "Automatisch"; // corrected
-$friend['33']                   = "Derzeit steht nur die manuelle Version zur Verf&uuml;gung. Die automatische Methode wird in Zukunft folgen. Bleibt gespannt, auf: "; // corrected
-$friend['34']                   = " f&uuml;r jegliche updates."; // corrected
-$friend['35']                   = "Eigene Nachricht:"; // corrected
-$friend['36']                   = "Tipp: Bring deinen realm, deine Gilde und deinen Charakter Namen mit ein, damit dein Freund dich im Spiel kontaktieren kann."; // corrected
-$friend['37']                   = "Dein Freund muss die Anweisungen in der Email befolgen, um eine Verbindung zwischen euren Accounts herzustellen."; // corrected
-$friend['38']                   = " Schritte ansehen"; // corrected
-$friend['39']                   = "EINLADUNG SENDEN"; // corrected
-$friend['40']                   = "Abbrechen"; // corrected
-$friend['41'] = "* &Uuml;berpr&uuml;fung unm&ouml;glich."; // corrected
+$friend['31']                   = "Manuell";
+$friend['32']                   = "Automatisch";
+$friend['33']                   = "Derzeit steht nur die manuelle Version zur Verf&uuml;gung. Die automatische Methode wird in Zukunft folgen. Bleibt gespannt, auf: ";
+$friend['34']                   = " f&uuml;r jegliche updates.";
+$friend['35']                   = "Eigene Nachricht:";
+$friend['36']                   = "Tipp: Bring deinen realm, deine Gilde und deinen Charakter Namen mit ein, damit dein Freund dich im Spiel kontaktieren kann.";
+$friend['37']                   = "Dein Freund muss die Anweisungen in der Email befolgen, um eine Verbindung zwischen euren Accounts herzustellen.";
+$friend['38']                   = " Schritte ansehen";
+$friend['39']                   = "EINLADUNG SENDEN";
+$friend['40']                   = "Abbrechen";
+$friend['41'] 					= "* &Uuml;berpr&uuml;fung unm&ouml;glich.";
 //Finish raf-invite
+
 //Start Change Character Appearance
-$appear['1']                    = " - Charakter Aussehen ver&auml;ndern"; // corrected
-$appear['2']                    = "CHARAKTER EINSTELLUNGEN"; // corrected
+$appear['1']                    = " - Charakter Aussehen ver&auml;ndern";
+$appear['2']                    = "CHARAKTER EINSTELLUNGEN";
 $appear['3']                    = "Aussehen &auml;ndern";
 $appear['4']                    = " offline sein, damit dieses Tool korrekt funktioniert! Und du musst auf der Website eingeloggt sein. Dein Charakter sollte keine bereits bestehende &auml;nderungs- Option haben.";
 $appear['5']                    = "Remember that Race Change is more powerful than Customization and it allows you to change your appearance too.";
@@ -1085,6 +1112,7 @@ $appear['6']                    = "Account Name";
 $appear['7']                    = "Select a Character";
 $appear['8']                    = "Purchase";
 //Finish Change Character Appearance
+
 //Start Change Character Faction
 $faction['1']                   = " - Charakter Fraktion &auml;ndern";
 $faction['2']                   = "CHARAKTER EINSTELLUNGEN";
@@ -1095,6 +1123,7 @@ $faction['6']                   = "W&auml;hle einen Charakter";
 $faction['7']                   = "Kaufen";
 $faction['8']                   = "Abbrechen";
 //Start Change Character Faction
+
 //Start Change Character Name
 $name['1']                      = " - Charakter Name &auml;ndern";
 $name['2']                      = "Charaktereinstellungen";
@@ -1106,6 +1135,7 @@ $name['7']                      = "W&auml;hle einen Charakter";
 $name['8']                      = "Kaufen";
 $name['9']                      = "Abbrechen";
 //Finish Change Character Name
+
 //Start Change Character Race
 $race['1']                      = " - Charakter Rasse &auml;ndern";
 $race['2']                      = "Charaktereinstellungen";

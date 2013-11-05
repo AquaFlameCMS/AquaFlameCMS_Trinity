@@ -1,5 +1,5 @@
 <?php
-include("configs.php");
+include("../configs.php");
 $page_cat = "gamesncodes";
 ?>
 
@@ -15,14 +15,14 @@ $page_cat = "gamesncodes";
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
 <meta name="description" content="<?php echo $website['description']; ?>">
 <meta name="keywords" content="<?php echo $website['keywords']; ?>">
-<link rel="shortcut icon" href="wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
-<link rel="stylesheet" media="all" href="wow/static/local-common/css/common.css?v22" />
-<link rel="stylesheet" media="all" href="wow/static/css/bnet.css?v21" />
-<link rel="stylesheet" media="print" href="wow/static/css/bnet-print.css?v21" />
-<link rel="stylesheet" media="all" href="wow/static/css/download/download.css?v21" />
-<script src="wow/static/local-common/js/third-party/jquery-1.4.4-p1.min.js"></script>
-<script src="wow/static/local-common/js/core.js?v22"></script>
-<script src="wow/static/local-common/js/tooltip.js?v22"></script>
+<link rel="shortcut icon" href="../wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
+<link rel="stylesheet" media="all" href="../wow/static/local-common/css/common.css?v22" />
+<link rel="stylesheet" media="all" href="../wow/static/css/bnet.css?v21" />
+<link rel="stylesheet" media="print" href="../wow/static/css/bnet-print.css?v21" />
+<link rel="stylesheet" media="all" href="../wow/static/css/download/download.css?v21" />
+<script src="../wow/static/local-common/js/third-party/jquery-1.4.4-p1.min.js"></script>
+<script src="../wow/static/local-common/js/core.js?v22"></script>
+<script src="../wow/static/local-common/js/tooltip.js?v22"></script>
 <!--[if IE 6]> <script type="text/javascript">
 //<![CDATA[
 try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
@@ -57,8 +57,8 @@ _gaq.push(['_trackPageLoadTime']);
 <div id="layout-top">
 <div class="wrapper">
 <div id="header">
-<?php include("functions/header_account.php"); ?>
-<?php include("functions/footer_man_nav.php"); ?>
+<?php include("../functions/header_account.php"); ?>
+<?php include("../functions/footer_man_nav.php"); ?>
 </div>
 <div id="layout-middle">
 <div class="wrapper">
@@ -74,7 +74,7 @@ _gaq.push(['_trackPageLoadTime']);
 <div class="header">
 <h2 class="subcategory">Game Client Downloads</h2>
 <h3 class="headline">World of Warcraft</h3>
-<img src="wow/static/local-common/images/game-icons/wow.png" alt="World of Warcraft" width="48" height="48" />
+<img src="../wow/static/local-common/images/game-icons/wow.png" alt="World of Warcraft" width="48" height="48" />
 </div>
 <table>
 <thead>
@@ -377,7 +377,7 @@ _gaq.push(['_trackPageLoadTime']);
 </div>
 </div>
 <div id="layout-bottom">
-<?php include("functions/footer_man.php"); ?>
+<?php include("../functions/footer_man.php"); ?>
 </div>
 <script type="text/javascript">
 //<![CDATA[
@@ -463,9 +463,9 @@ pet: 'pet'
 };
 //]]>
 </script>
-<script src="wow/static/js/bam.js?v21"></script>
-<script src="wow/static/local-common/js/tooltip.js?v22"></script>
-<script src="wow/static/local-common/js/menu.js?v22"></script>
+<script src="../wow/static/js/bam.js?v21"></script>
+<script src="../wow/static/local-common/js/tooltip.js?v22"></script>
+<script src="../wow/static/local-common/js/menu.js?v22"></script>
 <script type="text/javascript">
 $(function() {
 Menu.initialize();
@@ -474,11 +474,11 @@ Locale.dataPath = 'data/i18n.frag.xml';
 });
 </script>
 <!--[if lt IE 8]>
-<script type="text/javascript" src="wow/static/local-common/js/third-party/jquery.pngFix.pack.js?v22"></script>
+<script type="text/javascript" src="../wow/static/local-common/js/third-party/jquery.pngFix.pack.js?v22"></script>
 <script type="text/javascript">$('.png-fix').pngFix();</script>
 <![endif]-->
-<script src="wow/static/js/download/download.js?v21"></script>
-<script src="wow/static/js/management/d3/dashboard.js?v21"></script>
+<script src="../wow/static/js/download/download.js?v21"></script>
+<script src="../wow/static/js/management/d3/dashboard.js?v21"></script>
 <script type="text/javascript">
 //<![CDATA[
 Core.load("wow/static/local-common/js/overlay.js?v22");

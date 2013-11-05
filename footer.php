@@ -202,7 +202,7 @@ echo '>'
 <?php }else{ ?>
 <li class="service-cell service-welcome"><a href="?login" onclick="return Login.open()"><?php echo $login['login']; ?></a> <?php echo $or['or']; ?> <a href="<?php echo $website['root'];?>register.php"><?php echo $Account3['Account3']; ?></a></li>
 <?php } ?>
-<li class="service-cell service-account"><a href="<?php echo $website['root'];?>account_log.php" class="service-link" tabindex="50" accesskey="3"><?php echo $Account['Account']; ?></a></li>
+<li class="service-cell service-account"><a href="<?php echo $website['root'];?>account/" class="service-link" tabindex="50" accesskey="3"><?php echo $Account['Account']; ?></a></li>
 <li class="service-cell service-support service-support-enhanced">
 <a href="#support" class="service-link service-link-dropdown" tabindex="50" accesskey="4" id="support-link" onclick="return false" style="cursor: progress" rel="javascript"><?php echo $Support['Support']; ?><span class="no-support-tickets" id="support-ticket-count"></span></a>
 <div class="support-menu" id="support-menu" style="display:none;">
@@ -251,13 +251,13 @@ shim.style.display = 'block';
 <div class="explore-primary">
 <ul class="explore-nav">
 <li>
-<a href="<?php echo $website['root'];?>index.php" tabindex="55">
+<a href="<?php echo $website['root'];?>" tabindex="55">
 <strong class="explore-caption"><?php echo $website['title']; ?></strong>
 <?php echo $Friends['Keepthem']; ?>
 </a>
 </li>
 <li>
-<a href="<?php echo $website['root'];?>account_log.php" tabindex="55">
+<a href="<?php echo $website['root'];?>account/" tabindex="55">
 <strong class="explore-caption"><?php echo $Account['Account']; ?></strong>
 <?php echo $Account6['Account6']; ?>
 </a>

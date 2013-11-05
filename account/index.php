@@ -1,9 +1,9 @@
 <?php
-include("configs.php");
+include("../configs.php");
 $page_cat = 'summary';
 // Check, if username session is NOT set then this page will jump to login page
 if (!isset($_SESSION['username'])) {
-        header('Location: account_log.php');		
+        header('Location: '.$website['root'].'account_log.php');		
 }
 ?>
 
@@ -19,21 +19,21 @@ if (!isset($_SESSION['username'])) {
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
 <meta name="description" content="<?php echo $website['description']; ?>">
 <meta name="keywords" content="<?php echo $website['keywords']; ?>">
-<link rel="shortcut icon" href="wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
-<link rel="stylesheet" media="all" href="wow/static/local-common/css/management/common.css" />
-<link rel="stylesheet" media="all" href="wow/static/css/bnet.css" />
-<link rel="stylesheet" media="print" href="wow/static/css/bnet-print.css" />
-<link rel="stylesheet" media="all" href="wow/static/css/management/dashboard.css" />
-<link rel="stylesheet" media="all" href="wow/static/css/management/wow/dashboard.css" />
-<script src="wow/static/local-common/js/third-party/jquery-1.4.4-p1.min.js"></script>
-<script src="wow/static/local-common/js/core.js"></script>
-<script src="wow/static/local-common/js/tooltip.js"></script>
-<script src="wow/static/local-common/js/third-party/swfobject.js?v37"></script>
-<script src="wow/static/js/management/dashboard.js?v23"></script>
-<script src="wow/static/js/management/wow/dashboard.js?v23"></script>
-<script src="wow/static/js/bam.js?v23"></script>
-<script src="wow/static/local-common/js/tooltip.js?v37"></script>
-<script src="wow/static/local-common/js/menu.js?v37"></script>
+<link rel="shortcut icon" href="../wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
+<link rel="stylesheet" media="all" href="../wow/static/local-common/css/management/common.css" />
+<link rel="stylesheet" media="all" href="../wow/static/css/bnet.css" />
+<link rel="stylesheet" media="print" href="../wow/static/css/bnet-print.css" />
+<link rel="stylesheet" media="all" href="../wow/static/css/management/dashboard.css" />
+<link rel="stylesheet" media="all" href="../wow/static/css/management/wow/dashboard.css" />
+<script src="../wow/static/local-common/js/third-party/jquery-1.4.4-p1.min.js"></script>
+<script src="../wow/static/local-common/js/core.js"></script>
+<script src="../wow/static/local-common/js/tooltip.js"></script>
+<script src="../wow/static/local-common/js/third-party/swfobject.js?v37"></script>
+<script src="../wow/static/js/management/dashboard.js?v23"></script>
+<script src="../wow/static/js/management/wow/dashboard.js?v23"></script>
+<script src="../wow/static/js/bam.js?v23"></script>
+<script src="../wow/static/local-common/js/tooltip.js?v37"></script>
+<script src="../wow/static/local-common/js/menu.js?v37"></script>
 <script type="text/javascript">
 $(function() {
 Menu.initialize();
@@ -52,8 +52,8 @@ try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
 <div id="layout-top">
 <div class="wrapper">
 <div id="header">
-<?php include("functions/header_account.php"); ?>
-<?php include("functions/footer_man_nav.php"); ?>
+<?php include("../functions/header_account.php"); ?>
+<?php include("../functions/footer_man_nav.php"); ?>
 </div>
 </li>
 </ul>
@@ -68,7 +68,7 @@ You are using an outdated web browser.<br />
 </div>
 <![endif]-->
 <!--[if lte IE 8]>
-<script type="text/javascript" src="wow/static/local-common/js/third-party/CFInstall.min.js?v22"></script>
+<script type="text/javascript" src="../wow/static/local-common/js/third-party/CFInstall.min.js?v22"></script>
 <script type="text/javascript">
 //<![CDATA[
 $(function() {
@@ -111,12 +111,12 @@ return false;
 <div class="header">
 <h2 class="subcategory"><?php echo $Man['Man3']; ?></h2>
 <h3 class="headline"><?php echo $Man['Man4']; ?></h3>
-<a href=""><img src="wow/static/local-common/images/game-icons/wowx3.png" alt="<?php echo $website['title']; ?>" title="" width="48" height="48" /></a>
+<a href=""><img src="../wow/static/local-common/images/game-icons/wowx3.png" alt="<?php echo $website['title']; ?>" title="" width="48" height="48" /></a>
 </div>
 <div class="account-summary">
 <div class="account-management">
 <div class="section box-art" id="box-art">
-<img src="wow/static/local-common/images/game-boxes/en-gb/wowx4_big.png" alt="<?php echo $website['title']; ?>" title="" width="242" height="288" id="box-img" />
+<img src="../wow/static/local-common/images/game-boxes/en-gb/wowx4_big.png" alt="<?php echo $website['title']; ?>" title="" width="242" height="288" id="box-img" />
 </div>
 <div class="section account-details">
 <dl>
@@ -124,7 +124,7 @@ return false;
 <dd class="account-name"><?php echo strtolower($_SESSION['username']); ?></dd>
 <dt class="subcategory"><?php echo $Man['Man6']; ?></dt>
 <dd class="account-status"> <span><strong class="disable">
-<?php include("configs.php");
+<?php include("../configs.php");
  //Get Info By Query
  $conn = mysql_connect("$serveraddress", "$serveruser", "$serverpass")or die("Couldn't connect to database"); 
  $account_info = mysql_query("SELECT id,username,locked  FROM `".$server_adb."`.`account` WHERE username='".$_SESSION['username']."'")or die(mysql_error());
@@ -139,7 +139,7 @@ return false;
 ?></strong></span>
 </dd>
 <dt class="subcategory"><?php echo $Man['Man9']; ?></dt>
-<dd class="account-details"><?php include("configs.php");
+<dd class="account-details"><?php include("../configs.php");
  //Get Info By Query
  $conn = mysql_connect("$serveraddress", "$serveruser", "$serverpass")or die("Couldn't connect to database"); 
  $account_info = mysql_query("SELECT id,username,locked  FROM `".$server_adb."`.`account` WHERE username='".$_SESSION['username']."'")or die(mysql_error());
@@ -171,22 +171,22 @@ return false;
 <div class="section available-actions">
 <ul class="game-time">
 <li class="change-payment-method">
-<a href=""><?php echo $Man['Man24']; ?></a>
+<a href="<?php echo $website['root']; ?>account/"><?php echo $Man['Man24']; ?></a>
 </li>
 <li class="change-payment-method">
-<a href="vote.php"><?php echo $Man['Man25']; ?></a>
+<a href="<?php echo $website['root']; ?>account/vote.php"><?php echo $Man['Man25']; ?></a>
 </li>
 <li class="add-game-card">
-<a href="change-password.php"><?php echo $Man['Man26']; ?></a>
+<a href="<?php echo $website['root']; ?>account/change-password.php"><?php echo $Man['Man26']; ?></a>
 </li>
 <li class="payment-history">
-<a href=""><?php echo $Man['Man27']; ?></a>
+<a href="<?php echo $website['root']; ?>account/"><?php echo $Man['Man27']; ?></a>
 </li>
 <li class="download-guide">
-<a href="game_client.php"><?php echo $Man['Man28']; ?></a>
+<a href="<?php echo $website['root']; ?>account/game_client.php"><?php echo $Man['Man28']; ?></a>
 </li>
 <li class="download-client">
-<a href="game_client.php"><?php echo $Man['Man29']; ?></a>
+<a href="<?php echo $website['root']; ?>account/game_client.php"><?php echo $Man['Man29']; ?></a>
 </li>
 </ul>
 </div>
@@ -214,12 +214,8 @@ tabindex="1">
 <span><?php echo $Man['Man31']; ?></span>
 </span>
 </button>
-<a class="ui-cancel "
-href="#"
-onclick="DashboardForm.hide($('#enter-game-key')); return false;"
-tabindex="1">
-<span>
-<?php echo $Man['Man32']; ?></span>
+<a class="ui-cancel" href="#" onclick="DashboardForm.hide($('#enter-game-key')); return false;" tabindex="1">
+<span><?php echo $Man['Man32']; ?></span>
 </a>
 </p>
 <p><?php echo $Man['Man33']; ?></p>
@@ -247,35 +243,42 @@ tabindex="1">
 </a>
 </li>
 <li class="wow-service pfc">
-<a href="options/change_faction.php">
+<a href="<?php echo $website['root']; ?>account/change_faction.php">
 <span class="icon glow-shadow-3"></span>
 <strong><?php echo $Man['Man40']; ?></strong>
 <?php echo $Man['Man41']; ?>
 </a>
 </li>
 <li class="wow-service prc">
-<a href="options/change_race.php">
+<a href="<?php echo $website['root']; ?>account/change_race.php">
 <span class="icon glow-shadow-3"></span>
 <strong><?php echo $Man['Man42']; ?></strong>
 <?php echo $Man['Man43']; ?>
 </a>
 </li>
 <li class="wow-service pnc">
-<a href="options/change_name.php">
+<a href="<?php echo $website['root']; ?>account/name.php">
+<span class="icon glow-shadow-3"></span>
+<strong><?php echo $Man['Man79']; ?></strong>
+<?php echo $Man['Man80']; ?>
+</a>
+</li>
+<li class="wow-service pnc">
+<a href="<?php echo $website['root']; ?>account/change_name.php">
 <span class="icon glow-shadow-3"></span>
 <strong><?php echo $Man['Man44']; ?></strong>
 <?php echo $Man['Man45']; ?>
 </a>
 </li>
 <li class="wow-service pcc">
-<a href="options/change_appear.php">
+<a href="<?php echo $website['root']; ?>account/change_appear.php">
 <span class="icon glow-shadow-3"></span>
 <strong><?php echo $Man['Man46']; ?></strong>
 <?php echo $Man['Man47']; ?>
 </a>
 </li>
 <li class="wow-service char-move">
-<a href="chars-unst.php">
+<a href="<?php echo $website['root']; ?>account/chars-unst.php">
 <span class="icon glow-shadow-3"></span>
 <strong><?php echo $Man['Man48']; ?></strong>
 <?php echo $Man['Man49']; ?>
@@ -318,7 +321,7 @@ tabindex="1">
 </a>
 </li>
 <li class="wow-service resurrection-scroll">
-<a href="raf-invite.php">
+<a href="<?php echo $website['root']; ?>account/raf-invite.php">
 <span class="icon glow-shadow-3"></span>
 <strong><?php echo $Man['Man59']; ?></strong>
 <?php echo $Man['Man60']; ?><?php echo $website['title']; ?><?php echo $Man['Man61']; ?>
@@ -367,10 +370,10 @@ var times = new DateTime();
 </div>
 </div>
 <div id="layout-bottom">
-<?php include("functions/footer_man.php"); ?>
+<?php include("../functions/footer_man.php"); ?>
 </div>
 </div>
-<script src="wow/static/local-common/js/search.js?v37"></script>
+<script src="../wow/static/local-common/js/search.js?v37"></script>
 <script type="text/javascript">
 //<![CDATA[
 var xsToken = '';
@@ -479,9 +482,9 @@ Login.embeddedUrl = 'https://eu.battle.net/login/login.frag';
 });
 //]]>
 </script>
-<script src="wow/static/js/bam.js?v23"></script>
-<script src="wow/static/local-common/js/tooltip.js?v37"></script>
-<script src="wow/static/local-common/js/menu.js?v37"></script>
+<script src="../wow/static/js/bam.js?v23"></script>
+<script src="../wow/static/local-common/js/tooltip.js?v37"></script>
+<script src="../wow/static/local-common/js/menu.js?v37"></script>
 <script type="text/javascript">
 $(function() {
 Menu.initialize();
@@ -490,13 +493,13 @@ Locale.dataPath = 'data/i18n.frag.xml';
 });
 </script>
 <!--[if lt IE 8]>
-<script type="text/javascript" src="wow/static/local-common/js/third-party/jquery.pngFix.pack.js?v37"></script>
+<script type="text/javascript" src="../wow/static/local-common/js/third-party/jquery.pngFix.pack.js?v37"></script>
 <script type="text/javascript">$('.png-fix').pngFix();</script>
 <![endif]-->
-<script src="wow/static/local-common/js/third-party/swfobject.js?v37"></script>
-<script src="wow/static/js/management/dashboard.js?v23"></script>
-<script src="wow/static/js/management/wow/dashboard.js?v23"></script>
-<!--[if lt IE 8]> <script type="text/javascript" src="wow/static/local-common/js/third-party/jquery.pngFix.pack.js?v37"></script>
+<script src="../wow/static/local-common/js/third-party/swfobject.js?v37"></script>
+<script src="../wow/static/js/management/dashboard.js?v23"></script>
+<script src="../wow/static/js/management/wow/dashboard.js?v23"></script>
+<!--[if lt IE 8]> <script type="text/javascript" src="../wow/static/local-common/js/third-party/jquery.pngFix.pack.js?v37"></script>
 <script type="text/javascript">
 //<![CDATA[
 $('.png-fix').pngFix(); //]]>

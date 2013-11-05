@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Copyright (C) 2013 AquaflameCMS <http://aquaflame.org/>
  *
@@ -64,13 +63,13 @@ $_SESSION['Local'] = $language;
 | Connect to MySQL Host
 | For example:
 | 	$serveraddress = "MySQL Host Address"; 
-|	$serveruser = "User";
-| 	$serverpass = "Password";
-| 	$serverport	= "Port";
+|	$serveruser    = "User";
+| 	$serverpass    = "Password";
+| 	$serverport	   = "Port";
 */
 $serveraddress = "127.0.0.1";
 $serveruser    = "root";
-$serverpass    = "password";
+$serverpass    = "oneluiz1992";
 $serverport    = "3306";
 
 /*
@@ -84,9 +83,9 @@ $serverport    = "3306";
 | @access public
 |
 */
-$server_adb = "sky_auth";
-$server_wdb = "sky_world";
-$server_cdb = "sky_characters";
+$server_adb = "auth";
+$server_wdb = "world";
+$server_cdb = "characters";
 $server_db  = "website";
 
 /*
@@ -133,7 +132,7 @@ $comun_link['Reddit']   = "http://www.reddit.com/";
 | For example: "AquaFlameCMS 1.0"
 |
 | Server & Website Description
-| For example: "AquaFlameCMS 1.0, the best of the best server private!"
+| For example: "AquaFlameCMS 1.0 the best of the best server private!"
 |
 | Your keywords
 | Type your keywords for the web
@@ -151,7 +150,7 @@ $comun_link['Reddit']   = "http://www.reddit.com/";
 | That means that you should set this variable as '/AquaFlameCMS_Trinity/'.
 */
 $website['title']       = "AquaFlameCMS 1.0";
-$website['description'] = "AquaFlameCMS 1.0, the best of the best!";
+$website['description'] = "AquaFlameCMS 1.0 the best of the best!";
 $website['keywords']    = "AquaFlameCMS 1.0, The Best CMS";
 $website['address']     = "http://localhost";
 $website['root']        = "/";
@@ -174,14 +173,14 @@ if ($maintenance == true) {
     }
 } else {
     
-    /*
-    |--------------------------------------------------------------------------
-    | No edit
-    |--------------------------------------------------------------------------
-    | From now on, we recommend not to change the code to maintain default operation script.
-    | All changes must be made on data found above.
-    |
-    */
+/*
+|--------------------------------------------------------------------------
+| No edit
+|--------------------------------------------------------------------------
+| From now on, we recommend not to change the code to maintain default operation script.
+| All changes must be made on data found above.
+|
+*/
     $teamsLimit = 50; // Number of team to display on each page
     
     $connection_setup = mysql_connect($serveraddress . ':' . $serverport, $serveruser, $serverpass) or die(mysql_error());
@@ -193,6 +192,6 @@ if ($maintenance == true) {
         $account_extra       = mysql_fetch_assoc(mysql_query("SELECT * FROM $server_db.users WHERE id = '" . $account_information['id'] . "'"));
         mysql_select_db($server_db, $connection_setup) or die(mysql_error());
     }
-    ###########
 }
-?>
+
+/* End of file configs.php */

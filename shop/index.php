@@ -57,7 +57,7 @@ try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
 	<li><a href="<?php echo $website['root']; ?>shop/recruit-a-friend/" class="free-services-raf">
 	<span><?php echo $Shop['shop_6']; ?></span></a>
 	</li>
-	<li><a href="<?php echo $website['root']; ?>chars-unst.php" class="free-services-sor">
+	<li><a href="<?php echo $website['root']; ?>account/chars-unst.php" class="free-services-sor">
 	<span><?php echo $Shop['shop_7']; ?></span></a>
 	</li>
 	<li><a href="#" class="free-services-item-restoration">
@@ -103,15 +103,15 @@ try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
 	<li><a href="<?php echo $website['root']; ?>shop/race-change/" class="paid-services-race-change">
 	<span><?php echo $Shop['shop_14']; ?></span></a>
 	</li>
-	<li><a href="<?php echo $website['root']; ?>options/change_appear.php" class="paid-services-character-customization">
+	<li><a href="<?php echo $website['root']; ?>account/change_appear.php" class="paid-services-character-customization">
 	<span><?php echo $Shop['shop_15']; ?></span></a>
 	</li>
-	<li><a href="<?php echo $website['root']; ?>options/change_name.php" class="paid-services-name-change">
+	<li><a href="<?php echo $website['root']; ?>account/change_name.php" class="paid-services-name-change">
 	<span><?php echo $Shop['shop_16']; ?></span></a>
 	</li>
 </ul>
 </div>
-<a href="<?php echo $website['root']; ?>raf-invite.php" class="ad-raf"><span><?php echo $Shop['shop_17']; ?></span></a>
+<a href="<?php echo $website['root']; ?>account/raf-invite.php" class="ad-raf"><span><?php echo $Shop['shop_17']; ?></span></a>
 </div> 
 <div class="panel game-subscriptions">
 <h2 class="header"><a href="#"><?php echo $Shop['shop_18']; ?></a></h2>
@@ -119,7 +119,7 @@ try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
 <a href="#" class="game-title">
 <span class="tooltip" data-tooltip="#wow-battlechest-tooltip" data-tooltip-options="{&quot;location&quot;: &quot;mouse&quot;}">World of Warcraft, TBC & WOTLK</span>
 </a>
-<a class="ui-button button1 " href="<?php echo $website['root']; ?>change_client.php?client=2">
+<a class="ui-button button1 " href="<?php echo $website['root']; ?>account/change_client.php?client=2">
 <span><span><?php echo $Shop['shop_19']; ?></span></span></a>
 <br />
 <div id="wow-battlechest-tooltip" class="tooltip-content-div">
@@ -134,7 +134,7 @@ try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
 </div>
 <div class="subscription-col subscription-2">
 <a href="#" class="game-title">Cataclysm (Expansion)</a>
-<a class="ui-button button1 " href="<?php echo $website['root']; ?>change_client.php?client=3">
+<a class="ui-button button1 " href="<?php echo $website['root']; ?>account/change_client.php?client=3">
 <span><span><?php echo $Shop['shop_19']; ?></span></span></a>
 </div>
 <div class="subscription-col subscription-3">

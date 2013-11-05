@@ -1,9 +1,9 @@
 <?php
-include("configs.php");
+include("../configs.php");
 $page_cat = "security";
-if(!isset($_SESSION['username'])) header('Location: account_log.php');
-if(!isset($_GET['character'])) header('Location: account_log.php');
-if(!isset($_GET['realm'])) header('Location: account_log.php');
+if(!isset($_SESSION['username'])) header('Location: '.$website['root'].'account_log.php');
+if(!isset($_POST['character'])) header('Location: '.$website['root'].'account_log.php');
+if(!isset($_POST['realm'])) header('Location: '.$website['root'].'account_log.php');
 ?>
 
 <!doctype html>
@@ -17,16 +17,17 @@ if(!isset($_GET['realm'])) header('Location: account_log.php');
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
 <meta name="description" content="<?php echo $website['description']; ?>">
 <meta name="keywords" content="<?php echo $website['keywords']; ?>">
-<link rel="shortcut icon" href="wow/static/local-common/images/favicons/bam.ico" type="image/x-icon"/>
-<link rel="stylesheet" href="wow/static/local-common/css/management/common.css" />
-<link rel="stylesheet" href="wow/static/css/bnet.css" />
-<link rel="stylesheet" href="wow/static/css/bnet-print.css" />
-<link rel="stylesheet" href="wow/static/css/management/dashboard.css" />
-<link rel="stylesheet" href="wow/static/css/management/services.css" />
-<link rel="stylesheet" href="wow/static/css/ui.css" />
-<script src="wow/static/local-common/js/third-party/jquery-1.4.4-p1.min.js"></script>
-<script src="wow/static/local-common/js/core.js"></script>
-<script src="wow/static/local-common/js/tooltip.js"></script>
+<link rel="shortcut icon" href="../wow/static/local-common/images/favicons/bam.ico" type="image/x-icon"/>
+<link rel="stylesheet" media="all" href="../wow/static/local-common/css/management/common.css" />
+<link rel="stylesheet" media="all" href="../wow/static/css/bnet.css" />
+<link rel="stylesheet" media="print" href="../wow/static/css/bnet-print.css" />
+<link rel="stylesheet" media="all" href="../wow/static/css/management/dashboard.css" />
+<link rel="stylesheet" media="all" href="../wow/static/css/management/services.css" />
+<link rel="stylesheet" type="text/css" media="all" href="../wow/static/css/ui.css" />
+
+<script src="../wow/static/local-common/js/third-party/jquery-1.4.4-p1.min.js"></script>
+<script src="../wow/static/local-common/js/core.js"></script>
+<script src="../wow/static/local-common/js/tooltip.js"></script>
 <!--[if IE 6]> <script type="text/javascript">
 //<![CDATA[
 try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
@@ -66,36 +67,43 @@ _gaq.push(['_trackPageLoadTime']);
 <div id="layout-top">
 <div class="wrapper">
 <div id="header">
-<?php include("functions/header_account.php"); ?>
-<?php include("functions/footer_man_nav.php"); ?>
+<?php include("../functions/header_account.php"); ?>
+<?php include("../functions/footer_man_nav.php"); ?>
 </div>
 <div id="layout-middle">
 <div class="wrapper">
 <div id="content">
+<!--[if lt IE 8]>
+<style>
+.confirm-service-details {}
+.confirm-service-label {float:left;}
+</style>
+<![endif]-->
 <div class="dashboard service">
 <div class="primary">
 <div class="header">
 <h2 class="subcategory">Character Services</h2>
-<h3 class="headline">Race Change</h3>
-<a href=""><img src="wow/static/local-common/images/game-icons/wow.png" alt="World of Warcraft" width="48" height="48" /></a>
+<h3 class="headline">Name Change</h3>
+<a href="../wow/static/management/wow/dashboard.html?region=EU&amp;accountName=PAP123"><img src="../wow/static/local-common/images/game-icons/wow.png" alt="World of Warcraft" width="48" height="48" /></a>
 </div>
 <div class="service-wrapper">
 <p class="service-nav">
     <a href="" class="active">Service</a>
     <!--<a href="">History/Status</a>-->
-    <a href="account_man.php">Return to dashboard</a>
+    <a href="<?php echo $website['root']; ?>account/">Return to dashboard</a>
 </p>
 <?php
-$guid = intval($_GET['character']);
-$realmid = intval($_GET['realm']);
+$guid = intval($_POST['character']);
 
+$realmid = $_POST['realm'];
 $realm_extra = mysql_fetch_assoc(mysql_query("SELECT * FROM realms WHERE id = '".$realmid."'"));
+
 if(!$realm_extra){ echo '<meta http-equiv="refresh" content="0;url=account_log.php"/>'; die(); }
+
 $realm = mysql_fetch_assoc(mysql_query("SELECT * FROM $server_adb.realmlist WHERE id = '".$realm_extra['realmid']."'"));
 $server_cdb = $realm_extra['char_db'];
 
 $character = mysql_fetch_assoc(mysql_query("SELECT * FROM $server_cdb.characters WHERE guid = '".$guid."'"));
-
 
 function racetxt($race){
     switch($race){
@@ -130,6 +138,7 @@ function classtxt($class){
     }
 }
 ?>
+
 <div class="service-info">
     <div class="service-tag">
         <div class="service-tag-contents border-3">
@@ -139,14 +148,17 @@ function classtxt($class){
                     else echo '<img src="'.$website['root'].'images/avatars/2d/0-0.jpg" width="64" height="64" alt="" />';
                 ?>
             </div>
+            
             <div class="service-tag-description">
                 <span class="character-name caption"><?php echo $character['name']; ?></span>
                 <span class="character-class"> <?php echo $character['level'] . ' ' . racetxt($character['race']) . ' ' . classtxt($character['class']); ?></span>
                 <span class="character-realm"> <?php echo $realm['name']; ?></span>
             </div>
+            
             <span class="clear"><!-- --></span>
         </div>
     </div>
+    
     <div class="service-summary">
         <p class="service-price headline">
         <?php
@@ -158,55 +170,37 @@ function classtxt($class){
         </p>
     </div>
 </div>
+
 <div class="service-form">
-    <div class="service-interior">
-        <h2 class="caption">Name Change</h2>
-        <div class="tos-left full-width">
-            <ul>
-                <?php
-                    if(!$character){ echo '<li>This character does not exist.</li>'; $disabled = 1;}
-                    if($character['account'] != $account_information['id']){ echo '<li>This character does not belong to you.</li>'; $disabled = 1;}
-                ?>
-                <li>Please read the conditions and disclaimers below, thank you.</li>
-            </ul>
-        </div>
-        <span class="clear"><!-- --></span>
-    </div>
-    <br />
-    <div class="service-interior">
-        <h2 class="caption">CONDITIONS AND DISCLAIMERS</h2>
-        <div class="tos-left full-width">
-            <ul>
-                <li>The race change process is immediate, your character will be only become available as a new Race to play, only if you are not online. Under normal conditions the process should take less than a minute, but please remember to be offline while you are doing customization.</li>
-                <li>You can select a new character race only from those in the same faction that have the character's class available. You cannot change a characters class.</li>
-                <li>A character's current home city reputation level will switch values with their new home city and their home city racial mounts will convert to those of their new race.</li>
-                <li>A realm transfer is not included in a race change.</li>
-                <li>A character can only change races once every 12 hours.</li>
-            </ul>
+    <div class="service-interior light">
+        <form method="POST" action="name-change.php">
+        <h3 class="headline">Confirm the changes for this character:</h3>
+        <div class="confirm-service">
+            <span class="confirm-service-label pad-bottom">New Name:</span>
+            <span class="confirm-service-details">
+                Please write down your new character name.<br /><br />
+                <em>
+                    <input type="text" id="newname" name="newname" value="" class=" input border-5 glow-shadow-2" maxlength="20" tabindex="1" />
+                </em>
+            </span>
         </div>
         <span class="clear"><!-- --></span>
         
-        <form method="POST" action="name-confirm.php">
             <input type="hidden" name="character" value="<?php echo $character['guid'] ?>"/>
             <input type="hidden" name="realm" value="<?php echo $realm_extra['id'] ?>"/>
-            <fieldset class="ui-controls section-stacked" >
-                <?php if(isset($disabled)) echo '<button class="ui-button button1 disabled" type="submit" id="tos-submit" tabindex="1" disabled="disabled"><span><span>Agree &amp; Continue</span></span></button>';
-                else echo '<button class="ui-button button1" type="submit" id="tos-submit" tabindex="1"><span><span>Agree &amp; Continue</span></span></button>'; ?>
-                <a class="ui-cancel" href="name.php" tabindex="1"><span>Back </span></a>
-            </fieldset>
-            
-            <script type="text/javascript">
-            //<![CDATA[
-            (function() {
-            var tosSubmit = document.getElementById('tos-submit');
-            tosSubmit.removeAttribute('disabled');
-            tosSubmit.className = 'ui-button button1';
-            })();
-            //]]>
-            </script>
+            <div class="service-interior light">
+                <fieldset class="ui-controls section-stacked override" >
+                    <button class="ui-button button1" type="submit" tabindex="1"><span><span>Continue to Payment</span></span></button>
+                    
+                    <a class="ui-cancel" href="name.php" tabindex="1">
+                        <span>Back</span>
+                    </a>
+                </fieldset>
+            </div>
         </form>
     </div>
 </div>
+
 <span class="clear"><!-- --></span>
 </div>
 </div>
@@ -215,20 +209,20 @@ function classtxt($class){
 </div>
 </div>
 <div id="layout-bottom">
-<?php include("functions/footer_man.php"); ?>
+<?php include("../functions/footer_man.php"); ?>
 </div><script type="text/javascript">
 //<![CDATA[
 var xsToken = '';
 var Msg = {
 support: {
 ticketNew: 'Ticket {0} was created.',
-ticketStatus: 'Ticket {0}'s status changed to {1}.',
+ticketStatus: 'Ticket {0}’s status changed to {1}.',
 ticketOpen: 'Open',
 ticketAnswered: 'Answered',
 ticketResolved: 'Resolved',
 ticketCanceled: 'Canceled',
 ticketArchived: 'Archived',
-ticketInfo: 'Need Info',
+ticketInfo: 'Need Info',
 ticketAll: 'View All Tickets'
 },
 cms: {
@@ -315,9 +309,9 @@ other: 'Other'
 };
 //]]>
 </script>
-<script src="wow/static/js/bam.js?v23"></script>
-<script src="wow/static/local-common/js/tooltip.js?v35"></script>
-<script src="wow/static/local-common/js/menu.js?v35"></script>
+<script src="../wow/static/js/bam.js?v23"></script>
+<script src="../wow/static/local-common/js/tooltip.js?v35"></script>
+<script src="../wow/static/local-common/js/menu.js?v35"></script>
 <script type="text/javascript">
 $(function() {
 Menu.initialize();
@@ -326,10 +320,9 @@ Locale.dataPath = 'data/i18n.frag.xml';
 });
 </script>
 <!--[if lt IE 8]>
-<script type="text/javascript" src="wow/static/local-common/js/third-party/jquery.pngFix.pack.js?v35"></script>
+<script type="text/javascript" src="../wow/static/local-common/js/third-party/jquery.pngFix.pack.js?v35"></script>
 <script type="text/javascript">$('.png-fix').pngFix();</script>
 <![endif]-->
-<script type="text/javascript" src="wow/static/js/management/services.js?v23"></script>
 <script type="text/javascript">
 //<![CDATA[
 Core.load("wow/static/local-common/js/third-party/jquery-ui-1.8.6.custom.min.js?v35");
@@ -341,7 +334,7 @@ Login.embeddedUrl = 'https://eu.battle.net/login/login.frag';
 });
 //]]>
 </script>
-<!--[if lt IE 8]> <script type="text/javascript" src="wow/static/local-common/js/third-party/jquery.pngFix.pack.js?v35"></script>
+<!--[if lt IE 8]> <script type="text/javascript" src="../wow/static/local-common/js/third-party/jquery.pngFix.pack.js?v35"></script>
 <script type="text/javascript">
 //<![CDATA[
 $('.png-fix').pngFix(); //]]>

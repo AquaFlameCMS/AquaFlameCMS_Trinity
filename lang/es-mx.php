@@ -347,6 +347,8 @@ $Man['Man75']  = "referencias restantes.";
 $Man['Man76']  = "Levead juntos y más rápido";
 $Man['Man77']  = "Gana premios si tu amigo adquiere una versión completa";
 $Man['Man78']  = "Obten una montura exclusiva de dos plazas";
+$Man['Man79']  = "Cambia el Nombre desde la Web";
+$Man['Man80']  = "cambia el nombre de tu personaje.";
 // Finishing Account Man
 
 // Starting Header acount
@@ -808,22 +810,25 @@ $armory['Faction0']    = "Alianza";
 //Finish Armory
 
 //Others
-$globalInfoVar['Anonymous'] = "Anónimo";
-$status['chars']            = "Personajes";
-$status['low']              = "Baja";
-$status['high']             = "Alta";
-$status['medium']           = "Media";
-$status['population']       = "Población";
-$status['newP']             = "Nuevos jugadores";
-$status['new']              = "Nuevo";
-$status['noResults']        = "No se han encontrado resultados con esos parámetros.";
-$guild['Guilds']            = "Hermandades";
-$arena['Teams']             = "Equipos de Arena";
-$statNav['AllRealms']       = "Todos los Reinos";
-$statNav['TopHonor']        = "Top Honor";
-$statNav['TopConquest']     = "Top Conquista";
-$Index['NoArticles']        = "No hay artículos";
-$Index['By']                = "por";
+if (isset($_SESSION['username']))
+    $globalInfoVar['Anonymous'] = $_SESSION['username'];
+else
+$globalInfoVar['Anonymous'] = 'Anonymous';
+$status['chars']        = "Characters";
+$status['low']          = "Low";
+$status['high']         = "High";
+$status['medium']       = "Medium";
+$status['population']   = "Population";
+$status['newP']         = "New Players";
+$status['new']          = "New";
+$status['noResults']    = "There is not match founds for this parameters.";
+$guild['Guilds']        = "Guilds";
+$arena['Teams']         = "Arena Teams";
+$statNav['AllRealms']   = "All Realms";
+$statNav['TopHonor']    = "Top Honor";
+$statNav['TopConquest'] = "Top Conquest";
+$Index['NoArticles']    = "No Articles";
+$Index['By']            = "By";
 //Finish Others
 
 //Search

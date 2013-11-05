@@ -1,33 +1,25 @@
 <?php
-	/*
-		Este script le permite vender monedas en tu WOW usando Auto Respuestas ===> http://members.recursosmoviles.com/auto-answers.html
-		Este script esta adaptado para el juego World of Warcraft. Puede descargar el script desde ===> http://members.recursosmoviles.com/scripts.html
-		Los puntos se actualizarán según los datos que se configuren más abajo.
-		Si usted tiene alguna duda sobre el funcionamiento, puede consultarnos a soporte@recursosmoviles.com
+/*
+ * GRANT SELECT,UPDATE ON test.account TO 'root'@'199.188.122.133' IDENTIFIED BY '123456';
+ * FLUSH PRIVILEGES;
+ */
+	ini_set("display_errors",false);			// To check PHP error comment this line
+	//ini_set("display_errors",true);			// To verify PHP errors uncomment this line
 
-		Para MySQL se deben crear los permisos necesarios para obtener datos y actualizar.
-		A continuación un ejemplo de las consultas que se deben ejecutar para dar los permisos:
-			GRANT SELECT,UPDATE ON test.account TO 'root'@'199.188.122.133' IDENTIFIED BY '123456';
-			FLUSH PRIVILEGES;
-	*/
+	define("DB_HOST",		"127.0.0.1");	    // Host to access the database
+	define("DB_USER",		"root");			// User to access the database
+	define("DB_PASS",		"123456");			// Password to access the database
+	define("DB_NAME",		"website");			// Name database amending
+	define("DB_TYPE",		"mysql");			// Database: mysql, mssql
 
-	ini_set("display_errors",false);			//Para verificar errores de PHP comente esta línea - To check PHP error comment this line
-	//ini_set("display_errors",true);			//Para verificar errores de PHP descomente esta línea - To verify PHP errors uncomment this line
+	define("REQUIRED_IP",	"");				// IP address required to access this script
+	define("REQUIRED_KEY",	"712h21g6vy815ed");	// Identification key to access this script
 
-	define("DB_HOST",		"127.0.0.1");	    //Dirección IP de la base de datos; si es en el mismo server que el juego deberá ser 127.0.0.1
-	define("DB_USER",		"root");			//Usuario con acceso a la base de datos del juego - User DB
-	define("DB_PASS",		"123456");			//Contraseña para acceder a la base de datos - Password to access the database
-	define("DB_NAME",		"website");			//Nombre de la base de datos que se modifica - Name database amending
-	define("DB_TYPE",		"mysql");			//Tipo de motor de base de datos: mysql, mssql
+	define("TABLE_NAME",	"users");			// Nombre de la tabla que contiene los datos de cuenta
+	define("ACCOUNT_FIELD",	"login");			// Nombre del campo que guarda el login de la cuenta
+	define("COINS_FIELD",	"donation_points");	// Nombre del campo que guarda los creditos comprados
 
-	define("REQUIRED_IP",	"");				//Dirección IP requerida para acceder a este script - IP address required to access this script
-	define("REQUIRED_KEY",	"712h21g6vy815ed");	//Clave de identificación para acceder a este script - Identification key to access this script
-
-	define("TABLE_NAME",	"users");			//Nombre de la tabla que contiene los datos de cuenta
-	define("ACCOUNT_FIELD",	"login");			//Nombre del campo que guarda el login de la cuenta
-	define("COINS_FIELD",	"donation_points");			//Nombre del campo que guarda los creditos comprados
-
-	define("COINS_DEFAULT_ADD",		1);		//Cantidad de créditos que se suman al enviar un sms - Number of credits that add to send a sms
+	define("COINS_DEFAULT_ADD",		1);		    // Number of credits that add to send a sms
 
 	$coins_per_country=Array(
 		"al"=>1,	// Albania
@@ -90,17 +82,13 @@
 		"ve"=>1,	// Venezuela
 		"za"=>1,	// Sudafrica
 	);
-//-------------------------------------------------------------------//
-/* De aquí en más, recomendamos no cambiar el código para mantener
-   el funcionamiento por defecto del script. Todos los cambios
-   deberán ser hechos en los datos que se encuentran más arriba.
-   
-   From now on, we recommend not to change the code to maintain
+//--------------------------------------------------------------------------//
+/* From now on, we recommend not to change the code to maintain
    Default operation script. All changes must be made on data found above.*/
-//-------------------------------------------------------------------//
+//-------------------------------------------------------------------------//
 	if(REQUIRED_KEY) if(!isset($_GET["key"])||$_GET["key"]!=REQUIRED_KEY) die("Clave de seguridad no valida. IP: {$_SERVER["REMOTE_ADDR"]}");
 	if(REQUIRED_IP) if($_SERVER["REMOTE_ADDR"]!=REQUIRE_IP) die("Acceso no permitido.");
-// if(REQUIRED_IP) if($_SERVER["REMOTE_ADDR"]!=REQUIRE_IP&&$_SERVER["REMOTE_ADDR"]!="**SU_IP***") die("Acceso no permitido.");
+//  if(REQUIRED_IP) if($_SERVER["REMOTE_ADDR"]!=REQUIRE_IP&&$_SERVER["REMOTE_ADDR"]!="**SU_IP***") die("Acceso no permitido.");
 
 	if(!isset($_GET["login"])) die("No ha ingresado el login.");
 	$login=strtr($_GET["login"],"['\"]\\/","      ");

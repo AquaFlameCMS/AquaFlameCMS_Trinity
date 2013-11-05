@@ -58,7 +58,7 @@ try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
 						</em>
 					</div>
 					<div class="button-section">
-						<a class="ui-button button4 button-apply " href="<?php echo $website['root']; ?>raf-invite.php" > <span>
+						<a class="ui-button button4 button-apply " href="<?php echo $website['root']; ?>account/raf-invite.php" > <span>
 						<span><?php echo $Shop['shop_39']; ?>
 						</span>
 						</span>
@@ -96,7 +96,7 @@ try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
 						</p>
 						<p>
 							<?php echo $Shop['shop_46']; ?>
-							<a href="<?php echo $website['root']; ?>raf-invite.php"><?php echo $Shop['shop_47']; ?>
+							<a href="<?php echo $website['root']; ?>account/raf-invite.php"><?php echo $Shop['shop_47']; ?>
 						</p>
 						<p>
 							<?php echo $Shop['shop_48']; ?>
@@ -108,7 +108,7 @@ try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
 							<table class="dynamic-center ">
 							<tr>
 								<td>
-									<a class="ui-button button4 button-apply" href="<?php echo $website['root']; ?>raf-invite.php"> <span>
+									<a class="ui-button button4 button-apply" href="<?php echo $website['root']; ?>account/raf-invite.php"> <span>
 									<span><?php echo $Shop['shop_39']; ?>
 									</span>
 									</span>

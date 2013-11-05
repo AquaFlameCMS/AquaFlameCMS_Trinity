@@ -1,9 +1,9 @@
 <?php
-include("configs.php");
+include("../configs.php");
 $page_cat = "settings";
 // Check, if username session is NOT set then this page will jump to login page
 if (!isset($_SESSION['username'])) {
-        header('Location: account_log.php');		
+        header('Location: '.$website['root'].'account_log.php');		
 }
 ?>
 
@@ -19,15 +19,15 @@ if (!isset($_SESSION['username'])) {
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
 <meta name="description" content="<?php echo $website['description']; ?>">
 <meta name="keywords" content="<?php echo $website['keywords']; ?>">
-<link rel="shortcut icon" href="wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
-<link rel="stylesheet" media="all" href="wow/static/local-common/css/common.css?v22" />
-<link rel="stylesheet" media="all" href="wow/static/css/bnet.css?v21" />
-<link rel="stylesheet" media="print" href="wow/static/css/bnet-print.css?v21" />
-<link rel="stylesheet" media="all" href="wow/static/css/management/address-book.css?v21" />
-<link rel="stylesheet" media="all" href="wow/static/css/ui.css?v21" />
-<script src="wow/static/local-common/js/third-party/jquery-1.4.4-p1.min.js"></script>
-<script src="wow/static/local-common/js/core.js?v22"></script>
-<script src="wow/static/local-common/js/tooltip.js?v22"></script>
+<link rel="shortcut icon" href="../wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
+<link rel="stylesheet" media="all" href="../wow/static/local-common/css/common.css?v22" />
+<link rel="stylesheet" media="all" href="../wow/static/css/bnet.css?v21" />
+<link rel="stylesheet" media="print" href="../wow/static/css/bnet-print.css?v21" />
+<link rel="stylesheet" media="all" href="../wow/static/css/management/address-book.css?v21" />
+<link rel="stylesheet" media="all" href="../wow/static/css/ui.css?v21" />
+<script src="../wow/static/local-common/js/third-party/jquery-1.4.4-p1.min.js"></script>
+<script src="../wow/static/local-common/js/core.js?v22"></script>
+<script src="../wow/static/local-common/js/tooltip.js?v22"></script>
 <!--[if IE 6]> <script type="text/javascript">
 //<![CDATA[
 try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
@@ -62,77 +62,80 @@ _gaq.push(['_trackPageLoadTime']);
 <div id="layout-top">
 <div class="wrapper">
 <div id="header">
-<?php include("functions/header_account.php"); ?>
-<?php include("functions/footer_man_nav.php"); ?>
+<?php include("../functions/header_account.php"); ?>
+<?php include("../functions/footer_man_nav.php"); ?>
 </div>
 <div id="layout-middle">
 <div class="wrapper">
 <div id="content">
 <div id="page-header">
 <h2 class="subcategory">Account Settings</h2>
-<h3 class="headline">Change Game Client</h3>
+<h3 class="headline">General &amp; Account Information</h3>
 </div>
 <div id="page-content" class="page-content">
+<p>These are your default account information when you registered first time on <?php echo $website['title']; ?></p>
+<div class="address-book" id="address-book">
+<div id="address-1" class="address-box primary-address border-5">
+<h4 class="caption">
 <?php
-if (isset($_POST['change'])){ 
-  mysql_select_db($server_adb,$connection_setup)or die(mysql_error());
-  $query = mysql_query("UPDATE account SET expansion = ".$_POST['expansion']." WHERE username = '".$_SESSION['username']."'");
-  if ($query == true)
-  {
-    echo '<div class="alert-page" align="center">';
-    echo '<div class="alert-page-message success-page">
-		<p class="caption"><strong><font color="green">Your Game Client has been changed successfully!</font></strong></p>
-		<p class="caption">This process could take a few minutes.</p>
-		</div>';
-  }
-  else{
-    echo '<div class="errors" align="center"><font color="red">An error has ocurred during the conection with the database!</font><br><br />';
-    echo '<div class="errors" align="center">Please try again later or contact with the administration support.<br><br />';
-  }
-  echo '<meta http-equiv="refresh" content="4;url=account_man.php"/>';
-}else{
-
-  $expansion = mysql_real_escape_string($_GET['client']);
-  if (!isset($_GET['client']) || ($expansion<>'0' && $expansion<>'1' && $expansion<>'2' && $expansion<>'3')){
-    $error = true;
-    echo '<p><font color="red">Sorry you have to choose a valid game client to change your account.</font></p>';
-  }
-  else{
-    echo '<p>If you change your game client some limitations could be aplicate to your account.<br>This process could take a few minutes.</p> 
-    <p>Please confirm that you want to change your game client.</p>';
-    switch ($expansion){
-      case 0: 
-        $name = 'World of Warcraft'; 
-        break;
-      case 1: 
-        $name = 'Burning Crusade';   
-        break;
-      case 2: 
-        $name = 'Wrath of the Lich King';  
-        break;
-      case 3: 
-        $name = 'Cataclysm';                     
-        break;
-    }
-  }
-  if (!$error=false){
-    echo'
-    <form method="post" action="">
-      <input type="hidden" value="'.$expansion.'" name="expansion" />
-      <fieldset class="ui-controls section-buttons" >
-      <button class="ui-button button1" type="submit" name="change" onclick="Form.submit(this)">
-      <span><span>Change to '.$name.' account</span></span>
-      </button>
-      </fieldset>  
-    </form>';}
-  }
+$account_info = mysql_query("SELECT email,joindate,last_ip,recruiter FROM $server_adb.account WHERE username = '".$_SESSION['username']."'")or die(mysql_error());
+while($get = mysql_fetch_array($account_info)) 
 ?>
+Joined at: <?php echo $get["joindate"] ?>
+
+</h4><br />
+<h4>Username: </h4><font color='#66CE21'><?php echo strtolower($_SESSION['username']); ?>,</font>
+<p></p>
+<h4>E-mail:</h4>
+<p><?php echo $get["email"] ?>,<p>
+Town: <Font color="#A00000">Unavailable</font>, 
+<p>Last IP: <Font color="#A00000"><?php echo $_SERVER['REMOTE_ADDR']; ?></font>,</p>
+<p><h4>Full Name: <Font color="#A00000">Unavailable</font>,</h4></p>
+<p>Number of Recruits: <Font color="#A00000"><?php echo $get["recruiter"] ?></font>.</p>
+<p></p>
+<div class="activate-primary">
+<div id="primary-address">This is currently your main shipping address</div>
+</div>
+<div class="address-dialog" style="display: none" id="address-dialog-1" title="Delete?">
+Are you sure you want to delete this address?
+<input type="hidden" name="addressId" value="1" />
+</div>
+</div>
+<script type="text/javascript">
+//<![CDATA[
+$(function() {
+$(".address-dialog").dialog("destroy");
+$('.address-dialog').dialog({
+autoOpen: false,
+modal: true,
+position: "center",
+resizeable: false,
+closeText: "Close",
+buttons: {
+'Yes': function() {
+var id = $(this).find('input[name="addressId"]').val();
+AddressBook.deleteAddress(id);
+$(this).dialog("close");
+},
+'Cancel': function() {
+$(this).dialog("close");
+}
+},
+open: function() {
+$(".ui-dialog-buttonpane").find("button").addClass("button1").find(":first").addClass("first");
+}
+});
+});
+//]]>
+</script>
+<span class="clear"></span>
+</div>
 </div>
 </div>
 </div>
 </div>
 <div id="layout-bottom">
-<?php include("functions/footer_man.php"); ?>
+<?php include("../functions/footer_man.php"); ?>
 </div>
 <script type="text/javascript">
 //<![CDATA[
@@ -218,9 +221,9 @@ pet: 'pet'
 };
 //]]>
 </script>
-<script src="wow/static/js/bam.js?v21"></script>
-<script src="wow/static/local-common/js/tooltip.js?v22"></script>
-<script src="wow/static/local-common/js/menu.js?v22"></script>
+<script src="../wow/static/js/bam.js?v21"></script>
+<script src="../wow/static/local-common/js/tooltip.js?v22"></script>
+<script src="../wow/static/local-common/js/menu.js?v22"></script>
 <script type="text/javascript">
 $(function() {
 Menu.initialize();
@@ -229,11 +232,11 @@ Locale.dataPath = 'data/i18n.frag.xml';
 });
 </script>
 <!--[if lt IE 8]>
-<script type="text/javascript" src="wow/static/local-common/js/third-party/jquery.pngFix.pack.js?v22"></script>
+<script type="text/javascript" src="../wow/static/local-common/js/third-party/jquery.pngFix.pack.js?v22"></script>
 <script type="text/javascript">$('.png-fix').pngFix();</script>
 <![endif]-->
-<script src="wow/static/js/management/address-book.js?v21"></script>
-<script src="wow/static/local-common/js/third-party/jquery-ui-1.8.1.custom.min.js?v22"></script>
+<script src="../wow/static/js/management/address-book.js?v21"></script>
+<script src="../wow/static/local-common/js/third-party/jquery-ui-1.8.1.custom.min.js?v22"></script>
 <script type="text/javascript">
 //<![CDATA[
 Core.load("wow/static/local-common/js/overlay.js?v22");

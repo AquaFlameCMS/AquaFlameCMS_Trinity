@@ -1,33 +1,33 @@
 <?php
-include("configs.php");
+include("../configs.php");
 $page_cat = "settings";
 // Check, if username session is NOT set then this page will jump to login page
 if (!isset($_SESSION['username'])) {
-        header('Location: account_log.php');		
+        header('Location: '.$website['root'].'account_log.php');		
 }
 ?>
 
-<!doctype html>
+<!DOCTYPE html> 
 <html lang="en-gb">
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
-<title><?php echo $website['title']; ?> - Account Information</title>
+<title><?php echo $website['title']; ?> - Character Unstuck</title>
 <meta content="false" http-equiv="imagetoolbar" />
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
 <meta name="description" content="<?php echo $website['description']; ?>">
 <meta name="keywords" content="<?php echo $website['keywords']; ?>">
-<link rel="shortcut icon" href="wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
-<link rel="stylesheet" media="all" href="wow/static/local-common/css/common.css?v22" />
-<link rel="stylesheet" media="all" href="wow/static/css/bnet.css?v21" />
-<link rel="stylesheet" media="print" href="wow/static/css/bnet-print.css?v21" />
-<link rel="stylesheet" media="all" href="wow/static/css/management/address-book.css?v21" />
-<link rel="stylesheet" media="all" href="wow/static/css/ui.css?v21" />
-<script src="wow/static/local-common/js/third-party/jquery-1.4.4-p1.min.js"></script>
-<script src="wow/static/local-common/js/core.js?v22"></script>
-<script src="wow/static/local-common/js/tooltip.js?v22"></script>
+<link rel="shortcut icon" href="../wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
+<link rel="stylesheet" media="all" href="../wow/static/local-common/css/management/common.css" />
+<link rel="stylesheet" media="all" href="../wow/static/css/bnet.css" />
+<link rel="stylesheet" media="print" href="../wow/static/css/bnet-print.css" />
+<link rel="stylesheet" media="all" href="../wow/static/css/inputs.css?v21" />
+<link rel="stylesheet" media="all" href="../wow/static/css/management/wow/merge/wow-merge.css?v21" />
+<script src="../wow/static/local-common/js/third-party/jquery-1.4.4-p1.min.js"></script>
+<script src="../wow/static/local-common/js/core.js"></script>
+<script src="../wow/static/local-common/js/tooltip.js"></script>
 <!--[if IE 6]> <script type="text/javascript">
 //<![CDATA[
 try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
@@ -58,98 +58,133 @@ _gaq.push(['_trackPageLoadTime']);
 //]]>
 </script>
 </head>
-<body class="en-gb logged-in">
+<body class="en-gb wowconv logged-in">
 <div id="layout-top">
 <div class="wrapper">
 <div id="header">
-<?php include("functions/header_account.php"); ?>
-<?php include("functions/footer_man_nav.php"); ?>
+<?php include("../functions/header_account.php"); ?>
+<?php include("../functions/footer_man_nav.php"); ?>
 </div>
 <div id="layout-middle">
 <div class="wrapper">
 <div id="content">
+<div id="account-progress">
+<span>Progress 20%</span> [Step 1 of 5]
+<div id="progress-bar" class="border-3">
+<div id="current-progress" class="border-3" style="width: 20%"></div>
+</div>
+</div>
 <div id="page-header">
-<h2 class="subcategory">Account Settings</h2>
-<h3 class="headline">General &amp; Account Information</h3>
+<span class="float-right"><span class="form-req">*</span> Required</span>
+<h2 class="subcategory">Special Information</h2>
+<h3 class="headline">Special Account Information</h3>
 </div>
-<div id="page-content" class="page-content">
-<p>These are your default account information when you registered first time on <?php echo $website['title']; ?></p>
-<div class="address-book" id="address-book">
-<div id="address-1" class="address-box primary-address border-5">
-<h4 class="caption">
-<?php
-$account_info = mysql_query("SELECT email,joindate,last_ip,recruiter FROM $server_adb.account WHERE username = '".$_SESSION['username']."'")or die(mysql_error());
-while($get = mysql_fetch_array($account_info)) 
-?>
-Joined at: <?php echo $get["joindate"] ?>
+<p>Here you will add your information about yourself so you can use the Donation System or if you have won any prizes from events, we will need these so we can send it to you.</p>
+<div id="page-content">
 
-</h4><br />
-<h4>Username: </h4><font color='#66CE21'><?php echo strtolower($_SESSION['username']); ?>,</font>
-<p></p>
-<h4>E-mail:</h4>
-<p><?php echo $get["email"] ?>,<p>
-Town: <Font color="#A00000">Unavailable</font>, 
-<p>Last IP: <Font color="#A00000"><?php echo $_SERVER['REMOTE_ADDR']; ?></font>,</p>
-<p><h4>Full Name: <Font color="#A00000">Unavailable</font>,</h4></p>
-<p>Number of Recruits: <Font color="#A00000"><?php echo $get["recruiter"] ?></font>.</p>
-<p></p>
-<div class="activate-primary">
-<div id="primary-address">This is currently your main shipping address</div>
+<?php
+	include("configs.php");
+	$con = mysql_connect("$serveraddress","$serveruser","$serverpass", "$server_db");
+  if (!$con){
+  die('Could not connect: ' . mysql_error());
+  }
+
+  mysql_select_db("$server_db", $con);
+
+	$update = "INSERT INTO contacts SET name = '' WHERE id = 1";
+	$insert = "UPDATE contacts SET name = '' WHERE id = 1";
+  mysql_query($update, $con);
+
+  echo "Your <b>Name</b> has been updated successfully<br><br>";
+
+  mysql_close($con);
+?>
+<form method="post" action="" class="account-merge" id="account-merge">
+<div id="wowLogin">
+<div class="input-row input-row-text">
+<span class="input-left">
+<label for="username">
+<span class="label-text">
+Your Saved Name:
+</span>
+<span class="input-required">*</span>
+</label>
+</span>
+<span class="input-right">
+<span class="input-text input-text-small">
+<input type="text" name="name" value='' id="name" class="input border-5 glow-shadow-2 form-disabled" autocomplete="off" tabindex="1" required="required" disabled="disabled"/>
+<span class="inline-message" id="username-message"></span>
+</span>
+</span>
 </div>
-<div class="address-dialog" style="display: none" id="address-dialog-1" title="Delete?">
-Are you sure you want to delete this address?
-<input type="hidden" name="addressId" value="1" />
+<div class="input-row input-row-text">
+<span class="input-left">
+<label for="username">
+<span class="label-text">
+Your Current Name:
+</span>
+<span class="input-required">*</span>
+</label>
+</span>
+<span class="input-right">
+<span class="input-text input-text-small">
+<input type="text" name="name" value='' id="name" class="input border-5 glow-shadow-2" autocomplete="off" tabindex="1" required="required" />
+<span class="inline-message" id="username-message"></span>
+</span>
+</span>
 </div>
+<fieldset class="ui-controls " >
+<button class="ui-button button1 " type="submit" name="unstuck" value="Unstuck!" id="merge-submit" tabindex="1">
+	<span>
+	    <span>Continue</span>
+	</span>
+</button>
+<a class="ui-cancel " href="/account/" tabindex="1"> <span> Cancel </span></a>
+</fieldset>
+</form>
+</table>
+</div>
+<script type="text/javascript">
+//<![CDATA[
+(function() {
+var mergeSubmit = document.getElementById('merge-submit');
+mergeSubmit.disabled = 'disabled';
+mergeSubmit.className = mergeSubmit.className + ' disabled';
+})();
+//]]>
+</script>
+</form>
 </div>
 <script type="text/javascript">
 //<![CDATA[
 $(function() {
-$(".address-dialog").dialog("destroy");
-$('.address-dialog').dialog({
-autoOpen: false,
-modal: true,
-position: "center",
-resizeable: false,
-closeText: "Close",
-buttons: {
-'Yes': function() {
-var id = $(this).find('input[name="addressId"]').val();
-AddressBook.deleteAddress(id);
-$(this).dialog("close");
-},
-'Cancel': function() {
-$(this).dialog("close");
-}
-},
-open: function() {
-$(".ui-dialog-buttonpane").find("button").addClass("button1").find(":first").addClass("first");
-}
+var inputs = new Inputs('#account-merge');
+var mergeForm = new AccountMerge('#account-merge', {
+captchaRegions: [ 'US', 'EU', 'KR', 'TW' ],
+accountCountry: 'GRC'
 });
 });
 //]]>
 </script>
-<span class="clear"></span>
-</div>
-</div>
 </div>
 </div>
 </div>
 <div id="layout-bottom">
-<?php include("functions/footer_man.php"); ?>
+<?php include("../functions/footer_man.php"); ?>
 </div>
 <script type="text/javascript">
 //<![CDATA[
-var xsToken = 'db9c1032-afc8-4a29-9ab8-07ec1c068d37';
+var xsToken = 'b213c993-d61d-4957-9141-9da399fd7d54';
 var Msg = {
 support: {
 ticketNew: 'Ticket {0} was created.',
-ticketStatus: 'Ticket {0}â€™s status changed to {1}.',
+ticketStatus: 'Ticket {0}’s status changed to {1}.',
 ticketOpen: 'Open',
 ticketAnswered: 'Answered',
 ticketResolved: 'Resolved',
 ticketCanceled: 'Cancelled',
 ticketArchived: 'Archived',
-ticketInfo: 'Need Info',
+ticketInfo: 'Need Info',
 ticketAll: 'View All Tickets'
 },
 cms: {
@@ -187,10 +222,10 @@ urlPrompt: 'URL Address:'
 },
 ui: {
 viewInGallery: 'View in gallery',
-loading: 'Loadingâ€¦',
+loading: 'Loading…',
 unexpectedError: 'An error has occurred',
-fansiteFind: 'Find this onâ€¦',
-fansiteFindType: 'Find {0} onâ€¦',
+fansiteFind: 'Find this on…',
+fansiteFindType: 'Find {0} on…',
 fansiteNone: 'No fansites available.'
 },
 grammar: {
@@ -221,9 +256,9 @@ pet: 'pet'
 };
 //]]>
 </script>
-<script src="wow/static/js/bam.js?v21"></script>
-<script src="wow/static/local-common/js/tooltip.js?v22"></script>
-<script src="wow/static/local-common/js/menu.js?v22"></script>
+<script src="../wow/static/js/bam.js?v21"></script>
+<script src="../wow/static/local-common/js/tooltip.js?v22"></script>
+<script src="../wow/static/local-common/js/menu.js?v22"></script>
 <script type="text/javascript">
 $(function() {
 Menu.initialize();
@@ -232,11 +267,11 @@ Locale.dataPath = 'data/i18n.frag.xml';
 });
 </script>
 <!--[if lt IE 8]>
-<script type="text/javascript" src="wow/static/local-common/js/third-party/jquery.pngFix.pack.js?v22"></script>
+<script type="text/javascript" src="../wow/static/local-common/js/third-party/jquery.pngFix.pack.js?v22"></script>
 <script type="text/javascript">$('.png-fix').pngFix();</script>
 <![endif]-->
-<script src="wow/static/js/management/address-book.js?v21"></script>
-<script src="wow/static/local-common/js/third-party/jquery-ui-1.8.1.custom.min.js?v22"></script>
+<script src="../wow/static/js/inputs.js?v21"></script>
+<script src="../wow/static/js/management/wow/merge/account-merge.js?v21"></script>
 <script type="text/javascript">
 //<![CDATA[
 Core.load("wow/static/local-common/js/overlay.js?v22");

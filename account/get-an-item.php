@@ -1,9 +1,9 @@
 <?php
-include("configs.php");
+include("../configs.php");
 $page_cat = 'gamesncodes';
 // Check, if username session is NOT set then this page will jump to login page
 if (!isset($_SESSION['username'])) {
-        header('Location: account_log.php');		
+        header('Location: '.$website['root'].'account_log.php');		
 }
 ?>
 
@@ -18,15 +18,15 @@ if (!isset($_SESSION['username'])) {
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
 <meta name="description" content="<?php echo $website['description']; ?>">
 <meta name="keywords" content="<?php echo $website['keywords']; ?>">
-<link rel="shortcut icon" href="wow/static/local-common/images/favicons/bam.ico" type="image/x-icon"/>
-<link rel="stylesheet" media="all" href="wow/static/local-common/css/common.css?v39" />
-<link rel="stylesheet" media="all" href="wow/static/css/bnet.css?v26" />
-<link rel="stylesheet" media="print" href="wow/static/css/bnet-print.css?v26" />
-<link rel="stylesheet" media="all" href="wow/static/css/management/get-game.css?v26" />
-<link rel="stylesheet" media="all" href="wow/static/css/management/get-game-ie8.css?v26" />
-<script src="wow/static/local-common/js/third-party/jquery.js?v39"></script>
-<script src="wow/static/local-common/js/core.js?v39"></script>
-<script src="wow/static/local-common/js/tooltip.js?v39"></script>
+<link rel="shortcut icon" href="../wow/static/local-common/images/favicons/bam.ico" type="image/x-icon"/>
+<link rel="stylesheet" media="all" href="../wow/static/local-common/css/common.css?v39" />
+<link rel="stylesheet" media="all" href="../wow/static/css/bnet.css?v26" />
+<link rel="stylesheet" media="print" href="../wow/static/css/bnet-print.css?v26" />
+<link rel="stylesheet" media="all" href="../wow/static/css/management/get-game.css?v26" />
+<link rel="stylesheet" media="all" href="../wow/static/css/management/get-game-ie8.css?v26" />
+<script src="../wow/static/local-common/js/third-party/jquery.js?v39"></script>
+<script src="../wow/static/local-common/js/core.js?v39"></script>
+<script src="../wow/static/local-common/js/tooltip.js?v39"></script>
 <!--[if IE 6]> <script type="text/javascript">
 //<![CDATA[
 try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
@@ -67,8 +67,8 @@ _gaq.push(['_trackPageLoadTime']);
 <div id="layout-top">
 <div class="wrapper">
 <div id="header">
-<?php include("functions/header_account.php"); ?>
-<?php include("functions/footer_man_nav.php"); ?>
+<?php include("../functions/header_account.php"); ?>
+<?php include("../functions/footer_man_nav.php"); ?>
 </div>
 </li>
 </ul>
@@ -100,8 +100,8 @@ _gaq.push(['_trackPageLoadTime']);
 --><span class="data-grid-member data-grid-member-first " id="D3"><!--
 --><span class="data-grid-member-contents"><!--
 --><span class="product-thumbnail glow-shadow border-3">
-<a href="wow/static/management/digital-purchase.html?product=D3&amp;gameRegion=EU">
-<img src="wow/static/images/products/box-art/games/diablo-iii/f61ecd9a-b0da-4fdd-8d0d-bd4c6717f462/default/medium.png?v26" alt="Diablo® III" width="115" height="163" />
+<a href="../wow/static/management/digital-purchase.html?product=D3&amp;gameRegion=EU">
+<img src="../wow/static/images/products/box-art/games/diablo-iii/f61ecd9a-b0da-4fdd-8d0d-bd4c6717f462/default/medium.png?v26" alt="Diablo® III" width="115" height="163" />
 </a>
 </span><!--
 --><span class="product-details">
@@ -115,7 +115,7 @@ Diablo® III
 --><span class="product-actions blizzard">
 <a
 class="ui-button button1 "
-href="wow/static/management/digital-purchase.html?product=D3&amp;gameRegion=EU"
+href="../wow/static/management/digital-purchase.html?product=D3&amp;gameRegion=EU"
 tabindex="1"
 >
 <span>
@@ -129,8 +129,8 @@ tabindex="1"
 --><span class="data-grid-member " id="S2"><!--
 --><span class="data-grid-member-contents"><!--
 --><span class="product-thumbnail glow-shadow border-3">
-<a href="wow/static/management/digital-purchase.html?product=S2&amp;gameRegion=EU">
-<img src="wow/static/images/products/box-art/games/starcraft-ii-wings-of-liberty/1d24d291-c8b1-4218-b5bb-acbe44236cfa/default/medium.png?v26" alt="StarCraft II®: Wings of Liberty" width="115" height="163" />
+<a href="../wow/static/management/digital-purchase.html?product=S2&amp;gameRegion=EU">
+<img src="../wow/static/images/products/box-art/games/starcraft-ii-wings-of-liberty/1d24d291-c8b1-4218-b5bb-acbe44236cfa/default/medium.png?v26" alt="StarCraft II®: Wings of Liberty" width="115" height="163" />
 </a>
 </span><!--
 --><span class="product-details">
@@ -144,7 +144,7 @@ StarCraft II®:<br />Wings of Liberty
 --><span class="product-actions blizzard">
 <a
 class="ui-button button1 "
-href="wow/static/management/digital-purchase.html?product=S2&amp;gameRegion=EU"
+href="../wow/static/management/digital-purchase.html?product=S2&amp;gameRegion=EU"
 tabindex="1"
 >
 <span>
@@ -152,15 +152,15 @@ tabindex="1"
 </span>
 </span>
 </a>
-<a class="alternate-action" href="wow/static/download/?show=sc2&amp;starter=sc2" tabindex="1">Play for Free</a>
+<a class="alternate-action" href="../wow/static/download/?show=sc2&amp;starter=sc2" tabindex="1">Play for Free</a>
 </span><!--
 --></span><!--
 --></span><!--
 --><span class="data-grid-member " id="WOWC"><!--
 --><span class="data-grid-member-contents"><!--
 --><span class="product-thumbnail glow-shadow border-3">
-<a href="wow/static/management/digital-purchase.html?product=WOWC&amp;gameRegion=EU">
-<img src="wow/static/images/products/box-art/games/world-of-warcraft-battle-chest/0f6f75d5-5be3-495a-bf0f-ee28016b477e/default/medium.png?v26" alt="World of Warcraft® Battle Chest®" width="115" height="163" />
+<a href="../wow/static/management/digital-purchase.html?product=WOWC&amp;gameRegion=EU">
+<img src="../wow/static/images/products/box-art/games/world-of-warcraft-battle-chest/0f6f75d5-5be3-495a-bf0f-ee28016b477e/default/medium.png?v26" alt="World of Warcraft® Battle Chest®" width="115" height="163" />
 </a>
 </span><!--
 --><span class="product-details">
@@ -174,7 +174,7 @@ World of Warcraft®<br /> Battle Chest®
 --><span class="product-actions blizzard">
 <a
 class="ui-button button1 "
-href="wow/static/management/digital-purchase.html?product=WOWC&amp;gameRegion=EU"
+href="../wow/static/management/digital-purchase.html?product=WOWC&amp;gameRegion=EU"
 tabindex="1"
 >
 <span>
@@ -188,8 +188,8 @@ tabindex="1"
 --><span class="data-grid-member data-grid-member-last " id="WAR3"><!--
 --><span class="data-grid-member-contents"><!--
 --><span class="product-thumbnail glow-shadow border-3">
-<a href="wow/static/management/digital-purchase.html?product=WAR3&amp;gameRegion=EU">
-<img src="wow/static/images/products/box-art/games/warcraft-iii-reign-of-chaos/8b5fed03-0bf8-478c-ba29-205f6ddceb53/default/medium.png?v26" alt="Warcraft III®: Reign of Chaos" width="115" height="163" />
+<a href="../wow/static/management/digital-purchase.html?product=WAR3&amp;gameRegion=EU">
+<img src="../wow/static/images/products/box-art/games/warcraft-iii-reign-of-chaos/8b5fed03-0bf8-478c-ba29-205f6ddceb53/default/medium.png?v26" alt="Warcraft III®: Reign of Chaos" width="115" height="163" />
 </a>
 </span><!--
 --><span class="product-details">
@@ -203,7 +203,7 @@ Warcraft III®:<br />Reign of Chaos
 --><span class="product-actions blizzard">
 <a
 class="ui-button button1 "
-href="wow/static/management/digital-purchase.html?product=WAR3&amp;gameRegion=EU"
+href="../wow/static/management/digital-purchase.html?product=WAR3&amp;gameRegion=EU"
 tabindex="1"
 >
 <span>
@@ -232,10 +232,10 @@ var digitalGames = new DigitalGames('#digital-games');
 </div>
 </div>
 <div id="layout-bottom">
-<?php include("functions/footer_man.php"); ?>
+<?php include("../functions/footer_man.php"); ?>
 </div>
 </div>
-<script src="wow/static/local-common/js/search.js?v39"></script>
+<script src="../wow/static/local-common/js/search.js?v39"></script>
 <script type="text/javascript">
 //<![CDATA[
 var xsToken = '9d875366-e8b3-46e0-a17f-431c939fa3b7';
@@ -344,21 +344,21 @@ Login.embeddedUrl = 'https://eu.battle.net/login/login.frag';
 });
 //]]>
 </script>
-<script src="wow/static/js/bam.js?v26"></script>
-<script src="wow/static/local-common/js/tooltip.js?v39"></script>
-<script src="wow/static/local-common/js/menu.js?v39"></script>
-<script src="wow/static/local-common/js/third-party/jquery-ui-1.8.6.custom.min.js?v39"></script>
+<script src="../wow/static/js/bam.js?v26"></script>
+<script src="../wow/static/local-common/js/tooltip.js?v39"></script>
+<script src="../wow/static/local-common/js/menu.js?v39"></script>
+<script src="../wow/static/local-common/js/third-party/jquery-ui-1.8.6.custom.min.js?v39"></script>
 <script type="text/javascript">
 $(function() {
 Locale.dataPath = 'data/i18n.frag.xml';
 });
 </script>
 <!--[if lt IE 8]>
-<script type="text/javascript" src="wow/static/local-common/js/third-party/jquery.pngFix.pack.js?v39"></script>
+<script type="text/javascript" src="../wow/static/local-common/js/third-party/jquery.pngFix.pack.js?v39"></script>
 <script type="text/javascript">$('.png-fix').pngFix();</script>
 <![endif]-->
-<script src="wow/static/js/management/get-game.js?v26"></script>
-<!--[if lt IE 8]> <script type="text/javascript" src="wow/static/local-common/js/third-party/jquery.pngFix.pack.js?v39"></script>
+<script src="../wow/static/js/management/get-game.js?v26"></script>
+<!--[if lt IE 8]> <script type="text/javascript" src="../wow/static/local-common/js/third-party/jquery.pngFix.pack.js?v39"></script>
 <script type="text/javascript">
 //<![CDATA[
 $('.png-fix').pngFix(); //]]>

@@ -26,7 +26,7 @@ ErrorDocument 404 /errors/404.php
 ErrorDocument 500 /errors/500.php
 ErrorDocument 503 /errors/503.php
 
-#Blocking malicious bots
+# Blocking malicious bots
 RewriteEngine on
 RewriteCond %{HTTP_USER_AGENT} ^BlackWidow [OR]
 RewriteCond %{HTTP_USER_AGENT} ^Bot\ mailto:craftbot@yahoo.com [OR]
@@ -118,7 +118,7 @@ RewriteCond %{HTTP_USER_AGENT} ^ZyBORG [OR]
 RewriteCond %{HTTP_USER_AGENT} ^Zeus
 RewriteRule .* - [F]
 
-# Anti XSS protection
+# Anti XSS protection Injection protection
 Options +FollowSymLinks
 RewriteEngine On
 RewriteCond %{QUERY_STRING} base64_encode.*\(.*\) [OR]
@@ -129,16 +129,16 @@ RewriteCond %{QUERY_STRING} _REQUEST(=|\[|\%[0-9A-Z]{0,2})
 RewriteRule ^(.*)$ index_error.php [F,L]
 RewriteCond %{REQUEST_METHOD} ^(TRACE|TRACK)
 RewriteRule .* – [F]
-# Anti cross site tracing – protection
-RewriteEngine On
-RewriteCond %{REQUEST_METHOD} ^TRACE
-RewriteRule .* – [F]
-# Injection protection
+# More
 RewriteCond %{REQUEST_METHOD} GET
 RewriteCond %{QUERY_STRING} [a-zA-Z0-9_]=http:// [OR]
 RewriteCond %{QUERY_STRING} [a-zA-Z0-9_]=(\.\.//?)+ [OR]
 RewriteCond %{QUERY_STRING} [a-zA-Z0-9_]=/([a-z0-9_.]//?)+ [NC]
 RewriteRule .* - [F]
+# Anti cross site tracing – protection
+RewriteEngine On
+RewriteCond %{REQUEST_METHOD} ^TRACE
+RewriteRule .* – [F]
 # prevent image theft / hotlinking :: Activate only if necessary
 #RewriteEngine on
 #RewriteCond %{HTTP_REFERER} !^$

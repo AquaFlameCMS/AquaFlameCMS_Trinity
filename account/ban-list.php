@@ -1,5 +1,5 @@
 <?php
-require_once("configs.php");
+require_once("../configs.php");
 $page_cat = "gamesncodes";
 ?>
 
@@ -15,15 +15,15 @@ $page_cat = "gamesncodes";
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
 <meta name="description" content="<?php echo $website['description']; ?>">
 <meta name="keywords" content="<?php echo $website['keywords']; ?>">
-<link rel="shortcut icon" href="wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
-<link rel="stylesheet" media="all" href="wow/static/local-common/css/common.css" />
-<link rel="stylesheet" media="all" href="wow/static/css/bnet.css" />
-<link rel="stylesheet" media="print" href="wow/static/css/bnet-print.css" />
-<link rel="stylesheet" media="all" href="wow/static/css/management/order-history.css" />
-<link rel="stylesheet" media="all" href="wow/static/css/management/services.css" />
-<script src="wow/static/local-common/js/third-party/jquery-1.4.4-p1.min.js"></script>
-<script src="wow/static/local-common/js/core.js?v22"></script>
-<script src="wow/static/local-common/js/tooltip.js?v22"></script>
+<link rel="shortcut icon" href="../wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
+<link rel="stylesheet" media="all" href="../wow/static/local-common/css/common.css" />
+<link rel="stylesheet" media="all" href="../wow/static/css/bnet.css" />
+<link rel="stylesheet" media="print" href="../wow/static/css/bnet-print.css" />
+<link rel="stylesheet" media="all" href="../wow/static/css/management/order-history.css" />
+<link rel="stylesheet" media="all" href="../wow/static/css/management/services.css" />
+<script src="../wow/static/local-common/js/third-party/jquery-1.4.4-p1.min.js"></script>
+<script src="../wow/static/local-common/js/core.js?v22"></script>
+<script src="../wow/static/local-common/js/tooltip.js?v22"></script>
 <!--[if IE 6]> <script type="text/javascript">
 //<![CDATA[
 try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
@@ -63,8 +63,8 @@ _gaq.push(['_trackPageLoadTime']);
         <div id="layout-top">
 <div class="wrapper">
 <div id="header">
-<?php include("functions/header_account.php"); ?>
-<?php include("functions/footer_man_nav.php"); ?>
+<?php include("../functions/header_account.php"); ?>
+<?php include("../functions/footer_man_nav.php"); ?>
 </div>
 <div id="layout-middle">
 <div class="wrapper">
@@ -178,7 +178,7 @@ $('#order-history tr').removeClass('row-hover');
 </div>
 </div>
 <div id="layout-bottom">
-<?php include("functions/footer_man.php"); ?>
+<?php include("../functions/footer_man.php"); ?>
 </div>
 <script type="text/javascript">
 //<![CDATA[
@@ -279,9 +279,9 @@ other: 'Other'
 };
 //]]>
 </script>
-<script src="wow/static/js/bam.js"></script>
-<script src="wow/static/local-common/js/tooltip.js"></script>
-<script src="wow/static/local-common/js/menu.js"></script>
+<script src="../wow/static/js/bam.js"></script>
+<script src="../wow/static/local-common/js/tooltip.js"></script>
+<script src="../wow/static/local-common/js/menu.js"></script>
 <script type="text/javascript">
 $(function() {
 Menu.initialize();
@@ -290,11 +290,11 @@ Locale.dataPath = 'data/i18n.frag.xml';
 });
 </script>
 <!--[if lt IE 8]>
-<script type="text/javascript" src="wow/static/local-common/js/third-party/jquery.pngFix.pack.js"></script>
+<script type="text/javascript" src="../wow/static/local-common/js/third-party/jquery.pngFix.pack.js"></script>
 <script type="text/javascript">$('.png-fix').pngFix();</script>
 <![endif]-->
-<script src="wow/static/local-common/js/dropdown.js"></script>
-<script src="wow/static/local-common/js/table.js"></script>
+<script src="../wow/static/local-common/js/dropdown.js"></script>
+<script src="../wow/static/local-common/js/table.js"></script>
 <script type="text/javascript">
 //<![CDATA[
 Core.load("wow/static/local-common/js/third-party/jquery-ui-1.8.6.custom.min.js");
@@ -306,7 +306,7 @@ Login.embeddedUrl = '<?php echo $website['root'];?>loginframe.php';
 });
 //]]>
 </script>
-<!--[if lt IE 8]> <script type="text/javascript" src="wow/static/local-common/js/third-party/jquery.pngFix.pack.js"></script>
+<!--[if lt IE 8]> <script type="text/javascript" src="../wow/static/local-common/js/third-party/jquery.pngFix.pack.js"></script>
 <script type="text/javascript">
 //<![CDATA[
 $('.png-fix').pngFix(); //]]>

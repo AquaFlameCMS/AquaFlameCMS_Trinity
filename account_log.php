@@ -132,11 +132,11 @@ Core.baseUrl = '/login/en/';
     </script>
     <?php
     echo "<h3><font color='green'>".$Log['Log10']."</font></h3>";
-    echo '<meta http-equiv="refresh" content="2;url=account_man.php"';
+    echo '<meta http-equiv="refresh" content="2;url=account/"';
   } ?>
 	  <ul id="help-links">
 		  <li class="icon-pass">
-			<a href="<?php echo $website['root']; ?>account/recover-pass/"><?php echo $Log['Log11']; ?></a>
+			<a href="<?php echo $website['root']; ?>account/recover-pass-test/"><?php echo $Log['Log11']; ?></a>
 		  </li>
 			<li class="icon-signup">
 			  <?php echo $Log['Log12']; ?><a href="register.php"><?php echo $Log['Log13']; ?></a>!
@@ -168,7 +168,7 @@ Core.baseUrl = '/login/en/';
 <div id="right">
 <h2><?php echo $Log['Log16']; ?></h2>
 <h3><?php echo $Log['Log17']; ?></h3>
-<a class="ui-button button1 " href="account_man.php" >
+<a class="ui-button button1 " href="<?php echo $website['root']; ?>account/" >
 <span>
 <span><?php echo $Log['Log18']; ?></span>
 </span>
