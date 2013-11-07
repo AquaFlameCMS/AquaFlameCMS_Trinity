@@ -1,5 +1,5 @@
 <?php 
-require_once("configs.php");
+require_once("../configs.php");
 $page_cat="media";
 ?>
 <!doctype html>
@@ -14,16 +14,16 @@ $page_cat="media";
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
 <meta name="description" content="<?php echo $website['description']; ?>">
 <meta name="keywords" content="<?php echo $website['keywords']; ?>">
-<link rel="shortcut icon" href="wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
+<link rel="shortcut icon" href="../wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
 <link rel="search" type="application/opensearchdescription+xml" href="http://eu.battle.net/en-gb/data/opensearch" title="Battle.net Search" />
-<link rel="stylesheet" href="wow/static/local-common/css/common.css?v17" />
-<link title="World of Warcraft - News" href="wow/en/feed/news" type="application/atom+xml" rel="alternate"/>
-<link rel="stylesheet" href="wow/static/css/wow.css?v7" />
-<link rel="stylesheet" href="wow/static/local-common/css/media-gallery.css?v17" />
-<link rel="stylesheet" href="wow/static/css/media/media.css?v7" />
-<script src="wow/static/local-common/js/third-party/jquery-1.4.4-p1.min.js"></script>
-<script src="wow/static/local-common/js/core.js?v17"></script>
-<script src="wow/static/local-common/js/tooltip.js?v17"></script>
+<link rel="stylesheet" href="../wow/static/local-common/css/common.css?v17" />
+<link title="World of Warcraft - News" href="../wow/en/feed/news" type="application/atom+xml" rel="alternate"/>
+<link rel="stylesheet" href="../wow/static/css/wow.css?v7" />
+<link rel="stylesheet" href="../wow/static/local-common/css/media-gallery.css?v17" />
+<link rel="stylesheet" href="../wow/static/css/media/media.css?v7" />
+<script src="../wow/static/local-common/js/third-party/jquery-1.4.4-p1.min.js"></script>
+<script src="../wow/static/local-common/js/core.js?v17"></script>
+<script src="../wow/static/local-common/js/tooltip.js?v17"></script>
 <!--[if IE 6]> <script type="text/javascript">
 //<![CDATA[
 try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
@@ -53,7 +53,7 @@ _gaq.push(['_trackPageview']);
 
 <body class="en-gb game-index">
 	<div id="wrapper">
-		<?php include("header.php"); ?>
+		<?php include("../header.php"); ?>
 		
 		<div id="content">
 			<div class="content-top">
@@ -63,7 +63,7 @@ _gaq.push(['_trackPageview']);
 			<a href="index.php" rel="np"><?php echo $website['title']; ?></a>
 			<span class="breadcrumb-arrow"></span>
 			</li>
-			<li class="last children"><a href="media.php" rel="np"><?php echo $Media['Media']; ?></a>
+			<li class="last children"><a href="../media.php" rel="np"><?php echo $Media['Media']; ?></a>
 			</li>
 			</ol>
 			</div>
@@ -105,7 +105,7 @@ _gaq.push(['_trackPageview']);
 							
 							<div class="media-index-section float-right">
 							
-								<a class="gallery-title screenshots" href="media/images_index.php?type=2">
+								<a class="gallery-title screenshots" href="../media/images_index.php?type=2">
 								<span class="view-all"><span class="arrow"></span>All Screenshots</span>
 								<?php
                   $screen_all = mysql_query("SELECT * FROM media WHERE visible = '1' AND type = '2'");
@@ -125,7 +125,7 @@ _gaq.push(['_trackPageview']);
                     if ($pos % 2 == 0 ){ echo 'left-col';} //correct postion depends of number
                     if ($pos > 2){ echo 'bottom-row';}
                     $pos++; ?>" 
-                    href="media/images_visor.php?type=2&id=<?php echo $screen['id']; ?>#/<?php echo $screen['id']; ?>">
+                    href="../media/images_visor.php?type=2&id=<?php echo $screen['id']; ?>#/<?php echo $screen['id']; ?>">
 									<span class="thumb-bg" style="background-image:url(<?php echo 'images/wallpapers/'.$screen['id_url'];  ?>);background-size: 189px 118px">
 									<span class="thumb-frame"></span>
 									</span>
@@ -145,7 +145,7 @@ _gaq.push(['_trackPageview']);
                   $art_all = mysql_query("SELECT * FROM media WHERE visible = '1' AND type = '3'");
                   $art_total = mysql_num_rows($art_all);
                 ?>
-								<a class="gallery-title artwork" href="media/images_index.php?type=3">
+								<a class="gallery-title artwork" href="../media/images_index.php?type=3">
 								<span class="view-all"><span class="arrow"></span>All Artwork</span>
 								<span class="gallery-icon"></span>
 								Artwork <span class="total">(<?php echo $art_total; ?>)</span></a>
@@ -160,7 +160,7 @@ _gaq.push(['_trackPageview']);
                   <?php 
                     if ($pos % 2 == 0 ){ echo 'left-col';} //correct postion depends of number
                     $pos++; ?>" 
-                  href="media/images_visor.php?type=3&id=<?php echo $art['id']; ?>#/<?php echo $art['id']; ?>">
+                  <a href="../media/images_visor.php?type=3&id=<?php echo $art['id']; ?>#/<?php echo $art['id']; ?>" />
 									<span class="thumb-bg" style="background-image:url(<?php echo 'images/wallpapers/'.$art['id_url'];  ?>);background-size: 189px 118px">
 									<span class="thumb-frame"></span>
 									</span>
@@ -178,7 +178,7 @@ _gaq.push(['_trackPageview']);
                 $wall_all = mysql_query("SELECT * FROM media WHERE visible = '1' AND type = '1'");
                 $wall_total = mysql_num_rows($wall_all);
               ?>
-								<a class="gallery-title wallpapers" href="media/images_index.php?type=1">
+								<a class="gallery-title wallpapers" href="../media/images_index.php?type=1">
 								<span class="view-all"><span class="arrow"></span>All Wallpapers</span>
 								<span class="gallery-icon"></span>
 								Wallpapers <span class="total">(<?php echo $wall_total; ?>)</span>
@@ -194,7 +194,7 @@ _gaq.push(['_trackPageview']);
                   <?php 
                     if ($pos % 2 == 0 ){ echo 'left-col';} //correct postion depends of number
                     $pos++; ?>" 
-                  href="media/images_visor.php?type=1&id=<?php echo $wall['id']; ?>#/<?php echo $wall['id']; ?>">
+                  href="../media/images_visor.php?type=1&id=<?php echo $wall['id']; ?>#/<?php echo $wall['id']; ?>">
 									<span class="thumb-bg" style="background-image:url(<?php echo 'images/wallpapers/'.$wall['id_url'];  ?>);background-size: 189px 118px">
 									<span class="thumb-frame"></span>
 									</span>
@@ -212,7 +212,7 @@ _gaq.push(['_trackPageview']);
                 $wall_all = mysql_query("SELECT * FROM media WHERE visible = '1' AND type = '4'");
                 $wall_total = mysql_num_rows($wall_all);
               ?>
-								<a class="gallery-title comics" href="media/images_index.php?type=4">
+								<a class="gallery-title comics" href="../media/images_index.php?type=4">
 								<span class="view-all"><span class="arrow"></span>All Comics</span>
 
 								<span class="gallery-icon"></span>
@@ -228,7 +228,7 @@ _gaq.push(['_trackPageview']);
                   <?php 
                     if ($pos % 2 == 0 ){ echo 'left-col';} //correct postion depends of number
                     $pos++; ?>" 
-                  href="media/images_visor.php?type=4&id=<?php echo $wall['id']; ?>#/<?php echo $wall['id']; ?>">
+                  href="../media/images_visor.php?type=4&id=<?php echo $wall['id']; ?>#/<?php echo $wall['id']; ?>">
 									<span class="thumb-bg" style="background-image:url(<?php echo 'images/wallpapers/'.$wall['id_url'];  ?>);background-size: 189px 118px">
 									<span class="thumb-frame"></span>
 									</span>
@@ -248,7 +248,7 @@ _gaq.push(['_trackPageview']);
 				</div>
 			</div>
 		
-			<?php include("footer.php"); ?>
+			<?php include("../footer.php"); ?>
 		
 		</div>
 	</div>
