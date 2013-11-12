@@ -1,0 +1,57 @@
+
+/* structure */
+.search .search-left { float: left; width: 230px; }
+.search .search-left .forum { margin: 20px; }
+.search .search-right { float: right; width: 762px; }
+.search .search-header { margin: 20px; }
+.search .search-header .header { font-size: 32px; line-height: 100%; margin: 3px 0; }
+.search .search-form input { vertical-align: middle; background: #fff; border: 0; padding: 5px; font-size: 18px; width: 400px; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; }
+
+/* helpers */
+.search .helpers { margin: 30px 20px 20px 20px; }
+.search .helpers p { margin: 0 0 10px 0; }
+.search .helpers .subheader span { color: #fff; }
+.search .helpers .sort-active { color: #fff; font-weight: bold; }
+
+/* no results */
+.search .no-results { margin: 20px; }
+.search .no-results .category { margin-top: 20px; }
+.search .no-results ul { list-style: square; margin: 10px 0 0 20px; }
+.search .no-results li { margin: 5px 0; }
+
+/* results */
+.search .results { padding: 20px 0; }
+.search .results:first-child { padding-top: 0; border: 0; }
+.search .results .view-all { text-align: right; margin-top: 10px; }
+.search .results-grid .category { margin-bottom: 15px; }
+.search .results-grid .grid { float: left; width: 30%; padding-right: 3%; }
+.search .results-grid .grid .thumbnail { float: left; margin-right: 10px; }
+.search .results-grid .grid .thumbnail img { vertical-align: top; display: inline-block; }
+.search .result { margin-top: 20px; }
+.search .result.has-thumbnail { padding-left: 55px; min-height: 32px; position: relative; }
+.search .result.is-article { padding-left: 75px; min-height: 60px; }
+.search .result .thumbnail { position: absolute; top: 5px; left: 0; }
+.search .result .subcategory .small { font-size: 12px; }
+.search .result .subcategory .status { color: #fff; }
+.search .result .meta,
+.search .result .content { width: 640px; overflow: hidden; }
+.search .result.blizzard .content,
+.search .result.blizzard .author { color: #039ede; }
+.search .result.blizzard .author:hover { color: #fff; }
+
+/* views */
+.search .summary { margin: 20px; }
+.search .view-list { margin: 20px; }
+
+/* styles */
+.search .category a,
+.search .subcategory a { text-decoration: underline; }
+.search .category a:hover,
+.search .subcategory a:hover { text-decoration: none; }
+.search .table td:first-child a { display: block; }
+.search .table .highlight,
+.search .highlight { padding: 2px; -moz-border-radius: 2px; -webkit-border-radius: 2px; -border-radius: 2px; }
+
+/* ie */
+.ie67 .search .results { zoom: 1; }
+.ie6 .search .result .thumbnail { left: -75px; }

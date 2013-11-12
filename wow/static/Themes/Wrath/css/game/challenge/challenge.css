@@ -1,0 +1,104 @@
+/* Header with filter options */
+#content-subheader { background: transparent url("../../../images/game/challenge/filter-bg.jpg") no-repeat bottom; padding: 25px 25px 0 25px; }
+
+#filter-menu { margin-top: 35px; overflow:hidden; height:67px;}
+#filter-menu input[type=text],
+#filter-menu select { width: 192px; }
+
+#filter-menu .filter { display:block; margin: 0 20px 15px 0; float:left;}
+#filter-menu .filter label { display: block; padding-bottom: 3px; }
+#filter-menu .filter label.inline { display: inline-block; padding: 0 8px 4px 0; }
+#filter-menu .filter.guild { float: right; margin: 0 0 15px 0; }
+#filter-menu .recurring-players {position:relative;}
+#filter-menu .recurring-players input {position:absolute; top:-1px; left:0; background-color:inherit;}
+#filter-menu .recurring-players label {width:140px; padding:0 0 0 23px;}
+#filter-menu .recurring-players, #filter-menu .class {float:right; position:relative; top:5px;}
+#filter-menu .class {margin-right:30px;}
+
+#filter-menu .class-filter { opacity: 0.6 }
+
+#filter-menu .class-filter.selected { opacity: 1 }
+#filter-menu .class-filter.selected .icon-frame { border: 1px solid #ffd200; }
+
+/* Dungeon banner */
+#dungeon-banner { position: relative; height: 229px; padding: 0 25px 0 25px;}
+#dungeon-banner.gate-of-the-setting-sun { background: transparent url("../../../images/game/challenge/dungeon-gate-of-the-setting-sun.png") no-repeat bottom;}
+#dungeon-banner.mogushan-palace { background: transparent url("../../../images/game/challenge/dungeon-mogushan-palace.png") no-repeat bottom;}
+#dungeon-banner.scarlet-halls { background: transparent url("../../../images/game/challenge/dungeon-scarlet-halls.png") no-repeat bottom;}
+#dungeon-banner.scarlet-monastery { background: transparent url("../../../images/game/challenge/dungeon-scarlet-monastery.png") no-repeat bottom;}
+#dungeon-banner.scholomance { background: transparent url("../../../images/game/challenge/dungeon-scholomance.png") no-repeat bottom;}
+#dungeon-banner.shadopan-monastery { background: transparent url("../../../images/game/challenge/dungeon-shadopan-monastery.png") no-repeat bottom;}
+#dungeon-banner.siege-of-niuzao-temple { background: transparent url("../../../images/game/challenge/dungeon-siege-of-niuzao-temple.png") no-repeat bottom;}
+#dungeon-banner.stormstout-brewery { background: transparent url("../../../images/game/challenge/dungeon-stormstout-brewery.png") no-repeat bottom;}
+#dungeon-banner.temple-of-the-jade-serpent { background: transparent url("../../../images/game/challenge/dungeon-temple-of-the-jade-serpent.png") no-repeat bottom;}
+#dungeon-banner h2.realm { font-size: 30px; color: #ffb100; padding-top: 40px; line-height: 30px; font-weight:normal; letter-spacing:-.05em; }
+#dungeon-banner .dungeon { font-size: 30px; }
+
+#dungeon-banner .realm-record { height: 81px; margin-top: 40px; padding-left: 70px; background: transparent url("../../../images/game/challenge/hourglass.png") no-repeat; }
+#dungeon-banner .realm-record h3 { text-transform: uppercase; letter-spacing: -.05em; font-weight: normal; font-size: 20px; color: #c09a67; }
+#dungeon-banner .realm-record h3 em { color: #efc9a0; font-style: normal; font-weight: bold; }
+#dungeon-banner .realm-record .time { font-size: 48px; color: #fff; line-height: 48px; cursor:default; }
+#dungeon-banner .realm-record .time.empty { opacity: 0.1; }
+
+#dungeon-banner .medal-info { position: absolute; top: 43px; right: 20px; background-color: rgba(0,0,0,0.3); border-radius: 3px; padding: 15px; min-width: 130px; }
+#dungeon-banner .medal-info.logged-in { top: 30px; }
+#dungeon-banner .medal-info h3 { color: #98542d; line-height: 13px; margin: 0; padding: 0; font-size: 13px; font-weight:normal; }
+#dungeon-banner .medal-info ul { margin-top: 10px; }
+#dungeon-banner .medal-info .times li { height: 30px; line-height: 30px; font-size: 13px; }
+#dungeon-banner .medal-info .times .medal { padding-left: 28px; background: transparent url("../../../images/game/challenge/medals-sprite.png") no-repeat -4px 27px; line-height: 27px; display: inline-block;}
+
+.medal.gold { background-position: -4px 0 !important; color:#C28A13;}
+.medal.silver { background-position: -4px -27px !important; color:#8e8e8e;}
+.medal.bronze { background-position: -4px -54px !important; color:#A04D00;}
+
+#dungeon-banner .guild-link { margin-top: 10px; font-weight: bold; font-size: 12px; color: #ffb100; display: inline-block; }
+#dungeon-banner .guild-link .arrow { background: url("../../../images/icons/flyout-arrows.gif") no-repeat -4px -123px; width: 6px; height: 10px; display: inline-block; margin: 0 0 -1px 3px;}
+
+/* Leaderboard table */
+#leaderboard-table { margin-bottom: 20px; }
+#leaderboard-table th.rank { width: 6%; }
+#leaderboard-table th.time { width: 10%; }
+#leaderboard-table th.party { width: 70%; }
+#leaderboard-table th.date { width: 10%; }
+
+#leaderboard-table .party { vertical-align: middle; }
+#leaderboard-table .group-members { width: 440px; overflow: hidden; display: inline-block; white-space: nowrap; text-overflow: ellipsis; vertical-align: middle; }
+#leaderboard-table .group-members a { margin-right: 5px; }
+#leaderboard-table .group-members a.role-1 { padding-left: 11px; background: transparent url("../../../images/game/challenge/role-icon-sprite.gif") no-repeat -3px -2px; }
+#leaderboard-table .group-members a.role-2 { padding-left: 13px; background: transparent url("../../../images/game/challenge/role-icon-sprite.gif") no-repeat -3px -21px; }
+.ff #leaderboard-table .group-members a.role-1 {background-position:-3px -2px;}
+.ff #leaderboard-table .group-members a.role-2 {background-position:-3px -22px;}
+
+#leaderboard-table .guild-name { font-weight: bold; vertical-align: middle; cursor: default; }
+#leaderboard-table .medal { float: right; width: 18px; height: 28px; background: transparent url("../../../images/game/challenge/medals-sprite.png") no-repeat -4px 27px; }
+
+/* Top Row */
+#leaderboard-table tr.top td { color: #fff; opacity: 1;  }
+#leaderboard-table tr.top { height: 60px; background-color: #1b0d04; }
+#leaderboard-table tr.top td.rank { font-size: 18px; color: #fff; }
+#leaderboard-table tr.top td.time,
+#leaderboard-table tr.top td.date,
+#leaderboard-table tr.top td.party { font-size: 15px; font-weight: bold; opacity: 1; }
+#leaderboard-table tr.top td .group-members { opacity: 1; }
+#leaderboard-table tr.top td .group-members a.role-1 { background: transparent url("../../../images/game/challenge/role-icon-sprite.gif") no-repeat -3px 0; }
+#leaderboard-table tr.top td .group-members a.role-2 { background: transparent url("../../../images/game/challenge/role-icon-sprite.gif") no-repeat -3px -20px; }
+.ff #leaderboard-table tr.top td .group-members a.role-1 { background-position:-3px -1px;}
+.ff #leaderboard-table tr.top td .group-members a.role-2 { background-position:-3px -20px;}
+
+#leaderboard-table tr.top .icon-faction-0,
+#leaderboard-table tr.top .icon-faction-1 { height: 30px; width: 29px; margin-left: 0; background: url("../../../images/icons/alliance-large.png") left center no-repeat; position:relative; left:0;}
+#leaderboard-table tr.top .icon-faction-1 { background: url("../../../images/icons/horde-large.png") left center no-repeat; }
+
+/* Normal Rows */
+#leaderboard-table tr { border-bottom: 1px solid #31190a; }
+#leaderboard-table tr td { color: #d2ae89; }
+#leaderboard-table tr td.time { font-size: 14px; cursor:default; }
+#leaderboard-table tr td.date { cursor:default; }
+#leaderboard-table tr td.rank { color: #524132; font-size: 18px; text-align: center; padding: 0; }
+#leaderboard-table tr td .group-members { opacity: 0.7; }
+#leaderboard-table tr td .guild-name { cursor: pointer; overflow: hidden; width: 185px; white-space: nowrap; text-overflow: ellipsis; display: inline-block; vertical-align: middle;}
+#leaderboard-table tr td.party { line-height: 28px; }
+#leaderboard-table tr:nth-child(even) { background-color: #2b1507; }
+#leaderboard-table tr:nth-child(odd) { background-color: #231207; }
+
+#leaderboard-table tr .icon-faction-0, #leaderboard-table tr .icon-faction-1 { width: 25px; }

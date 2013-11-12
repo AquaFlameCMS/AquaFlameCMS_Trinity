@@ -1,0 +1,49 @@
+@charset "utf-8";
+
+.game-guide-what-is-wow #content .content-top { background: url("../../images/game/guide/what-is-wow/bg-p-01.jpg") 0 0 no-repeat; }
+
+.guide-intro-part {min-height:544px;}
+.guide-intro-part p {width:421px;}
+
+.part1-div  { background: url("../../images/game/guide/what-is-wow/bg-p-02.jpg") 100% 0 no-repeat; min-height:1325px;}
+.part2-div  { background: url("../../images/game/guide/what-is-wow/bg-p-03.jpg") 100% 0 no-repeat; min-height:842px;}
+.part3-div  { background: url("../../images/game/guide/what-is-wow/bg-p-04.jpg") 100% 0 no-repeat; min-height:911px;}
+.part4-div  { background: url("../../images/game/guide/what-is-wow/bg-p-05.jpg") 100% 0 no-repeat; min-height:1546px;}
+.part5-div  { background: url("../../images/game/guide/what-is-wow/bg-p-06.jpg") 100% 0 no-repeat; min-height:331px;}
+
+.part1-div  .part1-desc01 {width:421px; margin-left:50px;}
+.part1-div  .part1-detail {width:100%;}
+.part1-div  .part1-detail .multiplayer, .part1-div  .part1-detail .role-playing {width:421px; margin-left:50px; float:left;}
+.part1-div  .part1-detail .role-playing {margin:59px 0 0 50px;}
+.part1-div  .part1-detail .online {width:421px; margin:46px 50px 0 0; float:right;}
+.part1-div  .guide-content-subtitle {margin-left:0; line-height:35px; padding-top:9px; display:block; letter-spacing:0;}
+.part1-div  .part1-desc02 {width:421px; margin-right:50px;}
+
+.part2-desc01, .part2-desc02 {width:421px;}
+.part2-desc02 {float:left; margin:24px 0 0 50px;}
+.part2-desc03 {width:421px; float:right; margin:28px 50px 0 0;}
+.part2-desc02 em {display:block; font-size:11px; line-height:13px; font-style:normal; color:#b94829;}
+.part2-div  .guide-content-subtitle {margin:0;}
+.part2-div  .race-alliance {margin-top:18px; padding:8px 0 0 146px; min-height:149px; background: url("../../images/game/guide/what-is-wow/flag-alliance.gif") 0 0 no-repeat; }
+.part2-div  .race-horde {position:relative; top:-16px; padding:14px 140px 0 0; min-height:160px; background: url("../../images/game/guide/what-is-wow/flag-horde.gif") right 0 no-repeat;}
+
+
+.part3-desc01 {width:421px; margin-left:50px; float:left;}
+.part3-desc02 {width:360px; float:right; margin-right:75px; position:relative; top:401px;}
+.part3-desc01 .media-frame {margin-top:40px;}
+.part3-desc02 .guide-detail-desc p {margin:0; padding-bottom:18px;}
+.part3-desc02 .guide-content-subtitle {margin-left:0;}
+.part3-desc02 em {display:block; font-size:11px; line-height:13px; font-style:normal; color:#b94829; text-transform:uppercase;}
+.part3-desc02 .guide-content-subtitle {margin:0 0 21px 0; letter-spacing:0; display:block;}
+.part3-desc02 .guide-content-subtitle span {text-transform:capitalize;}
+
+.part4-div  {position:relative;}
+.part4-div .part4-desc01 {width:421px;}
+.part4-div  .guide-content-subtitle {margin:0; background-position:0 0 !important; background-repeat:no-repeat !important; line-height:43px; display:block; padding-left:50px;}
+.part4-div  .guide-detail-desc  {padding-bottom:1px;}
+.part4-desc02 {width:360px; position:absolute; top:578px; left:550px;}
+.part4-desc03 {width:360px; position:absolute; top:968px; left:80px;}
+
+.part5-desc01 {width:421px;}
+
+.pt-br .part4-div .guide-content-title { margin-bottom: 20px; }

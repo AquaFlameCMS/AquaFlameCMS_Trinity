@@ -1,0 +1,68 @@
+
+a span { cursor:pointer }
+.ui-button,
+.ui-cancel { width: auto; }
+button.ui-button.hover span { background-position: 0 -41px }
+button.ui-button.hover span span { background-position: 100% -164px; }
+
+/* main */
+#blackout { position: absolute; filter: alpha(opacity=70) }
+
+/* service bar */
+#service { z-index: 150; }
+.service-bar { display: inline; zoom: 1; z-index: 150; }
+
+/* menu */
+.ui-menu { zoom:1 }
+
+/* context */
+.ui-context .context .context-links a { zoom: 1 }
+.ui-context .character-list .primary .char { filter: alpha(opacity=35); zoom: 1; }
+.ui-context .character-list .primary .char.pinned,
+.ui-context .character-list .primary .char:hover { filter: alpha(opacity=100); }
+
+/* classes */
+.opacity0 { filter: alpha(opacity=0) }
+.opacity50 { filter: alpha(opacity=50) }
+
+/* i18n switcher */
+#international { zoom: 1 }
+
+/* Comments */
+#page-comments .new-post,
+#page-comments .comment,
+#page-comments h3,
+.forum-link,
+#forum-list a.forum-parent,
+.comment-ta, .news-article, #news-updates, #blog, #station-view * { zoom:1 }
+
+/* Forums */
+.deleted .post-character { z-index:40 }
+.low-rated .post-user { filter:alpha(opacity=40) }
+#page-comments .low-rated { filter:alpha(opacity=30) }
+#page-comments .low-rated:hover { filter:alpha(opacity=60) }
+
+/* Search */
+.type-icon img { visibility:visible; }
+
+/* bml */
+#news-updates h3,
+#news-updates .article-meta,
+.post,
+.character-options a,
+.bt-lite,
+#page-comments,
+.blizzard-title,
+h3.blog-title,
+comment-ta { zoom:1 }
+.bml-toolbar button { position: relative; zoom: 1 }
+
+/* slideshow */
+.ui-slideshow .paging a { background: #aeaeae; overflow: hidden; }
+.ui-slideshow .paging a:hover,
+.ui-slideshow .paging a.current { background: #fff; }
+
+/* pagination */
+.ui-pagination { zoom: 1; display: inline; }
+.ui-pagination li { zoom: 1; }
+#posts .post-pages .ui-pagination { position:relative; top:3px;  }

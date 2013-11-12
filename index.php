@@ -1,5 +1,6 @@
 <?php
 require_once("configs.php");
+
 $page_cat = "home";
 ?>
 <!doctype html>
@@ -16,14 +17,9 @@ $page_cat = "home";
     <meta name="keywords" content="<?php echo $website['keywords']; ?>">
 	<link rel="shortcut icon" href="wow/static/local-common/images/favicons/wow.png" type="image/x-icon">
 	<link rel="search" type="application/opensearchdescription+xml" href="http://eu.battle.net/en-gb/data/opensearch" title="Battle.net Search">
-	<link rel="stylesheet" type="text/css" media="all" href="wow/static/local-common/css/common.css?v15">
+	
 	<link title="World of Warcraft - News" href="wow/en/feed/news" type="application/atom+xml" rel="alternate">
-	<link rel="stylesheet"  href="wow/static/css/wow.css?v4">
-	<link rel="stylesheet"  href="wow/static/local-common/css/cms/homepage.css?v15">
-	<link rel="stylesheet"  href="wow/static/local-common/css/cms/blog.css?v15">
-	<link rel="stylesheet"  href="wow/static/css/status.css?v1">
-	<link rel="stylesheet"  href="wow/static/local-common/css/cms/cms-common.css?v15">
-	<link rel="stylesheet"  href="wow/static/css/cms.css?v4">
+	<?php GetStyle(); ?>
 	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 	<script src="wow/static/local-common/js/third-party/jquery-1.4.4-p1.min.js"></script>
 	<script src="wow/static/local-common/js/core.js?v15"></script>

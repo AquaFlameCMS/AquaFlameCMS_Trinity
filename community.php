@@ -15,11 +15,7 @@ $page_cat = "community";
 <meta name="description" content="<?php echo $website['description']; ?>">
 <meta name="keywords" content="<?php echo $website['keywords']; ?>">
 <link rel="shortcut icon" href="wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
-<link rel="stylesheet" media="all" href="wow/static/local-common/css/common.css?v46" />
-<link rel="stylesheet" media="all" href="wow/static/css/wow.css?v34" />
-<link rel="stylesheet" media="all" href="wow/static/css/community/community.css?v34" />
-<link rel="stylesheet" media="all" href="wow/static/css/cms.css?v34" />
-<link rel="stylesheet" media="all" href="wow/static/css/locale/en-gb.css?v34" />
+<?php GetStyle(); ?>
 <script src="wow/static/local-common/js/third-party/jquery.js?v46"></script>
 <script src="wow/static/local-common/js/core.js?v46"></script>
 <script src="wow/static/local-common/js/tooltip.js?v46"></script>

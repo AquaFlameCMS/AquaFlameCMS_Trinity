@@ -1,0 +1,55 @@
+/* overrides */
+.profile-section { padding: 0; background: none; }
+
+/* Filters area */
+.roster-filters { padding: 20px; padding-top: 5px; background: url("../../images/character/auction/browse-form-bg.jpg") no-repeat left bottom; }
+.roster-filters .float-left { width: 100%; position:relative; }
+.roster-filters .selection { display: inline-block; margin-right: 10px; }
+.roster-filters .selection label { display: block; padding-bottom: 4px; }
+.roster-filters .selection label.show-max-skill-label { display: inline; }
+.roster-filters .selection .level { width: 20px; text-align: center;}
+#professions-filters, #roster-filters {display: inline-block;}
+.roster-filters #activate-reset { position:absolute; right: -5px; top: 27px; height: 20px; width: 20px; background:url("../../images/guild/icon-resetfilters.gif") no-repeat 0 0; display: none;}
+
+/* Flyout menu*/
+.guild-dropdown { position:relative; float: right;}
+.guild-dropdown .guild-dropdown-wrapper { position:absolute; top: -34px; right: 14px;}
+.guild-dropdown .flyout-menu {display: none;  left: 0;}
+
+/* Tables */
+/*.table, .table-bar { margin: 0 -15px; }*/
+.table.childTable thead { display: none; }
+.table .name { text-align: left}
+.inputs-skill input { width: 28px; text-align: center;}
+.skill .sort-data {display: inline;}
+.table td { text-align: center }
+.cls .sort-data, .race .sort-data {display: none;}
+.ach-points .ach-icon { background: url("../../images/icons/achievements.gif") no-repeat 100% 50%; display: inline-block; padding-right: 11px; text-align:right }
+.rank .guild-master { position:relative;  }
+.rank span .symbol {width: 18px; height: 18px; position:absolute; top: -2px; left: -22px;background: url("../../images/guild/icon-guildmaster.gif") no-repeat 0 0;}
+
+/* Tables (Professions)*/
+.table-bar { background:none repeat scroll 0 0 #7B2B00; border-color:#A03800 #68230B #68230B #A03800; border-style:solid; border-width:1px; color:#FFD200; display:block; font-weight:bold; padding: 5px 0; }
+.table-bar .toggler { background:url("../../images/character/auction/toggler.gif") no-repeat scroll 0 0 transparent; display:block; padding-left: 51px; margin-left: 10px; position:relative;}
+a.table-bar:hover { background-color: #8a380c; }
+a.table-bar:hover .toggler { background-position: 0 -116px; }
+.table-bar .icon-frame {position: absolute; top: -1px; left: 24px;}
+.table-bar.closed .toggler { background-position: 0 -58px; }
+a.table-bar:hover.closed .toggler { background-position: 0 -174px; }
+.table-bar.inactive  { cursor: default; }
+.table-bar.inactive .icon-frame { background-image: none; padding-left: 0; color: #fff; top: -1px; left: -1px; }
+#profession-tables .inactive {opacity: 0.5}
+#profession-tables .inactive .toggler { background-image: none; padding-left: 25px; color: #fff}
+
+.profession-tables .table .name { width: 160px; }
+.profession-tables .table .race { width: 150px; }
+.profession-tables .table .cls { width: 158px; }
+.profession-tables .table .lvl { width: 153px; }
+.profession-tables .table .skill { width: 139px; }
+
+#professions-noResults { text-align: center; padding: 25px; font-style: italic; font-size: 14px; }
+#reset-button,
+#roster-buttons { float: right; margin-top: 20px; }
+#roster-buttons a { margin-left: 10px; }
+#return-roster { float: right; margin-top: 10px; margin-right: 10px; }
+#roster-view { float: right; width: 150px; margin-top: 5px; margin-right: 3px; z-index: 0; display: none; }

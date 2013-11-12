@@ -1,0 +1,87 @@
+/* Comments */
+ @import url("cms-common.css");
+
+#comments-page .title { font-size:21px; padding:8px 15px; font-weight:normal;  }
+
+#page-comments { clear:both; margin-top:20px; padding:20px 0 65px; font-family:Verdana, Geneva, sans-serif; background-repeat:no-repeat; background-position:50% 0; }
+.page-comment-interior { background-repeat:no-repeat; background-position:50% 100%; }
+.page-nav-container { padding-top:90px; }
+.page-nav-int { position:relative; }
+
+#page-comments h3 { color:white; text-transform:none; padding-bottom:15px; font-size:18px; font-weight:normal; }
+#page-comments .comment-cm { float:right; text-align:right; width:45%; }
+#page-comments .comment-cm form { display:inline; }
+#page-comments .comment { 	font-size: 11px; line-height: 24px; margin-bottom:12px; position:relative; 
+							-moz-border-radius: 5px; border-radius: 5px; }
+
+#page-comments .loggedOut .comment { padding-left:25px; }
+#page-comments .comment-interior { padding: 15px 15px 15px 95px;   }
+#page-comments .comment .user {  font:12px Arial, Helvetica; line-height:15px; font-weight:bold;}
+#page-comments .comment .user .character, #page-comments .comment .user .character a { }
+#page-comments .comment .user .time a { font-size:11px; margin-left:13px;  }
+#page-comments .comment .user .time a:hover { text-decoration:underline; }
+#page-comments .comment .rating-value { font-size:11px; opacity:0.7; }
+#page-comments .new-post .user { }
+#page-comments .new-post .user .character, #page-comments .new-post .user .character a { }
+#page-comments .user img { vertical-align:middle; }
+#page-comments .comment .content { padding-top:8px; word-wrap:break-word; }
+#page-comments #page-comments .blizzard .context-link { color:#FFF }
+#page-comments #page-comments .blizzard .content {  }
+#page-comments .comment-ta { padding:4px; background:white; -moz-border-radius:4px; border-radius:4px;  }
+#page-comments textarea, #page-comments .auto-expand { font:12px/20px Verdana, Helvetica, Arial; width:98%;  margin:0; border:none; resize: none; }
+#page-comments .auto-expand { overflow:hidden; min-height:66px }
+#page-comments div.auto-expand { position:absolute; display:none; }
+#page-comments .comment .comment-actions { padding-top:5px; text-align:right; visibility:hidden; }
+
+/* Rating specific styles */
+#page-comments .comment:hover .comment-actions, #page-comments .comment:hover .rate-btn, #page-comments .iehover .comment-actions, #page-comments .iehover .rate-btn { visibility:visible; }
+#page-comments .comment .karma { position:absolute; top:1px; right:5px; }
+#page-comments .karma .rate-action { top:2px; }
+#page-comments .low-rated { opacity: 0.3; }
+#page-comments .low-rated:hover { opacity: 0.6; }
+#page-comments .high-rated { } 
+#page-comments .comment .status-text { position:absolute; top:14px; left:16px; display:none; }
+
+#page-comments .hidden { padding-bottom:19px; }
+#page-comments .hidden .status-text { display:block; }
+#page-comments .hidden .avatar, #page-comments .hidden .content, #page-comments .hidden .rate-btn-holder, #page-comments .hidden .comment-actions  { display:none; }
+.comment-actions .reply-link { margin-right: 5px; text-transform:uppercase; }
+#page-comments .hidden .user a.context-link { }
+#page-comments .hidden .user .character, #page-comments .hidden .user .character a { }
+
+#content .cm-action {  float:left; }
+.comment-actions .break-down { float:left; line-height:24px; padding-left:15px; font-size:12px;  }
+
+#page-comments .nested { padding-left:85px; }
+#page-comments .nested .nested { padding-left:0; }
+
+#page-comments .reply { width:85%; }
+#page-comments .new-post {	background: repeat-x; padding:4px; margin-bottom:12px;
+							-moz-border-radius:4px; border-radius:4px }
+#page-comments .new-post .comment {	background: repeat-x; margin-bottom:0; }
+#page-comments .new-post .ui-button {  }
+#page-comments .new-post .avatar.half, #page-comments .nested .avatar.full  { display:none; }
+#page-comments .nested .new-post .avatar.half { display:block; }
+
+
+#page-comments .portrait-b,
+#page-comments .portrait-c { top: 15px; left: 15px; position: absolute; }
+
+#page-comments .avatar-interior { background:none; }
+
+.disabled-comments-msg { padding:20px; text-align:center; -moz-border-radius:10px; border-radius:10px; margin-bottom:20px; }
+#comment-form-reply { display:none }
+
+#page-comments .action { clear:both; text-align:right; font-size:14px; padding:10px 0 5px;}
+#page-comments .spacer { margin:0 10px 0 10px; }
+#page-comments .cancel,
+#page-comments .submit { float:right; }
+#page-comments .cancel { padding-right:10px; display:none; line-height:38px;  }
+#page-comments .postCountdown { line-height: 38px; }
+#comment-form-reply .cancel { display:block;  }
+
+#page-comments #report-post {  margin-bottom:12px; }
+#page-comments .reporting { margin-bottom:0; }
+
+ /* paging for comments */
+.comments-container .ui-pagination { float:right; margin-bottom:20px }

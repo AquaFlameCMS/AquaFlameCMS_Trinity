@@ -16,7 +16,7 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  **/
-
+include("include/pre-header.php");
 if (!isset($_SESSION))
     session_start();
 
@@ -70,8 +70,12 @@ $_SESSION['Local'] = $language;
 */
 $serveraddress = "127.0.0.1";
 $serveruser    = "root";
-$serverpass    = "password";
+$serverpass    = "";
 $serverport    = "3306";
+define('DBHOST', 'localhost');
+define('DBUSER', 'root');
+define('DBPASS', '');
+define('DB', 'website');
 
 /*
 |--------------------------------------------------------------------------
