@@ -355,9 +355,9 @@ tr:hover .fansite-link,
 .chrome #menu li a span { text-shadow: none; }
 
 /* content */
-#content { background-color: #1a0f08 !important; margin: 0 6px; }
-#content .content-top { background: url("../images/layout/content-topbot.png") 0 0 no-repeat; }
-#content .content-bot { background: url("../images/layout/content-topbot.png") -992px bottom no-repeat; min-height: 600px; }
+#content { background-color: #06131B !important; margin: 0 6px; }
+#content .content-top { background: url("../images/layout/content-topbot.jpg") 0 0 no-repeat; }
+#content .content-bot { background: url("../images/layout/content-topbot.jpg") -992px bottom no-repeat; min-height: 600px; }
 #content .content-trail { height: 30px; padding: 10px 0 0 22px; }
 #content .content-header { padding: 25px; padding-top: 35px; }
 #content .content-header .header { color: #efe3d2; font: 52px/85% "Palatino Linotype", Georgia, Times, sans-serif; letter-spacing: -1.5px; text-shadow: #241209 0 0 5px; }
@@ -447,7 +447,7 @@ tr:hover .fansite-link,
 
 	/* real table */
 	.table table { width: 100%; table-layout: auto; }
-	.table thead th { padding: 0; background: #4d1a08 url("../images/content/table-header.gif") 0 100% repeat-x; border-bottom: 1px solid #1a0f08; white-space: nowrap; }
+	.table thead th { padding: 0; background: #4d1a08 url("../images/content/table-header.gif") 0 100% repeat-x; border-bottom: 1px solid #06131B; white-space: nowrap; }
 	.table thead th, .table thead th a { color: #F5EBD1; font-weight: bold;}
 	.table thead th.align-center .sort-tab, .table thead th.align-center .sort-link { text-align: center; }
 	.table thead th.align-right .sort-tab, .table thead th.align-right .sort-link { text-align: right; }

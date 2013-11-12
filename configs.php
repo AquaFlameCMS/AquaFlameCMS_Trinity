@@ -70,11 +70,11 @@ $_SESSION['Local'] = $language;
 */
 $serveraddress = "127.0.0.1";
 $serveruser    = "root";
-$serverpass    = "";
+$serverpass    = "password";
 $serverport    = "3306";
 define('DBHOST', 'localhost');
 define('DBUSER', 'root');
-define('DBPASS', '');
+define('DBPASS', 'password');
 define('DB', 'website');
 
 /*
@@ -158,7 +158,7 @@ $website['title']       = "AquaFlameCMS 1.0";
 $website['description'] = "AquaFlameCMS 1.0 the best of the best!";
 $website['keywords']    = "AquaFlameCMS 1.0, The Best CMS";
 $website['address']     = "http://localhost";
-$website['root']        = "/";
+$website['root']        = "/AquaFlameCMS_Trinity/";
 
 /*
 |--------------------------------------------------------------------------
