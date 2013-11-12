@@ -1,0 +1,45 @@
+@charset "utf-8";
+
+/* overrides */
+#page-header { margin-bottom: 32px; }
+#content { padding-bottom: 32px; }
+
+/* region selector */
+.page-header .region-selector { text-align: right; }
+.page-content .region-footnote { font-style: italic; margin: 32px 0 0 0; }
+.ko-kr .page-content .region-footnote,
+.zh-cn .page-content .region-footnote,
+.zh-tw .page-content .region-footnote { font-style: normal; }
+
+/* container */
+.digital-games { text-align: center; }
+
+/* data grid */
+.data-grid-container { text-align: left; width: 988px; margin: 0 auto; }
+.data-grid-member { text-align: center; display: inline-block; vertical-align: top; width: 247px; padding: 24px 0 8px 0; margin: 0; background: url("../../images/get-game/product-bg.png") no-repeat right top; }
+.data-grid-member:last-child { background: none; }
+.data-grid-member:focus,
+.data-grid-member:hover { background: #d8d6d4; }
+
+.product-thumbnail { width: 115px; height: 163px; overflow: hidden; display: block; margin: 0 auto; background: #a5a4a2; }
+.product-details { min-height: 80px; display: block; margin: 0 auto; padding: 0 0 8px 0; line-height: 16px; }
+.product-details .product-name { display: block; padding: 8px 0; min-height: 32px; }
+.product-details .product-price { display: block; }
+.product-details .default-price { display: block; font-weight: bold; font-size: 14px; }
+.product-details .alternate-price { display: block; font-style: italic; color: #888; }
+.ko-kr .product-details .alternate-price,
+.zh-cn.product-details .alternate-price,
+.zh-tw .product-details .alternate-price { font-style: normal; }
+
+.product-actions { display: block; min-height: 80px; }
+.ieahgames .product-actions { min-height: 100px; }
+.product-actions .button1 { margin-bottom: 8px; }
+.product-actions .alternate-action { display: block; margin: 0; line-height: 16px; }
+.product-actions .purchase-disabled { cursor: default; font-style: italic; color: #888; display: block; width: 200px; margin: 0 auto; }
+.ko-kr .product-actions .purchase-disabled,
+.zh-cn.product-actions .purchase-disabled,
+.zh-tw .product-actions .purchase-disabled { font-style: normal; }
+
+/* retail link */
+.retail-purchase { margin: 24px 0 0 0; display: inline-block; padding: 24px 72px 24px 96px; background: #c1c0be url("../../images/get-game/retail-icon.png") no-repeat 56px center; }
+.retail-purchase .caption { margin: 0; line-height: 24px; }

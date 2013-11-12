@@ -1,0 +1,145 @@
+@charset "utf-8";
+
+/* world of warcraft */
+div.dashboard.wow .primary,
+div.dashboard.wowt .primary,
+div.dashboard.wowc .primary { background: url("../../../images/dashboard/game-space/wowc.png") no-repeat top right; }
+
+/* the burning crusade */
+div.dashboard.wowb1 .primary,
+div.dashboard.wowx1 .primary { background: url("../../../images/dashboard/game-space/wowx1.png") no-repeat top right; }
+
+/* wrath of the lich king */
+div.dashboard.wowx2 .primary { background: url("../../../images/dashboard/game-space/wowx2.png") no-repeat top right; }
+
+/* cataclysm */
+div.dashboard.wowx3 .primary { background: url("../../../images/dashboard/game-space/wowx3.png") no-repeat top right; }
+
+/* wow services */
+ul.wow-services { margin: 0 auto; line-height: 1.1; width: 988px; height: 80px; overflow: hidden; background: #82807d url("../../../images/dashboard/wow/backgrounds/services.jpg") no-repeat 0 0; -moz-user-select: none; -webkit-user-select: none; user-select: none; }
+ul.wow-services li { list-style: none; }
+
+ul.wow-services li.category { display: block;width: 247px; float: left; font: normal 18px "Lucida Sans Unicode", "Lucida Grande", "Arial", sans-serif; }
+ul.wow-services li.category.active { background-color: #575654; background-position: 0 -80px; }
+
+ul.wow-services li.category a { display: block; height: 64px; padding: 16px 16px 0 80px; width: 151px; color: #fff; background: #82807d url("../../../images/dashboard/wow/buttons/services.jpg") no-repeat 0 0; }
+
+ul.wow-services li.category a.character-services { background-position: 0 0; }
+ul.wow-services li.category a.character-services:hover { background-position: -247px 0; }
+div.character-services li.category a.character-services,
+div.character-services li.category a.character-services:hover { background-position: -494px 0; }
+
+ul.wow-services li.category a.additional-services { background-position: 0 -80px; }
+ul.wow-services li.category a.additional-services:hover { background-position: -247px -80px; }
+div.additional-services li.category a.additional-services,
+div.additional-services li.category a.additional-services:hover { background-position: -494px -80px; }
+
+ul.wow-services li.category a.referrals-rewards { background-position: 0 -160px; }
+ul.wow-services li.category a.referrals-rewards:hover { background-position: -247px -160px; }
+div.referrals-rewards li.category a.referrals-rewards,
+div.referrals-rewards li.category a.referrals-rewards:hover { background-position: -494px -160px; }
+
+ul.wow-services li.category a.game-time-subscriptions { background-position: 0 -240px; }
+ul.wow-services li.category a.game-time-subscriptions:hover { background-position: -247px -240px; }
+div.game-time-subscriptions li.category a.game-time-subscriptions,
+div.game-time-subscriptions li.category a.game-time-subscriptions:hover { background-position: -494px -240px; }
+
+div.service-links { padding: 0 0 80px 0; background: url("../../../images/dashboard/wow/backgrounds/services.png") no-repeat center bottom; position: relative; }
+div.service-links .content { margin: 0 auto; padding: 16px 0 0 0; background: url("../../../images/dashboard/wow/backgrounds/services.png") no-repeat center -64px; display: none; }
+
+div.character-services .content.character-services,
+div.additional-services .content.additional-services,
+div.referrals-rewards .content.referrals-rewards,
+div.game-time-subscriptions .content.game-time-subscriptions { display: block; }
+
+div.service-links .position { width: 64px; height: 32px; overflow: hidden; position: absolute; left: 91px; top: -16px; background: url("../../../images/dashboard/wow/backgrounds/service-category-indicator.png") no-repeat center bottom; }
+div.service-links .position { _background: url("../../../images/dashboard/wow/backgrounds/service-category-indicator-ie6.png") no-repeat center bottom; }
+
+div.service-links ul { padding: 8px; overflow: hidden; background: #dcdad8; position: relative; }
+div.service-links ul li { height: 80px; width: 324px; overflow: hidden; float: left; list-style: none; line-height: 1.1; font-size: 11px; }
+
+div.service-links ul li.wow-service a { display: block; padding: 16px 16px 16px 64px; height: 48px; overflow: hidden; width: 244px; color: #616161; position: relative; }
+div.service-links ul li.wow-service a:hover { background: #d3d1ce; }
+div.service-links ul li.wow-service a strong { color: #272727; display: block; font-size: 14px; }
+div.service-links ul li.wow-service a:hover strong { color: #0c536a; }
+
+/* service icons */
+div.service-links ul li.wow-service a .icon { display: block; width: 31px; height: 31px; position: absolute; top: 16px; left: 16px; background: url("../../../images/dashboard/wow/buttons/services.png") no-repeat 0 0; }
+
+div.service-links ul li.wow-service a .icon 						{ background-position: 0 -496px; }
+div.service-links ul li.wow-service.pct a .icon 					{ background-position: 0 0; }
+div.service-links ul li.wow-service.pnc a .icon 					{ background-position: 0 -31px; }
+div.service-links ul li.wow-service.pfc a .icon 					{ background-position: 0 -62px; }
+div.service-links ul li.wow-service.pcc a .icon 					{ background-position: 0 -93px; }
+div.service-links ul li.wow-service.prc a .icon 					{ background-position: 0 -124px; }
+div.service-links ul li.wow-service.char-move a .icon 				{ background-position: 0 -155px; }
+div.service-links ul li.wow-service.ptr-copy a .icon 				{ background-position: 0 -186px; }
+div.service-links ul li.wow-service.visa a .icon 					{ background-position: 0 -217px; }
+div.service-links ul li.wow-service.arena-tournament-closed a .icon { background-position: 0 -248px; }
+div.service-links ul li.wow-service.arena-tournament a .icon 		{ background-position: 0 -279px; }
+div.service-links ul li.wow-service.magazine a .icon 				{ background-position: 0 -310px; }
+div.service-links ul li.wow-service.parental-controls a .icon 		{ background-position: 0 -341px; }
+div.service-links ul li.wow-service.raf a .icon 					{ background-position: 0 -372px; }
+div.service-links ul li.wow-service.resurrection-scroll a .icon 	{ background-position: 0 -403px; }
+div.service-links ul li.wow-service.add-game-card a .icon 			{ background-position: 0 -434px; }
+div.service-links ul li.wow-service.wow-anywhere a .icon 			{ background-position: 0 -465px; }
+div.service-links ul li.wow-service.esports a .icon					{ background-position: 0 -527px; }
+
+/* wow trial upgrade */
+.game-upgrade.current-0trial { background-color: #3c1b10; background-image: url("../../../images/dashboard/wow/upgrade/wowc.jpg"); }
+.game-upgrade.current-0trial ul li a { background: #2b150f; }
+.game-upgrade.current-0trial ul li a:hover,
+.game-upgrade.current-0trial ul li a:focus { background: #3d231a; }
+
+/* burning crusade upgrade */
+.game-upgrade.current-0,
+.game-upgrade.current-1trial { background-color: #1e4127; background-image: url("../../../images/dashboard/wow/upgrade/wowx1.jpg"); }
+.game-upgrade.current-0 ul li a,
+.game-upgrade.current-1trial ul li a { background: #091c11; }
+.game-upgrade.current-0 ul li a:hover,
+.game-upgrade.current-1trial ul li a:hover,
+.game-upgrade.current-0 ul li a:focus,
+.game-upgrade.current-1trial ul li a:focus { background: #122c1d; }
+
+/* lich king upgrade */
+.game-upgrade.current-1,
+.game-upgrade.current-2trial { background-color: #172235; background-image: url("../../../images/dashboard/wow/upgrade/wowx2.jpg"); }
+.game-upgrade.current-1 ul li a,
+.game-upgrade.current-2trial ul li a { background: #0c1526; }
+.game-upgrade.current-1 ul li a:hover,
+.game-upgrade.current-2trial ul li a:hover,
+.game-upgrade.current-1 ul li a:focus,
+.game-upgrade.current-2trial ul li a:focus { background: #162338; }
+
+/* cataclysm upgrade */
+.game-upgrade.current-2,
+.game-upgrade.current-3trial { background-color: #34190b; background-image: url("../../../images/dashboard/wow/upgrade/wowx3.jpg"); }
+.game-upgrade.current-2 ul li a,
+.game-upgrade.current-3trial ul li a { background: #1b0b06; }
+.game-upgrade.current-2 ul li a:hover,
+.game-upgrade.current-3trial ul li a:hover,
+.game-upgrade.current-2 ul li a:focus,
+.game-upgrade.current-3trial ul li a:focus { background: #2a150c; }
+
+.game-upgrade ul li.learn-more a { background: none; }
+
+/* digital presale */
+.presale-steps { width: 950px; margin: 0 auto 60px auto; padding: 190px 0 0 0; background-repeat: no-repeat; background-position: center top; }
+.presale-steps .summary { display: block; }
+.presale-steps .heading { padding-left: 50px; margin: 0; font-size: 24px; font-weight: bold; }
+.presale-steps .caption { padding-left: 50px; margin: 0; font-size: 12px; font-weight: normal; }
+.presale-steps .heading-complete { color: #908f8b; padding-left: 50px; margin: 0; font-size: 24px; font-weight: bold; text-decoration: line-through; }
+.presale-steps .caption-complete { color: #908f8b; padding-left: 50px; margin: 0; font-size: 12px; font-weight: normal; text-decoration: line-through; }
+
+/* wow promotion */
+.wow-promotion { text-align: center; position: relative; padding: 110px 12px 12px 12px; width: 198px; max-height: 156px; overflow: hidden; background-position: top center; color: #fff; background-color: #3c1b10; background-image: url("../../../images/dashboard/sc2/upgrade/wow.jpg"); }
+.wow-promotion h2 { font-size: 16px; font-weight: bold; margin: 0 0 1em 0; }
+.wow-promotion h2 em { font-style: normal; text-transform: uppercase; }
+.wow-promotion h3 { font-size: 11px; color: #ffb400; margin: 0 0 2em 0; }
+.wow-promotion p { font-size: 11px; }
+.wow-promotion p a { zoom: 1; color: #fff; background: #2b150f; display: block; padding: 8px; line-height: 1.1; font-size: 11px; text-transform: uppercase; letter-spacing: -.5px; }
+.wow-promotion p a:hover,
+.wow-promotion p a:focus { background: #3d231a; color: #ffb400; }
+.wow-promotion p a.disabled,
+.wow-promotion p a.disabled:hover,
+.wow-promotion p a.disabled:focus { cursor: default; background-color: transparent; color: #fff; opacity: .25; }

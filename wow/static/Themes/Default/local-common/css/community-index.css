@@ -1,0 +1,307 @@
+.community-home #content .content-top {
+    background: url("../../images/community/bg-community-top.jpg") no-repeat scroll 0 0 transparent;
+}
+.community-home .top-banner {
+    height: 332px;
+    width: 100%;
+}
+.community-home .top-banner #slideshow {
+    height: 300px;
+    width: 100%;
+    z-index: 0;
+}
+.community-home .top-banner #slideshow .slide {
+    background-position: 7px 0;
+    height: 301px;
+    width: 647px;
+}
+.community-home .top-banner #slideshow .mask {
+    background: url("../../images/community/community-carousel-mask.png") no-repeat scroll 50% 0 transparent;
+    height: 301px;
+    width: 647px;
+}
+.community-home .top-banner #slideshow .paging {
+    height: 301px;
+    padding: 12px 0;
+    right: 0;
+    top: -2px;
+    width: 345px;
+}
+.community-home .top-banner #slideshow .paging a {
+    background: url("../../images/community/bg-top-paging-line.png") no-repeat scroll 0 100% transparent;
+    height: 70px;
+    margin: 0 19px 0 13px;
+    opacity: 1;
+    position: relative;
+}
+.community-home .top-banner #slideshow .paging a.last-slide {
+    background: none repeat scroll 0 0 transparent;
+}
+.community-home .top-banner #slideshow .paging a.current {
+    background: url("../../images/community/bg-top-paging-current.gif") no-repeat scroll 0 0 transparent;
+}
+.community-home .top-banner #slideshow .paging a.current .paging-title {
+    color: #F9EFA2;
+}
+.community-home .top-banner #slideshow .paging a .paging-date {
+    color: #926E3C;
+    display: block;
+    float: right;
+    font-size: 11px;
+    margin: 29px 8px 0;
+}
+.community-home .top-banner #slideshow .paging a .paging-title {
+    color: #FAB000;
+    display: block;
+    float: left;
+    font-size: 14px;
+    line-height: 18px;
+    margin-top: 17px;
+    padding-left: 19px;
+    width: 195px;
+}
+.community-home .top-banner #slideshow .paging a:hover .paging-title {
+    color: #FFFFFF;
+}
+.community-content-body {
+    background: url("../../images/community/bg-community-body2.jpg") repeat-y scroll 0 0 transparent;
+    width: 100%;
+}
+.community-content-body .body-wrapper {
+    background: url("../../images/community/bg-community-body3.jpg") no-repeat scroll 0 100% transparent;
+    padding-bottom: 30px;
+    width: 100%;
+}
+.community-content-body .content-wrapper {
+    background: url("../../images/community/bg-community-body1.jpg") no-repeat scroll 0 0 transparent;
+    min-height: 698px;
+    width: 100%;
+}
+.community-content-body .content-wrapper .inside-col {
+    float: left;
+    margin-left: 30px;
+    width: 587px;
+}
+.community-content-body .content-wrapper .outside-col {
+    float: right;
+    margin-right: 19px;
+    width: 307px;
+}
+.official-content {
+    padding-top: 29px;
+}
+.inside-section {
+    background-position: 1px 1px;
+    border-radius: 5px 5px 5px 5px;
+    height: 170px;
+    margin-bottom: 42px;
+    position: relative;
+    width: 279px;
+}
+.inside-section .main-link {
+    border: 1px solid #372511;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 0 6px #000000;
+    display: block;
+    height: 168px;
+    width: 277px;
+}
+.inside-section .main-link:hover {
+    border: 1px solid #CD9000;
+}
+.inside-section .panel {
+    background: url("../../images/community/bg-panel.png") repeat scroll 0 0 transparent;
+    border-radius: 0 0 3px 3px;
+    bottom: 1px;
+    padding: 8px 0 14px;
+    position: absolute;
+    width: 277px;
+}
+.inside-section .panel .wrapper {
+    margin: 0;
+}
+.inside-section .banner-title {
+    display: block;
+    font-size: 18px;
+    margin: 0 0 4px 13px;
+}
+.inside-section .banner-title em {
+    color: #80461F;
+    font-size: 18px;
+    font-style: normal;
+}
+.inside-section .banner-desc {
+    color: #B79855;
+    display: block;
+    font-size: 11px;
+    line-height: 12px;
+}
+.inside-section .main-link:hover .banner-desc {
+    color: #FFFFFF;
+}
+.inside-section .tosubmit, .inside-section .view-all {
+    background: url("../../images/community/community-index-sprite.png") no-repeat scroll 100% -838px transparent;
+    display: block;
+    font-size: 11px;
+    max-width: 127px;
+    padding-right: 13px;
+}
+.inside-section .tosubmit {
+    bottom: 15px;
+    float: right;
+    position: absolute;
+    right: 14px;
+}
+.inside-section .view-all {
+    background-position: 100% -866px;
+    display: block;
+    float: left;
+    margin-left: 14px;
+}
+.inside-section.contests, .inside-section.fanart, .inside-section.screenshot {
+    float: left;
+}
+.inside-section.forum, .inside-section.comics, .inside-section.wallpaper {
+    float: right;
+}
+.inside-section.contests, .inside-section.forum {
+    height: 192px;
+    margin-bottom: 49px;
+}
+.inside-section.contests .main-link, .inside-section.forum .main-link {
+    height: 190px;
+}
+.inside-section .main-link:hover {
+    background-position: 0 -170px;
+}
+.inside-section.contests .main-link:hover, .inside-section.forum .main-link:hover {
+    background-position: 0 -190px;
+}
+.inside-section.contests .banner-title, .inside-section.forum .banner-title {
+    margin-top: 105px;
+}
+.inside-section.contests .banner-desc, .inside-section.forum .banner-desc {
+    display: block;
+    margin-left: 13px;
+    margin-right: 88px;
+}
+.outside-section .title-block {
+    border-bottom: 2px solid #552B12;
+    width: 100%;
+}
+.outside-section .title-block span.title {
+    color: #F0E29A;
+    float: left;
+    font: 14px/32px Arial,Sans-serif;
+    letter-spacing: -0.5px;
+    text-transform: uppercase;
+}
+.outside-section .title-block a.view-all {
+    background: url("../../images/community/community-index-sprite.png") no-repeat scroll 100% -802px transparent;
+    float: right;
+    font: 11px/32px Arial,Sans-serif;
+    padding-right: 17px;
+}
+.outside-section .content-block {
+    width: 100%;
+}
+.outside-section .content-block a {
+    display: block;
+}
+.outside-section .content-block .content-title {
+    font-size: 13px;
+    line-height: 22px;
+}
+.outside-section .content-block .content-desc {
+    color: #A4704E;
+    display: block;
+    font-size: 12px;
+    line-height: 14px;
+}
+.outside-section .content-block .content-desc em {
+    color: #80461F;
+    display: block;
+    font-size: 11px;
+    margin-bottom: 2px;
+}
+.outside-section .content-block a:hover .content-desc, .outside-section.player-story .content-block a:hover .content-desc em {
+    color: #FFFFFF;
+}
+.community-content-body .inside-col .outside-section {
+    width: 279px;
+}
+.community-content-body .inside-col .outside-section.player-story {
+    float: right;
+}
+.community-content-body .inside-col .outside-section.fansite {
+    float: left;
+}
+.community-content-body .inside-col .outside-section .content-block ul li {
+    border-bottom: 1px solid #552B12;
+    padding: 22px 0 14px;
+}
+.community-content-body .outside-col .outside-section .content-block ul li {
+    border-bottom: 1px solid #2E2218;
+}
+.community-content-body .outside-col .outside-section .content-block ul li a {
+    display: block;
+    padding: 10px 10px 10px 90px;
+}
+.community-content-body .outside-col .outside-section .content-block ul li a:hover {
+    background-color: #2B1507;
+}
+.outside-section.player-story .content-block a {
+    background: url("../../images/community/community-index-sprite.png") no-repeat scroll -12px -455px transparent;
+    padding-left: 50px;
+}
+.outside-section .content-block a {
+    display: block;
+    min-height: 54px;
+}
+.outside-section.fansite .content-block a {
+    background-position: 0 3px;
+    background-repeat: no-repeat;
+    min-height: 68px;
+    padding-left: 110px;
+}
+.outside-section.fansite .content-block a.fansite01 {
+    background-image: url("../../images/community/thumbnails/fansite-thumb1.gif");
+}
+.outside-section.fansite .content-block a.fansite02 {
+    background-image: url("../../images/community/thumbnails/fansite-thumb2.gif");
+}
+.community-content-body .outside-col .outside-section {
+    margin-bottom: 40px;
+}
+.community-content-body .outside-col .outside-section .content-block a {
+    padding-left: 103px;
+}
+.community-content-body .outside-col .outside-section .content-block .content-desc {
+    font-size: 11px;
+    line-height: 12px;
+    margin-top: 2px;
+}
+.outside-section.social-media .content-block a.facebook {
+    background: url("../../images/community/community-index-sprite.png") no-repeat scroll 6px -182px transparent;
+}
+#wow {
+    background: url("../../images/community/wowhead.png") no-repeat;
+}
+.outside-section.social-media .content-block a.twitter {
+    background: url("../../images/community/community-index-sprite.png") no-repeat scroll 6px -272px transparent;
+}
+.outside-section.social-media .content-block a.youtube {
+    background: url("../../images/community/community-index-sprite.png") no-repeat scroll 6px -362px transparent;
+}
+.outside-section.social-media .content-block a.metoday {
+    background: url("../../images/community/community-index-sprite.png") no-repeat scroll 6px -912px transparent;
+}
+.outside-section.blizzard-community .content-block a.blizzard-insider {
+    background: url("../../images/community/community-index-sprite.png") no-repeat scroll -3px -520px transparent;
+}
+.outside-section.blizzard-community .content-block a.blizzcast {
+    background: url("../../images/community/community-index-sprite.png") no-repeat scroll -3px -610px transparent;
+}
+.outside-section.blizzard-community .content-block a.blizzard-forum {
+    background: url("../../images/community/community-index-sprite.png") no-repeat scroll -3px -700px transparent;
+}

@@ -1,0 +1,24 @@
+/* overrides */
+.profile-section .category { font-size: 20px; }
+
+/* layout */
+#news-preferences { float: right; }
+.activity-feed { margin-top: -5px; }
+
+/* preferences */
+.filter-dropdown .keyword-filter { display:block; margin: 3px; padding: 0; }
+.filter-dropdown .keyword-filter .checkbox { display:block; height:17px; width:17px; background: url("../../images/media/sprite.png") -146px -300px no-repeat; float:left; margin-right:4px }
+.filter-dropdown .keyword-filter:hover .checkbox { background-position:-146px -317px }
+.filter-dropdown .keyword-filter.checked .checkbox { background-position:-146px -334px }
+.filter-dropdown .keyword-filter.checked:hover .checkbox { background-position:-146px -351px }
+
+/* list */
+.news-list { }
+.news-list-showmore { display: block; width: 491px; margin: 0 auto; margin-top: 30px; text-align: center; height: 26px; line-height: 26px; background: url("../../images/character/summary/stats-expand-bg.png") center top no-repeat; border-left: 1px solid #2f170c; border-right: 1px solid #2f170c; }
+.news-list-showmore span { padding-right: 12px; background: url("../../images/character/summary/stats-expand-arrow.gif") right 6px no-repeat; }
+.news-list-showmore:hover { background-position: center bottom; }
+.news-list-showmore:hover span { background-position: right -44px; }
+#news-list div { border-top: 1px solid #371B0D; }
+
+/* archives */
+.news-archives li { line-height: 15px; padding-bottom: 12px; }

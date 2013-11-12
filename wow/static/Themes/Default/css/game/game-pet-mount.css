@@ -1,0 +1,68 @@
+
+.game-pet-mount #content .content-top {background: url(../../images/game/pet-mount/bg-pet-mount.jpg) 0 0 no-repeat }
+.game-pet-mount #content .content-bot {padding: 0 0 80px 0; }
+
+
+.game-pet-mount .title { margin-left: 30px; padding: 20px 0 30px 0; min-height: 215px; }
+.game-pet-mount .title h2 { color: #EFE3D2; font: 52px/100% "Palatino Linotype",Georgia,Times,sans-serif; letter-spacing: -1.5px; text-shadow: 0 0 5px #241209; }
+.game-pet-mount .title .desc { line-height: 24px; line-height: 2em; margin-top: 25px; width: 50%; }
+
+
+/* tab menu */
+.collectibles-category-header .category-tabs { height: 50px; margin-bottom: -2px; margin-left: 20px; }
+.collectibles-category-header .category-tabs li { height: 50px; display: inline-block; margin-right: 10px; position: relative; }
+.collectibles-category-header .category-tabs a,
+.collectibles-category-header .category-tabs a .r,
+.collectibles-category-header .category-tabs a .m { font-size: 14px; color: #c09a67; display: inline-block; height: 50px; background: url("../../images/profile/section-tabs.png") no-repeat; }
+.collectibles-category-header .category-tabs a { padding-left: 10px; opacity: 0.80; }
+.collectibles-category-header .category-tabs a .r { padding-right: 10px; background-position: 100% -100px; }
+.collectibles-category-header .category-tabs a .m { padding: 0 10px; background-position: 0 -50px; background-repeat: repeat-x; line-height: 50px; }
+.collectibles-category-header .category-tabs a:hover { background-position: 0 -150px; opacity: 1; }
+.collectibles-category-header .category-tabs a:hover span span { color: white; }
+.collectibles-category-header .category-tabs a:hover .r { background-position: 100% -250px; }
+.collectibles-category-header .category-tabs a:hover .m { background-position: 0 -200px; }
+.collectibles-category-header .category-tabs .tab-active a { font-weight: bold; background-position: 0 -300px; opacity: 1; }
+.collectibles-category-header .category-tabs .tab-active a .r { background-position: 100% -400px; }
+.collectibles-category-header .category-tabs .tab-active a .m { background-position: 0 -350px; color: #fff; }
+
+.collectibles-section { margin: 0 25px; }
+.collectibles-box { background-image: url("../../images/game/pet-mount/section-bg-tabs.png"); background-repeat: no-repeat; }
+
+
+.profile-filters { padding-top: 33px; padding-left: 34px; width: 100%; }
+.profile-filters .keyword { float: left; position: relative; }
+.profile-filters .mode { float: left; margin-left: 23px; margin-top: 4px; }
+#advanced-filters { clear: both; padding-top: 27px; }
+#advanced-filters .group-name {
+    color: #98542D;
+    display: block;
+    font-size: 14px;
+    padding-bottom: 8px;
+}
+.profile-filters .keyword input { width: 289px; }
+.profile-filters .keyword .view, .profile-filters .keyword .reset {
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-color: transparent;
+    display: block;
+    height: 16px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    width: 16px;
+}
+.profile-filters .keyword .view {
+    background-image: url("../../images/wiki/filter.gif");
+}
+.profile-filters .keyword .reset {
+    background-image: url("../../images/icons/cross-small-brown.gif");
+    cursor: pointer;
+}
+.collectibles-box .table-options { padding: 0 34px;}
+
+.collectible-grid { margin-top: 62px; }
+.collectible-grid .grid-item { width: 20%; }
+
+/* Localization */
+.ko-kr .game-pet-mount .title h2 {  font-family: DaumRegular,Dotum; font-size: 50px; }
+

@@ -434,7 +434,7 @@ INSERT INTO `slideshows` (`id`, `title`, `description`, `image`, `link`) VALUES
 	(1, 'Patch 4.2', 'Cataclysm Version 4.2.0 Supported!', '4.2.jpg', '#');
 /*!40000 ALTER TABLE `slideshows` ENABLE KEYS */;
 
---Added Theme To SQL Structure: Doxramos
+-- Added Theme To SQL Structure: Doxramos
 -- Dumping structure for table website.themes
 CREATE TABLE IF NOT EXISTS `themes` (
   `id` int(11) DEFAULT NULL,
