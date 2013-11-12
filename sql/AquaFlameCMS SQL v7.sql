@@ -434,6 +434,29 @@ INSERT INTO `slideshows` (`id`, `title`, `description`, `image`, `link`) VALUES
 	(1, 'Patch 4.2', 'Cataclysm Version 4.2.0 Supported!', '4.2.jpg', '#');
 /*!40000 ALTER TABLE `slideshows` ENABLE KEYS */;
 
+--Added Theme To SQL Structure: Doxramos
+-- Dumping structure for table website.themes
+CREATE TABLE IF NOT EXISTS `themes` (
+  `id` int(11) DEFAULT NULL,
+  `author` varchar(50) DEFAULT NULL,
+  `vs_info` varchar(50) DEFAULT NULL,
+  `active` int(10) DEFAULT NULL,
+  `name` varchar(50) DEFAULT NULL,
+  `description` varchar(250) DEFAULT NULL,
+  `css_link` varchar(50) DEFAULT NULL,
+  `creation_date` date DEFAULT NULL,
+  `development_crew` varchar(50) DEFAULT NULL,
+  `development_linkback` longtext
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- Dumping data for table website.themes: ~2 rows (approximately)
+DELETE FROM `themes`;
+/*!40000 ALTER TABLE `themes` DISABLE KEYS */;
+INSERT INTO `themes` (`id`, `author`, `vs_info`, `active`, `name`, `description`, `css_link`, `creation_date`, `development_crew`, `development_linkback`) VALUES
+        (1, 'FailzorD', '1.0', 0, 'AquaFlame', 'The AquaFlame Default Theme.', 'DefaultAFCMS', '2013-11-09', 'AquaFlame', NULL),
+        (2, 'FailzorD', '1.0', 1, 'AquaFlame Wrath Edition', 'The AquaFlame Wrath Theme', 'Wrath', '2013-11-09', 'AquaFlame', NULL);
+/*!40000 ALTER TABLE `themes` ENABLE KEYS */;
+
 
 -- Dumping structure for table website.users
 DROP TABLE IF EXISTS `users`;
@@ -461,6 +484,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 INSERT INTO `users` (`id`, `avatar`, `blizz`, `class`, `firstName`, `lastName`, `character`, `vote_points`, `donation_points`, `char_realm`, `registerIp`, `country`, `birth`, `quest1`, `ans1`) VALUES
 	(1, 'eagle.gif', 1, 'blizz', 'Alex', 'Papadopoulos', 0, 101, 20, 1, '0-0-0-0', 'GRC', '1990-04-10', 1, 'it\'s 1');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
+
 
 
 -- Dumping structure for table website.version
