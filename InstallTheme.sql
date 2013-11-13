@@ -12,7 +12,7 @@
 
 -- Dumping structure for table website.themes
 CREATE TABLE IF NOT EXISTS `themes` (
-  `id` int(11) DEFAULT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `author` varchar(50) DEFAULT NULL,
   `vs_info` varchar(50) DEFAULT NULL,
   `active` int(10) DEFAULT NULL,
@@ -21,8 +21,9 @@ CREATE TABLE IF NOT EXISTS `themes` (
   `css_link` varchar(50) DEFAULT NULL,
   `creation_date` date DEFAULT NULL,
   `development_crew` varchar(50) DEFAULT NULL,
-  `development_linkback` longtext
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `development_linkback` longtext,
+  UNIQUE KEY `id` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 -- Dumping data for table website.themes: ~2 rows (approximately)
 DELETE FROM `themes`;
