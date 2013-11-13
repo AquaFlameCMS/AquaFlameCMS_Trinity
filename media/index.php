@@ -1,6 +1,7 @@
 <?php 
 require_once("../configs.php");
 $page_cat="media";
+include_once("functions.d/GetMediaTheme.php");
 ?>
 <!doctype html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -15,7 +16,7 @@ $page_cat="media";
 <meta name="description" content="<?php echo $website['description']; ?>">
 <meta name="keywords" content="<?php echo $website['keywords']; ?>">
 <link rel="shortcut icon" href="<?php echo $website['root']; ?>wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
-<?php GetStyle(); ?>
+<?php GetMediaTheme(); ?>
 <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 <script src="<?php echo $website['root']; ?>wow/static/local-common/js/third-party/jquery-1.4.4-p1.min.js"></script>
 <script src="<?php echo $website['root']; ?>wow/static/local-common/js/core.js?v15"></script>

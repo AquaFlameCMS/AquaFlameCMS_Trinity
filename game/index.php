@@ -1,6 +1,7 @@
 <?php
 require_once("../configs.php");
 $page_cat = "game";
+include_once("functions.d/GetGameTheme.php");
 ?>
 
 <!doctype html>
@@ -18,11 +19,11 @@ $page_cat = "game";
 <meta name="keywords" content="<?php echo $website['keywords']; ?>">
 <link rel="shortcut icon" href="../wow/static/local-common/images/favicons/wow.ico" type="image/x-icon" />
 <link rel="search" type="application/opensearchdescription+xml" href="http://eu.battle.net/en-gb/data/opensearch" title="Battle.net Search" />
-<link rel="stylesheet" href="../wow/static/local-common/css/common.css?v15" />
-<link rel="stylesheet" href="../wow/static/css/wow.css?v4" />
 <!--[if IE]><link rel="stylesheet" href="../wow/static/local-common/css/common-ie.css?v15" /><![endif]-->
 <!--[if IE 6]><link rel="stylesheet" href="../wow/static/local-common/css/common-ie6.css?v15" /><![endif]-->
 <!--[if IE 7]><link rel="stylesheet" href="../wow/static/local-common/css/common-ie7.css?v15" /><![endif]-->
+<?php GetGameTheme(); ?>
+
 <link rel="stylesheet" href="../wow/static/css/wiki/wiki.css?v35"/>
 <link rel="stylesheet" href="../wow/static/css/wiki/wiki.css?v35"/>
 <!--[if IE]> <link rel="stylesheet" type="text/css" media="all" href="/wow/static/css/wiki/wiki-ie.css?v35" /><![endif]-->
