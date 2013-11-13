@@ -236,18 +236,18 @@ tr:hover .fansite-link,
 
 /* header */
 #header { padding-top: 26px; }
-#header #logo { height: 115px }
+#header #logo { height: 115px; background: url("../images/layout/logo.png") 0 0 no-repeat; }
 #header #logo a { width: 275px; height: 115px; display: block; border: none; text-indent: -9999px }
 #header .header-plate { height: 93px; position: relative; }
-#header .user-plate { color: #fff; width: 355px; height: 84px; position: absolute; right: 3px; bottom: 1px; }
+#header .user-plate { color: #fff; width: 355px; height: 84px; position: absolute; right: 3px; bottom: 1px; margin-bottom: -10px; margin-right: -11px; }
 .ie6 #header .user-plate { right:2px }
 
 #header .user-plate .character { position: relative; }
 #header .user-plate .player-name,
-#header .user-plate .guild-name { display: block; text-shadow: 1px 1px 1px black; font-weight: bold; font-size:12px; text-overflow: ellipsis; width: 250px; overflow: hidden; white-space: nowrap; margin-top: 4px; margin-left: -15px; }
+#header .user-plate .guild-name { display: block; text-shadow: 1px 1px 1px black; font-weight: bold; font-size:12px; text-overflow: ellipsis; width: 250px; overflow: hidden; white-space: nowrap;}
 #header .user-plate .context-link { text-shadow: 1px 1px 1px black; font-weight: bold; }
 #header .user-plate .player-name { color: #b0d715; font-weight: bold; line-height: 100%; margin-bottom: 2px; }
-#header .user-plate .character-name { line-height: 100%; font-weight: bold; font-size: 24px; margin: 0; padding: 0; background: none; letter-spacing: -0.0em; text-shadow: 1px 1px 1px black; letter-spacing: -0.05em; margin-left: -15px; }
+#header .user-plate .character-name { line-height: 100%; font-weight: bold; font-size: 24px; margin: 0; padding: 0; background: none; letter-spacing: -0.0em; text-shadow: 1px 1px 1px black; letter-spacing: -0.05em; }
 #header .user-plate .character-name .name { display: inline-block; max-width: 130px; height: 25px; overflow: hidden; text-overflow: ellipsis; white-space: no-wrap; vertical-align: middle; }
 #header .user-plate .character-name.text-small { font-size: 20px; }
 #header .user-plate .character-name.context-open,
@@ -262,10 +262,10 @@ tr:hover .fansite-link,
 .ie6 #header .user-plate .card-character .wow-login-key { background-image:url(../images/layout/cards-mop/key.gif) }
 #header .user-plate a.card-character:hover { color: #fff; background-position: 0 -84px; }
 #header .user-plate a.card-character:hover strong { color: white; }
-#header .user-plate .card-character .card-portrait { width:58px; height:58px; display:block; float:right; border:1px solid #c3ff00; background:url(../images/layout/cards-mop/avatar-neutral.jpg) 50% 50% no-repeat; margin-top: 16px; margin-right: 11px; }
+#header .user-plate .card-character .card-portrait { width:58px; height:58px; display:block; float:right; border:1px solid #c3ff00; background:url(../images/layout/cards-mop/avatar-neutral.jpg) 50% 50% no-repeat; margin-top:7px; margin-right:21px }
 .ie6 #header .user-plate .card-character .card-portrait { margin-right:10px }
 
-#header .user-plate .meta-wrapper { position:relative; width:240px; left:30px; top:10px }
+#header .user-plate .meta-wrapper { position: relative; width: 240px; left: 30px; top: 10px; margin-top: -5px; margin-left: -42px; }
 
 #header .user-plate .card-character.plate-neutral  .card-portrait,
 #header .user-plate .card-character.plate-alliance .card-portrait,
@@ -328,14 +328,14 @@ tr:hover .fansite-link,
 .search .summary .suggested-results .result a { font-weight: normal; }
 
 /* menu */
-#menu { width: 623px; height: 65px; position: absolute; left: 19px; top: 19px; -moz-user-select: none; -webkit-user-select: none; user-select: none; background-image: url("../images/layout/menu-tab-baked.jpg?v=2"); }
+#menu { width: 623px; height: 65px; position: absolute; left: 19px; top: 19px; -moz-user-select: none; -webkit-user-select: none; user-select: none; background-image: url("../images/layout/menu-tab-baked.png"); }
 #menu li { width: 102px; float: left; height: 65px; }
 #menu li a { height: 65px; display: block; text-align: center; text-transform: uppercase; color: #ffa400 }
 #menu li a span { padding-top: 45px; display: block; font: normal 12px Arial, Verdana, serif; text-shadow: #000 0 0 5px; position: relative; top: -5px }
 #menu li a:hover,
-#menu li a.menu-active { background-image: url("../images/layout/menu-tab-baked.jpg?v=2"); }
+#menu li a.menu-active { background-image: url("../images/layout/menu-tab-baked.png"); }
 #menu li a:hover { color: white; }
-#menu li a.menu-active { color: #fff !important; -moz-box-shadow: 0 0 15px #4684B3; -webkit-box-shadow: 0 0 15px #4684B3; box-shadow: 0 0 15px #4684B3; position: relative; }
+#menu li a.menu-active { color: #fff !important; -moz-box-shadow: 0 0 15px #4068AD; -webkit-box-shadow: 0 0 15px #4068AD; box-shadow: 0 0 15px #4068AD; position: relative; }
 #menu li.menu-game,
 #menu li.menu-forums { width: 104px }
 #menu li.menu-community,
@@ -355,7 +355,7 @@ tr:hover .fansite-link,
 .chrome #menu li a span { text-shadow: none; }
 
 /* content */
-#content { background-color: #1a0f08 !important; margin: 0 6px; }
+#content { background-color: #06131B !important; margin: 0 6px; }
 #content .content-top { background: url("../images/layout/content-topbot.jpg") 0 0 no-repeat; }
 #content .content-bot { background: url("../images/layout/content-topbot.jpg") -992px bottom no-repeat; min-height: 600px; }
 #content .content-trail { height: 30px; padding: 10px 0 0 22px; }
@@ -447,7 +447,7 @@ tr:hover .fansite-link,
 
 	/* real table */
 	.table table { width: 100%; table-layout: auto; }
-	.table thead th { padding: 0; background: #4d1a08 url("../images/content/table-header.gif") 0 100% repeat-x; border-bottom: 1px solid #1a0f08; white-space: nowrap; }
+	.table thead th { padding: 0; background: #4d1a08 url("../images/content/table-header.gif") 0 100% repeat-x; border-bottom: 1px solid #06131B; white-space: nowrap; }
 	.table thead th, .table thead th a { color: #F5EBD1; font-weight: bold;}
 	.table thead th.align-center .sort-tab, .table thead th.align-center .sort-link { text-align: center; }
 	.table thead th.align-right .sort-tab, .table thead th.align-right .sort-link { text-align: right; }
