@@ -158,7 +158,7 @@ $('#checkall').toggleClass('clicked');
       </ul>
     </div>
 <?php
-$version="2";
+$version="3";
 	/* Checks for updates using a remote CSV file
 	 * The CSV must be like this
 	 * versionnumber,versiondescription,type,downloadlink
