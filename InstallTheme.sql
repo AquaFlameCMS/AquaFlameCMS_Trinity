@@ -30,7 +30,7 @@ DELETE FROM `themes`;
 INSERT INTO `themes` (`id`, `author`, `vs_info`, `active`, `name`, `description`, `css_link`, `creation_date`, `development_crew`, `development_linkback`) VALUES
 	(1, 'FailzorD', '1.0', 0, 'AquaFlame Cata Edition', 'The AquaFlame Cata Theme', 'DefaultAFCMS', '2013-11-09', 'AquaFlame', NULL),
 	(2, 'FailzorD', '1.0', 0, 'AquaFlame Wrath Edition', 'The AquaFlame Wrath Theme', 'Wrath', '2013-11-09', 'AquaFlame', NULL),
-	(3, 'FailzorD', '1.0', 1, 'AquaFlame', 'Default', 'AquaFlame Default Theme', '2013-11-12', 'AquaFlame', NULL);
+	(3, 'FailzorD', '1.0', 1, 'AquaFlame', 'AquaFlame Default Theme', 'Default', '2013-11-12', 'AquaFlame', NULL);
 /*!40000 ALTER TABLE `themes` ENABLE KEYS */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
