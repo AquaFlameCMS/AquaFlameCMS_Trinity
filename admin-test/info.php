@@ -23,6 +23,7 @@ if ($login['gmlevel'] < 3) {
   <link rel="stylesheet" href="css/style.css">
   <!---jQuery Files-->
   <script src="js/jquery.js"></script>
+  <style type="text/css"></style>
   <script src="js/jquery-ui.js"></script>
   <script src="js/inputs.js"></script>
   <script src="js/flot.js"></script>
@@ -53,13 +54,13 @@ if ($login['gmlevel'] < 3) {
 
     <div id="nav">
       <ul>
-        <li class="active"><span class="icon">H</span>Dashboard</li>
+        <li><a href="dashboard.php"></a><span class="icon">H</span>Dashboard</li>
         <li><a href="news.php"></a><span class="icon">&lt;</span>News</li>
         <li><a href="forum.php"></a><span class="icon">P</span>Forum</li>
         <li><a href="media.php"></a><span class="icon">F</span>Media</li>
         <li><a href="users.php"></a><span class="icon">G</span>Users</li>
 		<li><a href="themes.php"></a><span class="icon">L</span>Themes</li>
-		<li><a href="info.php"></a><span class="icon">K</span>CMS Info</li>
+		<li class="active"><span class="icon">K</span>CMS Info</li>
         <li data-modal="#usr-mod #mod-set" id="set-btn"><span class="icon">)</span>Settings</li>
         <li id="logout"><a href="logout.php"></a><span class="icon icon-grad">B</span>Log Out</li>
       </ul>
@@ -67,98 +68,91 @@ if ($login['gmlevel'] < 3) {
     </div>
 
     <!--BEGIN MAIN CONTENT-->
-	<div id="content" class="dashboard-page">
-	<!-- News Section -->
-	<div class="box g16">
-        <h2 class="box-ttl">LATEST NEWS</h2>
-        <div class="box-body no-pad datatable-cont">
-          <div id="example_wrapper" class="dataTables_wrapper" role="grid"><div id="example_length" class="dataTables_length">Show <div class="drop select"><select size="1" name="example_length" aria-controls="example" class="transformed" style="display: none;"><option value="5" selected="selected">5</option><option value="10">10</option><option value="25">25</option></select><ul><li class="sel">5</li><li class="">10</li><li>25</li></ul><span class="opt-sel" data-default-val="5">5</span><span class="arrow">&amp;</span></div> entries</div><div class="dataTables_filter" id="example_filter"><label>Search: <input type="text" aria-controls="example"></label></div><table class="display table dataTable" id="example" aria-describedby="example_info">
-            <thead>
-              <tr role="row"><th class="sorting_asc" role="columnheader" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending" style="width: 0px;">TITLE</th><th class="sorting" role="columnheader" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending" style="width: 0px;">AUTHOR</th><th class="sorting" role="columnheader" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending" style="width: 0px;">DESCRIPTION</th><th class="center sorting" role="columnheader" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending" style="width: 0px;">COMMENTS</th><th class="center sorting" role="columnheader" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 0px;">FUNCTIONS</th></tr>
-            </thead>
-            
-          <tbody role="alert" aria-live="polite" aria-relevant="all">
-		  <?php
-                            mysql_select_db($server_db) or die(mysql_error());
-                            $news = mysql_query("SELECT id,author,content,title,comments FROM news ORDER BY date DESC LIMIT 5");
-                            while ($fcheck2 = mysql_fetch_assoc($news)) {
-                            echo'
-								<tr class="gradeX odd">
-								<td class=" sorting_1">' . substr(strip_tags($fcheck2['title']), 0, 36) . '...</td>
-								<td class=" ">' . $fcheck2['author'] . '</td>
-								<td class=" ">' . substr(strip_tags($fcheck2['content']), 0, 36) . '...</td>
-								<td class="center "> ' . $fcheck2['comments'] . '</td>
-								<td class="center "><a href="edtnews.php?id=' . $fcheck2['id'] . '">
-								<button class="btn-m has-icon">
-								<span class="icon">U</span>EDIT</button></a>
-								<a href="dltnews.php?id=' . $fcheck2['id'] . '">
-								<button class="btn-m red has-icon">
-								<span class="icon2">X</span>DELETE</button></a></td>
-								</tr>';
-								}
-                  ?>
-				</tbody></table><div class="dataTables_info" id="example_info">Showing 0 to 0 of 0 entries</div><div class="dataTables_paginate paging_full_numbers" id="example_paginate"><a tabindex="0" class="first button" id="example_first">First</a><a tabindex="0" class="previous button" id="example_previous">%</a><span><a tabindex="0" class="button">1</a><a tabindex="0" class="button pressed">2</a><a tabindex="0" class="button">3</a></span><a tabindex="0" class="next button" id="example_next">(</a><a tabindex="0" class="last button" id="example_last">Last</a></div></div>
-        </div></div>
-		<!-- Forum Threads -->
-		<div class="box g16">
-        <h2 class="box-ttl">LATEST FORUM POSTS</h2>
-        <div class="box-body no-pad datatable-cont">
-          <div id="example_wrapper" class="dataTables_wrapper" role="grid"><div id="example_length" class="dataTables_length">Show <div class="drop select"><select size="1" name="example_length" aria-controls="example" class="transformed" style="display: none;"><option value="5" selected="selected">5</option><option value="10">10</option><option value="25">25</option></select><ul><li class="sel">5</li><li class="">10</li><li>25</li></ul><span class="opt-sel" data-default-val="5">5</span><span class="arrow">&amp;</span></div> entries</div><div class="dataTables_filter" id="example_filter"><label>Search: <input type="text" aria-controls="example"></label></div><table class="display table dataTable" id="example" aria-describedby="example_info">
-            <thead>
-              <tr role="row"><th class="sorting_asc" role="columnheader" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending" style="width: 0px;">TITLE</th><th class="sorting" role="columnheader" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending" style="width: 0px;">AUTHOR</th><th class="sorting" role="columnheader" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending" style="width: 0px;">DESCRIPTION</th><th class="center sorting" role="columnheader" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending" style="width: 0px;">COMMENTS</th><th class="center sorting" role="columnheader" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 0px;">FUNCTIONS</th></tr>
-            </thead>
-            
-          <tbody role="alert" aria-live="polite" aria-relevant="all">
-		  <?php
-                            mysql_select_db($server_db) or die(mysql_error());
-                            $forum = mysql_query("SELECT id,name,author,content,replies,views FROM forum_threads ORDER BY date DESC LIMIT 5");
-                            while ($fcheck = mysql_fetch_assoc($forum)) {
-                                echo'
-								<tr class="gradeX odd">
-								<td class=" sorting_1">' . substr(strip_tags($fcheck['name']), 0, 36) . '...</td>
-								<td class=" ">' . $fcheck['author'] . '</td>
-								<td class=" ">' . substr(strip_tags($fcheck['content']), 0, 36) . '...</td>
-								<td class="center "> ' . $fcheck['replies'] . '</td>
-								<td class="center "><a href="edtnews.php?id=' . $fcheck['id'] . '">
-								<button class="btn-m has-icon">
-								<span class="icon">U</span>EDIT</button></a>
-								<a href="dltnews.php?id=' . $fcheck['id'] . '">
-								<button class="btn-m red has-icon">
-								<span class="icon2">X</span>DELETE</button></a></td>
-								</tr>';
-								}
-                  ?>
-				</tbody></table><div class="dataTables_info" id="example_info">Showing 0 to 0 of 0 entries</div><div class="dataTables_paginate paging_full_numbers" id="example_paginate"><a tabindex="0" class="first button" id="example_first">First</a><a tabindex="0" class="previous button" id="example_previous">%</a><span><a tabindex="0" class="button">1</a><a tabindex="0" class="button pressed">2</a><a tabindex="0" class="button">3</a></span><a tabindex="0" class="next button" id="example_next">(</a><a tabindex="0" class="last button" id="example_last">Last</a></div></div>
-        </div></div>
-	 
+    <div id="content" class="dashboard-page">
 
-	<div id="users-cont" class="box g16 row1"> <!--USERS LIST-->
+       <div id="stats-cont" class="box g2 row1">
+        <ul class="ul-grad">
+          <li><span class="icon icon-grad up">^</span><span class="stat-val">2500 USD</span><br>AD REVENUE</li>
+          <li><span class="icon icon-grad down">]</span><span class="stat-val">12540</span><br>VISITORS</li>
+          <li><span class="icon icon-grad up">^</span><span class="stat-val">568</span><br>SALES</li>
+          <li><span class="icon icon-grad">}</span><span class="stat-val">650</span><br>CLICKTHROUGHS</li>
+          <li><span class="icon icon-grad down">]</span><span class="stat-val">3450 MB</span><br>BANDWIDTH USE</li>
+        </ul>
+      </div>
+
+      <div id="users-cont" class="box g4 row1"> <!--USERS LIST-->
         <div class="scroll">
           <ul class="scroll-cont ul-grad">
-		  <?php
-                            mysql_select_db($server_db) or die(mysql_error());
-                            $users = mysql_query("SELECT U.id,U.firstName,U.lastName,U.birth,username FROM users U, $server_adb.account A
-            WHERE A.id = U.id ORDER BY id DESC LIMIT 6");
-                            while ($usercheck = mysql_fetch_assoc($users)) {
-                                mysql_select_db($server_cdb) or die(mysql_error());
-                                $chars = mysql_query("SELECT name FROM characters WHERE account = '" . $usercheck['id'] . "'");
-                                echo '<li><span>' . $usercheck['username'] . '</span><span class="users-role">' . $usercheck['firstName'] . ' ' . $usercheck['lastName'] . '</span></li>';
-                                while ($charcheck = mysql_fetch_assoc($chars)) {
-                                }
-                                
-                            }
-                            ?>
+            <li><span>FailZorD</span><span class="users-role">Web/Fix: Stupid Lame Fix...</span></li>
+            <li><span>Doxramos</span><span class="users-role">Web/Update: Theme System?!</span></li>
+            <li><span>netcho</span><span class="users-role">Web/God: Adding God mode!</span></li>
+            <li><span>Stark</span><span class="users-role">Web/Mod: New Plugin.</span></li>
+            <li><span>ThunderScript</span><span class="users-role">Web/Update: Admin Fix.</span></li>
           </ul>
         </div>
         <div class="btn-set-btm full">
-          <button id="add-usr" class="black has-icon"><span class="icon">a</span>Add new user</button>
-          <button id="mng-usr" class="black has-icon"><span class="icon">C</span>Manage users</button>
+          <button id="add-usr" class="black has-icon"><span class="icon">a</span>Check Developers</button>
+          <button id="mng-usr" class="black has-icon"><span class="icon">C</span>Check Updates</button>
         </div>
       </div>
-       <div id="grid-cont" class="full">
+	  <!-- UPDATE MANAGER-->
+      <div id="bk-mng" class="box g4 row1"> 
+        <ul class="ul-grad">
+          <li>
+            <p>Automatic backup:<br><span>NEXT: 19 FEB, LAST: 19 NOV</span></p>
+            <input type="checkbox" class="chbox tgcls" data-tgcls="#bk-off true" checked>
+          </li>
+          <li id="rmt">
+            <p>Remote FTP save:<br><span>SERVER: backup.server.com</span></p>
+            <div class="bk-act">
+              <div class="button btn-s tgcls icon" data-tgcls="#rmt expanded">)</div>
+              <input type="checkbox" class="chbox" checked>
+            </div>
+            <div id="rmt-info">
+              <input type="text" class="g12" placeholder="FTP Server" value="backup.server.com">
+              <input type="text" class="g4 last" maxlength="4" placeholder="Port" value="21">
+              <input type="text" class="g8" placeholder="Username" value="jDizzle">
+              <input type="password" class="g8 last" placeholder="Password" value="No one will ever see me. MUHAHAHA">
+              <input type="text" class="g16 last" placeholder="URL" value="localhost/backup/2013/">
+              <br>
+            </div>
+          </li>
+          <li id="bk-opts">
+            <p>Backup options:<br><span>Select which files are included in the backup</span></p>
+            <div class="bk-opt">
+              HTML<input type="checkbox" class="chbox" checked>
+            </div>
+            <div class="bk-opt">
+              PHP<input type="checkbox" class="chbox" checked>
+            </div>
+            <div class="bk-opt">
+              JavaScript<input type="checkbox" class="chbox" checked>
+            </div>
+            <div class="bk-opt">
+              CSS<input type="checkbox" class="chbox" checked>
+            </div>
+            <div class="bk-opt">
+              Images<input type="checkbox" class="chbox">
+            </div>
+            <div class="bk-opt">
+              MySQL DB<input type="checkbox" class="chbox" checked>
+            </div>
+          </li>
+          <li id="rmt-sp">
+            <div class="line-ind">
+              <div class="line blue" style="width: 34.5%"></div>
+              <p class="line-desc">REMOTE FREE SPACE: 
+              <span class="align-r">120GB / 180GB</span></p>
+            </div>
+          </li>
+          <div id="bk-off"></div>
+        </ul>
+      </div>
+<div id="grid-cont" class="full">
         <div class="box g16"><span><center>All rights reserved. | Powered by: <a style="color: #CE9109;" href="http://aquaflame.org">AquaFlame CMS</a></center></span></div>
       </div>
-	</div><!--END MAIN CONTENT-->
+    </div><!--END MAIN CONTENT-->
+
     <!--MODAL WINDOWS-->
 
     <div id="modal-ov">
@@ -167,13 +161,13 @@ if ($login['gmlevel'] < 3) {
         <div class="mod-body">
           <div id="mod-home" class="nav-item show">
             <div class="av-overlay"></div>
-            <img src="<?php echo $website['root']; ?>images/avatars/2d/<?php echo $account_extra['avatar']; ?>">
+            <img src="img/avatars/nick.jpg">
             <ul id="usr-det">
-              <li><p><span>Name: </span><?php echo $account_extra['firstName'] . ' ' . $account_extra['lastName']; ?></p></li>
+              <li><p><span>Name: </span>Nick Halden</p></li>
               <li><p><span>Role: </span>System Administrator</p></li>
-              <li><p><span>Contact: </span><?php echo $login2['email']; ?></p></li>
-              <li><p><span>Member since: </span><?php echo $joindate; ?></p></li>
-              <li><p><span>Last IP: </span><?php echo $login2['last_ip']; ?></p></li>
+              <li><p><span>Contact: </span>nick@haldeninc.com</p></li>
+              <li><p><span>Member since: </span>12.06.2010</p></li>
+              <li><p>You have <strong>2</strong> notifications pending</p></li>
             </ul>
           </div>
           <div id="mod-msg" class="mod-conv nav-item">
@@ -211,9 +205,9 @@ if ($login['gmlevel'] < 3) {
             </div>
           </div>
           <div id="mod-set" class="nav-item">
-            <input type="text" class="g4" placeholder="First name" value="<?php echo $account_extra['firstName']; ?>">
-            <input type="text" class="g4" placeholder="Last name" value="<?php echo $account_extra['lastName']; ?>">
-            <input type="text" class="g8 last" placeholder="E-mail" value="<?php echo $login2['email']; ?>">
+            <input type="text" class="g4" placeholder="First name" value="Nick">
+            <input type="text" class="g4" placeholder="Last name" value="Halden">
+            <input type="text" class="g8 last" placeholder="E-mail" value="nick@haldeninc.com">
             <button class="g8">Change Password</button>
             <button class="g8 last">Change Email</button>
             <div class="g8 cont">
@@ -337,10 +331,8 @@ if ($login['gmlevel'] < 3) {
     // SUPPORT TICKETS
 
     $('#support-tickets').children('.scroll').nanoScroller();
-    $('#support-tickets .support-msg').append('<a href="editfor.php?id="<?php echo $fcheck["id"]; ?>"><span class="support-full">EDIT</span></a>');
-    $('#support-tickets2 .support-msg2').append('<a href="editnews.php?id="<?php echo $fcheck2["id"]; ?>"><span class="support-full">EDIT</span></a>');
-    
-	$('#support-tickets li').click( function() {
+    $('#support-tickets .support-msg').append('<span class="support-full">VIEW FULL TICKET</span>');
+    $('#support-tickets li').click( function() {
       var supMsgHeight = $(this).children('.support-msg').height() + 56;
             contHeight = $('#support-tickets').outerHeight();
               liPosTop = $(this).position().top;
@@ -386,22 +378,22 @@ if ($login['gmlevel'] < 3) {
         }
       });
     };
-    //$.fn.calEvents = function() {
-    //  var calDay = $('.gldp-default').find('.gldp-default-day');
-    // $(calDay).eq(0).addClass('has-ev').children('div')
-    //    .append('<span class="cal-event-marker imp"></span>')
-    //    .insertEvent('Payday. Cha-ching.', '8:00 AM');
-    //  $(calDay).eq(3).addClass('has-ev').children('div')
-    //    .append('<span class="cal-event-marker"></span>')
-    //    .insertEvent('Conference. Yay!', '10:00 AM');
-    //  $(calDay).eq(10).addClass('has-ev').children('div')
-    //    .append('<span class="cal-event-marker"></span>')
-    //    .insertEvent('Jury duty. Meh.', '13:30 PM');
-    //  $(calDay).eq(18).addClass('has-ev').children('div')
-    //    .append('<span class="cal-event-marker imp"></span>')
-    //    .insertEvent('Get car serviced.', '14:00 PM');
-    //  $.fn.calShowEv();
-    //};
+    $.fn.calEvents = function() {
+      var calDay = $('.gldp-default').find('.gldp-default-day');
+      $(calDay).eq(0).addClass('has-ev').children('div')
+        .append('<span class="cal-event-marker imp"></span>')
+        .insertEvent('Payday. Cha-ching.', '8:00 AM');
+      $(calDay).eq(3).addClass('has-ev').children('div')
+        .append('<span class="cal-event-marker"></span>')
+        .insertEvent('Conference. Yay!', '10:00 AM');
+      $(calDay).eq(10).addClass('has-ev').children('div')
+        .append('<span class="cal-event-marker"></span>')
+        .insertEvent('Jury duty. Meh.', '13:30 PM');
+      $(calDay).eq(18).addClass('has-ev').children('div')
+        .append('<span class="cal-event-marker imp"></span>')
+        .insertEvent('Get car serviced.', '14:00 PM');
+      $.fn.calShowEv();
+    };
 
     // FLUID LAYOUT
 
@@ -442,27 +434,5 @@ if ($login['gmlevel'] < 3) {
     };
 
   </script>
-   <script language="JavaScript">
-    function P91Fadeout(id, geschwindigkeit) {
-  var fps = Math.round(geschwindigkeit / 100); 
-  var tmp = 0;
-    for(i = 100; i >= 0; i--) {
-        setTimeout("P91Fadeout_fade('" + id + "'," + i + ")", (tmp * fps));
-        tmp++;
-    }
-}
-function P91Fadeout_fade(id, pas) {
-  var heurix = document.getElementById(id).style;
-  if(pas > 0) {
-    heurix.opacity = (pas / 100);
-    heurix.MozOpacity = (pas / 100);
-    heurix.KhtmlOpacity = (pas / 100);
-    heurix.filter = "alpha(opacity=" + pas + ")"; 
-  } else {
-    heurix.display = "none";
-  }
-}
-window.setTimeout("P91Fadeout('toast-container', 2000)", 5000);
-</script>
 </body>
 </html>
