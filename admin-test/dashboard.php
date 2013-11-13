@@ -58,8 +58,6 @@ if ($login['gmlevel'] < 3) {
         <li><a href="forum.php"></a><span class="icon">P</span>Forum</li>
         <li><a href="media.php"></a><span class="icon">F</span>Media</li>
         <li><a href="users.php"></a><span class="icon">G</span>Users</li>
-		<li><a href="themes.php"></a><span class="icon">L</span>Themes</li>
-		<li><a href="info.php"></a><span class="icon">K</span>CMS Info</li>
         <li data-modal="#usr-mod #mod-set" id="set-btn"><span class="icon">)</span>Settings</li>
         <li id="logout"><a href="logout.php"></a><span class="icon icon-grad">B</span>Log Out</li>
       </ul>

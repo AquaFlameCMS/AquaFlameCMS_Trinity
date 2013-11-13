@@ -1,0 +1,17 @@
+.activate-primary { height: 2.5em; }
+.address-box { padding: 20px; width: 260px; margin: 15px; display: inline-block; vertical-align: top; margin-right: 15px; background: #c1c0bd; }
+.address-box-row-end { margin-right: 0; }
+.address-box.primary-address { background: #e2e1df; }
+
+#primary-address { background: url("../../local-common/images/icons/success.png") 0 0 no-repeat; padding-left: 28px; font-size: 11px; height: 22px; }
+
+#static-country strong { display: inline-block; padding: 3px 7px; font-weight: normal; width:35%; min-width: 250px; font: 14px/26px "Lucida Sans Unicode","Lucida Grande","Arial",sans-serif; }
+
+.actions { text-align: right; }
+.actions a { margin-left: 1em; display: inline-block; *display: inline; *zoom: 1; }
+
+/* kr postal code lookup */
+.postal-code-pop { position:fixed; display:none; border:1px solid; background-color:#fff; width: 700px; left:-350px; top:200px; padding:20px; z-index:1000; margin-left:50%}
+.postal-code-result { display:none; border:1px solid #000; height:180px; overflow:auto; padding:10px 20px; width:600px; margin-left:30px }
+.no-result { color:#730202;}
+.label-full .search-zip { padding:8px 10px 0 0; }

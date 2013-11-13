@@ -70,11 +70,11 @@ $_SESSION['Local'] = $language;
 */
 $serveraddress = "127.0.0.1";
 $serveruser    = "root";
-$serverpass    = "password";
+$serverpass    = "";
 $serverport    = "3306";
 define('DBHOST', 'localhost');
 define('DBUSER', 'root');
-define('DBPASS', 'password');
+define('DBPASS', '');
 define('DB', 'website');
 
 /*
@@ -88,9 +88,9 @@ define('DB', 'website');
 | @access public
 |
 */
-$server_adb = "sky_auth";
-$server_wdb = "sky_world";
-$server_cdb = "sky_characters";
+$server_adb = "auth";
+$server_wdb = "world";
+$server_cdb = "chars";
 $server_db  = "website";
 
 /*
@@ -158,7 +158,7 @@ $website['title']       = "AquaFlameCMS 1.0";
 $website['description'] = "AquaFlameCMS 1.0 the best of the best!";
 $website['keywords']    = "AquaFlameCMS 1.0, The Best CMS";
 $website['address']     = "http://localhost";
-$website['root']        = "/AquaFlameCMS_Trinity/";
+$website['root']        = "/";
 
 /*
 |--------------------------------------------------------------------------

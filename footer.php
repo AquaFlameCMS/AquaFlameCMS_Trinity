@@ -280,6 +280,27 @@ shim.style.display = 'block';
 <ul>
 <li><a href="#" tabindex="55"><?php echo $Retrieve['Retrieve']; ?></a></li>
 <li><a href="#" tabindex="55"><?php echo $Client_down3['Client_down3']; ?></a></li>
+<?php
+if (!isset($_SESSION['username']))	
+	{
+	}
+else 
+{
+	mysql_select_db($server_adb);
+	$check_query = mysql_query("SELECT gmlevel from account inner join account_access on account.id = account_access.id where username = '".strtoupper($_SESSION['username'])."'") or die(mysql_error());
+    $login = mysql_fetch_assoc($check_query);
+	if($login['gmlevel'] < 3)
+		{
+	
+		}
+	else 
+	{
+	echo '<li><a href="'.$website['address'].''.$website['root'].'admin" tabindex="55">Admin Panel</li>';
+	}
+}
+
+
+?>
 </ul>
 </div>
 <span class="clear"><!-- --></span>

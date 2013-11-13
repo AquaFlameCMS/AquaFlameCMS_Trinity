@@ -188,9 +188,9 @@ a.ui-button.imgbutton span span span { padding: 0 5px; }
 .ui-typeahead .group-static .desc { display: block; white-space: pre-wrap; }
 
 /* slideshow */
-.ui-slideshow { height: 300px; width: 645px; overflow: hidden; position: relative; }
-.ui-slideshow .slideshow { height: 300px; width: 645px; position: relative; z-index: 10; }
-.ui-slideshow .mask { height: 300px; width: 645px; position: absolute; top: 0; left: 0; z-index: 30; cursor: pointer; }
+.ui-slideshow { height: 300px; width: 640px; overflow: hidden; position: relative; }
+.ui-slideshow .slideshow { height: 300px; width: 640px; position: relative; z-index: 10; }
+.ui-slideshow .mask { height: 300px; width: 640px; position: absolute; top: 0; left: 0; z-index: 30; cursor: pointer; }
 .ui-slideshow .caption { position: absolute; left: 30px; bottom: 30px; width: 580px; z-index: 35; text-shadow: 0 0 15px #000, 0 0 15px #000, 0 0 5px #000, 0 0 19px #000, 0 0 19px #000;}
 .ui-slideshow .caption h3 { font-size: 28px; color: #fff; font-weight: normal; }
 .ui-slideshow .paging { position: absolute; top: 15px; right: 15px; width: 15px; z-index: 35; }

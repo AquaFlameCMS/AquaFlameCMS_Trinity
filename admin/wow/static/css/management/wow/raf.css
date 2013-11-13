@@ -1,0 +1,72 @@
+.section-box { clear:none; margin:0px; }
+.pad-right-10 { padding-right:10px; }
+.describe { line-height:1.5; font-size:13px; }
+.center { text-align:center; }
+.margin-20 { margin:20px; }
+
+.subsection { clear:both; margin-bottom:12px; background:url("../../../images/services/wow/bg.jpg") 50% 0 no-repeat; width:990px; min-height:200px;}
+.subsection .left { float:left; width:250px; text-align:center; margin-top:25px; margin-bottom:6px; }
+.subsection .middle {float:left; width:70px; text-align:right; font-size:50px; font-weight:bold; color:#999b9f; margin-top:18px;}
+.subsection .right {float:left; width:450px; margin-top:25px; padding-left:25px; }
+
+
+.raf-service-info { background:none repeat scroll 0 0 #E0DFDD; -moz-border-radius:5px 5px 5px 5px; border-radius:5px 5px 5px 5px; padding:15px; width:240px; float:left; }
+.raf-service-info ul { margin-top:12px; margin-bottom:12px; list-style:disc inside; }
+.raf-service-info ul li { padding:4px; }
+.raf-service-info .sub-section { background:none repeat scroll 0 0 #D0CECC; -moz-border-radius:5px 5px 5px 5px; border-radius:5px 5px 5px 5px; padding:6px; margin-top:20px; }
+
+.service-form { background:none repeat scroll 0 0 #E0DFDD; -moz-border-radius:5px 5px 5px 5px; border-radius:5px 5px 5px 5px; padding:15px; width:680px; }
+.service-form .special-p { padding-left:280px;padding-right:140px;}
+.claim-mount-item { color:#C600FF; font-size:20px; font-weight:normal; letter-spacing:-0.05em; }
+.claim-mount-item:hover { color:#a400dd; }
+.claim-mount-recipient { margin:20px; }
+.claim-mount-label { padding:10px; font-size:16px; font-weight:bold; width:200px; text-align:right; display:inline-block;}
+.claim-mount-name { padding:10px; font-size:16px; font-weight:bold;  color:#4a8432}
+.raf-warning { font-size:14px; margin-bottom:20px;}
+
+#raf-history { border-collapse:collapse; width:100%; }
+#raf-history th, #raf-history-not-over th { background:url("../../../images/layout/shadow-small-top.gif") repeat-x scroll 0 100% transparent; font-weight:normal; padding:10px; }
+#raf-history td { padding: 10px; border-top: 1px solid #c0bfbb; cursor: default; background-color:#d9d8d4;}
+#raf-history td.referred { background-color:#FFFFFF; }
+#raf-history-notover td { padding: 10px; border-top: 1px solid #c0bfbb;}
+#raf-history .alt-row td,#raf-history-notover { background: #d6d4d1; }
+#raf-history .child-row td, #raf-history-notover .child-row td{ border: none; }
+#raf-history .row-hover td { background: #e1e0de; }
+#raf-history .active { color:#009900; font-weight:bold; }
+#raf-history .expired { color:#B9801D; font-weight:bold; }
+#raf-history .nolink {color:#555555; font-weight:bold; }
+#raf-history .small-button { position:relative; top:-7px; background-color:#007aad; -moz-border-radius:3px 3px 3px 3px; border-radius:3px 3px 3px 3px; padding:2px 8px 2px 8px;  color:white; margin-left:12px; cursor:pointer; }
+#raf-history .small-button:hover { background-color:#2294C5; }
+#raf-history .claimed { color:#009900; font-weight:bold; position:relative; top:-7px; margin-left:12px;}
+#raf-history td img { margin-top:4px; }
+#raf-history .mount-claimed { color:#0d6901; font-weight:bold; position:relative; top:-8px; padding-left:12px; }
+
+.legend-note { float:right; clear:both; cursor:pointer; color:#0072A3; margin-top:12px;}
+.legend-note:hover { color:#2294C5; }
+.legend-note .show-legend { }
+.legend-note .hide-legend { display:none; }
+.legend { display:none; float:right; clear:both; background:none repeat scroll 0 0 #E0DFDD; -moz-border-radius:5px 5px 5px 5px; border-radius:5px 5px 5px 5px; padding:15px; width:280px; margin-top:10px; }
+.legend ul li { margin-bottom:8px; line-height:24px; padding-left:32px; }
+.legend .nomonth { background:url("../../../images/services/wow/nomonth.png") 0 50% no-repeat; }
+.legend .nomount { background:url("../../../images/services/wow/nomount.png") 0 50% no-repeat; }
+.legend .month { background:url("../../../images/services/wow/month.png") 0 50% no-repeat; }
+.legend .mount { background:url("../../../images/services/wow/mount.png") 0 50% no-repeat; }
+
+.instruction-desc { position:relative; top:-220px; width:800px;}
+.large-instructions { background:url("../../../images/services/wow/raf/bg.jpg") 0 0 no-repeat; width:990px; padding-top:230px; position:relative; top:-10px;}
+.large-instructions .columns-3 { margin: 0; }
+.large-instructions .column-middle .content { padding-left: 32px; }
+.large-instructions .column-middle .summon { background:url("../../../images/services/wow/raf/summoning.png") 0 0 no-repeat; padding-left:40px;padding-bottom:10px;margin-top:10px;}
+.large-instructions .column-middle .bonus { background:url("../../../images/services/wow/raf/bonus.png") 0 0 no-repeat; padding-left:40px;padding-bottom:10px;margin-top:10px;}
+.large-instructions .column-right .mount { background:url("../../../images/services/wow/raf/rocketmount.png") 0 0 no-repeat; padding-left:40px;margin-top:10px;padding-bottom:20px;padding-top:4px;}
+.large-instructions .column-right .block { position:relative; width:100px;height:50px;display:inline-block;float:right;}
+.large-instructions .column-right .content { padding-left: 60px; }
+.large-instructions .button-container { margin-bottom:12px; background:url("../../../images/services/wow/bg.jpg") 50% 0 no-repeat; width:990px; min-height:200px; padding-top:20px; text-align:center;}
+
+.referred { background-color:#FFFFFF;}
+
+.form-row-raf { margin:1.5em 0px 0px; clear:both; }
+.form-row-raf .label-full { text-align:right; line-height:32px; width:40%; display:inline-block; color:#202020; font-size:16px; vertical-align:top; cursor:pointer; }
+.form-row-raf .label-full strong { line-height:1.3;display:inline-block;font-weight:normal;}
+.inline-radio { font-size:16px; vertical-align:middle;padding-top:12px;line-height:32px;}
+.inline-radio input { line-height:32px;}

@@ -1,0 +1,35 @@
+@charset "utf-8";
+
+/* form */
+.account-merge { padding-top: 24px; }
+
+/* Merging additional Accounts (Step2) */
+.conversion-multi { margin: 20px 0 10px; text-align: center; }
+
+/* Confirm Merge (Step 3) */
+.conversion-content .stats { width: 48%; text-align: center; padding-top: 30px; margin: 0 auto 30px;}
+.conversion-content .merge-arrow { width: 80px; background: transparent url("../../../../images/account/wow-merge/merge-arrow.png") no-repeat scroll center top; display: block; height: 55px; margin:30px auto 15px; }
+.conversion-content .old-account-notice { background-color: #c1c0bd; padding: 10px 40px; }
+.conversion-content p.new-account { background-color: #c18400; display: inline; line-height: 51px; padding: 25px 30px 20px; }
+.conversion-content p.new-account span { font-size: 24px; color: #fff; }
+.conversion-content .conversion-msg { margin-bottom: 12px; }
+.conversion-content .conversion-details { padding: 5px 0 10px; background-color: #e2e1df; margin-bottom: 2em;}
+.conversion-content .conversion-details ul { list-style-type: none; padding-left: 2em;}
+.conversion-content .conversion-details li { background: transparent url("../../../../images/icons/warning-background.png") no-repeat scroll 0 5px; margin: 0 0 1px; padding: 10px 0 10px 35px; }
+.conversion-content .finalize-notice { font-size: 18px; line-height: 20px; padding-bottom: 0 }
+.conversion-content .finalize-notice span { font-size: 12px; }
+.conversion-content .conversion-msg p { font-size: 22px; line-height: 22px; }
+.conversion-content .conversion-details p { font-size: 18px; letter-spacing: -1px; }
+.conversion-content .game-error { width: 650px; float: none; margin: 5px auto 30px; }
+.conversion-content .game-error li { text-align: center; margin-bottom: 10px; }
+.conversion-content .matrix-table { float: left; position: relative;}
+
+/* Notification */
+.wowconv .notification { font-size:26px; letter-spacing: -1px;text-align: center; padding: 160px 0 20px 0;}
+
+/* Name Conflict */
+.conflict { margin-top:50px; margin-bottom:50px; }
+.conflict-left { float:left; width:250px; margin-left:130px; background:none repeat scroll 0 0 #4D606D;}
+.conflict-arrow { float:left; width:200px; height:80px;background: url("../../../../images/icons/grey-arrow.jpg") no-repeat center center;}
+.conflict-right { float:left; width:250px; margin-left:10px; background:none repeat scroll 0 0 #4D606D;}
+.conversion-multi h5 { color:#FFFFFF; font-size:14px; font-weight:bold; margin:1em; text-align:center; }

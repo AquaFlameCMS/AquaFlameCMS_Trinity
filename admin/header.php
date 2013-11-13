@@ -37,7 +37,7 @@
                 <li><span rel="tooltip" title="<strong style='color:#00B6FF'>View the Website</strong>" style="color:#ff9200;font-weight:bold;font-size:14px;"><a class="ico4" href='viewwebsite.php'></a></span></li>
 						    <li><span rel="tooltip" title="<strong style='color:#00B6FF'>Connectivity</strong>" style="color:#ff9200;font-weight:bold;font-size:14px;"><a class="ico2" href='#'></a></span></li>
                 <li><span rel="tooltip" title="<strong style='color:#00B6FF'>Information</strong>" style="color:#ff9200;font-weight:bold;font-size:14px;"><a class="ico9" href='info.php'></a></span></li>
-	                <li><span rel="tooltip" title="<strong style='color:#00B6FF'>Change Theme</strong>" style="color:#ff9200;font-weight:bold;font-size:14px;"><a class="icont" href='themes.php'></a></span></li>
+	                <li><span rel="tooltip" title="<strong style='color:#00B6FF'>Change Theme</strong>" style="color:#ff9200;font-weight:bold;font-size:14px;"><a class="icot" href='themes.php'></a></span></li>
               </ul>
               </div>
               <div class='right_scroll'><img src='images/rightArrow.png' alt="" /></div>
