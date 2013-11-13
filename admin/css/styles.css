@@ -455,6 +455,9 @@ body {
 .carousel_ul li a.icof {
 	background: url(../images/icon-f.png) no-repeat 0 0
 }
+.carousel_ul li a.icot {
+	background: url(../images/icon-t.png) no-repeat 0 0
+}
 .carousel_ul li a:hover {
 	background-position: 0 -64px
 }

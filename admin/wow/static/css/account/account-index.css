@@ -1,0 +1,75 @@
+@charset "utf-8";
+
+.game-index #content .content-top { background: url("../../images/game/landing/bg-top.jpg") 0 0 no-repeat; }
+.game-index #content .content-bot { background: url("../../images/game/landing/bg-bottom.jpg") 0 100% no-repeat; }
+
+.section-title {height:253px; padding-left:28px;}
+.section-title span {color:#efe3d2; font-size:26px; line-height:32px; display:block; padding-top:40px;}
+.section-title p {color:#d3ac6b; font-size:12px; line-height:18px; margin:10px 0 0 0; width:330px;}
+
+.game-index #content .left-col {width:647px; float:left;}
+.game-index #content .right-col {width:345px; float:left;}
+
+.main-game-contents {width:647px;}
+.main-content-banner {width:277px; height:170px; display:block; border:1px solid #372511; margin-bottom:28px; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px; box-shadow: 0 0 6px #000; -moz-box-shadow: 0 0 6px #000; -webkit-box-shadow: 0 0 6px #000;}
+.main-content-banner.left-bnr {float:left; margin-left:27px;}
+.main-content-banner.right-bnr {float:right; margin-right:27px;}
+.main-content-banner:hover {border:1px solid #cd9000; background-position:0 -170px;}
+.main-content-banner .banner-title {font-size:18px; display:block; margin:85px 0 0 14px;}
+.main-content-banner .banner-desc {color:#b79855; font-size:11px; line-height:12px; display:block; width:177px; margin:3px 0 0 14px;}
+.main-content-banner:hover .banner-desc {color:#fff;}
+
+.bnr04 .banner-title, .bnr04 .banner-desc, .bnr04:hover .banner-desc  {color:#625841;}
+.bnr04 {border:1px solid #261e16; cursor:default;}
+.bnr04:hover {background-position:0 0; border:1px solid #261e16; cursor:default;}
+
+
+.upcoming-contents span {color:#a77021; font:italic 20px Palatino Linotype, serif; display:block; letter-spacing:0.8px; text-align:center; padding:20px 0 40px 0;}
+.upcoming-contents ul {margin-left:30px;}
+.upcoming-contents ul li {color:#967648; font-size:13px; height:30px; float:left; background: url("../../images/icons/bullet2.gif") 0 5px no-repeat; padding-left:14px; display:block; width:190px;}
+.upcoming-contents .col-1, .upcoming-contents .col-4, .upcoming-contents .col-7 {clear:left;}
+
+.sub-game-contents {width:307px; margin:0 0 44px 21px;}
+.sub-game-contents .sub-title {border-bottom:2px solid #552B12; padding-bottom:6px;}
+.sub-game-contents .sub-title span {color:#f0e29a; text-transform:uppercase; letter-spacing:-0.5px; font-size:14px;}
+
+.recent-updates {}
+.recent-updates ul { margin-top: 6px; line-height: 16px; }
+.recent-updates ul li a { font-size:11px; border-bottom: 1px solid #271b15; font-weight: bold; display:block; padding: 6px 20px 6px 6px; background: url(../../images/layout/cms/arrow_r_hover.png) 100% -2px no-repeat; }
+.recent-updates ul li:last-child a { border-bottom: 0; }
+.recent-updates ul li a:hover { background-color: #2b1507; background-position: 100% -50px; }
+.recent-updates ul li a span { font-weight: normal; color: #71401F; font-size:11px; display:block;}
+
+.game-search-box {width:307px; background:#2c180c url("../../images/game/landing/bg-game-search-box.gif") 100% 0 no-repeat; min-height:131px; margin-top:39px; border-radius:3px; -moz-border-radius:3px; -webkit-border-radius:3px;}
+.game-search-box .title {display:block; color:#f0e29a; font-size:14px; margin:0 10px 0 18px; padding-top:14px;}
+.game-search-box .description {display:block; color:#a4704e; font-size:11px; line-height:12px; margin:4px 10px 0 18px;}
+#game-search-bar {position:relative; width:271px; margin:22px 0 0 18px;}
+#game-search-field {width:265px; height:18px; color:#8a959b; font:italic 12px Lucida Sans, serif;}
+#game-search-field.active, #game-search-field:focus { color: #000; }
+#game-search-button {position:absolute; top:-5px; right:-10px; width:34px; height:35px; background:url("../../images/game/landing/mag-glass.png") 100% 0 no-repeat; border:0; cursor:pointer;}
+
+.game-services {margin-top: 40px;}
+.game-moreinfo {margin-top: 40px;}
+
+.content-block {width:100%; }
+.content-block a, .content-block .block {border-bottom:1px solid #2e2218; padding:11px 0 11px 90px; display: block;}
+.content-block a:hover {background-color:#2b1507;}
+.content-block a, .content-block .block {display:block; background:url("../../images/game/landing/sub-contents-sprite.gif") 0 0 no-repeat; padding-left:90px;}
+.content-block .block a { padding: 0; display: inline; background: none; border: 0; }
+.content-block .content-title {font-size:13px; line-height:22px;}
+.content-block .content-desc {font-size:11px; line-height:14px; color:#a4704e; display:block; padding-bottom:5px;}
+.content-block .content-desc em {font-size:11px; color:#80461f; display:block; margin-bottom:2px;}
+.content-block a:hover .content-desc {color:#fff;}
+.content-block ul li a.sub-list {background:url("../../images/icons/bullet2.gif") 0 4px no-repeat; padding-left:15px; line-height:15px; font-size:11px; margin-top:1px;}
+
+.game-services .content-1 {background:url("../../images/account/avatar.png")no-repeat;}
+.game-services .content-1:hover {background:url("../../images/account/avatarh.png")no-repeat;}
+.game-services .content-2 {background:url("../../images/account/pass.png")no-repeat;}
+.game-services .content-2:hover {background:url("../../images/account/passh.png")no-repeat;}
+.game-moreinfo .content-1 {background-position:5px -109px;}
+.game-moreinfo .content-1:hover {background-position:5px -417px;}
+.game-moreinfo .content-2 {background-position:5px -218px;}
+.game-moreinfo .content-2:hover {background-position:5px -526px;}
+
+.content-block-arenalinks { display: block; padding-top: 8px; }
+.content-block-arenalinks a { margin-right: 8px; font-size: 12px; }

@@ -1,0 +1,32 @@
+.recruid-a-friend #content .content-top { background: url("../../images/shop/recruit-a-friend/bg.jpg") no-repeat 0 0; }
+
+.summary-div { position:relative; margin:50px 50px 0 50px; height:170px; }
+.summary-div .page-titles {width:400px; font-family:"Palatino Linotype", Serif; letter-spacing:-1px; float:left}
+.summary-div .page-titles span {font-size:46px; line-height:60px; color:#efe3d2;}
+.summary-div .page-titles em{color:#dd6800; display:block; font-size:26px; margin:14px 0 35px 0;}
+.summary-div .sub-desc { color:#b79855; font-size:16px; width:530px }
+.summary-div .sub-desc p { margin:20px 0 }
+
+.summary-div .button-section { float:right; padding-top:15px; text-transform:none }
+.summary-div .ui-cancel span { border-left: 1px solid #39281a; font-size: 16px; margin-left: 15px; padding-left: 20px; text-transform: none; }
+
+.summary-div-top { height:250px; width:90%; margin:-50px auto 0; padding-top:270px}
+.summary-div-top h1 { color:#fff; font-size:16px; font-weight:normal }
+.summary-div-top p { line-height:22px; color:#b79855 }
+.summary-div-top .step-1 { width:33.333%; float:left; }
+.summary-div-top .step-1 p { width:90%; line-height:22px }
+.summary-div-top .step-2 { width:33.333%; float:left; padding-left:10px }
+.summary-div-top .step-3 { width:30%; float:left;padding-left:15px }
+.summary-div-top .step-3 .block { width:70px;float:right; height:30px} 
+.summary-div-top .summon { background: url("../../images/shop/recruit-a-friend/summon.gif") no-repeat scroll 0 5px transparent; margin-top: 10px; padding-bottom: 10px; padding-left: 40px; }
+.summary-div-top .bonus { background: url("../../images/shop/recruit-a-friend/bonus.gif") no-repeat scroll 0 5px transparent; margin-top: 10px; padding-bottom: 10px; padding-left: 40px; }
+.summary-div-top .mount { background: url("../../images/shop/recruit-a-friend/mount.gif") no-repeat scroll 0 0 transparent; margin-top: 10px; padding-bottom: 10px; padding-left: 30px; font-weight:bold }
+
+.summary-div-bottom { padding-bottom:50px }
+.summary-div-bottom .desc { font-size:16px; padding:20px 0; color:#b79855; border-top:1px solid #2f2114; width:90%; margin:0 auto }
+.summary-div-bottom .desc p { margin:15px 0 }
+.summary-div-bottom .desc .button-section { margin-top:40px }
+
+.desc .ui-button,
+.desc .ui-cancel { display:block; text-align:center }
+.ui-button span, .ui-cancel span { text-transform: none }

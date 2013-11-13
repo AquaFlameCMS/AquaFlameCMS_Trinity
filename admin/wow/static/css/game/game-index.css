@@ -1,0 +1,107 @@
+@charset "utf-8";
+
+.header { font-weight: bold; }
+
+.game-index #content .content-top { background: url("../../images/game/landing/bg.jpg") 0 0 no-repeat; }
+.wiki.directory .title { padding: 29px 25px 30px; margin-left: 5px; }
+.wiki.directory .desc { color: #c88840; }
+
+.index { padding: 0 25px 25px 25px; }
+.index .panel { margin: 0; }
+.index .panel .column { float: left; width: 285px; }
+.index .panel .box { margin: 20px 0; padding-top: 20px; border-top: 1px solid #321d0e; }
+.index .panel .box:first-child { border: 0; padding: 0; margin-top: 0; }
+.index .panel .box .header { margin-bottom: 5px; font-size: 18px; text-transform: uppercase; letter-spacing: -0.02em; }
+.index .panel .box .header a { color: #F5EBD1; display: inline-block; }
+.index .panel .box .header a .arrow { background: url("../../images/icons/more-arrows-wide.gif") 0 0px no-repeat; margin-left: 7px; width: 10px; height: 12px; display: inline-block; }
+.index .panel .box .header a:hover .arrow { background-position: 0 -89px; }
+.index .panel .box .subcategory { color: #98542d; font-size: 16px; padding-bottom: 3px; }
+.index .panel .box li { padding: 3px 0; padding-left: 6px; }
+.index .panel .box li a { display: block; }
+
+.index .panel .column a img,
+.index .panel .column a .icon-frame { vertical-align: bottom; margin-right: 5px; }
+.index .panel .column .double { border: 0; width: 50%; float: left; }
+.index .panel .column .double a { line-height: 18px; display: block; }
+
+
+.hot-topics { padding: 2px 25px 32px 25px; }
+.hot-topics .what-is-wow,
+.hot-topics .story-and-characters,
+.hot-topics .under-development { display: block; background-image: url("../../images/game/landing/buttons-sprite.png"); background-repeat: no-repeat; float: left; }
+.hot-topics a span { display: inline-block; font-family: Palatino Linotype, sans-serif; }
+
+.new-returning-guides { float: left; width: 323px; height: 126px; margin-right: 17px; position: relative;  }
+
+.under-development,
+.story-and-characters { float: left; width: 295px; height: 103px; margin-top: 12px; position: relative; }
+
+.under-development span { font-size: 18px; line-height: 20px; max-width: 140px; margin: 41px 0 0 112px; }
+.under-development { background-position: -618px 0; margin-right: 13px; }
+.under-development:hover { background-position: -618px 100%; }
+
+.new-returning-guides { background-position: 0px 0px; }
+.new-to-wow,
+.coming-back-to-wow { display: block; font-size: 12px; line-height: 16px; position: absolute; left: 0; right: 0; height: 65px; background: url("../../images/game/landing/buttons-sprite.png") 0px -124px no-repeat; }
+.new-to-wow { top: 0; height: 65px; }
+.new-to-wow:hover { top: 0; background-position: 0px -2px;  }
+.coming-back-to-wow { bottom: 0; background-position: 0px -62px; }
+.coming-back-to-wow:hover { bottom: 0; background-position: 0px -184px; }
+
+.coming-back-to-wow span,
+.new-to-wow span { color: #5d320f; font-weight: bold; position: absolute; padding: 12px 36px 9px 95px; max-width: 176px; left: 0; right: 0; }
+
+.coming-back-to-wow span { top: 0; }
+.new-to-wow span { bottom: 0; }
+
+
+
+.story-and-characters { background-position: -323px 0; }
+.the-story-of-warcraft,
+.the-characters-of-warcraft { display: block; font-size: 12px; line-height: 16px; position: absolute; left: 0; right: 0; height: 51px; background: url("../../images/game/landing/buttons-sprite.png") -323px -147px no-repeat; }
+.the-story-of-warcraft { bottom: 0; background-position: -323px -52px; }
+.the-characters-of-warcraft { top: 0; height: 52px; }
+.the-story-of-warcraft:hover { bottom: 0; background-position: -323px -199px; }
+.the-characters-of-warcraft:hover { top: 0; background-position: -323px 0;  }
+.the-story-of-warcraft span,
+.the-characters-of-warcraft span { position: absolute; padding: 9px 36px 9px 95px; max-width: 166px; left: 0; right: 0; }
+.the-story-of-warcraft span { top: 0; }
+.the-characters-of-warcraft span { bottom: 0; }
+
+.extras { margin-top: 40px; padding-bottom: 100px; }
+.extras li { float: left; width: 33%; }
+.extras a { display: block; font-size: 14px; padding: 0 15px 0 55px; position: relative; }
+.extras a span { color: #874d25; font-size: 12px; }
+.extras a .icon { width: 38px; height: 38px; border: 1px solid #483120; position: absolute; left: 0; top: 5px;
+	background: #211309 url("../../images/game/landing/sub-contents-sprite.gif") 0 0 no-repeat;
+	-moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px;
+	-moz-box-shadow: #0d0703 0 0 5px; -webkit-box-shadow: #0d0703 0 0 5px; box-shadow: #0d0703 0 0 5px; }
+.extras a:hover .icon { border-color: #FFB100; }
+.extras .pvp a .icon { background-position: -18px -939px; }
+.extras .realm a .icon { background-position: -21px -21px; }
+.extras .patches a .icon { background-position: -21px -135px; }
+
+/* ie */
+.ie67 .index .panel .column .double { width: 49%; }
+.ie6 .index .panel .box.first-child { border: 0; padding: 0; margin-top: 0; }
+.ie6 .extras a .icon { left: -55px; }
+.ie6 .hot-topics a { background-image: url("../../images/game/landing/buttons-sprite.gif"); }
+
+/* Localization */
+.pt-br .what-is-wow  span,
+.pt-pt .what-is-wow  span { margin: 54px 0 0 116px; }
+.zh-tw .what-is-wow  span,
+.zh-cn .what-is-wow  span { margin: 54px 0 0 136px; }
+.es-mx .what-is-wow  span{ margin: 40px 0 0 116px; }
+.ko-kr .what-is-wow  span  { margin: 46px 0 0 119px; font-size: 16px; font-weight: normal; font-family: DaumRegular, Dotum; }
+.ko-kr .under-development span,
+.ko-kr .story-and-characters span { font-size: 16px; font-family: DaumRegular, Dotum; }
+.de-de .index .panel .box .header { font-size: 14px; }
+.de-de .index .panel .box .header a { background-position: 100% 5px; }
+.de-de .index .panel .box .header a:hover { background-position: 100% -84px; }
+.it-it .under-development span,
+.pt-br .under-development span,
+.pt-pt .under-development span,
+.es-es .under-development span,
+.ru-ru .under-development span,
+.fr-fr .under-development span { margin: 31px 0 0 112px; }

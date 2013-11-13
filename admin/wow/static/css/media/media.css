@@ -1,0 +1,98 @@
+/* media gallery */
+.media-content { padding-top:11px }
+
+/* set sprite image */
+.media-content .film-strip-wrapper .ajax-frame .paging-arrow,
+.media-content .view-link,
+#film-strip .track:hover,
+#film-strip .track .thumb,
+#film-strip .track .thumb .thumb-bot,
+.media-content .film-strip-thumb-frame,
+.media-content .filter-dropdown .keyword-filter .checkbox,
+.media-content .currently-viewing .clear-filters,
+.media-content .currently-viewing .clear-filters span,
+.media-content .thumb-frame,
+#media-index .media-index-section .gallery-title .view-all .arrow,
+#media-index .media-index-section .gallery-title .gallery-icon { background-image:url(../../images/media/sprite.png) }
+
+/* filtering */
+.media-content .currently-viewing { color:#F0E29A }
+.media-content .currently-viewing .float-left { color:#7F7231 }
+.media-content .filter-dropdown .filter-title { display:none }
+.media-content .filter-dropdown .apply-filters { background-color:#2C0B01 }
+.media-content .filter-dropdown .apply-filters .button3 span { color:#FFB100; background-image:none; text-transform:none }
+
+/* film-strip container */
+.media-content .film-strip-wrapper2 { background-image:url(../../images/media/horizontal-bg.jpg) }
+.media-content .film-strip-wrapper { background-image:url(../../images/media/vertical-bg.jpg) }
+.media-content .film-strip-thumb-wrapper.film-strip-thumbnail-loader { background-image:url(../../images/loaders/thumbnail-loader.gif); background-color:#362015; background-position:50px 28px }
+
+/* film-strip ajax target */
+#film-strip-ajax-target { background-image:url(../../images/loaders/media-page-load.gif) }
+
+/* meta data */
+.media-content #item-title { color:#f9efa2 }
+.media-content #item-description { color:#967648 }
+.media-content .meta-details dt { color:#7f7231 }
+.media-content .meta-details .dt-separator { border-color:#2a2019 }
+.media-content .meta-details dd { color:#f0e29a }
+
+/* comments */
+#load-comments { color:#F9EFA2 }
+#media-comments #page-comments h3 { width:942px; margin:0 auto; padding: 0 0 15px 0; color:#F9EFA2 }
+
+/* thumbnail page */
+.thumbnail-page-wrapper { padding-bottom:50px; background-image:url(../../images/media/thumbnail-bg.jpg) }
+.thumbnail-page-wrapper .thumb-wrapper .thumb-title { color:#B79855 }
+.thumbnail-page-wrapper .thumb-wrapper:hover .thumb-title { color:#fff }
+
+/* landing page */
+#media-index { padding-top:31px }
+.ie6 #media-index .media-index-section { margin-left:30px }
+.ie6 #media-index .media-index-section.float-right { margin-right:30px }
+#media-index .media-index-section .gallery-title { font-size:17px; color:#F0E29A; border-bottom:2px solid #552B12; letter-spacing:-0.05em }
+#media-index .media-index-section .gallery-title.videos .gallery-icon { background-position:-90px -550px }
+#media-index .media-index-section .gallery-title.screenshots .gallery-icon { background-position:-125px -550px }
+#media-index .media-index-section .gallery-title.artwork .gallery-icon { background-position:-230px -550px }
+#media-index .media-index-section .gallery-title.comics .gallery-icon { background-position:-160px -550px }
+#media-index .media-index-section .gallery-title.wallpapers .gallery-icon { background-position:-195px -550px }
+#media-index .media-index-section .gallery-title.audio .gallery-icon { background-position:-265px -550px }
+#media-index .media-index-section .gallery-title.downloads .gallery-icon { background-position:-300px -550px }
+#media-index .media-index-section .gallery-title .total { color:#A67100 }
+#media-index .media-index-section .gallery-title .view-all { color:#FFB100; letter-spacing:normal; top:6px }
+#media-index .media-index-section .gallery-title:hover,
+#media-index .media-index-section .gallery-title:hover .view-all { color:#FFF }
+#media-index .media-index-section .gallery-title:hover .total { color:#AD8F50 }
+#media-index .media-index-section .thumb-frame { -moz-box-shadow:0 0 10px #000; -webkit-box-shadow:#000 0 0 10px; box-shadow:#000 0 0 10px }
+#media-index .media-index-section .thumb-wrapper .date-added { color:#71401F }
+#media-index .media-index-section .thumb-wrapper:hover .date-added { color:#FFF }
+#media-index .media-index-section .video-thumb-wrapper .video-desc { color:#AD8F50 }
+#media-index .media-index-section .video-thumb-wrapper .date-added { padding-top:0 }
+#media-index .media-index-section .video-thumb-wrapper:hover .video-desc { color:#F0E29A }
+#media-index .media-index-section .video-thumb-wrapper:hover .date-added { color:#A67100 }
+
+/* sub gallery list */
+.media-content  .sub-gallery-list { padding-bottom:50px }
+.media-content  .sub-gallery-list .thumb-title { color:#FAB000 }
+.media-content  .sub-gallery-list .thumb-title .section-count { color:#80461F }
+.media-content  .sub-gallery-list .thumb-title .last-modified { color:#80461F; font-size:11px }
+.media-content  .sub-gallery-list .thumb-wrapper:hover { -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; background-color:#341e0f }
+.media-content  .sub-gallery-list .thumb-wrapper:hover .thumb-title { color:#FFF }
+.media-content  .sub-gallery-list .thumb-wrapper:hover .thumb-frame { background-position:-388px -236px }
+.media-content  .sub-gallery-list .sub-gallery-frame:hover .thumb-frame { background-position:-388px -118px }
+
+.media-comments { padding-top:11px }
+.media-comments .film-comments { background: url(../../images/layout/cms/comments_bg.jpg) 50% 0 repeat-x; padding: 15px; margin-top: 0; }
+
+#media-comments .comment-ta { padding:4px; width:60%; background:white; -moz-border-radius:4px; border-radius:4px;  }
+#media-comments textarea, #media-comments .auto-expand { font:12px/20px Verdana, Helvetica, Arial; width:98%;  margin:0; border:none; resize: none; }
+#media-comments .comment-interior { padding: 15px 15px 15px 95px;   }
+
+.media-comments-container { background: url("../images/layout/cms/comments_bg.jpg") 50% 0 repeat-x; padding: 15px; margin-top: 0; }
+.media-comments-container .ui-pagination { margin-top:20px }
+.icon-frame img, #media-comments .portrait-b img, #media-comments .portrait-c img { -moz-box-shadow:0 0 10px #000; -webkit-box-shadow:0 0 10px #000; box-shadow:0 0 10px #000;  }
+#media-comments .avatar-interior { background: none repeat scroll 0 0 transparent; }
+
+.post-user .avatar-interior, #media-comments .avatar-interior {  background: no-repeat; height:64px; width:64px; }
+#media-comments .new-post {	background: repeat-x; padding:4px; margin-bottom:12px;
+							-moz-border-radius:4px; border-radius:4px }

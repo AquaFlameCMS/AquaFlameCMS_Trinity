@@ -1,0 +1,10 @@
+/* overrides */
+#content .content-top { background: url("../../images/arena/bg.jpg") no-repeat; }
+.profile-sidebar-inner { background: none; }
+.profile-section { padding: 0; }
+
+/* layout */
+.summary { padding-top: 224px; }
+.summary-stats { padding-bottom: 40px; }
+.summary-roster .category { padding: 0 15px; }
+.summary-roster .ui-dropdown { float: right; margin-right: 15px; width: 115px; }

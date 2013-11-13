@@ -1,0 +1,94 @@
+
+.game-lore-index #content .content-top {background: url(../../images/game/lore/landing/bg-lore-home-top.jpg) 0 0 no-repeat }
+.game-lore-index #content .content-bot {padding: 0 25px 80px 25px }
+
+.section-title { margin: 25px 0; }
+.main-header-desc { margin: 0 0 50px 0; width: 50%; color: #a4704e }
+
+#latest-short-story {float:left;}
+#leader-story {float:right;}
+#latest-story-so-far {float:left;}
+
+.latest-box {width:443px; margin-bottom:17px;}
+.latest-box-title {border-bottom:2px solid #483021; padding-bottom:17px;}
+.latest-box-title span {color:#f3ecc7; font:normal 17px Palatino Linotype, Sans-serif; letter-spacing:2px; text-transform:uppercase;}
+
+.latest-box-content {padding-top:28px;}
+.latest-box-content .link-block {display:block; padding-bottom:40px;}
+.latest-box-content .link-block .list-thumb {width:140px; height:110px; background-position:50% 50%; background-repeat:no-repeat; display:block; float:left; margin-top:5px; border:1px solid #302116; border-radius:3px; -moz-border-radius:3px; -webkit-border-radius:3px; box-shadow: 0 0 6px #000; -moz-box-shadow: 0 0 6px #000; -webkit-box-shadow: 0 0 6px #000;}
+.latest-box-content .link-block .title-desc {display:block; float:left; width:270px; margin-left:27px;}
+.latest-box-content .link-block .title-desc .title {font-size:15px; display: block; }
+.latest-box-content .link-block .title-desc .add-info {display:block; font-size:11px; font-style:italic; color:#f0e29a;}
+.latest-box-content .link-block .title-desc .desc {color:#b79855; display:block; font-size:12px; line-height:18px; margin-top:6px;}
+.latest-box-content a.locked-story .title-desc .title, .latest-box-content a.locked-story .title-desc .add-info, .latest-box-content a.locked-story .title-desc .desc {color:#594627 !important;}
+.latest-box-content a:hover .list-thumb {border:1px solid #cd9000;}
+.latest-box-content a:hover .title-desc .title, .latest-box-content a:hover .title-desc .add-info, .latest-box-content a:hover .title-desc .desc {color:#fff !important;}
+.latest-box-content a.locked-story:hover .list-thumb {border:1px solid #302116 !important;}
+.latest-box-content a.locked-story:hover .title-desc .title, .latest-box-content a.locked-story:hover .title-desc .add-info, .latest-box-content a.locked-story:hover .title-desc .desc {color:#594627 !important; cursor:default !important;}
+.latest-box-content a.locked-story:hover .list-thumb {cursor:default !important;}
+
+#latest-story-so-far  {position:relative;}
+#latest-story-so-far .chapter-list {position:absolute; top:97px; left:166px; width:270px;}
+#latest-story-so-far .chapter-list ul li {padding-left:11px; background:url(../../images/icons/bullet3_dot.gif) 1px 55% no-repeat;}
+#latest-story-so-far .chapter-list ul li a {padding:0; line-height:18px; font-size:11px;}
+
+#leader-story .latest-box-content .clear-row {clear:both;}
+#leader-story .latest-box-content a {display:block; float:left; width:221px; padding-bottom:23px;}
+#leader-story .latest-box-content a .list-thumb {width:60px; height:60px;}
+#leader-story .latest-box-content a.locked-story .list-thumb {background-image:url('../../images/game/lore/landing/thumb/leader-locked.jpg') !important;}
+#leader-story .latest-box-content a .title-desc {margin-left:14px; width:145px;}
+#leader-story .latest-box-content a .title-desc .title {font-size:13px; line-height:14px; margin-top:4px;}
+#leader-story .latest-box-content a .title-desc .desc {margin-top:4px; font-size:11px; line-height:12px;}
+#leader-story .latest-box-content a .title-desc .add-info {margin-top:2px;}
+#leader-story .latest-box-content a .title-desc .horde {color:#d32f2f;}
+#leader-story .latest-box-content a .title-desc .alliance {color:#1867a4;}
+
+
+#all-lore-story {margin-top:33px;}
+#all-lore-story .all-lore-story-title {width:943px; height:51px; background: url(../../images/game/lore/landing/bg-story-list-title.jpg) 0 0 no-repeat; }
+#all-lore-story .all-lore-story-title span {font-size:14px; text-transform:uppercase; color:#efe3d2; display:inline-block; line-height:51px; padding-left:20px;}
+#all-lore-story .all-lore-story-content {width:943px; background: url(../../images/game/lore/landing/bg-story-list-box-body.jpg) repeat-y;}
+#all-lore-story .all-lore-story-content .wrapper {width:943px; background: url(../../images/game/lore/landing/bg-story-list-box-top.jpg) 0 0 no-repeat;}
+#all-lore-story .all-lore-story-content .wrapper .content-box {width:943px; background: url(../../images/game/lore/landing/bg-story-list-box-bottom.jpg) 0 100% no-repeat; padding:6px 0 40px 0;}
+#all-lore-story .all-lore-story-content .story-list-box {float:left;}
+#all-lore-story .all-lore-story-content .story-list-box.short-story {width:330px;}
+#all-lore-story .all-lore-story-content .story-list-box.story-so-far {width:339px;}
+#all-lore-story .all-lore-story-content .story-list-box.leader-story {width:240px; margin-left:20px;}
+#all-lore-story .all-lore-story-content .story-list-box ul li {padding-left:11px; background:url(../../images/icons/bullet3_dot.gif) 1px 55% no-repeat; line-height:20px;}
+#all-lore-story .all-lore-story-content .story-list-box a {font-size:11px;}
+#all-lore-story .all-lore-story-content .story-list-box .story-category {color:#f0e29a; text-transform:uppercase; font-size:12px; line-height:48px;}
+
+
+/* Destination: Pandaria */
+#destination-pandaria .lore-image { background: rgba(255,255,255,0.1); border-radius: 4px; height: 60px; float: left; margin: 5px 20px 10px 0; width: 60px; }
+#destination-pandaria .lore-title { color: #ffb100; display: block;}
+#destination-pandaria .lore-desc { color: #b17d5b;  display:block; padding-left:82px}
+#destination-pandaria .lore-info { padding-bottom:40px }
+#destination-pandaria .lore-info .parent { width:300px; display:inline-block; padding-right:10px; vertical-align:top; margin-bottom:15px }
+#destination-pandaria .lore-info .parent a:hover .lore-title,
+#destination-pandaria .lore-info .parent a:hover .lore-desc,
+#destination-pandaria .lore-item:hover .add-info { color: #fff; }
+#destination-pandaria .journal-1-thumb { background: url(../../images/game/lore/destination-pandaria/lilis-travel-journal/1-thumb.jpg) left bottom no-repeat; }
+#destination-pandaria .journal-2-thumb { background: url(../../images/game/lore/destination-pandaria/lilis-travel-journal/2-thumb.jpg) left bottom no-repeat; }
+#destination-pandaria .journal-3-thumb { background: url(../../images/game/lore/destination-pandaria/lilis-travel-journal/3-thumb.jpg) left bottom no-repeat; }
+#destination-pandaria .journal-4-thumb { background: url(../../images/game/lore/destination-pandaria/lilis-travel-journal/4-thumb.jpg) left bottom no-repeat; }
+#destination-pandaria .journal-5-thumb { background: url(../../images/game/lore/destination-pandaria/lilis-travel-journal/alt-5-thumb.jpg) left bottom no-repeat; }
+#destination-pandaria .journal-6-thumb { background: url(../../images/game/lore/destination-pandaria/lilis-travel-journal/alt-6-thumb.jpg) left bottom no-repeat; }
+#destination-pandaria .journal-7-thumb { background: url(../../images/game/lore/destination-pandaria/lilis-travel-journal/alt-7-thumb.jpg) left bottom no-repeat; }
+#destination-pandaria .journal-8-thumb { background: url(../../images/game/lore/destination-pandaria/lilis-travel-journal/alt-8-thumb.jpg) left bottom no-repeat; }
+#destination-pandaria .journal-9-thumb { background: url(../../images/game/lore/destination-pandaria/lilis-travel-journal/alt-9-thumb.jpg) left bottom no-repeat; }
+#destination-pandaria .journal-10-thumb { background: url(../../images/game/lore/destination-pandaria/lilis-travel-journal/alt-10-thumb.jpg) left bottom no-repeat; }
+#destination-pandaria .journal-11-thumb { background: url(../../images/game/lore/destination-pandaria/lilis-travel-journal/alt-11-thumb.jpg) left bottom no-repeat; }
+#destination-pandaria .journal-pearl-of-pandaria-thumb { background: url(../../images/game/lore/destination-pandaria/pearl-of-pandaria/blog-link-thumb.jpg) left bottom no-repeat; }
+#destination-pandaria .quest-for-pandaria-part-1-thumb { background: url(../../images/game/lore/destination-pandaria/quest-for-pandaria-alt-part-1-thumb.jpg) no-repeat; }
+#destination-pandaria .quest-for-pandaria-part-2-thumb { background: url(../../images/game/lore/destination-pandaria/quest-for-pandaria-alt-part-2-thumb.jpg) no-repeat; }
+#destination-pandaria .quest-for-pandaria-part-3-thumb { background: url(../../images/game/lore/destination-pandaria/quest-for-pandaria-alt-part-3-thumb.jpg) no-repeat; }
+#destination-pandaria .quest-for-pandaria-part-4-thumb { background: url(../../images/game/lore/destination-pandaria/quest-for-pandaria-alt-part-4-thumb.jpg) no-repeat; }
+#destination-pandaria .red-blossoms-thumb { background: url(../../images/game/lore/destination-pandaria/faction-stories/red-blossoms/trial-of-the-red-blossoms-thumb.jpg) no-repeat; }
+#destination-pandaria .bleeding-sun-thumb { background: url(../../images/game/lore/destination-pandaria/faction-stories/bleeding-sun/bleeding-sun-thumb.jpg) no-repeat; }
+#destination-pandaria .lore-item .add-info {display:block; font-size:11px; font-style:italic; color:#f0e29a;}
+
+/* For KR font styles */
+.ko-kr .latest-box-title span {font:normal 17px Malgun Gothic, Dotum, Serif; letter-spacing:1px;}
+.ko-kr .latest-box-content .link-block .title-desc .add-info {font-style:normal;}
+.ko-kr #all-lore-story .all-lore-story-title span, .ko-kr #all-lore-story .all-lore-story-content .story-list-box .story-category, .ko-kr .latest-box-content .link-block .title-desc .title {font-family:Malgun Gothic, Dotum, Serif;}

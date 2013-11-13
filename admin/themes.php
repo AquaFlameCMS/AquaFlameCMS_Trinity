@@ -96,6 +96,7 @@ $('#checkall').toggleClass('clicked');
     <div class="datalist"> 
 	     <div class="heading">
         <h2>Themes</h2>
+		<a href="install_Theme.php">Install Theme</a>
         <select name="sort">
           <option>Sort By</option>
           <option>Option1</option>
@@ -132,22 +133,22 @@ $('#checkall').toggleClass('clicked');
             mysql_select_db($server_db) or die (mysql_error());
             $result = mysql_query("SELECT * FROM themes");
             while ($theme = mysql_fetch_assoc($result)){
-              echo'
+			  echo'
             <li>
             <div class="chk">
               <label>
                 <input class="chkl" type="checkbox" name="chk" value="checkbox" />
               </label>
             </div>
-            
-            <p class="title"><a href="viewtheme.php?id=' .$theme[id] . '">'.substr(strip_tags($theme['name']),0,16).'</a> </p>
+           
+            <p class="title"><a href="viewtheme.php?id=' .$theme['id']. '">'.substr(strip_tags($theme['name']),0,16).'</a> </p>
 	
 	
 			
             <p class="descrip">'.substr(strip_tags($theme['description']),0,90).' ...</p>
             <p class="inc">'.$theme['creation_date'].'</p>';
 
-	if($theme[active]=='1') {
+	if($theme['active']=='1') {
 			echo "<p class='inc'><font color='green'>Active</p>";
 					}
 
@@ -157,7 +158,7 @@ $('#checkall').toggleClass('clicked');
       </ul>
     </div>
 <?php
-$version="1";
+$version="2";
 	/* Checks for updates using a remote CSV file
 	 * The CSV must be like this
 	 * versionnumber,versiondescription,type,downloadlink
@@ -177,7 +178,7 @@ $fp = @fopen ($url, 'r') or print ('UPDATE SERVER OFFLINE'); //If the server is 
 if ($read[0] > $version && $read[2] == "1") { $critical = TRUE; } // If its 1, set ciritcal to true
 	if ($read[0] > $version) { $update = TRUE; } // Anything other than 1 set update to true
 	if ($critical) {
-		print '<font color="red">There is a critical update available!</font><br/>You can get it at <a href="'.$read[3].'">'.$read[3].'</a> (Version: '.$read[1].') <br/><br/>';
+		print '<font color="red">Version '.$read[0].' of The Theme Manager is Now Available. Please Update using git pull or reclone</font>';
 	}else if ($update){
 		print '<font color="green">There is a none critical update available!</font><br/>You can get it at <a href="'.$read[3].'">'.$read[3].'</a> (Version: '.$read[1].') <br/><br/>';
 	}

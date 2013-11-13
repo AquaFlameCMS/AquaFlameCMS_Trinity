@@ -1,0 +1,23 @@
+ 
+.search-win #content .content-top { background: url("../images/layout/sidebar-bg.jpg") 0 0 no-repeat; }
+.search { min-height: 800px; }
+
+.search .helpers .category { letter-spacing: 0; }
+.search .table em { color: #EFC9A0; font-style: normal; }
+.search .sublink,
+.search .result .author { color: #c88217; }
+.search .sublink:hover,
+.search .result .author:hover { color: #fff; }
+.search .dynamic-menu { margin: 20px; }
+.search .results { border-top: 1px solid #2a1d17; }
+.search .result .subcategory,
+.search .result .meta { color: #754e24; }
+.search .data-options { background: none; padding: 0; margin: 20px; height: 20px; line-height: 20px; }
+.search .post-results .result { background: url("../images/layout/search/post-icon.gif") 0 5px no-repeat; padding-left: 50px; }
+.search .results-grid .grid { color: #754e24; }
+
+.search .subheader { font-size: 24px; color: #7E3406; }
+.search .search-right .subheader span { color: #FEF092; }
+.search .category { font-size: 16px; font-weight: normal; letter-spacing: 0; }
+
+.ie6 #content .content-bot { height: 800px; }

@@ -1,0 +1,94 @@
+
+.fansite-link { visibility: visible !important; }
+
+/* ui */
+.button1 span { background-image: url("../images/buttons/button-1.gif"); }
+.button2 span { background-image: url("../images/buttons/button-2.gif"); }
+.button1-next span { background-image: url("../images/buttons/button-1-next.gif") }
+.button1-previous span { background-image: url("../images/buttons/button-1-previous.gif") }
+.button2-next span { background-image: url("../images/buttons/button-2-next.gif") }
+.button2-previous span { background-image: url("../images/buttons/button-2-previous.gif") }
+.button4 span { background-image: url("../images/buttons/button-4.gif");}
+.button4-download span { background-image: url("../images/buttons/button-4-download.gif");}
+.wiki-tooltip .frame-56 { top: -14px; }
+
+/* menu */
+.flyout-menu ul li a,
+.flyout-menu ul li span { width: 184px; padding: 4px 8px; overflow: hidden; }
+.flyout-menu ul li .flyout-menu { left: 199px; }
+
+/* header */
+#header { z-index: 90; position: relative; zoom: 1; }
+#header .header-plate-wrapper { background: none; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/wow/static/images/layout/header-border.png", sizingMethod="crop"); }
+#header .user-plate { z-index: 0; }
+#header .user-plate .user-meta { float: left; width: auto; z-index: 1; }
+#header .user-plate .character { zoom: 1; }
+#header .user-plate .profile-link { z-index: 2; background: none; }
+#header .user-plate a.profile-link .hover  { background: none; }
+#header .user-plate .card-overlay { display: none; }
+#header .user-plate .character-name .arrow { position: relative; bottom: -5px; }
+
+/* search */
+#browse-armory { background-image: url("../images/layout/search/button-armory.gif"); }
+.multi-type .type-icon { background-image: url("../images/layout/search/search_icons_light.gif"); }
+
+/* media frame */
+.view-all { right: 29px; }
+
+/* content */
+#content .content-bot { height:570px }
+.ui-slideshow .mask { background: none; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/wow/static/images/layout/slideshow-mask.png", sizingMethod="crop"); }
+
+/* footer */
+#sitemap h3 { background-image:url(../images/icons/footer.gif) }
+
+/* content */
+.tab-menu li { float: left; }
+.data-options .option { padding-top: 10px; }
+.media-frame { display: inline; }
+.media-frame .frame-inner { float: left; }
+.media-title .view-all { right: 21px; }
+.media-frame .magnifying-wrapper .magnifying-glass { background-image:url("../images/layout/lightbox/ui.gif") }
+.icon-frame { display: block; float: left; }
+
+/* section boxes */
+.section { height: 400px; }
+
+/* icons */
+.icon-wowhead { background-image: url("../images/icons/wowhead.gif"); }
+.icon-dps,
+.icon-healer,
+.icon-tank { background: url("../images/icons/roles.gif"); }
+.icon-socket .frame { background-image: url("../images/icons/frames/sockets.gif"); }
+
+.context-link { background-image: url(../images/layout/cms/char-arrow.gif); }
+
+/* framed icons */
+.icon-frame-gloss .frame { background-image: url("../images/icons/frames/frame-icon.gif") }
+
+/* toasts */
+.ui-toast .toast-top { background: url("../images/layout/toast.gif") no-repeat }
+.ui-toast .toast-bot { background: url("../images/layout/toast.gif") 0 100% no-repeat }
+.ui-toast .toast-content { background: url("../images/layout/toast-bg.gif") repeat-y }
+.ui-toast .toast-arrow { background: url("../images/layout/toast-arrow.gif") no-repeat; bottom: 3px; }
+
+/*character*/
+.character-talents { width: 70px; }
+
+/*guild news*/
+#news-list .activity-feed li { position:static; padding-left:15px }
+#news-list .activity-feed li .icon-frame { left: -5px; position: relative; top: 0; }
+
+.modal-brown .arrow-left,
+.modal-brown .arrow-right,
+.modal-brown .arrow-top,
+.modal-brown .arrow-bottom { background-image: url("../images/layout/modal-arrow.gif"); }
+.modal-brown .close { background-image: url("../images/layout/lightbox/ui.gif"); }
+
+/* wiki */
+.character-tooltip { width: 150px; }
+.wiki-tooltip { width: 250px; }
+
+/* new feature tip */
+.new-feature-tip .close:hover,
+.new-feature-tip .clickable { background-image: url("../images/layout/feature-tip/mop-talent-calculator-ie6.png"); }

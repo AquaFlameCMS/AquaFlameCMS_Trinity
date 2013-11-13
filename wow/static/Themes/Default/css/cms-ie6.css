@@ -1,0 +1,53 @@
+
+#left { width: 645px; overflow: hidden; }
+#right { padding: 0 20px 0 0; margin: 0; }
+#homepage, #blog-wrapper { background: none; }
+
+#blog .keyword-list, #blog .community-share { padding-top: 10px; }
+
+#station-view .bt-set { overflow: hidden; background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/wow/static/images/layout/cms/bt_lite_bg.png', sizingMethod='crop'); }
+#station-view .bt-set a:hover { background: none; }
+#station-view .bt-mask-l {  background-image:url(../images/layout/cms/bt_mask_bg.gif);  }
+
+#station-view .bt-mask-r { background-image:url(../images/layout/cms/bt_mask_bg.gif); }
+
+/* @todo - right side mask */
+
+#popular-topics .readmore { padding-top: 17px; margin-top: 0; }
+
+.forum-link { background:#190E09; }
+
+#forum-content .forum-post-icon .blizzard_icon { background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/wow/static/images/layout/cms/icon_blizzard.png', sizingMethod='crop'); }
+#forum-content .forum-post-icon { background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/wow/static/images/layout/cms/post_active.png', sizingMethod='crop'); }
+#posts tr.read .forum-post-icon { background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/wow/static/images/layout/cms/post_inactive.png', sizingMethod='crop'); }
+
+#poll-container { zoom:1; }
+#poll-container .poll-actions a { background-image:url(../images/layout/cms/twin_buttons.gif); }
+#poll-container input { background:none; }
+
+#content .back-arrow { background-image:url("../images/icons/link-arrows.gif"); }
+.post-user, .talkback .post-user { background: none; }
+
+
+.talkback-icon { background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/wow/static/images/layout/cms/alert_img.png', sizingMethod='crop'); zoom: 1; }
+
+.karma .rate-btn, .karma .rate-btn span  {  background-image:url("../images/layout/cms/icon_rating.gif"); }
+#content .rate-action a.report { background-image:url("../images/layout/cms/alert_icon.gif"); }
+
+#page-comments { z-index: 0; }
+#page-comments .comment { zoom: 1; z-index: 0; }
+.character-options { zoom: 1; z-index: 500; }
+.post-user, .talkback .post-user { background-image:url(../images/layout/cms/post_avatar_bg.gif); }
+
+.sotd .caption { background: #000; }
+.sotd .caption a { background: none; padding: 0; }
+
+#forum-list { width:607px;  }
+
+.activity-feed li { height: 20px; }
+
+.poptopic-list a .int {background: url(../images/layout/cms/arrow_r_hover.gif) 100% -5px no-repeat; }
+
+/* Homepage events sidebar */
+.sidebar-events .info-wrapper .title { float: left; width: 200px;;}
+.sidebar-events .info-wrapper .date { clear: both;}

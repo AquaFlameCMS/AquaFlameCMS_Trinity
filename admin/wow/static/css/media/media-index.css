@@ -1,0 +1,43 @@
+.media-content { padding-top:42px; padding-bottom:50px; }
+
+/* titles */
+#media-index .media-section { width:392px; margin:-7px 0 53px 59px }
+#media-index .media-section.float-right { margin-left:0; margin-right:61px }
+#media-index .media-section .view-all { float:right; text-transform:none; display:block; font-size:11px; background:url(../../images/icons/next.gif) no-repeat 100% 50%; padding-right:20px; opacity:0.8; color:#FFB100 }
+#media-index .media-section .view-all:hover { opacity:1 }
+#media-index .section-title { color:#f0e29a; font-size:17px; text-transform:uppercase; background:url(../../images/media/index-sprite.gif) no-repeat; height:34px; line-height:23px; width:360px; padding-left:35px; border-bottom:2px solid #552B12; display:block }
+#media-index .section-title .total { color:#a67100; padding-left:3px }
+#media-index .section-title:hover { color:#FFF }
+#media-index .media-section .section-title:hover .view-all { opacity:1; color:#FFF }
+#media-index .section-title:hover .total { color:#AD8F50 }
+#media-index .section-title.wallpapers { background-position:0 -108px }
+#media-index .section-title.comics { background-position:0 -144px }
+#media-index .section-title.screenshots { background-position:0 -36px }
+#media-index .section-title.artwork { background-position:0 -72px }
+
+/* section content */
+#media-index .section-content { width:392px; margin-top:23px }
+#media-index .section-content .date-added { color:#71401f; font-size:11px }
+#media-index .section-content .index-thumb { float:left; height:133px }
+#media-index .section-content .index-thumb:hover .thumb-frame { border:1px solid #cd9000;  background:rgba(0,0,0, 0.5) url(../../images/media/index-sprite.png) 61px -217px no-repeat }
+#media-index .section-content .index-thumb.left-col { margin-right:16px }
+#media-index .section-content .bottom-row { margin-top:20px }
+
+/* videos */
+.media-section .video-thumbnail { background-repeat:no-repeat; height:126px; background-position:0 0; display:block }
+.media-section .first-video { margin-bottom:34px }
+.media-section .video-thumbnail .video-frame { -moz-border-radius:5px 5px 5px 5px; -webkit-border-radius:5px 5px 5px 5px; border-radius:5px 5px 5px 5px; border:1px solid #000000; -moz-box-shadow:0 0 10px #000000; -webkit-box-shadow:0 0 10px #000000; box-shadow:0 0 10px #000000;display:block; height:118px; width:188px }
+.media-section .video-thumbnail .video-info { display:block; float:right; width:175px; padding:3px 10px 0 5px }
+.media-section .video-thumbnail .video-info .video-desc { color:#AD8F50; font-size:11px; margin:0.5em 0; display:block }
+.media-section .video-thumbnail .video-title { display:block; font-size:14px }
+.media-section .video-thumbnail .icon-overlay { display:block; height:118px; width:188px; background:url(../../images/media/frame-overlays.png) no-repeat;  -moz-border-radius:5px 5px 5px 5px; -webkit-border-radius:5px 5px 5px 5px; border-radius:5px 5px 5px 5px }
+.media-section .video-thumbnail:hover a { color:#FFF }
+.media-section .video-thumbnail:hover .video-frame { border:1px solid #cd9000 }
+.media-section .video-thumbnail:hover .video-info .video-desc { color: #F0E29A }
+.media-section .video-thumbnail:hover .icon-overlay { background-position:0 -118px; background-color:rgba(0, 0, 0, .5) }
+#media-index .section-content .video-thumbnail:hover .date-added { color:#A67100 }
+#media-index .section-content .video-thumbnail .date-added { display:block }
+
+
+
+

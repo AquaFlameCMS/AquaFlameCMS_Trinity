@@ -1,6 +1,5 @@
 <?php
 require_once("configs.php");
-
 $page_cat = "home";
 ?>
 <!doctype html>
@@ -15,15 +14,13 @@ $page_cat = "home";
 	<meta name="viewport" content="width=device-width">
 	<meta name="description" content="<?php echo $website['description']; ?>">
     <meta name="keywords" content="<?php echo $website['keywords']; ?>">
-	<link rel="shortcut icon" href="wow/static/local-common/images/favicons/wow.png" type="image/x-icon">
-	<link rel="search" type="application/opensearchdescription+xml" href="http://eu.battle.net/en-gb/data/opensearch" title="Battle.net Search">
-	
+	<link rel="shortcut icon" href="<?php echo $website['root']; ?>wow/static/local-common/images/favicons/wow.png" type="image/x-icon">
 	<link title="World of Warcraft - News" href="wow/en/feed/news" type="application/atom+xml" rel="alternate">
 	<?php GetStyle(); ?>
 	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-	<script src="wow/static/local-common/js/third-party/jquery-1.4.4-p1.min.js"></script>
-	<script src="wow/static/local-common/js/core.js?v15"></script>
-	<script src="wow/static/local-common/js/tooltip.js?v15"></script>
+	<script src="<?php echo $website['root']; ?>wow/static/local-common/js/third-party/jquery-1.4.4-p1.min.js"></script>
+	<script src="<?php echo $website['root']; ?>wow/static/local-common/js/core.js?v15"></script>
+	<script src="<?php echo $website['root']; ?>wow/static/local-common/js/tooltip.js?v15"></script>
 	<script src="http://static.wowhead.com/widgets/power.js"></script>
 	<!--[if IE 6]> <script type="text/javascript">
 	//<![CDATA[
@@ -44,8 +41,8 @@ $page_cat = "home";
 			<div class="content-bot">	
 				<div id="homepage">
 					<div id="left">
-						<script src="wow/static/local-common/js/slideshow.js"></script>
-						<script src="wow/static/local-common/js/third-party/swfobject.js"></script>
+						<script src="<?php echo $website['root']; ?>wow/static/local-common/js/slideshow.js"></script>
+						<script src="<?php echo $website['root']; ?>wow/static/local-common/js/third-party/swfobject.js"></script>
 						<div id="slideshow" class="ui-slideshow">
 							<div class="slideshow">
 							<?php
@@ -224,7 +221,16 @@ if(isset($_SESSION['username']))
 {
 include("panel/vote.php");
 }
-include("panel/server_information.php");
+	$query="SELECT * FROM sidebars WHERE name='ServerInfo'";
+			$con=mysqli_connect(DBHOST, DBUSER, DBPASS, DB);
+				$result=mysqli_query($con,$query);
+	while($row=mysqli_fetch_array($result)) {
+				if($row['enabled']=='1') {
+					include("panel/server_information.php");
+						}
+				else {
+				}
+			}
 include("panel/sotd.php");
 include("panel/popular_topics.php");
 ?>

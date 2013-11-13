@@ -1,4 +1,6 @@
-<?php require_once("../configs.php"); ?>
+<?php require_once("../configs.php");
+include_once('functions.d/GetShopTheme.php');
+ ?>
 <!DOCTYPE html> 
 <html lang="en-gb">
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -12,12 +14,10 @@
 <meta name="description" content="<?php echo $website['description']; ?>">
 <meta name="keywords" content="<?php echo $website['keywords']; ?>">
 <link rel="shortcut icon" href="../wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
-<link rel="stylesheet" href="../wow/static/local-common/css/common.css?v15" />
-<link rel="stylesheet" href="../wow/static/css/shop/shop-index.css?v34" />
+<?php GetShopTheme(); ?>
 <link rel="stylesheet" href="../wow/static/css/wiki/wiki.css?v34" />
 <link title="World of Warcraft - News" href="wow/en/feed/news" type="application/atom+xml" rel="alternate" />
-<link rel="stylesheet" href="../wow/static/css/wow.css?v4" />
-<link rel="stylesheet" href="../wow/static/css/services/services-index.css?v4" />
+
 <script src="../wow/static/local-common/js/third-party/jquery-1.4.4.min.js"></script>
 <script src="../wow/static/local-common/js/core.js?v15"></script>
 <script src="../wow/static/local-common/js/tooltip.js?v15"></script>

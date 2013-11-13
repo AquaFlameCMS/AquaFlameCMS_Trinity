@@ -1,0 +1,55 @@
+/* Summary */
+.summary{ position: relative; margin: 50px 50px 0 50px; height: 170px; }
+.summary .page-titles { width: 560px; font-family: "Palatino Linotype", Arial, serif; letter-spacing: -1px; float: left; }
+.summary .page-titles h2 { font-size: 46px; line-height: 60px; color: #efe3d2; font-weight: normal; }
+.summary .page-titles p { letter-spacing: 0; font-family: Arial,Verdana,sans-serif; font-size: 16px; color: #b79855; width: 550px; margin: 15px 0; }
+.summary .page-titles em { color: #dd6800; display: block; font-size: 26px; position: absolute; top: 232px; left: 0;}
+.summary .sub-desc { color: #b79855; font-size: 16px; width: 530px; }
+.summary .sub-desc p { margin: 20px 0; }
+
+/* Buttons */
+.summary .button-section { float: right; overflow: hidden; padding-top: 15px; text-transform: none; }
+.summary .ui-cancel span { border-left: 1px solid #39281A; display: inline-block; line-height: 36px; font-size: 16px; margin-left: 15px; padding-left: 20px; text-transform: none; white-space: normal; word-wrap: break-word; float: left; max-width: 80px; vertical-align: middle; }
+.summary-bottom .desc .ui-button,
+.summary-bottom .desc .ui-cancel { display: block; text-align: center; }
+.ui-button span, .ui-cancel span { text-transform: none; }
+.faction-change .button4 span,
+.race-change .button4 span,
+.character-transfer .button4 span { line-height: 50px; }
+
+/* Buttons - style during price promotion*/
+.faction-change .has-promo-price .button4 span,
+.race-change .has-promo-price .button4 span,
+.character-transfer .has-promo-price .button4 span { line-height: 34px; }
+
+/* Steps */
+.summary-top { width: 90%; margin: -50px auto 0; padding-top: 360px }
+.summary-top h3 { color: #fff; font-size: 16px; font-weight: normal; }
+.summary-top p { line-height: 22px; color: #b79855; }
+.summary-top .step { width: 255px; float: left; background-color: #1A0F08; border-radius: 4px; padding: 8px 8px 13px 8px; position:relative; margin-left: 40px; -webkit-transition: all 0.2s ease 0.05s; -moz-transition: all 0.2s ease 0.05s; transition: all 0.2s ease 0.05s; }
+.summary-top .step:hover { background-color: #3A1600 }
+.summary-top .step-1 { margin-left: 0; }
+.summary-top .step-1 p { width: 90%; }
+
+.summary-top ul { list-style-type: disc; color: #B79855; margin: 20px 0 0 20px;  }
+.summary-top .hover-area { height: 169px; left: 0; position: absolute; top: -170px; width: 270px; display: block;}
+
+/* Bottom */
+.summary-bottom { margin-top: 30px; padding-bottom: 50px; }
+.summary-bottom .desc { font-size: 16px; padding: 20px 0; color: #b79855; border-top: 1px solid #2f2114; width: 90%; margin: 0 auto; }
+.summary-bottom .desc p { margin:15px 0; }
+.summary-bottom .desc .button-section { margin-top: 40px; }
+
+/* Character Transfer override */
+.character-transfer #content .content-top { background: url("../../images/shop/character-transfer/bg.jpg") no-repeat 0 0; }
+.character-transfer .summary .page-titles em { top: 220px; }
+
+/* Race change override */
+.race-change #content .content-top { background: url("../../images/shop/race-change/bg.jpg") no-repeat 0 0; }
+.race-change .summary-top .step-2 .prc-icon { background: url("../../images/shop/race-change/icon-race-change.png") no-repeat center center; width: 147px; height: 107px; margin: 0 auto -15px auto; }
+
+/* faction change override */
+.faction-change #content .content-top { background: url("../../images/shop/faction-change/bg.jpg") no-repeat 0 0; }
+.faction-change .summary .page-titles em { top: 223px; }
+.faction-change .summary-top .step-2 .pfc-icon { background: url("../../images/shop/faction-change/icon-faction-change.png") no-repeat 0 0; width: 147px; height: 87px; margin: 0 auto -15px auto; }
+
