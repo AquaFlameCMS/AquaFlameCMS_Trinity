@@ -1,6 +1,7 @@
 <?php
 require_once("../../../configs.php");
 $page_cat = "forums";
+include_once("../../functions.d/GetForumTheme.php");
 ?>
 <!doctype html>
 <head>

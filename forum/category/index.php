@@ -2,6 +2,7 @@
 $page_cat = "forums";
 require_once("../../configs.php");
 require_once("../functions/post_toHtml.php");
+include_once("functions.d/GetForumTheme.php");
 ?>
 <!doctype html>
 <head>
@@ -16,10 +17,7 @@ require_once("../functions/post_toHtml.php");
 <!--[if IE]><link rel="stylesheet"  href="<?php echo $website['root'];?>wow/static/local-common/css/common-ie.css?v15" /><![endif]-->
 <!--[if IE 6]><link rel="stylesheet"  href="<?php echo $website['root'];?>wow/static/local-common/css/common-ie6.css?v15" /><![endif]-->
 <!--[if IE 7]><link rel="stylesheet" href="<?php echo $website['root'];?>wow/static/local-common/css/common-ie7.css?v15" /><![endif]-->
-<link rel="stylesheet" href="<?php echo $website['root'];?>wow/static/css/wow.css?v4" />
-<link rel="stylesheet" href="<?php echo $website['root'];?>wow/static/local-common/css/cms/forums.css?v15" />
-<link rel="stylesheet" href="<?php echo $website['root'];?>wow/static/local-common/css/cms/cms-common.css?v15" />
-<link rel="stylesheet" href="<?php echo $website['root'];?>wow/static/css/cms.css?v4" />
+<?php GetForumTheme(); ?>
 <!--[if IE 6]><link rel="stylesheet" href="<?php echo $website['root'];?>wow/static/css/cms-ie6.css?v4" /><![endif]-->
 <!--[if IE]><link rel="stylesheet" href="<?php echo $website['root'];?>wow/static/css/wow-ie.css?v4" /><![endif]-->
 <!--[if IE 6]><link rel="stylesheet" href="<?php echo $website['root'];?>wow/static/css/wow-ie6.css?v4" /><![endif]-->
