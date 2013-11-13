@@ -132,22 +132,22 @@ $('#checkall').toggleClass('clicked');
             mysql_select_db($server_db) or die (mysql_error());
             $result = mysql_query("SELECT * FROM themes");
             while ($theme = mysql_fetch_assoc($result)){
-              echo'
+			  echo'
             <li>
             <div class="chk">
               <label>
                 <input class="chkl" type="checkbox" name="chk" value="checkbox" />
               </label>
             </div>
-            
-            <p class="title"><a href="viewtheme.php?id=' .$theme[id] . '">'.substr(strip_tags($theme['name']),0,16).'</a> </p>
+           
+            <p class="title"><a href="viewtheme.php?id=' .$theme['id']. '">'.substr(strip_tags($theme['name']),0,16).'</a> </p>
 	
 	
 			
             <p class="descrip">'.substr(strip_tags($theme['description']),0,90).' ...</p>
             <p class="inc">'.$theme['creation_date'].'</p>';
 
-	if($theme[active]=='1') {
+	if($theme['active']=='1') {
 			echo "<p class='inc'><font color='green'>Active</p>";
 					}
 
@@ -157,7 +157,7 @@ $('#checkall').toggleClass('clicked');
       </ul>
     </div>
 <?php
-$version="1";
+$version="2";
 	/* Checks for updates using a remote CSV file
 	 * The CSV must be like this
 	 * versionnumber,versiondescription,type,downloadlink
