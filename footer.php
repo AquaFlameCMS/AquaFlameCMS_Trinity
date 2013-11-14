@@ -279,7 +279,7 @@ shim.style.display = 'block';
 <h2 class="explore-caption"><?php echo $More['More']; ?></h2>
 <ul>
 <li><a href="#" tabindex="55"><?php echo $Retrieve['Retrieve']; ?></a></li>
-<li><a href="#" tabindex="55"><?php echo $Client_down3['Client_down3']; ?></a></li>
+<li><a href="<?php GetClientLink(); ?>" tabindex="55"><?php echo $Client_down3['Client_down3']; ?></a></li>
 <?php
 if (!isset($_SESSION['username']))	
 	{
