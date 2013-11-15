@@ -124,7 +124,7 @@ return false;
 <dd class="account-name"><?php echo strtolower($_SESSION['username']); ?></dd>
 <dt class="subcategory"><?php echo $Man['Man6']; ?></dt>
 <dd class="account-status"> <span><strong class="disable">
-<?php include("../configs.php");
+<?php require_once("../configs.php");
  //Get Info By Query
  $conn = mysql_connect("$serveraddress", "$serveruser", "$serverpass")or die("Couldn't connect to database"); 
  $account_info = mysql_query("SELECT id,username,locked  FROM `".$server_adb."`.`account` WHERE username='".$_SESSION['username']."'")or die(mysql_error());
@@ -139,7 +139,7 @@ return false;
 ?></strong></span>
 </dd>
 <dt class="subcategory"><?php echo $Man['Man9']; ?></dt>
-<dd class="account-details"><?php include("../configs.php");
+<dd class="account-details"><?php require_once("../configs.php");
  //Get Info By Query
  $conn = mysql_connect("$serveraddress", "$serveruser", "$serverpass")or die("Couldn't connect to database"); 
  $account_info = mysql_query("SELECT id,username,locked  FROM `".$server_adb."`.`account` WHERE username='".$_SESSION['username']."'")or die(mysql_error());

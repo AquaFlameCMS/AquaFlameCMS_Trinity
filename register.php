@@ -176,11 +176,11 @@ if (!isset($_SESSION['username'])) {
                     echo '<div class="alert-page-message success-page">
 								<p class="text-green title"><strong>' . $re['scc1'] . '</strong></p>
 								<p class="caption">' . $re['scc2'] . '</p>
-								<p class="caption"><a href="account_man.php">' . $re['goPanel'] . '</a></p>
+								<p class="caption"><a href="'.$website['root'] .'account/">' . $re['goPanel'] . '</a></p>
 								</div>';
                     echo '</div>';
                     $_SESSION['username'] = $accountName;
-                    echo '<meta http-equiv="refresh" content="3;url=account_man.php"/>';
+                    echo '<meta http-equiv="refresh" content="3;url='.$website['root'] .'account/"/>';
                 } else { //MODIFIED TO DELETE THE ACCOUNT IF SOMETHING IS WRONG DURING THE REGISTRATION
                     mysql_select_db($server_adb, $connection_setup) or die(mysql_error());
                     $accdel = mysql_query("DELETE FROM account WHERE username = '" . $accountName . "'");
