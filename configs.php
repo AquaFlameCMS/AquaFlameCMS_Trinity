@@ -93,7 +93,7 @@ define('DB', 'website');
 */
 $server_adb = "auth";
 $server_wdb = "world";
-$server_cdb = "characters";
+$server_cdb = "chars";
 $server_db  = "website";
 
 /*
@@ -161,7 +161,7 @@ $website['title']       = "AquaFlameCMS 1.0";
 $website['description'] = "AquaFlameCMS 1.0 the best of the best!";
 $website['keywords']    = "AquaFlameCMS 1.0, The Best CMS";
 $website['address']     = "http://localhost/";
-$website['root']        = "/";
+$website['root']        = "/AquaFlameCMS_Trinity/";
 
 /*
 |--------------------------------------------------------------------------
@@ -173,10 +173,10 @@ $website['root']        = "/";
 | Change true(prepage mode)/false(normal mode) to disable/enable pre page
 |        true or false
 |
-*/
+
 if($page_cat != 'pre')
 {
-    $pre = true;
+    $pre = false;
     if ($pre == true) 
     {
         if(!isset($_COOKIE['prepage']))
@@ -189,7 +189,7 @@ if($page_cat != 'pre')
     }
 }
 
-
+*/
 /*
 |--------------------------------------------------------------------------
 | Maintenance Page
@@ -201,7 +201,7 @@ if($page_cat != 'pre')
 |        true or false
 |
 */
-$maintenance = true;
+$maintenance = false;
 if ($maintenance == true) {
     if (!isset($bucle_mant)) {
         header('Location: '.$website['address'].''.$website['root'].'maintenance.php');
