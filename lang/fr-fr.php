@@ -1050,11 +1050,11 @@ $Media['SendCorrect']      = "Succ&egrave;s";
 $Media['Title']            = "Titre";
 $Media['File']             = "Fichier";
 $Media['Multimedia']       = "Multimedia";
-$Media['AllScreenshots']        = "Alle Screenshots";
-$Media['AllWallpapers']         = "Alle Wallpapers";
-$Media['AllComics']             = "Alle Comics";
-$Media['AllArtworks']           = "Alle Artworks";
-$Media['added']					= "Date Added: ";
+$Media['AllScreenshots']   = "Toutes les captures d'&#233;cran";
+$Media['AllWallpapers']    = "Tous les Fonds d'&#233;cran";
+$Media['AllComics']        = "Tous Comics";
+$Media['AllArtworks']      = "Toutes les oeuvres";
+$Media['added']			   = "Date a ajout&#233;:";
 //Finish Media
 
 //Start Mail

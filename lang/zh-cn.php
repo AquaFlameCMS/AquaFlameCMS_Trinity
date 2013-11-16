@@ -1028,11 +1028,11 @@ $Media['SendCorrect']           = "&#26356;&#36845;";
 $Media['Title']                 = "&#26631;&#39064;";
 $Media['File']                  = "&#25991;&#20214;";
 $Media['Multimedia']            = "&#22810;&#23186;&#20307;";
-$Media['AllScreenshots']        = "Alle Screenshots";
-$Media['AllWallpapers']         = "Alle Wallpapers";
-$Media['AllComics']             = "Alle Comics";
-$Media['AllArtworks']           = "Alle Artworks";
-$Media['added']					= "Date Added: ";
+$Media['AllScreenshots']   		= "All Screenshots";
+$Media['AllWallpapers']   		= "All Wallpapers";
+$Media['AllComics']        		= "All Comics";
+$Media['AllArtworks']      		= "All Artworks";
+$Media['added']			  		= "Date Added: ";
 //Finish Media
 //Start Mail
 $Mail['1']                      = "&#26356;&#25913;&#24744;&#30340;E-mail";

@@ -19,7 +19,6 @@
 
 ob_start();  
 
-
 include("include/pre-header.php");
 if (!isset($_SESSION))
     session_start();
@@ -73,13 +72,13 @@ $_SESSION['Local'] = $language;
 | 	$serverport	   = "Port";
 */
 $serveraddress = "127.0.0.1";
-$serveruser    = "web46";
-$serverpass    = "Maumau11";
+$serveruser    = "root";
+$serverpass    = "password";
 $serverport    = "3306";
 define('DBHOST', '127.0.0.1');
 define('DBUSER', 'web46');
-define('DBPASS', 'Maumau11');
-define('DB', 'usr_web46_1');
+define('DBPASS', 'password');
+define('DB', 'website');
 
 /*
 |--------------------------------------------------------------------------
@@ -92,10 +91,10 @@ define('DB', 'usr_web46_1');
 | @access public
 |
 */
-$server_adb = "usr_web46_1";
-$server_wdb = "usr_web46_1";
-$server_cdb = "usr_web46_1";
-$server_db  = "usr_web46_1";
+$server_adb = "auth";
+$server_wdb = "world";
+$server_cdb = "characters";
+$server_db  = "website";
 
 /*
 |--------------------------------------------------------------------------
@@ -161,7 +160,7 @@ $comun_link['Reddit']   = "http://www.reddit.com/";
 $website['title']       = "AquaFlameCMS 1.0";
 $website['description'] = "AquaFlameCMS 1.0 the best of the best!";
 $website['keywords']    = "AquaFlameCMS 1.0, The Best CMS";
-$website['address']     = "http://orly-gaming.de";
+$website['address']     = "http://localhost/";
 $website['root']        = "/";
 
 /*

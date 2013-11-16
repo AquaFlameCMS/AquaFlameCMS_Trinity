@@ -1047,11 +1047,11 @@ $Media['SendCorrect']      = "Succes";
 $Media['Title']            = "Title";
 $Media['File']             = "File";
 $Media['Multimedia']       = "Multimedia";
-$Media['AllScreenshots']        = "Alle Screenshots";
-$Media['AllWallpapers']         = "Alle Wallpapers";
-$Media['AllComics']             = "Alle Comics";
-$Media['AllArtworks']           = "Alle Artworks";
-$Media['added']					= "Date Added: ";
+$Media['AllScreenshots']   = "All Screenshots";
+$Media['AllWallpapers']    = "All Wallpapers";
+$Media['AllComics']        = "All Comics";
+$Media['AllArtworks']      = "All Artworks";
+$Media['added']			   = "Date Added: ";
 //Finish Media
 
 //Start Mail

@@ -1051,11 +1051,11 @@ $Media['SendCorrect']      = "Se ha enviado el contenido correctamente";
 $Media['Title']            = "Título";
 $Media['File']             = "Archivo";
 $Media['Multimedia']       = "Multimedia";
-$Media['AllScreenshots']        = "Alle Screenshots";
-$Media['AllWallpapers']         = "Alle Wallpapers";
-$Media['AllComics']             = "Alle Comics";
-$Media['AllArtworks']           = "Alle Artworks";
-$Media['added']					= "Date Added: ";
+$Media['AllScreenshots']   = "Todas las im&#225;genes";
+$Media['AllWallpapers']    = "Todos los Fondos";
+$Media['AllComics']        = "Todas Comics";
+$Media['AllArtworks']      = "Todas las obras de arte";
+$Media['added']			   = "Fecha:";
 //Finish Media
 
 //Start Mail
