@@ -1,96 +1,143 @@
 <?php 
-require_once("../configs.php");
-$page_cat="media";
-include_once("functions.d/GetMediaTheme.php");
+
+	require_once("../configs.php");
+	include_once("functions.d/GetMediaTheme.php");
+
+	$page_cat = "media";
+
+
+	$database_media_table = @new mysqli( constant('DBHOST'), constant('DBUSER'), constant('DBPASS'), constant('DB') );
+	
+	if (mysqli_connect_errno() == 0)
+	{
+		// VIDEO QUERY
+		$media_video_count = 'SELECT * FROM media WHERE visible = 1 AND type = 0';
+		$video_count = $database_media_table->query( $media_video_count );
+
+		$media_video_query = 'SELECT * FROM media WHERE visible = 1 AND type = 0 LIMIT 2';
+		$media_video = $database_media_table->query( $media_video_query );
+
+
+		// WALLPAPER QUERY
+		$media_wallpaper_count = 'SELECT * FROM media WHERE visible = 1 AND type = 1';
+		$wallpaper_count = $database_media_table->query( $media_wallpaper_count );
+
+		$media_wallpaper_query = 'SELECT * FROM media WHERE visible = 1 AND type = 1 LIMIT 4';
+		$media_wallpaper = $database_media_table->query( $media_wallpaper_query );
+
+
+		// SCREENSHOT QUERY
+		$media_screenshot_count = 'SELECT * FROM media WHERE visible = 1 AND type = 2';
+		$screenshot_count = $database_media_table->query( $media_screenshot_count );
+
+		$media_screenshot_query = 'SELECT * FROM media WHERE visible = 1 AND type = 2 LIMIT 4';
+		$media_screenshot = $database_media_table->query( $media_screenshot_query );
+
+
+		// ARTWORK QUERY
+		$media_artwork_count = 'SELECT * FROM media WHERE visible = 1 AND type = 3';
+		$artwork_count = $database_media_table->query( $media_artwork_count );
+
+		$media_artwork_query = 'SELECT * FROM media WHERE visible = 1 AND type = 3 LIMIT 4';
+		$media_artwork = $database_media_table->query( $media_artwork_query );
+
+
+		// COMICS QUERY
+		$media_comic_count = 'SELECT * FROM media WHERE visible = 1 AND type = 4';
+		$media_comic = $database_media_table->query( $media_comic_count );
+
+		$media_comic_query = 'SELECT * FROM media WHERE visible = 1 AND type = 4 LIMIT 4';
+		$media_comic = $database_media_table->query( $media_comic_query );
+
+
+	}
+	else
+	{
+		$error_message =  'Can not connect to the Database: <span class="hinweis">' .mysqli_connect_errno(). ' : ' .mysqli_connect_error(). '</span>';
+	}
+
+	$database_media_table->close();
 ?>
 <!doctype html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-<html lang="en-gb">
-<head>
-<title><?php echo $website['title']; ?></title>
-<meta content="false" http-equiv="imagetoolbar" />
-<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
-<meta name="description" content="<?php echo $website['description']; ?>">
-<meta name="keywords" content="<?php echo $website['keywords']; ?>">
-<link rel="shortcut icon" href="<?php echo $website['root']; ?>wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
+	<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+	<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+	<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+	<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+ 	<html lang="en-gb">
+		<head>
+			<title><?php echo $website['title']; ?></title>
+			<meta content="false" http-equiv="imagetoolbar" />
+			<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+			<link rel="shortcut icon" href="../wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
 <?php GetMediaTheme(); ?>
-<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-<script src="<?php echo $website['root']; ?>wow/static/local-common/js/third-party/jquery-1.4.4-p1.min.js"></script>
-<script src="<?php echo $website['root']; ?>wow/static/local-common/js/core.js?v15"></script>
-<script src="<?php echo $website['root']; ?>wow/static/local-common/js/tooltip.js?v15"></script>
-<script src="http://static.wowhead.com/widgets/power.js"></script>
-<!--[if IE 6]> <script type="text/javascript">
-//<![CDATA[
-try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
-//]]>
-</script>
-<![endif]-->
-<script type="text/javascript">
-//<![CDATA[
-Core.staticUrl = '/wow/static';
-Core.sharedStaticUrl= '/wow/static/local-common';
-Core.baseUrl = '/wow/en';
-Core.project = 'wow';
-Core.locale = 'en-gb';
-Core.buildRegion = 'eu';
-Core.shortDateFormat= 'dd/MM/Y';
-Core.loggedIn = false;
-Flash.videoPlayer = 'http://eu.media.blizzard.com/wow/player/videoplayer.swf';
-Flash.videoBase = 'http://eu.media.blizzard.com/wow/media/videos';
-Flash.ratingImage = 'http://eu.media.blizzard.com/wow/player/rating-pegi.jpg';
-var _gaq = _gaq || [];
-_gaq.push(['_setAccount', 'UA-544112-16']);
-_gaq.push(['_setDomainName', '.battle.net']);
-_gaq.push(['_trackPageview']);
-//]]>
-</script>
-</head>
+			<script src="../wow/static/local-common/js/third-party/jquery-1.4.4-p1.min.js"></script>
+			<script src="../wow/static/local-common/js/core.js?v17"></script>
+			<script src="../wow/static/local-common/js/tooltip.js?v17"></script>
+			<!--[if IE 6]> <script type="text/javascript">
+			//<![CDATA[
+			try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
+			//]]>
+			</script>
+			<![endif]-->
+			<script type="text/javascript">
+				//<![CDATA[
+				Core.staticUrl = '/wow/static';
+				Core.sharedStaticUrl= '/wow/static/local-common';
+				Core.baseUrl = '/wow/en';
+				Core.project = 'wow';
+				Core.locale = 'en-gb';
+				Core.buildRegion = 'eu';
+				Core.shortDateFormat= 'dd/MM/Y';
+				Core.loggedIn = false;
+				Flash.videoPlayer = 'http://eu.media.blizzard.com/wow/player/videoplayer.swf';
+				Flash.videoBase = 'http://eu.media.blizzard.com/wow/media/videos';
+				Flash.ratingImage = 'http://eu.media.blizzard.com/wow/player/rating-pegi.jpg';
+				var _gaq = _gaq || [];
+				_gaq.push(['_setAccount', 'UA-544112-16']);
+				_gaq.push(['_setDomainName', '.battle.net']);
+				_gaq.push(['_trackPageview']);
+				//]]>
+			</script>
+		</head>
 
-<body class="en-gb game-index">
-	<div id="wrapper">
-		<?php include("../header.php"); ?>
-		
-		<div id="content">
-			<div class="content-top">
-			<div class="content-trail">
-			<ol class="ui-breadcrumb">
-			<li>
-			<a href="index.php" rel="np"><?php echo $website['title']; ?></a>
-			<span class="breadcrumb-arrow"></span>
-			</li>
-			<li class="last children"><a href="<?php echo $website['root']; ?>/media/media.php" rel="np"><?php echo $Media['Media']; ?></a>
-			</li>
-			</ol>
-			</div>
-				<div class="content-bot">
-					<div class="media-content">
-						<div id="media-index">
-							<div class="media-index-section float-left">
-								<a class="gallery-title videos" href="<?php echo $website['root']; ?>/media/videos_index.php">
-								<span class="view-all"><span class="arrow"></span><?php echo $Media['AllVideos']; ?></span>
-								<span class="gallery-icon"></span>
-                                <?php
-								$consulta0 = mysql_query(" SELECT * FROM media WHERE visible = 1 AND type = '0'");
-								$totalSql = mysql_num_rows($consulta0);
-								?>
-								Videos <span class="total">(<?php echo $totalSql; ?>)</span>
-								</a>
-                <div class="section-content">
-								<?php					
-								$consulta1 = mysql_query("SELECT * FROM media WHERE visible = 1 AND type = '0' ORDER BY date DESC LIMIT 0,2");
-								while($video1 = mysql_fetch_assoc($consulta1)) {
-								?>
+		<body class="en-gb game-index">
+			<div id="wrapper">
+				<?php include("../header.php"); ?>
+					<div id="content">
+						<div class="content-top">
+							<div class="content-trail">
+								<ol class="ui-breadcrumb">
+									<li>
+										<a href="index.php" rel="np"><?php echo $website['title']; ?></a>
+										<span class="breadcrumb-arrow"></span>
+									</li>
+									<li class="last children">
+										<?php echo $Media['Media']; ?>
+									</li>
+								</ol>
+							</div>
+							<div class="content-bot">
+								<div class="media-content">
+									<div id="media-index">
+										<div class="media-index-section float-left">
+											<a class="gallery-title videos" href="videos/">
+												<span class="view-all"><span class="arrow"></span><?php echo $Media['AllVideos']; ?></span>
+												<span class="gallery-icon"></span>
+												<?php echo $Media['Videos']; ?> <span class="total">(<?php echo $video_count->num_rows; ?>)</span>
+											</a>
+               								<div class="section-content">
+											<?php					
+											while($video = $media_video->fetch_object()) 
+											{
+											?>
                         				
-									<a href="./media/videos_visor.php?id=<?php echo $video1['id']; ?>" class="thumb-wrapper video-thumb-wrapper first-video">
-									<span class="video-info">
-									<span class="video-title"><?php echo substr($video1['title'],0,50); ?></span>
-									<span class="video-desc"><?php echo substr(strip_tags($video1['description']),0,50); ?>...</span>
-									<span class="date-added">Date Added: <?php echo date('d/m/Y', strtotime($video1['date'])); ?></span>
+											<a href="videos/visor/?id=<?php echo $video->id; ?>" class="thumb-wrapper video-thumb-wrapper first-video">
+											<span class="video-info">
+									<span class="video-title"><?php echo substr($video->title,0,50); ?></span>
+									<span class="video-desc"><?php echo substr(strip_tags($video->description),0,50); ?>...</span>
+									<span class="date-added"><?php echo $Media['added']; ?><?php echo date('d/m/Y', strtotime($video->date)); ?></span>
 									</span>
-									<span class="thumb-bg"; style="background-image: url('http://img.youtube.com/vi/<?php echo $video1['id_url']; ?>/0.jpg'); background-size: 188px 118px">
+									<span class="thumb-bg"; style="background-image: url('http://img.youtube.com/vi/<?php echo $video->id_url; ?>/0.jpg'); background-size: 188px 118px">
 									<span class="thumb-frame"></span>
 									</span>
 									</a>
@@ -103,31 +150,29 @@ _gaq.push(['_trackPageview']);
 							
 							<div class="media-index-section float-right">
 							
-								<a class="gallery-title screenshots" href="<?php echo $website['root']; ?>media/images_index.php?type=2">
-								<span class="view-all"><span class="arrow"></span>All Screenshots</span>
-								<?php
-                  $screen_all = mysql_query("SELECT * FROM media WHERE visible = '1' AND type = '2'");
-                  $screen_total = mysql_num_rows($screen_all);
-                ?>
+								<a class="gallery-title screenshots" href="screenshots/">
+								<span class="view-all"><span class="arrow"></span><?php echo $Media['AllScreenshots']; ?></span>
 								<span class="gallery-icon"></span>
-								Screenshots <span class="total">(<?php echo $screen_total; ?>)</span>
+								<?php echo $Media['Screenshots']; ?> <span class="total">(<?php echo $screenshot_count->num_rows; ?>)</span>
 								</a>
 								
 								<div class="section-content">
 								<?php
-								  $pos = 0;
-                  $screen_index = mysql_query("SELECT * FROM media WHERE visible = '1' AND type = '2' ORDER BY date DESC LIMIT 0,4");
-                  while ($screen = mysql_fetch_assoc($screen_index)){
-                ?>
+									$pos = 0;
+                  					while($screenshot = $media_screenshot->fetch_object()) 
+                  					{
+
+
+                						?>
 									<a class="thumb-wrapper <?php 
                     if ($pos % 2 == 0 ){ echo 'left-col';} //correct postion depends of number
                     if ($pos > 2){ echo 'bottom-row';}
                     $pos++; ?>" 
-                    href="<?php echo $website['root']; ?>media/images_visor.php?type=2&id=<?php echo $screen['id']; ?>#/<?php echo $screen['id']; ?>">
-									<span class="thumb-bg" style="background-image:url(<?php echo 'images/wallpapers/'.$screen['id_url'];  ?>);background-size: 189px 118px">
+                    href="screenshots/visor/#/<?php echo $screenshot->id ?>">
+									<span class="thumb-bg" style="background-image:url(<?php echo '../images/media/screenshot/'.$screenshot->id_url;  ?>);background-size: 189px 118px">
 									<span class="thumb-frame"></span>
 									</span>
-									<span class="date-added">Date Added: <?php echo date('d/m/Y', strtotime($screen['date'])); ?></span>
+									<span class="date-added"><?php echo $Media['added']; ?><?php echo date('d/m/Y', strtotime($screenshot->date)); ?></span>
 									</a>
 								<?php } ?>
 									<span class="clear"><!-- --></span>
@@ -139,30 +184,26 @@ _gaq.push(['_trackPageview']);
 							<span class="clear"><!-- --></span>
 							
 							<div class="media-index-section float-left">
-								<?php
-                  $art_all = mysql_query("SELECT * FROM media WHERE visible = '1' AND type = '3'");
-                  $art_total = mysql_num_rows($art_all);
-                ?>
-								<a class="gallery-title artwork" href="<?php echo $website['root']; ?>media/images_index.php?type=3">
-								<span class="view-all"><span class="arrow"></span>All Artwork</span>
+								<a class="gallery-title artwork" href="artworks/">
+								<span class="view-all"><span class="arrow"></span><?php echo $Media['AllArtworks']; ?></span>
 								<span class="gallery-icon"></span>
-								Artwork <span class="total">(<?php echo $art_total; ?>)</span></a>
+								<?php echo $Media['Artwork']; ?> <span class="total">(<?php echo $artwork_count->num_rows; ?>)</span></a>
 								
 								<div class="section-content">
 								<?php
 								  $pos = 0;
-                  $art_index = mysql_query("SELECT * FROM media WHERE visible = '1' AND type = '3' ORDER BY date DESC LIMIT 0,2");
-                  while ($art = mysql_fetch_assoc($art_index)){
+                  while($artwork = $media_artwork->fetch_object())
+                  { 
                 ?>
 									<a class="thumb-wrapper 
                   <?php 
                     if ($pos % 2 == 0 ){ echo 'left-col';} //correct postion depends of number
                     $pos++; ?>" 
-                  <a href="<?php echo $website['root']; ?>media/images_visor.php?type=3&id=<?php echo $art['id']; ?>#/<?php echo $art['id']; ?>" />
-									<span class="thumb-bg" style="background-image:url(<?php echo 'images/wallpapers/'.$art['id_url'];  ?>);background-size: 189px 118px">
+                  href="artworks/visor/#/<?php echo $artwork->id ?>">
+									<span class="thumb-bg" style="background-image:url(<?php echo '../images/media/artwork/'.$artwork->id_url;  ?>);background-size: 189px 118px">
 									<span class="thumb-frame"></span>
 									</span>
-									<span class="date-added">Date Added: <?php echo date('d/m/Y', strtotime($art['date'])); ?></span>
+									<span class="date-added"><?php echo $Media['added']; ?><?php echo date('d/m/Y', strtotime($artwork->date)); ?></span>
 									</a>
 								<?php } ?>
 									<span class="clear"><!-- --></span>
@@ -172,31 +213,27 @@ _gaq.push(['_trackPageview']);
 							</div>
 							
 							<div class="media-index-section float-right">
-							<?php
-                $wall_all = mysql_query("SELECT * FROM media WHERE visible = '1' AND type = '1'");
-                $wall_total = mysql_num_rows($wall_all);
-              ?>
-								<a class="gallery-title wallpapers" href="<?php echo $website['root']; ?>media/images_index.php?type=1">
-								<span class="view-all"><span class="arrow"></span>All Wallpapers</span>
+								<a class="gallery-title wallpapers" href="wallpapers/">
+								<span class="view-all"><span class="arrow"></span><?php echo $Media['AllWallpapers']; ?></span>
 								<span class="gallery-icon"></span>
-								Wallpapers <span class="total">(<?php echo $wall_total; ?>)</span>
+								<?php echo $Media['Wallpapers']; ?> <span class="total">(<?php echo $artwork_count->num_rows; ?>)</span>
 								</a>
 								
 								<div class="section-content">
 								<?php
 								  $pos = 0;
-                  $wall_index = mysql_query("SELECT * FROM media WHERE visible = '1' AND type = '1' ORDER BY date DESC LIMIT 0,2");
-                  while ($wall = mysql_fetch_assoc($wall_index)){
+                  while($wallpaper = $media_wallpaper->fetch_object()) 
+                  {
                 ?>
 									<a class="thumb-wrapper                   
                   <?php 
                     if ($pos % 2 == 0 ){ echo 'left-col';} //correct postion depends of number
                     $pos++; ?>" 
-                  href="<?php echo $website['root']; ?>media/images_visor.php?type=1&id=<?php echo $wall['id']; ?>#/<?php echo $wall['id']; ?>">
-									<span class="thumb-bg" style="background-image:url(<?php echo 'images/wallpapers/'.$wall['id_url'];  ?>);background-size: 189px 118px">
+                  href="wallpapers/visor/#/<?php echo $wallpaper->id; ?>">
+									<span class="thumb-bg" style="background-image:url(<?php echo '../images/media/wallpapers/'.$wallpaper->id_url;  ?>);background-size: 189px 118px">
 									<span class="thumb-frame"></span>
 									</span>
-									<span class="date-added">Date Added: <?php echo date('d/m/Y', strtotime($wall['date'])); ?></span>
+									<span class="date-added"><?php echo $Media['added']; ?> <?php echo date('d/m/Y', strtotime($wallpaper->date)); ?></span>
 									</a>
 								<?php } ?>
 									<span class="clear"><!-- --></span>
@@ -206,31 +243,27 @@ _gaq.push(['_trackPageview']);
 							</div>
 							
 							<div class="media-index-section float-left">
-							<?php
-                $wall_all = mysql_query("SELECT * FROM media WHERE visible = '1' AND type = '4'");
-                $wall_total = mysql_num_rows($wall_all);
-              ?>
-								<a class="gallery-title comics" href="<?php echo $website['root']; ?>media/images_index.php?type=4">
-								<span class="view-all"><span class="arrow"></span>All Comics</span>
+								<a class="gallery-title comics" href="comics/">
+								<span class="view-all"><span class="arrow"></span><?php echo $Media['AllComics']; ?></span>
 
 								<span class="gallery-icon"></span>
-								Comics <span class="total">(<?php echo $wall_total; ?>)</span>
+								<?php echo $Media['Comics']; ?> <span class="total">(<?php echo $comic_count->num_rows; ?>)</span>
 								</a>
 								<div class="section-content">
 								<?php
 								  $pos = 0;
-                  $wall_index = mysql_query("SELECT * FROM media WHERE visible = '1' AND type = '4' ORDER BY date DESC LIMIT 0,2");
-                  while ($wall = mysql_fetch_assoc($wall_index)){
+                  while($comic = $media_comic->fetch_object()) 
+                  {
                 ?>
 									<a class="thumb-wrapper                   
                   <?php 
                     if ($pos % 2 == 0 ){ echo 'left-col';} //correct postion depends of number
                     $pos++; ?>" 
-                  href="<?php echo $website['root']; ?>media/images_visor.php?type=4&id=<?php echo $wall['id']; ?>#/<?php echo $wall['id']; ?>">
-									<span class="thumb-bg" style="background-image:url(<?php echo 'images/wallpapers/'.$wall['id_url'];  ?>);background-size: 189px 118px">
+                  href="comics/visor/#/<?php echo $comic->id; ?>">
+									<span class="thumb-bg" style="background-image:url(<?php echo '../images/media/comics/'.$comic->id_url;  ?>);background-size: 189px 118px">
 									<span class="thumb-frame"></span>
 									</span>
-									<span class="date-added">Date Added: <?php echo date('d/m/Y', strtotime($wall['date'])); ?></span>
+									<span class="date-added"><?php echo $Media['added']; ?><?php echo date('d/m/Y', strtotime($comic->date)); ?></span>
 									</a>
 								<?php } ?>
 									<span class="clear"><!-- --></span>
@@ -245,7 +278,9 @@ _gaq.push(['_trackPageview']);
 					</div>
 				</div>
 			</div>
+		
 			<?php include("../footer.php"); ?>
+		
 		</div>
 	</div>
 

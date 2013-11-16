@@ -16,6 +16,10 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  **/
+
+ob_start();  
+
+
 include("include/pre-header.php");
 if (!isset($_SESSION))
     session_start();
@@ -69,13 +73,13 @@ $_SESSION['Local'] = $language;
 | 	$serverport	   = "Port";
 */
 $serveraddress = "127.0.0.1";
-$serveruser    = "root";
-$serverpass    = "password";
+$serveruser    = "web46";
+$serverpass    = "Maumau11";
 $serverport    = "3306";
-define('DBHOST', '');
-define('DBUSER', 'root');
-define('DBPASS', 'password');
-define('DB', 'website');
+define('DBHOST', '127.0.0.1');
+define('DBUSER', 'web46');
+define('DBPASS', 'Maumau11');
+define('DB', 'usr_web46_1');
 
 /*
 |--------------------------------------------------------------------------
@@ -88,10 +92,10 @@ define('DB', 'website');
 | @access public
 |
 */
-$server_adb = "auth";
-$server_wdb = "world";
-$server_cdb = "chars";
-$server_db  = "website";
+$server_adb = "usr_web46_1";
+$server_wdb = "usr_web46_1";
+$server_cdb = "usr_web46_1";
+$server_db  = "usr_web46_1";
 
 /*
 |--------------------------------------------------------------------------
@@ -157,8 +161,35 @@ $comun_link['Reddit']   = "http://www.reddit.com/";
 $website['title']       = "AquaFlameCMS 1.0";
 $website['description'] = "AquaFlameCMS 1.0 the best of the best!";
 $website['keywords']    = "AquaFlameCMS 1.0, The Best CMS";
-$website['address']     = "http://localhost";
-$website['root']        = "/AquaFlameCMS_Trinity/";
+$website['address']     = "http://orly-gaming.de";
+$website['root']        = "/";
+
+/*
+|--------------------------------------------------------------------------
+| Pre Page
+|--------------------------------------------------------------------------
+|
+| Enable PrePage
+| For Example
+| Change true(prepage mode)/false(normal mode) to disable/enable pre page
+|        true or false
+|
+*/
+if($page_cat != 'pre')
+{
+    $pre = true;
+    if ($pre == true) 
+    {
+        if(!isset($_COOKIE['prepage']))
+        {
+            $pre_cookie = 'viewed';
+            setcookie("prepage", $pre_cookie, time()+3600*60*24);
+            
+            header('Location: pre.php');
+        }
+    }
+}
+
 
 /*
 |--------------------------------------------------------------------------
@@ -171,10 +202,10 @@ $website['root']        = "/AquaFlameCMS_Trinity/";
 |        true or false
 |
 */
-$maintenance = false;
+$maintenance = true;
 if ($maintenance == true) {
-    if ($bucle_mant == 0) {
-        header('Location: maintenance.php');
+    if (!isset($bucle_mant)) {
+        header('Location: '.$website['address'].''.$website['root'].'maintenance.php');
     }
 } else {
     

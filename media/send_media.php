@@ -13,8 +13,6 @@ if (!isset($_SESSION['username'])) {
 <html>
 <head>
 <title><?php echo $website['title']; ?><?php echo @$Man['Man']; ?></title>
-<meta name="description" content="<?php echo $website['description']; ?>">
-<meta name="keywords" content="<?php echo $website['keywords']; ?>">
 <link rel="shortcut icon" href="../wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
 <link rel="stylesheet" media="all" href="../wow/static/local-common/css/management/common.css" />
 <link rel="stylesheet" media="all" href="../wow/static/css/bnet.css" />

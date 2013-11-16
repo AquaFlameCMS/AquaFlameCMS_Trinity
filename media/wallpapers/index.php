@@ -1,7 +1,6 @@
 <?php 
-require_once("../configs.php");
+require_once("../../configs.php");
 $page_cat="media"; 
-$type = intval($_GET['type']);
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -13,19 +12,17 @@ $type = intval($_GET['type']);
 <title><?php echo $website['title']; ?></title>
 <meta content="false" http-equiv="imagetoolbar" />
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
-<meta name="description" content="<?php echo $website['description']; ?>">
-<meta name="keywords" content="<?php echo $website['keywords']; ?>">
-<link rel="shortcut icon" href="../wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
+<link rel="shortcut icon" href="../../wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
 <link rel="search" type="application/opensearchdescription+xml" href="http://eu.battle.net/en-gb/data/opensearch" title="Battle.net Search" />
-<link rel="stylesheet" href="../wow/static/local-common/css/common.css?v17" />
+<link rel="stylesheet" href="../../wow/static/local-common/css/common.css?v17" />
 <link title="World of Warcraft - News" href="wow/en/feed/news" type="application/atom+xml" rel="alternate"/>
-<link rel="stylesheet" href="../wow/static/css/wow.css?v7" />
-<link rel="stylesheet" href="../wow/static/local-common/css/media-gallery.css?v17" />
-<link rel="stylesheet" href="../wow/static/css/media/media.css?v7" />
-<link href="../wow/static/css/media/media.css" rel="stylesheet" type="text/css">
-<script src="../wow/static/local-common/js/third-party/jquery-1.4.4-p1.min.js"></script>
-<script src="../wow/static/local-common/js/core.js?v17"></script>
-<script src="../wow/static/local-common/js/tooltip.js?v17"></script>
+<link rel="stylesheet" href="../../wow/static/css/wow.css?v7" />
+<link rel="stylesheet" href="../../wow/static/local-common/css/media-gallery.css?v17" />
+<link rel="stylesheet" href="../../wow/static/css/media/media.css?v7" />
+<link href="../../wow/static/css/media/media.css" rel="stylesheet" type="text/css">
+<script src="../../wow/static/local-common/js/third-party/jquery-1.4.4-p1.min.js"></script>
+<script src="../../wow/static/local-common/js/core.js?v17"></script>
+<script src="../../wow/static/local-common/js/tooltip.js?v17"></script>
 <!--[if IE 6]> <script type="text/javascript">
 //<![CDATA[
 try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
@@ -55,22 +52,15 @@ _gaq.push(['_trackPageview']);
 
 <body class="en-gb game-index">
 <div id="wrapper">
-<?php include("../header.php"); ?>
+<?php include("../../header.php"); ?>
 	<div id="content">
 		<div class="content-top">
 			<div class="content-trail">
 			<ol class="ui-breadcrumb">
-				<li><a href="../index.php" rel="np"><?php echo $website['title']; ?></a><span class="breadcrumb-arrow"></span></li>
-				<li><a href="../media.php" rel="np"><?php echo $Media['Media']; ?></a><span class="breadcrumb-arrow"></span></li>
-        <li class="last childless"><a href="images_index.php?type=<?php echo $type; ?>" rel="np">
-<?php
-  switch($type){
-    case 1: echo 'Wallpapers'; break;
-    case 2: echo 'Screenshots'; break;
-    case 3: echo 'Art Work'; break;    
-    case 4: echo 'Comic'; break;  
-  }
-?>
+				<li><a href="../../" rel="np"><?php echo $website['title']; ?></a><span class="breadcrumb-arrow"></span></li>
+				<li><a href="../" rel="np"><?php echo $Media['Media']; ?></a><span class="breadcrumb-arrow"></span></li>
+        <li class="last childless"><a href="../wallpapers" rel="np">
+Wallpapers
                 </a></li>
 			</ol>
 			</div>
@@ -79,7 +69,7 @@ _gaq.push(['_trackPageview']);
 <div class="currently-viewing">
 <a id="toggle-thumbnail-page" href="#" data-tooltip="Switch to large thumbails view"
 class="view-link active float-right"></a>
-<a id="toggle-film-strip" href="images_visor.php?type=<?php echo $type; ?>" data-tooltip="Switch to filmstrip view"
+<a id="toggle-film-strip" href="visor/" data-tooltip="Switch to filmstrip view"
 class="view-link float-right"></a>
 </div>
 					<div id="media-index">
@@ -88,7 +78,7 @@ class="view-link float-right"></a>
 
 						<?php
 						$CantIndex = 12;
-						$consulta0 = mysql_query(" SELECT * FROM media WHERE visible = 1 AND type = '".$type."'");
+						$consulta0 = mysql_query(" SELECT * FROM media WHERE visible = 1 AND type = '1'");
 						$totalSql = mysql_num_rows($consulta0);
 						$pagTotal = ceil($totalSql/$CantIndex);
 						if (!isset($_GET['pag'])) {
@@ -110,9 +100,9 @@ class="view-link float-right"></a>
 							<div class="thumbnail-list-paging">
 							<?php if ($pagAnterior>0) {
 							?>
-							<a class="ui-button button1 button1-previous " href="images_index.php?type=<?php echo $type; ?>&pag=<?php echo $pagAnterior?>" id="previous-item" onClick="GalleryViewer.getPreviousPage()" >
+							<a class="ui-button button1 button1-previous " href="?pag=<?php echo $pagAnterior?>" id="previous-item" onClick="GalleryViewer.getPreviousPage()" >
 							<span>
-							<span><?php echo $Media['Previous']; ?></span>
+							<span>Zur&uuml;ck</span>
 							</span></a>
                             <?php 
 							} 
@@ -120,20 +110,20 @@ class="view-link float-right"></a>
 							?>
 							<a class="ui-button button1 button1-previous " href="#" id="previous-item" onClick="GalleryViewer.getPreviousPage()" >
 							<span>
-							<span><?php echo $Media['Previous']; ?></span>
+							<span>Zur&uuml;ck</span>
 							</span></a>
 							<?php } ?>
 
 							<span class="page-counter">
-							Página <span id='start-page'><?php echo $pagActual; ?></span> de <?php echo $pagTotal; ?>
+							Seite <span id='start-page'><?php echo $pagActual; ?></span> von <?php echo $pagTotal; ?>
 							</span>
 
 							<?php 
 							if ($pagSiguiente<=$pagTotal) {
 							?>
-							<a class="ui-button button1 button1-next " href="images_index.php?type=<?php echo $type; ?>&pag=<?php echo $pagSiguiente?>" id="next-item" onClick="GalleryViewer.getNextPage()" > 
+							<a class="ui-button button1 button1-next " href="?pag=<?php echo $pagSiguiente?>" id="next-item" onClick="GalleryViewer.getNextPage()" > 
 							<span>
-							<span><?php echo $Media['Next']; ?></span>
+							<span>Weiter</span>
 							</span></a>
 							<?php 
 							} 
@@ -141,7 +131,7 @@ class="view-link float-right"></a>
 							?>
 							<a class="ui-button button1 button1-next " href="#" id="next-item" onClick="GalleryViewer.getNextPage()" >
 							<span>
-							<span><?php echo $Media['Next']; ?></span>
+							<span>Weiter</span>
 							</span></a>
 							<?php } ?>
 
@@ -149,11 +139,11 @@ class="view-link float-right"></a>
 
 						<?php
 
-						$consulta1 = mysql_query(" SELECT * FROM media WHERE visible = 1 AND type = '".$type."' ORDER BY date DESC LIMIT ".(($pagActual-1)*$CantIndex).",".$CantIndex."");
+						$consulta1 = mysql_query(" SELECT * FROM media WHERE visible = 1 AND type = '1' ORDER BY date DESC LIMIT ".(($pagActual-1)*$CantIndex).",".$CantIndex."");
 						while($image = mysql_fetch_assoc($consulta1)) {
 						?>
-						<a href="images_visor.php?type=<?php echo $type; ?>&id=<?php echo $image['id']; ?>#/<?php echo $image['id']; ?>" class="thumb-wrapper">
-						<span class="thumb-bg"; style="background-image: url('../images/wallpapers/<?php echo $image['id_url']; ?>'); background-size: 188px 118px">
+						<a href="visor/#/<?php echo $image['id']; ?>" class="thumb-wrapper">
+						<span class="thumb-bg"; style="background-image: url('../../images/media/wallpapers/<?php echo $image['id_url']; ?>'); background-size: 188px 118px">
             <span class="thumb-frame"></span></span></a>
 						<?php } ?>
 
@@ -167,7 +157,7 @@ class="view-link float-right"></a>
 					 	if ($pg==$pagActual) {$current=array('<li class="current">','</li>');} else {$current=array('','');}
  						if ($pg>0 and $pg<=$pagTotal) {
  						?>
-						<li><?php echo $current[0]; ?><a href="images_index.php?type=<?php echo $type; ?>&p=<?php echo $_GET['p']; ?>&amp;pag=<?php echo $pg; ?>"><?php echo $pg; ?></a><?php echo $current[1]; ?></li>
+						<li><?php echo $current[0]; ?><a href="?pag=<?php echo $pg; ?>"><?php echo $pg; ?></a><?php echo $current[1]; ?></li>
 						<?php
   						$i++;
  						}
@@ -185,6 +175,6 @@ class="view-link float-right"></a>
 		</div>
 	</div>
 </div>
-<?php include("../footer.php"); ?>
+<?php include("../../footer.php"); ?>
 </body>
 </html>

@@ -1050,6 +1050,11 @@ $Media['SendCorrect']      = "Succ&egrave;s";
 $Media['Title']            = "Titre";
 $Media['File']             = "Fichier";
 $Media['Multimedia']       = "Multimedia";
+$Media['AllScreenshots']        = "Alle Screenshots";
+$Media['AllWallpapers']         = "Alle Wallpapers";
+$Media['AllComics']             = "Alle Comics";
+$Media['AllArtworks']           = "Alle Artworks";
+$Media['added']					= "Date Added: ";
 //Finish Media
 
 //Start Mail
@@ -1275,5 +1280,9 @@ $Errors['404'] = "404";
 $Errors['500'] = "500";
 $Errors['503'] = "503";
 //Finish Error page
+
+//Start Pre Page
+$Pre['next'] = "Continue to World of Warcraft";
+// Finish Pre Page
 
 /* End of file fr-fr.php */

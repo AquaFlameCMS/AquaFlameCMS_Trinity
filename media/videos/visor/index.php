@@ -1,5 +1,5 @@
 <?php
-require_once("../configs.php");
+require_once("../../../configs.php");
 ?>
 
 <!DOCTYPE html>
@@ -13,20 +13,18 @@ require_once("../configs.php");
 <title><?php echo $website['title']; ?></title>
 <meta content="false" http-equiv="imagetoolbar" />
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
-<meta name="description" content="<?php echo $website['description']; ?>">
-<meta name="keywords" content="<?php echo $website['keywords']; ?>">
-<link rel="shortcut icon" href="../wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
+<link rel="shortcut icon" href="../../../wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
 <link rel="search" type="application/opensearchdescription+xml" href="http://eu.battle.net/en-gb/data/opensearch" title="WoW Search" />
-<link rel="stylesheet" href="../wow/static/local-common/css/common.css?v15" />
-<link rel="stylesheet" href="../wow/static/css/wow.css?v3" />
-<link rel="stylesheet" href="../wow/static/css/lightbox.css?v7" />
-<link rel="stylesheet" href="../wow/static/local-common/css/cms/blog.css?v15" />
-<link rel="stylesheet" href="../wow/static/local-common/css/cms/comments.css?v15" />
-<link rel="stylesheet" href="../wow/static/css/cms.css?v3" />
-<link rel="stylesheet" href="../wow/static/css/media/media.css" />
-<script src="../wow/static/local-common/js/third-party/jquery-1.4.4.min.js"></script>
-<script src="../wow/static/local-common/js/core.js?v15"></script>
-<script src="../wow/static/local-common/js/tooltip.js?v15"></script>
+<link rel="stylesheet" href="../../../wow/static/local-common/css/common.css?v15" />
+<link rel="stylesheet" href="../../../wow/static/css/wow.css?v3" />
+<link rel="stylesheet" href="../../../wow/static/css/lightbox.css?v7" />
+<link rel="stylesheet" href="../../../wow/static/local-common/css/cms/blog.css?v15" />
+<link rel="stylesheet" href="../../../wow/static/local-common/css/cms/comments.css?v15" />
+<link rel="stylesheet" href="../../../wow/static/css/cms.css?v3" />
+<link rel="stylesheet" href="../../../wow/static/css/media/media.css" />
+<script src="../../../wow/static/local-common/js/third-party/jquery-1.4.4.min.js"></script>
+<script src="../../../wow/static/local-common/js/core.js?v15"></script>
+<script src="../../../wow/static/local-common/js/tooltip.js?v15"></script>
 <!--[if IE 6]> <script type="text/javascript">
 //<![CDATA[
 try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
@@ -63,7 +61,7 @@ _gaq.push(['_trackPageview']);
 </head>
 <body class="en-gb logged-in">
 <div id="wrapper">
-	<?php include("../header.php"); ?>
+	<?php include("../../../header.php"); ?>
 		<div id="content">
 			<div class="content-top">
 				<div class="content-trail">
@@ -196,7 +194,7 @@ _gaq.push(['_trackPageview']);
 								<div class="comment">
 									<div class="portrait-b ajax-update">
 										<div class="avatar-interior">
-											<a href="#"><img height="64" width="64" src="../images/avatars/2d/<?php echo $user['avatar']; ?>" alt="" /></a>
+											<a href="#"><img height="64" width="64" src="../../../images/avatars/2d/<?php echo $user['avatar']; ?>" alt="" /></a>
 										</div>
 									</div>
 									<div class="comment-interior">
@@ -245,7 +243,7 @@ _gaq.push(['_trackPageview']);
 											<div class="comment" id="">
 												<div class="avatar portrait-b">
 												<a href="#">
-												<img height="64" src="../images/avatars/2d/<?php echo $userInfo['avatar']; ?>" alt="" />
+												<img height="64" src="../../../images/avatars/2d/<?php echo $userInfo['avatar']; ?>" alt="" />
 												</a>
 												</div>
 
@@ -289,13 +287,13 @@ _gaq.push(['_trackPageview']);
 					</div>
 				</div>
 			</div>
-	<script src="wow/static/local-common/js/cms.js"></script>
-	<script src="wow/static/local-common/js/menu.js"></script>
-	<script src="wow/static/js/wow.js"></script>
-	<script src="http://s7.addthis.com/js/250/addthis_widget.js"></script>
-	<script src="wow/static/local-common/js/cms.js?v17?v7"></script>
-	<script src="wow/static/local-common/js/lightbox.js?v17?v7"></script>
-	<?php include("../footer.php"); ?>
+	<script src="../../../wow/static/local-common/js/cms.js"></script>
+	<script src="../../../wow/static/local-common/js/menu.js"></script>
+	<script src="../../../wow/static/js/wow.js"></script>
+	<script src="../../../http://s7.addthis.com/js/250/addthis_widget.js"></script>
+	<script src="../../../wow/static/local-common/js/cms.js?v17?v7"></script>
+	<script src="../../../wow/static/local-common/js/lightbox.js?v17?v7"></script>
+	<?php include("../../../footer.php"); ?>
 </div>
 </body>
 </html>

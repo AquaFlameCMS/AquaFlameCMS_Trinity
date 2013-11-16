@@ -1,4 +1,9 @@
 <?php
+
+/* ERROR REPORTING */
+error_reporting(E_ALL);
+ini_set('display_errors', 1);  
+
   include('../configs.php');
   $idImage = intval($_GET["id"]);
 
@@ -27,4 +32,5 @@
     </dl>
     <span class="clear"><!-- --></span>
   </div>';
+    
 ?>
