@@ -88,6 +88,8 @@ if ($login['gmlevel'] < 3) {
             <li><span>netcho</span><span class="users-role">Web/God: Adding God mode!</span></li>
             <li><span>Stark</span><span class="users-role">Web/Mod: New Plugin.</span></li>
             <li><span>ThunderScript</span><span class="users-role">Web/Update: Admin Fix.</span></li>
+			<li><span>FailZorD</span><span class="users-role">Web/Fix: Theme System Fix + 5 Themes...</span></li>
+			<!-- 6 Rows Limited 35-36 Letters Limited than add (...)-->
           </ul>
         </div>
         <div class="btn-set-btm full">
@@ -99,43 +101,43 @@ if ($login['gmlevel'] < 3) {
       <div id="bk-mng" class="box g4 row1"> 
         <ul class="ul-grad">
           <li>
-            <p>Automatic backup:<br><span>NEXT: 19 FEB, LAST: 19 NOV</span></p>
+            <p>CMS Version:<br><span>NEXT: 21Beta, LAST: 20Beta</span></p>
             <input type="checkbox" class="chbox tgcls" data-tgcls="#bk-off true" checked>
           </li>
           <li id="rmt">
-            <p>Remote FTP save:<br><span>SERVER: backup.server.com</span></p>
+            <p>Update Manager:<br><span>SERVER: backup.server.com</span></p>
             <div class="bk-act">
               <div class="button btn-s tgcls icon" data-tgcls="#rmt expanded">)</div>
               <input type="checkbox" class="chbox" checked>
             </div>
-            <div id="rmt-info">
+            <!--<div id="rmt-info">
               <input type="text" class="g12" placeholder="FTP Server" value="backup.server.com">
               <input type="text" class="g4 last" maxlength="4" placeholder="Port" value="21">
               <input type="text" class="g8" placeholder="Username" value="jDizzle">
               <input type="password" class="g8 last" placeholder="Password" value="No one will ever see me. MUHAHAHA">
               <input type="text" class="g16 last" placeholder="URL" value="localhost/backup/2013/">
               <br>
-            </div>
+            </div>-->
           </li>
           <li id="bk-opts">
-            <p>Backup options:<br><span>Select which files are included in the backup</span></p>
+            <p>Plugin Managers:<br><span>Select which files are included in the backup</span></p>
             <div class="bk-opt">
-              HTML<input type="checkbox" class="chbox" checked>
+              Themes<input type="checkbox" class="chbox" checked>
             </div>
             <div class="bk-opt">
-              PHP<input type="checkbox" class="chbox" checked>
+              Sidebar<input type="checkbox" class="chbox" checked>
             </div>
             <div class="bk-opt">
-              JavaScript<input type="checkbox" class="chbox" checked>
+              Media<input type="checkbox" class="chbox" checked>
             </div>
             <div class="bk-opt">
-              CSS<input type="checkbox" class="chbox" checked>
+              Client<input type="checkbox" class="chbox" checked>
             </div>
             <div class="bk-opt">
-              Images<input type="checkbox" class="chbox">
+              Forum<input type="checkbox" class="chbox">
             </div>
             <div class="bk-opt">
-              MySQL DB<input type="checkbox" class="chbox" checked>
+              Updates<input type="checkbox" class="chbox" checked>
             </div>
           </li>
           <li id="rmt-sp">
