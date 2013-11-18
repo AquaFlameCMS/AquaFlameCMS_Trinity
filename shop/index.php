@@ -15,9 +15,7 @@ include_once('functions.d/GetShopTheme.php');
 <meta name="keywords" content="<?php echo $website['keywords']; ?>">
 <link rel="shortcut icon" href="../wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
 <?php GetShopTheme(); ?>
-<link rel="stylesheet" href="../wow/static/css/wiki/wiki.css?v34" />
 <link title="World of Warcraft - News" href="wow/en/feed/news" type="application/atom+xml" rel="alternate" />
-
 <script src="../wow/static/local-common/js/third-party/jquery-1.4.4.min.js"></script>
 <script src="../wow/static/local-common/js/core.js?v15"></script>
 <script src="../wow/static/local-common/js/tooltip.js?v15"></script>
@@ -42,12 +40,17 @@ try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
 <div class="content-bot">
 <div class="main-banners">
 <div class="expansion">
-</div>	
-<div class="starter-edition">
-<span class="title"><?php echo $Shop['shop_2']; ?></span>
-<span class="headline"><?php echo $Shop['shop_3']; ?></span>
-<a href="<?php echo $website['root']; ?>register.php" class="playnow"><?php echo $Shop['shop_4']; ?></a>
 </div>
+<?php
+if(isset($_SESSION['username']))
+{
+include("logged.php");
+}
+else
+{
+include("offline.php");
+}
+?>
 </div>
 <div id="wiki" class="wiki directory wiki-index">
 <div class="panel free-paid-services">
