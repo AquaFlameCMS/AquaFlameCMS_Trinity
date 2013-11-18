@@ -12,6 +12,6 @@ echo '<link rel="stylesheet" href="../wow/static/Themes/'.$CSS_LINK.'/css/wow.cs
 echo '<link rel="stylesheet" href="../wow/static/Themes/'.$CSS_LINK.'/css/services/services-index.css?v4" />';
 echo '<link rel="stylesheet" href="../wow/static/Themes/'.$CSS_LINK.'/local-common/css/common.css?v15" />';
 echo '<link rel="stylesheet" href="../wow/static/Themes/'.$CSS_LINK.'/css/shop/shop-index.css?v34" />';
-	
+echo '<link rel="stylesheet" href="../wow/static/Themes/'.$CSS_LINK.'/css/wiki/wiki.css?v4"/>';
 }
 }
