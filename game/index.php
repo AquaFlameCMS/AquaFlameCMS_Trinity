@@ -23,11 +23,7 @@ include_once("functions.d/GetGameTheme.php");
 <!--[if IE 6]><link rel="stylesheet" href="../wow/static/local-common/css/common-ie6.css?v15" /><![endif]-->
 <!--[if IE 7]><link rel="stylesheet" href="../wow/static/local-common/css/common-ie7.css?v15" /><![endif]-->
 <?php GetGameTheme(); ?>
-
-<link rel="stylesheet" href="../wow/static/css/wiki/wiki.css?v35"/>
-<link rel="stylesheet" href="../wow/static/css/wiki/wiki.css?v35"/>
 <!--[if IE]> <link rel="stylesheet" type="text/css" media="all" href="/wow/static/css/wiki/wiki-ie.css?v35" /><![endif]-->
-<link rel="stylesheet" href="../wow/static/css/game/game-index.css?v35"/>
 <!--[if IE 6]><link rel="stylesheet" href="../wow/static/css/cms-ie6.css?v4" /><![endif]-->
 <!--[if IE]><link rel="stylesheet" href="../wow/static/css/wow-ie.css?v4" /><![endif]-->
 <!--[if IE 6]><link rel="stylesheet" href="../wow/static/css/wow-ie6.css?v4" /><![endif]-->
