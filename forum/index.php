@@ -221,6 +221,7 @@ Flash.ratingImage = 'http://eu.media.blizzard.com/wow/player/rating-pegi.jpg';
 				</div>
 			</div>
 		</div>
+	</div>
 	<?php include("../footer.php"); ?>
 </body>
 </html>
