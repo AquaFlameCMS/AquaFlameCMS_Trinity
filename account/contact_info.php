@@ -78,21 +78,21 @@ _gaq.push(['_trackPageLoadTime']);
 <div id="address-1" class="address-box primary-address border-5">
 <h4 class="caption">
 <?php
-$account_info = mysql_query("SELECT email,joindate,last_ip,recruiter FROM $server_adb.account WHERE username = '".$_SESSION['username']."'")or die(mysql_error());
-while($get = mysql_fetch_array($account_info)) 
+$account_info = mysql_query("SELECT * FROM $server_adb.account")or die(mysql_error());
+while($get = mysql_fetch_array($account_info))
+{
 ?>
 Joined at: <?php echo $get["joindate"] ?>
 
-</h4><br />
-<h4>Username: </h4><font color='#66CE21'><?php echo strtolower($_SESSION['username']); ?>,</font>
-<p></p>
-<h4>E-mail:</h4>
-<p><?php echo $get["email"] ?>,<p>
-Town: <Font color="#A00000">Unavailable</font>, 
-<p>Last IP: <Font color="#A00000"><?php echo $_SERVER['REMOTE_ADDR']; ?></font>,</p>
-<p><h4>Full Name: <Font color="#A00000">Unavailable</font>,</h4></p>
-<p>Number of Recruits: <Font color="#A00000"><?php echo $get["recruiter"] ?></font>.</p>
-<p></p>
+</h4>
+<br />
+<h4>Username: <font color='#66CE21'><?php echo strtolower($_SESSION['username']); ?>,</font></p>
+<p>E-mail: <?php echo $get["email"] ?></p>
+<p>OS:<Font color="#A00000"><?php echo $get["os"] ?></font></p>
+<p>Last IP: <Font color="#A00000"><?php echo $get["last_ip"] ?></font></p>
+<p>Full Name: <Font color="#A00000">Unavailable</font></p>
+<p>Number of Recruits: <Font color="#A00000"><?php echo $get["recruiter"] ?></font></p>
+<?php } ?>
 <div class="activate-primary">
 <div id="primary-address">This is currently your main shipping address</div>
 </div>
