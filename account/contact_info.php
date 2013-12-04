@@ -78,18 +78,19 @@ _gaq.push(['_trackPageLoadTime']);
 <div id="address-1" class="address-box primary-address border-5">
 <h4 class="caption">
 <?php
-$account_info = mysql_query("SELECT * FROM $server_adb.account")or die(mysql_error());
+$account_info = mysql_query("SELECT * FROM $server_adb.account WHERE username = '".$_SESSION['username']."'")or die(mysql_error());
 while($get = mysql_fetch_array($account_info))
 {
 ?>
 Joined at: <?php echo $get["joindate"] ?>
-
 </h4>
 <br />
-<h4>Username: <font color='#66CE21'><?php echo strtolower($_SESSION['username']); ?>,</font></p>
+<h4>Username: <font color='#66CE21'><?php echo strtolower($_SESSION['username']); ?></font></p>
 <p>E-mail: <?php echo $get["email"] ?></p>
+<p>Real Id: <?php echo $get["id"] ?></p>
 <p>OS:<Font color="#A00000"><?php echo $get["os"] ?></font></p>
 <p>Last IP: <Font color="#A00000"><?php echo $get["last_ip"] ?></font></p>
+<p>Last Login: <Font color="#A00000"><?php echo $get["last_login"] ?></font></p>
 <p>Full Name: <Font color="#A00000">Unavailable</font></p>
 <p>Number of Recruits: <Font color="#A00000"><?php echo $get["recruiter"] ?></font></p>
 <?php } ?>

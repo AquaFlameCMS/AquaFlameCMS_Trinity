@@ -122,6 +122,14 @@ return false;
 <dl>
 <dt class="subcategory"><?php echo $Man['Man5']; ?></dt>
 <dd class="account-name"><?php echo strtolower($_SESSION['username']); ?></dd>
+<?php
+$account_info = mysql_query("SELECT * FROM $server_adb.account WHERE username = '".$_SESSION['username']."'")or die(mysql_error());
+while($get = mysql_fetch_array($account_info))
+{
+?>
+<dt class="subcategory"><?php echo $Man['Man81']; ?></dt>
+<dd class="account-name"><?php echo $get['id']; ?></dd>
+<?php } ?>
 <dt class="subcategory"><?php echo $Man['Man6']; ?></dt>
 <dd class="account-status"> <span><strong class="disable">
 <?php require_once("../configs.php");

@@ -349,6 +349,7 @@ $Man['Man77']  = "Gain rewards if your friend subscribes";
 $Man['Man78']  = "Get a unique two-person mount";
 $Man['Man79']  = "Character Name Change";
 $Man['Man80']  = "Change your characters' names.";
+$Man['Man81']  = "REAL ID: ";
 // Finishing Account Man
 
 // Starting Header acount

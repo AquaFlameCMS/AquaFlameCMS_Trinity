@@ -347,6 +347,7 @@ $Man['Man77']  = "Gagner des r&eacute;compenses si votre ami s'inscrit";
 $Man['Man78']  = "Obtenez une monture deux place";
 $Man['Man79']  = "Character Name Change";
 $Man['Man80']  = "Change your characters' names.";
+$Man['Man81']  = "REAL ID: ";
 // Finishing Account Man
 
 // Starting Header acount
