@@ -1,5 +1,5 @@
 <?php 
-require ('configs.php');
+require ('../configs.php');
 
 // Connection to database
 $conn = mysql_connect("$serveraddress", "$serveruser", "$serverpass")or die("Couldn't connect to database"); 

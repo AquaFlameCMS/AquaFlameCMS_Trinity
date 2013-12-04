@@ -6,6 +6,9 @@
 <?php }else{ ?>
 <li class="service-cell service-welcome"><a href="#" onclick="return Login.open('<?php echo @$website['root'];?>loginframe.php?')"><?php echo @$login['login']; ?></a> or <a href="<?php echo @$website['root']; ?>register.php"><?php echo @$Account3['Account3']; ?></a></li>
 <?php } ?>
+<li class="service-cell service-shop">
+<a href="<?php echo $website['root'];?>shop/" class="service-link"><?php echo $Services['Services']; ?></a>
+</li>
 <li class="service-cell service-account"><a href="<?php echo $website['root']; ?>account_log.php" class="service-link" tabindex="50" accesskey="3"><?php echo $Account['Account']; ?></a></li>
 <li class="service-cell service-support service-support-enhanced">
 <a href="#support" class="service-link service-link-dropdown" tabindex="50" accesskey="4" id="support-link" onclick="return false" style="cursor: progress" rel="javascript"><?php echo $Support['Support']; ?><span class="no-support-tickets" id="support-ticket-count"></span></a>

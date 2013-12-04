@@ -95,7 +95,7 @@ _gaq.push(['_trackPageLoadTime']);
             <p><?php echo $Vote['Vote6']; ?><?php echo $website['title']; ?><?php echo $Vote2['Vote6']; ?></p><br />
 			<p><?php echo $Vote['Vote18'];?><?php echo $account_extra['vote_points']; ?><?php echo $Vote['Vote17'];?></p>
 			<br><br>
-			<?php include("functions/vote_func.php"); ?>
+			<?php include("../functions/vote_func.php"); ?>
 			<div style="position:relative;">
 				<?php
 
@@ -193,7 +193,7 @@ _gaq.push(['_trackPageLoadTime']);
 								$votedx = mysql_query("SELECT * FROM $server_db.votes WHERE voteid = '".$vote['ID']."' AND userid = '".$account_information['id']."' ORDER BY `date`	 DESC");
 								if(mysql_num_rows($votedx) > 0)
 								{
-									require_once("functions/custom.php");
+									require_once("../functions/custom.php");
 									
 									$voted = mysql_fetch_assoc($votedx);
 									$last_vote = $voted['date'];
