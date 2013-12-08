@@ -133,7 +133,7 @@ tr:hover .fansite-link,
 .ui-button span,
 .ui-cancel span { line-height: 38px;}
 .ui-button span { font-family: Arial, sans-serif; }
-.button1 span { background-image: url("../images/buttons/button-1.png"); background-repeat: no-repeat; color: #ffae00 }
+.button1 span { background-image: url("../images/buttons/button-1.png"); background-repeat: no-repeat; color: #2A8AC1 }
 .button1.hover span,
 .button1:hover span { color: #fff }
 .button1.disabled span,
@@ -361,7 +361,7 @@ tr:hover .fansite-link,
 #content .content-trail { height: 30px; padding: 10px 0 0 22px; }
 #content .content-header { padding: 25px; padding-top: 35px; }
 #content .content-header .header { color: #efe3d2; font: 52px/85% "Palatino Linotype", Georgia, Times, sans-serif; letter-spacing: -1.5px; text-shadow: #241209 0 0 5px; }
-#content .content-header .desc { width: 50%; margin-top: 25px; color: #A4704E; }
+#content .content-header .desc { width: 50%; margin-top: 25px; color: #FFFFFF; text-shadow: #030D33 0 0 5px; }
 #content .content-box-w434 { background: url("../images/content/box-w434-top.jpg") 0 0 no-repeat #21130a; width:434px; }
 #content .content-box-w434 .wrapper { background: url("../images/content/box-w434-bottom.jpg") 0 100% no-repeat; width:100%; padding:16px 0 19px 0; letter-spacing:-0.5px;}
 #content .content-box-w434 .inner-wrapper {margin:0 45px 0 19px;}
@@ -445,24 +445,23 @@ tr:hover .fansite-link,
 /* tables */
 .table { padding-bottom: 2px; background: url("../images/content/table-bg.gif") 50% 100% no-repeat }
 
-	/* real table */
-	.table table { width: 100%; table-layout: auto; }
-	.table thead th { padding: 0; background: #4d1a08 url("../images/content/table-header.gif") 0 100% repeat-x; border-bottom: 1px solid #06131B; white-space: nowrap; }
-	.table thead th, .table thead th a { color: #F5EBD1; font-weight: bold;}
-	.table thead th.align-center .sort-tab, .table thead th.align-center .sort-link { text-align: center; }
-	.table thead th.align-right .sort-tab, .table thead th.align-right .sort-link { text-align: right; }
-	.table tfoot th { padding: 10px }
-	.table tbody td { padding: 10px; color: #f5ebd1; }
-	.table tbody .row1 td { background: #2b1507; border-top: 1px solid #31190a }
-	.table tbody .row2 td { background: #231207; border-top: 1px solid #30190b }
-	.table tbody tr:hover td,
-	.table tbody tr.row-active td { background: #180c04; color: #fff }
-	.table tbody tr.no-results td { padding: 25px 50px; text-align: center; background: #231207; color: #C09A67 }
-	.table tbody tr.disabled td { opacity: 0.33333; }
-	.table.full-width td:first-child { padding-left: 20px; }
-	.table.full-width td:last-child { padding-right: 20px; }
-
-	.table em { color: #d2ae89; font-style: normal; }
+/* real table */
+.table table { width: 100%; table-layout: auto; }
+.table thead th { padding: 0; background: #081B26 url("../images/content/table-header.gif") 0 100% repeat-x; border-bottom: 1px solid #06131B; white-space: nowrap; }
+.table thead th, .table thead th a { color: #F5EBD1; font-weight: bold;}
+.table thead th.align-center .sort-tab, .table thead th.align-center .sort-link { text-align: center; }
+.table thead th.align-right .sort-tab, .table thead th.align-right .sort-link { text-align: right; }
+.table tfoot th { padding: 10px }
+.table tbody td { padding: 10px; color: #f5ebd1; }
+.table tbody .row1 td { background: #102033; border-top: 1px solid #0D1A28; }
+.table tbody .row2 td { background: #231207; border-top: 1px solid #30190b; }
+.table tbody tr:hover td,
+.table tbody tr.row-active td { background: #070F16; color: #fff }
+.table tbody tr.no-results td { padding: 25px 50px; text-align: center; background: #231207; color: #C09A67 }
+.table tbody tr.disabled td { opacity: 0.33333; }
+.table.full-width td:first-child { padding-left: 20px; }
+.table.full-width td:last-child { padding-right: 20px; }
+.table em { color: #d2ae89; font-style: normal; }
 
 	/* list version */
 	.table dl { padding: 0 10px; clear: both; height: 38px; line-height: 38px; background-color: #231207}
@@ -490,8 +489,8 @@ tr:hover .fansite-link,
 .table-filters.inline .filter-buttons { padding-top: 10px; }
 
 .table .sort-link,
-.table .sort-tab { display: block; padding: 8px 10px; text-align: left; border-left: 1px solid #7c2804; border-top: 1px solid #7c2804; border-right: 1px solid #391303 }
-.table .sort-link:hover { color: #fff; background: #6a240b url("../images/content/table-header-hover.gif") 0 100% repeat-x; border-top-color: #af3900; border-left-color: #af3900 }
+.table .sort-tab { display: block; padding: 8px 10px; text-align: left; border-left: 1px solid #1C577A; border-top: 1px solid #1C577A; border-right: 1px solid #1C577A; }
+.table .sort-link:hover { color: #fff; background: #184E6B url("../images/content/table-header-hover.gif") 0 100% repeat-x; border-top-color: #2B8CBC; border-left-color: #2B8CBC }
 .table .sort-link .arrow { padding-left: 10px; background: url("../images/content/table-sort-arrows.gif") 0 -10px no-repeat }
 .table .sort-link:hover .arrow { background-position: 0 -115px }
 .table .sort-link .arrow.up,
@@ -526,9 +525,9 @@ tr:hover .fansite-link,
 /* tab menu */
 .tab-menu { height: 30px }
 .tab-menu li { height: 30px; display: inline-block; margin-right: 3px }
-.tab-menu li a { float: left; display: block; height: 30px; line-height: 30px; padding: 0 10px; background: #2b1507; color: #ffae00; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; -moz-box-shadow: 0 0 5px #0e0905; -webkit-box-shadow: 0 0 5px #0e0905; box-shadow: 0 0 5px #0e0905; }
-.tab-menu li a:hover { color: #fff; background: #4e2f1b }
-.tab-menu li a.tab-active { background: #ffae00; font-weight: bold; color: #000; }
+.tab-menu li a { float: left; display: block; height: 30px; line-height: 30px; padding: 0 10px; background: #081B26; color: #2A8AC1; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; -moz-box-shadow: 0 0 5px #0e0905; -webkit-box-shadow: 0 0 5px #0e0905; box-shadow: 0 0 5px #0e0905; }
+.tab-menu li a:hover { color: #000000; background: #1A587A }
+.tab-menu li a.tab-active { background: #2A8AC1; font-weight: bold; color: #081B26; }
 
 /* wow colors */
 

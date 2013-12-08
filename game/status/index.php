@@ -1,6 +1,8 @@
 <?php
-require_once("../../configs.php");?>
-
+require_once("../../configs.php");
+include_once("functions.d/GetGameTheme.php");
+$page_cat = "game";
+?>
 <!DOCTYPE html> 
 <html lang="en-gb">
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -12,13 +14,13 @@ require_once("../../configs.php");?>
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
 <meta name="description" content="<?php echo $website['description']; ?>">
 <meta name="keywords" content="<?php echo $website['keywords']; ?>">
-<link rel="shortcut icon" href="../../wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
-<link rel="stylesheet" href="../../wow/static/local-common/css/common.css?v17" />
-<link rel="stylesheet" href="../../wow/static/css/wow.css?v7" />
-<link rel="stylesheet" href="../../wow/static/css/status/realmstatus.css?v7" />
-<script src="../../wow/static/local-common/js/third-party/jquery-1.4.4-p1.min.js"></script>
-<script src="../../wow/static/local-common/js/core.js?v17"></script>
-<script src="../../wow/static/local-common/js/tooltip.js?v17"></script>
+<link rel="shortcut icon" href="<?php echo $website['root'];?>wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
+<?php GetGameTheme(); ?>
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script src="<?php echo $website['root']; ?>wow/static/local-common/js/third-party/jquery-1.4.4-p1.min.js"></script>
+<script src="<?php echo $website['root']; ?>wow/static/local-common/js/core.js?v15"></script>
+<script src="<?php echo $website['root']; ?>wow/static/local-common/js/tooltip.js?v15"></script>
+<script src="http://static.wowhead.com/widgets/power.js"></script>
 <style type="text/css">
 .Good {text-shadow: 0 1px 0 green, 0 0 3px green, 0 0 3px green, 0 0 8px green, 0 0 8px green; margin-top:3px;}
 .Chars {text-shadow: 1px 2px 6px #004;}
@@ -30,30 +32,10 @@ try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
 //]]>
 </script>
 <![endif]-->
-<script type="text/javascript">
-//<![CDATA[
-Core.staticUrl = '../../wow/static';
-Core.sharedStaticUrl= '../../wow/static/local-common';
-Core.baseUrl = '../..//wow/en';
-Core.project = 'wow';
-Core.locale = 'en-gb';
-Core.buildRegion = 'eu';
-Core.shortDateFormat= 'dd/MM/Y';
-Core.loggedIn = false;
-Flash.videoPlayer = 'http://eu.media.blizzard.com/wow/player/videoplayer.swf';
-Flash.videoBase = 'http://eu.media.blizzard.com/wow/media/videos';
-Flash.ratingImage = 'http://eu.media.blizzard.com/wow/player/rating-pegi.jpg';
-var _gaq = _gaq || [];
-_gaq.push(['_setAccount', 'UA-544112-16']);
-_gaq.push(['_setDomainName', '.battle.net']);
-_gaq.push(['_trackPageview']);
-//]]>
-</script>
 </head>
 <body class="en-gb game-index"><div id="predictad_div" class="predictad" style="display: none; left: 788px; top: 104px; width: 321px; "></div>
-
 <div id="wrapper">
-<?php $page_cat="game"; include("../../header.php"); ?>
+<?php include("../../header.php"); ?>
 <div id="content">
 <div class="content-top">
 <div class="content-trail">
@@ -70,7 +52,7 @@ _gaq.push(['_trackPageview']);
 	</div>
 	<div id="realm-status">	
 <?php include("../../functions/status_nav.php"); ?>
-		<div class="filter-toggle">
+<div class="filter-toggle">
 			<a href="javascript:;" class="selected" onclick="RealmStatus.filterToggle(this)">	</a>
 		</div>
 	<span class="clear"><!-- --></span>
@@ -136,7 +118,7 @@ _gaq.push(['_trackPageview']);
 		</div>
 	</div>
 	<span class="clear"><!-- --></span>
-	<div id="all-realms">
+<div id="all-realms">
 	<div class="table full-width">
 		<table>
 			<thead>
@@ -263,20 +245,8 @@ _gaq.push(['_trackPageview']);
 					</tr>';
 					}
 
-					?>					
-				<!-- Removed or add the ( --> <!-- ) Only if you know what they are doing -->
-				<!-- Removed the ( --> <!-- ) Only if you know what they are doing -->
-				<!-- This is the 3rd (Third) Server on the Status, its Local -->
-					<!--<tr class="row1">
-						<td class="status" data-raw="up"><div class="status-icon up" onmouseover="Tooltip.show(this, 'Local')"></div></td>
-						<td class="name">Local</td>
-						<td class="type" data-raw="pvp"><span class="normal">(Normal)</span></td>
-						<td class="population" data-raw="Low"><span class="Low">Currently Local</span></td>
-						<td class="locale">Cataclysm</td>
-						<td class="queue" data-raw="false">Local</td>
-					</tr>-->
-				<!--Server No.3-->					
-				<tr class="no-results" style="display: none">
+					?>
+					<tr class="no-results" style="display: none">
 					<td colspan="6"><?php echo $status['noResults']; ?></td>
 				</tr>
 			</tbody>
@@ -288,5 +258,5 @@ _gaq.push(['_trackPageview']);
 </div>
 </div>
 <?php include("../../footer.php"); ?>
-<div id="fansite-menu" class="ui-fansite"></div><div id="menu-container"></div><ul class="ui-autocomplete ui-menu ui-widget ui-widget-content ui-corner-all" role="listbox" aria-activedescendant="ui-active-menuitem" style="z-index: 6; top: 0px; left: 0px; display: none; "></ul></body>
+</body>
 </html>

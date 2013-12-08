@@ -188,7 +188,7 @@ echo '>'
 <small><?php echo $copyright3['copyright3']; ?>.<br /><?php echo $copyright['copyright']; ?> - <?php echo date('Y'); ?> <?php echo $website['title']; ?>.<br /><?php echo $copyright4['copyright4']; ?></small>
 </center>
 </div>
-<center><a class="powered" href="http://www.strawberry-pr0jcts.com/" ></a></center>
+<center><a class="powered" href="http://aquaflame.org" ></a></center>
 </div>
 <span class="clear"><!-- --></span>
 </div>
@@ -206,6 +206,21 @@ echo '>'
 <a href="<?php echo $website['root'];?>shop/" class="service-link"><?php echo $Services['Services']; ?></a>
 </li>
 <li class="service-cell service-account"><a href="<?php echo $website['root'];?>account/" class="service-link" tabindex="50" accesskey="3"><?php echo $Account['Account']; ?></a></li>
+<?php
+if (!isset($_SESSION['username']))	{
+	}
+else{
+	mysql_select_db($server_adb);
+	$check_query = mysql_query("SELECT gmlevel from account inner join account_access on account.id = account_access.id where username = '".strtoupper($_SESSION['username'])."'") or die(mysql_error());
+    $login = mysql_fetch_assoc($check_query);
+	if($login['gmlevel'] < 3){
+	}
+	else 
+	{
+	echo '<li class="service-cell service-account"><a href="'.$website['address'].''.$website['root'].'admin" class="service-link" tabindex="50" accesskey="3">ACP (Admin)</a></li>';
+	}
+}
+?>
 <li class="service-cell service-support service-support-enhanced">
 <a href="#support" class="service-link service-link-dropdown" tabindex="50" accesskey="4" id="support-link" onclick="return false" style="cursor: progress" rel="javascript"><?php echo $Support['Support']; ?><span class="no-support-tickets" id="support-ticket-count"></span></a>
 <div class="support-menu" id="support-menu" style="display:none;">
@@ -283,30 +298,14 @@ shim.style.display = 'block';
 <ul>
 <li><a href="#" tabindex="55"><?php echo $Retrieve['Retrieve']; ?></a></li>
 <li><a href="<?php GetClientLink(); ?>" tabindex="55"><?php echo $Client_down3['Client_down3']; ?></a></li>
-<?php
-if (!isset($_SESSION['username']))	
-	{
-	}
-else 
-{
-	mysql_select_db($server_adb);
-	$check_query = mysql_query("SELECT gmlevel from account inner join account_access on account.id = account_access.id where username = '".strtoupper($_SESSION['username'])."'") or die(mysql_error());
-    $login = mysql_fetch_assoc($check_query);
-	if($login['gmlevel'] < 3)
-		{
-	
-		}
-	else 
-	{
-	echo '<li><a href="'.$website['address'].''.$website['root'].'admin" tabindex="55">Admin Panel</li>';
-	}
-}
-
-
-?>
 </ul>
 </div>
 <span class="clear"><!-- --></span>
+</div>
+</div>
+</li>
+</ul>
+</div>
 <!--[if IE 6]> <iframe id="explore-shim" src="javascript:false;" frameborder="0" scrolling="no" style="display: block; position: absolute; top: 0; left: 9px; width: 409px; height: 400px; z-index: -1;"></iframe>
 <script type="text/javascript">
 //<![CDATA[
@@ -428,10 +427,8 @@ other: 'Other'
 };
 //]]>
 </script>
-
 <!doctype html>
 <script src="<?php echo $website['root'];?>wow/static/local-common/js/search.js?v37"></script>
-
 <script type="text/javascript">
 //<![CDATA[
 Core.load("<?php echo $website['root']; ?>wow/static/local-common/js/third-party/jquery-ui-1.8.6.custom.min.js?v37");
@@ -440,8 +437,6 @@ Login.embeddedUrl = '<?php echo $website['root']; ?>loginframe.php';
 });
 //]]>
 </script>
-
-
 <script src="<?php echo $website['root'];?>wow/static/local-common/js/menu.js?v37"></script>
 <script src="<?php echo $website['root'];?>wow/static/js/wow.js?v19"></script>
 <script type="text/javascript">
@@ -452,27 +447,9 @@ Menu.initialize('<?php echo $website['root'];?>data/menu.json');
 //]]>
 </script>
 <script src="<?php echo $website['root'];?>wow/static/local-common/js/cms.js?v37"></script>
-
 <!--[if lt IE 8]> <script type="text/javascript" src="/wow/static/local-common/js/third-party/jquery.pngFix.pack.js?v37"></script>
 <script type="text/javascript">
 //<![CDATA[
 $('.png-fix').pngFix(); //]]>
 </script>
 <![endif]-->
-<script type="text/javascript">
-//<![CDATA[
-(function() {
-var ga = document.createElement('script');
-var src = "https://ssl.google-analytics.com/ga.js";
-if ('http:' == document.location.protocol) {
-src = "http://www.google-analytics.com/ga.js";
-}
-ga.type = 'text/javascript';
-ga.setAttribute('async', 'true');
-ga.src = src;
-var s = document.getElementsByTagName('script');
-s = s[s.length-1];
-s.parentNode.insertBefore(ga, s.nextSibling);
-})();
-//]]>
-</script>
