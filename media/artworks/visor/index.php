@@ -1,5 +1,6 @@
 <?php
 require_once("../../../configs.php");
+include_once("functions.d/GetMediaTheme.php");
 $page_cat="media";
 ?>
 <!DOCTYPE html>
@@ -14,13 +15,7 @@ $page_cat="media";
 <meta content="false" http-equiv="imagetoolbar" />
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
 <link rel="shortcut icon" href="../../../wow/static/local-common/images/favicons/wow.ico" type="image/x-icon"/>
-<link rel="stylesheet" href="../../../wow/static/local-common/css/common.css?v39" />
-<link title="World of Warcraft - Noticias" href="../wow/es/feed/news" type="application/atom+xml" rel="alternate"/>
-<link rel="stylesheet" href="../../../wow/static/css/wow.css?v23" />
-<link rel="stylesheet" href="../../../wow/static/local-common/css/media-gallery.css?v39" />
-<link rel="stylesheet" href="../../../wow/static/css/media/media.css?v23" />
-<link rel="stylesheet" href="../../../wow/static/local-common/css/cms/comments.css?v39" />
-<link rel="stylesheet" href="../../../wow/static/css/cms.css?v23" />
+<?php GetMediaTheme(); ?>
 <script src="../../../wow/static/local-common/js/third-party/jquery.js?v39"></script>
 <script src="../../../wow/static/local-common/js/core.js?v39"></script>
 <script src="../../../wow/static/local-common/js/tooltip.js?v39"></script>

@@ -128,7 +128,7 @@ h3.blog-title { font-size:24px; color:#fdeea4; font-weight:bold; }
 .forum-link:hover span { color:#fff; }
 #forum-list { width: 604px; }
 #popular-topics { margin: 0; padding-top:0; }
-#popular-topics .readmore { border-bottom-color:#552b12; font-size: 14px; padding: 0; padding-bottom: 6px; margin-top: 4px; margin-bottom: 6px; background: none; }
+#popular-topics .readmore { border-bottom-color:#04243F; font-size: 14px; padding: 0; padding-bottom: 6px; margin-top: 4px; margin-bottom: 6px; background: none; }
 .coc { color:#71401F; margin: 0; text-transform: none; font-size: 11px; width: 290px; background:url("../images/layout/cms/code_bg.png"); font-style:italic;  }
 
 .forum-link .int { width:230px; }
@@ -288,7 +288,7 @@ div.forum-options a.active { color:#fff; font-weight: bold; }
 
 /* sidebar */
 .sidebar-module { padding: 0; margin-bottom: 25px; }
-.sidebar-module .sidebar-title { margin-bottom: 6px; border-bottom: 2px solid #552b12; padding-bottom: 6px; }
+.sidebar-module .sidebar-title { margin-bottom: 6px; border-bottom: 2px solid #04243F; padding-bottom: 6px; }
 .sidebar-module .sidebar-title h3 { color: #FEF092; text-transform: uppercase; font-size: 14px; font-weight: normal; }
 #right .sidebar-module .sidebar-title h3 a { color: #FEF092; padding-right: 20px; background: url("../images/icons/next.gif") 100% 50% no-repeat; }
 #right .sidebar-module .sidebar-title h3 a:hover { color: #fff; }
