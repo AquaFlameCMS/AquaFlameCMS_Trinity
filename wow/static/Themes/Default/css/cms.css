@@ -37,7 +37,7 @@
 .blog-paging { background:url("../images/homepage/news-bg.jpg") 50% 100%; }
 
 a.comments-link { background-image:url("../images/layout/cms/blog_icons.gif"); }
-.by-line, .byline  { color:#855b47; }
+.by-line, .byline  { color:#73B3CE; }
 #news-updates h3 { line-height: 1.08em; }
 #news-updates h3 a { font-size:22px; color:#fff8d6; letter-spacing:-0.03em; font-weight:bold; }
 #news-updates .article-right { width:430px; }

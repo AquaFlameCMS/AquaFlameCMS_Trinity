@@ -22,7 +22,7 @@ body { background: #000 url("../images/layout/bg/body-bg-baked.jpg?v=2") 50% 0 n
 }
 
 
-a { color: #ffb100 }
+a { color: #2B8EBC }
 a:hover { color: #FFF !important }
 #right a { color: #bd8100 }
 #right a:hover { color: #FFF }
@@ -79,7 +79,7 @@ tr:hover .fansite-link,
 
 /* breadcrumbs */
 .ui-breadcrumb li { font-size:12px; margin-right:0; padding-right:0 }
-.ui-breadcrumb li a { border-color: #8c6407; float:left; height:16px }
+.ui-breadcrumb li a { border-color: #2E9ACC; float:left; height:16px }
 .ui-breadcrumb li.last a { color:#FFF; font-weight:bold; }
 .ui-breadcrumb li.children a { border-color: #888; }
 .ui-breadcrumb li a:hover,
@@ -213,7 +213,7 @@ tr:hover .fansite-link,
 /* overlay */
 .ui-overlay { width: 750px; background: #391b0d; color: #e9bd7f; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; -moz-box-shadow: 0 0 10px #000; -webkit-box-shadow: 0 0 10px #000; box-shadow: 0 0 10px #000; }
 .ui-overlay .overlay-middle { padding: 25px; }
-.ui-overlay .overlay-middle h2 { color: #7e3406; font-size: 24px; line-height: 100%; font-weight: normal; margin-bottom: 15px; padding-bottom: 15px; border-bottom: 2px solid #50260f; }
+.ui-overlay .overlay-middle h2 { color: #2477A0; font-size: 24px; line-height: 100%; font-weight: normal; margin-bottom: 15px; padding-bottom: 15px; border-bottom: 2px solid #50260f; }
 
 /* trending topics */
 .trending-topics li { border-bottom: 1px solid #271B15; color: #71401F; }
@@ -298,7 +298,7 @@ tr:hover .fansite-link,
 #header .user-plate .ui-context a:hover { color: #fff; }
 
 /* Sub header */
-#sub-header  { color:#7E3406; font-size:24px; letter-spacing:-0.05em; padding-left:30px; }
+#sub-header  { color:#2477A0; font-size:24px; letter-spacing:-0.05em; padding-left:30px; }
 
 /* Section title */
 .section-title {  }
@@ -422,9 +422,9 @@ tr:hover .fansite-link,
 
 /* text */
 .header { font-size: 24px; font-weight: normal; letter-spacing: -.05em; color: #f5ebd1; }
-.header span { color: #7E3406; }
+.header span { color: #2477A0; }
 .subheader { font-size: 20px; font-weight: normal; letter-spacing: -.05em; color: #F5EBD1; }
-.category { font-size: 22px; font-weight: normal; letter-spacing: -.05em; color: #7e3406; }
+.category { font-size: 22px; font-weight: normal; letter-spacing: -.05em; color: #2477A0; }
 .category strong { color: #fef092; font-weight: normal; }
 .subcategory { font-size: 16px; font-weight: normal; color: #71401F; }
 .text1 { color: #b79855 }

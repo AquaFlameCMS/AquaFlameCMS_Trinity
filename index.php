@@ -15,7 +15,6 @@ $page_cat = "home";
 	<meta name="description" content="<?php echo $website['description']; ?>">
     <meta name="keywords" content="<?php echo $website['keywords']; ?>">
 	<link rel="shortcut icon" href="<?php echo $website['root']; ?>wow/static/local-common/images/favicons/wow.png" type="image/x-icon">
-	<link title="World of Warcraft - News" href="wow/en/feed/news" type="application/atom+xml" rel="alternate">
 	<?php GetStyle(); ?>
 	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 	<script src="<?php echo $website['root']; ?>wow/static/local-common/js/third-party/jquery-1.4.4-p1.min.js"></script>
@@ -163,7 +162,7 @@ $page_cat = "home";
 								}
   
 								if($news['contentlnk'] != NULL)
-									echo '<h3><a href="'.$news['contentlnk'].'">'.$news['title'].'</a></h3>';
+									echo '<h3><a href="news.php?id='.$news['contentlnk'].'">'.$news['title'].'</a></h3>';
 								else
 									echo '<h3><a href="news.php?id='.$news['id'].'">'.$news['title'].'</a></h3>';
 								
@@ -182,7 +181,7 @@ $page_cat = "home";
 										<p>'.$content."...".'</p>';
 										
 										if($news['contentlnk'] != NULL)
-											echo '<a href="'.$news['contentlnk'].'" class="more">'.$More['More'].'</a>';
+											echo '<a href="news.php?id='.$news['contentlnk'].'" class="more">'.$More['More'].'</a>';
 										else
 											echo '<a href="news.php?id='.$news['id'].'" class="more">'.$More['More'].'</a>';
 											

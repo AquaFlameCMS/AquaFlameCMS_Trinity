@@ -1,16 +1,16 @@
 <div class="sidebar-module " id="sidebar-sotd" style="">
 <div class="sidebar-title">
-<h3 class="category title-sotd"><a href="/wow/en/media/screenshots/screenshot-of-the-day/mists-of-pandaria"><?php echo $Status['StatRealms']; ?></a></h3></div>
-    <div style="font-size:12px">
+<h3 class="category title-sotd"><a href="<?php echo $website['root']; ?>game/status/index.php"><?php echo $Status['StatRealms']; ?></a></h3></div>
+    <div class="text-area-2" style="font-size:12px">
 		<?php echo $Ind['Ind5']; ?><font color='#FF0000'><?php echo $website['realm']; ?></font>
 	</div>
-    	<?php echo $Ind['Ind7']; ?><span class="date">
+    	<div class="text-area-2"><?php echo $Ind['Ind7']; ?><span class="date text-area-2">
 		<?php
 		$acct_sql = mysql_query("SELECT COUNT(*) FROM $server_adb.account");
 		$acc = mysql_result($acct_sql,0,0);
 		echo ("<font color='#FF0000'>$acc</font>");
 		?>
-		<?php echo $Ind['Ind8']; ?></span>
+		<?php echo $Ind['Ind8']; ?></span></div>
 </div>
 <?php
 
@@ -136,16 +136,16 @@ while($realm = mysql_fetch_array($get_realms)){
         	elseif($uptime_results['uptime'] > 3600) $uptime =  round(($uptime_results['uptime'] / 60 / 60),2)."".$Status['Hours']."";
         	else $uptime =  round(($uptime_results['uptime'] / 60),2)."".$Status['Min']."";
         		
-        		if (!$world) echo "<font color=red><b>".$Status['Uptime:']."</b></font> <span class='date'>0 ".$Status['Min']."</span> <br>";
-        		else echo "<font color='#00FF00'><b>".$Status['Uptime:']."</b></font> <span class='date'>$uptime</span> <br>";	
+        		if (!$world) echo "<font color=red><b>".$Status['Uptime:']."</b></font> <span class='date text-area-2'>0 ".$Status['Min']."</span> <br>";
+        		else echo "<font color='#00FF00'><b>".$Status['Uptime:']."</b></font> <span class='date text-area-2'>$uptime</span> <br>";	
         	?>
     	
-    	<div class="sidebar-module" id="sidebar">
-        	<table width="300" h>
+    	<div class="sidebar-module text-area-2" id="sidebar">
+        	<table width="300">
         	  <tr><td width="208" height="18">
-        	<?php echo $Ind['Ind6']; ?><span class="date"><?php echo $realm_config['version']; ?></span></td>
+        	<?php echo $Ind['Ind6']; ?><span class="date text-area-2"><?php echo $realm_config['version']; ?></span></td>
             <td width="80" align="left">
-            <?php echo $Status['Tipe']; ?><span class="date"><?php $icon = $realm['icon']; echo $type[$icon]; ?></span></td>
+            <?php echo $Status['Tipe']; ?><span class="date text-area-2"><?php $icon = $realm['icon']; echo $type[$icon]; ?></span></td>
         	  </tr>
             <tr><td height="18">
             <?php echo $Status['PjCreat']; ?>
@@ -158,14 +158,14 @@ while($realm = mysql_fetch_array($get_realms)){
     		$sql_on = mysql_query($char_online) or die(mysql_error());
     		$char_on = mysql_result($sql_on,0,0);
     		?>
-    		<span class="date"><?php echo $char; ?></span>
+    		<span class="date text-area-2"><?php echo $char; ?></span>
            	</td><td align="left">
-            <?php echo $Status['Drop']; ?><span class="date"><?php echo $realm_config['drop_rate']; ?></span><br />
+            <?php echo $Status['Drop']; ?><span class="date text-area-2"><?php echo $realm_config['drop_rate']; ?></span><br />
             </td></tr>
             <tr><td height="18">
-            <?php echo $Status['PjConect']; ?><span class="date"><?php echo $char_on; ?></span><br />
+            <?php echo $Status['PjConect']; ?><span class="date text-area-2"><?php echo $char_on; ?></span><br />
             <td align="left">
-            <?php echo $Status['Exp']; ?><span class="date"><?php echo $realm_config['exp_rate']; ?></span><br />
+            <?php echo $Status['Exp']; ?><span class="date text-area-2"><?php echo $realm_config['exp_rate']; ?></span><br />
             </td>
             </tr></table>
     		<span class="clear"><!-- --></span>

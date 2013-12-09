@@ -1,8 +1,8 @@
 <?php
 require_once("configs.php");
+include("classes/armory.class.php");
 require_once('functions/armory_func.php');     
 $page_cat = "services";
-include("classes/armory.class.php");
 include_once("functions.d/GetArmoryTheme.php");
 $character = Factory_Armory::createCharacter($_GET['name']);
 ?>
@@ -30,11 +30,10 @@ try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
 //]]>
 </script>
 <![endif]-->
-
 <style type="text/css">
  #content
- .content-top{background-image:url("wow/static/images/character/summary/backgrounds/race/<?php echo $character->getObjectInfo()->race; ?>.jpg"); left top no-repeat;}
- .profile-wrapper{background-image:url("wow/static/images/character/summary/backgrounds/class/<?php echo $character->getObjectInfo()->race; ?>-<?php echo $character->getObjectInfo()->gender; ?>.jpg");}
+ .content-top{background-image:url("wow/static/Themes/Default/images/character/summary/backgrounds/race/<?php echo $character->getObjectInfo()->race; ?>.jpg"); left top no-repeat;}
+ .profile-wrapper{background-image:url("wow/static/Themes/Default/images/character/summary/backgrounds/class/<?php echo $character->getObjectInfo()->race; ?>-<?php echo $character->getObjectInfo()->gender; ?>.jpg");}
  </style>
 </head>
 <body class="en-gb">

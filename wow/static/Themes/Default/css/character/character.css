@@ -26,7 +26,7 @@ ul.profile-sidebar-menu a:hover { background: url("../../images/profile/sidebar-
 .summary-top, .summary-top-right, .summary-top-inventory { width: 762px; }
 .summary-middle { padding: 20px 15px; padding-top: 0; }
 .summary-middle .category { font-size: 16px; letter-spacing:normal;}
-.summary-middle .category-right { font-size: 11px; float: right; line-height: 27px; font-style: italic; color: #5D442B; letter-spacing: -.05em; }
+.summary-middle .category-right { font-size: 11px; float: right; line-height: 27px; font-style: italic; color: #3AC0FF; letter-spacing: -.05em; }
 .summary-middle .category-right .tip { border-bottom: 0; }
 .summary-middle .profile-box-simple { border-width: 1px; border-color: #30190b; }
 .summary-middle-inner { padding: 15px 25px; background-color: rgba(0, 0, 0, 0.15); -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; }
