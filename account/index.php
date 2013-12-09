@@ -128,7 +128,7 @@ while($get = mysql_fetch_array($account_info))
 {
 ?>
 <dt class="subcategory"><?php echo $Man['Man81']; ?></dt>
-<dd class="account-name"><?php echo $get['id']; ?></dd>
+<dd class="account-name"><small><?php echo strtolower($_SESSION['username']); ?></small><b>#<?php echo $get['id']; ?></b></dd>
 <?php } ?>
 <dt class="subcategory"><?php echo $Man['Man6']; ?></dt>
 <dd class="account-status"> <span><strong class="disable">
