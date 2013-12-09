@@ -1,6 +1,7 @@
 <?php
 require_once("../../configs.php");
 if(isset($_GET['realm'])) $realmid = intval($_GET['realm']); else $realmid = 1;
+include_once("functions.d/GetGameTheme.php");
 ?>
 
 <!doctype html>
@@ -15,9 +16,7 @@ if(isset($_GET['realm'])) $realmid = intval($_GET['realm']); else $realmid = 1;
 <meta name="description" content="<?php echo $website['description']; ?>">
 <meta name="keywords" content="<?php echo $website['keywords']; ?>">
 <link rel="shortcut icon" href="../../wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
-<link rel="stylesheet" href="../../wow/static/local-common/css/common.css?v15" />
-<link rel="stylesheet" href="../../wow/static/css/wow.css?v7" />
-<link rel="stylesheet" href="../../wow/static/css/status/realmstatus.css?v7" />
+<?php GetGameTheme(); ?>
 <script src="../../wow/static/local-common/js/third-party/jquery-1.4.4.min.js"></script>
 <script src="../../wow/static/local-common/js/core.js?v15"></script>
 <script src="../../wow/static/local-common/js/tooltip.js?v15"></script>
@@ -62,7 +61,7 @@ include("../../header.php");
 <span class="breadcrumb-arrow"></span>
 </li>
 <li><a href="<?php echo $website['root']; ?>game/status/" rel="np"><?php echo $status['status']; ?></a><span class="breadcrumb-arrow"></span></li>
-<li><a href="<?php echo $website['root']; ?>game/status/online.php" rel="np"><?php echo $Status['RealmStat']; ?></a><span class="breadcrumb-arrow"></span></li>
+<li><a href="<?php echo $website['root']; ?>game/status/index.php" rel="np"><?php echo $Status['RealmStat']; ?></a><span class="breadcrumb-arrow"></span></li>
 <li class="last children"><a href="" rel="np"><?php
 $realm_extra = mysql_fetch_assoc(mysql_query("SELECT * FROM realms WHERE id = '".$realmid."'"));
 if(!$realm_extra) $realm_extra = mysql_fetch_assoc(mysql_query("SELECT * FROM realms WHERE id = '1'"));
@@ -342,7 +341,7 @@ echo '
 
 <tr class="row1">
 <td>
-<a href="" class="item-link color-c9"><strong><a href="advanced.php?name='.$raw["name"].'">'.$raw["name"].'</a></strong>
+<a href="" class="item-link color-c9"><strong><a href="'.$website['root'].'advanced.php?name='.$raw["name"].'">'.$raw["name"].'</a></strong>
 </a>
 </td>
 <td class="align-center">

@@ -3,6 +3,7 @@ require_once("configs.php");
 require_once('functions/armory_func.php');     
 $page_cat = "services";
 include("classes/armory.class.php");
+include_once("functions.d/GetArmoryTheme.php");
 $character = Factory_Armory::createCharacter($_GET['name']);
 ?>
 
@@ -18,11 +19,7 @@ $character = Factory_Armory::createCharacter($_GET['name']);
 <meta name="description" content="<?php echo $website['description']; ?>">
 <meta name="keywords" content="<?php echo $website['keywords']; ?>">
 <link rel="shortcut icon" href="wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
-<link rel="stylesheet" href="wow/static/local-common/css/common.css" />
-<link title="World of Warcraft - News" href="wow/en/feed/news" type="application/atom+xml" rel="alternate"/>
-<link rel="stylesheet" href="wow/static/css/wow.css" />
-<link rel="stylesheet" href="wow/static/css/view.css" />
-<link rel="stylesheet" href="wow/static/css/character/character.css" />
+<?php GetArmoryTheme(); ?>
 <script src="wow/static/local-common/js/third-party/jquery-1.4.4.min.js"></script>
 <script src="wow/static/local-common/js/core.js"></script>
 <script src="wow/static/local-common/js/tooltip.js"></script>
@@ -52,7 +49,7 @@ try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
 <span class="breadcrumb-arrow"></span>
 </li>
 <li>
-<a href="services.php" rel="np">Services</a>
+<a href="community.php" rel="np">Community</a>
 <span class="breadcrumb-arrow"></span>
 </li>
 <li>

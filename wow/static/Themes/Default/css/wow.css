@@ -454,7 +454,7 @@ tr:hover .fansite-link,
 .table tfoot th { padding: 10px }
 .table tbody td { padding: 10px; color: #f5ebd1; }
 .table tbody .row1 td { background: #102033; border-top: 1px solid #0D1A28; }
-.table tbody .row2 td { background: #231207; border-top: 1px solid #30190b; }
+.table tbody .row2 td { background: #081B26; border-top: 1px solid #0D1A28; }
 .table tbody tr:hover td,
 .table tbody tr.row-active td { background: #070F16; color: #fff }
 .table tbody tr.no-results td { padding: 25px 50px; text-align: center; background: #231207; color: #C09A67 }
