@@ -1,3 +1,31 @@
+/* CUSTOM */
+.title {
+margin-top: 1px;
+padding-top: 30px;
+padding-left: 20px;
+}
+.title h2 {
+color: #efe3d2;
+font: 32px/100% "Palatino Linotype", Georgia, Times, sans-serif;
+letter-spacing: -1.5px;
+text-shadow: 0 0 5px #000, 0 0 5px #000, 0 0 3px #000, 0 0 3px #000, 0 0 2px #000;
+}
+#realm-filters2 {
+margin-top: 4px;
+clear: both;
+margin-left: 23px;
+}
+.table-filters2 {
+padding: 13px;
+background: url("../../images/form/filter-bg.png") 0 0 no-repeat;
+-moz-border-radius: 7px;
+-webkit-border-radius: 7px;
+border-radius: 7px;
+-moz-box-shadow: 0 0 5px #0e0905;
+-webkit-box-shadow: 0 0 5px #0e0905;
+box-shadow: 0 0 5px #0e0905;
+}
+
 /* media gallery */
 .media-content { padding-top:11px }
 

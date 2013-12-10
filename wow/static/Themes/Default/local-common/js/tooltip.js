@@ -49,13 +49,14 @@ var Tooltip = {
 		ajax: false,
 		className: false,
 		location: 'topRight',
-		useTable: false
+		useTable: false,
+		onPosition: null
 	},
 
     /**
 	 * Max tooltip width for IE6.
 	 */
-	maxWidth: 250,
+	maxWidth: 400,
 
     /**
      * Initialize the tooltip markup and append it to document.
@@ -186,14 +187,14 @@ var Tooltip = {
 
 		// Content: DOM node created w/ jQuery
 		if (typeof content === 'object') {
-			Tooltip.position(node, content, options.location);
+			Tooltip.position(node, content, options);
 
 		} else if (typeof content === 'string') {
 
 			// Content: AJAX
 			if (options.ajax) {
 				if (Tooltip.cache[content]) {
-					Tooltip.position(node, Tooltip.cache[content], options.location);
+					Tooltip.position(node, Tooltip.cache[content], options);
 				} else {
 					var url = content;
 
@@ -210,29 +211,31 @@ var Tooltip = {
 							// Show "Loading..." tooltip when request is being slow
 							setTimeout(function() {
 								if (!Tooltip.visible)
-									Tooltip.position(node, Msg.ui.loading, options.location);
+									Tooltip.position(node, Msg.ui.loading, options);
 							}, 500);
 						},
 						success: function(data) {
-							if (Tooltip.currentNode == node) {
-								Tooltip.cache[content] = data;
-								Tooltip.position(node, data, options.location);
+							Tooltip.cache[content] = data;
+							
+							if (Tooltip.currentNode == node){						
+								Tooltip.position(node, data, options);
 							}
 						},
 						error: function(xhr) {
-							if (xhr.status != 200)
+							if (xhr.status != 200){
 								Tooltip.hide();
+							}
 						}
 					});
 				}
 
 			// Content: Copy content from the specified DOM node (referenced by ID)
 			} else if (content.substr(0, 1) === '#') {
-				Tooltip.position(node, $(content).html(), options.location);
+				Tooltip.position(node, $(content).html(), options);
 
 			// Content: Text
 			} else {
-				Tooltip.position(node, content, options.location);
+				Tooltip.position(node, content, options);
 			}
 		}
     },
@@ -261,11 +264,15 @@ var Tooltip = {
      *
      * @param node
      * @param content
-	 * @param location
+	 * @param options
      */
-    position: function(node, content, location) {
+    position: function(node, content, options) {
 		if (!Tooltip.currentNode)
 			return;
+
+		if (Core.isCallback(options.onPosition)) {
+			content = options.onPosition(content);
+		}
 
 		if (typeof content == 'string')
 	        Tooltip.contentCell.html(content);
@@ -278,7 +285,7 @@ var Tooltip = {
 		if (Core.isIE(6) && width > Tooltip.maxWidth)
 			width = Tooltip.maxWidth;
 
-		var coords = Tooltip['_' + location](width, height, node);
+		var coords = Tooltip['_' + options.location](width, height, node);
 
 		if (coords)
 			Tooltip.move(coords.x, coords.y, width, height);

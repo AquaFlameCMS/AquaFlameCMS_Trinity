@@ -1885,15 +1885,6 @@ var CharSelect = {
 
 		if (location.href.indexOf('/character/') != -1) {
 			redirectTo = $('#user-plate a.character-name').attr('href');
-
-		} else if (location.href.indexOf('/guild/') != -1) {
-			redirectTo = $('#user-plate a.guild-name').attr('href');
-
-			// Deal with guildless characters
-			if (!redirectTo) {
-				location.href = $('#user-plate a.character-name').attr('href');
-				return;
-			}
 		}
 
 		if (redirectTo)

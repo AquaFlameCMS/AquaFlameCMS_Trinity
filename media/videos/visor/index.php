@@ -1,5 +1,7 @@
 <?php
 require_once("../../../configs.php");
+include_once("functions.d/GetMediaTheme.php");
+$page_cat = "media";
 ?>
 
 <!DOCTYPE html>
@@ -7,21 +9,14 @@ require_once("../../../configs.php");
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
+<head>
+<meta charset="utf-8">
 <link rel="stylesheet" type="text/css" href="/s7.addthis.com/static/r07/widget49.css" media="all" />
 <title><?php echo $website['title']; ?></title>
 <meta content="false" http-equiv="imagetoolbar" />
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
 <link rel="shortcut icon" href="../../../wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
-<link rel="search" type="application/opensearchdescription+xml" href="http://eu.battle.net/en-gb/data/opensearch" title="WoW Search" />
-<link rel="stylesheet" href="../../../wow/static/local-common/css/common.css?v15" />
-<link rel="stylesheet" href="../../../wow/static/css/wow.css?v3" />
-<link rel="stylesheet" href="../../../wow/static/css/lightbox.css?v7" />
-<link rel="stylesheet" href="../../../wow/static/local-common/css/cms/blog.css?v15" />
-<link rel="stylesheet" href="../../../wow/static/local-common/css/cms/comments.css?v15" />
-<link rel="stylesheet" href="../../../wow/static/css/cms.css?v3" />
-<link rel="stylesheet" href="../../../wow/static/css/media/media.css" />
+<?php GetMediaTheme(); ?>
 <script src="../../../wow/static/local-common/js/third-party/jquery-1.4.4.min.js"></script>
 <script src="../../../wow/static/local-common/js/core.js?v15"></script>
 <script src="../../../wow/static/local-common/js/tooltip.js?v15"></script>
@@ -86,7 +81,7 @@ _gaq.push(['_trackPageview']);
 					<script type="text/javascript">
 					//<![CDATA[
 						var addthis_config = {
-							 username: "TrinityCMS"
+							 username: "AquaCMS"
 						};
 					//]]>
 					</script>
@@ -131,16 +126,20 @@ _gaq.push(['_trackPageview']);
               else{				
 							 $posterInfo = mysql_fetch_assoc(mysql_query("SELECT * FROM $server_db.users WHERE id = '".$videos['author']."'"));					
 				  ?> 
+					<div class="title">
+						<h2><?php echo $videos['title']; ?></h2>
+					</div>
 					<table width="940" height="546">
-					<tr><td width="40"></td><td width="860"><span style="font-size:16px; color:#F9EFA2";><?php echo $videos['title']; ?></span></td><td width="40"></td></tr>
 					<tr><td height="500" colspan="3" align="center" valign="middle">
 					<iframe width="767" height="420" src="http://www.youtube.com/embed/<?php echo $videos['id_url']; ?>?wmode=transparent" frameborder="0" allowfullscreen></iframe></td></tr>
-          </table>
+					</table>
           </div>
+			<div id="realm-filters2" class="table-filters2">
+			<p>by <a href="#"><?php echo $posterInfo['firstName']; ?></a> // <?php echo $videos['date']; ?></p>
+			<p><?php echo $videos['description']; ?></p>
+			</div>
           <table width="940">
-            <tr><td width="40"></td><td width="860" height="40">by <a href="#"><?php echo $posterInfo['firstName']; ?></a><span> // </span><?php echo $videos['date']; ?></td><td width="40"></td></tr>
-					  <tr><td width="40"></td><td width="860"><font color='#C09A67'><?php echo $videos['description']; ?></font></td><td width="40"></td></tr>
-            <tr><td width="40" height="40"></td><td width="860" valign="bottom"><span style="font-size:20px; font-family:Verdana,Geneva,sans-serif;"><?php echo $comments['comments']; ?>(<?php echo $videos['comments']; ?>)</span></td><td width="40"></td></tr>
+          <tr><td width="40" height="40"></td><td width="860" valign="bottom"><span style="font-size:20px; font-family:Verdana,Geneva,sans-serif;"><?php echo $comments['comments']; ?>(<?php echo $videos['comments']; ?>)</span></td><td width="40"></td></tr>
           </table>
           <?php
 					   $show_comment=true;
@@ -293,6 +292,114 @@ _gaq.push(['_trackPageview']);
 	<script src="../../../http://s7.addthis.com/js/250/addthis_widget.js"></script>
 	<script src="../../../wow/static/local-common/js/cms.js?v17?v7"></script>
 	<script src="../../../wow/static/local-common/js/lightbox.js?v17?v7"></script>
+	<script type="text/javascript" src="../../../wow/static/local-common/js/search.js?v46"></script>
+<script type="text/javascript">
+//<![CDATA[
+var xsToken = '';
+var supportToken = '';
+var jsonSearchHandlerUrl = '//eu.battle.net';
+var Msg = {
+support: {
+ticketNew: 'Ticket {0} was created.',
+ticketStatus: 'Ticket {0}’s status changed to {0}.',
+ticketOpen: 'Open',
+ticketAnswered: 'Answered',
+ticketResolved: 'Resolved',
+ticketCanceled: 'Cancelled',
+ticketArchived: 'Archived',
+ticketInfo: 'Need Info',
+ticketAll: 'View All Tickets'
+},
+cms: {
+requestError: 'Your request cannot be completed.',
+ignoreNot: 'Not ignoring this user',
+ignoreAlready: 'Already ignoring this user',
+stickyRequested: 'Sticky requested',
+stickyHasBeenRequested: 'You have already sent a sticky request for this topic.',
+postAdded: 'Post added to tracker',
+postRemoved: 'Post removed from tracker',
+userAdded: 'User added to tracker',
+userRemoved: 'User removed from tracker',
+validationError: 'A required field is incomplete',
+characterExceed: 'The post body exceeds XXXXXX characters.',
+searchFor: "Search for",
+searchTags: "Articles tagged:",
+characterAjaxError: "You may have become logged out. Please refresh the page and try again.",
+ilvl: "Level {0}",
+shortQuery: "Search requests must be at least three characters long."
+},
+bml: {
+bold: 'Bold',
+italics: 'Italics',
+underline: 'Underline',
+list: 'Unordered List',
+listItem: 'List Item',
+quote: 'Quote',
+quoteBy: 'Posted by {0}',
+unformat: 'Remove Formating',
+cleanup: 'Fix Linebreaks',
+code: 'Code Blocks',
+item: 'WoW Item',
+itemPrompt: 'Item ID:',
+url: 'URL',
+urlPrompt: 'URL Address:'
+},
+ui: {
+submit: 'Submit',
+cancel: 'Cancel',
+reset: 'Reset',
+viewInGallery: 'View in gallery',
+loading: 'Loading…',
+unexpectedError: 'An error has occurred',
+fansiteFind: 'Find this on…',
+fansiteFindType: 'Find {0} on…',
+fansiteNone: 'No fansites available.',
+flashErrorHeader: 'Adobe Flash Player must be installed to see this content.',
+flashErrorText: 'Download Adobe Flash Player',
+flashErrorUrl: 'http://get.adobe.com/flashplayer/'
+},
+grammar: {
+colon: '{0}:',
+first: 'First',
+last: 'Last'
+},
+fansite: {
+achievement: 'achievement',
+character: 'character',
+faction: 'faction',
+'class': 'class',
+object: 'object',
+talentcalc: 'talents',
+skill: 'profession',
+quest: 'quest',
+spell: 'spell',
+event: 'event',
+title: 'title',
+arena: 'arena team',
+guild: 'guild',
+zone: 'zone',
+item: 'item',
+race: 'race',
+npc: 'NPC',
+pet: 'pet'
+},
+search: {
+noResults: 'There are no results to display.',
+kb: 'Support',
+post: 'Forums',
+article: 'Blog Articles',
+static: 'General Content',
+wowcharacter: 'Characters',
+wowitem: 'Items',
+wowguild: 'Guilds',
+wowarenateam: 'Arena Teams',
+url: 'Suggested Links',
+friend: 'Friends',
+other: 'Other'
+}
+};
+//]]>
+</script>
 	<?php include("../../../footer.php"); ?>
 </div>
 </body>
