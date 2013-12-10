@@ -361,7 +361,7 @@ tr:hover .fansite-link,
 #content .content-trail { height: 30px; padding: 10px 0 0 22px; }
 #content .content-header { padding: 25px; padding-top: 35px; }
 #content .content-header .header { color: #efe3d2; font: 52px/85% "Palatino Linotype", Georgia, Times, sans-serif; letter-spacing: -1.5px; text-shadow: #241209 0 0 5px; }
-#content .content-header .desc { width: 50%; margin-top: 25px; color: #FFFFFF; text-shadow: #030D33 0 0 5px; }
+#content .content-header .desc { width: 50%; margin-top: 25px; text-shadow: 0 0 3px #000, 0 0 3px #000, 0 0 2px #000, 0 0 2px #000, 0 0 1px #000; color: #7091A0; }
 #content .content-box-w434 { background: url("../images/content/box-w434-top.jpg") 0 0 no-repeat #21130a; width:434px; }
 #content .content-box-w434 .wrapper { background: url("../images/content/box-w434-bottom.jpg") 0 100% no-repeat; width:100%; padding:16px 0 19px 0; letter-spacing:-0.5px;}
 #content .content-box-w434 .inner-wrapper {margin:0 45px 0 19px;}

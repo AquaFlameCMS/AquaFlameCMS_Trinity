@@ -47,7 +47,7 @@ try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
 <div class="content-bot">
 	<div class="content-header">
 		<h2 class="header "><?php echo $Status['RealmStat']; ?></h2>
-		<div class="desc"><?php echo $Status['Stat1']; ?><a href="forum/category/?f=27"><?php echo $Status['ServStat']; ?></a><?php echo $Status['Stat2']; ?></div>
+		<p class="desc"><?php echo $Status['Stat1']; ?><a href="forum/category/?f=27"><?php echo $Status['ServStat']; ?></a><?php echo $Status['Stat2']; ?></p>
 	    <span class="clear"><!-- --></span>
 	</div>
 	<div id="realm-status">	

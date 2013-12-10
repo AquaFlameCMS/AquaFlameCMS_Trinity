@@ -61,9 +61,9 @@ _gaq.push(['_trackPageview']);
 			<div class="content-top">
 				<div class="content-trail">
 					<ol class="ui-breadcrumb">
-					<li><a href="../index.php"><?php echo $website['title']; ?></a><span class="breadcrumb-arrow"></span></li>
-          <li><a href="../media.php" rel="np"><?php echo $Media['Media']; ?></a><span class="breadcrumb-arrow"></span></li>
-          <li><a href="videos_index.php" rel="np"><?php echo $Media['Videos']; ?></a><span class="breadcrumb-arrow"></span></li>
+					<li><a href="../../../index.php"><?php echo $website['title']; ?></a><span class="breadcrumb-arrow"></span></li>
+          <li><a href="../../index.php" rel="np"><?php echo $Media['Media']; ?></a><span class="breadcrumb-arrow"></span></li>
+          <li><a href="../index.php" rel="np"><?php echo $Media['Videos']; ?></a><span class="breadcrumb-arrow"></span></li>
         <?php
 					$videos_id = intval($_GET['id']);
 					if($videos_id > 0) {

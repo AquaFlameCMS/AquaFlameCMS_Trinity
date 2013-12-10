@@ -152,7 +152,7 @@ div.forum-options a.active { color:#fff; font-weight: bold; }
 #posts-container { padding:0; }
 #posts td { border-bottom:1px solid #261913; }
 #posts .post-th { color:#775e3a; }
-#posts tr:hover td { background: #261307; }
+#posts tr:hover td { background: #095398; }
 #posts tr.featured { background: #052830; }
 #posts tr.featured:hover { background-image:url(../images/layout/cms/row_featured_hover.gif); background-color:#042a0f; }
 #forum-content .forum-post-icon { background-image:url(../images/layout/cms/post_active.png); background-position: 80% 4px; padding-left: 20px;}
