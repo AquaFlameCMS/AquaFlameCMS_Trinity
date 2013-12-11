@@ -1,5 +1,3 @@
-         
-
 <?php
 	function GetStyle() {
 	$con=mysqli_connect(DBHOST,DBUSER,DBPASS,DB);
@@ -20,5 +18,7 @@
 	echo '<link rel="stylesheet" media="all" href="wow/static/Themes/'.$CSS_LINK.'/css/community/community.css?v34" />';
 	echo '<link rel="stylesheet" media="all" href="wow/static/Themes/'.$CSS_LINK.'/css/cms.css?v34" />';
 	echo '<link rel="stylesheet" media="all" href="wow/static/Themes/'.$CSS_LINK.'/css/locale/en-gb.css?v34" />';
+	echo '<link rel="stylesheet" href="wow/static/Themes/'.$CSS_LINK.'/css/lightbox.css?v7" />';
+	echo '<link rel="stylesheet" href="wow/static/Themes/'.$CSS_LINK.'/local-common/css/cms/comments.css?v15" />';
 }
 }

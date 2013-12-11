@@ -16,12 +16,7 @@ require_once("configs.php");
 <meta name="keywords" content="<?php echo $website['keywords']; ?>">
 <link rel="shortcut icon" href="wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
 <link rel="search" type="application/opensearchdescription+xml" href="http://eu.battle.net/en-gb/data/opensearch" title="WoW Search" />
-<link rel="stylesheet" href="wow/static/local-common/css/common.css?v15" />
-<link rel="stylesheet" href="wow/static/css/wow.css?v3" />
-<link rel="stylesheet" href="wow/static/css/lightbox.css?v7" />
-<link rel="stylesheet" href="wow/static/local-common/css/cms/blog.css?v15" />
-<link rel="stylesheet" href="wow/static/local-common/css/cms/comments.css?v15" />
-<link rel="stylesheet" href="wow/static/css/cms.css?v3" />
+<?php GetStyle(); ?>
 <script src="wow/static/local-common/js/third-party/jquery-1.4.4.min.js"></script>
 <script src="wow/static/local-common/js/core.js?v15"></script>
 <script src="wow/static/local-common/js/tooltip.js?v15"></script>
