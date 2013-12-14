@@ -75,10 +75,10 @@ $serveraddress = "127.0.0.1";
 $serveruser    = "root";
 $serverpass    = "password";
 $serverport    = "3306";
-define('DBHOST', '127.0.0.1');
-define('DBUSER', 'root');
-define('DBPASS', 'password');
-define('DB', 'website');
+@define('DBHOST', '127.0.0.1');
+@define('DBUSER', 'root');
+@define('DBPASS', 'password');
+@define('DB', 'website');
 
 /*
 |--------------------------------------------------------------------------
