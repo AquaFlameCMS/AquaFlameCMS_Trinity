@@ -306,7 +306,7 @@ var BML = {
 				xstoken: Cookie.read('xstoken')
 			},
 			type: 'POST',
-			url: Core.baseUrl +'/forum/topic/post/preview',
+			url: Core.baseUrl +'/forum/preview2.php',
 			global: false,
 			success: function(data, status, xhr) {
 				$(target).append(data.detail);
