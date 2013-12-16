@@ -327,18 +327,19 @@ shim.style.display = 'block';
 
 <script type="text/javascript">
 //<![CDATA[
-var xsToken = '272c2eb0-9252-4eae-b494-93fd89788702';
-var supportToken = '';
+var xsToken = '#';
+var supportToken = '#';
+var jsonSearchHandlerUrl = '//';
 var Msg = {
 support: {
 ticketNew: 'Ticket {0} was created.',
-ticketStatus: 'Ticket {0}’s status changed to {1}.',
+ticketStatus: 'Ticket {0}’s status changed to {1}.',
 ticketOpen: 'Open',
 ticketAnswered: 'Answered',
 ticketResolved: 'Resolved',
 ticketCanceled: 'Cancelled',
 ticketArchived: 'Archived',
-ticketInfo: 'Need Info',
+ticketInfo: 'Need Info',
 ticketAll: 'View All Tickets'
 },
 cms: {
@@ -359,7 +360,6 @@ characterAjaxError: "You may have become logged out. Please refresh the page and
 ilvl: "Level {0}",
 shortQuery: "Search requests must be at least three characters long."
 },
-
 bml: {
 bold: 'Bold',
 italics: 'Italics',
@@ -385,7 +385,10 @@ loading: 'Loading…',
 unexpectedError: 'An error has occurred',
 fansiteFind: 'Find this on…',
 fansiteFindType: 'Find {0} on…',
-fansiteNone: 'No fansites available.'
+fansiteNone: 'No fansites available.',
+flashErrorHeader: 'Adobe Flash Player must be installed to see this content.',
+flashErrorText: 'Download Adobe Flash Player',
+flashErrorUrl: 'http://get.adobe.com/flashplayer/'
 },
 grammar: {
 colon: '{0}:',
@@ -412,8 +415,8 @@ race: 'race',
 npc: 'NPC',
 pet: 'pet'
 },
-
 search: {
+noResults: 'There are no results to display.',
 kb: 'Support',
 post: 'Forums',
 article: 'Blog Articles',
@@ -422,6 +425,8 @@ wowcharacter: 'Characters',
 wowitem: 'Items',
 wowguild: 'Guilds',
 wowarenateam: 'Arena Teams',
+url: 'Suggested Links',
+friend: 'Friends',
 other: 'Other'
 }
 };
@@ -431,8 +436,8 @@ other: 'Other'
 <script src="<?php echo $website['root'];?>wow/static/local-common/js/search.js?v37"></script>
 <script type="text/javascript">
 //<![CDATA[
-Core.load("<?php echo $website['root']; ?>wow/static/local-common/js/third-party/jquery-ui-1.8.6.custom.min.js?v37");
-Core.load("<?php echo $website['root']; ?>wow/static/local-common/js/login.js?v37", false, function() {
+Core.load("<?php echo $website['root']; ?>wow/static/local-common/js/third-party/jquery-ui-1.8.6.custom.min.js?v46");
+Core.load("<?php echo $website['root']; ?>wow/static/local-common/js/login.js?v46", false, function() {
 Login.embeddedUrl = '<?php echo $website['root']; ?>loginframe.php';
 });
 //]]>

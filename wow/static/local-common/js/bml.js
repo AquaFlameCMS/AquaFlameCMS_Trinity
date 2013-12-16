@@ -25,7 +25,8 @@ var BML = {
 			tag: 'b',
 			open: '<strong>',
 			close: '</strong>',
-			filter: true
+			filter: true,
+			regions: ['us', 'eu', 'sea', 'kr']
 		}, {
 			type: 'italics',
 			tag: 'i',
@@ -162,6 +163,10 @@ var BML = {
 
 		// Loop commands and build toolbar
 		$.each(BML.commands, function(key, data) {
+			if (data.regions && $.inArray(Core.buildRegion, data.regions) === -1) {
+				return true;
+			}
+
 			var msg = Msg.bml[data.type] || "";
 
 			$('<button type="button"/>')
@@ -244,8 +249,7 @@ var BML = {
 
 			if (answer) {
 				prompts[0] = answer;
-				//theadriann edit prompts[1] = '="'+ answer +'"';
-				prompts[1] = '='+ answer +'';
+				prompts[1] = '="'+ answer +'"';
 			} else {
 				return;
 			}
@@ -302,7 +306,7 @@ var BML = {
 				xstoken: Cookie.read('xstoken')
 			},
 			type: 'POST',
-			url: '/forum/preview2.php',
+			url: Core.baseUrl +'/forum/topic/post/preview',
 			global: false,
 			success: function(data, status, xhr) {
 				$(target).append(data.detail);
@@ -330,7 +334,7 @@ var BML = {
 	quote: function(content, post_id) {
 		var quote = '[quote="'+ post_id +'"]';
 			quote += $.trim(content);
-			quote += '[/quote]';
+			quote += ' [/quote]';
 
 		BML.append(quote);
 	},
