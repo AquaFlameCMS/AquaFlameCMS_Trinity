@@ -917,9 +917,13 @@ $Community['comm12']      = "Contribuye en Youtube";
 $Community['comm13']      = "Enlaces de la comunidad";
 $Community['comm14']      = "Únete a nuestra comunidad";
 $Community['FanArt']      = "Fan Art";
-$Community['Screenshots'] = "Screenshots";
-$Community['Wallpap']     = "Wallpapers";
+$Community['Screenshots'] = "Capturas de Pantalla";
+$Community['Wallpap']     = "Fondos de Pantalla";
 $Community['Media']       = "Media";
+$Community['search']      = "Buscar";
+$Community['profiles']    = "Perfiles";
+$Community['character']   = "Personaje";
+$Community['guild'] 	  = "Hermandad";
 //Finish Community
 
 //Status

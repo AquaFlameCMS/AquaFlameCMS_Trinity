@@ -899,6 +899,10 @@ $Community['FanArt']       = "&#29609;&#23478;&#30011;&#20316;";
 $Community['Screenshots']  = "&#25130;&#22270;";
 $Community['Wallpap']      = "&#22721;&#32440;";
 $Community['Media']        = "&#23186;&#20307;";
+$Community['search']       = "Search";
+$Community['profiles']     = "Profiles";
+$Community['character']    = "Character";
+$Community['guild'] 	   = "Guild";
 //Finish Community
 //Status
 $Status['RealmStat']       = "&#26381;&#21153;&#22120;&#29366;&#24577;";

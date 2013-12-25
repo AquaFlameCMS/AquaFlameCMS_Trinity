@@ -920,6 +920,10 @@ $Community['FanArt']      = "Fan Art";
 $Community['Screenshots'] = "Screenshots";
 $Community['Wallpap']     = "Wallpapers";
 $Community['Media']       = "Media";
+$Community['search']      = "Search";
+$Community['profiles']    = "Profiles";
+$Community['character']   = "Character";
+$Community['guild'] 	  = "Guild";
 //Finish Community
 
 //Status

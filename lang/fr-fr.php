@@ -919,6 +919,10 @@ $Community['FanArt']      = "Fan Art";
 $Community['Screenshots'] = "Screenshots";
 $Community['Wallpap']     = "Fonds d'&cute;cran";
 $Community['Media']       = "Media";
+$Community['search']      = "Search";
+$Community['profiles']    = "Profiles";
+$Community['character']   = "Character";
+$Community['guild'] 	  = "Guild";
 //Finish Community
 
 //Status
