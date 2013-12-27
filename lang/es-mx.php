@@ -212,7 +212,7 @@ $re['august']    = "August";
 $re['september'] = "September";
 $re['october']   = "October";
 $re['november']  = "November";
-$re['december']  = "December";
+$re['december']  = "Dicember";
 //Finishing the register.php translation
 
 // Starting register
