@@ -205,7 +205,6 @@ if (!isset($_SESSION['username'])) {
 <span class="input-required"></span>
 </label>
 </span>
-
 <span class="input-right">
 <span class="input-select input-select-small">
 <select name="country" id="country" class="small border-5 glow-shadow-2 form-disabled" tabindex="1"  >
@@ -214,11 +213,9 @@ mysql_select_db($server_db, $connection_setup) or die(mysql_error());
 $contry = mysql_query("SELECT * FROM $server_db.country")or die(mysql_error());
 while($get = mysql_fetch_array($contry))
 {
-?>
-<?php
 echo'<option value="'.$get["iso3"].'">'.$get["printable_name"].'</option>';
+} 
 ?>
-<?php } ?>
 </select>
 <span class="inline-message" id="country-message"> </span>
 </span>
@@ -318,18 +315,18 @@ passwordStrength3: 'Strong'
 <span class="input-select input-select-extra-extra-small">
 <select name="dobMonth" id="dobMonth" class="extra-extra-small border-5 glow-shadow-2" tabindex="1" required="required">
 <option value="0" selected="selected"><?php echo $re['month']; ?></option>
-<option value="1">January</option>
-<option value="2">February</option>
-<option value="3">March</option>
-<option value="4">April</option>
-<option value="5">May</option>
-<option value="6">June</option>
-<option value="7">July</option>
-<option value="8">August</option>
-<option value="9">September</option>
-<option value="10">October</option>
-<option value="11">November</option>
-<option value="12">December</option>
+<option value="1"><?php echo $re['january']; ?></option>
+<option value="2"><?php echo $re['february']; ?></option>
+<option value="3"><?php echo $re['march']; ?></option>
+<option value="4"><?php echo $re['april']; ?></option>
+<option value="5"><?php echo $re['may']; ?></option>
+<option value="6"><?php echo $re['june']; ?></option>
+<option value="7"><?php echo $re['july']; ?></option>
+<option value="8"><?php echo $re['august']; ?></option>
+<option value="9"><?php echo $re['september']; ?></option>
+<option value="10"><?php echo $re['october']; ?></option>
+<option value="11"><?php echo $re['november']; ?></option>
+<option value="12"><?php echo $re['december']; ?></option>
 </select>
 <span class="inline-message" id="dobMonth-message"> </span>
 </span>
