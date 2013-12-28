@@ -2,7 +2,7 @@
 include("../configs.php");
 $page_cat = "security";
 if (!isset($_SESSION['username'])) {
-        header('Location: '.$website['root'].'account_log.php');		
+        header('Location: '.$website['root'].'account_log');		
 }
 ?>
 
@@ -11,8 +11,7 @@ if (!isset($_SESSION['username'])) {
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
+<head>
 <title><?php echo $website['title']; ?><?php echo $appear['1']; ?></title>
 <meta content="false" http-equiv="imagetoolbar" />
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
@@ -142,7 +141,7 @@ if(isset($_POST['submit']))
 		echo '<p align="center"><font color="green"><strong>Succes!</strong></font><br/>';
 		echo "<strong>You can now change your Character Appeareance logining ingame.</strong>";
 		echo '</p>';
-		echo '<meta http-equiv="refresh" content="2;url=../account_man.php"/>';
+		echo '<meta http-equiv="refresh" content="2;url='.$website['root'].'account/"/>';
 
 	}else{
 	  echo '<p align="center"><font color="red"><strong>ERROR</strong></font><br/>';
@@ -150,10 +149,9 @@ if(isset($_POST['submit']))
 			echo $error . '<br>';
 		}
 		echo '</p>';
-		echo '<meta http-equiv="refresh" content="2;url=change_appear.php"/>';
+		echo '<meta http-equiv="refresh" content="2;url=change_appear"/>';
 
 	}
-
 }
 else{
 ?>
@@ -208,7 +206,7 @@ else{
 		<span><span><?php echo $appear['8']; ?></span></span>
 		</button>
 		
-		<a class="ui-cancel" href="../account_man.php" tabindex="1"><span><?php echo $appear['9']; ?></span></a>
+		<a class="ui-cancel" href="<?php echo $website['root']; ?>account/" tabindex="1"><span><?php echo $appear['9']; ?></span></a>
 	</fieldset>
 
 </form>

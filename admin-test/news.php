@@ -11,7 +11,7 @@ if ($login['gmlevel'] < 3) {
 		');
 }
 //To show the images pop-up
-$path = "../news/";       //The images path
+$path = "../wow/static/images/news/";       //The images path
 $dir = opendir($path);   //Open path
 $img_total = 0;
 while ($elemento = readdir($dir)) {   //read content
@@ -73,7 +73,7 @@ while ($elemento = readdir($dir)) {   //read content
                 frm_element.value = val;                            //And the preview image
                 var imgL = document.getElementById('imgLoad');
                 imgL.style.display = '';
-                imgL.src = '../news/' + val + '.jpg';
+                imgL.src = '../wow/static/images/news/' + val + '.jpg';
             }
 
             function preview(img, event) {
@@ -161,7 +161,7 @@ while ($elemento = readdir($dir)) {   //read content
         <br>
     <span class="label input g4"></span>
     <span class="label input g6">Image Preview</span>
-    <img class ="g4 box" src="<?php echo '../news/'.$edit['image'].'.jpg'; ?>" id="imgLoad" style="display:true; margin-left: -95px;"/>
+    <img class ="g4 box" src="<?php echo '../wow/static/images/news/'.$edit['image'].'.jpg'; ?>" id="imgLoad" style="display:true; margin-left: -95px;"/>
 
 
     </div>

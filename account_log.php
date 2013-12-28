@@ -139,7 +139,7 @@ Core.baseUrl = '/login/en/';
 					</li>
 					<li class="icon-signup">
 					<?php echo $Log['Log12']; ?>
-					<a href="register.php"><?php echo $Log['Log13']; ?>
+					<a href="register"><?php echo $Log['Log13']; ?>
 					</a>! </li>
 					<li class="icon-secure">
 					<?php echo $Log['Log14']; ?>

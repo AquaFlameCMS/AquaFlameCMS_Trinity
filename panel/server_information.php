@@ -1,6 +1,6 @@
 <div class="sidebar-module " id="sidebar-sotd" style="">
 <div class="sidebar-title">
-<h3 class="category title-sotd"><a href="<?php echo $website['root']; ?>game/status/index.php"><?php echo $Status['StatRealms']; ?></a></h3></div>
+<h3 class="category title-sotd"><a href="<?php echo $website['root']; ?>game/status/"><?php echo $Status['StatRealms']; ?></a></h3></div>
     <div class="text-area-2" style="font-size:12px">
 		<?php echo $Ind['Ind5']; ?><font color='#FF0000'><?php echo $website['realm']; ?></font>
 	</div>

@@ -12,7 +12,7 @@ ini_set("default_charset", "iso-8859-1" );    //For special chars
 		');
 	}
   //To show the images pop-up
-  $path = "../news/";       //The images path
+  $path = "../wow/static/images/news/";       //The images path
   $dir = opendir($path);   //Open path
   $img_total=0;
   while ($elemento = readdir($dir))   //read content
@@ -125,7 +125,7 @@ function changeVal(val){
   frm_element.value = val;                            //And the preview image
   var imgL = document.getElementById('imgLoad');
   imgL.style.display = '';
-  imgL.src = '../news/' + val + '.jpg';
+  imgL.src = '../wow/static/images/news/' + val + '.jpg';
 }
 
 function preview(img,event){
@@ -187,7 +187,7 @@ function preview(img,event){
               </div>
             </div>
             <div  id="preview" style="display:none; float:right; position:absolute;left:450px;top:-50px;">
-              <img src="../news/staff.jpg" alt="img" id="imgP" />   
+              <img src="../wow/static/images/news/staff.jpg" alt="img" id="imgP" />   
             </div>   
           </div>
           

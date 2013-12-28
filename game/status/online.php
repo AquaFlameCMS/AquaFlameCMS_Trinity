@@ -57,11 +57,11 @@ include("../../header.php");
 <div class="content-trail">
 <ol class="ui-breadcrumb">
 <li>
-<a href="index.php" rel="np"><?php echo $website['title']; ?></a>
+<a href="<?php echo $website['root']; ?>" rel="np"><?php echo $website['title']; ?></a>
 <span class="breadcrumb-arrow"></span>
 </li>
 <li><a href="<?php echo $website['root']; ?>game/status/" rel="np"><?php echo $status['status']; ?></a><span class="breadcrumb-arrow"></span></li>
-<li><a href="<?php echo $website['root']; ?>game/status/index.php" rel="np"><?php echo $Status['RealmStat']; ?></a><span class="breadcrumb-arrow"></span></li>
+<li><a href="<?php echo $website['root']; ?>game/status/" rel="np"><?php echo $Status['RealmStat']; ?></a><span class="breadcrumb-arrow"></span></li>
 <li class="last children"><a href="" rel="np"><?php
 $realm_extra = mysql_fetch_assoc(mysql_query("SELECT * FROM realms WHERE id = '".$realmid."'"));
 if(!$realm_extra) $realm_extra = mysql_fetch_assoc(mysql_query("SELECT * FROM realms WHERE id = '1'"));

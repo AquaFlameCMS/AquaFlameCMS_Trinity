@@ -62,7 +62,7 @@ _gaq.push(['_trackPageview']);
 				<div class="content-trail">
 				<ol class="ui-breadcrumb">
 				<li>
-				<a href="index.php" rel="np"><?php echo $website['title']; ?></a>
+				<a href="index" rel="np"><?php echo $website['title']; ?></a>
 				<span class="breadcrumb-arrow"></span>
 				</li>
 				<?php
@@ -80,7 +80,7 @@ _gaq.push(['_trackPageview']);
 					<script type="text/javascript">
 					//<![CDATA[
 						var addthis_config = {
-							 username: "TrinityCMS"
+							 username: "AquaflameCMS"
 						};
 					//]]>
 					</script>
@@ -94,8 +94,8 @@ _gaq.push(['_trackPageview']);
 									while($articles = mysql_fetch_array($articles_query)){
 									?>
 									<div class="featured">
-										<a href="news.php?id=<?php echo $articles['id']; ?>">
-											<span class="featured-img" style="background-image: url('news/<?php echo $articles['image']; ?>.jpg');"></span>
+										<a href="news?id=<?php echo $articles['id']; ?>">
+											<span class="featured-img" style="background-image: url('wow/static/images/news/<?php echo $articles['image']; ?>.jpg');"></span>
 											<span class="featured-desc"> <?php echo $articles['title']; ?> </span>
 										</a>
 									</div>
@@ -125,10 +125,10 @@ _gaq.push(['_trackPageview']);
 											$comment = addslashes($comment);
 											$comment = nl2br($comment);
 											if (isset($_POST['replyTo'])){
-                        $replyTo = $_POST['replyTo']; 
-                      }else{
-                        $replyTo = 0;
-                      }
+												$replyTo = $_POST['replyTo']; 
+											  }else{
+												$replyTo = 0;
+											  }
 											$insert = mysql_query("INSERT INTO comments (newsid,comment,accountid,reply) VALUES ('".$news['id']."','".$comment."','".$author."','".$replyTo."')")or print("Could not post the comment!");
 
 											//Fixed that bugging bug + DATE =)) :)) =)) :D
@@ -146,7 +146,7 @@ _gaq.push(['_trackPageview']);
 											 }
 											</style>';
 											echo '<div class="loader"></div><br /></center>';
-											echo '<meta http-equiv="refresh" content="1;url=news.php?id='.$news_id.'"/>';
+											echo '<meta http-equiv="refresh" content="1;url=news?id='.$news_id.'"/>';
 											$show_comment=false;
 										}else{				
 										
@@ -163,7 +163,7 @@ _gaq.push(['_trackPageview']);
 										</div>
 										
 										<div class="header-image">
-											<img alt="" src="news/'.$news['image'].'_header.jpg" />
+											<img alt="" src="wow/static/images/news/'.$news['image'].'_header.jpg" />
 										</div>
 
 										<div class="detail">
@@ -174,10 +174,10 @@ _gaq.push(['_trackPageview']);
 											<!-- ADDTHIS BUTTON BEGIN -->
 											<!--<div class="addthis_toolbox addthis_default_style">
 												<a class="addthis_button_twitter at300b" target="_blank" title="Tweet This"><span class="at300bs at15nc at15t_twitter"></span></a>
-												<a class="addthis_button_facebook at300b" href="http://www.addthis.com/bookmark.php?v=250&amp;winname=addthis&amp;pub=blizzardwebteam&amp;source=tbx-250&amp;lng=en-US&amp;s=facebook&amp;url=http%3A%2F%2Feu.battle.net%2Fwow%2Fen%2Fblog%2F2192483%23blog&amp;title=Memories%20of%20Blizzard%20Video%20Contest%20Entries%20Closed%20-%20World%20of%20Warcraft&amp;ate=AT-blizzardwebteam/-/-/4daf164f55138edd/1&amp;uid=4daf164f974ffadb&amp;CXNID=2000001.5215456080540439074NXC&amp;pre=http%3A%2F%2Feu.battle.net%2Fwow%2Fen%2F&amp;tt=0" target="_blank" title="Send to Facebook"><span class="at300bs at15nc at15t_facebook"></span></a>
-												<a class="addthis_button_myspace at300b" href="http://www.addthis.com/bookmark.php?v=250&amp;winname=addthis&amp;pub=blizzardwebteam&amp;source=tbx-250&amp;lng=en-US&amp;s=myspace&amp;url=http%3A%2F%2Feu.battle.net%2Fwow%2Fen%2Fblog%2F2192483%23blog&amp;title=Memories%20of%20Blizzard%20Video%20Contest%20Entries%20Closed%20-%20World%20of%20Warcraft&amp;ate=AT-blizzardwebteam/-/-/4daf164f55138edd/2&amp;uid=4daf164fca431fd2&amp;CXNID=2000001.5215456080540439074NXC&amp;pre=http%3A%2F%2Feu.battle.net%2Fwow%2Fen%2F&amp;tt=0" target="_blank" title="Send to MySpace"><span class="at300bs at15nc at15t_myspace"></span></a>
-												<a class="addthis_button_stumbleupon at300b" href="http://www.addthis.com/bookmark.php?v=250&amp;winname=addthis&amp;pub=blizzardwebteam&amp;source=tbx-250&amp;lng=en-US&amp;s=stumbleupon&amp;url=http%3A%2F%2Feu.battle.net%2Fwow%2Fen%2Fblog%2F2192483%23blog&amp;title=Memories%20of%20Blizzard%20Video%20Contest%20Entries%20Closed%20-%20World%20of%20Warcraft&amp;ate=AT-blizzardwebteam/-/-/4daf164f55138edd/3&amp;uid=4daf164f06059580&amp;CXNID=2000001.5215456080540439074NXC&amp;pre=http%3A%2F%2Feu.battle.net%2Fwow%2Fen%2F&amp;tt=0" target="_blank" title="Send to StumbleUpon"><span class="at300bs at15nc at15t_stumbleupon"></span></a>
-												<a class="addthis_button_digg at300b" href="http://www.addthis.com/bookmark.php?v=250&amp;winname=addthis&amp;pub=blizzardwebteam&amp;source=tbx-250&amp;lng=en-US&amp;s=digg&amp;url=http%3A%2F%2Feu.battle.net%2Fwow%2Fen%2Fblog%2F2192483%23blog&amp;title=Memories%20of%20Blizzard%20Video%20Contest%20Entries%20Closed%20-%20World%20of%20Warcraft&amp;ate=AT-blizzardwebteam/-/-/4daf164f55138edd/4&amp;uid=4daf164f14677003&amp;CXNID=2000001.5215456080540439074NXC&amp;pre=http%3A%2F%2Feu.battle.net%2Fwow%2Fen%2F&amp;tt=0" target="_blank" title="Digg This"><span class="at300bs at15nc at15t_digg"></span></a>
+												<a class="addthis_button_facebook at300b" href="http://www.addthis.com/bookmark?v=250&amp;winname=addthis&amp;pub=blizzardwebteam&amp;source=tbx-250&amp;lng=en-US&amp;s=facebook&amp;url=http%3A%2F%2Feu.battle.net%2Fwow%2Fen%2Fblog%2F2192483%23blog&amp;title=Memories%20of%20Blizzard%20Video%20Contest%20Entries%20Closed%20-%20World%20of%20Warcraft&amp;ate=AT-blizzardwebteam/-/-/4daf164f55138edd/1&amp;uid=4daf164f974ffadb&amp;CXNID=2000001.5215456080540439074NXC&amp;pre=http%3A%2F%2Feu.battle.net%2Fwow%2Fen%2F&amp;tt=0" target="_blank" title="Send to Facebook"><span class="at300bs at15nc at15t_facebook"></span></a>
+												<a class="addthis_button_myspace at300b" href="http://www.addthis.com/bookmark?v=250&amp;winname=addthis&amp;pub=blizzardwebteam&amp;source=tbx-250&amp;lng=en-US&amp;s=myspace&amp;url=http%3A%2F%2Feu.battle.net%2Fwow%2Fen%2Fblog%2F2192483%23blog&amp;title=Memories%20of%20Blizzard%20Video%20Contest%20Entries%20Closed%20-%20World%20of%20Warcraft&amp;ate=AT-blizzardwebteam/-/-/4daf164f55138edd/2&amp;uid=4daf164fca431fd2&amp;CXNID=2000001.5215456080540439074NXC&amp;pre=http%3A%2F%2Feu.battle.net%2Fwow%2Fen%2F&amp;tt=0" target="_blank" title="Send to MySpace"><span class="at300bs at15nc at15t_myspace"></span></a>
+												<a class="addthis_button_stumbleupon at300b" href="http://www.addthis.com/bookmark?v=250&amp;winname=addthis&amp;pub=blizzardwebteam&amp;source=tbx-250&amp;lng=en-US&amp;s=stumbleupon&amp;url=http%3A%2F%2Feu.battle.net%2Fwow%2Fen%2Fblog%2F2192483%23blog&amp;title=Memories%20of%20Blizzard%20Video%20Contest%20Entries%20Closed%20-%20World%20of%20Warcraft&amp;ate=AT-blizzardwebteam/-/-/4daf164f55138edd/3&amp;uid=4daf164f06059580&amp;CXNID=2000001.5215456080540439074NXC&amp;pre=http%3A%2F%2Feu.battle.net%2Fwow%2Fen%2F&amp;tt=0" target="_blank" title="Send to StumbleUpon"><span class="at300bs at15nc at15t_stumbleupon"></span></a>
+												<a class="addthis_button_digg at300b" href="http://www.addthis.com/bookmark?v=250&amp;winname=addthis&amp;pub=blizzardwebteam&amp;source=tbx-250&amp;lng=en-US&amp;s=digg&amp;url=http%3A%2F%2Feu.battle.net%2Fwow%2Fen%2Fblog%2F2192483%23blog&amp;title=Memories%20of%20Blizzard%20Video%20Contest%20Entries%20Closed%20-%20World%20of%20Warcraft&amp;ate=AT-blizzardwebteam/-/-/4daf164f55138edd/4&amp;uid=4daf164f14677003&amp;CXNID=2000001.5215456080540439074NXC&amp;pre=http%3A%2F%2Feu.battle.net%2Fwow%2Fen%2F&amp;tt=0" target="_blank" title="Digg This"><span class="at300bs at15nc at15t_digg"></span></a>
 											<div class="atclear"></div></div>-->
 											<!-- ADDTHIS BUTTON END -->
 											<div class="fb-like" data-href="http://www.facebook.com/pages/WoWFailureCMS/141791002519526?ref=ts" data-send="true" data-layout="button_count" data-width="450" data-show-faces="false"></div>
@@ -497,11 +497,11 @@ ended
 											echo'
                       <form action="" method="" id="comment-form-reply" class="nested">
                         <table class="dynamic-center"><tr><td>
-                          <a class="ui-button button1 " href="?login" onclick="return Login.open(\'loginframe.php\')"><span><span>Add a reply</span></span></a>	
+                          <a class="ui-button button1 " href="?login" onclick="return Login.open(\'loginframe\')"><span><span>Add a reply</span></span></a>	
                         </td></tr></table>
                       </form>
 											<table class="dynamic-center"><tr><td>
-											<a class="ui-button button1 " href="?login" onclick="return Login.open(\'loginframe.php\')"><span><span>Add a reply</span></span></a>
+											<a class="ui-button button1 " href="?login" onclick="return Login.open(\'loginframe\')"><span><span>Add a reply</span></span></a>
 											</td></tr></table>
 											';
 										}   //SHOW COMMENTS
@@ -641,8 +641,8 @@ ended
 											?>
 											<ul class="articles-list">
 											<li>
-												<a href="news.php?id=<?php echo $articles['id']; ?>">
-												<span class="image" style="background-image: url('news/<?php echo $articles['image']; ?>.jpg');"></span>
+												<a href="news?id=<?php echo $articles['id']; ?>">
+												<span class="image" style="background-image: url('wow/static/images/news/<?php echo $articles['image']; ?>.jpg');"></span>
 													<span class="title"> <?php echo $articles['title']; ?></span>
 												   <span class="date"><?php echo $articles['date']; ?></span>
 												   <span class="clear"></span>

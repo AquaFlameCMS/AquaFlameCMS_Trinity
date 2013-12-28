@@ -34,9 +34,9 @@ if (!isset($_SESSION['username'])) {
         if ($select) {
             $avatar = $select['race'] . "-" . $select['gender'] . ".jpg";
             $update = mysql_query("UPDATE users SET `avatar` = '" . $avatar . "', `character` ='" . $character_id . "', `char_realm` = '" . $realm_extra['id'] . "' WHERE id = '" . $account_extra['id'] . "'");
-            echo '<meta http-equiv="refresh" content="0;url=index.php"/>';
+            echo '<meta http-equiv="refresh" content="0;url='.$website['root'].'"/>';
         } else {
-            echo '<meta http-equiv="refresh" content="0;url=index.php"/>';
+            echo '<meta http-equiv="refresh" content="0;url='.$website['root'].'"/>';
         }
     }
 
@@ -61,7 +61,7 @@ if (!isset($_SESSION['username'])) {
             $numchars++;
         } else {
             mysql_query("UPDATE $server_db.users SET `character` = 0 WHERE id = $account_extra[id]") or die(mysql_error("Cannot remove character from web db"));
-            header("Location : index.php");
+            header("Location : ".$website['root']."");
         }
     } else {
 
@@ -205,7 +205,7 @@ if (!isset($_SESSION['username'])) {
                                 ?>
                                 </div>
                                 <div class="context-links">
-                                    <a href="<?php echo $website['root']; ?>advanced.php?name=<?php echo $actualchar["name"]; ?>" title="<?php echo $uplate['profile']; ?>" rel="np" class="icon-profile link-first">
+                                    <a href="<?php echo $website['root']; ?>advanced?name=<?php echo $actualchar["name"]; ?>" title="<?php echo $uplate['profile']; ?>" rel="np" class="icon-profile link-first">
                                         <?php echo $uplate['profile']; ?>
                                     </a>
                                     <a href="#" title="<?php echo $uplate['post']; ?>" rel="np" class="icon-posts">

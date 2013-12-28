@@ -2,7 +2,7 @@
 include("../configs.php");
 $page_cat = "security";
 if (!isset($_SESSION['username'])) {
-        header('Location: '.$website['root'].'account_log.php');		
+        header('Location: '.$website['root'].'account_log');		
 }
 ?>
 
@@ -138,7 +138,7 @@ if(isset($_POST['submit']))
 		echo '<p align="center"><font color="green"><strong>Succes!</strong></font><br/>';
 		echo "<strong>You can now change your Character Name logining ingame.</strong>";
 		echo '</p>';
-		echo '<meta http-equiv="refresh" content="2;url=../account_man.php"/>';
+		echo '<meta http-equiv="refresh" content="2;url='.$website['root'].'account/"/>';
 
 	}else{
 	  echo '<p align="center"><font color="red"><strong>ERROR</strong></font><br/>';
@@ -210,7 +210,7 @@ else{
 		<span><span><?php echo $name['8']; ?></span></span>
 		</button>
 		
-		<a class="ui-cancel" href="../account_man.php" tabindex="1"><span><?php echo $name['9']; ?></span></a>
+		<a class="ui-cancel" href="<?php echo $website['root']; ?>account/" tabindex="1"><span><?php echo $name['9']; ?></span></a>
 	</fieldset>
 
 </form>

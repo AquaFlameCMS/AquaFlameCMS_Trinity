@@ -28,7 +28,7 @@ $page_cat = "home";
 	</script>
 	<![endif]-->
 	</head>
-	<body class="en-us homepage" onUnload="opener.location=('index.php')">
+	<body class="en-us homepage" onUnload="opener.location=('index')">
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
@@ -112,8 +112,8 @@ $page_cat = "home";
 							while($articles = mysql_fetch_array($articles_query)){
 							?>
 							<div class="featured">
-								<a href="news.php?id=<?php echo $articles['id']; ?>">
-									<span class="featured-img" style="background-image: url('news/<?php echo $articles['image']; ?>.jpg');"></span>
+								<a href="news?id=<?php echo $articles['id']; ?>">
+									<span class="featured-img" style="background-image: url('wow/static/images/news/<?php echo $articles['image']; ?>.jpg');"></span>
 									<span class="featured-desc"> <?php echo $articles['title']; ?> </span>
 								</a>
 							</div>
@@ -162,18 +162,18 @@ $page_cat = "home";
 								}
   
 								if($news['contentlnk'] != NULL)
-									echo '<h3><a href="news.php?id='.$news['contentlnk'].'">'.$news['title'].'</a></h3>';
+									echo '<h3><a href="news?id='.$news['contentlnk'].'">'.$news['title'].'</a></h3>';
 								else
-									echo '<h3><a href="news.php?id='.$news['id'].'">'.$news['title'].'</a></h3>';
+									echo '<h3><a href="news?id='.$news['id'].'">'.$news['title'].'</a></h3>';
 								
 								echo'
 									<div class="by-line">
 									'.$Index['By'].' <a href="#">'.$posterInfo['firstName'].'</a><span class="spacer"></span> '.ago(strtotime($news['date'])).'
-									<a href="news.php?id='.$news['id'].'#comments" class="comments-link">'.$news['comments'].'</a>
+									<a href="news?id='.$news['id'].'#comments" class="comments-link">'.$news['comments'].'</a>
 									</div>
 									
-									<div class="article-left" style="background-image: url(\'news/'.$news['image'].'.jpg\');">
-									<a href="news.php?id='.$news['id'].'"><img src="wow/static/images/homepage/thumb-frame.gif" alt="" /></a>
+									<div class="article-left" style="background-image: url(\'wow/static/images/news/'.$news['image'].'.jpg\');">
+									<a href="news?id='.$news['id'].'"><img src="wow/static/images/homepage/thumb-frame.gif" alt="" /></a>
 									</div>
 
 									<div class="article-right">
@@ -181,9 +181,9 @@ $page_cat = "home";
 										<p>'.$content."...".'</p>';
 										
 										if($news['contentlnk'] != NULL)
-											echo '<a href="news.php?id='.$news['contentlnk'].'" class="more">'.$More['More'].'</a>';
+											echo '<a href="news?id='.$news['contentlnk'].'" class="more">'.$More['More'].'</a>';
 										else
-											echo '<a href="news.php?id='.$news['id'].'" class="more">'.$More['More'].'</a>';
+											echo '<a href="news?id='.$news['id'].'" class="more">'.$More['More'].'</a>';
 											
 										echo'
 										</div>

@@ -65,7 +65,7 @@ _gaq.push(['_trackPageview']);
 <a href="<?php echo $website['root']; ?>game/status/" rel="np">Arena</a>
 <span class="breadcrumb-arrow"></span>
 </li>
-<li class="last children"><a href="<?php echo $website['root']; ?>game/status/3vs3.php" rel="np">Top 3vs3</a>
+<li class="last children"><a href="<?php echo $website['root']; ?>game/status/3vs3" rel="np">Top 3vs3</a>
 </li>
 </ol>
 </div>
@@ -198,7 +198,7 @@ echo '
 <a href="" class="item-link color-c9"><strong><a href="">'.$i.'</a></strong>
 </a>
 </td>
-<td style="background-color: '.$bg.';"><center><a href="arena.php?name='.$pvp_row["name"].'">'.$pvp_row["name"].'</a></center></td>
+<td style="background-color: '.$bg.';"><center><a href="arena?name='.$pvp_row["name"].'">'.$pvp_row["name"].'</a></center></td>
 <td style="background-color: '.$bg.';"><center>'.$pvp_row["rating"].'</center></td>
 <td style="background-color: '.$bg.';"><center>'.$pvp_row["seasonGames"].'</center></td>
 <td style="background-color: '.$bg.';"><center>'.$pvp_row["seasonWins"].'</center></td>
@@ -245,5 +245,8 @@ echo "<b>There are no Arena Teams right now.</b>";
 </div>
 </div>
 <?php include("../../../footer.php"); ?>
-<div id="fansite-menu" class="ui-fansite"></div><div id="menu-container"></div><ul class="ui-autocomplete ui-menu ui-widget ui-widget-content ui-corner-all" role="listbox" aria-activedescendant="ui-active-menuitem" style="z-index: 6; top: 0px; left: 0px; display: none; "></ul></body>
+<div id="fansite-menu" class="ui-fansite"></div>
+<div id="menu-container"></div>
+<ul class="ui-autocomplete ui-menu ui-widget ui-widget-content ui-corner-all" role="listbox" aria-activedescendant="ui-active-menuitem" style="z-index: 6; top: 0px; left: 0px; display: none; "></ul>
+</body>
 </html>

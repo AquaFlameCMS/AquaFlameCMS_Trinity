@@ -3,7 +3,7 @@ include("../configs.php");
 $page_cat = "security";
 // Check, if username session is NOT set then this page will jump to login page
 if (!isset($_SESSION['username'])) {
-        header('Location: '.$website['root'].'account_log.php');		
+        header('Location: '.$website['root'].'account_log');		
 }
 ?>
 
@@ -227,7 +227,7 @@ print'<table align="center">
 <button class="ui-button button1 " type="submit" name="unstuck" value="Unstuck!" id="merge-submit" tabindex="1">
 <span><span>'.$Uns['Uns29'].'</span></span>
 </button>
-<a class="ui-cancel" href= "account_man.php" tabindex="1">
+<a class="ui-cancel" href= "'.$website['root'].'account/" tabindex="1">
 <span>'.$Uns['Uns23'].'</span></a>
 </fieldset>
 </form>

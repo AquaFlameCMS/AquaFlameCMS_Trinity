@@ -65,7 +65,7 @@ include("../../header.php");
 					</li>
 					<li><a href="<?php echo $website['root']; ?>game/status/" rel="np"><?php echo $status['status']; ?>
 					</a><span class="breadcrumb-arrow"></span></li>
-					<li><a href="<?php echo $website['root']; ?>game/status/online.php" rel="np"><?php echo $Status['RealmStat']; ?>
+					<li><a href="<?php echo $website['root']; ?>game/status/online" rel="np"><?php echo $Status['RealmStat']; ?>
 					</a><span class="breadcrumb-arrow"></span></li>
 					<li><a href="top-honor.php" rel="np">Top Honor</a><span class="breadcrumb-arrow"></span></li>
 					<li class="last children"><a href="" rel="np"><?php

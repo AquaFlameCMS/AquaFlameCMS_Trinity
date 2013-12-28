@@ -108,7 +108,7 @@
 							<div class="content-trail">
 								<ol class="ui-breadcrumb">
 									<li>
-										<a href="index.php" rel="np"><?php echo $website['title']; ?></a>
+										<a href="<?php echo $website['address']; ?>" rel="np"><?php echo $website['title']; ?></a>
 										<span class="breadcrumb-arrow"></span>
 									</li>
 									<li class="last children">

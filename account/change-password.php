@@ -3,7 +3,7 @@ include("../configs.php");
 $page_cat = "settings";
 // Check, if username session is NOT set then this page will jump to login page
 if (!isset($_SESSION['username'])) {
-        header('Location: '.$website['root'].'account_log.php');		
+        header('Location: '.$website['root'].'account_log');		
 }
 ?>
 
@@ -100,14 +100,14 @@ if(isset($_POST['submit']))
         $result = mysql_query($query) or die(mysql_error());
         $numrows = mysql_num_rows($result);
 
-        if($enewpass != $enewpass1) { die("<p align='center'>".$Reg['Reg6']."<br><br>".$Reg['Reg7']."<br><br>".$Reg['Reg8']."</p><p align='center'><a href='change-password.php'><button class='ui-button button1' type='submit' value='back' tabindex='1'><span><span>".$re['back']."</span></span></button></a></p>"); }
+        if($enewpass != $enewpass1) { die("<p align='center'>".$Reg['Reg6']."<br><br>".$Reg['Reg7']."<br><br>".$Reg['Reg8']."</p><p align='center'><a href='change-password'><button class='ui-button button1' type='submit' value='back' tabindex='1'><span><span>".$re['back']."</span></span></button></a></p>"); }
 
         if(strlen($_POST['passwordNew']) < 5 || strlen($_POST['passwordNew']) > 15 ){
                 $chars = strlen($passwordNew);
-                die("<p align='center'>".$Reg['Reg6']."<br><br>".$Reg['Reg9']."<br><br>".$Reg['Reg10']."".$chars." ".$Reg['Reg11']."<br><br>".$Reg['Reg12']."<br><br>".$Reg['Reg13']."</p><p align='center'><a href='change-password.php'><button class='ui-button button1' type='submit' value='back' tabindex='1'><span><span>".$re['back']."</span></span></button></a></p>");
+                die("<p align='center'>".$Reg['Reg6']."<br><br>".$Reg['Reg9']."<br><br>".$Reg['Reg10']."".$chars." ".$Reg['Reg11']."<br><br>".$Reg['Reg12']."<br><br>".$Reg['Reg13']."</p><p align='center'><a href='change-password'><button class='ui-button button1' type='submit' value='back' tabindex='1'><span><span>".$re['back']."</span></span></button></a></p>");
         }
 
-        if($numrows == 0) { die("<p align='center'>".$Reg['Reg6']."<br><br>".$Reg['Reg14']."<br><br>".$Reg['Reg15']."</p><p align='center'><a href='change-password.php'><button class='ui-button button1' type='submit' value='back' tabindex='1'><span><span>".$re['back']."</span></span></button></a></p>"); }
+        if($numrows == 0) { die("<p align='center'>".$Reg['Reg6']."<br><br>".$Reg['Reg14']."<br><br>".$Reg['Reg15']."</p><p align='center'><a href='change-password'><button class='ui-button button1' type='submit' value='back' tabindex='1'><span><span>".$re['back']."</span></span></button></a></p>"); }
 
         $query = "UPDATE account SET sha_pass_hash = '".$enewpass."' WHERE username = '".$eaccount."'";
         $result = mysql_query($query) or die(mysql_error());
@@ -117,7 +117,7 @@ if(isset($_POST['submit']))
         $result = mysql_query($query) or die(mysql_error());
         
 
-        echo "<p align='center'>".$Reg['Reg16']."<br><br>'<b>".$account."</b>'<br><br>".$Reg['Reg17']."<p align='center'><a href='account_man.php'><button class='ui-button button1' type='submit' value='back' tabindex='1'><span><span>".$re['back']."</span></span></button></a></p>";
+        echo "<p align='center'>".$Reg['Reg16']."<br><br>'<b>".$account."</b>'<br><br>".$Reg['Reg17']."<p align='center'><a href='".$website['root']."account/'><button class='ui-button button1' type='submit' value='back' tabindex='1'><span><span>".$re['back']."</span></span></button></a></p>";
         //close mysql connection
         mysql_close($con);
 }

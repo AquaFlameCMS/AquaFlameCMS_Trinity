@@ -3,7 +3,7 @@ include("../configs.php");
 $page_cat = 'summary';
 // Check, if username session is NOT set then this page will jump to login page
 if (!isset($_SESSION['username'])) {
-        header('Location: '.$website['root'].'account_log.php');		
+        header('Location: '.$website['root'].'account_log');		
 }
 ?>
 
@@ -163,13 +163,13 @@ while($get = mysql_fetch_array($account_info))
 </dd>
 <dt class="subcategory"><?php echo $Man['Man11']; ?></dt>
 <dd class="account primary-account"><span class="account-history"><font color="#D16000"><?php echo $Man['Man12']; ?></font></span>
-<em><a href="change_client.php?client=3"><li><?php echo $Man['Man13']; ?></li></a></em></dd>
+<em><a href="change_client?client=3"><li><?php echo $Man['Man13']; ?></li></a></em></dd>
 <dd class="account secondary-account"><font color="#0072A3"><?php echo $Man['Man14']; ?></font>
-<em><a href="change_client.php?client=2"><li><?php echo $Man['Man15']; ?></li></a></em></dd>
+<em><a href="change_client?client=2"><li><?php echo $Man['Man15']; ?></li></a></em></dd>
 <dd class="account secondary-account"><font color="#138701"><?php echo $Man['Man16']; ?></font>
-<em><a href="change_client.php?client=1"><li><?php echo $Man['Man17']; ?></li></a></em></dd>
+<em><a href="change_client?client=1"><li><?php echo $Man['Man17']; ?></li></a></em></dd>
 <dd class="account secondary-account oldest-account"><font color="#5B4325"><?php echo $Man['Man18']; ?></font>
-<em><a href="change_client.php?client=0"><li><?php echo $Man['Man19']; ?></li></a></em></dd>
+<em><a href="change_client?client=0"><li><?php echo $Man['Man19']; ?></li></a></em></dd>
 <dt class="subcategory"><?php echo $Man['Man20']; ?></dt>
 <dd class="region eu"><?php echo $Man['Man21']; ?></dd>
 <dt class="subcategory"><?php echo $website['title']; ?><?php echo $Man['Man22']; ?></dt>
@@ -182,19 +182,19 @@ while($get = mysql_fetch_array($account_info))
 <a href="<?php echo $website['root']; ?>account/"><?php echo $Man['Man24']; ?></a>
 </li>
 <li class="change-payment-method">
-<a href="<?php echo $website['root']; ?>account/vote.php"><?php echo $Man['Man25']; ?></a>
+<a href="<?php echo $website['root']; ?>account/vote"><?php echo $Man['Man25']; ?></a>
 </li>
 <li class="add-game-card">
-<a href="<?php echo $website['root']; ?>account/change-password.php"><?php echo $Man['Man26']; ?></a>
+<a href="<?php echo $website['root']; ?>account/change-password"><?php echo $Man['Man26']; ?></a>
 </li>
 <li class="payment-history">
 <a href="<?php echo $website['root']; ?>account/"><?php echo $Man['Man27']; ?></a>
 </li>
 <li class="download-guide">
-<a href="<?php echo $website['root']; ?>account/game_client.php"><?php echo $Man['Man28']; ?></a>
+<a href="<?php echo $website['root']; ?>account/game_client"><?php echo $Man['Man28']; ?></a>
 </li>
 <li class="download-client">
-<a href="<?php echo $website['root']; ?>account/game_client.php"><?php echo $Man['Man29']; ?></a>
+<a href="<?php echo $website['root']; ?>account/game_client"><?php echo $Man['Man29']; ?></a>
 </li>
 </ul>
 </div>
@@ -251,42 +251,42 @@ tabindex="1">
 </a>
 </li>
 <li class="wow-service pfc">
-<a href="<?php echo $website['root']; ?>account/change_faction.php">
+<a href="<?php echo $website['root']; ?>account/change_faction">
 <span class="icon glow-shadow-3"></span>
 <strong><?php echo $Man['Man40']; ?></strong>
 <?php echo $Man['Man41']; ?>
 </a>
 </li>
 <li class="wow-service prc">
-<a href="<?php echo $website['root']; ?>account/change_race.php">
+<a href="<?php echo $website['root']; ?>account/change_race">
 <span class="icon glow-shadow-3"></span>
 <strong><?php echo $Man['Man42']; ?></strong>
 <?php echo $Man['Man43']; ?>
 </a>
 </li>
 <li class="wow-service pnc">
-<a href="<?php echo $website['root']; ?>account/name.php">
+<a href="<?php echo $website['root']; ?>account/name">
 <span class="icon glow-shadow-3"></span>
 <strong><?php echo $Man['Man79']; ?></strong>
 <?php echo $Man['Man80']; ?>
 </a>
 </li>
 <li class="wow-service pnc">
-<a href="<?php echo $website['root']; ?>account/change_name.php">
+<a href="<?php echo $website['root']; ?>account/change_name">
 <span class="icon glow-shadow-3"></span>
 <strong><?php echo $Man['Man44']; ?></strong>
 <?php echo $Man['Man45']; ?>
 </a>
 </li>
 <li class="wow-service pcc">
-<a href="<?php echo $website['root']; ?>account/change_appear.php">
+<a href="<?php echo $website['root']; ?>account/change_appear">
 <span class="icon glow-shadow-3"></span>
 <strong><?php echo $Man['Man46']; ?></strong>
 <?php echo $Man['Man47']; ?>
 </a>
 </li>
 <li class="wow-service char-move">
-<a href="<?php echo $website['root']; ?>account/chars-unst.php">
+<a href="<?php echo $website['root']; ?>account/chars-unst">
 <span class="icon glow-shadow-3"></span>
 <strong><?php echo $Man['Man48']; ?></strong>
 <?php echo $Man['Man49']; ?>
@@ -297,7 +297,7 @@ tabindex="1">
 <div class="content additional-services" id="additional-services">
 <ul>
 <li class="wow-service ptr-copy">
-<a href="vote.php">
+<a href="vote">
 <span class="icon glow-shadow-3"></span>
 <strong><?php echo $Man['Man50']; ?></strong>
 <?php echo $Man['Man51']; ?><?php echo $website['title']; ?> <?php echo $Man['Man52']; ?>
@@ -329,7 +329,7 @@ tabindex="1">
 </a>
 </li>
 <li class="wow-service resurrection-scroll">
-<a href="<?php echo $website['root']; ?>account/raf-invite.php">
+<a href="<?php echo $website['root']; ?>account/raf-invite">
 <span class="icon glow-shadow-3"></span>
 <strong><?php echo $Man['Man59']; ?></strong>
 <?php echo $Man['Man60']; ?><?php echo $website['title']; ?><?php echo $Man['Man61']; ?>

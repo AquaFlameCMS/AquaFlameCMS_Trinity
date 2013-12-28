@@ -69,15 +69,15 @@ _gaq.push(['_trackPageLoadTime']);
       	<div class="content-trail">
         	<ol class="ui-breadcrumb">
           	<li>
-            	<a href="index.php" rel="np"><?php echo $website['title']; ?></a>
+            	<a href="index" rel="np"><?php echo $website['title']; ?></a>
 				<span class="breadcrumb-arrow"></span>
           	</li>
           	<li>
-            	<a href="services.php" rel="np"><?php echo $Services['Services']; ?></a>
+            	<a href="services" rel="np"><?php echo $Services['Services']; ?></a>
 				<span class="breadcrumb-arrow"></span>
           	</li>
           	<li class="last">
-            	<a href="search.php" rel="np"><?php echo $Ind['Ind2']; ?></a>
+            	<a href="search" rel="np"><?php echo $Ind['Ind2']; ?></a>
           	</li>
         	</ol>
       	</div>
@@ -90,16 +90,16 @@ _gaq.push(['_trackPageLoadTime']);
             	<?php 
             	if (!$error){
             	 echo '<ul class="dynamic-menu" id="menu-search">
-              	<li><a href="search.php?search='.$term.'"><span class="arrow">'.$search['summ'].'</span></a></li>';
-              	if ($num_char>0){ echo '<li><a href="search_c.php?search='.$term.'"><span class="arrow">'.$status['chars'].' ('.$num_char.')'.'<span></span></span></a></li>';}
-	              if ($num_guild>0){ echo '<li><a href="search_g.php?search='.$term.'"><span class="arrow">'.$guild['Guilds'].' ('.$num_guild.')'.'<span></span></span></a></li>';}
-               	if ($num_arena>0){ echo '<li><a href="search_a.php?search='.$term.'"><span class="arrow">'.$arena['Teams'].' ('.$num_arena.')'.'<span></span></span></a></li>';}
+              	<li><a href="search?search='.$term.'"><span class="arrow">'.$search['summ'].'</span></a></li>';
+              	if ($num_char>0){ echo '<li><a href="search_c?search='.$term.'"><span class="arrow">'.$status['chars'].' ('.$num_char.')'.'<span></span></span></a></li>';}
+	              if ($num_guild>0){ echo '<li><a href="search_g?search='.$term.'"><span class="arrow">'.$guild['Guilds'].' ('.$num_guild.')'.'<span></span></span></a></li>';}
+               	if ($num_arena>0){ echo '<li><a href="search_a?search='.$term.'"><span class="arrow">'.$arena['Teams'].' ('.$num_arena.')'.'<span></span></span></a></li>';}
                	if ($num_forum>0){ echo '<li class="item-active"><a href=""><span class="arrow">'.$Forums['Forums'].' ('.$num_forum.')'.'<span></span></span></a></li>';}
             	 echo '</ul>';} ?>
             </div>  
           	<div class="search-right">
             	<div class="search-header">
-              	<form action="<?php echo 'search.php?search='.$term; ?> method="get" class="search-form">
+              	<form action="<?php echo 'search?search='.$term; ?> method="get" class="search-form">
               	<div>
                 	<input id="search-page-field" type="text" name="search" maxlength="200" tabindex="2" value="" />
                 	<button class="ui-button button1" type="submit"><span><span><?php echo $Ind['Ind2']; ?></span></span></button>
@@ -141,7 +141,7 @@ _gaq.push(['_trackPageLoadTime']);
                 	<ul class="ui-pagination">
                 	<?php
                 	if (!$error){
-                  pagination($page,$num_pages,$term,'search_f.php',$ChatB['ChatB5'],$search['prev']);}
+                  pagination($page,$num_pages,$term,'search_f',$ChatB['ChatB5'],$search['prev']);}
                   ?>
                 	</ul>
                	</div>
@@ -279,7 +279,7 @@ Core.load("/wow/static/local-common/js/third-party/jquery-ui-1.8.6.custom.min.js
 Core.load("/wow/static/local-common/js/search.js?v35");
 Core.load("/wow/static/local-common/js/login.js?v35", false, function() {
 if (typeof Login !== 'undefined') {
-Login.embeddedUrl = '<?php echo $website['root'];?>loginframe.php';
+Login.embeddedUrl = '<?php echo $website['root'];?>loginframe';
 }
 });
 //]]>

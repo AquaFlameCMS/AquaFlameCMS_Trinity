@@ -3,7 +3,7 @@ require_once("../configs.php");
 $page_cat = "gamesncodes";
 // Check, if username session is NOT set then this page will jump to login page
 if (!isset($_SESSION['username'])) {
-        header('Location: '.$website['root'].'account_log.php');		
+        header('Location: '.$website['root'].'account_log');		
 }
 ?>
 
@@ -176,7 +176,7 @@ _gaq.push(['_trackPageLoadTime']);
 								</div>
 							';
 							
-							echo '<meta http-equiv="refresh" content="3;url=vote.php"/>';
+							echo '<meta http-equiv="refresh" content="3;url=vote"/>';
 							
 							$error = 1;
 						

@@ -42,15 +42,15 @@ try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
       	<div class="content-trail">
         	<ol class="ui-breadcrumb">
           	<li>
-            	<a href="index.php" rel="np"><?php echo $website['title']; ?></a>
+            	<a href="index" rel="np"><?php echo $website['title']; ?></a>
           	<span class="breadcrumb-arrow"></span>
 			</li>
           	<li>
-            	<a href="services.php" rel="np"><?php echo $Services['Services']; ?></a>
+            	<a href="services" rel="np"><?php echo $Services['Services']; ?></a>
 				<span class="breadcrumb-arrow"></span>
           	</li>
           	<li class="last">
-            	<a href="search.php" rel="np"><?php echo $Ind['Ind2']; ?></a>
+            	<a href="search" rel="np"><?php echo $Ind['Ind2']; ?></a>
           	</li>
         	</ol>
       	</div>
@@ -63,16 +63,16 @@ try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
             	<?php 
             	if (!$error){
             	 echo '<ul class="dynamic-menu" id="menu-search">
-              	<li class=""><a href="search.php?search='.$term.'"><span class="arrow">'.$search['summ'].'</span></a></li>';
-              	if ($num_char>0){ echo '<li class="item-active"><a href="search_c.php?search='.$term.'"><span class="arrow">'.$status['chars'].' ('.$num_char.')'.'<span></span></span></a></li>';}
-	              if ($num_guild>0){ echo '<li><a href="search_g.php?search='.$term.'"><span class="arrow">'.$guild['Guilds'].' ('.$num_guild.')'.'<span></span></span></a></li>';}
-               	if ($num_arena>0){ echo '<li><a href="search_a.php?search='.$term.'"><span class="arrow">'.$arena['Teams'].' ('.$num_arena.')'.'<span></span></span></a></li>';}
-               	if ($num_forum>0){ echo '<li><a href="search_f.php?search='.$term.'"><span class="arrow">'.$Forums['Forums'].' ('.$num_forum.')'.'<span></span></span></a></li>';}
+              	<li class=""><a href="search?search='.$term.'"><span class="arrow">'.$search['summ'].'</span></a></li>';
+              	if ($num_char>0){ echo '<li class="item-active"><a href="search_c?search='.$term.'"><span class="arrow">'.$status['chars'].' ('.$num_char.')'.'<span></span></span></a></li>';}
+	              if ($num_guild>0){ echo '<li><a href="search_g?search='.$term.'"><span class="arrow">'.$guild['Guilds'].' ('.$num_guild.')'.'<span></span></span></a></li>';}
+               	if ($num_arena>0){ echo '<li><a href="search_a?search='.$term.'"><span class="arrow">'.$arena['Teams'].' ('.$num_arena.')'.'<span></span></span></a></li>';}
+               	if ($num_forum>0){ echo '<li><a href="search_f?search='.$term.'"><span class="arrow">'.$Forums['Forums'].' ('.$num_forum.')'.'<span></span></span></a></li>';}
             	 echo '</ul>';} ?>
             </div>  
           	<div class="search-right">
             	<div class="search-header">
-              	<form action="<?php echo 'search.php?search='.$term ?>" method="get" class="search-form">
+              	<form action="<?php echo 'search?search='.$term ?>" method="get" class="search-form">
               	<div>
                 	<input id="search-page-field" type="text" name="search" maxlength="200" tabindex="2" value="" />
                 	<button class="ui-button button1" type="submit"><span><span><?php echo $Ind['Ind2']; ?></span></span></button>
@@ -91,7 +91,7 @@ try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
                 	<ul class="ui-pagination">
                 	<?php
                 	if (!$error){
-                  pagination($page,$num_pages,$term,'search_c.php',$ChatB['ChatB5'],$search['prev']);}
+                  pagination($page,$num_pages,$term,'search_c',$ChatB['ChatB5'],$search['prev']);}
                   ?>
                 	</ul>
                	</div>
@@ -122,7 +122,7 @@ try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
                     echo '<tbody>';
                       while ($row = mysql_fetch_array($result)) {        //Echo list of characters
                         echo '<tr class="row1">
-                        	<td><a href="" class="item-link color-c9"><span class="icon-frame frame-18"><img src="images/postavatar.jpg" alt="" width="18" height="18" /></span><strong><a href="advanced.php?name='.$row["name"].'">'.$row["name"].'</a></strong></a></td>
+                        	<td><a href="" class="item-link color-c9"><span class="icon-frame frame-18"><img src="images/postavatar.jpg" alt="" width="18" height="18" /></span><strong><a href="advanced?name='.$row["name"].'">'.$row["name"].'</a></strong></a></td>
                          	<td class="align-center">'.$row["level"].'</td>
                         	<td class="align-center"><span class="icon-frame frame-14 " data-tooltip="'.$row['race'].'"><img src="wow/static/images/icons/race/'.$row['race'].'-'.$row['gender'].'.gif" alt="" width="14" height="14" /></span></td>
                         	<td class="align-center"><span class="icon-frame frame-14 " data-tooltip=""><img src="wow/static/images/icons/class/'.$row["class"].'.gif" alt="" width="14" height="14" /></span></td>
@@ -147,7 +147,7 @@ try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
                 	<ul class="ui-pagination">
                 	<?php
                 	if (!$error){
-                  pagination($page,$num_pages,$term,'search_c.php',$ChatB['ChatB5'],$search['prev']);}
+                  pagination($page,$num_pages,$term,'search_c',$ChatB['ChatB5'],$search['prev']);}
                   ?>
                 	</ul>
                	</div>
@@ -283,7 +283,7 @@ Core.load("wow/static/local-common/js/third-party/jquery-ui-1.8.6.custom.min.js"
 Core.load("wow/static/local-common/js/search.js");
 Core.load("wow/static/local-common/js/login.js", false, function() {
 if (typeof Login !== 'undefined') {
-Login.embeddedUrl = '<?php echo $website['root'];?>loginframe.php';
+Login.embeddedUrl = '<?php echo $website['root'];?>loginframe';
 }
 });
 //]]>

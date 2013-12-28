@@ -140,7 +140,7 @@ if(isset($_POST['submit']))
 		echo '<p align="center"><font color="green"><strong>Succes!</strong></font><br/>';
 		echo "<strong>You can now change your Character Race logining ingame.</strong>";
 		echo '</p>';
-		echo '<meta http-equiv="refresh" content="2;url=../account_man.php"/>';
+		echo '<meta http-equiv="refresh" content="2;url='.$website['root'].'account/"/>';
 
 	}else{
 	  echo '<p align="center"><font color="red"><strong>ERROR</strong></font><br/>';
@@ -148,7 +148,7 @@ if(isset($_POST['submit']))
 			echo $error . '<br>';
 		}
 		echo '</p>';
-		echo '<meta http-equiv="refresh" content="2;url=change_race.php"/>';
+		echo '<meta http-equiv="refresh" content="2;url=change_race"/>';
 
 	}
 
@@ -212,7 +212,7 @@ else{
 		<span><span><?php echo $race['7']; ?></span></span>
 		</button>
 		
-		<a class="ui-cancel" href="../account_man.php" tabindex="1"><span><?php echo $race['8']; ?></span></a>
+		<a class="ui-cancel" href="<?php echo $website['root']; ?>account/" tabindex="1"><span><?php echo $race['8']; ?></span></a>
 	</fieldset>
 
 </form>

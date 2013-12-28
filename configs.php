@@ -204,7 +204,7 @@ if($page_cat != 'pre')
 $maintenance = false;
 if ($maintenance == true) {
     if (!isset($bucle_mant)) {
-        header('Location: '.$website['address'].''.$website['root'].'maintenance.php');
+        header('Location: '.$website['address'].''.$website['root'].'maintenance');
     }
 } else {
     

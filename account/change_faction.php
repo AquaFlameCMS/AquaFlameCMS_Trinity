@@ -2,7 +2,7 @@
 include("../configs.php");
 $page_cat = "security";
 if (!isset($_SESSION['username'])) {
-        header('Location: '.$website['root'].'account_log.php');		
+        header('Location: '.$website['root'].'account_log');		
 }
 ?>
 
@@ -141,7 +141,7 @@ if(isset($_POST['submit']))
 		echo '<p align="center"><font color="green"><strong>Succes!</strong></font><br/>';
 		echo "<strong>You can now change your Character Faction logining ingame.</strong>";
 		echo '</p>';
-		echo '<meta http-equiv="refresh" content="2;url=../account_man.php"/>';
+		echo '<meta http-equiv="refresh" content="2;url='.$website['root'].'account/"/>';
 
 	}else{
 	  echo '<p align="center"><font color="red"><strong>ERROR</strong></font><br/>';
@@ -149,7 +149,7 @@ if(isset($_POST['submit']))
 			echo $error . '<br>';
 		}
 		echo '</p>';
-		echo '<meta http-equiv="refresh" content="2;url=change_faction.php"/>';
+		echo '<meta http-equiv="refresh" content="2;url=change_faction"/>';
 
 	}
 
@@ -213,7 +213,7 @@ else{
 		<span><span><?php echo $faction['7']; ?></span></span>
 		</button>
 		
-		<a class="ui-cancel" href="../account_man.php" tabindex="1"><span><?php echo $faction['8']; ?></span></a>
+		<a class="ui-cancel" href="<?php echo $website['root']; ?>account/" tabindex="1"><span><?php echo $faction['8']; ?></span></a>
 	</fieldset>
 
 </form>

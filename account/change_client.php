@@ -2,7 +2,7 @@
 include("../configs.php");
 $page_cat = "settings";
 // Check, if username session is NOT set then this page will jump to login page
-if (!isset($_SESSION['username'])) { header('Location: '.$website['root'].'account_log.php'); } ?>
+if (!isset($_SESSION['username'])) { header('Location: '.$website['root'].'account_log'); } ?>
 
 <!doctype html>
 <html lang="en-gb">
@@ -86,7 +86,7 @@ if (isset($_POST['change'])){
     echo '<div class="errors" align="center"><font color="red">An error has ocurred during the conection with the database!</font><br><br />';
     echo '<div class="errors" align="center">Please try again later or contact with the administration support.<br><br />';
   }
-  echo '<meta http-equiv="refresh" content="4;url=account_man.php"/>';
+  echo '<meta http-equiv="refresh" content="4;url='.$website['root'].'account/"/>';
 }else{
 
   $expansion = mysql_real_escape_string($_GET['client']);

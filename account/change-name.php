@@ -126,7 +126,7 @@ if(isset($_POST['submit']))
 	
 		$change = mysql_query("UPDATE $server_cdb.characters SET name = '".$new_name."' WHERE guid = '".$character."'");
 		echo "Your character's name is now <strong>".$new_name."</strong>.";
-		echo '<meta http-equiv="refresh" content="2;url=change-name.php"/>';
+		echo '<meta http-equiv="refresh" content="2;url=change-name"/>';
 	
 	}else{
 	  echo '<p align="center"><font color="red"><strong>ERROR</strong></font><br/>';
@@ -134,7 +134,7 @@ if(isset($_POST['submit']))
 			echo $error . '<br>';
 		}
 		echo '</p>';
-		echo '<meta http-equiv="refresh" content="2;url=change-name.php"/>';
+		echo '<meta http-equiv="refresh" content="2;url=change-name"/>';
 		
 	}
 	

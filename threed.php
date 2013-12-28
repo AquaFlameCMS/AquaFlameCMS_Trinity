@@ -42,13 +42,13 @@ try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
 <div class="content-trail">
 <ol class="ui-breadcrumb">
 <li>
-<a href="index.php" rel="np">
+<a href="<?php echo $website['root']; ?>" rel="np">
 <?php echo $website['title']; ?>
 </a>
 <span class="breadcrumb-arrow"></span>
 </li>
 <li>
-<a href="services.php" rel="np">
+<a href="services" rel="np">
 Services
 </a>
 <span class="breadcrumb-arrow"></span>
@@ -58,8 +58,8 @@ Services
 <?php echo $character->getObjectInfo()->name;?> @ <?php echo @$name_realm1['realm']; ?>
 </a>
 </li>
-	<li><a href="index.php" rel="np"><?php echo $website['title']; ?></a></li>
-	<li><a href="services.php" rel="np">Services</a></li>
+	<li><a href="index" rel="np"><?php echo $website['title']; ?></a></li>
+	<li><a href="services" rel="np">Services</a></li>
 	<li class="last"><a href="" rel="np"><?php echo $character->getObjectInfo()->name;?> @ <?php echo @$name_realm1['realm']; ?></a></li>
 </ol>
 </div>
@@ -156,7 +156,7 @@ Services
 	<span class="arrow"><span class="icon">Professions</span></span></a>
 	</li>-->
 	<li class="">
-	<a href="reputation.php" class="" rel="np">
+	<a href="reputation" class="" rel="np">
 	<span class="arrow"><span class="icon"><?php echo $armory['reputation']; ?></span></span></a>
 	</li><!--
 	<li class="">
@@ -179,9 +179,9 @@ Services
 	<div class="summary-top-right">
 	<ul class="profile-view-options" id="profile-view-options-summary">
 	<li class="current">
-	<a href="threed.php?name=<?php echo $character->getObjectInfo()->name;?>" rel="np" class="threed"><?php echo $armory['3d']; ?></a></li>
+	<a href="threed?name=<?php echo $character->getObjectInfo()->name;?>" rel="np" class="threed"><?php echo $armory['3d']; ?></a></li>
 	<li>
-	<a href="advanced.php?name=<?php echo $character->getObjectInfo()->name;?>" rel="np" class="advanced"><?php echo $armory['advanced']; ?></a></li>
+	<a href="advanced?name=<?php echo $character->getObjectInfo()->name;?>" rel="np" class="advanced"><?php echo $armory['advanced']; ?></a></li>
 	</ul>
 	<div class="summary-averageilvl">
 	<div class="rest"><?php echo $armory['itemlevel']; ?><br/>(<span class="equipped">20</span> <?php echo $armory['equipped']; ?>)
@@ -1603,7 +1603,7 @@ Core.load("<?php echo $website['root']; ?>wow/static/local-common/js/third-party
 Core.load("<?php echo $website['root']; ?>wow/static/local-common/js/search.js");
 Core.load("<?php echo $website['root']; ?>wow/static/local-common/js/login.js", false, function() {
 if (typeof Login !== 'undefined') {
-Login.embeddedUrl = '<?php echo $website['root'];?>loginframe.php';
+Login.embeddedUrl = '<?php echo $website['root'];?>loginframe';
 }
 });
 //]]>

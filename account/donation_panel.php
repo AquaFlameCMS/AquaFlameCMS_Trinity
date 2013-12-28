@@ -3,7 +3,7 @@ include("../configs.php");
 $page_cat = 'gamesncodes';
 // Check, if username session is NOT set then this page will jump to login page
 if (!isset($_SESSION['username'])) {
-        header('Location: '.$website['root'].'account_log.php');		
+        header('Location: '.$website['root'].'account_log');		
 }
 ?>
 
@@ -94,7 +94,7 @@ _gaq.push(['_trackPageLoadTime']);
 						<span class="data-grid-member data-grid-member-first " id="SMS">
 						<span class="data-grid-member-contents">
 						<span class="product-thumbnail glow-shadow border-3">
-						<a href="<?php echo $website['root']; ?>sms.php"><img src="../wow/static/local-common/images/donate/sms.png" alt="Donate via SMS" width="115" height="163" />
+						<a href="<?php echo $website['root']; ?>account/sms"><img src="../wow/static/local-common/images/donate/sms.png" alt="Donate via SMS" width="115" height="163" />
 						</a>
 						</span>
 						<span class="product-details">

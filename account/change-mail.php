@@ -3,7 +3,7 @@ include("../configs.php");
 $page_cat = "settings";
 // Check, if username session is NOT set then this page will jump to login page
 if (!isset($_SESSION['username'])) {
-        header('Location: '.$website['root'].'account_log.php');		
+        header('Location: '.$website['root'].'account_log');		
 }
 ?>
 
@@ -102,17 +102,17 @@ if(isset($_POST['submit']))
         $result = mysql_query($query) or die(mysql_error());
         $numrows = mysql_num_rows($result);
 
-        if($newMail != $newMail1) { die("<p align='center'><font color='red'>".$Reg['Reg6']."</font><br><br>".$Mail['7']."<br><br>".$Reg['Reg8']."</p><p align='center'><a href='change-mail.php'><button class='ui-button button1' type='submit' value='back' tabindex='1'><span><span>".$re['back']."</span></span></button></a></p>"); }
+        if($newMail != $newMail1) { die("<p align='center'><font color='red'>".$Reg['Reg6']."</font><br><br>".$Mail['7']."<br><br>".$Reg['Reg8']."</p><p align='center'><a href='change-mail'><button class='ui-button button1' type='submit' value='back' tabindex='1'><span><span>".$re['back']."</span></span></button></a></p>"); }
 
-        if(!valid_email($newMail)){die("<p align='center'><font color='red'>".$Reg['Reg6']."</font><br><br>".$Mail['8']."<br><br>".$Reg['Reg8']."</p><p align='center'><a href='change-mail.php'><button class='ui-button button1' type='submit' value='back' tabindex='1'><span><span>".$re['back']."</span></span></button></a></p>"); }
+        if(!valid_email($newMail)){die("<p align='center'><font color='red'>".$Reg['Reg6']."</font><br><br>".$Mail['8']."<br><br>".$Reg['Reg8']."</p><p align='center'><a href='change-mail'><button class='ui-button button1' type='submit' value='back' tabindex='1'><span><span>".$re['back']."</span></span></button></a></p>"); }
 
-        if($numrows == 0) { die("<p align='center'><font color='red'>".$Reg['Reg6']."</font><br><br>".$Mail['9']."<br><br>".$Reg['Reg15']."</p><p align='center'><a href='change-mail.php'><button class='ui-button button1' type='submit' value='back' tabindex='1'><span><span>".$re['back']."</span></span></button></a></p>"); }
+        if($numrows == 0) { die("<p align='center'><font color='red'>".$Reg['Reg6']."</font><br><br>".$Mail['9']."<br><br>".$Reg['Reg15']."</p><p align='center'><a href='change-mail'><button class='ui-button button1' type='submit' value='back' tabindex='1'><span><span>".$re['back']."</span></span></button></a></p>"); }
 
         $query = "UPDATE account SET email = '".$newMail."' WHERE username = '".$eaccount."'";
         $result = mysql_query($query) or die(mysql_error());
         
 
-        echo "<p align='center'>".$Mail['10']."<br><br>'<b><font color='green'>".$account."</font></b>'<br><br>".$Reg['Reg17']."<p align='center'><a href='account_man.php'><button class='ui-button button1' type='submit' value='back' tabindex='1'><span><span>".$re['back']."</span></span></button></a></p>";
+        echo "<p align='center'>".$Mail['10']."<br><br>'<b><font color='green'>".$account."</font></b>'<br><br>".$Reg['Reg17']."<p align='center'><a href='".$website['root']."account/'><button class='ui-button button1' type='submit' value='back' tabindex='1'><span><span>".$re['back']."</span></span></button></a></p>";
         //close mysql connection
         mysql_close($con);
 }
@@ -151,23 +151,13 @@ else{
 <input type="text" id="confirmMail" name="newMail1" value="" class=" input border-5 glow-shadow-2" maxlength="50" tabindex="1" />
 </div>
 <fieldset class="ui-controls " >
-<button
-class="ui-button button1 "
-type="submit"
-name="submit"
-
-id="settings-submit"
-value="Change Mail"
-tabindex="1">
+<button class="ui-button button1 " type="submit" name="submit" id="settings-submit" value="Change Mail" tabindex="1">
 <span>
 <span><?php echo $Reg['Reg35']; ?></span>
 </span>
 </button>
-<a class="ui-cancel "
-href="account_man.php"
-tabindex="1">
-<span>
-<?php echo $Reg['Reg36']; ?></span>
+<a class="ui-cancel" href="<?php echo $website['root']; ?>account/" tabindex="1">
+<span><?php echo $Reg['Reg36']; ?></span>
 </a>
 </fieldset>
 </form>

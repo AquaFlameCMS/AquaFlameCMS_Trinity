@@ -11,7 +11,7 @@ include("../configs.php");
 		');
 	}
   //To show the images pop-up
-  $path = "../news/";       //The images path
+  $path = "../wow/static/images/news/";       //The images path
   $dir = opendir($path);   //Open path
   $img_total=0;
   while ($elemento = readdir($dir))   //read content
@@ -143,7 +143,7 @@ function changeVal(val){
   var  frm_element = document.getElementById('image'); //change the image input box value
   frm_element.value = val;                            //And the preview image
   var imgL = document.getElementById('imgLoad');
-  imgL.src = '../news/' + val + '.jpg';
+  imgL.src = '../wow/static/images/news/' + val + '.jpg';
 }
 
 function preview(img,event){
@@ -186,7 +186,7 @@ function preview(img,event){
             <p>Image<br />
             <input id="image" name="image" type="text" value="<?php echo $new['image']; ?>" class="reg" onfocus="pop('open');" /> 
             </p>
-            <img src="<?php echo '../news/'.$new['image'].'.jpg'; ?>" id="imgLoad" />
+            <img src="<?php echo '../wow/static/images/news/'.$new['image'].'.jpg'; ?>" id="imgLoad" />
             <div  class="pop-image" id="pop" name="pop" onblur="pop('blur');" tabindex="1">
               <div class="note">
                 <table border=0>

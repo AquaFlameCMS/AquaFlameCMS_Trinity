@@ -18,6 +18,11 @@
 # Disable directories listing in browser
 Options -Indexes
 
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^([^\.\?]+)(\?.*)?$ $1.php
+
 # Error page 400 401 403 404 500 503
 ErrorDocument 400 /errors/400.php
 ErrorDocument 401 /errors/401.php
