@@ -1,5 +1,5 @@
 <?php
-require_once("configs.php");
+require_once("../configs.php");
 $page_cat = "community";
 ?>
 <!doctype html>
@@ -13,11 +13,11 @@ $page_cat = "community";
 <title><?php echo $website['title']; ?> - <?php $Community['Community']; ?></title>
 <meta name="description" content="<?php echo $website['description']; ?>">
 <meta name="keywords" content="<?php echo $website['keywords']; ?>">
-<link rel="shortcut icon" href="wow/static/local-common/images/favicons/wow.png" type="image/x-icon"/>
-<?php GetStyle(); ?>
-<script src="wow/static/local-common/js/third-party/jquery.js?v46"></script>
-<script src="wow/static/local-common/js/core.js?v46"></script>
-<script src="wow/static/local-common/js/tooltip.js?v46"></script>
+<link rel="shortcut icon" href="../wow/static/local-common/images/favicons/wow.png" type="image/x-icon"/>
+<?php GetCommunityTheme(); ?>
+<script src="../wow/static/local-common/js/third-party/jquery.js?v46"></script>
+<script src="../wow/static/local-common/js/core.js?v46"></script>
+<script src="../wow/static/local-common/js/tooltip.js?v46"></script>
 <!--[if IE 6]> <script type="text/javascript">
 //<![CDATA[
 try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
@@ -27,7 +27,7 @@ try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
 <div id="wrapper">
 <?php
 $page_cat = "community";
-include("header.php");
+include("../header.php");
 ?>
 	<div id="content">
 		<div class="content-top">
@@ -175,21 +175,21 @@ include("header.php");
 											<!-- -->
 											</span>
 											</a>
-											<a href="game/status/arena/2vs2">
+											<a href="../game/status/arena/2vs2">
 											<span class="group-thumbnail thumb-arena-2v2"></span>
 											<span class="group-name">Arena 2v2 </span>
 											<span class="clear">
 											<!-- -->
 											</span>
 											</a>
-											<a href="game/status/arena/3vs3">
+											<a href="../game/status/arena/3vs3">
 											<span class="group-thumbnail thumb-arena-3v3"></span>
 											<span class="group-name">Arena 3v3 </span>
 											<span class="clear">
 											<!-- -->
 											</span>
 											</a>
-											<a href="game/status/arena/5vs5">
+											<a href="../game/status/arena/5vs5">
 											<span class="group-thumbnail thumb-arena-5v5"></span>
 											<span class="group-name">Arena 5v5 </span>
 											<span class="clear">
@@ -263,7 +263,7 @@ include("header.php");
 							</ul>
 						</div>
 					</div>
-					<?php include("panel/connect.php"); ?>
+					<?php include("../panel/connect.php"); ?>
 					<div class="sidebar-module " id="sidebar-blizzard-community">
 						<div class="sidebar-title">
 							<h3 class="category title-blizzard-community">Community Links</h3>
@@ -358,6 +358,6 @@ include("header.php");
 			</div>
 		</div>
 	</div>
-	<?php include("footer.php"); ?>
+	<?php include("../footer.php"); ?>
 </body>
 </html>

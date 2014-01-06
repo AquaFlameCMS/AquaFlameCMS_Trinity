@@ -185,7 +185,7 @@ if (!isset($_SESSION['username'])) {
                     mysql_select_db($server_adb, $connection_setup) or die(mysql_error());
                     $accdel = mysql_query("DELETE FROM account WHERE username = '" . $accountName . "'");
                     echo '<div class="errors" align="center"><font color="red">' . $re['error1'] . '</font><br><br />';
-                    echo '<a href="register.php"><button class="ui-button button1"  id="back" tabindex="1" /><span><span>' . $re['back'] . '</span></span></button></a></div>';
+                    echo '<a href="register"><button class="ui-button button1"  id="back" tabindex="1" /><span><span>' . $re['back'] . '</span></span></button></a></div>';
                 }
             }
         }

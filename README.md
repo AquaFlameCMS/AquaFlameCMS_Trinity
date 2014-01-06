@@ -13,7 +13,7 @@
 
 		= AquaFlame Project -- General information =
 
-	Copyright (C) 2013 (http://aquaflame.org) AquaFlame.NET
+	Copyright (C) 2014 (http://aquaflame.org) AquaFlame.NET
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
