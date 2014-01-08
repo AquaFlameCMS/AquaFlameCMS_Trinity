@@ -13,14 +13,14 @@ $page_cat = "account";
 <meta name="description" content="<?php echo $website['description']; ?>">
 <meta name="keywords" content="<?php echo $website['keywords']; ?>">
 <link rel="shortcut icon" href="wow/static/local-common/images/favicons/wow.png" type="image/x-icon"/>
-<link rel="stylesheet" href="wow/static/local-common/css/common.css?v22"/>
-<link rel="shortcut icon" href="wow/static/_themes/bam/img/favicon.ico" type="image/x-icon"/>
-<link rel="stylesheet" href="wow/static/_themes/bam/css/master.css?v1"/>
-<link rel="stylesheet" href="wow/static/_themes/bam/css/_lang/en-gb.css?v1"/>
-<script src="wow/static/local-common/js/third-party/jquery-1.4.4-p1.min.js"></script>
-<script src="wow/static/local-common/js/core.js?v22"></script>
+<link rel="stylesheet" href="<?php echo $website['address']; ?>wow/static/local-common/css/common.css?v22"/>
+<link rel="shortcut icon" href="<?php echo $website['address']; ?>wow/static/_themes/bam/img/favicon.ico" type="image/x-icon"/>
+<link rel="stylesheet" href="<?php echo $website['address']; ?>wow/static/_themes/bam/css/master.css?v1"/>
+<link rel="stylesheet" href="<?php echo $website['address']; ?>wow/static/_themes/bam/css/_lang/en-gb.css?v1"/>
+<script src="<?php echo $website['address']; ?>wow/static/local-common/js/third-party/jquery-1.4.4-p1.min.js"></script>
+<script src="<?php echo $website['address']; ?>wow/static/local-common/js/core.js?v22"></script>
 <script type="text/javascript">
-Core.baseUrl = '/login/en/';
+Core.baseUrl = '<?php echo $website['address']; ?>login/en/';
 </script>
 </head>
 <body class="en-gb">
@@ -61,7 +61,7 @@ Core.baseUrl = '/login/en/';
 				  .loader {
 					width:24px;
 					height:24px;
-					background: url("wow/static/images/loaders/canvas-loader.gif") no-repeat;
+					background: url("<?php echo $website['address']; ?>wow/static/images/loaders/canvas-loader.gif") no-repeat;
 				   }
 				</style>
 				<center>
@@ -81,7 +81,7 @@ Core.baseUrl = '/login/en/';
 				  .loader {
 					width:24px;
 					height:24px;
-					background: url("wow/static/images/loaders/canvas-loader.gif") no-repeat;
+					background: url("<?php echo $website['address']; ?>wow/static/images/loaders/canvas-loader.gif") no-repeat;
 				   }
 				</style>
 				<center>
@@ -131,7 +131,7 @@ Core.baseUrl = '/login/en/';
 				echo "<h3>
 				<font color='green'>".$Log['Log10']."</font></h3>
 				"; echo '
-				<meta http-equiv="refresh" content="2;url=account/" '; } ?>
+				<meta http-equiv="refresh" content="2;url='.$website["root"].'account/" '; } ?>
 				<ul id="help-links">
 					<li class="icon-pass">
 					<a href="<?php echo $website['root']; ?>account/recover-pass-test/"><?php echo $Log['Log11']; ?>
