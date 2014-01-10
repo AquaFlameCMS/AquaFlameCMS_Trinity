@@ -111,7 +111,7 @@ if(isset($_POST['submit']))
 
         $query = "UPDATE account SET sha_pass_hash = '".$enewpass."' WHERE username = '".$eaccount."'";
         $result = mysql_query($query) or die(mysql_error());
-		    $query = "UPDATE account SET v = '0' WHERE username = '".$eaccount."'";
+		$query = "UPDATE account SET v = '0' WHERE username = '".$eaccount."'";
         $result = mysql_query($query) or die(mysql_error());
         $query = "UPDATE account SET s = '0' WHERE username = '".$eaccount."'";
         $result = mysql_query($query) or die(mysql_error());
