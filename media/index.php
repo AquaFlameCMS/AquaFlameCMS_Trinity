@@ -247,7 +247,7 @@
 								<span class="view-all"><span class="arrow"></span><?php echo $Media['AllComics']; ?></span>
 
 								<span class="gallery-icon"></span>
-								<?php echo $Media['Comics']; ?> <span class="total">(<?php echo $comic_count->num_rows; ?>)</span>
+								<?php echo $Media['Comics']; ?> <span class="total">(<?php echo $media_comic->num_rows; ?>)</span>
 								</a>
 								<div class="section-content">
 								<?php
