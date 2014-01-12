@@ -1,0 +1,133 @@
+
+#content .content-top { background: url("../../images/pvp/bg.jpg") no-repeat; }
+#content .content-header .tab-menu { padding-top: 10px; }
+
+.win { color: #2dd300; }
+.loss { color: #db0000; }
+.rating { color: #9E3403; font: bold 12px/100% "Arial Black", Arial, Verdana, sans-serif; font-weight:900; }
+.arrow-up,
+.arrow-down,
+.arrow-new { width: 10px; height: 11px; margin-left: 5px; display: inline-block; background: url("../../images/icons/arrow-up-down.gif") no-repeat; }
+.arrow-down { background-position: 0 -15px; }
+.arrow-new { background-position: 0 -30px; }
+.no-results { padding: 25px; text-align: center; color: #C09A67; }
+.percent { color: #71401F; }
+.view-all { text-align: right; padding: 5px; }
+.table .ranking { width: 50px; text-align: center; }
+
+/* elements */
+.pvp { min-height: 900px; }
+.pvp-left { float: left; width: 230px; position: relative; }
+.pvp-left .slide-container,
+.pvp-left .dynamic-menu { position: absolute; top: 0; left: 0; width: 200px; }
+.pvp-right { float: right; width: 760px; background: url("../../images/profile/section-bg.png") no-repeat; }
+
+/* ladders */
+.pvp-ladder .ladder-title { padding: 20px 20px 10px 20px; }
+.pvp-ladder .ladder-title span { color: #855B47; }
+.pvp-ladder .ladder-title .category { font-size: 26px; }
+.pvp-ladder .player-icons { float: right; margin-left: 5px; }
+
+#ladders-loading { background: url("../../images/loaders/canvas-loader.gif") 50% 50% no-repeat; padding: 50px; }
+#ladders { display: none; }
+
+#pvp-filters { padding: 0 20px; background: none; position: relative; -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none; }
+#pvp-filters .filter.checkbox label { display: inline-block; }
+#pvp-filters #current-filters { padding-bottom: 15px; }
+#pvp-filters #current-filters span img { vertical-align: middle; }
+#pvp-filters #current-filters span a { vertical-align: middle; margin: 0 10px 2px 2px; width: 12px; height: 12px; display: inline-block; background: url("../../images/icons/cross-small.gif") no-repeat; }
+#pvp-filters #current-filters strong { color: #F5EBD1; }
+
+#filter-buttons { padding-bottom: 10px; text-align: center; }
+#filter-buttons a { margin: 0 10px; }
+#filter-rating-min,
+#filter-rating-max { width: 40px; }
+#filter-team { width: 200px; }
+#filter-bg,
+#filter-faction { width: 115px; }
+#filter-player { width: 125px; }
+#filter-realm { width: 150px; }
+
+#team-composition p { margin: 0 0 10px 0; }
+#team-composition .filter { margin-right: 10px; padding-right: 17px; position: relative; }
+#team-composition .spec,
+#team-composition .class { width: 115px; }
+#team-composition .spec { margin-top: 2px; }
+#team-composition .remove { display: inline-block; position: absolute; top: 5px; right: 0; width: 12px; height: 12px; background: url("../../images/icons/cross-small.gif") no-repeat; }
+#team-composition #comp-base { padding: 0; }
+#team-composition #comp-base .remove { display: none; }
+#team-composition #comp-add { margin-left: 10px}
+
+#player-spec .class-spec { width: 20%; margin: 0 0 15px 0; }
+#player-spec .class-spec label { display: inline-block; }
+#player-spec .class-spec .spec { padding-left: 10px }
+#player-spec .class-spec .spec input { vertical-align: top; }
+#player-spec .class-spec .spec label { width: 110px; }
+#player-spec .class-spec .all-spec input { vertical-align: top; }
+#player-spec .class-spec .all-spec label { font-weight: bold; width: 115px; }
+
+/* summary */
+.pvp-summary .pvp-right { padding: 20px; width: 720px; }
+.pvp-summary .category { margin-bottom: 15px; }
+.pvp-summary .top-title .category { margin-right: 15px; display: inline-block; }
+.pvp-summary .column { margin-left: 7px; float: left; width: 235px; background: url("../../images/pvp/top-team.jpg") no-repeat; }
+.pvp-summary .column.first-child,
+.pvp-summary .column:first-child { margin: 0; }
+.pvp-summary .column h2 { height: 50px; padding: 13px 0 0 15px; border-bottom: 1px solid #180b06; }
+.pvp-summary .column h2 a { color: #682b05; font: bold 36px/100% "Arial Black", Arial, Verdana, sans-serif; font-weight:900; letter-spacing: -2px;  }
+.pvp-summary .column h2 a:hover { color: #fff; }
+.pvp-summary .column ul li { height: 93px; padding: 15px 15px 0 40px; position: relative; border-top: 1px solid #60270e; border-bottom: 1px solid #1a0b04; }
+.pvp-summary .column ul .name { font-size: 14px; word-wrap: break-word; }
+.pvp-summary .column ul .ranking { color: #682b05; position: absolute; top: 15px; left: 15px; font-size: 22px; line-height: 100%; }
+.pvp-summary .column ul .realm { color: #71401F; padding-bottom: 3px; }
+.pvp-summary .column ul .members { padding-top: 2px; }
+.pvp-summary .column ul .rating-realm { margin: 3px 0; vertical-align: middle }
+.pvp-summary .column ul .first .ranking { font-size: 36px; left: 10px; }
+.pvp-summary .column ul .second .ranking { font-size: 28px; left: 12px; }
+.pvp-summary .column ul .second { border-top: 1px solid #4a200e; }
+.pvp-summary .column ul .third { border-top: 1px solid #3b1d0e; }
+.pvp-summary .column table { width: 100%; }
+.pvp-summary .column table td { padding: 5px; }
+.pvp-summary .column .all { padding: 6px 10px; font-size: 10px; display: block; text-align: right; border-top: 1px solid #2a180e; }
+
+/* columns */
+.popular .column-left { width: 375px; float: left; margin-bottom: 25px; }
+.popular .column-right { width: 320px; float: right; margin-bottom: 25px; }
+.popular .category { font-size: 20px; border-bottom: 2px solid #40200d; padding-bottom: 6px; }
+
+/* top teams/bgs */
+.top-teams { margin-bottom: 25px }
+.top-bgs .table tr td { padding: 5px; }
+
+/* class specs */
+.class-specs li { padding: 5px; height: 20px; border-bottom: 1px solid #2a180e; }
+.class-specs li .class,
+.class-specs li .tree { display: inline-block; width: 145px; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
+.class-specs li .tree { width: 125px; }
+.class-specs li .percent { float: right; }
+.class-specs li .icon-frame,
+.class-specs li img { vertical-align: middle; }
+
+/* team comps */
+.team-comps .comp { float: left; padding-left: 5px; border-left: 1px solid #2a180e; }
+.team-comps .comp h3 { margin-top: 5px; text-align: center; color: #682b05; font-size: 16px; color: #fff; }
+.team-comps .comp li { padding: 0 0 0 5px; height: 30px; line-height: 30px; margin-bottom: 1px; }
+.team-comps .comp li .percent { margin-left: 5px }
+.team-comps .comp li img { vertical-align: middle; }
+.team-comps .comp.first-child,
+.team-comps .comp:first-child { margin: 0; border: none; }
+.team-comps .comp.comp-2v2 { width: 90px; }
+.team-comps .comp.comp-3v3 { width: 115px; }
+.team-comps .comp.comp-5v5 { width: 150px; }
+
+/* recent topics */
+.recent-topics li { padding: 6px; border-bottom: 1px solid #2E2218; }
+.recent-topics li .title { display: block; font-weight: bold; }
+.recent-topics li .desc { color: #71401F; font-size: 11px; }
+.recent-topics li .forum { color: #7E3406; }
+.recent-topics li a:hover { color: #fff; }
+.recent-topics.loading { background: url("../../images/loaders/canvas-loader.gif") 50% 50% no-repeat; padding: 50px; }
+
+/* ie */
+.ie .pvp-summary .top-title .category { display: inline; float: left; }
+.ie7 .class-specs li .icon-frame { margin-right: 5px; }

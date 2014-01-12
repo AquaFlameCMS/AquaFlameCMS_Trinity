@@ -160,7 +160,7 @@ include("../header.php");
 										<a href="#" class="leaderboard-content-title">PvP Mode</a>
 										<span class="leaderboard-content-desc">View the current Rated Battleground and Arena ladders.</span>
 										<div class="group">
-											<a href="#">
+											<a href="pvp/top-honor">
 											<span class="group-thumbnail thumb-pvp-overview"></span>
 											<span class="group-name">PvP Overview <span class="group-desc">Top players, specs, and teams</span>
 											</span>
@@ -175,21 +175,21 @@ include("../header.php");
 											<!-- -->
 											</span>
 											</a>
-											<a href="../game/status/arena/2vs2">
+											<a href="pvp/2v2">
 											<span class="group-thumbnail thumb-arena-2v2"></span>
 											<span class="group-name">Arena 2v2 </span>
 											<span class="clear">
 											<!-- -->
 											</span>
 											</a>
-											<a href="../game/status/arena/3vs3">
+											<a href="pvp/3v3">
 											<span class="group-thumbnail thumb-arena-3v3"></span>
 											<span class="group-name">Arena 3v3 </span>
 											<span class="clear">
 											<!-- -->
 											</span>
 											</a>
-											<a href="../game/status/arena/5vs5">
+											<a href="pvp/5v5">
 											<span class="group-thumbnail thumb-arena-5v5"></span>
 											<span class="group-name">Arena 5v5 </span>
 											<span class="clear">
