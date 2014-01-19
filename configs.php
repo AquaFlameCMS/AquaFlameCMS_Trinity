@@ -172,24 +172,18 @@ $website['root']        = "/AquaFlameCMS_Trinity/";
 | For Example
 | Change true(prepage mode)/false(normal mode) to disable/enable pre page
 |        true or false
-|
+|*/
 
-if($page_cat != 'pre')
-{
-    $pre = false;
-    if ($pre == true) 
-    {
-        if(!isset($_COOKIE['prepage']))
-        {
-            $pre_cookie = 'viewed';
-            setcookie("prepage", $pre_cookie, time()+3600*60*24);
-            
-            header('Location: pre.php');
-        }
+$pre = false;
+if ($pre == true) {
+    if (!isset($_COOKIE['prepage'])) {
+        $pre_cookie = 'viewed';
+        setcookie("prepage", $pre_cookie, time() + 3600 * 60 * 24);
+        
+        header('Location: ' . $website['address'] . '' . $website['root'] . 'pre.php');
     }
 }
 
-*/
 /*
 |--------------------------------------------------------------------------
 | Maintenance Page
