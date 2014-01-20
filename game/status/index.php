@@ -201,14 +201,14 @@ try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
 							echo'
 						</td>
 						<td class="name">
-							<a data-tooltip="'.$Status['ClickOnline'].'" href="online?realm='.$realm['id'].'">	 	
+							<a data-tooltip="'.$Status['ClickOnline'].'" href="online.php?realm='.$realm['id'].'">	 	
 							<font size="2"><h3 class="Chars">'.$realm['name'].'</h3></font>';
 							echo'
 							</a>
 						</td>
 						
 						<td class="name">
-							<a href="statistics?realm='.$realm['id'].'">
+							<a href="statistics.php?realm='.$realm['id'].'">
 								<span class="icon-frame frame-18 " style="background-image: url(http://eu.media.blizzard.com/wow/icons/18/inv_scroll_12.jpg);"></span>
 								'.$Status['Statistics'].'
 							</a>
