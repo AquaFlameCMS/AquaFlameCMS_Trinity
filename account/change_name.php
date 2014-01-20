@@ -2,7 +2,7 @@
 include("../configs.php");
 $page_cat = "security";
 if (!isset($_SESSION['username'])) {
-        header('Location: '.$website['root'].'account_log');		
+        header('Location: '.$website['root'].'account_log.php');		
 }
 ?>
 

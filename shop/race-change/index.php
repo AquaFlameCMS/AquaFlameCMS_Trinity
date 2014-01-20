@@ -58,7 +58,7 @@ try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
 						<em><?php echo $Shop['shop_25']; ?></em>
 					</div>
 					<div class="button-section">
-						<a class="ui-button button4 button-apply " href="<?php echo $website['root']; ?>account/change_race">
+						<a class="ui-button button4 button-apply " href="<?php echo $website['root']; ?>account/change_race.php">
 						<span>
 						<span><?php echo $Shop['shop_64']; ?></span>
 						</span>
@@ -105,7 +105,7 @@ try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
 							<table class="dynamic-center ">
 							<tr>
 								<td>
-									<a class="ui-button button4 button-apply " href="<?php echo $website['root']; ?>account/change_race">
+									<a class="ui-button button4 button-apply " href="<?php echo $website['root']; ?>account/change_race.php">
 									<span>
 									<span><?php echo $Shop['shop_64']; ?></span>
 									</span>

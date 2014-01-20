@@ -2,7 +2,7 @@
 include("../configs.php");
 $page_cat = "settings";
 // Check, if username session is NOT set then this page will jump to login page
-if (!isset($_SESSION['username'])) { header('Location: '.$website['root'].'account_log'); } ?>
+if (!isset($_SESSION['username'])) { header('Location: '.$website['root'].'account_log.php'); } ?>
 
 <!doctype html>
 <html lang="en-gb">

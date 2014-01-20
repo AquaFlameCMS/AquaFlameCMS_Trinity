@@ -3,7 +3,7 @@ include("../configs.php");
 $page_cat = "settings";
 // Check, if username session is NOT set then this page will jump to login page
 if (!isset($_SESSION['username'])) {
-        header('Location: '.$website['root'].'account_log');		
+        header('Location: '.$website['root'].'account_log.php');		
 }
 ?>
 
@@ -102,11 +102,11 @@ if(isset($_POST['submit']))
         $result = mysql_query($query) or die(mysql_error());
         $numrows = mysql_num_rows($result);
 
-        if($newMail != $newMail1) { die("<p align='center'><font color='red'>".$Reg['Reg6']."</font><br><br>".$Mail['7']."<br><br>".$Reg['Reg8']."</p><p align='center'><a href='change-mail'><button class='ui-button button1' type='submit' value='back' tabindex='1'><span><span>".$re['back']."</span></span></button></a></p>"); }
+        if($newMail != $newMail1) { die("<p align='center'><font color='red'>".$Reg['Reg6']."</font><br><br>".$Mail['7']."<br><br>".$Reg['Reg8']."</p><p align='center'><a href='change-mail.php'><button class='ui-button button1' type='submit' value='back' tabindex='1'><span><span>".$re['back']."</span></span></button></a></p>"); }
 
-        if(!valid_email($newMail)){die("<p align='center'><font color='red'>".$Reg['Reg6']."</font><br><br>".$Mail['8']."<br><br>".$Reg['Reg8']."</p><p align='center'><a href='change-mail'><button class='ui-button button1' type='submit' value='back' tabindex='1'><span><span>".$re['back']."</span></span></button></a></p>"); }
+        if(!valid_email($newMail)){die("<p align='center'><font color='red'>".$Reg['Reg6']."</font><br><br>".$Mail['8']."<br><br>".$Reg['Reg8']."</p><p align='center'><a href='change-mail.php'><button class='ui-button button1' type='submit' value='back' tabindex='1'><span><span>".$re['back']."</span></span></button></a></p>"); }
 
-        if($numrows == 0) { die("<p align='center'><font color='red'>".$Reg['Reg6']."</font><br><br>".$Mail['9']."<br><br>".$Reg['Reg15']."</p><p align='center'><a href='change-mail'><button class='ui-button button1' type='submit' value='back' tabindex='1'><span><span>".$re['back']."</span></span></button></a></p>"); }
+        if($numrows == 0) { die("<p align='center'><font color='red'>".$Reg['Reg6']."</font><br><br>".$Mail['9']."<br><br>".$Reg['Reg15']."</p><p align='center'><a href='change-mail.php'><button class='ui-button button1' type='submit' value='back' tabindex='1'><span><span>".$re['back']."</span></span></button></a></p>"); }
 
         $query = "UPDATE account SET email = '".$newMail."' WHERE username = '".$eaccount."'";
         $result = mysql_query($query) or die(mysql_error());

@@ -2,7 +2,7 @@
 include("../configs.php");
 $page_cat = "media";
 if (!isset($_SESSION['username'])) {
-        header('Location: ../account_log');		
+        header('Location: ../account_log.php');		
 }
 ?>
 <!DOCTYPE html>
@@ -146,13 +146,13 @@ if (isset($_POST['send'])){
     elseif (!($_FILES["file"]["size"] < $_POST['MAX_SIZE'])){
       echo '<div class="errors" align="center"><font color="red" size="6"><strong>Error</strong></font></p>';
       echo '<p class="caption">The file size must be less than 2MB</p>';
-      echo'<a href="send_media"><button class="ui-button button1"  id="back" tabindex="1" /><span><span>'.$re['back'].'</span></span></button></a></div>'; 
+      echo'<a href="send_media.php"><button class="ui-button button1"  id="back" tabindex="1" /><span><span>'.$re['back'].'</span></span></button></a></div>'; 
       $error = true;
     }
     else{
       echo '<div class="errors" align="center"><font color="red" size="6"><strong>Error</strong></font></p>';
       echo '<p class="caption">Invalid File Extension!</p>';
-      echo'<a href="send_media"><button class="ui-button button1"  id="back" tabindex="1" /><span><span>'.$re['back'].'</span></span></button></a></div>'; 
+      echo'<a href="send_media.php"><button class="ui-button button1"  id="back" tabindex="1" /><span><span>'.$re['back'].'</span></span></button></a></div>'; 
       $error = true;
     } 
   }
@@ -170,15 +170,15 @@ if (isset($_POST['send'])){
     echo '<div class="alert-page-message success-page">
       <p class="text-green title"><strong>'.$Media['SendCorrect'].'</strong></p>
       <p class="caption">'.$Media['SendSuccse'].'</p>
-      <p class="caption"><a href="../account_man">'.$re['goPanel'].'</a></p>
+      <p class="caption"><a href="'.$website['root'].'account/">'.$re['goPanel'].'</a></p>
       </div>';
     echo '</div>';
-    echo '<meta http-equiv="refresh" content="4;url=../account_man"/>';
+    echo '<meta http-equiv="refresh" content="4;url='.$website['root'].'account/"/>';
   }
   else{
     echo '<div class="errors" align="center"><font color="red" size="6"><strong>Error</strong></font></p>';
     echo '<p class="caption">An error has ocurred, the media file could not be sent!</p>';
-    echo'<a href="send_media"><button class="ui-button button1"  id="back" tabindex="1" /><span><span>'.$re['back'].'</span></span></button></a></div>'; 
+    echo'<a href="send_media.php"><button class="ui-button button1"  id="back" tabindex="1" /><span><span>'.$re['back'].'</span></span></button></a></div>'; 
   }
  }
 }
@@ -380,7 +380,7 @@ Core.load("../wow/static/local-common/js/third-party/jquery-ui-1.8.6.custom.min.
 Core.load("../wow/static/local-common/js/search.js");
 Core.load("../wow/static/local-common/js/login.js", false, function() {
 if (typeof Login !== 'undefined') {
-Login.embeddedUrl = '<?php echo $website['root'];?>loginframe';
+Login.embeddedUrl = '<?php echo $website['root'];?>loginframe.php';
 }
 });
 //]]>

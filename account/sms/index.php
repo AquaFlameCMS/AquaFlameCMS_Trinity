@@ -1,5 +1,5 @@
 <?php
-include("../configs.php");
+include("../../configs.php");
 $page_cat = 'gamesncodes';
 // Check, if username session is NOT set then this page will jump to login page
 if (!isset($_SESSION['username'])) {
@@ -19,16 +19,16 @@ if (!isset($_SESSION['username'])) {
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
 <meta name="description" content="<?php echo $website['description']; ?>">
 <meta name="keywords" content="<?php echo $website['keywords']; ?>">
-<link rel="shortcut icon" href="../wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
-<link rel="stylesheet" media="all" href="../wow/static/local-common/css/common.css" />
-<link rel="stylesheet" media="all" href="../wow/static/css/bnet.css" />
-<link rel="stylesheet" media="print" href="../wow/static/css/bnet-print.css" />
-<link rel="stylesheet" media="all" href="../wow/static/css/management/get-game.css" />
-<link rel="stylesheet" media="all" href="../wow/static/css/management/get-game-ie8.css" />
-<link rel="stylesheet" media="all" href="../wow/static/css/management/dashboard.css" />
-<script src="../wow/static/local-common/js/third-party/jquery.js"></script>
-<script src="../wow/static/local-common/js/core.js"></script>
-<script src="../wow/static/local-common/js/tooltip.js"></script>
+<link rel="shortcut icon" href="../../wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
+<link rel="stylesheet" media="all" href="../../wow/static/local-common/css/common.css" />
+<link rel="stylesheet" media="all" href="../../wow/static/css/bnet.css" />
+<link rel="stylesheet" media="print" href="../../wow/static/css/bnet-print.css" />
+<link rel="stylesheet" media="all" href="../../wow/static/css/management/get-game.css" />
+<link rel="stylesheet" media="all" href="../../wow/static/css/management/get-game-ie8.css" />
+<link rel="stylesheet" media="all" href="../../wow/static/css/management/dashboard.css" />
+<script src="../../wow/static/local-common/js/third-party/jquery.js"></script>
+<script src="../../wow/static/local-common/js/core.js"></script>
+<script src="../../wow/static/local-common/js/tooltip.js"></script>
 
 <!--[if IE 6]> <script type="text/javascript">
 //<![CDATA[
@@ -69,8 +69,8 @@ _gaq.push(['_trackPageLoadTime']);
 <div id="layout-top">
 <div class="wrapper">
 <div id="header">
-<?php include("../functions/header_account.php"); ?>
-<?php include("../functions/footer_man_nav.php"); ?>
+<?php include("../../functions/header_account.php"); ?>
+<?php include("../../functions/footer_man_nav.php"); ?>
 </div>
 <div id="layout-middle">
     <div class="wrapper">
@@ -83,7 +83,7 @@ _gaq.push(['_trackPageLoadTime']);
 	<div class="header">
 		<h2 class="subcategory"><?php echo $sms['2']; ?></h2>
 		<h3 class="headline"><?php echo $sms['3']; ?></h3>
-            <a href=""><img src="../wow/static/local-common/images/game-icons/wow.png" alt="World of Warcraft" width="48" height="48" /></a>
+            <a href=""><img src="../../wow/static/local-common/images/game-icons/wow.png" alt="World of Warcraft" width="48" height="48" /></a>
     </div>
     </div>
 </div>
@@ -160,7 +160,7 @@ $(".ui-dialog-buttonpane").find("button").addClass("button1").find(":first").add
 </div>
 </div>
 <div id="layout-bottom">
-<?php include("../functions/footer_man.php"); ?>
+<?php include("../../functions/footer_man.php"); ?>
 </div>
 <script type="text/javascript">
 //<![CDATA[
@@ -246,9 +246,9 @@ pet: 'pet'
 };
 //]]>
 </script>
-<script src="../wow/static/js/bam.js?v21"></script>
-<script src="../wow/static/local-common/js/tooltip.js?v22"></script>
-<script src="../wow/static/local-common/js/menu.js?v22"></script>
+<script src="../../wow/static/js/bam.js?v21"></script>
+<script src="../../wow/static/local-common/js/tooltip.js?v22"></script>
+<script src="../../wow/static/local-common/js/menu.js?v22"></script>
 <script type="text/javascript">
 $(function() {
 Menu.initialize();
@@ -257,19 +257,19 @@ Locale.dataPath = 'data/i18n.frag.xml';
 });
 </script>
 <!--[if lt IE 8]>
-<script type="text/javascript" src="../wow/static/local-common/js/third-party/jquery.pngFix.pack.js?v22"></script>
+<script type="text/javascript" src="../../wow/static/local-common/js/third-party/jquery.pngFix.pack.js?v22"></script>
 <script type="text/javascript">$('.png-fix').pngFix();</script>
 <![endif]-->
-<script type="text/javascript" src="../wow/static/js/management/address-book.js?v21"></script>
-<script type="text/javascript" src="../wow/static/local-common/js/third-party/jquery-ui-1.8.1.custom.min.js?v22"></script>
+<script type="text/javascript" src="../../wow/static/js/management/address-book.js?v21"></script>
+<script type="text/javascript" src="../../wow/static/local-common/js/third-party/jquery-ui-1.8.1.custom.min.js?v22"></script>
 <script type="text/javascript">
 //<![CDATA[
-Core.load("../wow/static/local-common/js/overlay.js?v22");
-Core.load("../wow/static/local-common/js/search.js?v22");
-Core.load("../wow/static/local-common/js/third-party/jquery-ui-1.8.6.custom.min.js?v22");
-Core.load("../wow/static/local-common/js/third-party/jquery.mousewheel.min.js?v22");
-Core.load("../wow/static/local-common/js/third-party/jquery.tinyscrollbar.custom.js?v22");
-Core.load("../wow/static/local-common/js/login.js?v22", false, function() {
+Core.load("../../wow/static/local-common/js/overlay.js?v22");
+Core.load("../../wow/static/local-common/js/search.js?v22");
+Core.load("../../wow/static/local-common/js/third-party/jquery-ui-1.8.6.custom.min.js?v22");
+Core.load("../../wow/static/local-common/js/third-party/jquery.mousewheel.min.js?v22");
+Core.load("../../wow/static/local-common/js/third-party/jquery.tinyscrollbar.custom.js?v22");
+Core.load("../../wow/static/local-common/js/login.js?v22", false, function() {
 Login.embeddedUrl = '<?php echo $website['root'];?>loginframe.php';
 });
 //]]>

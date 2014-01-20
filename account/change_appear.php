@@ -2,7 +2,7 @@
 include("../configs.php");
 $page_cat = "security";
 if (!isset($_SESSION['username'])) {
-        header('Location: '.$website['root'].'account_log');		
+        header('Location: '.$website['root'].'account_log.php');		
 }
 ?>
 
@@ -149,7 +149,7 @@ if(isset($_POST['submit']))
 			echo $error . '<br>';
 		}
 		echo '</p>';
-		echo '<meta http-equiv="refresh" content="2;url=change_appear"/>';
+		echo '<meta http-equiv="refresh" content="2;url=change_appear.php"/>';
 
 	}
 }

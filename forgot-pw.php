@@ -38,12 +38,12 @@ $page_cat = "home";
 				<ol class="ui-breadcrumb">
 					<li><a href="<?php echo $website['root']; ?>" rel="np" class=""><?php echo $website['title']; ?>
 					</a><span class="breadcrumb-arrow"></span></li>
-					<li class="last"><a href="forgot-pw" rel="np">Forgot Password</a></li>
+					<li class="last"><a href="forgot-pw.php" rel="np">Forgot Password</a></li>
 				</ol>
 			</div>
 			<div class="content-bot">
 				<div id="server-error">
-					<form name="forgotpw" action="ForgotPassword" method="POST">
+					<form name="forgotpw" action="ForgotPassword.php" method="POST">
 						 User Name <br/>
 						<input name="username" type="text" class="input border-5 glow-shadow-2" alt="Username"><br/>
 						Password <br/>

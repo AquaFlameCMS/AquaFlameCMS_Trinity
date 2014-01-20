@@ -205,7 +205,7 @@ if (!isset($_SESSION['username'])) {
                                 ?>
                                 </div>
                                 <div class="context-links">
-                                    <a href="<?php echo $website['root']; ?>advanced?name=<?php echo $actualchar["name"]; ?>" title="<?php echo $uplate['profile']; ?>" rel="np" class="icon-profile link-first">
+                                    <a href="<?php echo $website['root']; ?>advanced.php?name=<?php echo $actualchar["name"]; ?>" title="<?php echo $uplate['profile']; ?>" rel="np" class="icon-profile link-first">
                                         <?php echo $uplate['profile']; ?>
                                     </a>
                                     <a href="#" title="<?php echo $uplate['post']; ?>" rel="np" class="icon-posts">

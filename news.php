@@ -62,7 +62,7 @@ _gaq.push(['_trackPageview']);
 				<div class="content-trail">
 				<ol class="ui-breadcrumb">
 				<li>
-				<a href="index" rel="np"><?php echo $website['title']; ?></a>
+				<a href="index.php" rel="np"><?php echo $website['title']; ?></a>
 				<span class="breadcrumb-arrow"></span>
 				</li>
 				<?php
@@ -146,7 +146,7 @@ _gaq.push(['_trackPageview']);
 											 }
 											</style>';
 											echo '<div class="loader"></div><br /></center>';
-											echo '<meta http-equiv="refresh" content="1;url=news?id='.$news_id.'"/>';
+											echo '<meta http-equiv="refresh" content="1;url=news.php?id='.$news_id.'"/>';
 											$show_comment=false;
 										}else{				
 										
@@ -497,11 +497,11 @@ ended
 											echo'
                       <form action="" method="" id="comment-form-reply" class="nested">
                         <table class="dynamic-center"><tr><td>
-                          <a class="ui-button button1 " href="?login" onclick="return Login.open(\'loginframe\')"><span><span>Add a reply</span></span></a>	
+                          <a class="ui-button button1 " href="?login" onclick="return Login.open(\'loginframe.php\')"><span><span>Add a reply</span></span></a>	
                         </td></tr></table>
                       </form>
 											<table class="dynamic-center"><tr><td>
-											<a class="ui-button button1 " href="?login" onclick="return Login.open(\'loginframe\')"><span><span>Add a reply</span></span></a>
+											<a class="ui-button button1 " href="?login" onclick="return Login.open(\'loginframe.php\')"><span><span>Add a reply</span></span></a>
 											</td></tr></table>
 											';
 										}   //SHOW COMMENTS
@@ -641,7 +641,7 @@ ended
 											?>
 											<ul class="articles-list">
 											<li>
-												<a href="news?id=<?php echo $articles['id']; ?>">
+												<a href="news.php?id=<?php echo $articles['id']; ?>">
 												<span class="image" style="background-image: url('wow/static/images/news/<?php echo $articles['image']; ?>.jpg');"></span>
 													<span class="title"> <?php echo $articles['title']; ?></span>
 												   <span class="date"><?php echo $articles['date']; ?></span>

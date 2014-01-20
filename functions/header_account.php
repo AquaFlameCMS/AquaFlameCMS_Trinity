@@ -13,12 +13,12 @@
 <span></span>
 <div class="flyout-menu" id="settings-menu" style="display: none">
 <ul>
-<li><a href="<?php echo $website['root']; ?>account/change-mail"><?php echo $ha['ha2']; ?></a></li>
-<li><a href="<?php echo $website['root']; ?>account/change-password"><?php echo $ha['ha3']; ?></a></li>
+<li><a href="<?php echo $website['root']; ?>account/change-mail.php"><?php echo $ha['ha2']; ?></a></li>
+<li><a href="<?php echo $website['root']; ?>account/change-password.php"><?php echo $ha['ha3']; ?></a></li>
 <li><a href="#"><?php echo $ha['ha4']; ?></a></li>
 <li><a href="#"><?php echo $ha['ha5']; ?></a></li>
 <li><a href="#"><?php echo $ha['ha6']; ?></a></li>
-<li><a href="contact_info"><?php echo $ha['ha7']; ?></a></li>
+<li><a href="contact_info.php"><?php echo $ha['ha7']; ?></a></li>
 </ul>
 </div>
 </li>
@@ -27,11 +27,11 @@
 <span></span>
 <div class="flyout-menu" id="games-menu" style="display: none">
 <ul>
-<li><a href="<?php echo $website['root']; ?>account/vote"><?php echo $ha['ha9']; ?></a></li>
-<li><a href="<?php echo $website['root']; ?>account/donation_panel"><?php echo $ha['ha10']; ?></a></li>
+<li><a href="<?php echo $website['root']; ?>account/vote.php"><?php echo $ha['ha9']; ?></a></li>
+<li><a href="<?php echo $website['root']; ?>account/donation_panel.php"><?php echo $ha['ha10']; ?></a></li>
 <li><a href="<?php echo $website['root']; ?>account/sms"><?php echo $ha['ha11']; ?></a></li>
 <li><a href=""><?php echo $ha['ha12']; ?></a></li>
-<li><a href="<?php echo $website['root']; ?>account/game_client"><?php echo $ha['ha13']; ?></a></li>
+<li><a href="<?php echo $website['root']; ?>account/game_client.php"><?php echo $ha['ha13']; ?></a></li>
 <li><a href=""><?php echo $ha['ha14']; ?></a></li>
 <li><a href=""><?php echo $ha['ha15']; ?></a></li>
 </ul>
@@ -43,20 +43,20 @@
 <span></span>
 <div class="flyout-menu" id="player-menu" style="display: none">
 <ul>
-<li><a href="<?php echo $website['root']; ?>account/chars-unst"><?php echo $ha['ha17']; ?></a></li>
-<li><a href="<?php echo $website['root']; ?>account/change_name"><?php echo $ha['ha18']; ?></a></li>
-<li><a href="<?php echo $website['root']; ?>account/change_faction"><?php echo $ha['ha19']; ?></a></li>
-<li><a href="<?php echo $website['root']; ?>account/change_race"><?php echo $ha['ha20']; ?></a></li>
-<li><a href="<?php echo $website['root']; ?>account/change_appear"><?php echo $ha['ha22']; ?></a></li>
+<li><a href="<?php echo $website['root']; ?>account/chars-unst.php"><?php echo $ha['ha17']; ?></a></li>
+<li><a href="<?php echo $website['root']; ?>account/change_name.php"><?php echo $ha['ha18']; ?></a></li>
+<li><a href="<?php echo $website['root']; ?>account/change_faction.php"><?php echo $ha['ha19']; ?></a></li>
+<li><a href="<?php echo $website['root']; ?>account/change_race.php"><?php echo $ha['ha20']; ?></a></li>
+<li><a href="<?php echo $website['root']; ?>account/change_appear.php"><?php echo $ha['ha22']; ?></a></li>
 <li><a href=""><?php echo $ha['ha21']; ?></a></li>
-<li><a href="<?php echo $website['root']; ?>account/raf-invite"><?php echo $ha['ha23']; ?></a></li>
+<li><a href="<?php echo $website['root']; ?>account/raf-invite.php"><?php echo $ha['ha23']; ?></a></li>
 <li><a href=""><?php echo $ha['ha24']; ?></a></li>
 </ul>
 </div>
 </li>
 
 <li <?php if($page_cat=='media') echo'class="active"';?>>
-<a href="<?php echo $website['root']; ?>media/send_media"><?php echo $Media['SendMedia']; ?></a>
+<a href="<?php echo $website['root']; ?>media/send_media.php"><?php echo $Media['SendMedia']; ?></a>
 <span></span>
 </li>
 

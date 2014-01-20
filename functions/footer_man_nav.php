@@ -2,14 +2,14 @@
 <ul class="service-bar">
 <li class="service-cell service-home"><a href="<?php echo $website['root']; ?>" tabindex="50" accesskey="1" title="Home"><div style="width:45px;">&nbsp;</div></a></li>
 <?php if(isset($_SESSION['username'])){ ?>
-<li class="service-cell service-welcome"><?php echo $Welcome['Welcome']; ?><?php echo $account_extra['firstName']; ?> | <a href="<?php echo $website['root'];?>logout"><?php echo $logout['logout']; ?></a></li>
+<li class="service-cell service-welcome"><?php echo $Welcome['Welcome']; ?><?php echo $account_extra['firstName']; ?> | <a href="<?php echo $website['root'];?>logout.php"><?php echo $logout['logout']; ?></a></li>
 <?php }else{ ?>
 <li class="service-cell service-welcome"><a href="#" onclick="return Login.open('<?php echo @$website['root'];?>loginframe?')"><?php echo @$login['login']; ?></a> or <a href="<?php echo @$website['root']; ?>register"><?php echo @$Account3['Account3']; ?></a></li>
 <?php } ?>
 <li class="service-cell service-shop">
 <a href="<?php echo $website['root'];?>shop/" class="service-link"><?php echo $Services['Services']; ?></a>
 </li>
-<li class="service-cell service-account"><a href="<?php echo $website['root']; ?>account_log" class="service-link" tabindex="50" accesskey="3"><?php echo $Account['Account']; ?></a></li>
+<li class="service-cell service-account"><a href="<?php echo $website['root']; ?>account_log.php" class="service-link" tabindex="50" accesskey="3"><?php echo $Account['Account']; ?></a></li>
 <li class="service-cell service-support service-support-enhanced">
 <a href="#support" class="service-link service-link-dropdown" tabindex="50" accesskey="4" id="support-link" onclick="return false" style="cursor: progress" rel="javascript"><?php echo $Support['Support']; ?><span class="no-support-tickets" id="support-ticket-count"></span></a>
 <div class="support-menu" id="support-menu" style="display:none;">
@@ -113,7 +113,7 @@ Core.load("<?php echo $website['root'];?>wow/static/local-common/js/third-party/
 Core.load("<?php echo $website['root'];?>wow/static/local-common/js/overlay.js?v15");
 Core.load("<?php echo $website['root'];?>wow/static/local-common/js/search.js?v15");
 Core.load("<?php echo $website['root'];?>wow/static/local-common/js/login.js?v15", false, function() {
-Login.embeddedUrl = '<?php echo $website['root'];?>loginframe';
+Login.embeddedUrl = '<?php echo $website['root'];?>loginframe.php';
 });
 //]]>
 </script>

@@ -69,11 +69,11 @@ _gaq.push(['_trackPageLoadTime']);
       <div class="content-trail">
 <ol class="ui-breadcrumb">
 <li>
-<a href="index" rel="np"><?php echo $website['title']; ?></a>
+<a href="index.php" rel="np"><?php echo $website['title']; ?></a>
 <span class="breadcrumb-arrow"></span>
 </li>
-<li><a href="services" rel="np"><?php echo $Services['Services']; ?></a><span class="breadcrumb-arrow"></span></li>
-<li class="last children"><a href="search" rel="np"><?php echo $Ind['Ind2']; ?></a>
+<li><a href="community" rel="np"><?php echo $Community['Community'];?></a><span class="breadcrumb-arrow"></span></li>
+<li class="last children"><a href="search.php" rel="np"><?php echo $Ind['Ind2']; ?></a>
 </li>
 </ol>
 </div>
@@ -87,10 +87,10 @@ _gaq.push(['_trackPageLoadTime']);
             	if (!$error){
             	 echo '<ul class="dynamic-menu" id="menu-search">
               	<li class="item-active"><a href=""><span class="arrow">'.$search['summ'].'</span></a></li>';
-              	if ($num_char>0){ echo '<li><a href="search_c?search='.$term.'"><span class="arrow">'.$status['chars'].' ('.$num_char.')'.'<span></span></span></a></li>';}
-	              if ($num_guild>0){ echo '<li><a href="search_g?search='.$term.'"><span class="arrow">'.$guild['Guilds'].' ('.$num_guild.')'.'<span></span></span></a></li>';}
-               	if ($num_arena>0){ echo '<li><a href="search_a?search='.$term.'"><span class="arrow">'.$arena['Teams'].' ('.$num_arena.')'.'<span></span></span></a></li>';}
-               	if ($num_forum>0){ echo '<li><a href="search_f?search='.$term.'"><span class="arrow">'.$Forums['Forums'].' ('.$num_forum.')'.'<span></span></span></a></li>';}
+              	if ($num_char>0){ echo '<li><a href="search_c.php?search='.$term.'"><span class="arrow">'.$status['chars'].' ('.$num_char.')'.'<span></span></span></a></li>';}
+	              if ($num_guild>0){ echo '<li><a href="search_g.php?search='.$term.'"><span class="arrow">'.$guild['Guilds'].' ('.$num_guild.')'.'<span></span></span></a></li>';}
+               	if ($num_arena>0){ echo '<li><a href="search_a.php?search='.$term.'"><span class="arrow">'.$arena['Teams'].' ('.$num_arena.')'.'<span></span></span></a></li>';}
+               	if ($num_forum>0){ echo '<li><a href="search_f.php?search='.$term.'"><span class="arrow">'.$Forums['Forums'].' ('.$num_forum.')'.'<span></span></span></a></li>';}
             	 echo '</ul>';} ?>
             </div>  
           	<div class="search-right">
@@ -115,14 +115,14 @@ _gaq.push(['_trackPageLoadTime']);
                 $sql = $sqlc." LIMIT 3";
                 $result = mysql_query($sql,$conn) or die(mysql_error());
                 echo '<div class="results results-grid wow-results">
-	                   <h3 class="category "><a href="search_c?search='.$term.'">'.$status['chars'].'</a> ('.$num_char.')</h3>';
+	                   <h3 class="category "><a href="search_c.php?search='.$term.'">'.$status['chars'].'</a> ('.$num_char.')</h3>';
                 while ($row = mysql_fetch_array($result)) {
                   echo'
                     <div class="grid">
 	                    <div class="wowcharacter">
-	                      <a href="advanced?name='.$row['name'].'" class="icon-frame frame-56 thumbnail">
+	                      <a href="advanced.php?name='.$row['name'].'" class="icon-frame frame-56 thumbnail">
 	                      <img src="images/avatars/2d/'.$row['race'].'-'.$row['gender'].'.jpg" alt="" width="56" height="56" /></a>
-	                      <a href="advanced?name='.$row['name'].'" class="color-c'.$row['class'].'">
+	                      <a href="advanced.php?name='.$row['name'].'" class="color-c'.$row['class'].'">
 	                      <strong>'.$row['name'].'</strong></a><br />'.$row['level'].'&nbsp;'.$armory['race'.$row['race']].'&nbsp;'.$armory['class'.$row['class']].'<br />'.$name_realm1['realm'].'
 	                      <span class="clear"><!-- --></span>
 	                     </div>
@@ -139,7 +139,7 @@ _gaq.push(['_trackPageLoadTime']);
                       $result = mysql_query($sql, $conn) or die(mysql_error());
                       $row = mysql_fetch_array($result);
                       echo'<div class="grid">
-	                     <h4 class="subcategory "><a href="search_a?search='.$term.'">'.$arena['Teams'].'</a> ('.$num_arena.')</h4>
+	                     <h4 class="subcategory "><a href="search_a.php?search='.$term.'">'.$arena['Teams'].'</a> ('.$num_arena.')</h4>
 	                     <div class="wowguild"><canvas id="tabard-3125133" class="thumbnail" width="32" height="32"></canvas>
 	                     <a href="" class="sublink"><strong>'.$row['name'].'</strong></a> - '.$row['type'].'<br />
 	                     <span data-tooltip="REALM NAME">'.$name_realm1['realm'].'</span>
@@ -153,7 +153,7 @@ _gaq.push(['_trackPageLoadTime']);
                       $row = mysql_fetch_array($result);
 					  echo'
 					<div class="grid">
-					<h4 class="subcategory "><a href="search_g?search='.$term.'">'.$guild['Guilds'].'</a>('.$num_guild.')</h4>
+					<h4 class="subcategory "><a href="search_g.php?search='.$term.'">'.$guild['Guilds'].'</a>('.$num_guild.')</h4>
 					<div class="wowguild">
 					<img src="wow/static/images/icons/guild-flag.png" id="tabard-19804025" class="thumbnail" width="32" height="32" style="display: block; " />
 					<a href="#" class="sublink">
@@ -175,7 +175,7 @@ _gaq.push(['_trackPageLoadTime']);
                   T.name LIKE '% " . mysql_real_escape_string($term) . "') LIMIT 10";
                   $result= mysql_query($sql,$conn) or die (mysql_error());
                   echo '<div class="results results-grid wow-results">
-                  <h4 class="subcategory "><a href="search_f?search='.$term.'">'.$search['forumResults'].$term.'</a> ('.$num_forum.')</h4>
+                  <h4 class="subcategory "><a href="search_f.php?search='.$term.'">'.$search['forumResults'].$term.'</a> ('.$num_forum.')</h4>
                   <div class="view-list">';
                     while ($row = mysql_fetch_array($result)){
                       $content=$row['content'];
@@ -323,7 +323,7 @@ Core.load("/wow/static/local-common/js/third-party/jquery-ui-1.8.6.custom.min.js
 Core.load("/wow/static/local-common/js/search.js?v35");
 Core.load("/wow/static/local-common/js/login.js?v35", false, function() {
 if (typeof Login !== 'undefined') {
-Login.embeddedUrl = '<?php echo $website['root'];?>loginframe';
+Login.embeddedUrl = '<?php echo $website['root'];?>loginframe.php';
 }
 });
 //]]>

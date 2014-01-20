@@ -7,7 +7,7 @@
 				</a>
 				</h3>
 				<ul>
-					<li><a href="<?php echo $website['root'];?>account_log"><?php echo $Account['Account']; ?>
+					<li><a href="<?php echo $website['root'];?>account_log.php"><?php echo $Account['Account']; ?>
 					</a></li>
 					<li><a href=""><?php echo $Support['Support']; ?>
 					</a></li>
@@ -33,11 +33,11 @@
 				<ul>
 					<li><a href="#"><?php echo $Account1['Account1']; ?>
 					</a></li>
-					<li><a href="<?php echo $website['root'];?>register"><?php echo $Account3['Account3']; ?>
+					<li><a href="<?php echo $website['root'];?>register.php"><?php echo $Account3['Account3']; ?>
 					</a></li>
-					<li><a href="<?php echo $website['root'];?>account_log"><?php echo $Account4['Account4']; ?>
+					<li><a href="<?php echo $website['root'];?>account_log.php"><?php echo $Account4['Account4']; ?>
 					</a></li>
-					<li><a href="<?php echo $website['root'];?>account_log"><?php echo $Account5['Account5']; ?>
+					<li><a href="<?php echo $website['root'];?>account_log.php"><?php echo $Account5['Account5']; ?>
 					</a></li>
 				</ul>
 			</div>
@@ -60,7 +60,7 @@
 					<div class="bnet-offer">
 						<!-- -->
 						<div class="bnet-offer-bg">
-							<a href="<?php echo $website['root'];?>register" target="_blank" id="ad3023837" class="bnet-offer-image" onclick="BnetAds.trackEvent('campaignId:3023837 - imgId:3023042', 'WoWtrialLatAm', 'wow', true);"> <img src="<?php echo $website['root'];?>wow/static/images/footer/ad_300x100/promo.jpg" width="300" height="100" alt=""/> </a>
+							<a href="<?php echo $website['root'];?>register.php" target="_blank" id="ad3023837" class="bnet-offer-image" onclick="BnetAds.trackEvent('campaignId:3023837 - imgId:3023042', 'WoWtrialLatAm', 'wow', true);"> <img src="<?php echo $website['root'];?>wow/static/images/footer/ad_300x100/promo.jpg" width="300" height="100" alt=""/> </a>
 						</div>
 						<script type="text/javascript">
 //<![CDATA[
@@ -236,7 +236,7 @@ if (strtoupper(curPageName())<>
 		<?php }else{ ?>
 		<li class="service-cell service-welcome"><a href="?login" onclick="return Login.open()"><?php echo $login['login']; ?>
 		</a><?php echo $or['or']; ?>
-		<a href="<?php echo $website['root'];?>register"><?php echo $Account3['Account3']; ?>
+		<a href="<?php echo $website['root'];?>register.php"><?php echo $Account3['Account3']; ?>
 		</a></li>
 		<?php } ?>
 		<li class="service-cell service-shop">
@@ -490,7 +490,7 @@ other: 'Other'
 //<![CDATA[
 Core.load("<?php echo $website['root']; ?>wow/static/local-common/js/third-party/jquery-ui-1.8.6.custom.min.js?v46");
 Core.load("<?php echo $website['root']; ?>wow/static/local-common/js/login.js?v46", false, function() {
-Login.embeddedUrl = '<?php echo $website['root']; ?>loginframe';
+Login.embeddedUrl = '<?php echo $website['root']; ?>loginframe.php';
 });
 //]]>
 </script>

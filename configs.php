@@ -198,7 +198,7 @@ if ($pre == true) {
 $maintenance = false;
 if ($maintenance == true) {
     if (!isset($bucle_mant)) {
-        header('Location: '.$website['address'].''.$website['root'].'maintenance');
+        header('Location: '.$website['address'].''.$website['root'].'maintenance.php');
     }
 } else {
     

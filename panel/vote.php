@@ -1,6 +1,6 @@
 <div class="sidebar-module " id="sidebar-events" style="">
 <div class="sidebar-title">
-<h3 class="category title-events"><a href="account/vote"><?php echo $Vote['VotePanel']; ?></a></h3></div>
+<h3 class="category title-events"><a href="account/vote.php"><?php echo $Vote['VotePanel']; ?></a></h3></div>
 <div class="sidebar-content">
 <?php		$votes = mysql_query("SELECT * FROM $server_db.vote ORDER BY `id` ASC");
 			while($vote = mysql_fetch_array($votes))
@@ -44,7 +44,7 @@
 			<div class="sidebar-events"><h4>Today</h4>
 			<ul class="sidebar-list today">
 			<li data-id="1379664000000" class="event-summary sidebar-tile system-event">';		
-			if($voteable == 1) echo '<a onclick="window.location = \'vote?id='.$vote['ID'].'\'" rel="np">';
+			if($voteable == 1) echo '<a onclick="window.location = \'vote.php?id='.$vote['ID'].'\'" rel="np">';
 			echo'
 			<span class="icon-frame ">
 			<img src="http://media.blizzard.com/wow/assets/calendar/calendar_brewfeststart.png" alt="" width="27" height="27" />

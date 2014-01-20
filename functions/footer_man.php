@@ -6,7 +6,7 @@
 <a href="#" tabindex="100"><?php echo $website['title']; ?></a>
 </h3>
 <ul>
-<li><a href="<?php echo $website['root']; ?>account_log"><?php echo $Account['Account']; ?></a></li>
+<li><a href="<?php echo $website['root']; ?>account_log.php"><?php echo $Account['Account']; ?></a></li>
 <li><a href=""><?php echo $Support['Support']; ?></a></li>
 </ul>
 </div>
@@ -25,9 +25,9 @@
 </h3>
 <ul>
 <li><a href="#"><?php echo $Account1['Account1']; ?></a></li>
-<li><a href="<?php echo $website['root']; ?>register"><?php echo $Account3['Account3']; ?></a></li>
-<li><a href="<?php echo $website['root']; ?>account_log"><?php echo $Account4['Account4']; ?></a></li>
-<li><a href="<?php echo $website['root']; ?>account_log"><?php echo $Account5['Account5']; ?></a></li>
+<li><a href="<?php echo $website['root']; ?>register.php"><?php echo $Account3['Account3']; ?></a></li>
+<li><a href="<?php echo $website['root']; ?>account_log.php"><?php echo $Account4['Account4']; ?></a></li>
+<li><a href="<?php echo $website['root']; ?>account_log.php"><?php echo $Account5['Account5']; ?></a></li>
 </ul>
 </div>
 <div class="column">

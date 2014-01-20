@@ -148,7 +148,7 @@ if(isset($_POST['submit']))
 			echo $error . '<br>';
 		}
 		echo '</p>';
-		echo '<meta http-equiv="refresh" content="2;url=change_race"/>';
+		echo '<meta http-equiv="refresh" content="2;url=change_race.php"/>';
 
 	}
 
