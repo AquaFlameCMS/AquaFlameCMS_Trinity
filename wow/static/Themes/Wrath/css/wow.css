@@ -255,7 +255,7 @@ tr:hover .fansite-link,
 #header .user-plate .character-name .arrow { background: url("../images/layout/cms/char-arrow.png") 0 3px no-repeat; display: inline-block; width: 11px; height: 15px; }
 #header .user-plate .character-name:hover .arrow { background-position: 0 -145px; }
 
-#header .user-plate .card-character { width: 326px; height: 84px; padding:0 0 0 30px; display: block; color: #EEE; font-size: 14px; background: url("../images/layout/cards-mop/charcard-neutral.png") 0 0 no-repeat; position: absolute; bottom:-1px; right: 0; text-overflow: ellipsis; line-height: 1.4em; }
+#header .user-plate .card-character { width: 326px; height: 84px; padding:0 0 0 30px; display: block; color: #EEE; font-size: 14px; background: url("../images/layout/cards-mop/charcard-neutral.png") 0 0 no-repeat; position: absolute; bottom:-1px; right: 12px; text-overflow: ellipsis; line-height: 1.4em; }
 #header .user-plate .card-character strong { color: #ffb100; }
 #header .user-plate .card-character .login-msg { display:block; float:left; width:210px; margin-top:18px;  text-shadow:1px 1px 1px #555 }
 #header .user-plate .card-character .wow-login-key { display:block; position:absolute; right:50px; top:31px; width:50px; height:42px; background:url(../images/layout/cards-mop/key.png) no-repeat }
