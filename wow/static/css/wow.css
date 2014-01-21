@@ -265,7 +265,7 @@ tr:hover .fansite-link,
 #header .user-plate .card-character .card-portrait { width:58px; height:58px; display:block; float:right; border:1px solid #c3ff00; background:url(../images/layout/cards-mop/avatar-neutral.jpg) 50% 50% no-repeat; margin-top:7px; margin-right:21px }
 .ie6 #header .user-plate .card-character .card-portrait { margin-right:10px }
 
-#header .user-plate .meta-wrapper { position:relative; width:240px; left:30px; top:10px }
+#header .user-plate .meta-wrapper { position:relative; width:240px; left:36px; top:10px }
 
 #header .user-plate .card-character.plate-neutral  .card-portrait,
 #header .user-plate .card-character.plate-alliance .card-portrait,
