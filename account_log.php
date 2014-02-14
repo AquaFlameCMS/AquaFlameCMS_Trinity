@@ -12,15 +12,15 @@ $page_cat = "account";
 <meta http-equiv="imagetoolbar" content="false"/>
 <meta name="description" content="<?php echo $website['description']; ?>">
 <meta name="keywords" content="<?php echo $website['keywords']; ?>">
-<link rel="shortcut icon" href="wow/static/local-common/images/favicons/wow.png" type="image/x-icon"/>
-<link rel="stylesheet" href="<?php echo $website['address']; ?>wow/static/local-common/css/common.css?v22"/>
-<link rel="shortcut icon" href="<?php echo $website['address']; ?>wow/static/_themes/bam/img/favicon.ico" type="image/x-icon"/>
-<link rel="stylesheet" href="<?php echo $website['address']; ?>wow/static/_themes/bam/css/master.css?v1"/>
-<link rel="stylesheet" href="<?php echo $website['address']; ?>wow/static/_themes/bam/css/_lang/en-gb.css?v1"/>
-<script src="<?php echo $website['address']; ?>wow/static/local-common/js/third-party/jquery-1.4.4-p1.min.js"></script>
-<script src="<?php echo $website['address']; ?>wow/static/local-common/js/core.js?v22"></script>
+<link rel="shortcut icon" href="<?php echo $website['root']; ?>wow/static/local-common/images/favicons/wow.png" type="image/x-icon"/>
+<link rel="stylesheet" href="<?php echo $website['root']; ?>wow/static/local-common/css/common.css?v22"/>
+<link rel="shortcut icon" href="<?php echo $website['root']; ?>wow/static/_themes/bam/img/favicon.ico" type="image/x-icon"/>
+<link rel="stylesheet" href="<?php echo $website['root']; ?>wow/static/_themes/bam/css/master.css?v1"/>
+<link rel="stylesheet" href="<?php echo $website['root']; ?>wow/static/_themes/bam/css/_lang/en-gb.css?v1"/>
+<script src="<?php echo $website['root']; ?>wow/static/local-common/js/third-party/jquery-1.4.4-p1.min.js"></script>
+<script src="<?php echo $website['root']; ?>wow/static/local-common/js/core.js?v22"></script>
 <script type="text/javascript">
-Core.baseUrl = '<?php echo $website['address']; ?>login/en/';
+Core.baseUrl = '<?php echo $website['root']; ?>login/en/';
 </script>
 </head>
 <body class="en-gb">

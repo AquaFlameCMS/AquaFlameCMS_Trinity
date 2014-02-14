@@ -14,14 +14,17 @@
 # You should have received a copy of the GNU General Public License
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA 
+#
 
 # Disable directories listing in browser
 Options -Indexes
 
-RewriteEngine on
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME}\.php -f
-RewriteRule ^([^\.\?]+)(\?.*)?$ $1.php
+# Enable compression
+# Enables compression of data inherent PHP to save bandwidth
+php_value zlib.output_compression 16386
+
+# Calculating MD5 key to add a MIC [Integrity Control Message]
+ContentDigest On
 
 # Error page 400 401 403 404 500 503
 ErrorDocument 400 /errors/400.php
