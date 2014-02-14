@@ -139,7 +139,7 @@ include("configs.php");
   } ?>
 	  <ul id="help-links">
 		  <li class="icon-pass">
-			<a href="<?php echo $website['root']; ?>account/recover-pass-test/"><?php echo $Log['Log11']; ?></a>
+			<a href="<?php echo $website['root']; ?>forgot-pw.php"><?php echo $Log['Log11']; ?></a>
 		  </li>
 			<li class="icon-signup">
 			  <?php echo $Log['Log12']; ?><a href="register"><?php echo $Log['Log13']; ?></a>!

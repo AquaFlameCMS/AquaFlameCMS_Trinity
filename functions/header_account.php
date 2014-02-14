@@ -29,7 +29,7 @@
 <ul>
 <li><a href="<?php echo $website['root']; ?>account/vote.php"><?php echo $ha['ha9']; ?></a></li>
 <li><a href="<?php echo $website['root']; ?>account/donation_panel.php"><?php echo $ha['ha10']; ?></a></li>
-<li><a href="<?php echo $website['root']; ?>account/sms"><?php echo $ha['ha11']; ?></a></li>
+<li><a href="<?php echo $website['root']; ?>account/sms.php"><?php echo $ha['ha11']; ?></a></li>
 <li><a href=""><?php echo $ha['ha12']; ?></a></li>
 <li><a href="<?php echo $website['root']; ?>account/game_client.php"><?php echo $ha['ha13']; ?></a></li>
 <li><a href=""><?php echo $ha['ha14']; ?></a></li>
