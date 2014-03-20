@@ -159,10 +159,31 @@ while($get = mysql_fetch_array($account_info))
       else 
       echo "<font color='red'>". $Man2['Man10']."</font>";
    }
+   
+$expansiontype = 'Invalid';
+
+$expansion_info = mysql_query("SELECT id,username,expansion  FROM `".$server_adb."`.`account` WHERE username='".$_SESSION['username']."'")or die(mysql_error());
+ while($getexpansion = mysql_fetch_array($expansion_info)) 
+ {	  
+        if($getexpansion['expansion'] == 0)
+                $expansiontype = 'World of Warcraft';
+	  
+        elseif($getexpansion['expansion'] == 1)
+                $expansiontype = 'The Burning Crusade';
+	  
+        elseif($getexpansion['expansion'] == 2)
+                $expansiontype = 'Wrath Of The Lich King';
+	  
+        elseif($getexpansion['expansion'] == 3)
+                $expansiontype = 'Cataclysm';
+	  
+        elseif($getexpansion['expansion'] == 4)
+                $expansiontype = 'Mist Of Pandaria';
+   }
 ?>
 </dd>
 <dt class="subcategory"><?php echo $Man['Man11']; ?></dt>
-<dd class="account primary-account"><span class="account-history"><font color="#D16000"><?php echo $Man['Man12']; ?></font></span>
+<dd class="account primary-account"><span class="account-history"><font color="#D16000"><?php echo $expansiontype; ?></font></span>
 <em><a href="change_client.php?client=3"><li><?php echo $Man['Man13']; ?></li></a></em></dd>
 <dd class="account secondary-account"><font color="#0072A3"><?php echo $Man['Man14']; ?></font>
 <em><a href="change_client.php?client=2"><li><?php echo $Man['Man15']; ?></li></a></em></dd>
