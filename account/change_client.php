@@ -90,7 +90,7 @@ if (isset($_POST['change'])){
 }else{
 
   $expansion = mysql_real_escape_string($_GET['client']);
-  if (!isset($_GET['client']) || ($expansion<>'0' && $expansion<>'1' && $expansion<>'2' && $expansion<>'3')){
+  if (!isset($_GET['client']) || ($expansion<>'0' && $expansion<>'1' && $expansion<>'2' && $expansion<>'3' && $expansion<>'4')){
     $error = true;
     echo '<p><font color="red">Sorry you have to choose a valid game client to change your account.</font></p>';
   }
@@ -109,6 +109,9 @@ if (isset($_POST['change'])){
         break;
       case 3: 
         $name = 'Cataclysm';                     
+        break;
+      case 4: 
+        $name = 'Mist Of Pandaria';                     
         break;
     }
   }
