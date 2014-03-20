@@ -213,7 +213,6 @@ $expansion_info = mysql_query("SELECT id,username,expansion  FROM `".$server_adb
 ?>
 <dt class="subcategory"><?php echo $Man['Man11']; ?></dt>
 <dd class="account primary-account"><span class="account-history"><font color="#D16000"><?php echo $expansiontype; ?></font>&nbsp;<?php echo $upgradeaval?></span>
-<em><a href="change_client.php?client=4"><li><?php echo $Man['Man13']; ?></li></a></em></dd>
 
 <dd class="account secondary-account"><font color="#0072A3">Mist Of Pandaria</font>
 <em><a href="change_client.php?client=4"><li><?php echo $Man['Man13']; ?></li></a></em></dd>
