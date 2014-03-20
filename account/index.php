@@ -115,8 +115,31 @@ return false;
 </div>
 <div class="account-summary">
 <div class="account-management">
+<?PHP
+$expansionboxtype = 'Invalid';
+
+$expansion_box_info = mysql_query("SELECT id,username,expansion  FROM `".$server_adb."`.`account` WHERE username='".$_SESSION['username']."'")or die(mysql_error());
+ while($getexpansionbox = mysql_fetch_array($expansion_box_info)) 
+ {	  
+	  if($getexpansionbox['expansion'] == 0)
+      $expansionboxtype = '../wow/static/local-common/images/game-boxes/en-gb/wowx1_big.png';
+	  
+	  elseif($getexpansionbox['expansion'] == 1)
+      $expansionboxtype = '../wow/static/local-common/images/game-boxes/en-gb/wowx2_big.png';
+	  
+	  elseif($getexpansionbox['expansion'] == 2)
+      $expansionboxtype = '../wow/static/local-common/images/game-boxes/en-gb/wowx3_big.png';
+	  
+	  elseif($getexpansionbox['expansion'] == 3)
+      $expansionboxtype = '../wow/static/local-common/images/game-boxes/en-gb/wowx3-big.png';
+	  
+	  elseif($getexpansionbox['expansion'] == 4)
+      $expansionboxtype = '../wow/static/local-common/images/game-boxes/en-gb/wowx4_big.png';
+   }
+
+?>
 <div class="section box-art" id="box-art">
-<img src="../wow/static/local-common/images/game-boxes/en-gb/wowx4_big.png" alt="<?php echo $website['title']; ?>" title="" width="242" height="288" id="box-img" />
+<img src="<?php echo $expansionboxtype; ?>" alt="<?php echo $website['title']; ?>" title="Mist Of Pandaria" width="242" height="288" id="box-img" />
 </div>
 <div class="section account-details">
 <dl>
@@ -161,15 +184,51 @@ while($get = mysql_fetch_array($account_info))
    }
 ?>
 </dd>
+<?PHP
+$expansiontype = 'Invalid';
+$upgradeaval = '';
+
+$expansion_info = mysql_query("SELECT id,username,expansion  FROM `".$server_adb."`.`account` WHERE username='".$_SESSION['username']."'")or die(mysql_error());
+ while($getexpansion = mysql_fetch_array($expansion_info)) 
+ {	  
+	if($getexpansion['expansion'] == 0)
+		$expansiontype = 'World of Warcraft';
+	  
+	elseif($getexpansion['expansion'] == 1)
+		$expansiontype = 'The Burning Crusade';
+	  
+	elseif($getexpansion['expansion'] == 2)
+		$expansiontype = 'Wrath Of The Lich King';
+	  
+	elseif($getexpansion['expansion'] == 3)
+		$expansiontype = 'Cataclysm';
+	  
+	elseif($getexpansion['expansion'] == 4)
+		$expansiontype = 'Mist Of Pandaria';
+	  
+	if($getexpansion['expansion'] != 4)	
+		$upgradeaval = '<font color="green">Upgrade available!</font>';
+	
+ }
+?>
 <dt class="subcategory"><?php echo $Man['Man11']; ?></dt>
-<dd class="account primary-account"><span class="account-history"><font color="#D16000"><?php echo $Man['Man12']; ?></font></span>
+<dd class="account primary-account"><span class="account-history"><font color="#D16000"><?php echo $expansiontype; ?></font>&nbsp;<?php echo $upgradeaval?></span>
+
+<dd class="account secondary-account"><font color="#0072A3">Mist Of Pandaria</font>
+<em><a href="change_client.php?client=4"><li><?php echo $Man['Man13']; ?></li></a></em></dd>
+
+<dd class="account secondary-account"><font color="#0072A3"><?php echo $Man['Man12']; ?></font>
 <em><a href="change_client.php?client=3"><li><?php echo $Man['Man13']; ?></li></a></em></dd>
+
 <dd class="account secondary-account"><font color="#0072A3"><?php echo $Man['Man14']; ?></font>
 <em><a href="change_client.php?client=2"><li><?php echo $Man['Man15']; ?></li></a></em></dd>
+
 <dd class="account secondary-account"><font color="#138701"><?php echo $Man['Man16']; ?></font>
 <em><a href="change_client.php?client=1"><li><?php echo $Man['Man17']; ?></li></a></em></dd>
+
 <dd class="account secondary-account oldest-account"><font color="#5B4325"><?php echo $Man['Man18']; ?></font>
 <em><a href="change_client.php?client=0"><li><?php echo $Man['Man19']; ?></li></a></em></dd>
+
 <dt class="subcategory"><?php echo $Man['Man20']; ?></dt>
 <dd class="region eu"><?php echo $Man['Man21']; ?></dd>
 <dt class="subcategory"><?php echo $website['title']; ?><?php echo $Man['Man22']; ?></dt>
