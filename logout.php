@@ -52,7 +52,7 @@
       <h3>Logging Out</h3><br />
       <div class="loader"></div>
       <?php session_unset(); session_destroy(); ?>
-      <meta http-equiv="refresh" content="2;url=index"/>
+      <meta http-equiv="refresh" content="2;url=index.php"/>
       
       </center>
     

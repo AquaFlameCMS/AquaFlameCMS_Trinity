@@ -33,7 +33,7 @@ include("../header.php");
 		<div class="content-top">
 			<div class="content-trail">
 				<ol class="ui-breadcrumb">
-					<li><a href="index" rel="np"><?php echo $website['title']; ?>
+					<li><a href="index.php" rel="np"><?php echo $website['title']; ?>
 					</a><span class="breadcrumb-arrow"></span></li>
 					<li class="last"><a href="community" rel="np"><?php echo $Community['Community'];?></a></li>
 				</ol>
@@ -58,14 +58,14 @@ include("../header.php");
 								<div class="sidebar-content">
 									<div class="profiles-search-block">
 										<span class="profiles-search-title"><?php echo $Community['character'];?></span>
-										<form action="<?php echo $website['root']; ?>search" method="get" autocomplete="off"> <input type="hidden" name="f" value="wowcharacter"/>
-											<input id="wowcharacter" alt="Name" href="<?php echo $website['root']; ?>search" type="text" name="search" maxlength="200" tabindex="40" /> <button class="ui-button button1 " href="<?php echo $website['root']; ?>search" type="submit" value="" tabindex="41"><span><span><?php echo $Community['search'];?></span></span></button>
+										<form action="<?php echo $website['root']; ?>search.php" method="get" autocomplete="off"> <input type="hidden" name="f" value="wowcharacter"/>
+											<input id="wowcharacter" alt="Name" href="<?php echo $website['root']; ?>search.php" type="text" name="search" maxlength="200" tabindex="40" /> <button class="ui-button button1 " href="<?php echo $website['root']; ?>search.php" type="submit" value="" tabindex="41"><span><span><?php echo $Community['search'];?></span></span></button>
 										</form>
 									</div>
 									<div class="profiles-search-block">
 										<span class="profiles-search-title"><?php echo $Community['guild'];?></span>
-										<form action="<?php echo $website['root']; ?>search" method="get" autocomplete="off"> <input type="hidden" name="f" value="wowcharacter"/>
-											<input id="wowcharacter" alt="Name" href="<?php echo $website['root']; ?>search" type="text" name="search" maxlength="200" tabindex="40" /> <button class="ui-button button1 " href="<?php echo $website['root']; ?>search" type="submit" value="" tabindex="41"><span><span><?php echo $Community['search'];?></span></span></button>
+										<form action="<?php echo $website['root']; ?>search.php" method="get" autocomplete="off"> <input type="hidden" name="f" value="wowcharacter"/>
+											<input id="wowcharacter" alt="Name" href="<?php echo $website['root']; ?>search.php" type="text" name="search" maxlength="200" tabindex="40" /> <button class="ui-button button1 " href="<?php echo $website['root']; ?>search.php" type="submit" value="" tabindex="41"><span><span><?php echo $Community['search'];?></span></span></button>
 										</form>
 									</div>
 								</div>
@@ -313,7 +313,7 @@ include("../header.php");
 								<!-- -->
 								</span>
 								</a>
-								<a href="<?php echo $website['root']; ?>media/send_media" class="tosubmit external">Submit</a>
+								<a href="<?php echo $website['root']; ?>media/send_media.php" class="tosubmit external">Submit</a>
 								</li>
 								<li>
 								<a href="#" class="comics block" target="_blank">
@@ -323,7 +323,7 @@ include("../header.php");
 								<!-- -->
 								</span>
 								</a>
-								<a href="<?php echo $website['root']; ?>media/send_media" class="tosubmit external">Submit</a>
+								<a href="<?php echo $website['root']; ?>media/send_media.php" class="tosubmit external">Submit</a>
 								</li>
 								<li>
 								<a href="#" class="shreenshot block" target="_blank">
@@ -333,7 +333,7 @@ include("../header.php");
 								<!-- -->
 								</span>
 								</a>
-								<a href="<?php echo $website['root']; ?>media/send_media" class="tosubmit external">Submit</a>
+								<a href="<?php echo $website['root']; ?>media/send_media.php" class="tosubmit external">Submit</a>
 								</li>
 								<li>
 								<a href="#" class="wallpaper block" target="_blank">
@@ -343,7 +343,7 @@ include("../header.php");
 								<!-- -->
 								</span>
 								</a>
-								<a href="<?php echo $website['root']; ?>media/send_media" class="tosubmit external">Submit</a>
+								<a href="<?php echo $website['root']; ?>media/send_media.php" class="tosubmit external">Submit</a>
 								</li>
 							</ul>
 						</div>

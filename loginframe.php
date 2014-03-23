@@ -104,7 +104,7 @@ include("configs.php");
     ?>
     
   <?php }else{ ?>
-  <form action="?SSID:<?php echo @$sessionid; ?>" method="post">
+  <form action="<?php echo @$sessionid; ?>" method="post">
     <div>
       <p><label for="accountName" class="label"><?php echo $Log['Log6']; ?></label>
       <input id="accountName" value="" name="accountName" maxlength="320" type="text" tabindex="1" class="input" /></p>

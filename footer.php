@@ -231,10 +231,10 @@ if (strtoupper(curPageName())<>
 		<?php if(isset($_SESSION['username'])){ ?>
 		<li class="service-cell service-welcome"><?php echo $Welcome['Welcome']; ?>
 		<?php if ($userInfo['firstName']==""){ echo $globalInfoVar['Anonymous'];} else{echo $userInfo['firstName']; }?>
-		 | <a href="<?php echo $website['root'];?>logout"><?php echo $logout['logout']; ?>
+		 | <a href="<?php echo $website['root'];?>logout.php"><?php echo $logout['logout']; ?>
 		</a></li>
 		<?php }else{ ?>
-		<li class="service-cell service-welcome"><a href="?login" onclick="return Login.open()"><?php echo $login['login']; ?>
+		<li class="service-cell service-welcome"><a href="?login.php" onclick="return Login.open()"><?php echo $login['login']; ?>
 		</a><?php echo $or['or']; ?>
 		<a href="<?php echo $website['root'];?>register.php"><?php echo $Account3['Account3']; ?>
 		</a></li>

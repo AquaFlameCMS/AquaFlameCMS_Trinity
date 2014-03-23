@@ -167,7 +167,7 @@ if (!isset($_SESSION['username'])) {
                     <div class="player-name"><?php echo $account_extra['firstName'] . ' ' . $account_extra['lastName']; ?></div>
                     <div class="character">
                         <a class="character-name context-link " rel="np" href="#" data-tooltip="Change character" data-tooltip-options="{&quot;location&quot;: &quot;topCenter&quot;}">
-                            <?php echo $actualchar["name"]; ?>
+                            <?php echo @$actualchar["name"]; ?>
                             <span class="arrow"></span>
                         </a>
                         <div class="guild">
@@ -179,7 +179,7 @@ if (!isset($_SESSION['username'])) {
                             <div class="context">
                                 <a href="javascript:;" class="close" onclick="return CharSelect.close(this);"></a>
                                 <div class="context-user">
-                                    <strong><?php echo $actualchar["name"]; ?></strong>
+                                    <strong><?php echo @$actualchar["name"]; ?></strong>
                                     <br />
                                     <span class="realm
 									<?php
@@ -205,7 +205,7 @@ if (!isset($_SESSION['username'])) {
                                 ?>
                                 </div>
                                 <div class="context-links">
-                                    <a href="<?php echo $website['root']; ?>advanced.php?name=<?php echo $actualchar["name"]; ?>" title="<?php echo $uplate['profile']; ?>" rel="np" class="icon-profile link-first">
+                                    <a href="<?php echo $website['root']; ?>advanced.php?name=<?php echo @$actualchar["name"]; ?>" title="<?php echo $uplate['profile']; ?>" rel="np" class="icon-profile link-first">
                                         <?php echo $uplate['profile']; ?>
                                     </a>
                                     <a href="#" title="<?php echo $uplate['post']; ?>" rel="np" class="icon-posts">

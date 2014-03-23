@@ -65,29 +65,9 @@ include("offline.php");
 	<li><a href="#" class="free-services-item-restoration">
 	<span><?php echo $Shop['shop_8']; ?></span></a>
 	</li>
-	<?php
-					if(isset($_GET['ref']) && $_GET['ref'] != ""){
-					//Ids
-					/*
-					1 - Change Avatar
-					*/
-					
-					switch($_GET['ref']){
-					case "avatar":
-					include("services/avatar.php");
-					break;
-					default:
-					include("services/redirect.php");
-					break;
-					}
-					}else{
-	?>
-	<li><a href="<?php echo $website['root']; ?>shop/#" class="free-services-mobile-armory">
+	<li><a href="<?php echo $website['root']; ?>shop/avatar" class="free-services-mobile-armory">
 	<span><?php echo $Shop['shop_9']; ?></span></a>
 	</li>
-	<?php
-				}
-	?>
 	<li><a href="#" class="free-services-security">
 	<span><?php echo $Shop['shop_10']; ?></span></a>
 	</li>

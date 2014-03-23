@@ -94,17 +94,14 @@ Core.baseUrl = '<?php echo $website['root']; ?>login/en/';
 				}
 				?>
 				<?php }else{ ?>
-				<form action="?SSID:<?php echo $sessionid; ?>
-					" method="post"> <a id="embedded-close" href="javascript:;" onclick="updateParent('close')"></a>
+				<form action="<?php echo @$sessionid; ?>" method="post"> <a id="embedded-close" href="javascript:;" onclick="updateParent('close')"></a>
 					<div>
 						<p>
-							<label for="accountName" class="label"><?php echo $Log['Log6']; ?>
-							</label>
+							<label for="accountName" class="label"><?php echo $Log['Log6']; ?></label>
 							<input id="accountName" value="" name="accountName" maxlength="320" type="text" tabindex="1" class="input"/>
 						</p>
 						<p>
-							<label for="password" class="label"><?php echo $Log['Log7']; ?>
-							</label>
+							<label for="password" class="label"><?php echo $Log['Log7']; ?></label>
 							<input id="password" name="password" maxlength="16" type="password" tabindex="2" autocomplete="off" class="input"/>
 						</p>
 						<p>
@@ -114,9 +111,8 @@ Core.baseUrl = '<?php echo $website['root']; ?>login/en/';
 							<?php echo $Log['Log8']; ?>
 							</label>
 							</span>
-							<button class="ui-button button1" type="submit" data-text="<?php echo $log['log19']; ?>"> <span>
-							<span><?php echo $Log['Log9']; ?>
-							</span>
+							<button class="ui-button button1" type="submit" data-text="<?php echo $Log['Log19']; ?>"> <span>
+							<span><?php echo $Log['Log9']; ?></span>
 							</span>
 							</button>
 						</p>
