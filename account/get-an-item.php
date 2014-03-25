@@ -105,15 +105,13 @@ _gaq.push(['_trackPageLoadTime']);
 									<span class="form-required">*</span>
 								</label>
 									<select name='reward'>
-										<option value=1>Amani War Bear - 200Credits</option>
-										<option value=2>Swift Zhevra - 200Credits</option>
-										<option value=3>Reins of the Swift Spectral Tiger - 200Credits</option>
-										<option value=4>Peep's Whistle - 200Credits</option>
-										<option value=5>X-51 Nether-Rocket X-TREME - 200Credits</option>
-										<option value=6>Mimiron's Head - 200Credits</option>
-										<option value=7>The Horseman's Reins - 200Credits</option>
-										<option value=8>Pandaren Monk - 100Credits</option>
-										<option value=9>Gryphon Hatchling - 100Credits</option>
+									<?php
+									mysql_select_db($server_db, $connection_setup) or die(mysql_error());
+									$items_id = mysql_query("SELECT * FROM $server_db.rewards")or die(mysql_error());
+										while($items = mysql_fetch_array($items_id))
+										{ ?>
+										<option value="<?php echo $items["id"]?>"> <?php echo $items ["name"] ?> - <?php echo $items["price"]?> Credits</option>
+										<?php } ?>
 									</select>
 									</div>
 									<br/>
