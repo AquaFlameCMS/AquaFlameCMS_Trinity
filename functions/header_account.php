@@ -65,20 +65,26 @@
 <span></span>
 </li>
 
-<!--<li class="account-balance" id="accountBalanceCenter" data-tooltip-options="{&quot;location&quot;: &quot;mouse&quot;}">
+<li class="account-balance" id="accountBalanceCenter" data-tooltip-options="{&quot;location&quot;: &quot;mouse&quot;}">
 <a href="#" class="border-3 menu-arrow title" onclick="openAccountDropdown(this, 'accountBalance'); return false;">
-<span class="sub-title">Balance:</span><br />
-<span class="balance" id="primary-balance">0 &#8364;</span>
+<span class="sub-title">Credits:</span><br />
+<?php
+$points = mysql_query("SELECT * FROM $server_adb.account WHERE username = '".$_SESSION['username']."'")or die(mysql_error());
+while($get = mysql_fetch_array($points))
+{
+?>
+<span class="balance" id="primary-balance"><?php echo $get["credits"];?></span>
 </a>
+<?php } ?>
 <div class="flyout-menu" id="accountBalance-menu">
 <ul>
-<li class=" first nonBeta"><a href="#">Add Funds</a></li>
-<li class=""><a href="#">Balance History</a></li>
+<li class=" first nonBeta"><a href="<?php echo $website['root']; ?>account/sms.php">Add Funds</a></li>
+<!--<li class=""><a href="#">Balance History</a></li>
 <li class="line nonBeta"><a href="#" onclick="$('#account-balance-dialog').dialog('open'); return false;">Other Currencies...</a></li>
-<li class="nonBeta"><a href="#">Balance Help</a></li>
+<li class="nonBeta"><a href="#">Balance Help</a></li>-->
 </ul>
 </div>
-</li>-->
+</li>
 </ul>
 <span class="clear"><!-- --></span>
 </div>
