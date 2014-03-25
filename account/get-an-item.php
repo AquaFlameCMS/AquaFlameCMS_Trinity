@@ -81,10 +81,8 @@ _gaq.push(['_trackPageLoadTime']);
      </style>  <![endif]-->
 					<div class="dashboard service">
 						<div class="header">
-							<h2 class="subcategory"><?php echo $donar['2']; ?>
-							</h2>
-							<h3 class="headline"><?php echo $donar['3']; ?>
-							</h3>
+							<h2 class="subcategory"><?php echo $donar['2']; ?></h2>
+							<h3 class="headline">Donation Shop</h3>
 							<a href=""><img src="../wow/static/local-common/images/game-icons/wow.png" alt="World of Warcraft" width="48" height="48"/></a>
 						</div>
 					</div>
@@ -93,17 +91,19 @@ _gaq.push(['_trackPageLoadTime']);
 					<div class="digital-games" id="digital-games">
 						<div class="data-grid-container">
 							<div class="data-grid-row">
-								<center>
-								<?php
-								$cred_sql = "SELECT * FROM account WHERE id=".$_SESSION['id'];
-								mysql_select_db($server_adb) or die(mysql_error());
-								$cred_q = mysql_query($cred_sql);
-								$cred = mysql_fetch_array($cred_q);
-								echo "Credits:";
-								echo $cred['credits'];
-								echo "<br />
-								<br/>"; ?>
 								<form action='<?php echo $_SERVER['PHP_SELF'] ?>' method='post'>
+								<div class="form-row required">
+									<label for="firstname" class="label-full ">
+										<strong><?php echo $name['6']; ?></strong>
+										<span class="form-required">*</span>
+									</label>
+									<input type="" id="firstname" name="account" value="<?php echo strtolower($_SESSION['username']); ?>" class=" input border-5 glow-shadow-2 form-disabled" maxlength="16" tabindex="1" disabled />
+								</div>
+								<div class="form-row required">
+								<label for="type" class="label-full ">
+									<strong>Choose your reward</strong>
+									<span class="form-required">*</span>
+								</label>
 									<select name='reward'>
 										<option value=1>Amani War Bear - 200Credits</option>
 										<option value=2>Swift Zhevra - 200Credits</option>
@@ -115,16 +115,37 @@ _gaq.push(['_trackPageLoadTime']);
 										<option value=8>Pandaren Monk - 100Credits</option>
 										<option value=9>Gryphon Hatchling - 100Credits</option>
 									</select>
+									</div>
 									<br/>
-									<?php
-									mysql_select_db($server_cdb) or die(mysql_error());
-									$charss_sql = mysql_query("SELECT * FROM $server_cdb.characters WHERE account=".$_SESSION['id']."")or die(mysql_error());
-										while($chars = mysql_fetch_array($charss_sql))
-									{
-									echo $chars['name']."<input type='radio' name='character' value='".$chars['guid']."'>
-									<br/>";
-									} ?>
-									<input type='submit' value='Buy Now'>
+									<div class="form-row required">
+										<label for="character" class="label-full ">
+											<strong><?php echo $name['7']; ?></strong>
+											<span class="form-required">*</span>
+										</label>
+										<select id="character" name="character">
+											<?php
+											$get_chars = mysql_query("SELECT * FROM $server_cdb.characters WHERE account = '".$account_information['id']."'");
+											while($character = mysql_fetch_array($get_chars)){
+													echo '<option value="'.$character['guid'].'">'.$character['name'].'</option>';
+												}
+											?>
+										</select>
+									</div>
+									<br />
+									<center>
+										<input type='submit' value='Buy Now'>
+										<br />
+										<br />
+										<?php
+											$cred_sql = "SELECT * FROM account WHERE id=".$account_information['id'];
+											mysql_select_db($server_adb) or die(mysql_error());
+											$cred_q = mysql_query($cred_sql);
+											$cred = mysql_fetch_array($cred_q);
+											echo "<p class='caption'>Credits:<strong><font color='green'>";
+											echo $cred['credits'];
+											echo "!</font></strong></p>";
+										?>
+									</center>
 								</form>
 								<?php
 								if(empty($_POST))
@@ -137,8 +158,7 @@ _gaq.push(['_trackPageLoadTime']);
 										$price[$i] = 200;
 									for($i=8;$i<10;$i++)
 										$price[$i] = 100;
-									if($price[$_POST['reward']] >
-								 $cred['credits'])
+									if($price[$_POST['reward']] > $cred['credits'])
 								 echo "You don't have money.";
 								 else {
 								 switch($_POST['reward'])
@@ -178,19 +198,19 @@ _gaq.push(['_trackPageLoadTime']);
 								 mysql_query("INSERT INTO item_instance VALUES ('".$item_last_id['guid']."', '".$item."', '".$char."', 0, 0, 1, 0, '-1 0 0 0 0 ', 0, '0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ', '0', '0', '0', '')");
 								 mysql_query("INSERT INTO mail_items VALUES ('".$mail_last_id['id']."', '".$item_last_id['guid']."', '".$char."')");
 								 mysql_query("INSERT INTO mail VALUES ('".$mail_last_id['id']."', '0', '61', '0', '1', '1', 'Donate', 'Thanks for donation. Reward is in your mailbox ingame.', '1', '".(time()+2592000)."', '".time()."', '0', '0', '0')");
-								 mysql_select_db($server_adb) or die(mysql_error()); mysql_query("UPDATE account SET credits=credits-".$price[$i_mres]." WHERE id=".$_SESSION['id']);
-								 echo "Thanks for donation. Reward is in your mailbox ingame.<br/>";
+								 mysql_select_db($server_adb) or die(mysql_error());
+								 mysql_query("UPDATE account SET credits=credits-".$price[$i_mres]." WHERE id=".$account_information['id']);
+								 echo "<center><p class='caption'><strong><font color='green'>Thanks for donation. Reward is in your mailbox ingame.!</font></strong></p></center><br/>";
 								 echo '<meta http-equiv="refresh" content="4;url='.$website['root'].'account/"/>';
 								 }
 								 }
-								 ?> 
-							   </center>
+								 ?>
 							</div>
 							<center>
 							<div class="retail-purchase border-3">
 								<p class="caption">
 									<?php echo $donar['12']; ?>
-									<a href="#" tabindex="1" target="_blank"><?php echo $website['title']; ?>Store</a>.
+									<a href="<?php echo $website['root'] ?>account/get-an-item.php" tabindex="1" target="_blank"><?php echo $website['title']; ?>Store</a>.
 								</p>
 							</div>
 							</center>
@@ -217,22 +237,34 @@ var digitalGames = new DigitalGames('#digital-games');
 <script src="../wow/static/local-common/js/tooltip.js?v39"></script>
 <script src="../wow/static/local-common/js/menu.js?v39"></script>
 <script src="../wow/static/local-common/js/third-party/jquery-ui-1.8.6.custom.min.js?v39"></script>
+<script src="../wow/static/js/bam.js?v21"></script>
+<script src="../wow/static/local-common/js/tooltip.js?v22"></script>
+<script src="../wow/static/local-common/js/menu.js?v22"></script>
 <script type="text/javascript">
 $(function() {
+Menu.initialize();
+Menu.config.colWidth = 190;
 Locale.dataPath = 'data/i18n.frag.xml';
 });
-	</script>
+</script>
 <!--[if lt IE 8]>
-<script type="text/javascript" src="../wow/static/local-common/js/third-party/jquery.pngFix.pack.js?v39"></script>
+<script type="text/javascript" src="../wow/static/local-common/js/third-party/jquery.pngFix.pack.js?v22"></script>
 <script type="text/javascript">$('.png-fix').pngFix();</script>
 <![endif]-->
-<script src="../wow/static/js/management/get-game.js?v26"></script>
-<!--[if lt IE 8]> <script type="text/javascript" src="../wow/static/local-common/js/third-party/jquery.pngFix.pack.js?v39"></script>
+<script src="../wow/static/js/settings/settings.js?v21"></script>
+<script src="../wow/static/js/settings/password.js?v21"></script>
 <script type="text/javascript">
 //<![CDATA[
-$('.png-fix').pngFix(); //]]>
+Core.load("wow/static/local-common/js/overlay.js?v22");
+Core.load("wow/static/local-common/js/search.js?v22");
+Core.load("wow/static/local-common/js/third-party/jquery-ui-1.8.6.custom.min.js?v22");
+Core.load("wow/static/local-common/js/third-party/jquery.mousewheel.min.js?v22");
+Core.load("wow/static/local-common/js/third-party/jquery.tinyscrollbar.custom.js?v22");
+Core.load("wow/static/local-common/js/login.js?v22", false, function() {
+Login.embeddedUrl = '<?php echo $website['root'];?>loginframe.php';
+});
+//]]>
 </script>
-<![endif]-->
 <script type="text/javascript">
 //<![CDATA[
 (function() {
