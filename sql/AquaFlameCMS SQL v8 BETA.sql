@@ -417,27 +417,26 @@ INSERT INTO `realms` (`id`, `realmid`, `world_db`, `char_db`, `version`, `drop_r
 CREATE TABLE IF NOT EXISTS `rewards` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `server` int(10) unsigned NOT NULL,
-  `name` varchar(32) NOT NULL,
-  `item1` int(10) unsigned NOT NULL,
-  `item2` int(10) unsigned NOT NULL,
-  `item3` int(10) unsigned NOT NULL,
-  `item4` int(10) unsigned NOT NULL,
-  `item5` int(10) unsigned NOT NULL,
-  `item6` int(10) unsigned NOT NULL,
-  `item7` int(10) unsigned NOT NULL,
-  `item8` int(10) unsigned NOT NULL,
-  `gold` int(10) unsigned NOT NULL,
+  `name` varchar(50) CHARACTER SET utf8 NOT NULL,
+  `item` int(10) unsigned NOT NULL,
   `price` float unsigned NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
 
 -- Dumping data for table website.rewards: 1 rows
 DELETE FROM `rewards`;
 /*!40000 ALTER TABLE `rewards` DISABLE KEYS */;
-INSERT INTO `rewards` (`id`, `server`, `name`, `item1`, `item2`, `item3`, `item4`, `item5`, `item6`, `item7`, `item8`, `gold`, `price`) VALUES
-	(1, 1, 'Test Sword', 24448, 0, 0, 0, 0, 0, 0, 0, 0, 5);
+INSERT INTO `rewards`(`id`,`server`,`name`,`item`,`price`) VALUES
+( 1,1,'Amani War Bear','33809','200'),
+( 2,1,'Swift Zhevra','37719','200'),
+( 3,1,'Reins of the Swift Spectral Tiger','49284','200'),
+( 4,1,'Peep\'s Whistle','25596','200'),
+( 5,1,'X-51 Nether-Rocket','49286','200'),
+( 6,1,'Mimiron\'s Head','45693','200'),
+( 7,1,'The Horseman\'s Reins','37012','200'),
+( 8,1,'Pandaren Monk','49665','100'),
+( 9,1,'Gryphon Hatchling','49662','100');
 /*!40000 ALTER TABLE `rewards` ENABLE KEYS */;
-
 
 -- Dumping structure for table website.servers
 CREATE TABLE IF NOT EXISTS `servers` (

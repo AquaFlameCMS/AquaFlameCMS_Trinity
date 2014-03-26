@@ -76,11 +76,22 @@ _gaq.push(['_trackPageLoadTime']);
 			<div class="wrapper">
 				<div id="content">
 					<!--[if lte IE 7]>  <style type="text/css">
-    .raf-step3-arrow { position:relative; width:176px; height:61px; background:url('wow/static/images/services/wow/raf/step_3_arrow_b.png') 0 0 no-repeat!important; top:-540px; left:105px; }
-    .raf-step5-arrow { position:relative; width:155px; height:57px; background:url('wow/static/images/services/wow/raf/step_5_arrow_b.png') 0 0 no-repeat!important; top:-163px; left:150px; }
-     </style>  <![endif]-->
+					.raf-step3-arrow { position:relative; width:176px; height:61px; background:url('wow/static/images/services/wow/raf/step_3_arrow_b.png') 0 0 no-repeat!important; top:-540px; left:105px; }
+					.raf-step5-arrow { position:relative; width:155px; height:57px; background:url('wow/static/images/services/wow/raf/step_5_arrow_b.png') 0 0 no-repeat!important; top:-163px; left:150px; }
+					 </style>  <![endif]-->
 					<div class="dashboard service">
 						<div class="header">
+						<span class="float-right"><span class="form-req"></span>
+						<?php
+							$cred_sql = "SELECT * FROM account WHERE id=".$account_information['id'];
+							mysql_select_db($server_adb) or die(mysql_error());
+							$cred_q = mysql_query($cred_sql);
+							$cred = mysql_fetch_array($cred_q);
+							echo "<p class=''>Credits:<strong><font color='green'>";
+							echo $cred['credits'];
+							echo "!</font></strong></p>";
+							?>
+						</span>
 							<h2 class="subcategory"><?php echo $donar['2']; ?></h2>
 							<h3 class="headline">Donation Shop</h3>
 							<a href=""><img src="../wow/static/local-common/images/game-icons/wow.png" alt="World of Warcraft" width="48" height="48"/></a>
@@ -105,9 +116,8 @@ _gaq.push(['_trackPageLoadTime']);
 									<span class="form-required">*</span>
 								</label>
 									<select name='reward'>
-									<?php
-									mysql_select_db($server_db, $connection_setup) or die(mysql_error());
-									$items_id = mysql_query("SELECT * FROM $server_db.rewards")or die(mysql_error());
+										<?php
+										$items_id = mysql_query("SELECT * FROM $server_db.rewards")or die(mysql_error());
 										while($items = mysql_fetch_array($items_id))
 										{ ?>
 										<option value="<?php echo $items["id"]?>"> <?php echo $items ["name"] ?> - <?php echo $items["price"]?> Credits</option>
@@ -131,18 +141,13 @@ _gaq.push(['_trackPageLoadTime']);
 									</div>
 									<br />
 									<center>
-										<input type='submit' value='Buy Now'>
-										<br />
-										<br />
-										<?php
-											$cred_sql = "SELECT * FROM account WHERE id=".$account_information['id'];
-											mysql_select_db($server_adb) or die(mysql_error());
-											$cred_q = mysql_query($cred_sql);
-											$cred = mysql_fetch_array($cred_q);
-											echo "<p class='caption'>Credits:<strong><font color='green'>";
-											echo $cred['credits'];
-											echo "!</font></strong></p>";
-										?>
+										<fieldset class="ui-controls " >
+										<button class="ui-button button1 " type="submit" name="submit" id="settings-submit" value="Buy Now" tabindex="1">
+										<span>
+										<span>Buy Now</span>
+										</span>
+										</button>
+										</fieldset>
 									</center>
 								</form>
 								<?php
