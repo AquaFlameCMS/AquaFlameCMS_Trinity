@@ -1301,7 +1301,7 @@ $Errors['503'] = "503";
 //Finish Error page
 
 //Start Pre Page
-$Pre['next'] = "Continue to World of Warcraft";
+$Pre['next'] = "Continuar a World of Warcraft";
 // Finish Pre Page
 
 /* End of file es-mx.php */

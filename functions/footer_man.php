@@ -165,10 +165,13 @@
 <span class="clear"><!-- --></span>
 </div>
 <br />
-<center>
-<br>
-<small><?php echo $copyright3['copyright3']; ?>.<br /><?php echo $copyright['copyright'];  echo $website['title']; ?>.<br /><?php echo $copyright4['copyright4']; ?></small>
-</center>
+	<center>
+		<br>
+			<small><?php echo $copyright3['copyright3']; ?>
+			.<br/><?php echo $copyright['copyright']; ?> - <?php echo date('Y'); ?> <?php echo $website['title']; ?>
+			.<br/><?php echo $copyright4['copyright4']; ?>
+			</small>
+	</center>
 </div>
 <center><a href="http://aquaflame.org/" height="46" width="190"><img src="<?php echo $website['root'];?>wow/static/images/logos/wof-logo-small.png" height="21px" width="190px"/></center></a>
 </div>

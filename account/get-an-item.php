@@ -5,8 +5,7 @@ $page_cat = 'gamesncodes';
 if (!isset($_SESSION['username'])) {
         header('Location: '.$website['root'].'account_log.php');		
 }
-$code = "f7c3bc1d808e04732adf679965ccc34ca7ae3441";
-$service_donate  = 1;    // 1 - on  ;  0 -off
+if (empty($code))exit;
 ?>
 <!DOCTYPE html>
 <html lang="en-gb">
@@ -100,6 +99,7 @@ _gaq.push(['_trackPageLoadTime']);
 				</div>
 				<div id="page-content" class="page-content">
 					<div class="digital-games" id="digital-games">
+						<?php if ($donation_shop == true) { ?>
 						<div class="data-grid-container">
 							<div class="data-grid-row">
 								<form action='<?php echo $_SERVER['PHP_SELF'] ?>' method='post'>
@@ -126,7 +126,7 @@ _gaq.push(['_trackPageLoadTime']);
 									</div>
 									<br/>
 									<div class="form-row required">
-										<label for="character" class="label-full ">
+										<label for="character" class="label-full">
 											<strong><?php echo $name['7']; ?></strong>
 											<span class="form-required">*</span>
 										</label>
@@ -141,7 +141,7 @@ _gaq.push(['_trackPageLoadTime']);
 									</div>
 									<br />
 									<center>
-										<fieldset class="ui-controls " >
+										<fieldset class="ui-controls" >
 										<button class="ui-button button1 " type="submit" name="submit" id="settings-submit" value="Buy Now" tabindex="1">
 										<span>
 										<span>Buy Now</span>
@@ -154,7 +154,7 @@ _gaq.push(['_trackPageLoadTime']);
 								if(empty($_POST))
 								{}
 								elseif(empty($_POST['character']))
-									echo "You must fill in all of the required fields.";
+									echo "<center><div class='retail-purchase border-3'><p class='caption'>You must fill in all of the required fields.</p></div></center><br/>";
 								else
 								{
 									for($i=1;$i<8;$i++)
@@ -162,7 +162,7 @@ _gaq.push(['_trackPageLoadTime']);
 									for($i=8;$i<10;$i++)
 										$price[$i] = 100;
 									if($price[$_POST['reward']] > $cred['credits'])
-								 echo "You don't have money.";
+								 echo "<center><div class='retail-purchase border-3'><p class='caption'>You don't have money.</p></div></center><br/>";
 								 else {
 								 switch($_POST['reward'])
 								 {
@@ -203,7 +203,7 @@ _gaq.push(['_trackPageLoadTime']);
 								 mysql_query("INSERT INTO mail VALUES ('".$mail_last_id['id']."', '0', '61', '0', '1', '1', 'Donate', 'Thanks for donation. Reward is in your mailbox ingame.', '1', '".(time()+2592000)."', '".time()."', '0', '0', '0')");
 								 mysql_select_db($server_adb) or die(mysql_error());
 								 mysql_query("UPDATE account SET credits=credits-".$price[$i_mres]." WHERE id=".$account_information['id']);
-								 echo "<center><p class='caption'><strong><font color='green'>Thanks for donation. Reward is in your mailbox ingame.!</font></strong></p></center><br/>";
+								 echo "<center><div class='retail-purchase border-3'><p class='caption'>Thanks for donation. Reward is in your mailbox ingame.!</p></div></center><br/>";
 								 echo '<meta http-equiv="refresh" content="4;url='.$website['root'].'account/"/>';
 								 }
 								 }
@@ -217,6 +217,11 @@ _gaq.push(['_trackPageLoadTime']);
 								</p>
 							</div>
 							</center>
+							<?php
+							}else{
+							echo"<center><div class='retail-purchase border-3'><p class='caption'>Right now the Donation Shop is disabled<br />Maintenance</p></div></center>";
+							}
+							?>
 						</div>
 					</div>
 					<br/>

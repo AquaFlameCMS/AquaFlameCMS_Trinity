@@ -109,6 +109,19 @@ $expansion_wow = "3";
 
 /*
 |--------------------------------------------------------------------------
+| Donation Store Beta
+|--------------------------------------------------------------------------
+|
+| Enable Donation Store Beta
+| For Example
+| Change true(Donation Store mode)/false(off mode) to disable/enable Donation Store
+|        true or false
+|*/
+$donation_shop  = true;
+$code = "f7c3bc1d808e04732adf679965ccc34ca7ae3441";
+
+/*
+|--------------------------------------------------------------------------
 | Realmlist & Realm Name
 |--------------------------------------------------------------------------
 |
@@ -196,11 +209,6 @@ if ($pre == true) {
 |
 */
 $maintenance = false;
-if ($maintenance == true) {
-    if (!isset($bucle_mant)) {
-        header('Location: '.$website['address'].''.$website['root'].'maintenance.php');
-    }
-} else {
     
 /*
 |--------------------------------------------------------------------------
@@ -210,6 +218,12 @@ if ($maintenance == true) {
 | All changes must be made on data found above.
 |
 */
+
+if ($maintenance == true) {
+    if (!isset($bucle_mant)) {
+        header('Location: '.$website['address'].''.$website['root'].'maintenance.php');
+    }
+} else {
     $teamsLimit = 50; // Number of team to display on each page
     
     $connection_setup = mysql_connect($serveraddress . ':' . $serverport, $serveruser, $serverpass) or die(mysql_error());

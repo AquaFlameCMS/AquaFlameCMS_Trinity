@@ -67,7 +67,7 @@ $Greek['gr_lang']            = "&Epsilon;&lambda;&lambda;&eta;&nu;&iota;&kappa;&
 $Romanian['RO']              = "Romania";
 $Romanian['ROEU']            = "Romanian (EU)";
 $italy['europe']             = "Italian";
-$copyright['copyright']      = "Copyright &copy; 2011-2013 ";
+$copyright['copyright']      = "Copyright &copy; 2011";
 $copyright3['copyright3']    = "Powered by AquaFlame CMS";
 $copyright4['copyright4']    = "Ressourcen sind Eigentum von Blizzard Entertainment"; // found better translation
 

@@ -68,7 +68,7 @@ $Greek['gr_lang']            = "&Epsilon;&lambda;&lambda;&eta;&nu;&iota;&kappa;&
 $Romanian['RO']              = "Romania";
 $Romanian['ROEU']            = "Romanian (EU)";
 $italy['europe']             = "Italian";
-$copyright['copyright']      = "Copyright &copy; 2011";
+$copyright['copyright']      = "Copyright &copy;";
 $copyright3['copyright3']    = "Hecho por AquaFlame CMS";
 $copyright4['copyright4']    = "Todas las imágenes están en propiedad de Blizzard Entertainment.";
 
@@ -1301,7 +1301,7 @@ $Errors['503'] = "503";
 //Finish Error page
 
 //Start Pre Page
-$Pre['next'] = "Continue to World of Warcraft";
+$Pre['next'] = "Continuar a World of Warcraft";
 // Finish Pre Page
 
 /* End of file es-es.php */
