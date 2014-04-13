@@ -2,10 +2,10 @@
 <div class="sidebar-title">
 <h3 class="category title-events"><a href="account/vote.php"><?php echo $Vote['VotePanel']; ?></a></h3></div>
 <div class="sidebar-content">
-<?php		$votes = mysql_query("SELECT * FROM $server_db.vote ORDER BY `id` ASC");
-			while($vote = mysql_fetch_array($votes))
+<?php		$votes_log = mysql_query("SELECT * FROM $server_db.vote ORDER BY `id` ASC");
+			while($vote = mysql_fetch_array($votes_log))
 			{
-			$votedx = mysql_query("SELECT * FROM $server_db.votes WHERE voteid = '".$vote['ID']."' AND userid = '".$account_information['id']."' ORDER BY `date` DESC");
+			$votedx = mysql_query("SELECT * FROM $server_db.votes_log WHERE voteid = '".$vote['ID']."' AND userid = '".$account_information['id']."' ORDER BY `date` DESC");
 			if(mysql_num_rows($votedx) > 0)
 			{
 			require_once("functions/custom.php");		
