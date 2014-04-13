@@ -134,14 +134,14 @@ _gaq.push(['_trackPageLoadTime']);
 						} else {
 							
 							$vote_option = mysql_fetch_assoc($check);
-							$check = mysql_query("SELECT * FROM votes WHERE userid = '".$account_information['id']."' AND voteid = '".$vote_option['ID']."' ORDER BY `date` DESC");
+							$check = mysql_query("SELECT * FROM votes_log WHERE userid = '".$account_information['id']."' AND voteid = '".$vote_option['ID']."' ORDER BY `date` DESC");
 							
 							function vote()
 							{
 								global $server_db, $account_information, $vote_option;
 								$add_points = mysql_query("UPDATE $server_db.users SET vote_points = vote_points + 1 WHERE id = '".$account_information['id']."'");	
 								$date = date('Y-m-d H:i:s',time());
-								$add_vote = mysql_query("INSERT INTO $server_db.votes (userid,date,voteid) VALUES ('".$account_information['id']."','".$date."','".$vote_option['ID']."')");
+								$add_vote = mysql_query("INSERT INTO $server_db.votes_log (userid,date,voteid) VALUES ('".$account_information['id']."','".$date."','".$vote_option['ID']."')");
 								?>
 								<SCRIPT LANGUAGE="JavaScript">
 								window.open("<?php echo $vote_option['Link']; ?>");
@@ -185,12 +185,12 @@ _gaq.push(['_trackPageLoadTime']);
 					} else $error = 0;
 					
 					if($error != 1){
-						$votes = mysql_query("SELECT * FROM $server_db.vote ORDER BY `id` ASC");
+						$votes_log = mysql_query("SELECT * FROM $server_db.vote ORDER BY `id` ASC");
 							$i=0;
-							while($vote = mysql_fetch_array($votes))
+							while($vote = mysql_fetch_array($votes_log))
 							{
 								$i++;
-								$votedx = mysql_query("SELECT * FROM $server_db.votes WHERE voteid = '".$vote['ID']."' AND userid = '".$account_information['id']."' ORDER BY `date`	 DESC");
+								$votedx = mysql_query("SELECT * FROM $server_db.votes_log WHERE voteid = '".$vote['ID']."' AND userid = '".$account_information['id']."' ORDER BY `date`	 DESC");
 								if(mysql_num_rows($votedx) > 0)
 								{
 									require_once("../functions/custom.php");

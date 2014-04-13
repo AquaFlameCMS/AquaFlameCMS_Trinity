@@ -117,7 +117,7 @@ _gaq.push(['_trackPageLoadTime']);
 								</label>
 									<select name='reward'>
 										<?php
-										$items_id = mysql_query("SELECT * FROM $server_db.rewards")or die(mysql_error());
+										$items_id = mysql_query("SELECT * FROM $server_db.shop_items")or die(mysql_error());
 										while($items = mysql_fetch_array($items_id))
 										{ ?>
 										<option value="<?php echo $items["id"]?>"> <?php echo $items ["name"] ?> - <?php echo $items["price"]?> Credits</option>
@@ -203,6 +203,9 @@ _gaq.push(['_trackPageLoadTime']);
 								 mysql_query("INSERT INTO mail VALUES ('".$mail_last_id['id']."', '0', '61', '0', '1', '1', 'Donate', 'Thanks for donation. Reward is in your mailbox ingame.', '1', '".(time()+2592000)."', '".time()."', '0', '0', '0')");
 								 mysql_select_db($server_adb) or die(mysql_error());
 								 mysql_query("UPDATE account SET credits=credits-".$price[$i_mres]." WHERE id=".$account_information['id']);
+								 mysql_select_db($server_db) or die(mysql_error());
+								 $date = date('Y-m-d H:i:s',time());
+								 $add_vote = mysql_query("INSERT INTO shop_log (userid,date,item_id) VALUES ('".$account_information['id']."','".$date."','".$item."')");
 								 echo "<center><div class='retail-purchase border-3'><p class='caption'>Thanks for donation. Reward is in your mailbox ingame.!</p></div></center><br/>";
 								 echo '<meta http-equiv="refresh" content="4;url='.$website['root'].'account/"/>';
 								 }

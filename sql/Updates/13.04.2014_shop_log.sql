@@ -1,0 +1,14 @@
+/* USE AT YOUR OWN RISK!
+ * AquaFlame Beta-Shop
+ **/
+RENAME TABLE `rewards` TO `shop_items`;
+
+DROP TABLE IF EXISTS `shop_log`;
+
+CREATE TABLE `shop_log` (
+  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `userid` INT(10) DEFAULT NULL,
+  `date` DATETIME DEFAULT NULL,
+  `item_id` INT(10) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MYISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;

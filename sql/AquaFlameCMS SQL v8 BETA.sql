@@ -412,32 +412,6 @@ INSERT INTO `realms` (`id`, `realmid`, `world_db`, `char_db`, `version`, `drop_r
 	(1, 1, 'world', 'chars', '4.3.4a', '1x', '1x');
 /*!40000 ALTER TABLE `realms` ENABLE KEYS */;
 
-
--- Dumping structure for table website.rewards
-CREATE TABLE IF NOT EXISTS `rewards` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `server` int(10) unsigned NOT NULL,
-  `name` varchar(50) CHARACTER SET utf8 NOT NULL,
-  `item` int(10) unsigned NOT NULL,
-  `price` float unsigned NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
-
--- Dumping data for table website.rewards: 1 rows
-DELETE FROM `rewards`;
-/*!40000 ALTER TABLE `rewards` DISABLE KEYS */;
-INSERT INTO `rewards`(`id`,`server`,`name`,`item`,`price`) VALUES
-( 1,1,'Amani War Bear','33809','200'),
-( 2,1,'Swift Zhevra','37719','200'),
-( 3,1,'Reins of the Swift Spectral Tiger','49284','200'),
-( 4,1,'Peep\'s Whistle','25596','200'),
-( 5,1,'X-51 Nether-Rocket','49286','200'),
-( 6,1,'Mimiron\'s Head','45693','200'),
-( 7,1,'The Horseman\'s Reins','37012','200'),
-( 8,1,'Pandaren Monk','49665','100'),
-( 9,1,'Gryphon Hatchling','49662','100');
-/*!40000 ALTER TABLE `rewards` ENABLE KEYS */;
-
 -- Dumping structure for table website.servers
 CREATE TABLE IF NOT EXISTS `servers` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -455,6 +429,47 @@ DELETE FROM `servers`;
 INSERT INTO `servers` (`id`, `name`, `host`, `username`, `password`, `database`) VALUES
 	(1, 'AquaFlameCMS', '127.0.0.1', 'root', 'password', 'world');
 /*!40000 ALTER TABLE `servers` ENABLE KEYS */;
+
+-- Dumping structure for table website.shop_items
+CREATE TABLE IF NOT EXISTS `shop_items` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `server` int(10) unsigned NOT NULL,
+  `name` varchar(50) CHARACTER SET utf8 NOT NULL,
+  `item` int(10) unsigned NOT NULL,
+  `price` float unsigned NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
+
+-- Dumping data for table website.shop_items: 9 rows
+DELETE FROM `shop_items`;
+/*!40000 ALTER TABLE `shop_items` DISABLE KEYS */;
+INSERT INTO `shop_items`(`id`,`server`,`name`,`item`,`price`) VALUES
+( 1,1,'Amani War Bear','33809','200'),
+( 2,1,'Swift Zhevra','37719','200'),
+( 3,1,'Reins of the Swift Spectral Tiger','49284','200'),
+( 4,1,'Peep\'s Whistle','25596','200'),
+( 5,1,'X-51 Nether-Rocket','49286','200'),
+( 6,1,'Mimiron\'s Head','45693','200'),
+( 7,1,'The Horseman\'s Reins','37012','200'),
+( 8,1,'Pandaren Monk','49665','100'),
+( 9,1,'Gryphon Hatchling','49662','100');
+/*!40000 ALTER TABLE `shop_items` ENABLE KEYS */;
+
+
+-- Dumping structure for table website.shop_log
+CREATE TABLE `shop_log` (
+  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `userid` INT(10) DEFAULT NULL,
+  `date` DATETIME DEFAULT NULL,
+  `item_id` INT(10) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MYISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+
+-- Dumping data for table website.shop_log: ~0 rows (approximately)
+DELETE FROM `shop_log`;
+/*!40000 ALTER TABLE `shop_log` DISABLE KEYS */;
+/*!40000 ALTER TABLE `shop_log` ENABLE KEYS */;
+
 
 
 -- Dumping structure for table website.sidebars
@@ -577,23 +592,23 @@ INSERT INTO `vote` (`ID`, `Name`, `Link`, `Description`) VALUES
 /*!40000 ALTER TABLE `vote` ENABLE KEYS */;
 
 
--- Dumping structure for table website.votes
-CREATE TABLE IF NOT EXISTS `votes` (
+-- Dumping structure for table website.votes_log
+CREATE TABLE IF NOT EXISTS `votes_log` (
   `id` int(10) DEFAULT NULL,
   `userid` int(10) DEFAULT NULL,
   `date` datetime DEFAULT NULL,
   `voteid` int(10) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
--- Dumping data for table website.votes: 4 rows
-DELETE FROM `votes`;
-/*!40000 ALTER TABLE `votes` DISABLE KEYS */;
-INSERT INTO `votes` (`id`, `userid`, `date`, `voteid`) VALUES
+-- Dumping data for table website.votes_log: 4 rows
+DELETE FROM `votes_log`;
+/*!40000 ALTER TABLE `votes_log` DISABLE KEYS */;
+INSERT INTO `votes_log` (`id`, `userid`, `date`, `voteid`) VALUES
 	(1, 1, '2013-08-14 18:08:07', 1),
 	(2, 1, '2013-09-04 17:30:01', 1),
 	(3, 1, '2013-09-09 23:36:19', 1),
 	(4, 1, '2013-09-28 18:02:42', 1);
-/*!40000 ALTER TABLE `votes` ENABLE KEYS */;
+/*!40000 ALTER TABLE `votes_log` ENABLE KEYS */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
