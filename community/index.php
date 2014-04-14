@@ -91,111 +91,36 @@ include("../header.php");
 										<span class="leaderboard-content-desc">View the Server Progression over PvE, how many times dungeons & raids are run.</span>
 										<!-- FULL COLUMN -->
 										<div class="group">
-											<a href="#">
-											<span class="group-thumbnail thumb-gate-of-the-setting-sun"></span>
-											<span class="group-name">Gate of the Setting Sun</span>
+											<?php
+											$pve_mode = mysql_query("SELECT * FROM $server_db.pve_mode");
+											while($pve = mysql_fetch_array($pve_mode)){ ?>
+											<a href="<?php echo $pve["link"] ?>">
+											<span class="group-thumbnail <?php echo $pve["thumb"] ?>"></span>
+											<span class="group-name"><?php echo $pve["group-name"] ?><span class="group-desc"><?php echo $pve["description"] ?></span>
+											</span>
 											<span class="clear">
 											<!-- -->
 											</span>
 											</a>
-											<a href="#">
-											<span class="group-thumbnail thumb-mogushan-palace"></span>
-											<span class="group-name">Mogu'shan Palace</span>
-											<span class="clear">
-											<!-- -->
-											</span>
-											</a>
-											<a href="#">
-											<span class="group-thumbnail thumb-scarlet-halls"></span>
-											<span class="group-name">Scarlet Halls</span>
-											<span class="clear">
-											<!-- -->
-											</span>
-											</a>
-											<a href="#">
-											<span class="group-thumbnail thumb-scarlet-monastery"></span>
-											<span class="group-name">Scarlet Monastery</span>
-											<span class="clear">
-											<!-- -->
-											</span>
-											</a>
-											<a href="#">
-											<span class="group-thumbnail thumb-scholomance"></span>
-											<span class="group-name">Scholomance</span>
-											<span class="clear">
-											<!-- -->
-											</span>
-											</a>
-											<a href="#">
-											<span class="group-thumbnail thumb-shadopan-monastery"></span>
-											<span class="group-name">Shado-Pan Monastery</span>
-											<span class="clear">
-											<!-- -->
-											</span>
-											</a>
-											<a href="#">
-											<span class="group-thumbnail thumb-siege-of-niuzao-temple"></span>
-											<span class="group-name">Siege of Niuzao Temple</span>
-											<span class="clear">
-											<!-- -->
-											</span>
-											</a>
-											<a href="#">
-											<span class="group-thumbnail thumb-stormstout-brewery"></span>
-											<span class="group-name">Stormstout Brewery</span>
-											<span class="clear">
-											<!-- -->
-											</span>
-											</a>
-											<a href="#">
-											<span class="group-thumbnail thumb-temple-of-the-jade-serpent"></span>
-											<span class="group-name">Temple of the Jade Serpent</span>
-											<span class="clear">
-											<!-- -->
-											</span>
-											</a>
+											 <?php }?>
 										</div>
 									</div>
 									<div id="pvp-ladder" class="leaderboard-content-block">
 										<a href="#" class="leaderboard-content-title">PvP Mode</a>
 										<span class="leaderboard-content-desc">View the current Rated Battleground and Arena ladders.</span>
 										<div class="group">
-											<a href="pvp/top-honor.php">
-											<span class="group-thumbnail thumb-pvp-overview"></span>
-											<span class="group-name">PvP Overview <span class="group-desc">Top players, specs, and teams</span>
+											<?php
+											$pvp_mode = mysql_query("SELECT * FROM $server_db.pvp_mode");
+											while($pvp = mysql_fetch_array($pvp_mode)){ ?>
+											<a href="<?php echo $pve["link"] ?>">
+											<span class="group-thumbnail <?php echo $pvp["thumb"] ?>"></span>
+											<span class="group-name"><?php echo $pvp["group-name"] ?><span class="group-desc"><?php echo $pvp["description"] ?></span>
 											</span>
 											<span class="clear">
 											<!-- -->
 											</span>
 											</a>
-											<a href="#">
-											<span class="group-thumbnail thumb-battlegrounds"></span>
-											<span class="group-name">Battlegrounds </span>
-											<span class="clear">
-											<!-- -->
-											</span>
-											</a>
-											<a href="pvp/arena/2v2.php">
-											<span class="group-thumbnail thumb-arena-2v2"></span>
-											<span class="group-name">Arena 2v2 </span>
-											<span class="clear">
-											<!-- -->
-											</span>
-											</a>
-											<a href="pvp/arena/3v3.php">
-											<span class="group-thumbnail thumb-arena-3v3"></span>
-											<span class="group-name">Arena 3v3 </span>
-											<span class="clear">
-											<!-- -->
-											</span>
-											</a>
-											<a href="pvp/arena/5v5.php">
-											<span class="group-thumbnail thumb-arena-5v5"></span>
-											<span class="group-name">Arena 5v5 </span>
-											<span class="clear">
-											<!-- -->
-											</span>
-											</a>
+											 <?php }?>
 										</div>
 									</div>
 									<span class="clear">

@@ -167,7 +167,15 @@ function colors (color){
 				</tr>
 				</table>
 				<br/>
-				<input type="submit" class="submit" name="submit" value="<?php echo $Serv['Serv36']; ?>"/>
+			<center>
+				<fieldset class="ui-controls" >
+					<button class="ui-button button1 " type="submit" name="Change your avatar" id="settings-submit" value="Change your avatar" tabindex="1">
+						<span>
+							<span>Change your avatar</span>
+						</span>
+					</button>
+				</fieldset>
+			</center>
 			</form>
 			<?php }
 }else{

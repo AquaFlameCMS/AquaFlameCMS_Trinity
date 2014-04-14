@@ -10,25 +10,42 @@
 <a href="<?php echo $website['root'];?>shop/" class="service-link"><?php echo $Services['Services']; ?></a>
 </li>
 <li class="service-cell service-account"><a href="<?php echo $website['root']; ?>account_log.php" class="service-link" tabindex="50" accesskey="3"><?php echo $Account['Account']; ?></a></li>
+<?php
+if (!isset($_SESSION['username'])){
+}
+else
+{
+mysql_select_db($server_adb);
+$check_query = mysql_query("SELECT gmlevel from account inner join account_access on account.id = account_access.id where username = '".strtoupper($_SESSION['username'])."'") or die(mysql_error());
+$login = mysql_fetch_assoc($check_query);
+if($login['gmlevel'] < 3){
+}
+else 
+{
+echo '<li class="service-cell service-account">
+<a href="'.$website['root'].'admin" class="service-link" tabindex="50" accesskey="3">ACP (Admin)</a></li>';
+}
+}
+?>
 <li class="service-cell service-support service-support-enhanced">
 <a href="#support" class="service-link service-link-dropdown" tabindex="50" accesskey="4" id="support-link" onclick="return false" style="cursor: progress" rel="javascript"><?php echo $Support['Support']; ?><span class="no-support-tickets" id="support-ticket-count"></span></a>
 <div class="support-menu" id="support-menu" style="display:none;">
 <div class="support-primary">
 <ul class="support-nav">
 <li>
-<a href="" tabindex="55" class="support-category">
+<a href="#" tabindex="55" class="support-category">
 <strong class="support-caption"><?php echo $Support8['Support8']; ?></strong>
 <?php echo $Support5['Support5']; ?>
 </a>
 </li>
 <li>
-<a href="" tabindex="55" class="support-category">
+<a href="#" tabindex="55" class="support-category">
 <strong class="support-caption"><?php echo $Support9['Support9']; ?></strong>
 <?php echo $Support6['Support6']; ?>
 </a>
 </li>
 <li>
-<a href="" tabindex="55" class="support-category">
+<a href="#" tabindex="55" class="support-category">
 <strong class="support-caption"><?php echo $Support10['Support10']; ?></strong>
 <?php echo $Support7['Support7']; ?>
 </a>
@@ -85,8 +102,8 @@ shim.style.display = 'block';
 <div class="explore-links">
 <h2 class="explore-caption"><?php echo $More['More']; ?></h2>
 <ul>
-<li><a href="" tabindex="55"><?php echo $Retrieve['Retrieve']; ?></a></li>
-<li><a href="" tabindex="55"><?php echo $Client_down3['Client_down3']; ?></a></li>
+<li><a href="#" tabindex="55"><?php echo $Retrieve['Retrieve']; ?></a></li>
+<li><a href="#" tabindex="55"><?php echo $Client_down3['Client_down3']; ?></a></li>
 </ul>
 </div>
 <span class="clear"><!-- --></span>
@@ -118,5 +135,3 @@ Login.embeddedUrl = '<?php echo $website['root'];?>loginframe.php';
 //]]>
 </script>
 </div>
-
-

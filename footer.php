@@ -257,7 +257,7 @@ if (strtoupper(curPageName())<>
 			else 
 			{
 			echo '<li class="service-cell service-account">
-				<a href="'.$website['address'].''.$website['root'].'admin" class="service-link" tabindex="50" accesskey="3">ACP (Admin)</a></li>
+				<a href="'.$website['root'].'admin" class="service-link" tabindex="50" accesskey="3">ACP (Admin)</a></li>
 				'; } } ?>
 		<li class="service-cell service-support service-support-enhanced">
 		<a href="#support" class="service-link service-link-dropdown" tabindex="50" accesskey="4" id="support-link" onclick="return false" style="cursor: progress" rel="javascript"><?php echo $Support['Support']; ?>
@@ -280,7 +280,7 @@ if (strtoupper(curPageName())<>
 					</a>
 					</li>
 					<li>
-					<a href="" tabindex="55" class="support-category">
+					<a href="#" tabindex="55" class="support-category">
 					<strong class="support-caption"><?php echo $Support10['Support10']; ?>
 					</strong>
 					<?php echo $Support7['Support7']; ?>
