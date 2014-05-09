@@ -1,0 +1,40 @@
+#
+# Copyright (C) 2014 AquaflameCMS <http://aquaflame.org/>
+#
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA 
+#
+
+#
+# README
+# If used, rename to .htaccess
+#
+
+# Disable directories listing in browser
+Options -Indexes
+
+# Enable compression
+# Enables compression of data inherent PHP to save bandwidth
+php_value zlib.output_compression 16386
+
+# Calculating MD5 key to add a MIC [Integrity Control Message]
+ContentDigest On
+
+# Error page 400 401 403 404 500 503
+ErrorDocument 400 /errors/400.php
+ErrorDocument 401 /errors/401.php
+ErrorDocument 403 /errors/403.php
+ErrorDocument 404 /errors/404.php
+ErrorDocument 500 /errors/500.php
+ErrorDocument 503 /errors/503.php
