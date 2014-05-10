@@ -454,7 +454,7 @@ CREATE TABLE IF NOT EXISTS `realms` (
 DELETE FROM `realms`;
 /*!40000 ALTER TABLE `realms` DISABLE KEYS */;
 INSERT INTO `realms` (`id`, `realmid`, `world_db`, `char_db`, `version`, `drop_rate`, `exp_rate`) VALUES
-	(1, 1, 'world', 'chars', '4.3.4a', '1x', '1x');
+	(1, 1, 'world', 'characters', '4.3.4a', '1x', '1x');
 /*!40000 ALTER TABLE `realms` ENABLE KEYS */;
 
 -- Dumping structure for table website.servers

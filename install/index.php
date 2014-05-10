@@ -1,4 +1,48 @@
 <?php
+include("config.php");
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" type="text/css" href="css/FlameCMS.css">
+	<meta charset="utf-8">
+	<title>Dashboard - <?php echo $title ?></title>
+</head>
+<body>
+	<div id="container">
+	<img src="images/64x264.png"></img><h1></h1>
+	
+	<div id="body">
+	<p>Welcome to the setup of <?php echo $title ?>, we"re gonna need some information about your server:</p>
+	<br/>
+	<form action="" method="post" name="install" id="install">
+	Database Host: <input type="text" name="hostname">
+	Database Username: <input type="text" name="username">
+	Database Password: <input type="password" name="password">
+	Website Database:
+	<p id="subtext">Create an empty database with this name</p>
+	<input type="text" name="dbname">
+	World Database:
+	<input type="text" name="worlddb">
+	Characters Database:
+	<input type="text" name="chardb">
+	Auth Database:
+	<input type="text" name="authdb">
+	Realmlist:
+	<p id="subtext">Set Realmlist Your_Realmlist</p>
+	<input type="text" name="realmlist">
+	Realm Name:
+	<input type="text" name="realmname">
+	<input type="submit" name="Submit" value="Install AquaFlameCMS Now">
+	</form>
+
+	<p class="footer">Created by <a href="<?php echo $linkAuthor ?>"><?php echo $author ?></a></p>
+	<div>
+	</div>
+	
+	<?php
+	if (isset($_POST["Submit"])) {
+		$string = '<?php
 /**
  * Copyright (C) 2014 AquaflameCMS <http://aquaflame.org/>
  *
@@ -15,7 +59,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
- **/
+ */
 
 ob_start();  
 if(file_exists("install"))
@@ -34,12 +78,12 @@ if (!isset($_SESSION))
 | Default Locale Web
 |
 */
-if (isset($_GET['Local']))
-    $lang = $_GET['Local'];
-else if (isset($_SESSION['Local']))
-    $lang = $_SESSION['Local'];
+if (isset($_GET[\'Local\']))
+    $lang = $_GET[\'Local\'];
+else if (isset($_SESSION[\'Local\']))
+    $lang = $_SESSION[\'Local\'];
 if (empty($lang))
-    $lang = 'en-us';
+    $lang = \'en-us\';
 
 $language = $lang;
 $langs    = Array(
@@ -62,7 +106,7 @@ if (array_key_exists($lang, $langs))
     require_once("lang/" . $lang . ".php");
 else
     require_once("/lang/en-us.php");
-$_SESSION['Local'] = $language;
+$_SESSION[\'Local\'] = $language;
 
 /*
 |--------------------------------------------------------------------------
@@ -75,14 +119,14 @@ $_SESSION['Local'] = $language;
 | 	$serverpass    = "Password";
 | 	$serverport	   = "Port";
 */
-$serveraddress = "127.0.0.1";
-$serveruser    = "root";
-$serverpass    = "password";
+$serveraddress = "'. $_POST["hostname"]. '";
+$serveruser    = "'. $_POST["username"]. '";
+$serverpass    = "'. $_POST["password"]. '";
 $serverport    = "3306";
-@define('DBHOST', '127.0.0.1');
-@define('DBUSER', 'root');
-@define('DBPASS', 'password');
-@define('DB', 'website');
+@define(\'DBHOST\', \''. $_POST["hostname"]. '\');
+@define(\'DBUSER\', \''. $_POST["username"]. '\');
+@define(\'DBPASS\', \''. $_POST["password"]. '\');
+@define(\'DB\', \''. $_POST["dbname"]. '\');
 
 /*
 |--------------------------------------------------------------------------
@@ -95,10 +139,10 @@ $serverport    = "3306";
 | @access public
 |
 */
-$server_adb = "auth";
-$server_wdb = "world";
-$server_cdb = "chars";
-$server_db  = "website";
+$server_adb = "'. $_POST["authdb"]. '";
+$server_wdb = "'. $_POST["worlddb"]. '";
+$server_cdb = "'. $_POST["chardb"]. '";
+$server_db  = "'. $_POST["dbname"]. '";
 
 /*
 |--------------------------------------------------------------------------
@@ -130,23 +174,23 @@ $code = "f7c3bc1d808e04732adf679965ccc34ca7ae3441";
 |--------------------------------------------------------------------------
 |
 */
-$website['realm']     = "Set Realmlist Your_Realmlist";
-$name_realm1['realm'] = "Realm_Name";
-$mysql_cod            = 'cp1251';
+$website["realm"]     = "'. $_POST["realmlist"]. '";
+$name_realm1["realm"] = "'. $_POST["realmname"]. '";
+$mysql_cod            = \'cp1251\';
 
 /*
 |--------------------------------------------------------------------------
 | Community Links
 |--------------------------------------------------------------------------
 |
-| Community Links. Leave it blank if you don't use any.
+| Community Links. Leave it blank if you don\'t use any.
 | Your address of community link
 |
 */
-$comun_link['Facebook'] = "http://www.facebook.com/";
-$comun_link['Twitter']  = "http://twitter.com/";
-$comun_link['Youtube']  = "http://www.youtube.com/";
-$comun_link['Reddit']   = "http://www.reddit.com/";
+$comun_link[\'Facebook\'] = "http://www.facebook.com/";
+$comun_link[\'Twitter\']  = "http://twitter.com/";
+$comun_link[\'Youtube\']  = "http://www.youtube.com/";
+$comun_link[\'Reddit\']   = "http://www.reddit.com/";
 
 /*
 |--------------------------------------------------------------------------
@@ -172,13 +216,13 @@ $comun_link['Reddit']   = "http://www.reddit.com/";
 | Root Directory
 | Without slash at the end of path. If your site is in root directory, leave this empty.
 | For example: site is available at http://example.org/AquaFlameCMS_Trinity/
-| That means that you should set this variable as '/AquaFlameCMS_Trinity/'.
+| That means that you should set this variable as \'/AquaFlameCMS_Trinity/\'.
 */
-$website['title']       = "AquaFlameCMS 1.0";
-$website['description'] = "AquaFlameCMS 1.0 the best of the best!";
-$website['keywords']    = "AquaFlameCMS 1.0, The Best CMS";
-$website['address']     = "http://localhost/";
-$website['root']        = "/AquaFlameCMS_Trinity/";
+$website[\'title\']       = "AquaFlameCMS 1.0";
+$website[\'description\'] = "AquaFlameCMS 1.0 the best of the best!";
+$website[\'keywords\']    = "AquaFlameCMS 1.0, The Best CMS";
+$website[\'address\']     = "http://localhost/";
+$website[\'root\']        = "/";
 
 /*
 |--------------------------------------------------------------------------
@@ -193,11 +237,11 @@ $website['root']        = "/AquaFlameCMS_Trinity/";
 
 $pre = false;
 if ($pre == true) {
-    if (!isset($_COOKIE['prepage'])) {
-        $pre_cookie = 'viewed';
+    if (!isset($_COOKIE["prepage"])) {
+        $pre_cookie = "viewed";
         setcookie("prepage", $pre_cookie, time() + 3600 * 60 * 24);
         
-        header('Location: ' . $website['address'] . '' . $website['root'] . 'pre.php');
+        header(\'Location: ' . $website["address"] . '' . $website["root"] . 'pre.php\');
     }
 }
 
@@ -213,7 +257,7 @@ if ($pre == true) {
 |
 */
 $maintenance = false;
-    
+
 /*
 |--------------------------------------------------------------------------
 | No edit
@@ -225,20 +269,27 @@ $maintenance = false;
 
 if ($maintenance == true) {
     if (!isset($bucle_mant)) {
-        header('Location: '.$website['address'].''.$website['root'].'maintenance.php');
+        header(\'Location: '.$website['address'].''.$website['root'].'maintenance.php\');
     }
 } else {
     $teamsLimit = 50; // Number of team to display on each page
     
-    $connection_setup = mysql_connect($serveraddress . ':' . $serverport, $serveruser, $serverpass) or die(mysql_error());
+    $connection_setup = mysql_connect($serveraddress . \':\' . $serverport, $serveruser, $serverpass) or die(mysql_error());
     mysql_select_db($server_db, $connection_setup) or die(mysql_error());
     
-    if (isset($_SESSION['username'])) {
-        $username            = mysql_real_escape_string($_SESSION['username']);
-        $account_information = mysql_fetch_assoc(mysql_query("SELECT * FROM $server_adb.account WHERE username = '" . $username . "'"));
-        $account_extra       = mysql_fetch_assoc(mysql_query("SELECT * FROM $server_db.users WHERE id = '" . $account_information['id'] . "'"));
+    if (isset($_SESSION[\'username\'])) {
+        $username            = mysql_real_escape_string($_SESSION[\'username\']);
+        $account_information = mysql_fetch_assoc(mysql_query("SELECT * FROM $server_adb.account WHERE username = \'" . $username . "\'"));
+        $account_extra       = mysql_fetch_assoc(mysql_query("SELECT * FROM $server_db.users WHERE id = \'" . $account_information[\'id\'] . "\'"));
         mysql_select_db($server_db, $connection_setup) or die(mysql_error());
     }
 }
-
 /* End of file configs.php */
+';
+		$fp = fopen("../configs.php", "w");
+		fwrite($fp, $string);
+		fclose($fp);
+		header("Location: succesful.php");
+	}?>
+</body>
+</html>
