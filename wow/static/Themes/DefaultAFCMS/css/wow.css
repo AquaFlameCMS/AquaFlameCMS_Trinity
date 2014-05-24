@@ -1,24 +1,25 @@
+parsererror { position:absolute; }
 html { min-width: 1006px; }
-body { background: #000 url("../images/layout/bg/body-bg-baked.jpg?v=2") 50% 0 no-repeat; -webkit-background-size: auto; color: #efc9a0; font: normal 12px/1.5 Arial, Verdana, sans-serif; }
+body { background: #000 url("../images/layout/bg/body-bg-baked5e1f.jpg?v=2") 50% 0 no-repeat; -webkit-background-size: auto; color: #efc9a0; font: normal 12px/1.5 Arial, Verdana, sans-serif; }
 
 @media (max-width: 1920px) {
-	body { background-image: url("../images/layout/bg/body-bg-baked-1920px.jpg?v=2") }
+	body { background-image: url("../images/layout/bg/body-bg-baked-1920px5e1f.jpg?v=2") }
 }
 
 @media (max-width: 1680px) {
-	body { background-image: url("../images/layout/bg/body-bg-baked-1680px.jpg?v=2") }
+	body { background-image: url("../images/layout/bg/body-bg-baked-1680px5e1f.jpg?v=2") }
 }
 
 @media (max-width: 1440px) {
-	body { background-image: url("../images/layout/bg/body-bg-baked-1440px.jpg?v=2") }
+	body { background-image: url("../images/layout/bg/body-bg-baked-1440px5e1f.jpg?v=2") }
 }
 
 @media (max-width: 1280px) {
-	body { background-image: url("../images/layout/bg/body-bg-baked-1280px.jpg?v=2") }
+	body { background-image: url("../images/layout/bg/body-bg-baked-1280px5e1f.jpg?v=2") }
 }
 
 @media (max-width: 1024px) {
-  body { background-image: url("../images/layout/bg/body-bg-baked-1024px.jpg?v=2") }
+  body { background-image: url("../images/layout/bg/body-bg-baked-1024px5e1f.jpg?v=2") }
 }
 
 
@@ -62,7 +63,7 @@ tr:hover .fansite-link,
 .fansite-group a:hover { background-position: 100% -18px; }
 
 /* type ahead */
-.ui-typeahead { background: #161413; border: 1px solid #353837; -moz-border-radius: 5px; -moz-box-shadow: 0 0 10px #000000; -webkit-border-radius: 5px; -webkit-box-shadow: 0 0 10px #000000; border-radius: 5px; box-shadow: 0 0 10px #000000; }
+.ui-typeahead { background: #161413; border: 1px solid #353837; -moz-border-radius: 5px; -moz-box-shadow: 0 0 10px #000000; -webkit-border-radius: 5px; -webkit-box-shadow: 0 0 10px #000000; border-radius: 5px; box-shadow: 0 0 10px #000000; z-index: 100; }
 .ui-typeahead .group-list { border-top: 1px solid #2A292B; }
 .ui-typeahead .group-list a:hover { background: #1c1b1a; }
 .ui-typeahead .group-list a.item-active { background: #222120; }
@@ -78,20 +79,29 @@ tr:hover .fansite-link,
 .ui-typeahead .group-article .group-title { background-position: 5px -153px; }
 
 /* breadcrumbs */
-.ui-breadcrumb li { font-size:12px; margin-right:0; padding-right:0 }
-.ui-breadcrumb li a { border-color: #8c6407; float:left; height:16px }
-.ui-breadcrumb li.last a { color:#FFF; font-weight:bold; }
-.ui-breadcrumb li.children a { border-color: #888; }
-.ui-breadcrumb li a:hover,
-.ui-breadcrumb li a.opened { color: #eee; border-color: #eee; }
-.ui-breadcrumb li .breadcrumb-arrow { display: block; float:left; background: url("../images/icons/flyout-arrows.gif") no-repeat 100% -123px; width: 15px; height: 10px; margin:5px 7px 0 8px }
-.ie6 .ui-breadcrumb li .breadcrumb-arrow { margin-right:3px }
+.ui-breadcrumb { font-size:12px;}
+.zh-tw .ui-breadcrumb { font-family: none }
+.ui-breadcrumb li { padding-right:0; margin-right:0 }
+.ui-breadcrumb li.last { padding: 0; }
+
+.ui-breadcrumb li a { display: block; padding-bottom: 2px; line-height: 1.25; }
+.ie .ui-breadcrumb li a { display: block; }
+.ui-breadcrumb li .breadcrumb-text { border-bottom: 1px dotted #8c6407; display: block; }
+.ui-breadcrumb li.last a { color: #F3E6D0; }
+.ui-breadcrumb li.last .breadcrumb-text { color: #F3E6D0; border: none; max-width: 200px; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
+
+.ui-breadcrumb li.children .breadcrumb-text { border-bottom:1px dotted #aaa; }
+.ui-breadcrumb li a:hover .breadcrumb-text,
+.ui-breadcrumb li a.opened .breadcrumb-text { color: #fff; border-color: #fff; }
+.ui-breadcrumb li .breadcrumb-arrow { position: relative; padding-right: 32px; }
+.ui-breadcrumb li .breadcrumb-arrow:after { content: ""; background: url("../images/icons/flyout-arrows.gif") no-repeat 100% -123px; width: 15px; height: 10px; position: absolute; top: 3px; right: 7px; }
+.ie67 .ui-breadcrumb li .breadcrumb-arrow { padding-right: 10px; }
 
 /* dropdown */
 .ui-dropdown { border: none; height: 27px; }
 .ui-dropdown .dropdown-toggler { background: url("../images/form/dropdown-right.gif") 100% 0 no-repeat; height: 27px }
 .ui-dropdown .dropdown-toggler:hover { background: url("../images/form/dropdown-right.gif") 100% -30px no-repeat }
-.ui-dropdown .dropdown-toggler span { color: #fab000; font-size: 11px; line-height: 27px; padding-left: 10px; height: 27px; display: block; background: url("../images/form/dropdown-left.gif") 0 0 no-repeat }
+.ui-dropdown .dropdown-toggler span { color: #fab000; font-size: 11px; line-height: 27px; padding-left: 10px; height: 27px; display: block; background: url("../images/form/dropdown-left.gif") 0 0 no-repeat; }
 .ui-dropdown .dropdown-toggler:hover span { color: #fff; background: url("../images/form/dropdown-left.gif") 0 -30px no-repeat }
 .ui-dropdown.opened .dropdown-toggler { background: url("../images/form/dropdown-right.gif") 100% -60px no-repeat }
 .ui-dropdown.opened .dropdown-toggler span { color: #fffac1; background: url("../images/form/dropdown-left.gif") 0 -60px no-repeat }
@@ -100,8 +110,9 @@ tr:hover .fansite-link,
 .ui-dropdown .dropdown-wrapper ul li a:hover { text-decoration: none; color: #fff; background: #6e3b0d; -moz-border-radius: 2px; -webkit-border-radius: 2px; border-radius: 2px }
 
 /* pagination */
-.ui-pagination { }
-.ui-pagination li a { background: #2b1507; color: #d3ac6b; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px }
+.ui-pagination { overflow:visible; height:22px; }
+.ui-pagination li { margin:0 2px; }
+.ui-pagination li a { padding:0 10px; height:22px; line-height:22px; background: #2b1507; color: #d3ac6b; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px }
 .ui-pagination li a:hover { background-color: #4e2f1b; color: white; }
 .ui-pagination li.current a { background-color: #ffae00; color: #000; font-weight: bold; }
 
@@ -130,40 +141,86 @@ tr:hover .fansite-link,
 .context-link.context-open { color: #ffb100; background-position: 100% -145px; }
 
 /* Buttons */
-.ui-button span,
-.ui-cancel span { line-height: 38px;}
 .ui-button span { font-family: Arial, sans-serif; }
-.button1 span { background-image: url("../images/buttons/button-1.png"); background-repeat: no-repeat; color: #ffae00 }
-.button1.hover span,
-.button1:hover span { color: #fff }
-.button1.disabled span,
-.button1.processing span { color: #953203 }
-.button1-next span { background-image: url("../images/buttons/button-1-next.png") }
-.button1-next span span { padding-right: 40px }
-.button1-previous span { background-image: url("../images/buttons/button-1-previous.png") }
-.button1-previous span span { padding-left: 12px }
-.button2-next span { background-image: url("../images/buttons/button-2-next.png"); line-height: 26px; padding-left:16px; }
-.button2-next span span { padding-right: 27px; margin:0; font-size:11px; text-transform:none; }
-.button2-previous span { background-image: url("../images/buttons/button-2-previous.png"); line-height: 26px; padding-right:14px !important; }
-.button2-previous span span { padding-left: 1px; margin:0; font-size:11px; text-transform:none; }
+
+/* primary button */
+.button1 .button-left,
+.button1 .button-right { background-image: url("../images/buttons/button-1.png"); background-repeat: no-repeat; color: #ffae00; }
+.button1 .button-left { padding:0 0 0 28px; background-position:0 0; height:38px; line-height:37px; }
+.button1 .button-right { padding: 0 28px 0 0; background-position: 100% -123px; font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size:12px; height:38px; line-height:38px; text-transform: uppercase; }
+.ko-kr .button1 .button-right { font-family: Dotum; }
+.button1:hover .button-left { background-position: 0 -41px; }
+.button1:hover .button-right { color:#FFF; background-position:100% -164px; }
+
+.button1.processing .button-left,
+.button1.processing:hover .button-left,
+.button1.disabled .button-left,
+.button1.disabled:hover .button-left { background-position: 0 -82px; cursor: default; }
+
+.button1.processing .button-right,
+.button1.processing:hover .button-right,
+.button1.disabled .button-right,
+.button1.disabled:hover .button-right { background-position: 100% -205px; cursor: default; color: #953203 }
+
+.button1.previous .button-left, .button1.next .button-right { background-image: url("../images/buttons/button-1-previous.png"); }
+.button1.previous .button-left { padding-left:28px; }
+.button1.previous .button-right { padding-right:12px; }
+
+.button1.next .button-left, .button1.next .button-right { background-image: url("../images/buttons/button-1-next.png"); }
+.button1.next .button-left { padding-left:12px; }
+.button1.next .button-right { padding-right:28px; }
+
+.button2.next .button-left, .button2-next .button-right { height:24px; line-height:21px; background: url("../images/buttons/button-2-next.png") no-repeat;  }
+.button2.next .button-left { padding-left:16px; background-position:0 -3px; }
+.button2.next .button-right { padding-right: 27px; margin:0; font-size:11px; text-transform:none; background-position:right -126px; }
+
+.button2.next:hover .button-left { background-position:0 -44px; }
+.button2.next:hover .button-right { background-position:right -167px; }
+
+.button2.next.disabled span { color: #953203 }
+.button2.next.disabled .button-left { background-position:0 -85px; }
+.button2.next.disabled .button-right { background-position:right -208px; }
+
+.button2.previous .button-left, .button2-previous .button-right { height:24px; line-height:21px; background: url("../images/buttons/button-2-previous.png") no-repeat;  }
+.button2.previous .button-left { padding-left:28px; background-position:0 -3px; }
+.button2.previous .button-right { padding-right: 16px; margin:0; font-size:11px; text-transform:none; background-position:right -126px; }
+
+.button2.previous:hover .button-left { background-position:0 -44px; }
+.button2.previous:hover .button-right { background-position:right -167px; }
+
+.button2.previous.disabled span { color: #953203 }
+.button2.previous.disabled .button-left { background-position:0 -85px; }
+.button2.previous.disabled .button-right { background-position:right -208px; }
 
 .button2 span,
 .button3 span { padding: 0 0 0 13px; height: 30px; line-height: 30px; font-size: 11px }
 .button2 span span,
 .button3 span span { padding: 0 13px 0 0 }
 .button2 span { background-image: url("../images/buttons/button-2.png"); background-repeat: no-repeat; color: #ffae00 }
+.button2 .button-left { background-position:0 0; }
+.button2 .button-right { background-position:right -123px; }
+
 .button2.hover span,
 .button2:hover span { color: #fff }
+.button2:hover .button-left { background-position:0 -41px; }
+.button2:hover .button-right { background-position: right -164px; }
+
 .button2.disabled span,
 .button2.processing span { color: #953203 }
+.button2.disabled .button-left,
+.button2.processing .button-left { background-position:0 -82px; }
+.button2.disabled .button-right,
+.button2.processing .button-right { background-position: right -205px; }
+
 .button3 span { background: url("../images/buttons/button-3.gif") no-repeat; color: #00B4FF }
 .button3.hover span,
 .button3:hover span { color: #fff }
 .button3.disabled span,
 .button3.processing span { color: #b1bac3 }
 
-.button4 span { background-image: url("../images/buttons/button-4.png"); background-repeat: no-repeat; height:50px; line-height:50px; background-position: 0 0; }
-.button4 span span {background-position: 100% -159px; font-size:16px;}
+.button4 .button-left, .button4 .button-right { background-image: url("../images/buttons/button-4.png"); background-repeat: no-repeat; height:50px; line-height:50px; background-position: 0 0; }
+.button4 .button-left { padding-left:15px; }
+.button4 .button-right { background-position: 100% -159px; font-size:16px; padding-right:16px; }
 .button4:hover span {background-position: 0 -53px; }
 .button4:hover span span {background-position: 100% -212px; }
 .button4.processing span {background-position: 0 -106px; }
@@ -216,7 +273,8 @@ tr:hover .fansite-link,
 .ui-overlay .overlay-middle h2 { color: #7e3406; font-size: 24px; line-height: 100%; font-weight: normal; margin-bottom: 15px; padding-bottom: 15px; border-bottom: 2px solid #50260f; }
 
 /* trending topics */
-.trending-topics li { border-bottom: 1px solid #271B15; color: #71401F; }
+.trending-topics { margin-top: 3px; }
+.trending-topics li { border-bottom: 1px solid #271B15; color: #71401F; padding: 7px 5px; }
 .trending-topics .topic { font-weight: bold; }
 .trending-topics .forum { color: #855B47 !important; }
 .trending-topics .forum:hover { color: #fff !important; }
@@ -228,6 +286,14 @@ tr:hover .fansite-link,
 .articles-list a .image { border: 1px solid #372511; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; -moz-box-shadow: 0 0 15px #000; -webkit-box-shadow: 0 0 15px #000; box-shadow: 0 0 15px #000; }
 .articles-list a:hover .image { border-color: #CD9000; }
 
+/* articles list - Plain */
+.articles-list-plain li { border-bottom: 1px solid #271B15; padding: 10px 5px; }
+.articles-list-plain .title { font-weight: bold; display: block; line-height: 115%; word-wrap: break-word; color: #FFB100 !important; }
+.articles-list-plain .title:hover { color: #fff !important; }
+.articles-list-plain .date { color: #855B47; font-size: 11px; }
+.articles-list-plain .forum { color: #855B47 !important; font-size: 11px;  }
+.articles-list-plain .forum:hover { color: #fff; }
+
 /* under dev feed*/
 #sidebar-under-dev .trending-topics li { font-weight: bold; line-height: 100%; }
 
@@ -235,27 +301,36 @@ tr:hover .fansite-link,
 #wrapper { width: 1006px; margin: 0 auto; position: relative } /* use even width value so the centering is identical in IE and other browsers */
 
 /* header */
-#header { padding-top: 26px; }
+#header { position:relative; z-index:50; padding-top: 26px; }
 #header #logo { height: 115px }
 #header #logo a { width: 275px; height: 115px; display: block; border: none; text-indent: -9999px }
 #header .header-plate { height: 93px; position: relative; }
 #header .user-plate { color: #fff; width: 355px; height: 84px; position: absolute; right: 3px; bottom: 1px; }
 .ie6 #header .user-plate { right:2px }
 
-#header .user-plate .character { position: relative; }
+#header .user-plate .character-card { position:relative; z-index:1; }
+
+#header .user-plate .character-name,
+#header .user-plate .guild-name { float:left; clear:left; pointer-events:auto; }
+#header .user-plate .meta-no-wow .player-name, #header .user-plate .meta-no-character .player-name { float:none; }
+#header .user-plate .meta { position: relative; }
 #header .user-plate .player-name,
-#header .user-plate .guild-name { display: block; text-shadow: 1px 1px 1px black; font-weight: bold; font-size:12px; text-overflow: ellipsis; width: 250px; overflow: hidden; white-space: nowrap;}
+#header .user-plate .guild-name { display: block; text-shadow: 1px 1px 1px black; font-weight: bold; font-size:12px; text-overflow: ellipsis; max-width: 250px; overflow: hidden; white-space: nowrap;}
 #header .user-plate .context-link { text-shadow: 1px 1px 1px black; font-weight: bold; }
 #header .user-plate .player-name { color: #b0d715; font-weight: bold; line-height: 100%; margin-bottom: 2px; }
-#header .user-plate .character-name { line-height: 100%; font-weight: bold; font-size: 24px; margin: 0; padding: 0; background: none; letter-spacing: -0.0em; text-shadow: 1px 1px 1px black; letter-spacing: -0.05em; }
-#header .user-plate .character-name .name { display: inline-block; max-width: 130px; height: 25px; overflow: hidden; text-overflow: ellipsis; white-space: no-wrap; vertical-align: middle; }
-#header .user-plate .character-name.text-small { font-size: 20px; }
+#header .user-plate .character-name { line-height: 100%; font-weight: bold; font-size: 24px; margin: 0; padding:0; background: none; letter-spacing: -0.0em; text-shadow: 1px 1px 1px black; letter-spacing: -0.05em; pointer-events: auto; }
+#header .user-plate .character-name.name-small { font-size: 20px; }
 #header .user-plate .character-name.context-open,
 #header .user-plate .character-name:hover { color: white; }
-#header .user-plate .character-name .arrow { background: url("../images/layout/cms/char-arrow.png") 0 3px no-repeat; display: inline-block; width: 11px; height: 15px; }
-#header .user-plate .character-name:hover .arrow { background-position: 0 -145px; }
+#header .user-plate .character-name:after { background: url("../images/layout/cms/char-arrow.png") 0 3px no-repeat; display: inline-block; width: 11px; height: 15px; content:''; }
+#header .user-plate .character-name:hover:after { background-position: 0 -145px; }
 
-#header .user-plate .card-character { width: 326px; height: 84px; padding:0 0 0 30px; display: block; color: #EEE; font-size: 14px; background: url("../images/layout/cards-mop/charcard-neutral.png") 0 0 no-repeat; position: absolute; bottom:-1px; right: 0; text-overflow: ellipsis; line-height: 1.4em; }
+#header .user-plate .avatar-frame { position:absolute; right:0; top:0; border:solid 1px #c3ff00; pointer-events:none; }
+#header .user-plate .meta-horde .avatar-frame { border-color: #e23739; }
+#header .user-plate .meta-alliance .avatar-frame { border-color: #00bbf6; }
+#header .user-plate .avatar-frame, #header .user-plate .avatar-wow { width:58px; height:58px; }
+
+#header .user-plate .card-character { width: 326px; height: 84px; padding:0 0 0 30px; display: block; color: #EEE; font-size: 14px; background: url("../images/layout/cards-mop/charcard-neutral.jpg") 0 0 no-repeat; position: absolute; bottom:-1px; right: 0; text-overflow: ellipsis; line-height: 1.4em; z-index:1; }
 #header .user-plate .card-character strong { color: #ffb100; }
 #header .user-plate .card-character .login-msg { display:block; float:left; width:210px; margin-top:18px;  text-shadow:1px 1px 1px #555 }
 #header .user-plate .card-character .wow-login-key { display:block; position:absolute; right:50px; top:31px; width:50px; height:42px; background:url(../images/layout/cards-mop/key.png) no-repeat }
@@ -265,19 +340,14 @@ tr:hover .fansite-link,
 #header .user-plate .card-character .card-portrait { width:58px; height:58px; display:block; float:right; border:1px solid #c3ff00; background:url(../images/layout/cards-mop/avatar-neutral.jpg) 50% 50% no-repeat; margin-top:7px; margin-right:21px }
 .ie6 #header .user-plate .card-character .card-portrait { margin-right:10px }
 
-#header .user-plate .meta-wrapper { position:relative; width:240px; left:30px; top:10px }
+#header .user-plate .meta-wrapper { position:relative; padding:10px 15px 10px 30px; z-index:1; pointer-events:none; }
 
 #header .user-plate .card-character.plate-neutral  .card-portrait,
 #header .user-plate .card-character.plate-alliance .card-portrait,
 #header .user-plate .card-character.plate-horde    .card-portrait { background-size:74px }
 
 #header .user-plate .card-character.plate-alliance { background-image:url(../images/layout/cards-mop/charcard-alliance.png) }
-#header .user-plate .card-character.plate-alliance .card-portrait { border-color:#00bbf6 }
-#header .user-plate .card-character.plate-alliance .profile-link:hover .card-portrait { border-color:#00c5f7 }
-
 #header .user-plate .card-character.plate-horde { background-image:url(../images/layout/cards-mop/charcard-horde.png) }
-#header .user-plate .card-character.plate-horde .card-portrait { border-color:#e23739 }
-#header .user-plate .card-character.plate-horde .profile-link:hover .card-portrait { border-color:#e63f41 }
 
 #header .user-plate .meta-default .meta { width:240px; margin-top:13px }
 
@@ -293,7 +363,7 @@ tr:hover .fansite-link,
 #header .user-plate .meta-horde .player-name { color: #eb1212; }
 #header .user-plate .meta-horde .character-name:hover { color: white; text-shadow: 1px 1px 1px black, 0 0 15px #c64040, 0 0 5px #c64040; }
 
-#header .user-plate .ui-context { top: 30px }
+#header .user-plate .ui-context { top: 40px; pointer-events: auto; }
 #header .user-plate .ui-context a { color: #00B6FF; }
 #header .user-plate .ui-context a:hover { color: #fff; }
 
@@ -328,12 +398,12 @@ tr:hover .fansite-link,
 .search .summary .suggested-results .result a { font-weight: normal; }
 
 /* menu */
-#menu { width: 623px; height: 65px; position: absolute; left: 19px; top: 19px; -moz-user-select: none; -webkit-user-select: none; user-select: none; background-image: url("../images/layout/menu-tab-baked.jpg?v=2"); }
+#menu { width: 623px; height: 65px; position: absolute; left: 19px; top: 19px; -moz-user-select: none; -webkit-user-select: none; user-select: none; background-image: url("../images/layout/menu-tab-baked5e1f.jpg?v=2"); }
 #menu li { width: 102px; float: left; height: 65px; }
 #menu li a { height: 65px; display: block; text-align: center; text-transform: uppercase; color: #ffa400 }
 #menu li a span { padding-top: 45px; display: block; font: normal 12px Arial, Verdana, serif; text-shadow: #000 0 0 5px; position: relative; top: -5px }
 #menu li a:hover,
-#menu li a.menu-active { background-image: url("../images/layout/menu-tab-baked.jpg?v=2"); }
+#menu li a.menu-active { background-image: url("../images/layout/menu-tab-baked5e1f.jpg?v=2"); }
 #menu li a:hover { color: white; }
 #menu li a.menu-active { color: #fff !important; -moz-box-shadow: 0 0 15px #ff7501; -webkit-box-shadow: 0 0 15px #ff7501; box-shadow: 0 0 15px #ff7501; position: relative; }
 #menu li.menu-game,
@@ -356,9 +426,10 @@ tr:hover .fansite-link,
 
 /* content */
 #content { background-color: #1a0f08 !important; margin: 0 6px; }
-#content .content-top { background: url("../images/layout/content-topbot.jpg") 0 0 no-repeat; }
-#content .content-bot { background: url("../images/layout/content-topbot.jpg") -992px bottom no-repeat; min-height: 600px; }
-#content .content-trail { height: 30px; padding: 10px 0 0 22px; }
+.content-top { background: url("../images/layout/content-topbot.jpg") 0 0 no-repeat; }
+#content .content-bot { position:relative; background: url("../images/layout/content-topbot.jpg") -992px bottom no-repeat; min-height: 600px; }
+#content .content-trail { height: 40px; }
+#content .content-trail .ui-breadcrumb { padding: 7px 0 0 20px; }
 #content .content-header { padding: 25px; padding-top: 35px; }
 #content .content-header .header { color: #efe3d2; font: 52px/85% "Palatino Linotype", Georgia, Times, sans-serif; letter-spacing: -1.5px; text-shadow: #241209 0 0 5px; }
 #content .content-header .desc { width: 50%; margin-top: 25px; color: #A4704E; }
@@ -368,9 +439,9 @@ tr:hover .fansite-link,
 #content .content-box-w434 .box-title {font-size:12px; color:#efe3d2; display:block; padding-bottom:21px; text-transform:uppercase;}
 #content .content-box-w434 .wrapper p {font-size:12px; line-height:20px; color:#967648; margin-bottom:15px;}
 .ui-slideshow .mask { background: url("../images/layout/slideshow-mask.png") 0 0 no-repeat; }
-.ui-slideshow .caption h3 { color: #fff8d6; font-size: 22px; font-weight:bold; letter-spacing: -0.05em; line-height:1em; }
+.ui-slideshow .caption h3 { color: #f3e6d0; font-size: 20px; font-weight:bold; letter-spacing: -0.05em; line-height:1em; }
 .ui-slideshow .paging a { -moz-border-radius:2px; border-radius:2px }
-.ui-slideshow .caption h3 a { color: #fff8d6; }
+.ui-slideshow .caption h3 a { color: #f3e6d0; }
 .ui-slideshow .caption h3 a:hover { color: #fff }
 
 /* footer */
@@ -389,7 +460,7 @@ tr:hover .fansite-link,
 #footer-promotions a { color: #BD8100 }
 #footer-promotions .desc { padding: 5px 0; }
 #footer-promotions .subtitle { color: #71401F; font-weight: normal; padding-top: 5px }
-.bnet-offer-bg { border: 1px solid #372511; overflow: hidden; margin-bottom: 10px; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px;  -moz-box-shadow:0 0 6px #000000; -webkit-box-shadow:0 0 6px #000000; box-shadow:0 0 6px #000000; width:302px;}
+.bnet-offer-bg { border: 1px solid #372511; overflow: hidden; margin:0 auto 10px; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px;  -moz-box-shadow:0 0 6px #000000; -webkit-box-shadow:0 0 6px #000000; box-shadow:0 0 6px #000000; width:302px;}
 .bnet-offer-bg:hover { border-color: #CD9000; }
 .bnet-offer-image { display: block; border: 1px solid #000; overflow: hidden; -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; }
 .bnet-offer-image img { display: block; }
@@ -421,22 +492,30 @@ tr:hover .fansite-link,
 .media-frame .magnifying-wrapper:hover .magnifying-glass { background-position:-81px -207px }
 
 /* text */
-.header { font-size: 24px; font-weight: normal; letter-spacing: -.05em; color: #f5ebd1; }
-.header span { color: #7E3406; }
-.subheader { font-size: 20px; font-weight: normal; letter-spacing: -.05em; color: #F5EBD1; }
-.category { font-size: 22px; font-weight: normal; letter-spacing: -.05em; color: #7e3406; }
-.category strong { color: #fef092; font-weight: normal; }
-.subcategory { font-size: 16px; font-weight: normal; color: #71401F; }
+.header,
+.header-2,
+.header-3 { font-size: 24px; font-weight: normal; letter-spacing: -.05em; color: #f5ebd1; }
+.header span,
+.header-3 span { color: #7E3406; }
+.subheader,
+.subheader-2,
+.header-3 { font-size: 20px; font-weight: normal; letter-spacing: -.05em; color: #F5EBD1; }
+.category,
+.subheader-3 { font-size: 22px; font-weight: normal; letter-spacing: -.05em; color: #7e3406; }
+.category strong,
+.subheader-3 strong { color: #fef092; font-weight: normal; }
+.subcategory,
+.subheader-4 { font-size: 16px; font-weight: normal; color: #71401F; }
 .text1 { color: #b79855 }
 .text2 { color: #f5d3a2 }
 
 /* forms */
-.input { background: #f1ebd7; color: #171717; padding: 5px; border: none; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px }
+.input, .post-editor { background: #f1ebd7; color: #171717; padding: 5px; border: none; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px }
 .input[disabled],
 .input.disabled { opacity: .3; cursor: default }
 .input.select { padding: 4px }
 .input.textarea { font: 12px/1.5 Arial, Verdana, sans-serif }
-.input.checkbox { vertical-align: bottom; background-color:none }
+.input.checkbox { vertical-align: bottom; background-color:transparent; }
 
 /* lists */
 .content-list { padding-left: 25px }
@@ -514,7 +593,7 @@ tr:hover .fansite-link,
 .top-list-container { background:#40200d url("../images/layout/cms/above_glow.jpg") 50% 0 no-repeat; border: 1px solid #956041; width: 90%; margin: 20px auto; }
 .top-list-interior { padding: 5px; }
 .top-list { width: 100%; }
-.top-list td { padding: 7px 5px; ; font-size:12px; }
+.top-list td { padding: 7px 5px; font-size:12px; }
 .top-list td img { vertical-align: middle; }
 .top-list td.player-name { color: #ffae00; }
 .top-list td.player-name img { margin-right: 9px; }
@@ -529,6 +608,16 @@ tr:hover .fansite-link,
 .tab-menu li a { float: left; display: block; height: 30px; line-height: 30px; padding: 0 10px; background: #2b1507; color: #ffae00; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; -moz-box-shadow: 0 0 5px #0e0905; -webkit-box-shadow: 0 0 5px #0e0905; box-shadow: 0 0 5px #0e0905; }
 .tab-menu li a:hover { color: #fff; background: #4e2f1b }
 .tab-menu li a.tab-active { background: #ffae00; font-weight: bold; color: #000; }
+
+/* tab menu - comments */
+#comments .tab-menu { height:41px; padding:0 30px; margin:0 4px; border-bottom: solid 1px #80331f; }
+#comments .tab-menu li { height:40px;  }
+#comments .tab-menu li a { line-height:40px; height:40px; padding:0 15px; text-transform:uppercase; border:solid 1px #401d11; border-bottom:none; background:#24130b; border-radius:0; box-shadow:none; }
+#comments .tab-menu li a { background: -webkit-linear-gradient(top, #24130b, #1a0f09);  background: -moz-linear-gradient(top, #24130b, #1a0f09);  background: -ms-linear-gradient(top, #24130b, #1a0f09);  background: linear-gradient(top, #24130b, #1a0f09);  }
+#comments .tab-menu li a:hover {  box-shadow:0 0 20px #34180f inset;  }
+#comments .tab-menu li a.tab-active { height:41px; border:solid 1px #80331f; border-bottom:none; color:#fff; background:#1a0f09; }
+#comments .tab-menu li a.tab-active {  background: -webkit-linear-gradient(top, #34180f,#2a150c 50%, #1a0f09 );  background: -moz-linear-gradient(top, #34180f, #1a0f09 ); background: -ms-linear-gradient(top, #34180f, #1a0f09 ); background: linear-gradient(top, #34180f, #1a0f09 ); }
+#comments .tab-menu li a.tab-active:hover { box-shadow:none; }
 
 /* wow colors */
 
@@ -736,6 +825,8 @@ tr:hover .fansite-link,
 .item-specs a.color-q1:hover { text-decoration: underline; }
 .item-specs .transmog-name { color:#ff80ff }
 
+li.item-spec-group { margin-top: 10px; }
+
 .character-tooltip .character-achievementpoints { margin-top: 4px; }
 .character-tooltip .character-spec { margin-top: 10px; }
 
@@ -912,3 +1003,282 @@ tr:hover .fansite-link,
 .new-feature-tip .clickable strong { color: #fff; display: block; padding-bottom: 4px; font: bold 19px/115% "Palatino Linotype", "Georgia", "Times", serif; }
 .new-feature-tip .close { width: 20px; height: 21px; position: absolute; top: 28px; right: 18px; background-position: 0 100%; }
 .new-feature-tip .close:hover { background: url("../images/layout/feature-tip/game-guide-scenarios.png") 100% 100% no-repeat; }
+
+/* comments */
+#comments-pages-wrapper { padding:0; }
+.comment-section, .bnet-comments { clear:both; }
+#comments-reply-form,
+.bnet-comments { padding: 15px 30px; margin-top: 30px; background: url("../images/layout/cms/comments_bg.jpg") 50% 0 repeat-x; }
+form#comments-reply-form { padding: 15px 15px 15px 100px; }
+.bnet-comments .comments-error-gate,
+.bnet-comments .comment-tile { background:#2b1507; }
+.bnet-comments .comments-form { background:none; }
+.bnet-comments .comments-loading { background-image: url("../images/loaders/canvas-loader.gif")}
+.bnet-comments .comments-form .avatar-outer a { display: block; height: 64px; width: 64px; overflow: hidden; }
+#related-comments .subheader-2 { display:none; }
+#related-comments .bnet-comments { background-image: none; margin-top: 0; }
+
+.forum-parent:first-child { margin-top:0; }
+.forum-parent { color:#71330e; font-size:20px; margin-top:16px; line-height:41px; padding-bottom:0; padding-left: 20px; text-transform:uppercase; letter-spacing: -0.05em; }
+.forum-parent { background: url('../images/layout/cms/collapse-expand.png') no-repeat 0 1px; }
+.forum-parent.collapsed { background-position: 0 -39px }
+.forum-parent:active,
+.forum-parent:hover,
+.forum-parent:target { background-position: 0 -78px }
+.forum-parent.collapsed:active,
+.forum-parent.collapsed:hover,
+.forum-parent.collapsed:target { background-position: 0 -119px }
+.forum-parent:active,
+.forum-parent:target { color: #fff }
+.child-forums { padding:0; }
+.non-verbose .forum-link { height: 47px; }
+.forum-link { background-color: rgba(0, 0, 0, 0.25); color:#fab000; }
+.forum-link .desc { color:#d3ac6b; }
+.forum-link:hover { background-color: rgba(0, 0, 0, 0.35) }
+.forum-link:hover span { color:#fff; }
+
+#popular-topics { margin: 0; padding-top:0; }
+#popular-topics .readmore { border-bottom-color:#552b12; font-size: 14px; padding: 0; padding-bottom: 6px; margin-top: 4px; margin-bottom: 6px; background: none; }
+.coc { color:#71401F; margin: 0; text-transform: none; font-size: 11px; width: 290px; background:url("../images/layout/cms/code_bg.png"); font-style:italic;  }
+
+.forum-link .int { width:230px; }
+.forum-link .int-padding { padding:10px 12px 0 0; font-weight:bold; }
+.forum-link .int-padding .desc { font-weight:normal }
+.forum-link .forum-icon { width:54px; height:52px; padding-top:13px; }
+.non-verbose .forum-link .forum-icon { padding-top:7px; }
+
+.child-filter { padding-bottom: 10px; }
+.filter-options a { color:#FFAE00; background-color:#2B1507; -moz-border-radius: 3px; padding: 0 10px; height: 30px; line-height: 30px; }
+.filter-options a:hover { color:#fff; background-color:#4E2F1B; }
+.filter-options a.selected  { color:#000; background-color:#FFAE00; font-weight: bold; }
+
+/*Topic List*/
+
+.forum-options a { color:#ffad00 }
+div.forum-options a.active { color:#fff; font-weight: bold; }
+.forum-options a:hover { color:#FFE682 }
+
+#posts-container { padding:0; }
+#posts td { border-bottom:1px solid #261913; }
+#posts .post-th { color:#775e3a; }
+#posts tr:hover td { background: #261307; }
+#posts tr.featured { background: #052830; }
+#posts tr.featured:hover { background-image:url(../images/layout/cms/row_featured_hover.gif); background-color:#042a0f; }
+#forum-content .forum-post-icon { background-image:url(../images/layout/cms/post_active.png); background-position: 80% 4px; padding-left: 20px;}
+#forum-content .forum-post-icon .blizzard_icon { background-image:url(../images/layout/cms/icon_blizzard.png); background-position:-5px 100%; }
+
+#posts .post-pages .ui-pagination { background-image:url(../images/layout/cms/icon_subpaging.gif) }
+#posts .post-pages .ui-pagination li a { color:#FFB100 }
+#posts .post-pages .ui-pagination li a:hover { color:#FFF }
+.forum-actions .ui-pagination { margin-top:8px }
+.view-topic .forum-actions .ui-pagination { margin-top:3px }
+
+#posts .post-author, #posts .post-lastPost a { color:#a68450; }
+#posts .post-lastPost a { border-color:#443310; }
+.post-lastPost .more-arrow { background-image:url(../images/profile/sidebar-menu-arrows.png); }
+
+#posts .post-replies, #posts .post-views { color: #643416; }
+#posts tr.read .post-title a { color:#a67100; }
+#posts tr.read .post-title a:hover { color: #fff; }
+
+#posts tr.read .forum-post-icon { background-image:url(../images/layout/cms/post_inactive.png); }
+.tt_time { color: #8e8e8f; }
+.tt_info { color: #8e8e8f; }
+
+/* Thread */
+.icon-frame img, #page-comments .portrait-b img, #page-comments .portrait-c img { -moz-box-shadow:0 0 10px #000; -webkit-box-shadow:0 0 10px #000; box-shadow:0 0 10px #000;  }
+
+.button2 .icon-quote { background-image: url("../images/layout/cms/icon_quote.gif"); }
+
+#content .back-arrow { background-image:url("../images/icons/link-arrows.png"); }
+.bml-toolbar button { background-image:url("../images/icons/bml.gif"); background-color: transparent; }
+
+#forum-content { padding-top:15px; }
+#forum-content .section-header { color:#f9efa2; font:24px Arial; text-transform:none; }
+#forum-content .section-header .topic { text-transform:uppercase; color:#5f2b0c; margin-right:0;  }
+
+.bluetracker #posts .content a { color:#00B4FF; }
+.bluetracker #posts .content { color:#00B4FF; }
+.bluetracker #posts .desc { color:#006a8e; }
+.bluetracker #posts .post-title .forum-source { color: #93e1f7; }
+.bluetracker-icon-home  { background-image:url(../images/layout/cms/bluetracker_icon.png); }
+.bluetracker { background-image: url(../images/layout/cms/bluetracker_bg.jpg); }
+
+/* Topic */
+.nextBlizz { background-image:url("../images/layout/cms/next_blizz.gif"); }
+#forum-content .section-header .sticky-request { border-color:#281407; background-color:#1e1006; }
+#forum-content .section-header .sticky-request:hover { background-color:#331b0a; background-image:-moz-linear-gradient(#341c0a, #221207); background-image:-webkit-gradient(linear,center top, center bottom,from(#341c0a),to(#221207)); }
+
+#poll-container {	background-color:#1f1d1b; border-color:#8b8775;
+	-moz-box-shadow:0 0 3px #000; -webkit-box-shadow:0 0 3px #000; }
+#poll-container, #poll-container .poll-interior { -moz-border-radius:8px; }
+#poll-container .poll-interior { color:#fff; }
+#poll-container .selection-count { color:#BCA857; }
+#poll-container .poll-actions a { background-image:url(../images/layout/cms/twin_buttons.png); }
+#poll-container .poll-stats { color:#66655c; }
+#poll-container .poll-stats span { color:#b6af8f;  }
+#poll-container .results .result-container { background-image:url(../images/layout/cms/poll_bars.gif); background-color:#01151c; }
+#poll-container .results .result { background-image:url(../images/layout/cms/poll_bars.gif); }
+#poll-container .results .result span { background-image:url(../images/layout/cms/poll_bars.gif);
+	text-shadow:0 0 2px #000E21,0 0 2px #000E21,0 0 2px #000E21,0 0 2px #000E21; }
+#poll-container .poll-actions a:hover, #poll-container .poll-actions a.selected { color:#fff; }
+#poll-container .poll-actions a { color:#CCC; }
+#poll-container .result { color:#CCC;  }
+#poll-container .max .result { color:#fff;  }
+
+.post, .post .deleted { background-image:url(../images/layout/cms/post_bg.jpg); background-color:#1a0f08; }
+#thread .blizzard { background-image:url(../images/layout/cms/post_bg_blizzard.jpg);background-color:#1a0f08; background-repeat: no-repeat; }
+.high-rated { background-image:url(../images/layout/cms/post_bg_rated_high.jpg); background-color:#381D0A; }
+.high-rated .post-detail { color: #fff; }
+.low-rated .post-detail { color:#354155 }
+#page-comments .high-rated { background:#421f08; }
+
+.post-info .postData, .post-info .postData a { color:#f9efa2; }
+.post-info .highrated { color:#58c012; }
+.post-info .lowrated { color:#636363; }
+.post-info .postData .date, .post-edited { color:#636363; }
+.high-rated .post-info .date { color:#d67f47; }
+/* .post.blizzard .post-info .postData .date, .post.blizzard .post-edited { color:#3d5365; } */
+
+.post-user .character-info { left:116px }
+.post-user, .talkback .post-user { background-image:url(../images/layout/cms/post_avatar_bg.png); }
+
+.reporting .post-interior { background-image:url(../images/layout/cms/post_report_bg.gif); }
+
+.post .character-options { }
+.character-options .linebreak { border: none; }
+
+.post-user .character-info { top:24px; width:120px;  }
+.post-user .guild { font-size:10px; line-height:14px;}
+.post-user .guild a:hover { color:#fff }
+.post-user .character-realm { color:#855505; }
+.post-user .character-realm, .post-user .character-desc { font-size:10px; }
+.post-user .achievements { float: left; background: url(../images/icons/achievements.gif) right center no-repeat; padding-left: 0; padding-right: 11px; color: #C09A67; }
+.talkback .post h4, #report-post h4 { letter-spacing: -0.05em; }
+
+
+.post .blizzard-title { color:#00a2fb; }
+.post .mvp-title { color:#81b558; }
+#page-comments .mvp .context-link { color:#81b558 !important }
+
+.post .deleted .user-name-container, .post .deleted .post-detail, .post .deleted .post-info-int, .low-rated .post-detail { color:#726456 }
+#thread .post .deleted .context-link { color:#726456;  }
+
+#page-comments .mvp .portrait-b img,
+#page-comments .mvp .portrait-c img { border:2px solid #81b558;  }
+
+.post-detail { line-height: 1.7em; }
+
+.talkback, #report-post  { background-image:url(../images/layout/cms/reply_bg.jpg); background-color:#1a0f08; }
+.talkback .blizzard { background-image:url(../images/layout/cms/reply_blizz_bg.jpg);}
+.new-post .post-info-int { color:#96c7ff; }
+.new-post .post-info-int .num-posts { color:#00e5b0; background:#012c5f; }
+.bannedInfo { background:#222; }
+
+.talkback-controls span { }
+.talkback-controls a { background:#681c07; -moz-border-radius:3px; border-radius:3px; }
+.talkback-controls a:hover { background: #802309; }
+.talkback-controls a .c { color: #feba02 }
+.talkback-controls a.selected { background:#270b07; }
+.talkback-controls a.selected .c { color:#fff; font-weight: bold; }
+.talkback-controls a.disabled { background:#681c07 !important; }
+.talkback-controls a.disabled .c { color:#996e01 !important; }
+
+.talkback-code { background-image:url(../images/layout/cms/reply_bg_btm.jpg); background-color:#1a0f08; color:#d3ac6b; padding-left:30px;  }
+.talkback-code-interior { background-image:url(../images/layout/cms/code_bg.png); padding:30px; padding-left:15px;  }
+.talkback-code .code-header { color:#ffe5a4; font-size:18px; font-weight:normal; }
+.talkback-code strong { color:#feba02; }
+.talkback-icon { background:url(../images/layout/cms/alert_img.png) no-repeat; padding-left:70px; }
+
+.rate-post-wrapper { float:right; clear:both; }
+.rate-post-login { padding:0 10px; }
+.logged-in .rate-post-login { visibility: hidden; }
+
+.rate-option > .button-left, .rate-option .button-right, .rate-option > .rate-down { height:21px; display:block; background-image:url("../images/layout/cms/icon_rating.png"); }
+.rate-option > .button-left { padding-left:20px; background-position:-11px -8px;}
+.rate-option > .rate-down { width:37px;  background-position: -10px -8px; }
+
+.rate-option > .downvote-menu { position:absolute; }
+
+.rate-option.rate-up .button-left { background-position: -52px -8px;  }
+.rate-option.rate-up .button-right { padding: 2px 8px 0 0;  background-position: right -8px; }
+
+.upvoted .rate-option > .button-left, .upvoted .rate-option:hover > .button-left { background-position: -51px -80px; }
+.upvoted .rate-option .button-right, .upvoted .rate-option:hover .button-right { background-position: right -80px; }
+.upvoted .rate-option { color:#8f4415; }
+.downvoted .rate-option > .rate-down, .downvoted .rate-option:hover > .rate-down { width:37px;  background-position: -10px -80px; }
+
+.rate-option:hover > .button-left { background-position: -52px 64px; }
+.rate-option:hover .button-right { background-position: right -44px; }
+.rate-option:hover > .rate-down { width:37px;  background-position: -10px -44px; }
+
+.rate-option { float:right; margin:0 5px 0 0; visibility:hidden; }
+.rate-option.keep-shown { visibility:visible; }
+.rate-option .ui-dropdown { width:36px; }
+.rate-option .ui-dropdown .dropdown-wrapper { top:0; width:85px; }
+.rate-option .ui-dropdown .dropdown-wrapper a { padding:2px 10px 2px 20px;  }
+
+#content .karma .rate-btn-holder.selected .rate-btn, #content .karma .rate-btn-holder.selected:hover .rate-btn { color:#8f4415; }
+#content .rate-btn, #content .karma .rate-btn-holder.selected:hover .rate-btn { color:#eaa001; }
+
+.rate-option .ui-dropdown .dropdown-wrapper .report-comment a { color: #ffab00; background-image: url("../images/layout/cms/alert_icon.png"); background-repeat:no-repeat; background-position:10px 50%; padding-left:36px; line-height:20px; border-top:solid 1px #573500; }
+.rate-option .ui-dropdown .dropdown-wrapper .report-comment a:hover { color:#fff; background-color: #471807; }
+
+
+/* Post Reporting */
+
+#report-post { display:none; }
+#report-post table { width:100%; }
+#report-post td { vertical-align:top; }
+#report-post .report-detail { font-size:12px; font-weight:normal; width:75%; }
+#report-post #report-detail { width:90%; border-radius:8px; }
+#report-post .report-data, #report-post .report-submit { padding:10px 0;}
+
+#report-post .report-desc { text-align:right; font-size:14px; }
+#report-post .report-desc div { padding:0 20px; }
+#report-post .report-desc div small { font-size:10px; display:block; }
+
+#report-post .report-desc, #report-post .report-detail { padding-top:10px; }
+
+#report-success { display:none; padding:20px; text-align:center; }
+#page-comments .reporting, #thread .reporting .post-interior { background-position:50% 100%; background-repeat:no-repeat; }
+
+/*Forums */
+.post-user .avatar-interior img, .post-user .avatar-interior { height:84px; width:84px; }
+.post-user, .talkback .post-user { height:133px; padding-right: 40px; }
+.post-user .avatar { left:22px; top:26px; }
+#thread .blizzard { border-bottom:none; }
+.mod_panel { border-bottom:1px solid #2d1f16; }
+
+/* Polls */
+#poll-container { position:relative; margin:20px 80px 50px; font-size:11px; background:#1f1d1b; border: solid 1px #8b8775; border-radius:8px; box-shadow:0 0 3px #000; }
+#poll-container .poll-interior { color:#fff; padding:12px 40px 15px; }
+#poll-container, #poll-container .poll-interior { border-radius:8px 0 4px 0; }
+#poll-container h2 { font-size:14px; color:white; font-weight:normal; padding:5px 100px 14px 0; }
+#poll-container .selection-count { color:#BCA857; font:italic bold 11px/14px Trebuchet MS; position:absolute; right:14px; top:14px; text-align:right; }
+
+#poll-container .poll-stats { position:relative; bottom:-16px; left:0; z-index:1; padding-right:200px; display:block;  color:#66655c; }
+#poll-container .poll-stats span { color:#b6af8f;  }
+#poll-container .poll-actions { position:absolute; right:14px; bottom:-17px; z-index:2; }
+
+#poll-container .results { display:none; }
+#poll-container.results-only .results { display:block; }
+#poll-container .results .result-container { padding:1px 0; background:url(../images/layout/cms/poll_bars.gif) 0px -36px no-repeat #01151c; }
+#poll-container .results .result { width:100%; height:16px; color:#ccc; background:url(../images/layout/cms/poll_bars.gif) 0 -18px no-repeat; }
+#poll-container .results .result span { background-image:url(../images/layout/cms/poll_bars.gif); text-shadow:0 0 2px #000E21,0 0 2px #000E21,0 0 2px #000E21,0 0 2px #000E21; }
+#poll-container .max .result { color:#fff; background-position:0 0; }
+
+#poll-container.results-only .poll-options { display:none; }
+#poll-container .poll-option { display:block; line-height:24px; }
+#poll-container .poll-option input { margin:0 10px; vertical-align:middle; }
+
+#poll-container .results table { width:100%; border-collapse:collapse; }
+#poll-container .results td { padding:5px; }
+#poll-container .results table td:first-child { text-align:right; white-space:nowrap; max-width:50%; }
+#poll-container .results table td:last-child { min-width:50%; width:100%; }
+#poll-container .verbose table td:first-child { width:50%; white-space:normal; }
+#poll-container .verbose table td:last-child { width:50%; }
+
+#blog #poll-container .results { width:460px; }
+
+

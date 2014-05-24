@@ -538,15 +538,16 @@ CREATE TABLE IF NOT EXISTS `slideshows` (
   `description` varchar(255) NOT NULL,
   `image` varchar(255) NOT NULL,
   `link` varchar(255) DEFAULT '#',
+  `duration` varchar(2) CHARACTER SET utf8 NOT NULL DEFAULT '7',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 -- Dumping data for table website.slideshows: 2 rows
 DELETE FROM `slideshows`;
 /*!40000 ALTER TABLE `slideshows` DISABLE KEYS */;
 INSERT INTO `slideshows` (`id`, `title`, `description`, `image`, `link`) VALUES
-	(2, 'Patch 4.3', 'Cataclysm Version 4.3.4 Supported!', '4.3.jpg', '#'),
-	(1, 'Patch 4.2', 'Cataclysm Version 4.2.0 Supported!', '4.2.jpg', '#');
+	(1, 'Patch 4.2', 'Cataclysm Version 4.2.0 Supported!', '4.2.jpg', '#','7'),
+	(2, 'Patch 4.3', 'Cataclysm Version 4.3.4 Supported!', '4.3.jpg', '#','7');
 /*!40000 ALTER TABLE `slideshows` ENABLE KEYS */;
 
 
