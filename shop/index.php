@@ -1,4 +1,6 @@
-<?php require_once("../configs.php");
+<?php
+$page_cat="shop"; 
+require_once("../configs.php");
 include_once('functions.d/GetShopTheme.php');
  ?>
 <!DOCTYPE html> 
@@ -24,107 +26,108 @@ try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
 //]]>
 </script>
 <![endif]--></head>
-<body class="en-gb services-home logged-in">
-
+<body class="en-us services-home logged-in">
 <div id="wrapper">
-<?php $page_cat="shop"; include("../header.php"); ?>
-<div id="content">
-<div class="content-top-serv">
-<div class="content-trail">
-<ol class="ui-breadcrumb">
-<li><a href="<?php echo $website['root']; ?>" rel="np" class=""><?php echo $website['title']; ?></a><span class="breadcrumb-arrow"></span></li>
-<li class="last"><a href="shop.php" rel="np"><?php echo $Shop['shop']; ?></a></li>
-</ol>
-</div>
-<div class="content-bot">
-<div class="main-banners">
-<div class="expansion">
-</div>
-<?php
-if(isset($_SESSION['username']))
-{
-include("logged.php");
-}
-else
-{
-include("offline.php");
-}
-?>
-</div>
-<div id="wiki" class="wiki directory wiki-index">
-<div class="panel free-paid-services">
-<div id="free-services" class="services-column">
-<h2 class="header"><?php echo $Shop['shop_5']; ?></h2>			
-<ul>
-	<li><a href="<?php echo $website['root']; ?>shop/recruit-a-friend/" class="free-services-raf">
-	<span><?php echo $Shop['shop_6']; ?></span></a>
-	</li>
-	<li><a href="<?php echo $website['root']; ?>account/chars-unst.php" class="free-services-sor">
-	<span><?php echo $Shop['shop_7']; ?></span></a>
-	</li>
-	<li><a href="#" class="free-services-item-restoration">
-	<span><?php echo $Shop['shop_8']; ?></span></a>
-	</li>
-	<li><a href="<?php echo $website['root']; ?>shop/avatar" class="free-services-mobile-armory">
-	<span><?php echo $Shop['shop_9']; ?></span></a>
-	</li>
-	<li><a href="#" class="free-services-security">
-	<span><?php echo $Shop['shop_10']; ?></span></a>
-	</li>
-</ul>
-</div>
-<div id="paid-services" class="services-column">
-<h2 class="header"><?php echo $Shop['shop_11']; ?></h2>
-<ul>
-	<li><a href="<?php echo $website['root']; ?>shop/character-transfer/" class="paid-services-character-transfer">
-	<span><?php echo $Shop['shop_12']; ?></span></a>
-	</li>
-	<li><a href="<?php echo $website['root']; ?>shop/faction-change/" class="paid-services-faction-change">
-	<span><?php echo $Shop['shop_13']; ?></span></a>
-	</li>
-	<li><a href="<?php echo $website['root']; ?>shop/race-change/" class="paid-services-race-change">
-	<span><?php echo $Shop['shop_14']; ?></span></a>
-	</li>
-	<li><a href="<?php echo $website['root']; ?>account/change_appear.php" class="paid-services-character-customization">
-	<span><?php echo $Shop['shop_15']; ?></span></a>
-	</li>
-	<li><a href="<?php echo $website['root']; ?>account/change_name.php" class="paid-services-name-change">
-	<span><?php echo $Shop['shop_16']; ?></span></a>
-	</li>
-</ul>
-</div>
-<a href="<?php echo $website['root']; ?>account/raf-invite.php" class="ad-raf"><span><?php echo $Shop['shop_17']; ?></span></a>
-</div> 
-<div class="panel game-subscriptions">
-<h2 class="header"><a href="#"><?php echo $Shop['shop_18']; ?></a></h2>
-<div class="subscription-col subscription-1">
-<a href="#" class="game-title">
-<span class="tooltip" data-tooltip="#wow-battlechest-tooltip" data-tooltip-options="{&quot;location&quot;: &quot;mouse&quot;}">World of Warcraft, TBC & WOTLK</span>
-</a>
-<a class="ui-button button1 " href="<?php echo $website['root']; ?>account/change_client.php?client=2">
-<span><span><?php echo $Shop['shop_19']; ?></span></span></a>
-<br />
-<div id="wow-battlechest-tooltip" class="tooltip-content-div">
-<p>Everything you need to begin the adventure</p>
-<ul>
-	<li>- World of Warcraft Vanilla Set</li>
-	<li>- World of Warcraft The Burning Crusade Set</li>
-	<li>- World of Warcraft Wrath of the Lick King Set</li>
-	<li>- Level Experience increased by 20%</li>
-</ul>
-</div>
-</div>
-<div class="subscription-col subscription-2">
-<a href="#" class="game-title">Cataclysm (Expansion)</a>
-<a class="ui-button button1 " href="<?php echo $website['root']; ?>account/change_client.php?client=3">
-<span><span><?php echo $Shop['shop_19']; ?></span></span></a>
-</div>
-<div class="subscription-col subscription-3">
-<a class="game-title">Mists of Pandaria (Expansion)</a>
-<a class="ui-button button1 disabled" data-tooltip="Mists of Pandaria is not Supported" data-tooltip-options="{&quot;location&quot;: &quot;mouse&quot;}">
-<span><span><?php echo $Shop['shop_19']; ?></span></span></a>
-<br />
-</div>
+<?php include("../header.php"); ?>
+	<div id="content">
+		<div class="content-top body-top">
+			<div class="content-trail">
+				<ol class="ui-breadcrumb">
+					<li itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+					<a href="<?php echo $website['root']; ?>" rel="np" class="breadcrumb-arrow" itemprop="url">
+					<span class="breadcrumb-text" itemprop="name"><?php echo $website['title']; ?></span>
+					</a>
+					</li>
+					<li class="last" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+					<a href="shop.php" rel="np" itemprop="url">
+					<span class="breadcrumb-text" itemprop="name"><?php echo $Shop['shop']; ?></span>
+					</a>
+					</li>
+				</ol>
+			</div>
+			<div class="content-bot clear">
+			<div class="main-banners">
+				<?php
+				if(isset($_SESSION['username']))
+				{
+				include("logged.php");
+				}
+				else
+				{
+				include("offline.php");
+				}
+				?>
+			</div>
+				<div id="wiki" class="wiki directory wiki-index">
+					<div class="panel free-paid-services">
+						<div id="free-services" class="services-column">
+							<h2 class="header"><?php echo $Shop['shop_5']; ?> </h2>
+							<ul>
+								<li><a href="<?php echo $website['root']; ?>shop/recruit-a-friend/" class="free-services-raf">
+								<span><?php echo $Shop['shop_6']; ?></span></a>
+								</li>
+								<li><a href="<?php echo $website['root']; ?>account/chars-unst.php" class="free-services-sor">
+								<span><?php echo $Shop['shop_7']; ?></span></a>
+								</li>
+								<li><a href="#" class="free-services-item-restoration">
+								<span><?php echo $Shop['shop_8']; ?></span></a>
+								</li>
+								<li><a href="<?php echo $website['root']; ?>shop/avatar" class="free-services-mobile-armory">
+								<span><?php echo $Shop['shop_9']; ?></span></a>
+								</li>
+								<li><a href="#" class="free-services-security">
+								<span><?php echo $Shop['shop_10']; ?></span></a>
+								</li>
+							</ul>
+						</div>
+						<div id="paid-services" class="services-column">
+							<h2 class="header"><?php echo $Shop['shop_11']; ?></h2>
+							<ul>
+								<li><a href="<?php echo $website['root']; ?>shop/character-transfer/" class="paid-services-character-transfer">
+								<span><?php echo $Shop['shop_12']; ?></span></a>
+								</li>
+								<li><a href="<?php echo $website['root']; ?>shop/faction-change/" class="paid-services-faction-change">
+								<span><?php echo $Shop['shop_13']; ?></span></a>
+								</li>
+								<li><a href="<?php echo $website['root']; ?>shop/race-change/" class="paid-services-race-change">
+								<span><?php echo $Shop['shop_14']; ?></span></a>
+								</li>
+								<li><a href="<?php echo $website['root']; ?>account/change_appear.php" class="paid-services-character-customization">
+								<span><?php echo $Shop['shop_15']; ?></span></a>
+								</li>
+								<li><a href="<?php echo $website['root']; ?>account/change_name.php" class="paid-services-name-change">
+								<span><?php echo $Shop['shop_16']; ?></span></a>
+								</li>
+							</ul>
+						</div>
+						<a href="<?php echo $website['root']; ?>account/raf-invite.php" class="ad-raf"><span><?php echo $Shop['shop_17']; ?></span></a>
+						</div> 
+					<div class="panel game-subscriptions">
+						<h2 class="header">
+							<a href="#"><?php echo $Shop['shop_18']; ?></a>
+						</h2>
+						<div class="subscription-col subscription-1">
+						<a href="#" class="game-title">
+						<span class="tooltip" data-tooltip="#wow-battlechest-tooltip" data-tooltip-options="{&quot;location&quot;: &quot;mouse&quot;}">World of Warcraft, TBC & WOTLK</span>
+						</a>
+						<a class="ui-button button1" href="<?php echo $website['root']; ?>account/change_client.php?client=2">
+						<span class="button-left"><span class="button-right"><?php echo $Shop['shop_19']; ?></span></span></a>
+						<br/>
+						<div id="wow-battlechest-tooltip" class="tooltip-content-div">
+						<p>Everything you need to begin the adventure</p>
+						<ul>
+							<li>- World of Warcraft Vanilla Set</li>
+							<li>- World of Warcraft The Burning Crusade Set</li>
+							<li>- World of Warcraft Wrath of the Lick King Set</li>
+							<li>- Level Experience increased by 20%</li>
+						</ul>
+						</div>
+						</div>
+						<div class="subscription-col subscription-3">
+							<a class="game-title">Mists of Pandaria (Expansion)</a>
+							<a class="ui-button button1"><span class="button-left"><span class="button-right"><?php echo $Shop['shop_19']; ?></span></span></a>
+							<br/>
+						</div>
 <p class="subscription-desc"><?php echo $website['title']; ?> <?php echo $Shop['shop_20']; ?> <a href="#"><?php echo $Shop['shop_21']; ?></p>
 <span class="clear"><!-- --></span>
 </div>

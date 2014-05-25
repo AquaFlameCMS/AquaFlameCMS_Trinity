@@ -373,10 +373,10 @@ div.forum-options a.active { color:#fff; font-weight: bold; }
 .right-sidebar .sidebar-module .sidebar-title h3 a { color: #FEF092; padding-right: 20px; background: url("../images/icons/next.gif") 100% 50% no-repeat; }
 .right-sidebar .sidebar-module .sidebar-title h3 a:hover { color: #fff; }
 .sidebar-module .sidebar-content { padding: 0; }
-.sidebar-module .sidebar-content.loading { padding: 40px; background: url("../images/loaders/canvas-loader.gif") 50% 50% no-repeat }
+.sidebar-module .sidebar-content.loading { padding: 40px; background: url("/wow/static/images/loaders/canvas-loader.gif") 50% 50% no-repeat }
 .sidebar-module .sidebar-content .empty { color: #C09A67; }
 .sidebar-module .sidebar-all { text-align: right; padding-top: 10px }
-.sidebar-module .sidebar-all a { padding-right: 12px; background: url("../images/icons/more-arrows.gif") 100% 2px no-repeat }
+.sidebar-module .sidebar-all a { padding-right: 12px; background: url("/wow/static/images/icons/more-arrows.gif") 100% 2px no-repeat }
 .sidebar-module .sidebar-all a:hover { background-position: 100% -45px }
 .sidebar-module .sidebar-error { padding: 10px 0 5px 0; text-align: center; color: #C09A67;}
 .sidebar-module .date { color: #71401F; font-size: 11px; }
@@ -486,7 +486,7 @@ a.sidebar-esports:hover { background-position: left bottom; border-color: #ffb10
 #sidebar-realm-status .down-realms li { margin: 5px; }
 #sidebar-realm-status .pvp { color: #C33; }
 #sidebar-realm-status .rp { color: #3C3; }
-#sidebar-realm-status .status-icon { background: url("../images/icons/status.html") -1px 0 no-repeat; margin: 0 auto; height: 30px; width: 25px; }
+#sidebar-realm-status .status-icon { background: url("../images/icons/status.png") -1px 0 no-repeat; margin: 0 auto; height: 30px; width: 25px; }
 #sidebar-realm-status .status-icon.up { background-position: -111px 0; }
 
 .sidebar-bot { min-height: 200px; position: relative; }
@@ -521,14 +521,14 @@ body.zh-cn .sidebar-loading { top: 400px; }
 .promo .promo-link:hover { background-position: 0 -250px; }
 
 	/* presale */
-	.promo.promo-presale { background: url("../images/sidebar/pre-sale/en-us.html") no-repeat; width: 300px; height: 250px; }
-	.de-de .promo.promo-presale { background: url("../images/sidebar/pre-sale/de-de.html") no-repeat; }
-	.es-es .promo.promo-presale { background: url("../images/sidebar/pre-sale/es-es.html") no-repeat; }
-	.es-mx .promo.promo-presale { background: url("../images/sidebar/pre-sale/es-mx.html") no-repeat; }
-	.fr-fr .promo.promo-presale { background: url("../images/sidebar/pre-sale/fr-fr.html") no-repeat; }
-	.it-it .promo.promo-presale { background: url("../images/sidebar/pre-sale/it-it.html") no-repeat; }
-	.pl-pl .promo.promo-presale { background: url("../images/sidebar/pre-sale/pl-pl.html") no-repeat; }
-	.ru-ru .promo.promo-presale { background: url("../images/sidebar/pre-sale/ru-ru.html") no-repeat; }
+	.promo.promo-presale { background: url("../images/sidebar/pre-sale/en-us.jpg") no-repeat; width: 300px; height: 250px; }
+	.de-de .promo.promo-presale { background: url("../images/sidebar/pre-sale/de-de.jpg") no-repeat; }
+	.es-es .promo.promo-presale { background: url("../images/sidebar/pre-sale/es-es.jpg") no-repeat; }
+	.es-mx .promo.promo-presale { background: url("../images/sidebar/pre-sale/es-mx.jpg") no-repeat; }
+	.fr-fr .promo.promo-presale { background: url("../images/sidebar/pre-sale/fr-fr.jpg") no-repeat; }
+	.it-it .promo.promo-presale { background: url("../images/sidebar/pre-sale/it-it.jpg") no-repeat; }
+	.pl-pl .promo.promo-presale { background: url("../images/sidebar/pre-sale/pl-pl.jpg") no-repeat; }
+	.ru-ru .promo.promo-presale { background: url("../images/sidebar/pre-sale/ru-ru.jpg") no-repeat; }
 
 	/* activate */
 	.promo.promo-cataclysm-activate { background: url("../images/sidebar/cataclysm-activate/bg.jpg") no-repeat; width: 300px; height: 250px; }

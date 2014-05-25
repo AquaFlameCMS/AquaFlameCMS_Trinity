@@ -2,9 +2,18 @@
 
 .header { font-weight: bold; }
 
-.game-index #content .content-top { background: url("../../images/game/landing/bg.jpg") 0 0 no-repeat; }
-.wiki.directory .title { padding: 29px 25px 30px; margin-left: 5px; }
-.wiki.directory .desc { color: #c88840; }
+.game-index #content .content-top { background: url("../../images/game/landing/bg-warlords.jpg") 0 0 no-repeat; }
+.zh-cn .game-index #content .content-top { background: url("../../images/game/landing/bg-warlords-cn.jpg") 0 0 no-repeat; }
+.zh-tw .game-index #content .content-top { background: url("../../images/game/landing/bg-warlords-tw.jpg") 0 0 no-repeat; }
+
+.announcement-site { float: right; font: 14px Palatino Linotype, sans-serif; height: 30px; position: relative; right: 18px; text-align: center; top: 125px; width: 200px; }
+.announcement-site-link { font: 14px Palatino Linotype, sans-serif; }
+.announcement-site-link .arrow { background: url("../../images/icons/more-arrows-wide.gif") 0 0px no-repeat; margin-left: 7px; width: 10px; height: 12px; display: inline-block; }
+.announcement-site-link:hover .arrow { background-position: 0 -89px; }
+span.arrow { position: relative; top: 2px;}
+
+.wiki.directory .title { padding: 29px 25px 30px; margin-left: 5px; width: 50%;}
+.wiki.directory .desc { color: #c88840; width: 90%; }
 
 .index { padding: 0 25px 25px 25px; }
 .index .panel { margin: 0; }

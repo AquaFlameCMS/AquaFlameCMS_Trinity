@@ -552,8 +552,8 @@ body.has-blizzcon-bar { background-position: 50% 42px !important; }
 .explore-secondary .explore-game-inner { display: block; padding: 110px 0 0 0; }
 
 .explore-secondary span { display: block; padding-bottom: 4px; white-space: nowrap; overflow: hidden; font-size: 11px; }
-.explore-game a { height:160px; position:relative; background:url("../images/service-bar/explore-menu3860.jpg?v=1") no-repeat -434px -190px; }
-.explore-game a:hover { background:url("../images/service-bar/explore-menu3860.jpg?v=1") no-repeat -434px -125px; }
+.explore-game a { height:160px; position:relative; background:url("../images/service-bar/explore-menu.jpg?v=1") no-repeat -434px -190px; }
+.explore-game a:hover { background:url("../images/service-bar/explore-menu.jpg?v=1") no-repeat -434px -125px; }
 .explore-game-sc2 a { background-position:-219px 0; }
 .explore-game-wow a { background-position:0px 0; }
 .explore-game-d3  a { background-position:-109px 0; }
@@ -1137,11 +1137,11 @@ body.has-blizzcon-bar { background-position: 50% 42px !important; }
 .icon-48,
 .icon-64 { overflow: hidden; display: inline-block; vertical-align: top; text-indent: -9999px; }
 
-.icon-16 { width: 16px; height: 16px; background-image: url("../images/icons/sprite-16.html"); }
-.icon-24 { width: 24px; height: 24px; background-image: url("../images/icons/sprite-24.html"); }
-.icon-32 { width: 32px; height: 32px; background-image: url("../images/icons/sprite-32.html"); }
-.icon-48 { width: 48px; height: 48px; background-image: url("../images/icons/sprite-48.html"); }
-.icon-64 { width: 64px; height: 64px; background-image: url("../images/icons/sprite-64.html"); }
+.icon-16 { width: 16px; height: 16px; background-image: url("../images/icons/sprite-16.png"); }
+.icon-24 { width: 24px; height: 24px; background-image: url("../images/icons/sprite-24.png"); }
+.icon-32 { width: 32px; height: 32px; background-image: url("../images/icons/sprite-32.png"); }
+.icon-48 { width: 48px; height: 48px; background-image: url("../images/icons/sprite-48.png"); }
+.icon-64 { width: 64px; height: 64px; background-image: url("../images/icons/sprite-64.png"); }
 
 .icon-16-default,
 .icon-24-default,

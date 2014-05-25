@@ -50,15 +50,27 @@ try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
 <div id="wrapper">
 	<?php include("../header.php"); ?>
 	<div id="content">
-		<div class="content-top">
+		<div class="content-top body-top">
 			<div class="content-trail">
 				<ol class="ui-breadcrumb">
-					<li><a href="<?php echo $website['root']; ?>" rel="np" class=""><?php echo $website['title']; ?></a><span class="breadcrumb-arrow"></span></li>
-					<li class="last"><a href="<?php echo $website['root']; ?>game/" rel="np"><?php echo $game['game']; ?></a></li>
+					<li itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+					<a href="<?php echo $website['root']; ?>" rel="np" class="breadcrumb-arrow" itemprop="url">
+					<span class="breadcrumb-text" itemprop="name"><?php echo $website['title']; ?></span>
+					</a>
+					</li>
+					<li class="last" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+					<a href="<?php echo $website['root']; ?>game/" rel="np" itemprop="url">
+					<span class="breadcrumb-text" itemprop="name"><?php echo $game['game']; ?></span>
+					</a>
+					</li>
 				</ol>
 			</div>
-			<div class="content-bot">
+			<div class="content-bot clear">
 				<div id="wiki" class="wiki directory wiki-index">
+					<div class="announcement-site">
+						<a href="/wow/es/warlords-of-draenor/" class="announcement-site-link">Discover the expansion <span class="arrow"></span>
+						</a>
+					</div>
 					<div class="title">
 						<h2><?php echo $game['1']; ?></h2>
 						<p class="desc">

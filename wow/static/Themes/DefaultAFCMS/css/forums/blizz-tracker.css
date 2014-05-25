@@ -1,0 +1,38 @@
+
+.blizz-tracker .forum-actions { padding:20px }
+.blizz-tracker .forum-actions .create-button-wrapper { float:left }
+.blizz-tracker .forum-actions .actions-right { float:right }
+.ie67 .blizz-tracker .forum-actions .actions-right { width:400px; }
+.blizz-tracker .forum-actions .paging-wrapper { padding-top:15px; float:right }
+
+.blizz-tracker .actions-left .subheader-2 { font-size:30px }
+
+.blizz-tracker .forum-topics { width:994px; border-collapse:separate }
+.blizz-tracker .forum-topics th { font-size:11px; font-family:"Lucida Sans Unicode", "Lucida Grande", Verdana; font-weight:normal; color:#775e3a; text-align:left; text-transform:uppercase; padding-bottom:5px }
+.blizz-tracker .forum-topics th,
+.blizz-tracker .forum-topics td { border-bottom: 1px solid #261913; }
+.blizz-tracker .forum-topics td { vertical-align:top }
+
+.blizz-tracker .forum-topics tbody tr:hover { background-color: #261307; }
+
+.blizz-tracker .forum-topics .icon-cell { padding-left:10px; width:50px; }
+.blizz-tracker .forum-topics .topic-icon-wrapper { position:relative; display:block;  }
+.blizz-tracker .forum-topics .icon-cell .topic-icon { display:block; width:50px; height:41px; background: url("../../images/layout/cms/post_active.png") 80% 4px no-repeat; }
+.blizz-tracker .forum-topics .icon-cell .employee-icon { position:absolute; left:5px }
+
+.blizz-tracker .forum-topics .author-cell { width:120px }
+.blizz-tracker .forum-topics .author-cell .author-wrapper { display:block; white-space:nowrap; height:54px; width:120px; text-overflow:ellipsis; overflow:hidden }
+.blizz-tracker .forum-topics .author-cell .author-wrapper .author-name { display:block; float:left; height:54px; line-height:54px; width:120px }
+.blizz-tracker .forum-topics .author-cell .author-wrapper .author-name.blizzard-post { color:#FFF; width:auto; max-width:80px; text-overflow:ellipsis; overflow:hidden }
+.blizz-tracker .forum-topics .author-cell .author-wrapper .employee-icon { float:left; margin:21px 0 0 4px }
+
+.blizz-tracker .forum-topics .content { width:700px; padding-top:6px; color:#00B4FF; word-wrap:break-word }
+.blizz-tracker .forum-topics .content a { display:block; color:#00B4FF; }
+.blizz-tracker .forum-topics .desc { padding:5px 0; color:#006a8e; font-size:12px }
+.blizz-tracker .forum-topics .desc .forum-source { color: #93e1f7; font-size:11px; }
+.blizz-tracker .forum-topics .desc .forum-topic { color: #ffb100; font-size:12px; }
+.blizz-tracker .forum-topics .desc .forum-source:hover,
+.blizz-tracker .forum-topics .desc .forum-topic:hover { color:#FFF }
+
+.blizz-tracker .forum-topics .last-post-cell { white-space:nowrap; font-size: 11px; text-align: right; padding:0 20px 0 0; }
+.blizz-tracker .forum-topics .last-post-time { display:block; height:54px; line-height:54px }

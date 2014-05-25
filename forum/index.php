@@ -4,6 +4,7 @@ $page_cat = "forums";
 include_once("functions.d/GetForumTheme.php");
 ?>
 <!doctype html>
+<html lang="en-gb">
 <head>
 <title><?php echo $website['title']; ?></title>
 <meta content="false" http-equiv="imagetoolbar" />
@@ -44,30 +45,34 @@ Flash.videoBase = 'http://eu.media.blizzard.com/wow/media/videos';
 Flash.ratingImage = 'http://eu.media.blizzard.com/wow/player/rating-pegi.jpg';
 //]]>
 </script>
-<body class="en-gb station-home" onunload="opener.location=('index.php')">
+<body class="en-gb forums forums-home" onunload="opener.location=('index.php')">
 <div id="wrapper">
 	<?php include("../header.php"); ?>
 		<div id="content">
 			<div class="content-top">
-				<div class="content-trail">
-					<ol class="ui-breadcrumb">
-					<li>
-					<a href="../index.php" rel="np"><?php echo $website['title']; ?></a><span class="breadcrumb-arrow"></span></li>
-					<li class="last"><a href="../forum" rel="np"><?php echo $Forums['Forums']; ?></a></li>
-					</ol>
-				</div>
-				
-				<div class="content-bot">
-				<script type="text/javascript">$(function(){Cms.Station.init();});</script>
-					<div id="station-view">
-						<div class="bt-lite">
-							<div class="bt-link readmore"><?php echo $Forum['Forum77']; ?> <span><a href="#">(<?php echo $View_all['View_all']; ?>)</a></span></div>
-								<a href="javascript:;" onClick="Cms.Station.btLiteScroll(1)" class="bt-left"></a>
-								<a href="javascript:;" onClick="Cms.Station.btLiteScroll(-1)" class="bt-right"></a>
-					
-							<div class="bt-adjust">
-								<div class="bt-mask">
-									<div id="bt-holder">
+			<div class="content-trail">
+				<ol class="ui-breadcrumb">
+					<li itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+					<a href="../index.php" rel="np" class="breadcrumb-arrow" itemprop="url">
+					<span class="breadcrumb-text" itemprop="name"><?php echo $website['title']; ?></span>
+					</a>
+					</li>
+					<li class="last" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+					<a href="../forum" rel="np" rel="np" itemprop="url">
+					<span class="breadcrumb-text" itemprop="name"><?php echo $Forums['Forums']; ?></span>
+					</a>
+					</li>
+				</ol>
+			</div>
+			<div class="content-bot clear">
+				<div id="blizz-tracker-lite">
+					<div class="blizzard-posts">
+						<h2 class="header-2"><?php echo $Forum['Forum77']; ?> <a href="#">(<?php echo $View_all['View_all']; ?>)</a></h2>
+						<a href="javascript:;" class="paging-arrow arrow-left"></a>
+						<a href="javascript:;" class="paging-arrow arrow-right"></a>
+						<div class="mask-wrapper">
+							<div class="mask">
+									<div class="holder" id="tracker-scroll-container">
 										<?php
 										$get_blizzposts = mysql_query("SELECT * FROM forum_blizzposts ORDER BY date DESC");
 										$i=0;
@@ -81,8 +86,8 @@ Flash.ratingImage = 'http://eu.media.blizzard.com/wow/player/rating-pegi.jpg';
 											}
 											$forum = mysql_fetch_assoc(mysql_query("SELECT * FROM forum_forums WHERE id = '".$post['forumid']."'"));
 											
-											if($i==0){ echo '<div class="bt-set">'; }
-											echo'<a href="category/view-topic/?t='.$threadId.'">
+											if($i==0){ echo '<div class="set">'; }
+											echo'<a class="tracked-blizzard-post" href="category/view-topic/?t='.$threadId.'">
 												<span class="desc">
 													<span class="int">';
 														$content = substr($post['content'],0,120);
@@ -103,11 +108,11 @@ Flash.ratingImage = 'http://eu.media.blizzard.com/wow/player/rating-pegi.jpg';
 														$content=str_replace("]", "",$content);
 														$content=stripslashes($content);
 														echo '"'.$content.' ..."
-														
-												</span>
+													</span>
 												</span>
 												<span class="info">
-														<span class="char">';
+												<span class="char">
+												<span class="employee-icon"></span>';
 														$userBlizz = mysql_fetch_assoc(mysql_query("SELECT `character`,firstName FROM users WHERE id = '".$blizzpost['author']."'"));
 														if($userBlizz['character'] == 0){
 															$char['name'] = $userBlizz['firstName'];
@@ -126,101 +131,85 @@ Flash.ratingImage = 'http://eu.media.blizzard.com/wow/player/rating-pegi.jpg';
 											
 										}
 										?>
-										
-										<div class="bt-set">
-											<a href="#">
-												<span class="desc">
-												<span class="int"><?php echo $Forum['Forum78']; ?></span>
-												</span>
-												<span class="info">
-												 </span>
-											</a>
-										</div>
+									<div class="set">
+										<a class="tracked-blizzard-post" href="blizztracker/">
+										<span class="desc">
+										<span class="int"><?php echo $Forum['Forum78']; ?> </span>
+										</span>
+										<span class="info">
+										</span>
+										</a>
 									</div>
 								</div>
-								<div class="bt-mask-l"></div>
-								<div class="bt-mask-r"></div>
 							</div>
-						</div>
-						
-						<div id="station-content">
-							<div class="station-content-wrapper">
-								<div class="station-inner-wrapper">
-									<div id="forum-list">
-										<div id="forum-list-interior">
-											<?php
-											$get_categs = mysql_query("SELECT * FROM forum_categ ORDER BY num ASC");
-											while($categ = mysql_fetch_array($get_categs)){
-												echo'
-												<a id="forum'.$categ['id'].'" href="javascript:;" onclick="Cms.Station.parentToggle('.$categ['id'].',this)" class="forum-parent">
-												'.$categ['name'].'
-												</a>
-												<div class="child-forums" id="child'.$categ['id'].'">
-												<div class="forums-list">
-													';
-													$get_forums = mysql_query("SELECT * FROM forum_forums WHERE categ = '".$categ['id']."' ORDER BY num ASC");
-													while($forum = mysql_fetch_array($get_forums)){
-														echo '
-														
-																<a href="category/?f='.$forum['id'].'" class="forum-link">
-																	<span class="forum-icon">
-																			<img src="../images/forum/forumicons/'.$forum['image'].'.gif" />
-																	</span>
-																	<span class="int">
-																		<span class="int-padding">
-																			'.$forum['name'].'
-																			<span class="desc">'.$forum['description'].'</span>
-																		</span>
-																	</span>
-																</a>
-														';
-													}
-													echo '
-												</div>
-												</div>';
-											}
-											?>
-										</div>
-									</div>
-
-
-									<div id="popular-topics">
-										<div class="readmore"><?php echo $P_topics['P_topics']; ?></div>
-											<div class="sidebar-module" id="sidebar-forums">
-							<div class="sidebar-title">
-							<h3 class="category title-forums"><a href="#"><?php echo $P_topics['P_topics']; ?></a></h3>
+							<div class="mask-edge mask-left">
 							</div>
-							<div class="sidebar-content">
-							<ul class="trending-topics">
-								<?php
-								$get_lastactivity = mysql_query("SELECT *, date FROM $server_db.forum_threads ORDER BY `last_date` DESC LIMIT 10");
-								if(mysql_num_rows($get_lastactivity) > 0){
-								while($lastact = mysql_fetch_array($get_lastactivity)){
-									$forum = mysql_fetch_assoc(mysql_query("SELECT * FROM $server_db.forum_forums WHERE id = '".$lastact['forumid']."'"));
-									echo '
-									<li>
-									<a href="category/view-topic/?t='.$lastact['id'].'" class="topic">
-									'.$lastact['name'].'</a>
-									<a class="forum">'.$forum['name'].'</a> - <span class="date">'.$lastact['date'].'</span></li>
-									';
-								}
-								}else{
-									echo 'No Topics';
-								}
-								?>
-								</ul>
-							</div>
-						</div>
-											<div class="coc"> <?php echo $click['click']; ?> <a href="http://battle.net/community/conduct"><?php echo $here['here']; ?></a><?php echo $Forum['Forum33']; ?></div>
-									</div>
-									<span class="clear"><!-- --></span>
-								</div>
+							<div class="mask-edge mask-right">
 							</div>
 						</div>
 					</div>
 				</div>
+				<span class="clear">
+				<!-- -->
+				</span>
+				<div id="station-content">
+					<div class="station-content-wrapper">
+						<div class="station-inner-wrapper">
+							<div class="full-column" id="forum-list">
+								<div class="forum-list-interior">
+											<?php
+											$get_categs = mysql_query("SELECT * FROM forum_categ ORDER BY num ASC");
+											while($categ = mysql_fetch_array($get_categs)){
+												echo'
+									<div class="forum-group">
+										<h2 class="header-2">
+												<a id="forum'.$categ['id'].'" href="javascript:;" onclick="Cms.Station.parentToggle('.$categ['id'].',this)" class="group-header">'.$categ['name'].' </a>
+										</h2>
+										<ul class="child-forums" id="child'.$categ['id'].'">';
+													$get_forums = mysql_query("SELECT * FROM forum_forums WHERE categ = '".$categ['id']."' ORDER BY num ASC");
+													while($forum = mysql_fetch_array($get_forums)){
+														echo '
+											<li class="child-forum">														
+													<a href="category/?f='.$forum['id'].'" class="forum-link">
+														<span class="forum-icon">
+																<img src="../images/forum/forumicons/'.$forum['image'].'.gif" />
+														</span>
+											<span class="forum-details">
+											<span class="forum-title">
+											'.$forum['name'].' <span class="forum-status">
+											<strong>'.$forum['status'].'</strong>
+											</span>
+											</span>
+											<span class="forum-desc">'.$forum['description'].' </span>
+											</span>
+											</a>
+											</li>';
+											}
+											echo'
+											<span class="clear">
+											<!-- -->
+											</span>
+										</ul>
+									</div>';
+									}
+									?>
+								</div>
+								<a class="code-of-conduct" href="#" target="_blank">Forums Code of Conduct</a>
+							</div>
+							<span class="clear">
+							<!-- -->
+							</span>
+						</div>
+					</div>
+				</div>
+				<script type="text/javascript">
+		$(function(){
+			Station.initialize();
+		})
+	</script>
 			</div>
 		</div>
+	</div>
 	</div>
 <script type="text/javascript" src="../wow/static/local-common/js/search.js?v46"></script>
 <script type="text/javascript">
@@ -231,13 +220,13 @@ var jsonSearchHandlerUrl = '//eu.battle.net';
 var Msg = {
 support: {
 ticketNew: 'Ticket {0} was created.',
-ticketStatus: 'Ticket {0}â€™s status changed toÂ {0}.',
+ticketStatus: 'Ticket {0}’s status changed to {0}.',
 ticketOpen: 'Open',
 ticketAnswered: 'Answered',
 ticketResolved: 'Resolved',
 ticketCanceled: 'Cancelled',
 ticketArchived: 'Archived',
-ticketInfo: 'NeedÂ Info',
+ticketInfo: 'Need Info',
 ticketAll: 'View All Tickets'
 },
 cms: {
@@ -279,10 +268,10 @@ submit: 'Submit',
 cancel: 'Cancel',
 reset: 'Reset',
 viewInGallery: 'View in gallery',
-loading: 'Loadingâ€¦',
+loading: 'Loading…',
 unexpectedError: 'An error has occurred',
-fansiteFind: 'Find this onâ€¦',
-fansiteFindType: 'Find {0} onâ€¦',
+fansiteFind: 'Find this on…',
+fansiteFindType: 'Find {0} on…',
 fansiteNone: 'No fansites available.',
 flashErrorHeader: 'Adobe Flash Player must be installed to see this content.',
 flashErrorText: 'Download Adobe Flash Player',

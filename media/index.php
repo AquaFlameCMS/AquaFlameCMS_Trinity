@@ -69,7 +69,7 @@
 			<meta content="false" http-equiv="imagetoolbar" />
 			<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
 			<link rel="shortcut icon" href="../wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
-<?php GetMediaTheme(); ?>
+			<?php GetMediaTheme(); ?>
 			<script src="../wow/static/local-common/js/third-party/jquery-1.4.4-p1.min.js"></script>
 			<script src="../wow/static/local-common/js/core.js?v17"></script>
 			<script src="../wow/static/local-common/js/tooltip.js?v17"></script>
@@ -103,16 +103,19 @@
 		<body class="en-gb game-index">
 			<div id="wrapper">
 				<?php include("../header.php"); ?>
-					<div id="content">
-						<div class="content-top">
-							<div class="content-trail">
-								<ol class="ui-breadcrumb">
-									<li>
-										<a href="<?php echo $website['address']; ?>" rel="np"><?php echo $website['title']; ?></a>
-										<span class="breadcrumb-arrow"></span>
+				<div id="content">
+					<div class="content-top body-top">
+						<div class="content-trail">
+							<ol class="ui-breadcrumb">
+								<li itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+								<a href="<?php echo $website['address']; ?>" class="breadcrumb-arrow" itemprop="url">
+									<span class="breadcrumb-text" itemprop="name"><?php echo $website['title']; ?></span>
+									</a>
 									</li>
-									<li class="last children">
-										<?php echo $Media['Media']; ?>
+									<li class="last" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+									<a href="<?php echo $website['root']; ?>media/" rel="np" itemprop="url">
+										<span class="breadcrumb-text" itemprop="name"><?php echo $Media['Media']; ?></span>
+									</a>
 									</li>
 								</ol>
 							</div>

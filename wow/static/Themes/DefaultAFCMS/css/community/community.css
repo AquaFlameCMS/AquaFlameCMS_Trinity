@@ -1,5 +1,5 @@
 
-#content .content-bot { background: url("../../images/homepage/shadow.png") repeat-y 0 0 transparent; }
+.community-home #content .content-bot { background: url("../../images/homepage/shadow.png") repeat-y 0 0 transparent; }
 
 #left { width: 646px; float: left; }
 #right { width: 307px; float: right; padding-right: 18px;}

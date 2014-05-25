@@ -355,29 +355,30 @@ INSERT INTO `forum_categ` (`id`, `num`, `name`) VALUES
 -- Volcando estructura para tabla website.forum_forums
 DROP TABLE IF EXISTS `forum_forums`;
 CREATE TABLE IF NOT EXISTS `forum_forums` (
-  `id` INT(10) NOT NULL AUTO_INCREMENT,
-  `num` INT(10) NOT NULL,
-  `categ` INT(10) NOT NULL,
-  `name` VARCHAR(255) NOT NULL,
-  `image` VARCHAR(255) DEFAULT NULL,
-  `description` TEXT,
-  `locked` SMALLINT(1) DEFAULT '0',
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `num` int(10) NOT NULL,
+  `categ` int(10) NOT NULL,
+  `status` varchar(255) CHARACTER SET utf8 NOT NULL,
+  `name` varchar(255) CHARACTER SET utf8 NOT NULL,
+  `image` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
+  `description` text CHARACTER SET utf8 NOT NULL,
+  `locked` smallint(1) DEFAULT '0',
   PRIMARY KEY (`id`)
 ) ENGINE=MYISAM AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
 
 -- Volcando datos para la tabla website.forum_forums: 9 rows
 DELETE FROM `forum_forums`;
 /*!40000 ALTER TABLE `forum_forums` DISABLE KEYS */;
-INSERT INTO `forum_forums` (`id`, `num`, `categ`, `name`, `image`, `description`, `locked`) VALUES
-	(1, 1, 1, 'Announcement', 'blizzard', 'Important messages, announcements, informations regarding our server will be posted here.', 1),
-	(2, 2, 1, 'General Talk', 'general', 'You can talk for anything that you want. Similar to Free Chat but cooler.', 0),
-	(3, 3, 1, 'Bugs', 'bugs', 'Here you can post for world problems that you encounter, except Quests.', 0),
-	(4, 4, 1, 'Suggestions', 'suggestions', 'Post here your ideas regarding WoWFailureCMS.', 0),
-	(5, 5, 2, 'Free Topic', 'support', 'Here you can post for any problems that you encounter in our server. We would be much obliged to know our errors.', 0),
-	(6, 6, 2, 'Quest Related', 'cs', 'Here you can post for problems that you encounter with our Quests or any other problem related to them.', 0),
-	(7, 7, 3, 'Free Chat', 'blood', 'Post whatever you like. Forum is open free to even offtopic.', 0),
-	(8, 8, 4, 'French', 'france', 'This part of the forum is for French only.', 0),
-	(9, 9, 4, 'German', 'germany', 'This part of the forum is for German only.', 0);
+INSERT INTO `forum_forums` (`id`, `num`, `categ`, `status`, `name`, `image`, `description`, `locked`) VALUES
+	(1, 1, 1, '[Limited]', 'Announcement', 'blizzard', 'Important messages, announcements, informations regarding our server will be posted here.', 1),
+	(2, 2, 1, '[Read-Only]', 'General Talk', 'general', 'You can talk for anything that you want. Similar to Free Chat but cooler.', 0),
+	(3, 3, 1, '[Limited]', 'Bugs', 'bugs', 'Here you can post for world problems that you encounter, except Quests.', 0),
+	(4, 4, 1, '[Read-Only]', 'Suggestions', 'suggestions', 'Post here your ideas regarding WoWFailureCMS.', 0),
+	(5, 5, 2, '', 'Free Topic', 'support', 'Here you can post for any problems that you encounter in our server. We would be much obliged to know our errors.', 0),
+	(6, 6, 2, '', 'Quest Related', 'cs', 'Here you can post for problems that you encounter with our Quests or any other problem related to them.', 0),
+	(7, 7, 3, '', 'Free Chat', 'blood', 'Post whatever you like. Forum is open free to even offtopic.', 0),
+	(8, 8, 4, '', 'French', 'france', 'This part of the forum is for French only.', 0),
+	(9, 9, 4, '', 'German', 'germany', 'This part of the forum is for German only.', 0);
 /*!40000 ALTER TABLE `forum_forums` ENABLE KEYS */;
 
 

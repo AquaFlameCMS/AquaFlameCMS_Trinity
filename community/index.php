@@ -1,4 +1,5 @@
 <?php
+$page_cat = "community";
 require_once("../configs.php");
 $page_cat = "community";
 ?>
@@ -10,7 +11,7 @@ $page_cat = "community";
 <!--[if gt IE 8]><!--><html class="no-js"><!--<![endif]-->
 <html>
 <head>
-<title><?php echo $website['title']; ?> - <?php $Community['Community']; ?></title>
+<title><?php echo $website['title']; ?> - <?php echo $Community['Community'];?></title>
 <meta name="description" content="<?php echo $website['description']; ?>">
 <meta name="keywords" content="<?php echo $website['keywords']; ?>">
 <link rel="shortcut icon" href="../wow/static/local-common/images/favicons/wow.png" type="image/x-icon"/>
@@ -24,28 +25,36 @@ try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
 //]]>
 </script>
 <![endif]-->
+</head>
+<body class="es-mx community-home logged-in">
 <div id="wrapper">
 <?php
-$page_cat = "community";
 include("../header.php");
 ?>
 	<div id="content">
-		<div class="content-top">
+		<div class="content-top body-top">
 			<div class="content-trail">
 				<ol class="ui-breadcrumb">
-					<li><a href="index.php" rel="np"><?php echo $website['title']; ?>
-					</a><span class="breadcrumb-arrow"></span></li>
-					<li class="last"><a href="community" rel="np"><?php echo $Community['Community'];?></a></li>
+					<li itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+					<a href="/wow/es/" rel="np" class="breadcrumb-arrow" itemprop="url">
+					<span class="breadcrumb-text" itemprop="name"><?php echo $website['title']; ?></span>
+					</a>
+					</li>
+					<li class="last" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+					<a href="/wow/es/community/" rel="np" itemprop="url">
+					<span class="breadcrumb-text" itemprop="name"><?php echo $Community['Community'];?></span>
+					</a>
+					</li>
 				</ol>
 			</div>
-			<div class="content-bot">
+			<div class="content-bot clear">
 				<script type="text/javascript">
-					//<![CDATA[
-					$(document).ready(function(){
-						Input.bind('#wowcharacter');
-						Input.bind('#wowguild');
-					});
-					//]]>
+				//<![CDATA[
+				$(document).ready(function(){
+					Input.bind('#wowcharacter');
+					Input.bind('#wowguild');
+				});
+				//]]>
 				</script>
 				<div id="left">
 					<div class="profiles">
@@ -53,19 +62,23 @@ include("../header.php");
 						<div class="profiles-section">
 							<div class="sidebar-module " id="sidebar-profiles-search">
 								<div class="sidebar-title">
-									<h3 class="category title-profiles-search"><?php echo $Community['profiles'];?></h3>
+									<h3 class="header-3 title-profiles-search"><?php echo $Community['profiles'];?></h3>
 								</div>
 								<div class="sidebar-content">
 									<div class="profiles-search-block">
 										<span class="profiles-search-title"><?php echo $Community['character'];?></span>
-										<form action="<?php echo $website['root']; ?>search.php" method="get" autocomplete="off"> <input type="hidden" name="f" value="wowcharacter"/>
-											<input id="wowcharacter" alt="Name" href="<?php echo $website['root']; ?>search.php" type="text" name="search" maxlength="200" tabindex="40" /> <button class="ui-button button1 " href="<?php echo $website['root']; ?>search.php" type="submit" value="" tabindex="41"><span><span><?php echo $Community['search'];?></span></span></button>
+										<form action="<?php echo $website['root']; ?>search.php" method="get" autocomplete="off">
+											<input type="hidden" name="f" value="wowcharacter"/>
+											<input type="text" id="wowcharacter" alt="Name" name="q"/>
+											<button class="ui-button button1" type="submit"><span class="button-left"><span class="button-right"><?php echo $Community['search'];?></span></span></button>
 										</form>
 									</div>
 									<div class="profiles-search-block">
 										<span class="profiles-search-title"><?php echo $Community['guild'];?></span>
-										<form action="<?php echo $website['root']; ?>search.php" method="get" autocomplete="off"> <input type="hidden" name="f" value="wowcharacter"/>
-											<input id="wowcharacter" alt="Name" href="<?php echo $website['root']; ?>search.php" type="text" name="search" maxlength="200" tabindex="40" /> <button class="ui-button button1 " href="<?php echo $website['root']; ?>search.php" type="submit" value="" tabindex="41"><span><span><?php echo $Community['search'];?></span></span></button>
+										<form action="<?php echo $website['root']; ?>search.php" method="get" autocomplete="off">
+											<input type="hidden" name="f" value="wowguild"/>
+											<input type="text" id="wowguild" alt="Name" name="q"/>
+											<button class="ui-button button1" type="submit"><span class="button-left"><span class="button-right"><?php echo $Community['search'];?></span></span></button>
 										</form>
 									</div>
 								</div>
@@ -80,10 +93,9 @@ include("../header.php");
 					</div>
 					<div class="main-feature">
 						<div class="main-feature-wrapper">
-							<!-- LEADERBOARDS -->
 							<div class="sidebar-module " id="sidebar-leaderboards">
 								<div class="sidebar-title">
-									<h3 class="category title-leaderboards">Leaderboards</h3>
+									<h3 class="header-3 title-leaderboards">Leaderboards</h3>
 								</div>
 								<div class="sidebar-content">
 									<div id="challenge-mode" class="leaderboard-content-block">
@@ -283,6 +295,115 @@ include("../header.php");
 			</div>
 		</div>
 	</div>
-	<?php include("../footer.php"); ?>
+<script type="text/javascript" src="../wow/static/local-common/js/search.js?v46"></script>
+<script type="text/javascript">
+//<![CDATA[
+var xsToken = '';
+var supportToken = '';
+var jsonSearchHandlerUrl = '//eu.battle.net';
+var Msg = {
+support: {
+ticketNew: 'Ticket {0} was created.',
+ticketStatus: 'Ticket {0}’s status changed to {0}.',
+ticketOpen: 'Open',
+ticketAnswered: 'Answered',
+ticketResolved: 'Resolved',
+ticketCanceled: 'Cancelled',
+ticketArchived: 'Archived',
+ticketInfo: 'Need Info',
+ticketAll: 'View All Tickets'
+},
+cms: {
+requestError: 'Your request cannot be completed.',
+ignoreNot: 'Not ignoring this user',
+ignoreAlready: 'Already ignoring this user',
+stickyRequested: 'Sticky requested',
+stickyHasBeenRequested: 'You have already sent a sticky request for this topic.',
+postAdded: 'Post added to tracker',
+postRemoved: 'Post removed from tracker',
+userAdded: 'User added to tracker',
+userRemoved: 'User removed from tracker',
+validationError: 'A required field is incomplete',
+characterExceed: 'The post body exceeds XXXXXX characters.',
+searchFor: "Search for",
+searchTags: "Articles tagged:",
+characterAjaxError: "You may have become logged out. Please refresh the page and try again.",
+ilvl: "Level {0}",
+shortQuery: "Search requests must be at least three characters long."
+},
+bml: {
+bold: 'Bold',
+italics: 'Italics',
+underline: 'Underline',
+list: 'Unordered List',
+listItem: 'List Item',
+quote: 'Quote',
+quoteBy: 'Posted by {0}',
+unformat: 'Remove Formating',
+cleanup: 'Fix Linebreaks',
+code: 'Code Blocks',
+item: 'WoW Item',
+itemPrompt: 'Item ID:',
+url: 'URL',
+urlPrompt: 'URL Address:'
+},
+ui: {
+submit: 'Submit',
+cancel: 'Cancel',
+reset: 'Reset',
+viewInGallery: 'View in gallery',
+loading: 'Loading…',
+unexpectedError: 'An error has occurred',
+fansiteFind: 'Find this on…',
+fansiteFindType: 'Find {0} on…',
+fansiteNone: 'No fansites available.',
+flashErrorHeader: 'Adobe Flash Player must be installed to see this content.',
+flashErrorText: 'Download Adobe Flash Player',
+flashErrorUrl: 'http://get.adobe.com/flashplayer/'
+},
+grammar: {
+colon: '{0}:',
+first: 'First',
+last: 'Last'
+},
+fansite: {
+achievement: 'achievement',
+character: 'character',
+faction: 'faction',
+'class': 'class',
+object: 'object',
+talentcalc: 'talents',
+skill: 'profession',
+quest: 'quest',
+spell: 'spell',
+event: 'event',
+title: 'title',
+arena: 'arena team',
+guild: 'guild',
+zone: 'zone',
+item: 'item',
+race: 'race',
+npc: 'NPC',
+pet: 'pet'
+},
+search: {
+noResults: 'There are no results to display.',
+kb: 'Support',
+post: 'Forums',
+article: 'Blog Articles',
+static: 'General Content',
+wowcharacter: 'Characters',
+wowitem: 'Items',
+wowguild: 'Guilds',
+wowarenateam: 'Arena Teams',
+url: 'Suggested Links',
+friend: 'Friends',
+other: 'Other'
+}
+};
+//]]>
+</script>
+<?php include("../footer.php"); ?>
+</div>
 </body>
 </html>

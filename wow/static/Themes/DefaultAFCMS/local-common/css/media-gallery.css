@@ -10,11 +10,11 @@
 #toggle-thumbnail-page.active:hover { background-position:-113px -354px }
 
 /* filtering */
-.media-content .currently-viewing { min-height: 42px; line-height: 27px; width:942px; margin:0 auto }
+.media-content .currently-viewing { min-height: 42px; line-height: 27px; width:942px; margin:0 auto; position:relative; z-index:2 }
 .ie6 .media-content .currently-viewing { height:42px }
 .media-content .currently-viewing .float-left { padding-right:5px }
 .media-content .currently-viewing .filter-note { font-style:italic }
-.media-content .currently-viewing .clear-filters { background-repeat:no-repeat; background-position:-375px -354px; padding-left:5px; display:block; height:18px; float:left; font-size:11px; margin:5px 0 0 15px }
+.media-content .currently-viewing .clear-filters { background-repeat:no-repeat; background-position:-375px -354px; padding-left:5px; display:inline-block; height:18px; font-size:11px; margin:5px 0 0 15px }
 .media-content .currently-viewing .clear-filters span { background-repeat:no-repeat; background-position:100% -372px; display:block; height:18px; float:left; line-height:17px; padding:0 18px 0 1px }
 .media-content .currently-viewing .clear-filters:hover { background-position: -375px -390px }
 .media-content .currently-viewing .clear-filters:hover span { background-position:100% -408px }
@@ -22,6 +22,8 @@
 .media-content .filter-dropdown .dropdown-toggler { float:right }
 .media-content .filter-dropdown .dropdown-toggler span { float:left; min-width:128px }
 .ie6 .media-content .filter-dropdown .dropdown-toggler span { width:128px }
+.media-content .filter-dropdown .dropdown-wrapper { display:none }
+.media-content .filter-dropdown .scrollable-init { display:block; visibility:hidden; }
 .media-content .filter-dropdown .keyword-filter { display:block; margin-bottom:2px; padding:2px 0 0 10px; height:20px; line-height:15px }
 .media-content .filter-dropdown .keyword-filter .checkbox { display:block; height:17px; width:17px; background-repeat: no-repeat; background-position:-146px -300px; float:left; margin-right:4px }
 .media-content .filter-dropdown .keyword-filter:hover .checkbox { background-position:-146px -317px }
@@ -32,12 +34,11 @@
 .media-content .filter-dropdown .apply-filters { margin-top: 4px; padding: 9px 5px 8px }
 .media-content .filter-dropdown .apply-filters .button2 { float:left; margin-left:2px }
 .media-content .filter-dropdown .apply-filters .button2 span { text-transform:none }
-.media-content .filter-dropdown .apply-filters .button3 { display:block; float:left; padding: 0 0 0 1px }
 
 /* film-strip container */
 .media-content .film-strip-wrapper { width:942px; height:655px; background:no-repeat; margin:8px auto 0 }
-.media-content .film-strip-wrapper2 { width:942px; height:655px; background:no-repeat; margin:8px auto 0 }
 .media-content .film-strip-wrapper .ajax-frame { width:738px; height:655px; position:relative }
+.media-content .film-strip-wrapper .thumbnail-loader { background-position:50px 28px }
 .ie6 .media-content .film-strip-wrapper .ajax-frame { width:735px }
 .media-content .film-strip-wrapper .ajax-frame .paging-arrow { background-repeat:no-repeat; display:none; height:85px; width:56px; position:absolute; top:288px }
 .ie6 .media-content .film-strip-wrapper .ajax-frame .paging-arrow { display:block }
@@ -47,7 +48,7 @@
 .media-content .film-strip-wrapper .ajax-frame .paging-arrow.previous { left:-9px; background-position:-94px -436px }
 .media-content .film-strip-wrapper .ajax-frame .paging-arrow.previous:hover { background-position:-251px -436px }
 .media-content .film-strip-wrapper .ajax-frame:hover .paging-arrow { display:block }
-.media-content .film-strip-thumb-wrapper { display:block; height:75px; width:120px; margin-bottom:15px; background-repeat:no-repeat; -moz-box-shadow: #000 0 0 10px; -webkit-box-shadow: #000 0 0 10px; box-shadow: #000 0 0 10px }
+.media-content .film-strip-thumb-wrapper { display:block; height:75px; width:120px; margin-bottom:15px; background-repeat:no-repeat; box-shadow: #000 0 0 10px }
 .media-content .film-strip-thumb-frame { display:block; height:75px; width:120px; background-repeat:no-repeat; background-position:-80px 0 }
 .media-content .film-strip-thumb-wrapper:hover .film-strip-thumb-frame { background-position:-80px -75px }
 .media-content .video-thumbnails .film-strip-thumb-wrapper:hover .film-strip-thumb-frame { background-position:-80px -150px }
@@ -87,8 +88,9 @@
 
 /* generic thumb frame */
 .media-content .thumb-wrapper { display:block; width:188px; float:left }
-.media-content .thumb-wrapper .thumb-frame { display:block; width:188px; height:118px; background-repeat:no-repeat; background-position:-200px 0; -moz-box-shadow:0 0 10px #000; -webkit-box-shadow:#000 0 0 10px; box-shadow:#000 0 0 10px }
+.media-content .thumb-wrapper .thumb-frame { display:block; width:188px; height:118px; background-repeat:no-repeat; background-position:-200px 0; box-shadow:#000 0 0 10px }
 .media-content .thumb-wrapper .thumb-bg { display:block; width:188px; height:118px; background-repeat:no-repeat }
+
 .media-content .thumb-wrapper:hover .thumb-frame { background-position:-200px -118px }
 
 /* thumbnail page */
@@ -103,6 +105,7 @@
 .thumbnail-page-wrapper .thumb-wrapper .thumb-title { display:block; text-align:center; padding-top:8px }
 .thumbnail-page-wrapper .video-page .thumb-wrapper:hover .thumb-frame { background-position:-200px -236px }
 .thumbnail-page-wrapper .pagination-wrapper { height:22px; width:800px; float:right }
+.thumbnail-page-wrapper .thumbnail-loader { background-position: 82px 47px }
 
 /* landing page */
 #media-index .media-index-section { width:395px; margin:-7px 0 38px 59px }
@@ -126,7 +129,7 @@
 
 /* sub gallery list */
 .media-content  .sub-gallery-list { width:907px; margin:0 auto }
-.media-content  .sub-gallery-list .thumb-frame { -moz-box-shadow:0 0 10px #000; -webkit-box-shadow: #000 0 0 10px; box-shadow: #000 0 0 10px }
+.media-content  .sub-gallery-list .thumb-frame { box-shadow: #000 0 0 10px }
 .media-content  .sub-gallery-list .thumb-wrapper { padding:10px; margin-bottom:20px; margin-right:25px }
 .media-content  .sub-gallery-list .left-col { margin-right:16px }
 .media-content  .sub-gallery-list .thumb-title { padding-top:10px; text-align:center; display:block; width:188px }
