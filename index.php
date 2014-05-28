@@ -217,10 +217,10 @@ $page_cat = "home";
 			{
 			$content = substr(strip_tags($news['content']),0,310);
 			}
-			if($news['contentlnk'] != NULL)
+			if($news['id'] != NULL)
 			echo '
 			<div class="article-wrapper">
-			<a href="news.php?id='.$news['contentlnk'].'" itemprop="url">';
+			<a href="news.php?id='.$news['id'].'" itemprop="url">';
 			echo '
 						<div class="article-image" style="background-image:url(\'wow/static/images/news/'.$news['image'].'.jpg\')">
 							<div class="article-image-frame"></div>
