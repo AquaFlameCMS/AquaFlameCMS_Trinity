@@ -170,6 +170,22 @@ $code = "f7c3bc1d808e04732adf679965ccc34ca7ae3441";
 
 /*
 |--------------------------------------------------------------------------
+| Paygol SMS Donation
+|--------------------------------------------------------------------------
+| Paygol service id 
+| For Example 
+| $service_id = "99694";
+| Paygol service name
+| For Example $service_name = "AquaflameCMS"
+| Paygol service currency
+| For Example $service_currency	= "USD"
+|*/
+$service_id			= "12345";
+$service_name		= "AquaflameCMS";
+$service_currency	= "USD";
+
+/*
+|--------------------------------------------------------------------------
 | Realmlist & Realm Name
 |--------------------------------------------------------------------------
 |

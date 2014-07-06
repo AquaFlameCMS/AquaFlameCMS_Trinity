@@ -857,7 +857,6 @@ CREATE TABLE IF NOT EXISTS `users` (
   `lastName` VARCHAR(255) CHARACTER SET utf8 NOT NULL,
   `character` INT(10) NOT NULL DEFAULT '0',
   `vote_points` INT(10) NOT NULL DEFAULT '0',
-  `donation_points` INT(10) NOT NULL DEFAULT '0',
   `char_realm` INT(10) NOT NULL DEFAULT '1',
   `registerIp` VARCHAR(30) CHARACTER SET utf8 NOT NULL DEFAULT '127.0.0.1',
   `country` VARCHAR(20) CHARACTER SET utf8 DEFAULT NULL,
@@ -875,13 +874,13 @@ CREATE TABLE IF NOT EXISTS `version` (
   `Revision` CHAR(50) DEFAULT NULL,
   `DB_Version` VARCHAR(50) DEFAULT NULL,
   `Updates` VARCHAR(50) DEFAULT NULL
-) ENGINE=MYISAM DEFAULT CHARSET=latin1 COMMENT='This here shows you what Version of WoWFailureCMS you have.';
+) ENGINE=MYISAM DEFAULT CHARSET=latin1 COMMENT='This here shows you what Version of AquaFlameCMS you have.';
 
 -- Volcando datos para la tabla website.version: 1 rows
 DELETE FROM `version`;
 /*!40000 ALTER TABLE `version` DISABLE KEYS */;
 INSERT INTO `version` (`Name`, `Number`, `Revision`, `DB_Version`, `Updates`) VALUES
-	('AquaFlameCMS BETA', 'v1.5', '7a0c13fc18cffa06e569685b5a9275910c3c93ce', 'v8', '152');
+	('AquaFlameCMS', 'v1.5', '7a0c13fc18cffa06e569685b5a9275910c3c93ce', 'v8', '152');
 /*!40000 ALTER TABLE `version` ENABLE KEYS */;
 
 
