@@ -232,7 +232,19 @@ $expansion_info = mysql_query("SELECT id,username,expansion  FROM `".$server_adb
 <dt class="subcategory"><?php echo $Man['Man20']; ?></dt>
 <dd class="region eu"><?php echo $Man['Man21']; ?></dd>
 <dt class="subcategory"><?php echo $website['title']; ?><?php echo $Man['Man22']; ?></dt>
-<dd><strong class="unsubscribed"><?php echo $Man['Man23']; ?></strong></dd>
+<dd>
+<?php
+ $account_info = mysql_query("SELECT credits  FROM `".$server_adb."`.`account` WHERE username='".$_SESSION['username']."'")or die(mysql_error());
+ while($get = mysql_fetch_array($account_info))
+ {
+  //Donator?
+  if($get['credits'] == 0)
+      echo '<strong class="unsubscribed">'.$Man['Man23'].'</strong>';
+      else 
+      echo '<font color="green"><strong class="subscribed">Donador</strong></font>';
+   }
+?>
+</dd>
 </dl>
 </div>
 <div class="section available-actions">
