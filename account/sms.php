@@ -73,93 +73,83 @@ _gaq.push(['_trackPageLoadTime']);
 </div>
 <div id="layout-middle">
     <div class="wrapper">
-    <div id="content">
-     <!--[if lte IE 7]>  <style type="text/css">
-    .raf-step3-arrow { position:relative; width:176px; height:61px; background:url('wow/static/images/services/wow/raf/step_3_arrow_b.png') 0 0 no-repeat!important; top:-540px; left:105px; }
-    .raf-step5-arrow { position:relative; width:155px; height:57px; background:url('wow/static/images/services/wow/raf/step_5_arrow_b.png') 0 0 no-repeat!important; top:-163px; left:150px; }
-     </style>  <![endif]-->
-	<div class="dashboard service">
-	<div class="header">
-		<h2 class="subcategory"><?php echo $sms['2']; ?></h2>
-		<h3 class="headline"><?php echo $sms['3']; ?></h3>
-            <a href=""><img src="../wow/static/local-common/images/game-icons/wow.png" alt="World of Warcraft" width="48" height="48" /></a>
-    </div>
-    </div>
-</div>
-<div id="page-content" class="page-content">
-<p><?php echo $sms['4']; ?></p>
-<!-- Change here if you change iFrame supporter -->
-<!-- Change here if you change iFrame supporter -->
-<fieldset class="ui-controls section-buttons" >
-<!-- Change here if you change iFrame supporter -->
-<!-- Change here if you change iFrame supporter -->
-<a class="ui-button button1" href="http://www.recursosmoviles.com/terms-and-conditions.html"><span>
-<!-- Change here if you change iFrame supporter -->
-<!-- Change here if you change iFrame supporter -->
-<span><?php echo $sms['5']; ?></span>
-</span>
-</a>
-</fieldset>
-<!-- This is a testing SMS Donation Iframe, change it when you need. Better to use one from http://www.recursosmoviles.com/ -->
-<!-- This is a testing SMS Donation Iframe, change it when you need. Better to use one from http://www.recursosmoviles.com/ -->
-<!-- For sites with standard transfer protocol (HTTP) -->
-<!-- ¡IMPORTANT! They have to create their own services -->
-<div align="center">
-    <frame>
-	    <script src="http://iframes.recursosmoviles.com/v2/?wmid=8291&cid=26454" type="text/javascript"></script>
-	</frame>
-</div>
-<!-- For sites with standard transfer protocol (HTTP) -->
-<!-- They have to create their own services -->
-<!-- This is a testing SMS Donation Iframe, change it when you need. Better to use one from http://www.recursosmoviles.com/ -->
-<!-- <!-- For sites with standard transfer protocol (HTTPS) -->
-<!--<div align="center">
-    <frame>
-	    <script src="https://iframes.recursosmoviles.com/v2/?wmid=8291&cid=26454" type="text/javascript"></script>
-	</frame>
-</div>-->
-<!-- For sites with standard transfer protocol (HTTPS) -->
-<!-- This is a testing SMS Donation Iframe, change it when you need. Better to use one from http://www.recursosmoviles.com/ -->
-<br>
-</br>
-<br>
-</br>
-<div class="address-book" id="address-book">
-<script type="text/javascript">
-//<![CDATA[
-$(function() {
-$(".address-dialog").dialog("destroy");
-$('.address-dialog').dialog({
-autoOpen: false,
-modal: true,
-position: "center",
-resizeable: false,
-closeText: "Close",
-buttons: {
-'Yes': function() {
-var id = $(this).find('input[name="addressId"]').val();
-AddressBook.deleteAddress(id);
-$(this).dialog("close");
-},
-'Cancel': function() {
-$(this).dialog("close");
-}
-},
-open: function() {
-$(".ui-dialog-buttonpane").find("button").addClass("button1").find(":first").addClass("first");
-}
-});
-});
-//]]>
-</script>
-<span class="clear"></span>
-</div>
-</div>
+		<div id="content">
+			 <!--[if lte IE 7]>  <style type="text/css">
+			.raf-step3-arrow { position:relative; width:176px; height:61px; background:url('wow/static/images/services/wow/raf/step_3_arrow_b.png') 0 0 no-repeat!important; top:-540px; left:105px; }
+			.raf-step5-arrow { position:relative; width:155px; height:57px; background:url('wow/static/images/services/wow/raf/step_5_arrow_b.png') 0 0 no-repeat!important; top:-163px; left:150px; }
+			 </style>  <![endif]-->
+			<div class="dashboard service">
+				<div class="header">
+					<h2 class="subcategory"><?php echo $sms['2']; ?></h2>
+					<h3 class="headline"><?php echo $sms['3']; ?></h3>
+					<a href=""><img src="../wow/static/local-common/images/game-icons/wow.png" alt="World of Warcraft" width="48" height="48" /></a>
+				</div>
+			</div>
+		</div>
+	<div id="page-content" class="page-content">
+		<p><?php echo $sms['4']; ?></p>
+		<!-- PayGol JavaScript -->
+		<script src="https://www.paygol.com/micropayment/js/paygol.js" type="text/javascript"></script> 
+
+		<!-- PayGol Form -->
+		<form name="pg_frm">
+		 Account Name
+		 <p><input type="text" name="pg_custom" value="<?php echo strtolower($_SESSION['username']); ?>" disabled><p>
+		 <input type="hidden" name="pg_serviceid" value="<?php echo $service_id ?>">
+		 <input type="hidden" name="pg_currency" value="<?php echo $service_currency ?>">
+		 <input type="hidden" name="pg_name" value="<?php echo $service_name ?>">
+
+		 <!-- With Option buttons -->
+		 <input type="radio" name="pg_price" value="1"checked>Donate for 3 Credits<p>
+		 <input type="radio" name="pg_price" value="2">Donate for 5 Credits<p>
+		 <input type="radio" name="pg_price" value="3">Donate for 10 Credits<p>
+		 <input type="radio" name="pg_price" value="4">Donate for 15 Credits<p>
+		 <input type="radio" name="pg_price" value="5">Donate for 20 Credits<p>
+		 <input type="hidden" name="pg_return_url" value="<?php echo $website['address']; ?>/sms/successfully/">
+		 <input type="hidden" name="pg_cancel_url" value="<?php echo $website['address']; ?>/sms/fail/">
+		 <input type="image" name="pg_button" class="paygol" src="https://www.paygol.com/micropayment/buttons/es/black.png" border="0" alt="Realiza pagos con PayGol: la forma mas facil!" title="Realiza pagos con PayGol: la forma mas facil!" onClick="pg_reDirect(this.form)">
+		</form>
+		<br>
+		</br>
+		<br>
+		</br>
+		<div class="address-book" id="address-book">
+		<script type="text/javascript">
+		//<![CDATA[
+		$(function() {
+		$(".address-dialog").dialog("destroy");
+		$('.address-dialog').dialog({
+		autoOpen: false,
+		modal: true,
+		position: "center",
+		resizeable: false,
+		closeText: "Close",
+		buttons: {
+		'Yes': function() {
+		var id = $(this).find('input[name="addressId"]').val();
+		AddressBook.deleteAddress(id);
+		$(this).dialog("close");
+		},
+		'Cancel': function() {
+		$(this).dialog("close");
+		}
+		},
+		open: function() {
+		$(".ui-dialog-buttonpane").find("button").addClass("button1").find(":first").addClass("first");
+		}
+		});
+		});
+		//]]>
+		</script>
+		<span class="clear"></span>
+		</div>
+	</div>
 </div>
 </div>
 </div>
 <div id="layout-bottom">
 <?php include("../functions/footer_man.php"); ?>
+</div>
 </div>
 <script type="text/javascript">
 //<![CDATA[
@@ -252,7 +242,7 @@ pet: 'pet'
 $(function() {
 Menu.initialize();
 Menu.config.colWidth = 190;
-Locale.dataPath = 'data/i18n.frag.xml';
+Locale.dataPath = '../data/i18n.frag.xml';
 });
 </script>
 <!--[if lt IE 8]>
