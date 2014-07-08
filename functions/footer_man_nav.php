@@ -23,7 +23,7 @@ if($login['gmlevel'] < 3){
 else 
 {
 echo '<li class="service-cell service-account">
-<a href="'.$website['root'].'admin" class="service-link" tabindex="50" accesskey="3">ACP (Admin)</a></li>';
+<a href="'.$website['root'].$website['admin:path'].'" class="service-link" tabindex="50" accesskey="3">ACP (Admin)</a></li>';
 }
 }
 ?>

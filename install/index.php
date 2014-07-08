@@ -239,6 +239,7 @@ $website[\'description\'] = "AquaFlameCMS 1.0 the best of the best!";
 $website[\'keywords\']    = "AquaFlameCMS 1.0, The Best CMS";
 $website[\'address\']     = "http://localhost/";
 $website[\'root\']        = "/";
+$website[\'admin:path\']  = "admin/";
 
 /*
 |--------------------------------------------------------------------------
@@ -296,7 +297,7 @@ if ($maintenance == true) {
     if (isset($_SESSION[\'username\'])) {
         $username            = mysql_real_escape_string($_SESSION[\'username\']);
         $account_information = mysql_fetch_assoc(mysql_query("SELECT * FROM $server_adb.account WHERE username = \'" . $username . "\'"));
-        $account_extra       = mysql_fetch_assoc(mysql_query("SELECT * FROM $server_db.users WHERE id = \'" . $account_information[\'id\'] . "\'"));
+        @$account_extra       = mysql_fetch_assoc(mysql_query("SELECT * FROM $server_db.users WHERE id = \'" . $account_information[\'id\'] . "\'"));
         mysql_select_db($server_db, $connection_setup) or die(mysql_error());
     }
 }

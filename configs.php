@@ -196,6 +196,7 @@ $website['description'] = "AquaFlameCMS 1.0 the best of the best!";
 $website['keywords']    = "AquaFlameCMS 1.0, The Best CMS";
 $website['address']     = "http://localhost/";
 $website['root']        = "/AquaFlameCMS_Trinity/";
+$website['admin:path']	= "admin/"
 
 /*
 |--------------------------------------------------------------------------
