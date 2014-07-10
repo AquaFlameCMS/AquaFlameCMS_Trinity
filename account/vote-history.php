@@ -63,7 +63,7 @@ try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
     $orderby = "DESC";
     $link = "vote-history.php?date=asc";
     if(isset($_GET['date'])) if($_GET['date'] == "desc"){ $orderby = "DESC"; $link = "vote-history.php?date=asc"; }else{ $orderby = "ASC"; $link = "vote-history.php?date=desc";}
-    $sql = mysql_query("SELECT * FROM votes_log WHERE userid = '".$account_information['id']."' ORDER BY `date` ".$orderby." LIMIT 50") or die(mysql_error());
+    $sql = mysql_query("SELECT * FROM $server_db.votes_log WHERE userid = '".$account_information['id']."' ORDER BY `date` ".$orderby." LIMIT 50") or die(mysql_error());
     $numrows = mysql_num_rows($sql);
 
     if($numrows > 0){

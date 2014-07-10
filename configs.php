@@ -260,3 +260,4 @@ if ($maintenance == true) {
 }
 
 /* End of file configs.php */
+

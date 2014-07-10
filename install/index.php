@@ -302,6 +302,7 @@ if ($maintenance == true) {
     }
 }
 /* End of file configs.php */
+
 ';
 		$fp = fopen("../configs.php", "w");
 		fwrite($fp, $string);

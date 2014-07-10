@@ -128,13 +128,12 @@ _gaq.push(['_trackPageLoadTime']);
 									echo '
 									<small>'.$Forum['Forum37'].'</small>
 								</div>
-							</div>
-							';
+							</div>';
 							
 						} else {
 							
 							$vote_option = mysql_fetch_assoc($check);
-							$check = mysql_query("SELECT * FROM votes_log WHERE userid = '".$account_information['id']."' AND voteid = '".$vote_option['ID']."' ORDER BY `date` DESC");
+							$check = mysql_query("SELECT * FROM $server_db.votes_log WHERE userid = '".$account_information['id']."' AND voteid = '".$vote_option['ID']."' ORDER BY `date` DESC");
 							
 							function vote()
 							{

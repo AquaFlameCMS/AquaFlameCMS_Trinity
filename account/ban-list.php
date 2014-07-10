@@ -1,6 +1,9 @@
 <?php
-require_once("../configs.php");
-$page_cat = "gamesncodes";
+include("../configs.php");
+$page_cat = "security";
+if (!isset($_SESSION['username'])) {
+        header('Location: '.$website['root'].'account_log.php');		
+}
 ?>
 
 <!doctype html>
