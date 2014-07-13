@@ -8,7 +8,7 @@ require_once("configs.php");
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
  <html lang="en-gb">
-<head><link rel="stylesheet" type="text/css" href="/s7.addthis.com/static/r07/widget49.css" media="all" />
+<head>
 <title><?php echo $website['title']; ?></title>
 <meta content="false" http-equiv="imagetoolbar" />
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
@@ -486,58 +486,6 @@ _gaq.push(['_trackPageview']);
 						?>
 							<a class="ui-button button2 reply-button" href="?login" onclick="return Login.open();"><span class="button-left"><span class="button-right"> Reply </span></span></a>
 							<?php }?>
-							<span class="clear">
-							<!-- -->
-							</span>
-						</div>
-						<span class="clear">
-						<!-- -->
-						</span>
-					</div>
-					</li>
-					<div class="comment-tile">
-						<div class="rate-post-wrapper rate-post-login">
-							<a href="?login" onclick="return Login.open('https://us.battle.net/login/login.frag')">Login</a> to rate
-						</div>
-						<div class="bnet-avatar ">
-							<div class="avatar-outer">
-								<a href="/wow/en/character/azuremyst/Crosshair/">
-								<img height="64" width="64" src="http://us.battle.net/static-render/us/staghelm/25/119779097-avatar.jpg?alt=wow/static/images/2d/avatar/3-0.jpg" alt=""/>
-								<span class="avatar-inner"></span>
-								</a>
-							</div>
-						</div>
-						<div class="comment-head">
-							<div class="bnet-username" itemscope="itemscope" itemprop="author" itemtype="http://schema.org/Person">
-								<div id="context-54" class="ui-context">
-									<div class="context">
-										<a href="javascript:;" class="close" onclick="return CharSelect.close(this);"></a>
-										<div class="context-user">
-											<strong>Crosshair</strong>
-										</div>
-										<div class="context-links">
-											<a href="/wow/en/character/azuremyst/Crosshair/" title="Profile" rel="np" class="icon-profile link-first">
-											<span class="context-icon"></span>Profile </a>
-											<a href="/wow/en/search?f=post&amp;a=Crosshair%40Azuremyst&amp;sort=time" title="View posts" rel="np" class="icon-posts">
-											<span class="context-icon"></span>
-											</a>
-											<a href="javascript:;" title="Ignore" rel="np" class="icon-ignore link-last" onclick="ReportPost.ignoreUser(this, 9607337, false); return false;">
-											<span class="context-icon"></span>
-											</a>
-										</div>
-									</div>
-								</div>
-								<a href="/wow/en/character/azuremyst/Crosshair/" itemprop="url" class="context-link wow-class-3">
-								<span itemprop="name" class="poster-name">Crosshair</span>
-								</a>
-								<span class="timestamp">50 minutes ago</span>
-							</div>
-						</div>
-						<div class="comment-body">
-							 Too funny! WTG Blizzard... enjoyed it =D
-						</div>
-						<div class="comment-foot">
-							<a class="ui-button button2 reply-button" href="?login" onclick="return Login.open();"><span class="button-left"><span class="button-right"> Reply </span></span></a>
 							<span class="clear">
 							<!-- -->
 							</span>
