@@ -1,6 +1,36 @@
 = AquaFlame Project -- What has to be Done?! =
 
-1a) Make the following: Character Transfer, Character Unstuck, Recruit a Friends.
+1a) Make the following: 
+
+-Character Transfer(account settings);
+
+-Character Unstuck(account settings);
+
+-Recruit a Friends(account settings);
+
+-parental control(account settings);
+
+-my payment options(account settings);
+
+-vip item switch panel(account settings);
+
+-beta settings(account settings);
+
+-vip code redemption(account settings);
+
+-donations(account settings);
+
+-and pre paid card(account settings);
+
+-balance history(account settings);
+
+-refresh balance(account settings);
+
+-comunication preferences(account settings);
+
+
+
+1b) correct in admin page, the user managment (doesn't open)
 
 2) Friendly URL
 
