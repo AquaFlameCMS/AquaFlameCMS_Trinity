@@ -1,4 +1,4 @@
-= AquaFlame Project -- What has to be Done?! =
+= AquaFlame Project -- What has to be Done?! = + error report -.-
 
 1) Make the following: 
 
