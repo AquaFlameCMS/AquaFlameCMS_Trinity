@@ -1,36 +1,73 @@
 = AquaFlame Project -- What has to be Done?! =
 
-1a) Make the following: 
+1) Make the following: 
 
--Character Transfer(account settings);
+-login popup auto close(make a reload on page?!);
 
--Character Unstuck(account settings);
+-shop with "honor" points and arena points;
 
--Recruit a Friends(account settings);
+-FORUMS CODE OF CONDUCT-Fi*(forum foother);
 
--parental control(account settings);
+-FORUMS CODE OF CONDUCT-Fi*(forum foother);
 
--my payment options(account settings);
+-character search on comunity page not working;
 
--vip item switch panel(account settings);
+-in character call error - mysql.class.php on line 206;
 
--beta settings(account settings);
+-main page right bar give error - undefined offset 4 in ***\panel\promo.php;
 
--vip code redemption(account settings);
+-item restoration-Fi*(shop foother);
 
--donations(account settings);
+-account security-Fi*(shop foother);
 
--and pre paid card(account settings);
+-Knowledge Center-Fi*(aqua header - support);
 
--balance history(account settings);
+-Ask a Question-Fi*(aqua header - support);
 
--refresh balance(account settings);
+-Ask a Question-Fi*(aqua header - support);
 
--comunication preferences(account settings);
+-Character Transfer-Fi*(main account - footer & header - player options);
 
+-Character Unstuck-Fi*(main account - footer & header - player options);
 
+-Recruit a Friends-Fi*(account footer & header - player options);
 
-1b) correct in admin page, the user managment (doesn't open)
+-parental control-Fi*(account header - settings);
+
+-my payment options-Fi*(account header - settings);
+
+-vip item switch panel-Fi*(account header -codes & services);
+
+-beta settings-Fi*(account header - codes & services);
+
+-vip code redemption-Fi*(account header - codes & services);
+
+-donations-Fi*(account header - codes & services);
+
+-and pre paid card-Fi*(account header - credits);
+
+-balance history-Fi*(account header - credits);
+
+-refresh balance-Fi*(account header - credits);
+
+-comunication preferences-Fi*(account header - settings);
+
+-Donate / Buy Subscription-Fi*(main account page);
+
+-View Account History-Fi*(main account page);
+
+-AquaFlameCMS 1.0 Remote-Fi*(main account page - footer);
+
+-Donate Subscription-Fi*(main account page - footer);
+
+-beta test reaml (closed)-Fi*(main account page - footer);
+
+-user managment-Fi*(admin page - header);
+
+##################
+Fi -> found in
+##################
+
 
 2) Friendly URL
 
