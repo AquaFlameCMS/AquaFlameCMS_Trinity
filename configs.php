@@ -83,9 +83,9 @@ $serverport    = "3306";
 @define('DBUSER', 'root');
 @define('DBPASS', 'password');
 @define('DB', 'website');
-@define('DBAUTH', 'website');
-@define('DBWORLD', 'website');
-@define('DBCHAR', 'website');
+@define('DBAUTH', 'auth');
+@define('DBWORLD', 'world');
+@define('DBCHAR', 'chars');
 
 /*
 |--------------------------------------------------------------------------
