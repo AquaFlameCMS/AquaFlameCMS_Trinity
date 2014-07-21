@@ -24,7 +24,8 @@ $href[2]='account/';
 $href[3]='account/';
 
 /* Here it is important to give it the number of images starting from 0 */
-$i=rand(0,4);
+$i=rand(0,3);
+#####  4 give error
 ?>
 <div id="sidebar-marketing" class="sidebar-module">
 	<div class="bnet-offer">
