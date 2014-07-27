@@ -52,25 +52,37 @@ _gaq.push(['_trackPageview']);
 $page_cat="game";
 include("../../header.php");
 ?>
-<div id="content">
-<div class="content-top">
-<div class="content-trail">
-<ol class="ui-breadcrumb">
-<li>
-<a href="<?php echo $website['root']; ?>" rel="np"><?php echo $website['title']; ?></a>
-<span class="breadcrumb-arrow"></span>
-</li>
-<li><a href="<?php echo $website['root']; ?>game/status/" rel="np"><?php echo $status['status']; ?></a><span class="breadcrumb-arrow"></span></li>
-<li><a href="<?php echo $website['root']; ?>game/status/" rel="np"><?php echo $Status['RealmStat']; ?></a><span class="breadcrumb-arrow"></span></li>
-<li class="last children"><a href="" rel="np"><?php
-$realm_extra = mysql_fetch_assoc(mysql_query("SELECT * FROM realms WHERE id = '".$realmid."'"));
-if(!$realm_extra) $realm_extra = mysql_fetch_assoc(mysql_query("SELECT * FROM realms WHERE id = '1'"));
-$realm = mysql_fetch_assoc(mysql_query("SELECT * FROM $server_adb.realmlist WHERE id = '".$realm_extra['realmid']."'"));
-echo $realm['name']; 
-?></a>
-</li>
-</ol>
-</div>
+	<div id="content">
+		<div class="content-top body-top">
+			<div class="content-trail">
+				<ol class="ui-breadcrumb">
+					<li itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+					<a href="<?php echo $website['root']; ?>" rel="np" class="breadcrumb-arrow" itemprop="url">
+					<span class="breadcrumb-text" itemprop="name"><?php echo $website['title']; ?></span>
+					</a>
+					</li>
+					<li itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+					<a href="<?php echo $website['root']; ?>game/status/" rel="np" class="breadcrumb-arrow" itemprop="url">
+					<span class="breadcrumb-text" itemprop="name"><?php echo $status['status']; ?></span>
+					</a>
+					</li>
+					<li itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+					<a href="<?php echo $website['root']; ?>game/status/" rel="np" class="breadcrumb-arrow" itemprop="url">
+					<span class="breadcrumb-text" itemprop="name"><?php echo $Status['RealmStat']; ?></span>
+					</a>
+					</li>
+					<li class="last childless" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+					<a href="" rel="np" itemprop="url">
+					<span class="breadcrumb-text" itemprop="name"><?php
+					$realm_extra = mysql_fetch_assoc(mysql_query("SELECT * FROM realms WHERE id = '".$realmid."'"));
+					if(!$realm_extra) $realm_extra = mysql_fetch_assoc(mysql_query("SELECT * FROM realms WHERE id = '1'"));
+					$realm = mysql_fetch_assoc(mysql_query("SELECT * FROM $server_adb.realmlist WHERE id = '".$realm_extra['realmid']."'"));
+					echo $realm['name']; 
+					?></span>
+					</a>
+					</li>
+				</ol>
+			</div>
 <div class="content-bot">
 	<div class="content-header">
 		<h2 class="header ">
@@ -169,223 +181,223 @@ echo $realm['name'];
 		<table>
 			<thead>
 				<tr>
-<?php
-$server_cdb = $realm_extra['char_db'];
-$sql = mysql_query("SELECT * FROM $server_cdb.characters WHERE online='1' ORDER BY RAND() LIMIT 49") or die(mysql_error());
-$numrows = mysql_num_rows($sql);
-if($numrows > 0)
-{
-echo '<div class="view-table">
-	<div class="table ">
-		<table>
-	<thead>
-	 <tr>
-<th><a href="javascript:;" class="sort-link"><span class="arrow">'.$Status['Name'].'</span></a></th>
-<th><a href="javascript:;" class="sort-link"><span class="arrow">'.$Status['Race'].'</span></a></th>
-<th><a href="javascript:;" class="sort-link"><span class="arrow">'.$Status['Class'].'</span></a></th>
-<th><a href="javascript:;" class="sort-link"><span class="arrow">'.$Status['Level'].'</span></a></th>
-<th><a href="javascript:;" class="sort-link"><span class="arrow">'.$Status['Location'].'</span></a></th>
-<th><a href="javascript:;" class="sort-link"><span class="arrow">'.$Status['Faction'].'</span></a></th>
-</tr>
-	</thead>';
-while($raw = mysql_fetch_array($sql)){
-//Character Class
-$cclass = $raw['class'];
-if ($cclass == 1)
-{
-$class = "<img src='../../wow/static/images/icons/class/1.gif' width='18' height='18'/>";
-}
-elseif ($cclass == 2)
-{
-$class = "<img src='../../wow/static/images/icons/class/2.gif' width='18' height='18'/>";
-}
-elseif ($cclass == 3)
-{
-$class = "<img src='../../wow/static/images/icons/class/3.gif' width='18' height='18'/>";
-}
-elseif ($cclass == 4)
-{
-$class = "<img src='../../wow/static/images/icons/class/4.gif' width='18' height='18'/>";
-}
-elseif ($cclass == 5)
-{
-$class = "<img src='../../wow/static/images/icons/class/5.gif' width='18' height='18'/>";
-}
-elseif ($cclass == 6)
-{
-$class = "<img src='../../wow/static/images/icons/class/6.gif' width='18' height='18'/>";
-}
-elseif ($cclass == 7)
-{
-$class = "<img src='../../wow/static/images/icons/class/7.gif' width='18' height='18'/>";
-}
-elseif ($cclass == 8)
-{
-$class = "<img src='../../wow/static/images/icons/class/8.gif' width='18' height='18'/>";
-}
-elseif ($cclass == 9)
-{
-$class = "<img src='../../wow/static/images/icons/class/9.gif' width='18' height='18'/>";
-}
-elseif ($cclass == 11)
-{
-$class = "<img src='../../wow/static/images/icons/class/11.gif' width='18' height='18'/>";
-}
-//Character Race
-$rrace = $raw['race'];
-$gender = $raw['gender'];
-if ($rrace == 1)
-{
-$race = "".$Status['Human']."";
-}
-elseif ($rrace == 2)
-{
-$race = "".$Status['Orc']."";
-}
-if ($rrace == 3)
-{
-$race = "".$Status['Dwarf']."";
-}
-elseif ($rrace == 4)
-{
-$race = "".$Status['NightElf']."";
-}
-elseif ($rrace == 5)
-{
-$race = "".$Status['Undead']."";
-}
-elseif ($rrace == 6)
-{
-$race = "".$Status['Tauren']."";
-}
-elseif ($rrace == 7)
-{
-$race = "".$Status['Gnome']."";
-}
-elseif ($rrace == 8)
-{
-$race = "".$Status['Troll']."";
-}
-elseif ($rrace == 9)
-{
-$race = "".$Status['Goblin']."";
-}
-elseif ($rrace == 10)
-{
-$race = "".$Status['BloodElf']."";
-}
-elseif ($rrace == 11)
-{
-$race = "".$Status['Draenei']."";
-}
-elseif ($rrace == 22)
-{
-$race = "".$Status['Worgen']."";
-}
-//Character Gender
-$ggender = $raw['gender'];
-if($ggender == 1)
-{
-$gender = "".$Status['Female']."";
-}
-else
-if($ggender == 0)
-{
-$gender = "".$Status['Male']."";
-}
-//Location Map
-$map = $raw['map'];
-if($map == 0)
-{
-$location = "<b>".$Status['EastKingd']."</b>";
-}
-elseif($map == 648)
-{
-$location = "<b>".$Status['LostIsle']."</b>";
-}
-elseif($map == 638)
-{
-$location = "<b>".$Status['Gilneas']."</b>";
-}
-elseif($map == 1)
-{
-$location = "<b>".$Status['Kalimdor']."</b>";
-}
-elseif($map == 530)
-{
-$location = "<b>".$Status['Outland']."</b>";
-}
-elseif($map == 571)
-{
-$location = "<b>".$Status['Northrend']."</b>";
-}
- // Alliance or Horde FLAG
-if($rrace == 1 || $rrace == 3 || $rrace == 4 || $rrace == 7 || $rrace == 11 || $rrace == 22)
-{
-$bg = "<img src='../../wow/static/images/icons/faction/ally.png' width='18' height='18'/>";
-}
-elseif($rrace == 2 || $rrace == 5 || $rrace == 6 || $rrace == 8 || $rrace == 9 || $rrace == 10)
-{
-$bg = "<img src='../../wow/static/images/icons/faction/horde.png' width='18' height='18'/>";
-}
- // Alliance or Horde FLAG
-if($rrace == 1 || $rrace == 3 || $rrace == 4 || $rrace == 7 || $rrace == 11 || $rrace == 22)
-{
-$bg2 = "Alliance";
-}
-elseif($rrace == 2 || $rrace == 5 || $rrace == 6 || $rrace == 8 || $rrace == 9 || $rrace == 10)
-{
-$bg2 = "Horde";
-}
-echo '
+				<?php
+				$server_cdb = $realm_extra['char_db'];
+				$sql = mysql_query("SELECT * FROM $server_cdb.characters WHERE online='1' ORDER BY RAND() LIMIT 49") or die(mysql_error());
+				$numrows = mysql_num_rows($sql);
+				if($numrows > 0)
+				{
+				echo '<div class="view-table">
+					<div class="table ">
+						<table>
+					<thead>
+					 <tr>
+				<th><a href="javascript:;" class="sort-link"><span class="arrow">'.$Status['Name'].'</span></a></th>
+				<th><a href="javascript:;" class="sort-link"><span class="arrow">'.$Status['Race'].'</span></a></th>
+				<th><a href="javascript:;" class="sort-link"><span class="arrow">'.$Status['Class'].'</span></a></th>
+				<th><a href="javascript:;" class="sort-link"><span class="arrow">'.$Status['Level'].'</span></a></th>
+				<th><a href="javascript:;" class="sort-link"><span class="arrow">'.$Status['Location'].'</span></a></th>
+				<th><a href="javascript:;" class="sort-link"><span class="arrow">'.$Status['Faction'].'</span></a></th>
+				</tr>
+					</thead>';
+				while($raw = mysql_fetch_array($sql)){
+				//Character Class
+				$cclass = $raw['class'];
+				if ($cclass == 1)
+				{
+				$class = "<img src='../../wow/static/images/icons/class/1.gif' width='18' height='18'/>";
+				}
+				elseif ($cclass == 2)
+				{
+				$class = "<img src='../../wow/static/images/icons/class/2.gif' width='18' height='18'/>";
+				}
+				elseif ($cclass == 3)
+				{
+				$class = "<img src='../../wow/static/images/icons/class/3.gif' width='18' height='18'/>";
+				}
+				elseif ($cclass == 4)
+				{
+				$class = "<img src='../../wow/static/images/icons/class/4.gif' width='18' height='18'/>";
+				}
+				elseif ($cclass == 5)
+				{
+				$class = "<img src='../../wow/static/images/icons/class/5.gif' width='18' height='18'/>";
+				}
+				elseif ($cclass == 6)
+				{
+				$class = "<img src='../../wow/static/images/icons/class/6.gif' width='18' height='18'/>";
+				}
+				elseif ($cclass == 7)
+				{
+				$class = "<img src='../../wow/static/images/icons/class/7.gif' width='18' height='18'/>";
+				}
+				elseif ($cclass == 8)
+				{
+				$class = "<img src='../../wow/static/images/icons/class/8.gif' width='18' height='18'/>";
+				}
+				elseif ($cclass == 9)
+				{
+				$class = "<img src='../../wow/static/images/icons/class/9.gif' width='18' height='18'/>";
+				}
+				elseif ($cclass == 11)
+				{
+				$class = "<img src='../../wow/static/images/icons/class/11.gif' width='18' height='18'/>";
+				}
+				//Character Race
+				$rrace = $raw['race'];
+				$gender = $raw['gender'];
+				if ($rrace == 1)
+				{
+				$race = "".$Status['Human']."";
+				}
+				elseif ($rrace == 2)
+				{
+				$race = "".$Status['Orc']."";
+				}
+				if ($rrace == 3)
+				{
+				$race = "".$Status['Dwarf']."";
+				}
+				elseif ($rrace == 4)
+				{
+				$race = "".$Status['NightElf']."";
+				}
+				elseif ($rrace == 5)
+				{
+				$race = "".$Status['Undead']."";
+				}
+				elseif ($rrace == 6)
+				{
+				$race = "".$Status['Tauren']."";
+				}
+				elseif ($rrace == 7)
+				{
+				$race = "".$Status['Gnome']."";
+				}
+				elseif ($rrace == 8)
+				{
+				$race = "".$Status['Troll']."";
+				}
+				elseif ($rrace == 9)
+				{
+				$race = "".$Status['Goblin']."";
+				}
+				elseif ($rrace == 10)
+				{
+				$race = "".$Status['BloodElf']."";
+				}
+				elseif ($rrace == 11)
+				{
+				$race = "".$Status['Draenei']."";
+				}
+				elseif ($rrace == 22)
+				{
+				$race = "".$Status['Worgen']."";
+				}
+				//Character Gender
+				$ggender = $raw['gender'];
+				if($ggender == 1)
+				{
+				$gender = "".$Status['Female']."";
+				}
+				else
+				if($ggender == 0)
+				{
+				$gender = "".$Status['Male']."";
+				}
+				//Location Map
+				$map = $raw['map'];
+				if($map == 0)
+				{
+				$location = "<b>".$Status['EastKingd']."</b>";
+				}
+				elseif($map == 648)
+				{
+				$location = "<b>".$Status['LostIsle']."</b>";
+				}
+				elseif($map == 638)
+				{
+				$location = "<b>".$Status['Gilneas']."</b>";
+				}
+				elseif($map == 1)
+				{
+				$location = "<b>".$Status['Kalimdor']."</b>";
+				}
+				elseif($map == 530)
+				{
+				$location = "<b>".$Status['Outland']."</b>";
+				}
+				elseif($map == 571)
+				{
+				$location = "<b>".$Status['Northrend']."</b>";
+				}
+				 // Alliance or Horde FLAG
+				if($rrace == 1 || $rrace == 3 || $rrace == 4 || $rrace == 7 || $rrace == 11 || $rrace == 22)
+				{
+				$bg = "<img src='../../wow/static/images/icons/faction/ally.png' width='18' height='18'/>";
+				}
+				elseif($rrace == 2 || $rrace == 5 || $rrace == 6 || $rrace == 8 || $rrace == 9 || $rrace == 10)
+				{
+				$bg = "<img src='../../wow/static/images/icons/faction/horde.png' width='18' height='18'/>";
+				}
+				 // Alliance or Horde FLAG
+				if($rrace == 1 || $rrace == 3 || $rrace == 4 || $rrace == 7 || $rrace == 11 || $rrace == 22)
+				{
+				$bg2 = "Alliance";
+				}
+				elseif($rrace == 2 || $rrace == 5 || $rrace == 6 || $rrace == 8 || $rrace == 9 || $rrace == 10)
+				{
+				$bg2 = "Horde";
+				}
+				echo '
 
-<tr class="row1">
-<td>
-<a href="" class="item-link color-c9"><strong><a href="'.$website['root'].'advanced.php?name='.$raw["name"].'">'.$raw["name"].'</a></strong>
-</a>
-</td>
-<td class="align-center">
-<span class="icon-frame frame-14 " data-tooltip="'.$race.' '.$gender.'">
-<img src="../../wow/static/images/icons/race/'.$raw['race'].'-'.$raw['gender'].'.gif" alt="" width="14" height="14" />
-</span>
-</td>
-<td style="background-color: '.$bg.';"><center>'.@$class.'</center></td>
-<td style="background-color: '.$bg.';"><center>'.@$raw['level'].'</center></td>
-<td style="background-color: '.$bg.';"><center>'.@$location.'</center></td>
-<td style="background-color: '.$bg.';"><center>'.@$bg.'</center></td>
-</tr>';
+				<tr class="row1">
+				<td>
+				<a href="" class="item-link color-c9"><strong><a href="'.$website['root'].'advanced.php?name='.$raw["name"].'">'.$raw["name"].'</a></strong>
+				</a>
+				</td>
+				<td class="align-center">
+				<span class="icon-frame frame-14 " data-tooltip="'.$race.' '.$gender.'">
+				<img src="../../wow/static/images/icons/race/'.$raw['race'].'-'.$raw['gender'].'.gif" alt="" width="14" height="14" />
+				</span>
+				</td>
+				<td style="background-color: '.$bg.';"><center>'.@$class.'</center></td>
+				<td style="background-color: '.$bg.';"><center>'.@$raw['level'].'</center></td>
+				<td style="background-color: '.$bg.';"><center>'.@$location.'</center></td>
+				<td style="background-color: '.$bg.';"><center>'.@$bg.'</center></td>
+				</tr>';
 
-}
-echo '';
-echo"</table><br />";
-}
-else
-{
-echo "<b>".$Status['NotConected']."</b>";
-}
-?>
+				}
+				echo '';
+				echo"</table><br />";
+				}
+				else
+				{
+				echo "<b>".$Status['NotConected']."</b>";
+				}
+				?>
 			<tbody>
-					<tr class="row1">
-						<td class="name"></td>
-						<td class="type" data-raw="pvp"><span class="pvp"></span></td>
-						<td class="population" data-raw="Low"><span class="Low"></span></td>
-						<td class="locale">
-						</td><td class="queue" data-raw="false"></td>
-					</tr>
-					<tr class="row2">
-						<td class="name"></td>
-						<td class="type" data-raw="pve"><span class="pve"></span></td>
-						<td class="population" data-raw="medium"><span class="medium"></span></td>
-						<td class="locale"></td>
-						<td class="queue" data-raw="false"></td>
-					</tr>
-					<tr class="row1">
-						<td class="name"></td>
-						<td class="type" data-raw="pvp"><span class="normal"></span></td>
-						<td class="population" data-raw="Low"><span class="Low"></span></td>
-						<td class="locale"></td>
-						<td class="queue" data-raw="false"></td>
-					</tr>
+				<tr class="row1">
+					<td class="name"></td>
+					<td class="type" data-raw="pvp"><span class="pvp"></span></td>
+					<td class="population" data-raw="Low"><span class="Low"></span></td>
+					<td class="locale">
+					</td><td class="queue" data-raw="false"></td>
+				</tr>
+				<tr class="row2">
+					<td class="name"></td>
+					<td class="type" data-raw="pve"><span class="pve"></span></td>
+					<td class="population" data-raw="medium"><span class="medium"></span></td>
+					<td class="locale"></td>
+					<td class="queue" data-raw="false"></td>
+				</tr>
+				<tr class="row1">
+					<td class="name"></td>
+					<td class="type" data-raw="pvp"><span class="normal"></span></td>
+					<td class="population" data-raw="Low"><span class="Low"></span></td>
+					<td class="locale"></td>
+					<td class="queue" data-raw="false"></td>
+				</tr>
 				<tr class="no-results" style="display: none"><td colspan="6"></td></tr>
 			</tbody>
 		</table>
