@@ -3,7 +3,7 @@ include("../configs.php");
 $page_cat = "security";
 // Check, if username session is NOT set then this page will jump to login page
 if (!isset($_SESSION['username'])) {
-        header('Location: '.$website['root'].'account_log.php');		
+        header('Location: '.BASE_URL.'account_log.php');		
 }
 ?>
 
@@ -14,21 +14,21 @@ if (!isset($_SESSION['username'])) {
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
-<title><?php echo $website['title']; ?><?php echo $friend['1']; ?></title>
+<title><?php echo TITLE ?><?php echo $friend['1']; ?></title>
 <meta content="false" http-equiv="imagetoolbar" />
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
-<meta name="description" content="<?php echo $website['description']; ?>">
-<meta name="keywords" content="<?php echo $website['keywords']; ?>">
-<link rel="shortcut icon" href="../wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
-<link rel="stylesheet" media="all" href="../wow/static/local-common/css/management/common.css" />
-<link rel="stylesheet" media="all" href="../wow/static/css/bnet.css" />
-<link rel="stylesheet" media="print" href="../wow/static/css/bnet-print.css" />
-<link rel="stylesheet" href="../wow/static/css/management/dashboard.css" />
-<link rel="stylesheet" href="../wow/static/css/management/services.css" />
-<link rel="stylesheet" href="../wow/static/css/management/wow/raf.css" />
-<script src="../wow/static/local-common/js/third-party/jquery-1.4.4-p1.min.js"></script>
-<script src="../wow/static/local-common/js/core.js"></script>
-<script src="../wow/static/local-common/js/tooltip.js"></script>
+<meta name="description" content="<?php echo DESCRIPTION ?>">
+<meta name="keywords" content="<?php echo KEYWORDS ?>">
+<link rel="shortcut icon" href="<?php echo BASE_URL ?>wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
+<link rel="stylesheet" media="all" href="<?php echo BASE_URL ?>wow/static/local-common/css/management/common.css" />
+<link rel="stylesheet" media="all" href="<?php echo BASE_URL ?>wow/static/css/bnet.css" />
+<link rel="stylesheet" media="print" href="<?php echo BASE_URL ?>wow/static/css/bnet-print.css" />
+<link rel="stylesheet" href="<?php echo BASE_URL ?>wow/static/css/management/dashboard.css" />
+<link rel="stylesheet" href="<?php echo BASE_URL ?>wow/static/css/management/services.css" />
+<link rel="stylesheet" href="<?php echo BASE_URL ?>wow/static/css/management/wow/raf.css" />
+<script src="<?php echo BASE_URL ?>wow/static/local-common/js/third-party/jquery-1.4.4-p1.min.js"></script>
+<script src="<?php echo BASE_URL ?>wow/static/local-common/js/core.js"></script>
+<script src="<?php echo BASE_URL ?>wow/static/local-common/js/tooltip.js"></script>
 <!--[if IE 6]> <script type="text/javascript">
 //<![CDATA[
 try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
@@ -74,7 +74,7 @@ _gaq.push(['_trackPageLoadTime']);
 	<span class="float-right"><span class="form-req">*</span><?php echo $friend['2']; ?></span>
     <h2 class="subcategory"><?php echo $friend['3']; ?></h2>
     <h3 class="headline"><?php echo $friend['4']; ?></h3>
-    <a href=""><img src="../wow/static/local-common/images/game-icons/wow.png" alt="World of Warcraft®" width="48" height="48" /></a>
+    <a href=""><img src="<?php echo BASE_URL ?>wow/static/local-common/images/game-icons/wow.png" alt="World of Warcraft®" width="48" height="48" /></a>
 			</div>
 			<div class="service-wrapper">
     <p class="service-nav">
@@ -377,9 +377,9 @@ pet: 'pet'
 };
 //]]>
 </script>
-<script src="../wow/static/js/bam.js"></script>
-<script src="../wow/static/local-common/js/tooltip.js?v22"></script>
-<script src="../wow/static/local-common/js/menu.js?v22"></script>
+<script src="<?php echo BASE_URL ?>wow/static/js/bam.js"></script>
+<script src="<?php echo BASE_URL ?>wow/static/local-common/js/tooltip.js?v22"></script>
+<script src="<?php echo BASE_URL ?>wow/static/local-common/js/menu.js?v22"></script>
 <script type="text/javascript">
 $(function() {
 Menu.initialize();
@@ -388,10 +388,10 @@ Locale.dataPath = 'data/i18n.frag.xml';
 });
 </script>
 <!--[if lt IE 8]>
-<script type="text/javascript" src="../wow/static/local-common/js/third-party/jquery.pngFix.pack.js?v22"></script>
+<script type="text/javascript" src="<?php echo BASE_URL ?>wow/static/local-common/js/third-party/jquery.pngFix.pack.js?v22"></script>
 <script type="text/javascript">$('.png-fix').pngFix();</script>
 <![endif]-->
-<script src="../wow/static/js/management/wow/raf.js"></script>
+<script src="<?php echo BASE_URL ?>wow/static/js/management/wow/raf.js"></script>
 <script type="text/javascript">
 //<![CDATA[
 Core.load("wow/static/local-common/js/overlay.js?v22");
@@ -400,7 +400,7 @@ Core.load("wow/static/local-common/js/third-party/jquery-ui-1.8.6.custom.min.js?
 Core.load("wow/static/local-common/js/third-party/jquery.mousewheel.min.js?v22");
 Core.load("wow/static/local-common/js/third-party/jquery.tinyscrollbar.custom.js?v22");
 Core.load("wow/static/local-common/js/login.js?v22", false, function() {
-Login.embeddedUrl = '<?php echo $website['root'];?>loginframe.php';
+Login.embeddedUrl = '<?php echo BASE_URL ?>loginframe.php';
 });
 //]]>
 </script>

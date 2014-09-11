@@ -10,11 +10,11 @@ require_once("configs.php");
  <html lang="en-gb">
 <html>
 <head>
-<title>GUILD @ REALM - <?php echo $website['title']; ?></title>
+<title>GUILD @ REALM - <?php echo TITLE ?></title>
 <meta content="false" http-equiv="imagetoolbar" />
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
-<meta name="description" content="<?php echo $website['description']; ?>">
-<meta name="keywords" content="<?php echo $website['keywords']; ?>">
+<meta name="description" content="<?php echo DESCRIPTION ?>">
+<meta name="keywords" content="<?php echo KEYWORDS ?>">
 <link rel="shortcut icon" href="wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
 <link rel="search" type="application/opensearchdescription+xml" href="http://eu.battle.net/en-gb/data/opensearch" title="Battle.net Search" />
 <link rel="stylesheet" href="wow/static/local-common/css/common.css" />
@@ -72,7 +72,7 @@ include("header.php");
 <div class="content-trail">
 <ol class="ui-breadcrumb">
 <li>
-<a href="index.php" rel="np"><?php echo $website['title']; ?></a>
+<a href="index.php" rel="np"><?php echo TITLE ?></a>
 <span class="breadcrumb-arrow"></span>
 </li>
 <li><a href="services.php" rel="np">Services</a><span class="breadcrumb-arrow"></span></li>
@@ -825,7 +825,7 @@ other: 'Other'
 //<![CDATA[
 Core.load("wow/static/local-common/js/third-party/jquery-ui-1.8.6.custom.min6cc4.js");
 Core.load("wow/static/local-common/js/login6cc4.js", false, function() {
-Login.embeddedUrl = '<?php echo $website['root'];?>loginframe.php';
+Login.embeddedUrl = '<?php echo BASE_URL ?>loginframe.php';
 });
 //]]>
 </script>

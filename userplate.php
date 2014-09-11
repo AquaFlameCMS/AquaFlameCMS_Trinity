@@ -24,48 +24,48 @@ if (!isset($_SESSION['username'])) {
         $character_id = intval($_GET['cc']);
         $realm_id = intval($_GET['r']);
 
-        $realm = mysql_fetch_assoc(mysql_query("SELECT * FROM $server_adb.realmlist WHERE id = '" . $realm_id . "'"));
+        $realm = mysql_fetch_assoc(mysql_query("SELECT * FROM '.DBAUTH'.realmlist WHERE id = '" . $realm_id . "'"));
         $realm_extra = mysql_fetch_assoc(mysql_query("SELECT * FROM realms WHERE realmid = '" . $realm_id . "'"));
 
         $server_cdb = $realm_extra['char_db'];
 
-        $select = mysql_fetch_assoc(mysql_query("SELECT guid,race,gender FROM $server_cdb.characters WHERE guid = '" . $character_id . "' AND account = '" . $account_information['id'] . "'"));
+        $select = mysql_fetch_assoc(mysql_query("SELECT guid,race,gender FROM '.DBCHARS'.characters WHERE guid = '" . $character_id . "' AND account = '" . $account_information['id'] . "'"));
 
         if ($select) {
             $avatar = $select['race'] . "-" . $select['gender'] . ".jpg";
             $update = mysql_query("UPDATE users SET `avatar` = '" . $avatar . "', `character` ='" . $character_id . "', `char_realm` = '" . $realm_extra['id'] . "' WHERE id = '" . $account_extra['id'] . "'");
-            echo '<meta http-equiv="refresh" content="0;url='.$website['root'].'"/>';
+            echo '<meta http-equiv="refresh" content="0;url='.BASE_URL.'"/>';
         } else {
-            echo '<meta http-equiv="refresh" content="0;url='.$website['root'].'"/>';
+            echo '<meta http-equiv="refresh" content="0;url='.BASE_URL.'"/>';
         }
     }
 
-    $login_query = mysql_query("SELECT * FROM $server_adb.account WHERE username = '" . mysql_real_escape_string($_SESSION["username"]) . "'");
+    $login_query = mysql_query("SELECT * FROM '.DBAUTH'.account WHERE username = '" . mysql_real_escape_string($_SESSION["username"]) . "'");
     $login2 = mysql_fetch_assoc($login_query);
 
-    $uI = mysql_query("SELECT * FROM $server_db.users WHERE id = '" . $login2['id'] . "'");
+    $uI = mysql_query("SELECT * FROM '.DB'.users WHERE id = '" . $login2['id'] . "'");
     @$userInfo = mysql_fetch_assoc($uI);
 
     $numchars = 0;
 
     if ($account_extra['character'] != 0) {
         $realm_extra = mysql_fetch_assoc(mysql_query("SELECT * FROM realms WHERE realmid = '" . $account_extra['char_realm'] . "'"));
-        $realm = mysql_fetch_assoc(mysql_query("SELECT * FROM $server_adb.realmlist WHERE id = '" . $realm_extra['realmid'] . "'"));
+        $realm = mysql_fetch_assoc(mysql_query("SELECT * FROM '.DBAUTH'.realmlist WHERE id = '" . $realm_extra['realmid'] . "'"));
 
         $server_cdb = $realm_extra['char_db'];
         $server_wdb = $realm_extra['world_db'];
 
-        $query001 = mysql_query("SELECT * FROM $server_cdb.characters WHERE account = '" . $account_information['id'] . "' AND guid = '" . $account_extra['character'] . "'");
+        $query001 = mysql_query("SELECT * FROM '.DBCHARS'.characters WHERE account = '" . $account_information['id'] . "' AND guid = '" . $account_extra['character'] . "'");
         if (mysql_num_rows($query001) > 0) {
             $actualchar = mysql_fetch_assoc($query001);
             $numchars++;
         } else {
-            mysql_query("UPDATE $server_db.users SET `character` = 0 WHERE id = $account_extra[id]") or die(mysql_error("Cannot remove character from web db"));
+            mysql_query("UPDATE '.DB'.users SET `character` = 0 WHERE id = $account_extra[id]") or die(mysql_error("Cannot remove character from web db"));
             header("Location : ".$website['root']."");
         }
     } else {
 
-        $get_realms = mysql_query("SELECT * FROM $server_adb.realmlist ORDER BY `id` DESC");
+        $get_realms = mysql_query("SELECT * FROM '.DBAUTH'.realmlist ORDER BY `id` DESC");
         if ($get_realms) {
             while ($realm = mysql_fetch_array($get_realms)) {
                 $realm_extra = mysql_fetch_assoc(mysql_query("SELECT * FROM realms WHERE realmid = '" . $realm['id'] . "'"));
@@ -73,11 +73,11 @@ if (!isset($_SESSION['username'])) {
                 $server_cdb = $realm_extra['char_db'];
                 $server_wdb = $realm_extra['world_db'];
 
-                $check_chars = mysql_query("SELECT * FROM $server_cdb.characters WHERE account = '" . $account_information['id'] . "' ORDER BY `guid` DESC");
+                $check_chars = mysql_query("SELECT * FROM '.DBCHARS'.characters WHERE account = '" . $account_information['id'] . "' ORDER BY `guid` DESC");
                 if ($check_chars) {
 
                     //Re-Check
-                    $account_extra = mysql_fetch_assoc(mysql_query("SELECT * FROM $server_db.users WHERE id = '" . $account_information['id'] . "'"));
+                    $account_extra = mysql_fetch_assoc(mysql_query("SELECT * FROM '.DB'.users WHERE id = '" . $account_information['id'] . "'"));
 
                     if ($account_extra['character'] == 0) {
                         $actualchar = mysql_fetch_assoc($check_chars);
@@ -160,7 +160,7 @@ if (!isset($_SESSION['username'])) {
         ?>
         <div class="user-plate">
             <a id="user-plate" class="card-character plate-<?php echo $side; ?> ajax-update" rel="np" href="#"> <!--http://eu.battle.net/static-render/eu/twisting-nether/68/83271236-avatar.jpg?alt=/wow/static/images/2d/avatar/6-0.jpg-->
-                <span class="card-portrait" style="background-image:url(<?php echo $website['root']; ?>wow/static/images/2d/avatar/<?php echo $actualchar["race"] . "-" . $actualchar["gender"]; ?>.jpg)"></span>
+                <span class="card-portrait" style="background-image:url(<?php echo BASE_URL ?>wow/static/images/2d/avatar/<?php echo $actualchar["race"] . "-" . $actualchar["gender"]; ?>.jpg)"></span>
             </a>
             <div class="meta-wrapper meta-<?php echo $side; ?> ajax-update">
                 <div class="meta">
@@ -183,12 +183,12 @@ if (!isset($_SESSION['username'])) {
                                     <br />
                                     <span class="realm
 									<?php
-                                                $get_realms = mysql_query("SELECT * FROM $server_adb.realmlist ORDER BY `id` DESC");
+                                                $get_realms = mysql_query("SELECT * FROM '.DBAUTH'.realmlist ORDER BY `id` DESC");
                                                 if ($get_realms) {
                                                     while ($realm = mysql_fetch_array($get_realms)) {
                                                 $realm_extra = mysql_fetch_assoc(mysql_query("SELECT * FROM realms WHERE realmid = '" . $realm['id'] . "'"));
                                                 $server_cdb = $realm_extra['char_db'];
-                                                $check_chars = mysql_query("SELECT * FROM $server_cdb.characters WHERE account = '" . $account_information['id'] . "' ORDER BY `guid` DESC");
+                                                $check_chars = mysql_query("SELECT * FROM '.DBCHARS'.characters WHERE account = '" . $account_information['id'] . "' ORDER BY `guid` DESC");
                                                 $current_realm = mysql_fetch_assoc(mysql_query("SELECT * FROM realms WHERE id = '" . $account_extra['char_realm'] . "'"));
                                                 if ($check_chars) {
                                                     while ($char = mysql_fetch_array($check_chars)) {
@@ -205,7 +205,7 @@ if (!isset($_SESSION['username'])) {
                                 ?>
                                 </div>
                                 <div class="context-links">
-                                    <a href="<?php echo $website['root']; ?>advanced.php?name=<?php echo @$actualchar["name"]; ?>" title="<?php echo $uplate['profile']; ?>" rel="np" class="icon-profile link-first">
+                                    <a href="<?php echo BASE_URL ?>advanced.php?name=<?php echo @$actualchar["name"]; ?>" title="<?php echo $uplate['profile']; ?>" rel="np" class="icon-profile link-first">
                                         <?php echo $uplate['profile']; ?>
                                     </a>
                                     <a href="#" title="<?php echo $uplate['post']; ?>" rel="np" class="icon-posts">
@@ -220,13 +220,13 @@ if (!isset($_SESSION['username'])) {
                                 <div class="primary chars-pane">
                                     <div class="char-wrapper">
                                         <?php
-                                        $get_realms = mysql_query("SELECT * FROM $server_adb.realmlist ORDER BY `id` DESC");
+                                        $get_realms = mysql_query("SELECT * FROM '.DBAUTH'.realmlist ORDER BY `id` DESC");
                                         if ($get_realms) {
                                             while ($realm = mysql_fetch_array($get_realms)) {
                                                 $realm_extra = mysql_fetch_assoc(mysql_query("SELECT * FROM realms WHERE realmid = '" . $realm['id'] . "'"));
 
                                                 $server_cdb = $realm_extra['char_db'];
-                                                $check_chars = mysql_query("SELECT * FROM $server_cdb.characters WHERE account = '" . $account_information['id'] . "' ORDER BY `guid` DESC");
+                                                $check_chars = mysql_query("SELECT * FROM '.DBCHARS'.characters WHERE account = '" . $account_information['id'] . "' ORDER BY `guid` DESC");
 
                                                 $current_realm = mysql_fetch_assoc(mysql_query("SELECT * FROM realms WHERE id = '" . $account_extra['char_realm'] . "'"));
 
@@ -320,5 +320,5 @@ if (!isset($_SESSION['username'])) {
 			</div>';
     }
 }
-mysql_select_db($server_db, $connection_setup) or die(mysql_error());
+mysql_select_db(DB, $connection_setup) or die(mysql_error());
 ?>

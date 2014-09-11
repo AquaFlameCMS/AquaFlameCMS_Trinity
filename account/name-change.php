@@ -1,10 +1,10 @@
 <?php
 include("../configs.php");
 $page_cat = "security";
-if(!isset($_SESSION['username'])) header('Location: '.$website['root'].'account_log.php');
-if(!isset($_POST['character'])) header('Location: '.$website['root'].'account_log.php');
-if(!isset($_POST['realm'])) header('Location: '.$website['root'].'account_log.php');
-if(!isset($_POST['newname'])) header('Location: '.$website['root'].'account_log.php'); else if(!ctype_alpha($_POST['newname'])) header('Location: name.php');
+if(!isset($_SESSION['username'])) header('Location: '.BASE_URL.'account_log.php');
+if(!isset($_POST['character'])) header('Location: '.BASE_URL.'account_log.php');
+if(!isset($_POST['realm'])) header('Location: '.BASE_URL.'account_log.php');
+if(!isset($_POST['newname'])) header('Location: '.BASE_URL.'account_log.php'); else if(!ctype_alpha($_POST['newname'])) header('Location: name.php');
 ?>
 
 <!doctype html>
@@ -13,27 +13,27 @@ if(!isset($_POST['newname'])) header('Location: '.$website['root'].'account_log.
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
-<title><?php echo $website['title']; ?> - Race Change</title>
+<title><?php echo TITLE ?> - Race Change</title>
 <meta content="false" http-equiv="imagetoolbar" />
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
-<meta name="description" content="<?php echo $website['description']; ?>">
-<meta name="keywords" content="<?php echo $website['keywords']; ?>">
-<link rel="shortcut icon" href="../wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
-<link rel="stylesheet" media="all" href="../wow/static/local-common/css/management/common.css" />
-<link rel="stylesheet" media="all" href="../wow/static/css/bnet.css" />
-<link rel="stylesheet" media="print" href="../wow/static/css/bnet-print.css" />
-<link rel="stylesheet" media="all" href="../wow/static/css/management/dashboard.css" />
-<link rel="stylesheet" media="all" href="../wow/static/css/management/wow/dashboard.css" />
+<meta name="description" content="<?php echo DESCRIPTION ?>">
+<meta name="keywords" content="<?php echo KEYWORDS ?>">
+<link rel="shortcut icon" href="<?php echo BASE_URL ?>wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
+<link rel="stylesheet" media="all" href="<?php echo BASE_URL ?>wow/static/local-common/css/management/common.css" />
+<link rel="stylesheet" media="all" href="<?php echo BASE_URL ?>wow/static/css/bnet.css" />
+<link rel="stylesheet" media="print" href="<?php echo BASE_URL ?>wow/static/css/bnet-print.css" />
+<link rel="stylesheet" media="all" href="<?php echo BASE_URL ?>wow/static/css/management/dashboard.css" />
+<link rel="stylesheet" media="all" href="<?php echo BASE_URL ?>wow/static/css/management/wow/dashboard.css" />
 <link rel="stylesheet" media="all" href="../wow/account/css/management/payment.css" /> />
-<script src="../wow/static/local-common/js/third-party/jquery-1.4.4-p1.min.js"></script>
-<script src="../wow/static/local-common/js/core.js"></script>
-<script src="../wow/static/local-common/js/tooltip.js"></script>
-<script src="../wow/static/local-common/js/third-party/swfobject.js?v37"></script>
-<script src="../wow/static/js/management/dashboard.js?v23"></script>
-<script src="../wow/static/js/management/wow/dashboard.js?v23"></script>
-<script src="../wow/static/js/bam.js?v23"></script>
-<script src="../wow/static/local-common/js/tooltip.js?v37"></script>
-<script src="../wow/static/local-common/js/menu.js?v37"></script>
+<script src="<?php echo BASE_URL ?>wow/static/local-common/js/third-party/jquery-1.4.4-p1.min.js"></script>
+<script src="<?php echo BASE_URL ?>wow/static/local-common/js/core.js"></script>
+<script src="<?php echo BASE_URL ?>wow/static/local-common/js/tooltip.js"></script>
+<script src="<?php echo BASE_URL ?>wow/static/local-common/js/third-party/swfobject.js?v37"></script>
+<script src="<?php echo BASE_URL ?>wow/static/js/management/dashboard.js?v23"></script>
+<script src="<?php echo BASE_URL ?>wow/static/js/management/wow/dashboard.js?v23"></script>
+<script src="<?php echo BASE_URL ?>wow/static/js/bam.js?v23"></script>
+<script src="<?php echo BASE_URL ?>wow/static/local-common/js/tooltip.js?v37"></script>
+<script src="<?php echo BASE_URL ?>wow/static/local-common/js/menu.js?v37"></script>
 <!--[if IE 6]> <script type="text/javascript">
 //<![CDATA[
 try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
@@ -90,7 +90,7 @@ _gaq.push(['_trackPageLoadTime']);
 <div class="header">
     <h2 class="subcategory">Character Services</h2>
     <h3 class="headline">Name Change</h3>
-    <a href="#"><img src="../wow/static/local-common/images/game-icons/wow.png" alt="World of Warcraft" width="48" height="48" /></a>
+    <a href="#"><img src="<?php echo BASE_URL ?>wow/static/local-common/images/game-icons/wow.png" alt="World of Warcraft" width="48" height="48" /></a>
 </div>
 
 <?php
@@ -121,7 +121,7 @@ _gaq.push(['_trackPageLoadTime']);
     <div class="content">
         <div class="item last-item">
             <span class="thumb">
-                <img src="../wow/account/images/products/marketplace/wow-pnc/name-change-small.png" alt="Name Change" title="" />
+                <img src="<?php echo BASE_URL ?>wow/account/images/products/marketplace/wow-pnc/name-change-small.png" alt="Name Change" title="" />
             </span>
             <div class="product-detail clear-after">
                 <h4>Name Change</h4>
@@ -275,7 +275,7 @@ _gaq.push(['_trackPageLoadTime']);
         </div>
     </div>
     <div id="payment-toggle-loading">
-    <img src="../wow/account/images/icons/loading-light-large.gif" alt="loading" />
+    <img src="<?php echo BASE_URL ?>wow/account/images/icons/loading-light-large.gif" alt="loading" />
     </div>
 </div>
 <script type="text/javascript">
@@ -423,9 +423,9 @@ other: 'Other'
 };
 //]]>
 </script>
-<script src="../wow/static/js/bam.js?v23"></script>
-<script src="../wow/static/local-common/js/tooltip.js?v35"></script>
-<script src="../wow/static/local-common/js/menu.js?v35"></script>
+<script src="<?php echo BASE_URL ?>wow/static/js/bam.js?v23"></script>
+<script src="<?php echo BASE_URL ?>wow/static/local-common/js/tooltip.js?v35"></script>
+<script src="<?php echo BASE_URL ?>wow/static/local-common/js/menu.js?v35"></script>
 <script type="text/javascript">
 $(function() {
 Menu.initialize();
@@ -434,7 +434,7 @@ Locale.dataPath = 'data/i18n.frag.xml';
 });
 </script>
 <!--[if lt IE 8]>
-<script type="text/javascript" src="../wow/static/local-common/js/third-party/jquery.pngFix.pack.js?v35"></script>
+<script type="text/javascript" src="<?php echo BASE_URL ?>wow/static/local-common/js/third-party/jquery.pngFix.pack.js?v35"></script>
 <script type="text/javascript">$('.png-fix').pngFix();</script>
 <![endif]-->
 <script type="text/javascript">
@@ -448,7 +448,7 @@ Login.embeddedUrl = 'https://eu.battle.net/login/login.frag';
 });
 //]]>
 </script>
-<!--[if lt IE 8]> <script type="text/javascript" src="../wow/static/local-common/js/third-party/jquery.pngFix.pack.js?v35"></script>
+<!--[if lt IE 8]> <script type="text/javascript" src="<?php echo BASE_URL ?>wow/static/local-common/js/third-party/jquery.pngFix.pack.js?v35"></script>
 <script type="text/javascript">
 //<![CDATA[
 $('.png-fix').pngFix(); //]]>

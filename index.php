@@ -10,17 +10,17 @@ $page_cat = "home";
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <HTML>
 <head>
-	<title><?php echo $website['title']; ?></title>
+	<title><?php echo TITLE ?></title>
 	<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
 	<meta name="viewport" content="width=device-width">
-	<meta name="description" content="<?php echo $website['description']; ?>">
-    <meta name="keywords" content="<?php echo $website['keywords']; ?>">
-	<link rel="shortcut icon" href="<?php echo $website['root']; ?>wow/static/local-common/images/favicons/wow.png" type="image/x-icon">
+	<meta name="description" content="<?php echo DESCRIPTION ?>">
+    <meta name="keywords" content="<?php echo KEYWORDS ?>">
+	<link rel="shortcut icon" href="<?php echo BASE_URL ?>wow/static/local-common/images/favicons/wow.png" type="image/x-icon">
 	<?php GetStyle(); ?>
 	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-	<script src="<?php echo $website['root']; ?>wow/static/local-common/js/third-party/jquery-1.4.4-p1.min.js"></script>
-	<script src="<?php echo $website['root']; ?>wow/static/local-common/js/core.js"></script>
-	<script src="<?php echo $website['root']; ?>wow/static/local-common/js/tooltip.js"></script>
+	<script src="<?php echo BASE_URL ?>wow/static/local-common/js/third-party/jquery-1.4.4-p1.min.js"></script>
+	<script src="<?php echo BASE_URL ?>wow/static/local-common/js/core.js"></script>
+	<script src="<?php echo BASE_URL ?>wow/static/local-common/js/tooltip.js"></script>
 	<script src="http://static.wowhead.com/widgets/power.js"></script>
 	<!--[if IE 6]> <script type="text/javascript">
 	//<![CDATA[
@@ -38,7 +38,7 @@ $page_cat = "home";
 	<ol class="ui-breadcrumb">
 		<li class="last">
 			<a href="index.html" rel="np" itemprop="url">
-				<span class="breadcrumb-text" itemprop="name"><?php echo $website['title']; ?></span>
+				<span class="breadcrumb-text" itemprop="name"><?php echo TITLE ?></span>
 			</a>
 		</li>
 	</ol>

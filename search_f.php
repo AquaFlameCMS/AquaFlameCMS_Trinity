@@ -13,11 +13,11 @@ $page_cat = "services";
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
-<title>Search - <?php echo $website['title']; ?></title>
+<title>Search - <?php echo TITLE ?></title>
 <meta content="false" http-equiv="imagetoolbar" />
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
-<meta name="description" content="<?php echo $website['description']; ?>">
-<meta name="keywords" content="<?php echo $website['keywords']; ?>">
+<meta name="description" content="<?php echo DESCRIPTION ?>">
+<meta name="keywords" content="<?php echo KEYWORDS ?>">
 <link rel="shortcut icon" href="wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
 <link rel="stylesheet" href="wow/static/local-common/css/common.css" />
 <link title="World of Warcraft - News" href="feed/newshtml.html" type="application/atom+xml" rel="alternate"/>
@@ -69,7 +69,7 @@ _gaq.push(['_trackPageLoadTime']);
       	<div class="content-trail">
         	<ol class="ui-breadcrumb">
           	<li>
-            	<a href="index.php" rel="np"><?php echo $website['title']; ?></a>
+            	<a href="index.php" rel="np"><?php echo TITLE ?></a>
 				<span class="breadcrumb-arrow"></span>
           	</li>
           	<li>
@@ -279,7 +279,7 @@ Core.load("/wow/static/local-common/js/third-party/jquery-ui-1.8.6.custom.min.js
 Core.load("/wow/static/local-common/js/search.js?v35");
 Core.load("/wow/static/local-common/js/login.js?v35", false, function() {
 if (typeof Login !== 'undefined') {
-Login.embeddedUrl = '<?php echo $website['root'];?>loginframe.php';
+Login.embeddedUrl = '<?php echo BASE_URL ?>loginframe.php';
 }
 });
 //]]>

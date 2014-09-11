@@ -3,10 +3,10 @@ require_once("configs.php");
 $page_cat = "home";
 ?>
 <head>
-<title><?php echo $website['title']; ?></title>
+<title><?php echo TITLE ?></title>
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"/>
-<meta name="description" content="<?php echo $website['description']; ?>">
-<meta name="keywords" content="<?php echo $website['keywords']; ?>">
+<meta name="description" content="<?php echo DESCRIPTION ?>">
+<meta name="keywords" content="<?php echo KEYWORDS ?>">
 <link rel="shortcut icon" href="wow/static/local-common/images/favicons/wow.png" type="image/x-icon"/>
 <link rel="stylesheet" type="text/css" media="all" href="wow/static/local-common/css/common.css?v15"/>
 <!--[if IE]><link rel="stylesheet" type="text/css" media="all" href="wow/static/local-common/css/common-ie.css?v15" /><![endif]-->
@@ -36,7 +36,7 @@ $page_cat = "home";
 		<div class="content-top">
 			<div class="content-trail">
 				<ol class="ui-breadcrumb">
-					<li><a href="<?php echo $website['root']; ?>" rel="np" class=""><?php echo $website['title']; ?>
+					<li><a href="<?php echo BASE_URL ?>" rel="np" class=""><?php echo TITLE ?>
 					</a><span class="breadcrumb-arrow"></span></li>
 					<li class="last"><a href="forgot-pw.php" rel="np">Forgot Password</a></li>
 				</ol>

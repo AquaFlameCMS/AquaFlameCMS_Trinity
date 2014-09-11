@@ -13,10 +13,10 @@ $character = Factory_Armory::createCharacter($_GET['name']);
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
-<title><?php echo $website['title']; ?> - Armory</title>
+<title><?php echo TITLE ?> - Armory</title>
 <meta content="false" http-equiv="imagetoolbar" />
-<meta name="description" content="<?php echo $website['description']; ?>">
-<meta name="keywords" content="<?php echo $website['keywords']; ?>">
+<meta name="description" content="<?php echo DESCRIPTION ?>">
+<meta name="keywords" content="<?php echo KEYWORDS ?>">
 <link rel="shortcut icon" href="wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
 <link rel="stylesheet" href="wow/static/local-common/css/common.css" />
 <link title="World of Warcraft - News" href="wow/en/feed/news" type="application/atom+xml" rel="alternate"/>
@@ -42,8 +42,8 @@ try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
 <div class="content-trail">
 <ol class="ui-breadcrumb">
 <li>
-<a href="<?php echo $website['root']; ?>" rel="np">
-<?php echo $website['title']; ?>
+<a href="<?php echo BASE_URL ?>" rel="np">
+<?php echo TITLE ?>
 </a>
 <span class="breadcrumb-arrow"></span>
 </li>
@@ -58,7 +58,7 @@ Community
 <?php echo $character->getObjectInfo()->name;?> @ <?php echo @$name_realm1['realm']; ?>
 </a>
 </li>
-	<li><a href="index.php" rel="np"><?php echo $website['title']; ?></a></li>
+	<li><a href="index.php" rel="np"><?php echo TITLE ?></a></li>
 	<li><a href="shop" rel="np">Community</a></li>
 	<li class="last"><a href="" rel="np"><?php echo $character->getObjectInfo()->name;?> @ <?php echo @$name_realm1['realm']; ?></a></li>
 </ol>
@@ -1585,8 +1585,8 @@ other: 'Other'
 };
 //]]>
 </script>
-<script src="<?php echo $website['root']; ?>wow/static/local-common/js/menu.js"></script>
-<script src="<?php echo $website['root']; ?>wow/static/js/wow.js"></script>
+<script src="<?php echo BASE_URL ?>wow/static/local-common/js/menu.js"></script>
+<script src="<?php echo BASE_URL ?>wow/static/js/wow.js"></script>
 <script type="text/javascript">
 //<![CDATA[
 $(function(){
@@ -1595,15 +1595,15 @@ Search.initialize('/ta/lookup');
 });
 //]]>
 </script>
-<script src="<?php echo $website['root']; ?>wow/static/js/profile.js"></script>
-<script src="<?php echo $website['root']; ?>wow/static/js/character/summary.js"></script>
+<script src="<?php echo BASE_URL ?>wow/static/js/profile.js"></script>
+<script src="<?php echo BASE_URL ?>wow/static/js/character/summary.js"></script>
 <script type="text/javascript">
 //<![CDATA[
-Core.load("<?php echo $website['root']; ?>wow/static/local-common/js/third-party/jquery-ui-1.8.6.custom.min.js");
-Core.load("<?php echo $website['root']; ?>wow/static/local-common/js/search.js");
-Core.load("<?php echo $website['root']; ?>wow/static/local-common/js/login.js", false, function() {
+Core.load("<?php echo BASE_URL ?>wow/static/local-common/js/third-party/jquery-ui-1.8.6.custom.min.js");
+Core.load("<?php echo BASE_URL ?>wow/static/local-common/js/search.js");
+Core.load("<?php echo BASE_URL ?>wow/static/local-common/js/login.js", false, function() {
 if (typeof Login !== 'undefined') {
-Login.embeddedUrl = '<?php echo $website['root'];?>loginframe.php';
+Login.embeddedUrl = '<?php echo BASE_URL ?>loginframe.php';
 }
 });
 //]]>

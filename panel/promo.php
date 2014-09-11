@@ -31,7 +31,7 @@ $i=rand(0,3);
 	<div class="bnet-offer">
 		<!--  -->
 		<div class="bnet-offer-bg">
-			<a href="<?php echo $website['root']; ?><?php echo $href[$i];?>" target="_blank" id="ad10069924" class="bnet-offer-image">
+			<a href="<?php echo BASE_URL ?><?php echo $href[$i];?>" target="_blank" id="ad10069924" class="bnet-offer-image">
 			<?php
 				$con=mysqli_connect(DBHOST,DBUSER,DBPASS,DB);
 				$query= "SELECT * FROM themes WHERE active=1";
@@ -40,7 +40,7 @@ $i=rand(0,3);
 				{
 				$CSS_LINK = $row['css_link'];
 				/* Show random picture */
-				echo '<img src="'.$website['root'].'wow/static/Themes/'.$CSS_LINK.'/images/panel/'.$imagenes[$i].'" width="300" height="250" alt="'.$descripcion[$i].'"/>'; 
+				echo '<img src="'.BASE_URL.'wow/static/Themes/'.$CSS_LINK.'/images/panel/'.$imagenes[$i].'" width="300" height="250" alt="'.$descripcion[$i].'"/>'; 
 				}
 			?>
 			</a>

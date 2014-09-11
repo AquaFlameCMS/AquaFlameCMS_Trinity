@@ -12,9 +12,9 @@ include("functions/arena_items_func.php");
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <html>
 <head>
-<title><?php echo $name = $_GET['name'];?> - <?php echo $website['title']; ?></title>
-<meta name="description" content="<?php echo $website['description']; ?>">
-<meta name="keywords" content="<?php echo $website['keywords']; ?>">
+<title><?php echo $name = $_GET['name'];?> - <?php echo TITLE ?></title>
+<meta name="description" content="<?php echo DESCRIPTION ?>">
+<meta name="keywords" content="<?php echo KEYWORDS ?>">
 <link rel="shortcut icon" href="wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
 <link rel="search" type="application/opensearchdescription+xml" href="http://eu.battle.net/en-gb/data/opensearch" title="Battle.net Search" />
 <link rel="stylesheet" href="wow/static/local-common/css/armory/common.css?" />
@@ -69,7 +69,7 @@ _gaq.push(['_trackPageLoadTime']);
 	<div class="content-trail">
 	<ol class="ui-breadcrumb">
 	<li>
-	<a href="index.php" rel="np"><?php echo $website['title']; ?></a>
+	<a href="index.php" rel="np"><?php echo TITLE ?></a>
 	<span class="breadcrumb-arrow"></span>
 	</li>
 	<li>
@@ -125,7 +125,7 @@ _gaq.push(['_trackPageLoadTime']);
 				?>
 				<div class="under-name">
 					<span class="teamsize"><b><?php echo $type ?></b></span> <span class="faction"><?php echo $faction; ?></span> Arena Team<span class="comma">,</span>
-					<span class="text" data-tooltip="<?php echo $website['title']; ?>">
+					<span class="text" data-tooltip="<?php echo TITLE ?>">
 					<a href=""><font color=""><?php echo $website['title'];?></font></a> <!-- There should be Battlegroup name -->
 					</span>
 				</div>
@@ -463,7 +463,7 @@ other: 'Other'
 //<![CDATA[
 Core.load("wow/static/local-common/js/third-party/jquery-ui-1.8.6.custom.min.js?");
 Core.load("wow/static/local-common/js/login.js?", false, function() {
-Login.embeddedUrl = '<?php echo $website['root'];?>loginframe.php';
+Login.embeddedUrl = '<?php echo BASE_URL ?>loginframe.php';
 });
 //]]>
 </script>

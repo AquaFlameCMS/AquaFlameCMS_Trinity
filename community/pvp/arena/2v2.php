@@ -8,10 +8,10 @@ require_once("../../../configs.php");
 <!--[if gt IE 8]><!--><html class="no-js"><!--<![endif]-->
 <html lang="en-gb">
 <head>
-<title><?php echo $website['title']; ?> - Status</title>
+<title><?php echo TITLE ?> - Status</title>
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"/>
-<meta name="description" content="<?php echo $website['description']; ?>">
-<meta name="keywords" content="<?php echo $website['keywords']; ?>">
+<meta name="description" content="<?php echo DESCRIPTION ?>">
+<meta name="keywords" content="<?php echo KEYWORDS ?>">
 <link rel="shortcut icon" href="../../../wow/static/local-common/images/favicons/wow.png" type="image/x-icon"/>
 <link rel="stylesheet" href="../../../wow/static/local-common/css/common.css?v15"/>
 <link rel="stylesheet" type="text/css" media="all" href="../../../wow/static/css/wow.css?v7"/>
@@ -54,21 +54,21 @@ _gaq.push(['_trackPageview']);
 		<div class="content-trail">
 			<ol class="ui-breadcrumb">
 				<li>
-				<a href="<?php echo $website['root']; ?>" rel="np"><?php echo $website['title']; ?>
+				<a href="<?php echo BASE_URL ?>" rel="np"><?php echo TITLE ?>
 				</a>
 				<span class="breadcrumb-arrow"></span>
 				</li>
 				<li>
-				<a href="<?php echo $website['root']; ?>community/" rel="np"> <?php echo $Community['Community'];?>
+				<a href="<?php echo BASE_URL ?>community/" rel="np"> <?php echo $Community['Community'];?>
 				</a>
 				<span class="breadcrumb-arrow"></span>
 				</li>
 				<li>
-				<a href="<?php echo $website['root']; ?>" rel="np"> PvP</a>
+				<a href="<?php echo BASE_URL ?>" rel="np"> PvP</a>
 				<span class="breadcrumb-arrow"></span>
 				</li>
 				<li class="last">
-				<a href="<?php echo $website['root']; ?>community/pvp/2v2.php" rel="np"> Arena 2v2</a>
+				<a href="<?php echo BASE_URL ?>community/pvp/2v2.php" rel="np"> Arena 2v2</a>
 				</li>
 			</ol>
 		</div>

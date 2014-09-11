@@ -7,8 +7,8 @@
  <html lang="en-gb">
   <head>
     <title>World of Warcraft</title>
-	<meta name="description" content="<?php echo $website['description']; ?>">
-	<meta name="keywords" content="<?php echo $website['keywords']; ?>">
+	<meta name="description" content="<?php echo DESCRIPTION ?>">
+	<meta name="keywords" content="<?php echo KEYWORDS ?>">
 	<link rel="shortcut icon" href="wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
     <link rel="stylesheet" href="wow/static/local-common/css/common.css?v15"/>
     <link rel="stylesheet" href="wow/static/_themes/bam/css/master.css?v1"/>
@@ -16,7 +16,7 @@
     <script src="wow/static/local-common/js/core.js?v15"></script>
 
     <script>
-      var targetOrigin = "<?php echo $website['address']; ?>";
+      var targetOrigin = "<?php echo BASE_URL ?>";
 
       function updateParent(action, key, value) {
         var obj = { action: action };

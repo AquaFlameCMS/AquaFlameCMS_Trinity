@@ -10,7 +10,7 @@ $page_cat="media";
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
     <head>
         <meta charset="utf-8">
-<title><?php echo $website['title']; ?></title>
+<title><?php echo TITLE ?></title>
 <meta content="false" http-equiv="imagetoolbar" />
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
 <link rel="shortcut icon" href="../../wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
@@ -52,7 +52,7 @@ _gaq.push(['_trackPageview']);
 		<div class="content-top">
 			<div class="content-trail">
 			<ol class="ui-breadcrumb">
-				<li><a href="../../" rel="np"><?php echo $website['title']; ?></a><span class="breadcrumb-arrow"></span></li>
+				<li><a href="../../" rel="np"><?php echo TITLE ?></a><span class="breadcrumb-arrow"></span></li>
 				<li><a href="../" rel="np"><?php echo $Media['Media']; ?></a><span class="breadcrumb-arrow"></span></li>
         <li class="last childless"><a href="../screenshots" rel="np">
 Screenshots

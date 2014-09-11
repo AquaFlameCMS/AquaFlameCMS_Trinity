@@ -10,22 +10,23 @@ include_once('functions.d/GetShopTheme.php');
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
-<title><?php echo $website['title']; ?> - <?php echo $Services['Services']; ?></title>
+<title><?php echo TITLE ?> - <?php echo $Services['Services']; ?></title>
 <meta content="false" http-equiv="imagetoolbar" />
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
-<meta name="description" content="<?php echo $website['description']; ?>">
-<meta name="keywords" content="<?php echo $website['keywords']; ?>">
-<link rel="shortcut icon" href="../wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
+<meta name="description" content="<?php echo DESCRIPTION ?>">
+<meta name="keywords" content="<?php echo KEYWORDS ?>">
+<link rel="shortcut icon" href="<?php echo BASE_URL ?>wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
 <?php GetShopTheme(); ?>
-<script src="../wow/static/local-common/js/third-party/jquery.js"></script>
-<script src="../wow/static/local-common/js/core.js?v15"></script>
-<script src="../wow/static/local-common/js/tooltip.js?v15"></script>
+<script src="<?php echo BASE_URL ?>wow/static/local-common/js/third-party/jquery.js"></script>
+<script src="<?php echo BASE_URL ?>wow/static/local-common/js/core.js?v15"></script>
+<script src="<?php echo BASE_URL ?>wow/static/local-common/js/tooltip.js?v15"></script>
 <!--[if IE 6]> <script type="text/javascript">
 //<![CDATA[
 try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
 //]]>
 </script>
-<![endif]--></head>
+<![endif]-->
+</head>
 <body class="en-us services-home logged-in">
 <div id="wrapper">
 <?php include("../header.php"); ?>
@@ -34,8 +35,8 @@ try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
 			<div class="content-trail">
 				<ol class="ui-breadcrumb">
 					<li itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-					<a href="<?php echo $website['root']; ?>" rel="np" class="breadcrumb-arrow" itemprop="url">
-					<span class="breadcrumb-text" itemprop="name"><?php echo $website['title']; ?></span>
+					<a href="<?php echo BASE_URL ?>" rel="np" class="breadcrumb-arrow" itemprop="url">
+					<span class="breadcrumb-text" itemprop="name"><?php echo TITLE ?></span>
 					</a>
 					</li>
 					<li class="last" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
@@ -63,16 +64,16 @@ try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
 						<div id="free-services" class="services-column">
 							<h2 class="header"><?php echo $Shop['shop_5']; ?> </h2>
 							<ul>
-								<li><a href="<?php echo $website['root']; ?>shop/recruit-a-friend/" class="free-services-raf">
+								<li><a href="<?php echo BASE_URL ?>shop/recruit-a-friend/" class="free-services-raf">
 								<span><?php echo $Shop['shop_6']; ?></span></a>
 								</li>
-								<li><a href="<?php echo $website['root']; ?>account/chars-unst.php" class="free-services-sor">
+								<li><a href="<?php echo BASE_URL ?>account/chars-unst.php" class="free-services-sor">
 								<span><?php echo $Shop['shop_7']; ?></span></a>
 								</li>
 								<li><a href="#" class="free-services-item-restoration">
 								<span><?php echo $Shop['shop_8']; ?></span></a>
 								</li>
-								<li><a href="<?php echo $website['root']; ?>shop/avatar" class="free-services-mobile-armory">
+								<li><a href="<?php echo BASE_URL ?>shop/avatar" class="free-services-mobile-armory">
 								<span><?php echo $Shop['shop_9']; ?></span></a>
 								</li>
 								<li><a href="#" class="free-services-security">
@@ -83,24 +84,24 @@ try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
 						<div id="paid-services" class="services-column">
 							<h2 class="header"><?php echo $Shop['shop_11']; ?></h2>
 							<ul>
-								<li><a href="<?php echo $website['root']; ?>shop/character-transfer/" class="paid-services-character-transfer">
+								<li><a href="<?php echo BASE_URL ?>shop/character-transfer/" class="paid-services-character-transfer">
 								<span><?php echo $Shop['shop_12']; ?></span></a>
 								</li>
-								<li><a href="<?php echo $website['root']; ?>shop/faction-change/" class="paid-services-faction-change">
+								<li><a href="<?php echo BASE_URL ?>shop/faction-change/" class="paid-services-faction-change">
 								<span><?php echo $Shop['shop_13']; ?></span></a>
 								</li>
-								<li><a href="<?php echo $website['root']; ?>shop/race-change/" class="paid-services-race-change">
+								<li><a href="<?php echo BASE_URL ?>shop/race-change/" class="paid-services-race-change">
 								<span><?php echo $Shop['shop_14']; ?></span></a>
 								</li>
-								<li><a href="<?php echo $website['root']; ?>account/change_appear.php" class="paid-services-character-customization">
+								<li><a href="<?php echo BASE_URL ?>account/change_appear.php" class="paid-services-character-customization">
 								<span><?php echo $Shop['shop_15']; ?></span></a>
 								</li>
-								<li><a href="<?php echo $website['root']; ?>account/change_name.php" class="paid-services-name-change">
+								<li><a href="<?php echo BASE_URL ?>account/change_name.php" class="paid-services-name-change">
 								<span><?php echo $Shop['shop_16']; ?></span></a>
 								</li>
 							</ul>
 						</div>
-						<a href="<?php echo $website['root']; ?>account/raf-invite.php" class="ad-raf"><span><?php echo $Shop['shop_17']; ?></span></a>
+						<a href="<?php echo BASE_URL ?>account/raf-invite.php" class="ad-raf"><span><?php echo $Shop['shop_17']; ?></span></a>
 						</div> 
 					<div class="panel game-subscriptions">
 						<h2 class="header">
@@ -110,7 +111,7 @@ try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
 						<a href="#" class="game-title">
 						<span class="tooltip" data-tooltip="#wow-battlechest-tooltip" data-tooltip-options="{&quot;location&quot;: &quot;mouse&quot;}">World of Warcraft, TBC & WOTLK</span>
 						</a>
-						<a class="ui-button button1" href="<?php echo $website['root']; ?>account/change_client.php?client=2">
+						<a class="ui-button button1" href="<?php echo BASE_URL ?>account/change_client.php?client=2">
 						<span class="button-left"><span class="button-right"><?php echo $Shop['shop_19']; ?></span></span></a>
 						<br/>
 						<div id="wow-battlechest-tooltip" class="tooltip-content-div">
@@ -128,7 +129,7 @@ try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
 							<a class="ui-button button1"><span class="button-left"><span class="button-right"><?php echo $Shop['shop_19']; ?></span></span></a>
 							<br/>
 						</div>
-<p class="subscription-desc"><?php echo $website['title']; ?> <?php echo $Shop['shop_20']; ?> <a href="#"><?php echo $Shop['shop_21']; ?></p>
+<p class="subscription-desc"><?php echo TITLE ?> <?php echo $Shop['shop_20']; ?> <a href="#"><?php echo $Shop['shop_21']; ?></p>
 <span class="clear"><!-- --></span>
 </div>
 <?php
@@ -273,7 +274,7 @@ try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
 </div>
 </div>
 </div>
-<script type="text/javascript" src="../wow/static/local-common/js/search.js?v46"></script>
+<script type="text/javascript" src="<?php echo BASE_URL ?>wow/static/local-common/js/search.js?v46"></script>
 <script type="text/javascript">
 //<![CDATA[
 var xsToken = '';

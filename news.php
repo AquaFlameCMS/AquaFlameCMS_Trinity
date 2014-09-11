@@ -9,11 +9,11 @@ require_once("configs.php");
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
  <html lang="en-gb">
 <head>
-<title><?php echo $website['title']; ?></title>
+<title><?php echo TITLE ?></title>
 <meta content="false" http-equiv="imagetoolbar" />
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
-<meta name="description" content="<?php echo $website['description']; ?>">
-<meta name="keywords" content="<?php echo $website['keywords']; ?>">
+<meta name="description" content="<?php echo DESCRIPTION ?>">
+<meta name="keywords" content="<?php echo KEYWORDS ?>">
 <link rel="shortcut icon" href="wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
 <link rel="search" type="application/opensearchdescription+xml" href="http://eu.battle.net/en-gb/data/opensearch" title="WoW Search" />
 <?php GetStyle(); ?>
@@ -63,7 +63,7 @@ _gaq.push(['_trackPageview']);
 				<ol class="ui-breadcrumb">
 					<li itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
 					<a href="index.php" rel="np" class="breadcrumb-arrow" itemprop="url">
-					<span class="breadcrumb-text" itemprop="name"><?php echo $website['title']; ?></span>
+					<span class="breadcrumb-text" itemprop="name"><?php echo TITLE ?></span>
 					</a>
 					</li>
 					<?php
@@ -179,7 +179,7 @@ _gaq.push(['_trackPageview']);
 											.loader {
 											  width:24px;
 											  height:24px;
-											  background: url("'.$website['root'].'wow/static/images/loaders/canvas-loader.gif") no-repeat;
+											  background: url("'.BASE_URL.'wow/static/images/loaders/canvas-loader.gif") no-repeat;
 											 }
 											</style>';
 											echo '<div class="loader"></div><br /></center>';
@@ -215,8 +215,8 @@ _gaq.push(['_trackPageview']);
 							<div class="share-wrapper">
 								<div class="share-links">
 									<a class="facebook" href="https://www.facebook.com/sharer.php?u=<?php echo $website['address'].$website['root']; ?>news.php?id=<?php echo $news['id']; ?>" onclick="Core.trackEvent('wow- SNS', 'Sharing - Facebook', 'blog 14685348 - en-us'); window.open(this.href,'','height=450,width=550').focus(); return false;" title="Facebook"></a>
-									<a class="twitter" href="http://twitter.com/share?<?php echo $website['root']; ?>news.php?id=<?php echo $news['id']; ?>" onclick="Core.trackEvent('wow- SNS', 'Sharing - Twitter', 'blog 14685348 - en-us'); window.open(this.href,'','height=450,width=550').focus(); return false;" title="Twitter"></a>
-									<a class="reddit" href="http://www.reddit.com/submit?url=<?php echo $website['root']; ?>news.php?id=<?php echo $news['id']; ?>" onclick="Core.trackEvent('wow- SNS', 'Sharing - Reddit', 'blog 14685348 - en-us'); window.open(this.href,'','height=auto,width=auto').focus(); return false;" title="Reddit"></a>
+									<a class="twitter" href="http://twitter.com/share?<?php echo BASE_URL ?>news.php?id=<?php echo $news['id']; ?>" onclick="Core.trackEvent('wow- SNS', 'Sharing - Twitter', 'blog 14685348 - en-us'); window.open(this.href,'','height=450,width=550').focus(); return false;" title="Twitter"></a>
+									<a class="reddit" href="http://www.reddit.com/submit?url=<?php echo BASE_URL ?>news.php?id=<?php echo $news['id']; ?>" onclick="Core.trackEvent('wow- SNS', 'Sharing - Reddit', 'blog 14685348 - en-us'); window.open(this.href,'','height=auto,width=auto').focus(); return false;" title="Reddit"></a>
 									<span class="clear">
 									<!-- -->
 									</span>

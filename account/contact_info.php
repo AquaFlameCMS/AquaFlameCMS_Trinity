@@ -3,7 +3,7 @@ include("../configs.php");
 $page_cat = "settings";
 // Check, if username session is NOT set then this page will jump to login page
 if (!isset($_SESSION['username'])) {
-        header('Location: '.$website['root'].'account_log.php');		
+        header('Location: '.BASE_URL.'account_log.php');		
 }
 ?>
 
@@ -14,20 +14,20 @@ if (!isset($_SESSION['username'])) {
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
-<title><?php echo $website['title']; ?> - Account Information</title>
+<title><?php echo TITLE ?> - Account Information</title>
 <meta content="false" http-equiv="imagetoolbar" />
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
-<meta name="description" content="<?php echo $website['description']; ?>">
-<meta name="keywords" content="<?php echo $website['keywords']; ?>">
-<link rel="shortcut icon" href="../wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
-<link rel="stylesheet" media="all" href="../wow/static/local-common/css/common.css?v22" />
-<link rel="stylesheet" media="all" href="../wow/static/css/bnet.css?v21" />
-<link rel="stylesheet" media="print" href="../wow/static/css/bnet-print.css?v21" />
-<link rel="stylesheet" media="all" href="../wow/static/css/management/address-book.css?v21" />
-<link rel="stylesheet" media="all" href="../wow/static/css/ui.css?v21" />
-<script src="../wow/static/local-common/js/third-party/jquery-1.4.4-p1.min.js"></script>
-<script src="../wow/static/local-common/js/core.js?v22"></script>
-<script src="../wow/static/local-common/js/tooltip.js?v22"></script>
+<meta name="description" content="<?php echo DESCRIPTION ?>">
+<meta name="keywords" content="<?php echo KEYWORDS ?>">
+<link rel="shortcut icon" href="<?php echo BASE_URL ?>wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
+<link rel="stylesheet" media="all" href="<?php echo BASE_URL ?>wow/static/local-common/css/common.css?v22" />
+<link rel="stylesheet" media="all" href="<?php echo BASE_URL ?>wow/static/css/bnet.css?v21" />
+<link rel="stylesheet" media="print" href="<?php echo BASE_URL ?>wow/static/css/bnet-print.css?v21" />
+<link rel="stylesheet" media="all" href="<?php echo BASE_URL ?>wow/static/css/management/address-book.css?v21" />
+<link rel="stylesheet" media="all" href="<?php echo BASE_URL ?>wow/static/css/ui.css?v21" />
+<script src="<?php echo BASE_URL ?>wow/static/local-common/js/third-party/jquery-1.4.4-p1.min.js"></script>
+<script src="<?php echo BASE_URL ?>wow/static/local-common/js/core.js?v22"></script>
+<script src="<?php echo BASE_URL ?>wow/static/local-common/js/tooltip.js?v22"></script>
 <!--[if IE 6]> <script type="text/javascript">
 //<![CDATA[
 try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
@@ -73,7 +73,7 @@ _gaq.push(['_trackPageLoadTime']);
 <h3 class="headline">General &amp; Account Information</h3>
 </div>
 <div id="page-content" class="page-content">
-<p>These are your default account information when you registered first time on <?php echo $website['title']; ?></p>
+<p>These are your default account information when you registered first time on <?php echo TITLE ?></p>
 <div class="address-book" id="address-book">
 <div id="address-1" class="address-box primary-address border-5">
 <h4 class="caption">
@@ -222,9 +222,9 @@ pet: 'pet'
 };
 //]]>
 </script>
-<script src="../wow/static/js/bam.js?v21"></script>
-<script src="../wow/static/local-common/js/tooltip.js?v22"></script>
-<script src="../wow/static/local-common/js/menu.js?v22"></script>
+<script src="<?php echo BASE_URL ?>wow/static/js/bam.js?v21"></script>
+<script src="<?php echo BASE_URL ?>wow/static/local-common/js/tooltip.js?v22"></script>
+<script src="<?php echo BASE_URL ?>wow/static/local-common/js/menu.js?v22"></script>
 <script type="text/javascript">
 $(function() {
 Menu.initialize();
@@ -233,11 +233,11 @@ Locale.dataPath = 'data/i18n.frag.xml';
 });
 </script>
 <!--[if lt IE 8]>
-<script type="text/javascript" src="../wow/static/local-common/js/third-party/jquery.pngFix.pack.js?v22"></script>
+<script type="text/javascript" src="<?php echo BASE_URL ?>wow/static/local-common/js/third-party/jquery.pngFix.pack.js?v22"></script>
 <script type="text/javascript">$('.png-fix').pngFix();</script>
 <![endif]-->
-<script src="../wow/static/js/management/address-book.js?v21"></script>
-<script src="../wow/static/local-common/js/third-party/jquery-ui-1.8.1.custom.min.js?v22"></script>
+<script src="<?php echo BASE_URL ?>wow/static/js/management/address-book.js?v21"></script>
+<script src="<?php echo BASE_URL ?>wow/static/local-common/js/third-party/jquery-ui-1.8.1.custom.min.js?v22"></script>
 <script type="text/javascript">
 //<![CDATA[
 Core.load("wow/static/local-common/js/overlay.js?v22");
@@ -246,7 +246,7 @@ Core.load("wow/static/local-common/js/third-party/jquery-ui-1.8.6.custom.min.js?
 Core.load("wow/static/local-common/js/third-party/jquery.mousewheel.min.js?v22");
 Core.load("wow/static/local-common/js/third-party/jquery.tinyscrollbar.custom.js?v22");
 Core.load("wow/static/local-common/js/login.js?v22", false, function() {
-Login.embeddedUrl = '<?php echo $website['root'];?>loginframe.php';
+Login.embeddedUrl = '<?php echo BASE_URL ?>loginframe.php';
 });
 //]]>
 </script>

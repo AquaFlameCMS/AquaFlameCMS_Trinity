@@ -10,9 +10,9 @@ require_once("configs.php");
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <html>
 <head>
-<title><?php echo $website['title']; ?></title>
-<meta name="description" content="<?php echo $website['description']; ?>">
-<meta name="keywords" content="<?php echo $website['keywords']; ?>">
+<title><?php echo TITLE ?></title>
+<meta name="description" content="<?php echo DESCRIPTION ?>">
+<meta name="keywords" content="<?php echo KEYWORDS ?>">
 <link rel="shortcut icon" href="wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
 <link rel="stylesheet" href="wow/static/local-common/css/common.css?v15"/>
 <link rel="stylesheet" href="wow/static/_themes/bam/css/master.css?v1"/>
@@ -28,7 +28,7 @@ require_once("configs.php");
 </head>
 <body>
 <div id="embedded-login">
-	<h2><?php echo $website['title']; ?> - Filling Users</h2>
+	<h2><?php echo TITLE ?> - Filling Users</h2>
 	<br />
 	<center>
 		<?php

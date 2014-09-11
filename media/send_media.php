@@ -12,23 +12,23 @@ if (!isset($_SESSION['username'])) {
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <html>
 <head>
-<title><?php echo $website['title']; ?><?php echo @$Man['Man']; ?></title>
-<link rel="shortcut icon" href="../wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
-<link rel="stylesheet" media="all" href="../wow/static/local-common/css/management/common.css" />
-<link rel="stylesheet" media="all" href="../wow/static/css/bnet.css" />
-<link rel="stylesheet" media="print" href="../wow/static/css/bnet-print.css" />
-<link rel="stylesheet" media="all" href="../wow/static/css/management/dashboard.css" />
-<link rel="stylesheet" media="all" href="../wow/static/css/management/order-history.css" />
-<link rel="stylesheet" media="all" href="../wow/static/css/management/wow/dashboard.css" />
-<script src="../wow/static/local-common/js/third-party/jquery-1.4.4-p1.min.js"></script>
-<script src="../wow/static/local-common/js/core.js"></script>
-<script src="../wow/static/local-common/js/tooltip.js"></script>
-<script src="../wow/static/local-common/js/third-party/swfobject.js?v37"></script>
-<script src="../wow/static/js/management/dashboard.js?v23"></script>
-<script src="../wow/static/js/management/wow/dashboard.js?v23"></script>
-<script src="../wow/static/js/bam.js?v23"></script>
-<script src="../wow/static/local-common/js/tooltip.js?v37"></script>
-<script src="../wow/static/local-common/js/menu.js?v37"></script>
+<title><?php echo TITLE ?><?php echo @$Man['Man']; ?></title>
+<link rel="shortcut icon" href="<?php echo BASE_URL ?>wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
+<link rel="stylesheet" media="all" href="<?php echo BASE_URL ?>wow/static/local-common/css/management/common.css" />
+<link rel="stylesheet" media="all" href="<?php echo BASE_URL ?>wow/static/css/bnet.css" />
+<link rel="stylesheet" media="print" href="<?php echo BASE_URL ?>wow/static/css/bnet-print.css" />
+<link rel="stylesheet" media="all" href="<?php echo BASE_URL ?>wow/static/css/management/dashboard.css" />
+<link rel="stylesheet" media="all" href="<?php echo BASE_URL ?>wow/static/css/management/order-history.css" />
+<link rel="stylesheet" media="all" href="<?php echo BASE_URL ?>wow/static/css/management/wow/dashboard.css" />
+<script src="<?php echo BASE_URL ?>wow/static/local-common/js/third-party/jquery-1.4.4-p1.min.js"></script>
+<script src="<?php echo BASE_URL ?>wow/static/local-common/js/core.js"></script>
+<script src="<?php echo BASE_URL ?>wow/static/local-common/js/tooltip.js"></script>
+<script src="<?php echo BASE_URL ?>wow/static/local-common/js/third-party/swfobject.js?v37"></script>
+<script src="<?php echo BASE_URL ?>wow/static/js/management/dashboard.js?v23"></script>
+<script src="<?php echo BASE_URL ?>wow/static/js/management/wow/dashboard.js?v23"></script>
+<script src="<?php echo BASE_URL ?>wow/static/js/bam.js?v23"></script>
+<script src="<?php echo BASE_URL ?>wow/static/local-common/js/tooltip.js?v37"></script>
+<script src="<?php echo BASE_URL ?>wow/static/local-common/js/menu.js?v37"></script>
 <script type="text/javascript">
 $(function() {
 Menu.initialize();
@@ -170,10 +170,10 @@ if (isset($_POST['send'])){
     echo '<div class="alert-page-message success-page">
       <p class="text-green title"><strong>'.$Media['SendCorrect'].'</strong></p>
       <p class="caption">'.$Media['SendSuccse'].'</p>
-      <p class="caption"><a href="'.$website['root'].'account/">'.$re['goPanel'].'</a></p>
+      <p class="caption"><a href="'.BASE_URL.'account/">'.$re['goPanel'].'</a></p>
       </div>';
     echo '</div>';
-    echo '<meta http-equiv="refresh" content="4;url='.$website['root'].'account/"/>';
+    echo '<meta http-equiv="refresh" content="4;url='.BASE_URL.'account/"/>';
   }
   else{
     echo '<div class="errors" align="center"><font color="red" size="6"><strong>Error</strong></font></p>';
@@ -193,7 +193,7 @@ else{
 		<div class="primary">
 			<div class="header">
 				<h3 class="headline"><?php echo $Media['SendMedia']; ?></h3>
-				<a href=""><img src="../wow/static/local-common/images/game-icons/wow.png" alt="World of Warcraft" width="48" height="48" /></a>
+				<a href=""><img src="<?php echo BASE_URL ?>wow/static/local-common/images/game-icons/wow.png" alt="World of Warcraft" width="48" height="48" /></a>
 			</div>
               <p>&nbsp;</p>
               <div id="page-content">
@@ -358,9 +358,9 @@ other: 'Other'
 };
 //]]>
 </script>
-<script src="../wow/static/js/bam.js"></script>
-<script src="../wow/static/local-common/js/tooltip.js"></script>
-<script src="../wow/static/local-common/js/menu.js"></script>
+<script src="<?php echo BASE_URL ?>wow/static/js/bam.js"></script>
+<script src="<?php echo BASE_URL ?>wow/static/local-common/js/tooltip.js"></script>
+<script src="<?php echo BASE_URL ?>wow/static/local-common/js/menu.js"></script>
 <script type="text/javascript">
 $(function() {
 Menu.initialize();
@@ -369,18 +369,18 @@ Locale.dataPath = 'data/i18n.frag.xml';
 });
 </script>
 <!--[if lt IE 8]>
-<script type="text/javascript" src="../wow/static/local-common/js/third-party/jquery.pngFix.pack.js"></script>
+<script type="text/javascript" src="<?php echo BASE_URL ?>wow/static/local-common/js/third-party/jquery.pngFix.pack.js"></script>
 <script type="text/javascript">$('.png-fix').pngFix();</script>
 <![endif]-->
-<script src="../wow/static/local-common/js/dropdown.js"></script>
-<script src="../wow/static/local-common/js/table.js"></script>
+<script src="<?php echo BASE_URL ?>wow/static/local-common/js/dropdown.js"></script>
+<script src="<?php echo BASE_URL ?>wow/static/local-common/js/table.js"></script>
 <script type="text/javascript">
 //<![CDATA[
 Core.load("../wow/static/local-common/js/third-party/jquery-ui-1.8.6.custom.min.js");
 Core.load("../wow/static/local-common/js/search.js");
 Core.load("../wow/static/local-common/js/login.js", false, function() {
 if (typeof Login !== 'undefined') {
-Login.embeddedUrl = '<?php echo $website['root'];?>loginframe.php';
+Login.embeddedUrl = '<?php echo BASE_URL ?>loginframe.php';
 }
 });
 //]]>

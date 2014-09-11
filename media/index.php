@@ -65,14 +65,14 @@
 	<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
  	<html lang="en-gb">
 		<head>
-			<title><?php echo $website['title']; ?></title>
+			<title><?php echo TITLE ?></title>
 			<meta content="false" http-equiv="imagetoolbar" />
 			<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
-			<link rel="shortcut icon" href="../wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
+			<link rel="shortcut icon" href="<?php echo BASE_URL ?>wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
 			<?php GetMediaTheme(); ?>
-			<script src="../wow/static/local-common/js/third-party/jquery-1.4.4-p1.min.js"></script>
-			<script src="../wow/static/local-common/js/core.js?v17"></script>
-			<script src="../wow/static/local-common/js/tooltip.js?v17"></script>
+			<script src="<?php echo BASE_URL ?>wow/static/local-common/js/third-party/jquery-1.4.4-p1.min.js"></script>
+			<script src="<?php echo BASE_URL ?>wow/static/local-common/js/core.js?v17"></script>
+			<script src="<?php echo BASE_URL ?>wow/static/local-common/js/tooltip.js?v17"></script>
 			<!--[if IE 6]> <script type="text/javascript">
 			//<![CDATA[
 			try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
@@ -108,12 +108,12 @@
 						<div class="content-trail">
 							<ol class="ui-breadcrumb">
 								<li itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-								<a href="<?php echo $website['address']; ?>" class="breadcrumb-arrow" itemprop="url">
-									<span class="breadcrumb-text" itemprop="name"><?php echo $website['title']; ?></span>
+								<a href="<?php echo BASE_URL ?>" class="breadcrumb-arrow" itemprop="url">
+									<span class="breadcrumb-text" itemprop="name"><?php echo TITLE ?></span>
 									</a>
 									</li>
 									<li class="last" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-									<a href="<?php echo $website['root']; ?>media/" rel="np" itemprop="url">
+									<a href="<?php echo BASE_URL ?>media/" rel="np" itemprop="url">
 										<span class="breadcrumb-text" itemprop="name"><?php echo $Media['Media']; ?></span>
 									</a>
 									</li>
@@ -281,7 +281,7 @@
 					</div>
 				</div>
 			</div>
-<script type="text/javascript" src="../wow/static/local-common/js/search.js?v46"></script>
+<script type="text/javascript" src="<?php echo BASE_URL ?>wow/static/local-common/js/search.js?v46"></script>
 <script type="text/javascript">
 //<![CDATA[
 var xsToken = '';

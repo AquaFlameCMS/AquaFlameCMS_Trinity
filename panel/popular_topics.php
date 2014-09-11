@@ -5,6 +5,7 @@
 	<div class="sidebar-content">
 	<ul class="trending-topics">
 		<?php
+		$server_db = DB;
 		$get_lastactivity = mysql_query("SELECT *, date FROM $server_db.forum_threads ORDER BY `last_date` DESC LIMIT 10");
 		if(mysql_num_rows($get_lastactivity) > 0){
 		while($lastact = mysql_fetch_array($get_lastactivity)){

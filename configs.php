@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright (C) 2014 AquaflameCMS <http://aquaflame.org/>
+ * Copyright (C) 2014 AquaFlameCMS
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
- **/
+ */
 
 ob_start();  
 if(file_exists("install"))
@@ -23,10 +23,11 @@ if(file_exists("install"))
 	header("Location: install");
 	die();
 }
-include("include/pre-header.php");
-if (!isset($_SESSION))
-    session_start();
-
+foreach (glob("functions.d/*.php") as $Functions)
+{
+	include_once $Functions;
+}
+if (!isset($_SESSION)) session_start();
 /*
 |--------------------------------------------------------------------------
 | Default Locale Languages 
@@ -75,17 +76,10 @@ $_SESSION['Local'] = $language;
 | 	$serverpass    = "Password";
 | 	$serverport	   = "Port";
 */
-$serveraddress = "127.0.0.1";
-$serveruser    = "root";
-$serverpass    = "password";
-$serverport    = "3306";
-@define('DBHOST', '127.0.0.1');
-@define('DBUSER', 'root');
-@define('DBPASS', 'password');
-@define('DB', 'website');
-@define('DBAUTH', 'auth');
-@define('DBWORLD', 'world');
-@define('DBCHAR', 'chars');
+define('DBHOST', 'localhost');
+define('DBUSER', 'root');
+define('DBPASS', 'Password');
+define('DBPORT', '3306');
 
 /*
 |--------------------------------------------------------------------------
@@ -98,10 +92,10 @@ $serverport    = "3306";
 | @access public
 |
 */
-$server_adb = "auth";
-$server_wdb = "world";
-$server_cdb = "chars";
-$server_db  = "website";
+define('DBAUTH',  'auth');
+define('DBCHARS', 'characters');
+define('DBWORLD', 'world');
+define('DB', 	  'wow');
 
 /*
 |--------------------------------------------------------------------------
@@ -109,7 +103,7 @@ $server_db  = "website";
 |--------------------------------------------------------------------------
 |
 | Your Expansion for Default "Register"
-| 0 - Classic, 1 - Burning Crusade, 2 - Wrath, 3 - Cataclysm
+| 0 - Classic, 1 - Burning Crusade, 2 - Wrath, 3 - Cataclysm, 4 - Mist Of Pandaria
 |
 */
 $expansion_wow = "3";
@@ -123,7 +117,6 @@ $expansion_wow = "3";
 | For Example
 | Change true(Donation Store mode)/false(off mode) to disable/enable Donation Store
 |        true or false
-|
 |*/
 $donation_shop  = true;
 $code = "f7c3bc1d808e04732adf679965ccc34ca7ae3441";
@@ -150,9 +143,8 @@ $service_currency	= "USD";
 |--------------------------------------------------------------------------
 |
 */
-$website['realm']     = "Set Realmlist Your_Realmlist";
-$name_realm1['realm'] = "Realm_Name";
-$mysql_cod            = 'cp1251';
+$website["realm"]     = "Test Realm";
+$name_realm1["realm"] = "Realm Name";
 
 /*
 |--------------------------------------------------------------------------
@@ -194,12 +186,11 @@ $comun_link['Reddit']   = "http://www.reddit.com/";
 | For example: site is available at http://example.org/AquaFlameCMS_Trinity/
 | That means that you should set this variable as '/AquaFlameCMS_Trinity/'.
 */
-$website['title']       = "AquaFlameCMS 1.0";
-$website['description'] = "AquaFlameCMS 1.0 the best of the best!";
-$website['keywords']    = "AquaFlameCMS 1.0, The Best CMS";
-$website['address']     = "http://localhost/";
-$website['root']        = "/AquaFlameCMS_Trinity/";
-$website['admin:path']	= "admin/";
+define('TITLE',		  'AquaFlameCMS 1.0');
+define('DESCRIPTION', 'AquaFlameCMS 1.0 the best of the best!');
+define('KEYWORDS',    'AquaFlameCMS 1.0, The Best CMS');
+define('BASE_URL',    'http://localhost/');
+define('URL_ADMIN',   'http://localhost/admin/');
 
 /*
 |--------------------------------------------------------------------------
@@ -211,14 +202,13 @@ $website['admin:path']	= "admin/";
 | Change true(prepage mode)/false(normal mode) to disable/enable pre page
 |        true or false
 |*/
-
 $pre = false;
 if ($pre == true) {
-    if (!isset($_COOKIE['prepage'])) {
-        $pre_cookie = 'viewed';
+    if (!isset($_COOKIE["prepage"])) {
+        $pre_cookie = "viewed";
         setcookie("prepage", $pre_cookie, time() + 3600 * 60 * 24);
         
-        header('Location: ' . $website['address'] . '' . $website['root'] . 'pre.php');
+        header('Location: pre.php');
     }
 }
 
@@ -234,7 +224,7 @@ if ($pre == true) {
 |
 */
 $maintenance = false;
-    
+
 /*
 |--------------------------------------------------------------------------
 | No edit
@@ -246,21 +236,19 @@ $maintenance = false;
 
 if ($maintenance == true) {
     if (!isset($bucle_mant)) {
-        header('Location: '.$website['address'].''.$website['root'].'maintenance.php');
+        header('Location: maintenance.php');
     }
 } else {
     $teamsLimit = 50; // Number of team to display on each page
-    
-    $connection_setup = mysql_connect($serveraddress . ':' . $serverport, $serveruser, $serverpass) or die(mysql_error());
-    mysql_select_db($server_db, $connection_setup) or die(mysql_error());
-    
+	$connection_setup = mysql_connect(DBHOST . ':' . DBPORT, DBUSER, DBPASS) or die(mysql_error());
+	mysql_select_db(DB, $connection_setup) or die(mysql_error());
+
     if (isset($_SESSION['username'])) {
         $username            = mysql_real_escape_string($_SESSION['username']);
-        $account_information = mysql_fetch_assoc(mysql_query("SELECT * FROM $server_adb.account WHERE username = '" . $username . "'"));
-        $account_extra       = mysql_fetch_assoc(mysql_query("SELECT * FROM $server_db.users WHERE id = '" . $account_information['id'] . "'"));
-        mysql_select_db($server_db, $connection_setup) or die(mysql_error());
+        $account_information = mysql_fetch_assoc(mysql_query("SELECT * FROM '.DBAUTH'.account WHERE username = '" . $username . "'"));
+        @$account_extra      = mysql_fetch_assoc(mysql_query("SELECT * FROM '.DB'.users WHERE id = '" . $account_information['id'] . "'"));
+        mysql_select_db(DB, $connection_setup) or die(mysql_error());
     }
 }
-
 /* End of file configs.php */
 

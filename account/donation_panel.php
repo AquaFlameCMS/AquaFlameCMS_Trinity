@@ -3,7 +3,7 @@ include("../configs.php");
 $page_cat = 'gamesncodes';
 // Check, if username session is NOT set then this page will jump to login page
 if (!isset($_SESSION['username'])) {
-        header('Location: '.$website['root'].'account_log.php');		
+        header('Location: '.BASE_URL.'account_log.php');		
 }
 ?>
 
@@ -14,21 +14,21 @@ if (!isset($_SESSION['username'])) {
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
-<title><?php echo $website['title']; ?><?php echo $donar['1']; ?></title>
+<title><?php echo TITLE ?><?php echo $donar['1']; ?></title>
 <meta content="false" http-equiv="imagetoolbar" />
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
-<meta name="description" content="<?php echo $website['description']; ?>">
-<meta name="keywords" content="<?php echo $website['keywords']; ?>">
-<link rel="shortcut icon" href="../wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
-<link rel="stylesheet" media="all" href="../wow/static/local-common/css/common.css" />
-<link rel="stylesheet" media="all" href="../wow/static/css/bnet.css" />
-<link rel="stylesheet" media="print" href="../wow/static/css/bnet-print.css" />
-<link rel="stylesheet" media="all" href="../wow/static/css/management/get-game.css" />
-<link rel="stylesheet" media="all" href="../wow/static/css/management/get-game-ie8.css" />
-<link rel="stylesheet" media="all" href="../wow/static/css/management/dashboard.css" />
-<script src="../wow/static/local-common/js/third-party/jquery.js"></script>
-<script src="../wow/static/local-common/js/core.js"></script>
-<script src="../wow/static/local-common/js/tooltip.js"></script>
+<meta name="description" content="<?php echo DESCRIPTION ?>">
+<meta name="keywords" content="<?php echo KEYWORDS ?>">
+<link rel="shortcut icon" href="<?php echo BASE_URL ?>wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
+<link rel="stylesheet" media="all" href="<?php echo BASE_URL ?>wow/static/local-common/css/common.css" />
+<link rel="stylesheet" media="all" href="<?php echo BASE_URL ?>wow/static/css/bnet.css" />
+<link rel="stylesheet" media="print" href="<?php echo BASE_URL ?>wow/static/css/bnet-print.css" />
+<link rel="stylesheet" media="all" href="<?php echo BASE_URL ?>wow/static/css/management/get-game.css" />
+<link rel="stylesheet" media="all" href="<?php echo BASE_URL ?>wow/static/css/management/get-game-ie8.css" />
+<link rel="stylesheet" media="all" href="<?php echo BASE_URL ?>wow/static/css/management/dashboard.css" />
+<script src="<?php echo BASE_URL ?>wow/static/local-common/js/third-party/jquery.js"></script>
+<script src="<?php echo BASE_URL ?>wow/static/local-common/js/core.js"></script>
+<script src="<?php echo BASE_URL ?>wow/static/local-common/js/tooltip.js"></script>
 
 <!--[if IE 6]> <script type="text/javascript">
 //<![CDATA[
@@ -83,7 +83,7 @@ _gaq.push(['_trackPageLoadTime']);
 			<div class="header">
 				<h2 class="subcategory"><?php echo $donar['2']; ?></h2>
 				<h3 class="headline"><?php echo $donar['3']; ?></h3>
-				<a href=""><img src="../wow/static/local-common/images/game-icons/wow.png" alt="World of Warcraft" width="48" height="48" /></a>
+				<a href=""><img src="<?php echo BASE_URL ?>wow/static/local-common/images/game-icons/wow.png" alt="World of Warcraft" width="48" height="48" /></a>
 			</div>
         </div>
     </div>
@@ -94,7 +94,7 @@ _gaq.push(['_trackPageLoadTime']);
 						<span class="data-grid-member data-grid-member-first " id="SMS">
 						<span class="data-grid-member-contents">
 						<span class="product-thumbnail glow-shadow border-3">
-						<a href="<?php echo $website['root']; ?>account/sms"><img src="../wow/static/local-common/images/donate/sms.png" alt="Donate via SMS" width="115" height="163" />
+						<a href="<?php echo BASE_URL ?>account/sms"><img src="<?php echo BASE_URL ?>wow/static/local-common/images/donate/sms.png" alt="Donate via SMS" width="115" height="163" />
 						</a>
 						</span>
 						<span class="product-details">
@@ -104,7 +104,7 @@ _gaq.push(['_trackPageLoadTime']);
 						</span>
 					    </span>
 						<span class="product-actions blizzard">
-						<a class="ui-button button1" href="<?php echo $website['root']; ?>account/sms.php" tabindex="1">
+						<a class="ui-button button1" href="<?php echo BASE_URL ?>account/sms.php" tabindex="1">
 						<span>
 		                <span><?php echo $donar['4']; ?></span>
 	                    </span>
@@ -115,7 +115,7 @@ _gaq.push(['_trackPageLoadTime']);
 						--><span class="data-grid-member " id="paypal"><!--
 						--><span class="data-grid-member-contents"><!--
 						--><span class="product-thumbnail glow-shadow border-3">
-						<a href="<?php echo $website['root']; ?>#"><img src="../wow/static/local-common/images/donate/paypal.png" alt="paypal" width="115" height="163" />
+						<a href="<?php echo BASE_URL ?>#"><img src="<?php echo BASE_URL ?>wow/static/local-common/images/donate/paypal.png" alt="paypal" width="115" height="163" />
 						</a>
 						</span><!--
 						--><span class="product-details">
@@ -125,7 +125,7 @@ _gaq.push(['_trackPageLoadTime']);
 						</span>
 						</span><!--
 						--><span class="product-actions blizzard">
-						<a class="ui-button button1" href="<?php echo $website['root']; ?>#" tabindex="1" >
+						<a class="ui-button button1" href="<?php echo BASE_URL ?>#" tabindex="1" >
 						<span>
 						    <span><?php echo $donar['6']; ?></span>
 						</span>
@@ -136,7 +136,7 @@ _gaq.push(['_trackPageLoadTime']);
 						--><span class="data-grid-member " id="votashop"><!--
 						--><span class="data-grid-member-contents"><!--
 						--><span class="product-thumbnail glow-shadow border-3">
-						<a href=""><img src="../wow/static/local-common/images/donate/tienda_votaciones.png" alt="VotaShop" width="115" height="163" />
+						<a href=""><img src="<?php echo BASE_URL ?>wow/static/local-common/images/donate/tienda_votaciones.png" alt="VotaShop" width="115" height="163" />
 						</a>
 						</span><!--
 						--><span class="product-details">
@@ -146,7 +146,7 @@ _gaq.push(['_trackPageLoadTime']);
 						</span>
 						</span><!--
 						--><span class="product-actions blizzard">
-						<a class="ui-button button1" href="<?php echo $website['root']; ?>#" tabindex="1" >
+						<a class="ui-button button1" href="<?php echo BASE_URL ?>#" tabindex="1" >
 						<span>
 						<span><?php echo $donar['8']; ?></span>
 						</span>
@@ -157,8 +157,8 @@ _gaq.push(['_trackPageLoadTime']);
 						--><span class="data-grid-member data-grid-member-last " id="WAR3"><!--
 						--><span class="data-grid-member-contents"><!--
 						--><span class="product-thumbnail glow-shadow border-3">
-						<a href="<?php echo $website['root']; ?>#">
-						<img src="../wow/static/local-common/images/donate/tienda_donaciones.png" alt="Donashop" width="115" height="163" />
+						<a href="<?php echo BASE_URL ?>#">
+						<img src="<?php echo BASE_URL ?>wow/static/local-common/images/donate/tienda_donaciones.png" alt="Donashop" width="115" height="163" />
 						</a>
 						</span><!--
 						--><span class="product-details">
@@ -168,7 +168,7 @@ _gaq.push(['_trackPageLoadTime']);
 						</span>
 						</span><!--
 						--><span class="product-actions blizzard">
-						<a class="ui-button button1" href="<?php echo $website['root']; ?>#" tabindex="1">
+						<a class="ui-button button1" href="<?php echo BASE_URL ?>#" tabindex="1">
 						<span>
 						    <span><?php echo $donar['10']; ?></span>
 						</span>
@@ -179,7 +179,7 @@ _gaq.push(['_trackPageLoadTime']);
 		--></div>
 	<center>
 		<div class="retail-purchase border-3">
-		    <p class="caption"><?php echo $donar['12']; ?><a href="#" tabindex="1" target="_blank"><?php echo $website['title']; ?> Store</a>.</p>
+		    <p class="caption"><?php echo $donar['12']; ?><a href="#" tabindex="1" target="_blank"><?php echo TITLE ?> Store</a>.</p>
 		</div>
 	</center>
 </div>
@@ -199,7 +199,7 @@ var digitalGames = new DigitalGames('#digital-games');
 <?php include("../functions/footer_man.php"); ?>
 </div>
 </div>
-<script src="../wow/static/local-common/js/search.js?v39"></script>
+<script src="<?php echo BASE_URL ?>wow/static/local-common/js/search.js?v39"></script>
 <script type="text/javascript">
 //<![CDATA[
 var xsToken = '9d875366-e8b3-46e0-a17f-431c939fa3b7';
@@ -308,21 +308,21 @@ Login.embeddedUrl = 'https://eu.battle.net/login/login.frag';
 });
 //]]>
 </script>
-<script src="../wow/static/js/bam.js?v26"></script>
-<script src="../wow/static/local-common/js/tooltip.js?v39"></script>
-<script src="../wow/static/local-common/js/menu.js?v39"></script>
-<script src="../wow/static/local-common/js/third-party/jquery-ui-1.8.6.custom.min.js?v39"></script>
+<script src="<?php echo BASE_URL ?>wow/static/js/bam.js?v26"></script>
+<script src="<?php echo BASE_URL ?>wow/static/local-common/js/tooltip.js?v39"></script>
+<script src="<?php echo BASE_URL ?>wow/static/local-common/js/menu.js?v39"></script>
+<script src="<?php echo BASE_URL ?>wow/static/local-common/js/third-party/jquery-ui-1.8.6.custom.min.js?v39"></script>
 <script type="text/javascript">
 $(function() {
 Locale.dataPath = 'data/i18n.frag.xml';
 });
 </script>
 <!--[if lt IE 8]>
-<script type="text/javascript" src="../wow/static/local-common/js/third-party/jquery.pngFix.pack.js?v39"></script>
+<script type="text/javascript" src="<?php echo BASE_URL ?>wow/static/local-common/js/third-party/jquery.pngFix.pack.js?v39"></script>
 <script type="text/javascript">$('.png-fix').pngFix();</script>
 <![endif]-->
-<script src="../wow/static/js/management/get-game.js?v26"></script>
-<!--[if lt IE 8]> <script type="text/javascript" src="../wow/static/local-common/js/third-party/jquery.pngFix.pack.js?v39"></script>
+<script src="<?php echo BASE_URL ?>wow/static/js/management/get-game.js?v26"></script>
+<!--[if lt IE 8]> <script type="text/javascript" src="<?php echo BASE_URL ?>wow/static/local-common/js/third-party/jquery.pngFix.pack.js?v39"></script>
 <script type="text/javascript">
 //<![CDATA[
 $('.png-fix').pngFix(); //]]>

@@ -34,17 +34,17 @@ try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
 <div class="content-trail">
 <ol class="ui-breadcrumb">
 <li>
-<a href="<?php echo $website['root'];?>" rel="np">
-<?php echo $website['title']; ?>
+<a href="<?php echo BASE_URL ?>" rel="np">
+<?php echo TITLE ?>
 </a>
 <span class="breadcrumb-arrow"></span></li>
 <li>
-<a href="<?php echo $website['root'];?>media/" rel="np">
+<a href="<?php echo BASE_URL ?>media/" rel="np">
 Media
 </a>
 <span class="breadcrumb-arrow"></span></li>
 <li class="last childless">
-<a href="<?php echo $website['root'];?>media/screenshots/" rel="np">
+<a href="<?php echo BASE_URL ?>media/screenshots/" rel="np">
 Screenshots
 </a>
 </li>
@@ -167,7 +167,7 @@ An error has ocurred while loading the comments, <a href="javascript:;" onclick=
 <script type="text/javascript" src="../../../wow/static/local-common/js/media/gallery-viewer.js?v39"></script>
 <script type="text/javascript" src="../../../wow/static/local-common/js/media/data.js"></script>
 <script type="text/javascript" src="../../../wow/static/local-common/js/third-party/jquery.mousewheel.min.js?v39"></script>
-<!--[if lt IE 8]> <script type="text/javascript" src="../wow/static/local-common/js/third-party/jquery.pngFix.pack.js?v39"></script>
+<!--[if lt IE 8]> <script type="text/javascript" src="<?php echo BASE_URL ?>wow/static/local-common/js/third-party/jquery.pngFix.pack.js?v39"></script>
 <script type="text/javascript">
 //<![CDATA[
 $('.png-fix').pngFix(); //]]>

@@ -2,7 +2,7 @@
 include("../configs.php");
 $page_cat = "security";
 if (!isset($_SESSION['username'])) {
-        header('Location: '.$website['root'].'account_log.php');		
+        header('Location: '.BASE_URL.'account_log.php');		
 }
 ?>
 
@@ -13,20 +13,20 @@ if (!isset($_SESSION['username'])) {
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
-<title><?php echo $BanL['BanL11']; ?> - <?php echo $website['title']; ?></title>
+<title><?php echo $BanL['BanL11']; ?> - <?php echo TITLE ?></title>
 <meta content="false" http-equiv="imagetoolbar" />
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
-<meta name="description" content="<?php echo $website['description']; ?>">
-<meta name="keywords" content="<?php echo $website['keywords']; ?>">
-<link rel="shortcut icon" href="../wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
-<link rel="stylesheet" media="all" href="../wow/static/local-common/css/common.css" />
-<link rel="stylesheet" media="all" href="../wow/static/css/bnet.css" />
-<link rel="stylesheet" media="print" href="../wow/static/css/bnet-print.css" />
-<link rel="stylesheet" media="all" href="../wow/static/css/management/order-history.css" />
-<link rel="stylesheet" media="all" href="../wow/static/css/management/services.css" />
-<script src="../wow/static/local-common/js/third-party/jquery-1.4.4-p1.min.js"></script>
-<script src="../wow/static/local-common/js/core.js?v22"></script>
-<script src="../wow/static/local-common/js/tooltip.js?v22"></script>
+<meta name="description" content="<?php echo DESCRIPTION ?>">
+<meta name="keywords" content="<?php echo KEYWORDS ?>">
+<link rel="shortcut icon" href="<?php echo BASE_URL ?>wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
+<link rel="stylesheet" media="all" href="<?php echo BASE_URL ?>wow/static/local-common/css/common.css" />
+<link rel="stylesheet" media="all" href="<?php echo BASE_URL ?>wow/static/css/bnet.css" />
+<link rel="stylesheet" media="print" href="<?php echo BASE_URL ?>wow/static/css/bnet-print.css" />
+<link rel="stylesheet" media="all" href="<?php echo BASE_URL ?>wow/static/css/management/order-history.css" />
+<link rel="stylesheet" media="all" href="<?php echo BASE_URL ?>wow/static/css/management/services.css" />
+<script src="<?php echo BASE_URL ?>wow/static/local-common/js/third-party/jquery-1.4.4-p1.min.js"></script>
+<script src="<?php echo BASE_URL ?>wow/static/local-common/js/core.js?v22"></script>
+<script src="<?php echo BASE_URL ?>wow/static/local-common/js/tooltip.js?v22"></script>
 <!--[if IE 6]> <script type="text/javascript">
 //<![CDATA[
 try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
@@ -282,9 +282,9 @@ other: 'Other'
 };
 //]]>
 </script>
-<script src="../wow/static/js/bam.js"></script>
-<script src="../wow/static/local-common/js/tooltip.js"></script>
-<script src="../wow/static/local-common/js/menu.js"></script>
+<script src="<?php echo BASE_URL ?>wow/static/js/bam.js"></script>
+<script src="<?php echo BASE_URL ?>wow/static/local-common/js/tooltip.js"></script>
+<script src="<?php echo BASE_URL ?>wow/static/local-common/js/menu.js"></script>
 <script type="text/javascript">
 $(function() {
 Menu.initialize();
@@ -293,23 +293,23 @@ Locale.dataPath = 'data/i18n.frag.xml';
 });
 </script>
 <!--[if lt IE 8]>
-<script type="text/javascript" src="../wow/static/local-common/js/third-party/jquery.pngFix.pack.js"></script>
+<script type="text/javascript" src="<?php echo BASE_URL ?>wow/static/local-common/js/third-party/jquery.pngFix.pack.js"></script>
 <script type="text/javascript">$('.png-fix').pngFix();</script>
 <![endif]-->
-<script src="../wow/static/local-common/js/dropdown.js"></script>
-<script src="../wow/static/local-common/js/table.js"></script>
+<script src="<?php echo BASE_URL ?>wow/static/local-common/js/dropdown.js"></script>
+<script src="<?php echo BASE_URL ?>wow/static/local-common/js/table.js"></script>
 <script type="text/javascript">
 //<![CDATA[
 Core.load("wow/static/local-common/js/third-party/jquery-ui-1.8.6.custom.min.js");
 Core.load("wow/static/local-common/js/search.js");
 Core.load("wow/static/local-common/js/login.js", false, function() {
 if (typeof Login !== 'undefined') {
-Login.embeddedUrl = '<?php echo $website['root'];?>loginframe.php';
+Login.embeddedUrl = '<?php echo BASE_URL ?>loginframe.php';
 }
 });
 //]]>
 </script>
-<!--[if lt IE 8]> <script type="text/javascript" src="../wow/static/local-common/js/third-party/jquery.pngFix.pack.js"></script>
+<!--[if lt IE 8]> <script type="text/javascript" src="<?php echo BASE_URL ?>wow/static/local-common/js/third-party/jquery.pngFix.pack.js"></script>
 <script type="text/javascript">
 //<![CDATA[
 $('.png-fix').pngFix(); //]]>

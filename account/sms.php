@@ -2,7 +2,7 @@
 include("../configs.php");
 $page_cat = 'gamesncodes';
 if (!isset($_SESSION['username'])) {
-        header('Location: '.$website['root'].'account_log.php');		
+        header('Location: '.BASE_URL.'account_log.php');		
 }
 ?>
 
@@ -13,21 +13,21 @@ if (!isset($_SESSION['username'])) {
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
-<title><?php echo $website['title']; ?><?php echo $donar['1']; ?></title>
+<title><?php echo TITLE ?><?php echo $donar['1']; ?></title>
 <meta content="false" http-equiv="imagetoolbar" />
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
-<meta name="description" content="<?php echo $website['description']; ?>">
-<meta name="keywords" content="<?php echo $website['keywords']; ?>">
-<link rel="shortcut icon" href="../wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
-<link rel="stylesheet" media="all" href="../wow/static/local-common/css/common.css" />
-<link rel="stylesheet" media="all" href="../wow/static/css/bnet.css" />
-<link rel="stylesheet" media="print" href="../wow/static/css/bnet-print.css" />
-<link rel="stylesheet" media="all" href="../wow/static/css/management/get-game.css" />
-<link rel="stylesheet" media="all" href="../wow/static/css/management/get-game-ie8.css" />
-<link rel="stylesheet" media="all" href="../wow/static/css/management/dashboard.css" />
-<script src="../wow/static/local-common/js/third-party/jquery.js"></script>
-<script src="../wow/static/local-common/js/core.js"></script>
-<script src="../wow/static/local-common/js/tooltip.js"></script>
+<meta name="description" content="<?php echo DESCRIPTION ?>">
+<meta name="keywords" content="<?php echo KEYWORDS ?>">
+<link rel="shortcut icon" href="<?php echo BASE_URL ?>wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
+<link rel="stylesheet" media="all" href="<?php echo BASE_URL ?>wow/static/local-common/css/common.css" />
+<link rel="stylesheet" media="all" href="<?php echo BASE_URL ?>wow/static/css/bnet.css" />
+<link rel="stylesheet" media="print" href="<?php echo BASE_URL ?>wow/static/css/bnet-print.css" />
+<link rel="stylesheet" media="all" href="<?php echo BASE_URL ?>wow/static/css/management/get-game.css" />
+<link rel="stylesheet" media="all" href="<?php echo BASE_URL ?>wow/static/css/management/get-game-ie8.css" />
+<link rel="stylesheet" media="all" href="<?php echo BASE_URL ?>wow/static/css/management/dashboard.css" />
+<script src="<?php echo BASE_URL ?>wow/static/local-common/js/third-party/jquery.js"></script>
+<script src="<?php echo BASE_URL ?>wow/static/local-common/js/core.js"></script>
+<script src="<?php echo BASE_URL ?>wow/static/local-common/js/tooltip.js"></script>
 
 <!--[if IE 6]> <script type="text/javascript">
 //<![CDATA[
@@ -82,7 +82,7 @@ _gaq.push(['_trackPageLoadTime']);
 				<div class="header">
 					<h2 class="subcategory"><?php echo $sms['2']; ?></h2>
 					<h3 class="headline"><?php echo $sms['3']; ?></h3>
-					<a href=""><img src="../wow/static/local-common/images/game-icons/wow.png" alt="World of Warcraft" width="48" height="48" /></a>
+					<a href=""><img src="<?php echo BASE_URL ?>wow/static/local-common/images/game-icons/wow.png" alt="World of Warcraft" width="48" height="48" /></a>
 				</div>
 			</div>
 		</div>
@@ -105,8 +105,8 @@ _gaq.push(['_trackPageLoadTime']);
 		 <input type="radio" name="pg_price" value="3">Donate for 10 Credits<p>
 		 <input type="radio" name="pg_price" value="4">Donate for 15 Credits<p>
 		 <input type="radio" name="pg_price" value="5">Donate for 20 Credits<p>
-		 <input type="hidden" name="pg_return_url" value="<?php echo $website['address']; ?>/sms/successfully/">
-		 <input type="hidden" name="pg_cancel_url" value="<?php echo $website['address']; ?>/sms/fail/">
+		 <input type="hidden" name="pg_return_url" value="<?php echo BASE_URL ?>/sms/successfully/">
+		 <input type="hidden" name="pg_cancel_url" value="<?php echo BASE_URL ?>/sms/fail/">
 		 <input type="image" name="pg_button" class="paygol" src="https://www.paygol.com/micropayment/buttons/es/black.png" border="0" alt="Realiza pagos con PayGol: la forma mas facil!" title="Realiza pagos con PayGol: la forma mas facil!" onClick="pg_reDirect(this.form)">
 		</form>
 		<br>
@@ -235,9 +235,9 @@ pet: 'pet'
 };
 //]]>
 </script>
-<script src="../wow/static/js/bam.js?v21"></script>
-<script src="../wow/static/local-common/js/tooltip.js?v22"></script>
-<script src="../wow/static/local-common/js/menu.js?v22"></script>
+<script src="<?php echo BASE_URL ?>wow/static/js/bam.js?v21"></script>
+<script src="<?php echo BASE_URL ?>wow/static/local-common/js/tooltip.js?v22"></script>
+<script src="<?php echo BASE_URL ?>wow/static/local-common/js/menu.js?v22"></script>
 <script type="text/javascript">
 $(function() {
 Menu.initialize();
@@ -246,11 +246,11 @@ Locale.dataPath = '../data/i18n.frag.xml';
 });
 </script>
 <!--[if lt IE 8]>
-<script type="text/javascript" src="../wow/static/local-common/js/third-party/jquery.pngFix.pack.js?v22"></script>
+<script type="text/javascript" src="<?php echo BASE_URL ?>wow/static/local-common/js/third-party/jquery.pngFix.pack.js?v22"></script>
 <script type="text/javascript">$('.png-fix').pngFix();</script>
 <![endif]-->
-<script type="text/javascript" src="../wow/static/js/management/address-book.js?v21"></script>
-<script type="text/javascript" src="../wow/static/local-common/js/third-party/jquery-ui-1.8.1.custom.min.js?v22"></script>
+<script type="text/javascript" src="<?php echo BASE_URL ?>wow/static/js/management/address-book.js?v21"></script>
+<script type="text/javascript" src="<?php echo BASE_URL ?>wow/static/local-common/js/third-party/jquery-ui-1.8.1.custom.min.js?v22"></script>
 <script type="text/javascript">
 //<![CDATA[
 Core.load("../wow/static/local-common/js/overlay.js?v22");
@@ -259,7 +259,7 @@ Core.load("../wow/static/local-common/js/third-party/jquery-ui-1.8.6.custom.min.
 Core.load("../wow/static/local-common/js/third-party/jquery.mousewheel.min.js?v22");
 Core.load("../wow/static/local-common/js/third-party/jquery.tinyscrollbar.custom.js?v22");
 Core.load("../wow/static/local-common/js/login.js?v22", false, function() {
-Login.embeddedUrl = '<?php echo $website['root'];?>loginframe.php';
+Login.embeddedUrl = '<?php echo BASE_URL ?>loginframe.php';
 });
 //]]>
 </script>

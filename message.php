@@ -6,11 +6,11 @@
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
  <html lang="en-gb">
 <head>
-<title><?php echo $website['title']; ?></title>
+<title><?php echo TITLE ?></title>
 <meta content="false" http-equiv="imagetoolbar" />
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
-<meta name="description" content="<?php echo $website['description']; ?>">
-<meta name="keywords" content="<?php echo $website['keywords']; ?>">
+<meta name="description" content="<?php echo DESCRIPTION ?>">
+<meta name="keywords" content="<?php echo KEYWORDS ?>">
 <link rel="shortcut icon" href="wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
 <link rel="search" type="application/opensearchdescription+xml" href="http://us.battle.net/en-us/data/opensearch" title="Battle.net Search" />
 <link rel="stylesheet" href="wow/static/local-common/css/common.css?v15" />
@@ -52,7 +52,7 @@ Flash.ratingImage = 'http://us.media.blizzard.com/wow/player/rating-en-us.jpg';
 <div class="content-trail">
 <ol class="ui-breadcrumb">
 <li>
-<a href="index.php" rel="np"><?php echo $website['title']; ?></a>
+<a href="index.php" rel="np"><?php echo TITLE ?></a>
 <span class="breadcrumb-arrow"></span>
 </li>
 <?php

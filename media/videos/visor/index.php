@@ -12,7 +12,7 @@ $page_cat = "media";
 <head>
 <meta charset="utf-8">
 <link rel="stylesheet" type="text/css" href="/s7.addthis.com/static/r07/widget49.css" media="all" />
-<title><?php echo $website['title']; ?></title>
+<title><?php echo TITLE ?></title>
 <meta content="false" http-equiv="imagetoolbar" />
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
 <link rel="shortcut icon" href="../../../wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
@@ -61,7 +61,7 @@ _gaq.push(['_trackPageview']);
 			<div class="content-top">
 				<div class="content-trail">
 					<ol class="ui-breadcrumb">
-					<li><a href="../../../index.php"><?php echo $website['title']; ?></a><span class="breadcrumb-arrow"></span></li>
+					<li><a href="../../../index.php"><?php echo TITLE ?></a><span class="breadcrumb-arrow"></span></li>
           <li><a href="../../index.php" rel="np"><?php echo $Media['Media']; ?></a><span class="breadcrumb-arrow"></span></li>
           <li><a href="../index.php" rel="np"><?php echo $Media['Videos']; ?></a><span class="breadcrumb-arrow"></span></li>
         <?php
@@ -116,7 +116,7 @@ _gaq.push(['_trackPageview']);
 										.loader {
 											width:24px;
 											height:24px;
-											background: url("'.$website['root'].'wow/static/images/loaders/canvas-loader.gif") no-repeat;
+											background: url("'.BASE_URL.'wow/static/images/loaders/canvas-loader.gif") no-repeat;
 											}
 										</style>';
 										echo '<div class="loader"></div><br /></center>';

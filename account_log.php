@@ -8,19 +8,19 @@ $page_cat = "account";
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--><html class="no-js"><!--<![endif]-->
 <head>
-<title><?php echo $website['title']; ?><?php echo $Log['Log']; ?></title>
+<title><?php echo TITLE ?><?php echo $Log['Log']; ?></title>
 <meta http-equiv="imagetoolbar" content="false"/>
-<meta name="description" content="<?php echo $website['description']; ?>">
-<meta name="keywords" content="<?php echo $website['keywords']; ?>">
-<link rel="shortcut icon" href="<?php echo $website['root']; ?>wow/static/local-common/images/favicons/wow.png" type="image/x-icon"/>
-<link rel="stylesheet" href="<?php echo $website['root']; ?>wow/static/local-common/css/common.css?v22"/>
-<link rel="shortcut icon" href="<?php echo $website['root']; ?>wow/static/_themes/bam/img/favicon.ico" type="image/x-icon"/>
-<link rel="stylesheet" href="<?php echo $website['root']; ?>wow/static/_themes/bam/css/master.css?v1"/>
-<link rel="stylesheet" href="<?php echo $website['root']; ?>wow/static/_themes/bam/css/_lang/en-gb.css?v1"/>
-<script src="<?php echo $website['root']; ?>wow/static/local-common/js/third-party/jquery-1.4.4-p1.min.js"></script>
-<script src="<?php echo $website['root']; ?>wow/static/local-common/js/core.js?v22"></script>
+<meta name="description" content="<?php echo DESCRIPTION ?>">
+<meta name="keywords" content="<?php echo KEYWORDS ?>">
+<link rel="shortcut icon" href="<?php echo BASE_URL ?>wow/static/local-common/images/favicons/wow.png" type="image/x-icon"/>
+<link rel="stylesheet" href="<?php echo BASE_URL ?>wow/static/local-common/css/common.css?v22"/>
+<link rel="shortcut icon" href="<?php echo BASE_URL ?>wow/static/_themes/bam/img/favicon.ico" type="image/x-icon"/>
+<link rel="stylesheet" href="<?php echo BASE_URL ?>wow/static/_themes/bam/css/master.css?v1"/>
+<link rel="stylesheet" href="<?php echo BASE_URL ?>wow/static/_themes/bam/css/_lang/en-gb.css?v1"/>
+<script src="<?php echo BASE_URL ?>wow/static/local-common/js/third-party/jquery-1.4.4-p1.min.js"></script>
+<script src="<?php echo BASE_URL ?>wow/static/local-common/js/core.js?v22"></script>
 <script type="text/javascript">
-Core.baseUrl = '<?php echo $website['root']; ?>login/en/';
+Core.baseUrl = '<?php echo BASE_URL ?>login/en/';
 </script>
 </head>
 <body class="en-gb">
@@ -29,7 +29,7 @@ Core.baseUrl = '<?php echo $website['root']; ?>login/en/';
 	<div id="content" class="login">
 		<div id="left">
 			<script>
-			  var targetOrigin = "<?php echo $website['address']; ?>";
+			  var targetOrigin = "<?php echo BASE_URL ?>";
 			  function updateParent(action, key, value) {
 				var obj = { action: action };
 				if (key) obj[key] = value;
@@ -61,7 +61,7 @@ Core.baseUrl = '<?php echo $website['root']; ?>login/en/';
 				  .loader {
 					width:24px;
 					height:24px;
-					background: url("<?php echo $website['address']; ?>wow/static/images/loaders/canvas-loader.gif") no-repeat;
+					background: url("<?php echo BASE_URL ?>wow/static/images/loaders/canvas-loader.gif") no-repeat;
 				   }
 				</style>
 				<center>
@@ -81,7 +81,7 @@ Core.baseUrl = '<?php echo $website['root']; ?>login/en/';
 				  .loader {
 					width:24px;
 					height:24px;
-					background: url("<?php echo $website['address']; ?>wow/static/images/loaders/canvas-loader.gif") no-repeat;
+					background: url("<?php echo BASE_URL ?>wow/static/images/loaders/canvas-loader.gif") no-repeat;
 				   }
 				</style>
 				<center>
@@ -121,7 +121,7 @@ Core.baseUrl = '<?php echo $website['root']; ?>login/en/';
 				<?php } }else{ ?>
 				<a id="embedded-close" href="javascript:;" onclick="updateParent('close')"></a>
 				<script>
-				parent.postMessage("{\"action\":\"success\"}", "<?php echo $website['address']; ?>");
+				parent.postMessage("{\"action\":\"success\"}", "<?php echo BASE_URL ?>");
 				</script>
 				<?php
 				echo "<h3>
@@ -130,7 +130,7 @@ Core.baseUrl = '<?php echo $website['root']; ?>login/en/';
 				<meta http-equiv="refresh" content="2;url='.$website["root"].'account/" '; } ?>
 				<ul id="help-links">
 					<li class="icon-pass">
-					<a href="<?php echo $website['root']; ?>account/recover-pass-test/"><?php echo $Log['Log11']; ?>
+					<a href="<?php echo BASE_URL ?>account/recover-pass-test/"><?php echo $Log['Log11']; ?>
 					</a>
 					</li>
 					<li class="icon-signup">
@@ -165,7 +165,7 @@ Core.baseUrl = '<?php echo $website['root']; ?>login/en/';
 			</h2>
 			<h3><?php echo $Log['Log17']; ?>
 			</h3>
-			<a class="ui-button button1 " href="<?php echo $website['root']; ?>account/" > <span>
+			<a class="ui-button button1 " href="<?php echo BASE_URL ?>account/" > <span>
 			<span><?php echo $Log['Log18']; ?>
 			</span>
 			</span>

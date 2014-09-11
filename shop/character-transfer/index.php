@@ -8,11 +8,11 @@
 <html class="no-js">
 <!--<![endif]-->
 <head>
-<title><?php echo $website['title']; ?> - <?php echo $Shop['shop_23']; ?></title>
+<title><?php echo TITLE ?> - <?php echo $Shop['shop_23']; ?></title>
 <meta content="false" http-equiv="imagetoolbar"/>
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"/>
-<meta name="description" content="<?php echo $website['description']; ?>">
-<meta name="keywords" content="<?php echo $website['keywords']; ?>">
+<meta name="description" content="<?php echo DESCRIPTION ?>">
+<meta name="keywords" content="<?php echo KEYWORDS ?>">
 <link rel="shortcut icon" href="../../wow/static/local-common/images/favicons/wow.png" type="image/x-icon"/>
 <link rel="stylesheet" href="../../wow/static/local-common/css/common.css?v15"/>
 <!--[if IE]> <link rel="stylesheet" type="text/css" media="all" href="/wow/static/local-common/css/common-ie.css?v46" /><![endif]-->
@@ -41,11 +41,11 @@ try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
 		<div class="content-top">
 			<div class="content-trail">
 				<ol class="ui-breadcrumb">
-					<li><a href="<?php echo $website['root']; ?>" rel="np" class=""><?php echo $website['title']; ?>
+					<li><a href="<?php echo BASE_URL ?>" rel="np" class=""><?php echo TITLE ?>
 					</a><span class="breadcrumb-arrow"></span></li>
-					<li class=""><a href="<?php echo $website['root']; ?>shop/" rel="np"><?php echo $Shop['shop']; ?>
+					<li class=""><a href="<?php echo BASE_URL ?>shop/" rel="np"><?php echo $Shop['shop']; ?>
 					</a><span class="breadcrumb-arrow"></span></li>
-					<li class="last"><a href="<?php echo $website['root']; ?>shop/character-transfer/" rel="np"><?php echo $Shop['shop_23']; ?></a></li>
+					<li class="last"><a href="<?php echo BASE_URL ?>shop/character-transfer/" rel="np"><?php echo $Shop['shop_23']; ?></a></li>
 				</ol>
 			</div>
 			<div class="content-bot">
@@ -79,7 +79,7 @@ try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
 						</h3>
 						<p>
 							<?php echo $Shop['shop_29']; ?>
-							<?php echo $website['title']; ?>
+							<?php echo TITLE ?>
 							<?php echo $Shop['shop_30']; ?>
 						</p>
 						<span class="hover-area"></span>

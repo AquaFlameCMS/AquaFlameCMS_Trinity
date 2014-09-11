@@ -4,30 +4,30 @@ $page_cat = "forums";
 ?>
 <!doctype html>
 <head>
-<title><?php echo $website['title']; ?></title>
+<title><?php echo TITLE ?></title>
 <meta content="false" http-equiv="imagetoolbar" />
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
-<meta name="description" content="<?php echo $website['description']; ?>">
-<meta name="keywords" content="<?php echo $website['keywords']; ?>">
-<link rel="shortcut icon" href="<?php echo $website['root'];?>wow/static/local-common/images/favicons/wow.ico" type="image/x-icon"/>
+<meta name="description" content="<?php echo DESCRIPTION ?>">
+<meta name="keywords" content="<?php echo KEYWORDS ?>">
+<link rel="shortcut icon" href="<?php echo BASE_URL ?>wow/static/local-common/images/favicons/wow.ico" type="image/x-icon"/>
 <link rel="search" type="application/opensearchdescription+xml" href="http://eu.battle.net/en-gb/data/opensearch" title="Battle.net Search" />
-<link rel="stylesheet" href="<?php echo $website['root'];?>wow/static/local-common/css/common.css?v37" />
+<link rel="stylesheet" href="<?php echo BASE_URL ?>wow/static/local-common/css/common.css?v37" />
 <!--[if IE]> <link rel="stylesheet" href="/wow/static/local-common/css/common-ie.css?v37" /><![endif]-->
 <!--[if IE 6]> <link rel="stylesheet" href="/wow/static/local-common/css/common-ie6.css?v37" /><![endif]-->
 <!--[if IE 7]> <link rel="stylesheet" href="/wow/static/local-common/css/common-ie7.css?v37" /><![endif]-->
 <link title="World of Warcraft - News" href="/wow/en/feed/news" type="application/atom+xml" rel="alternate"/>
-<link rel="stylesheet" href="<?php echo $website['root'];?>wow/static/css/wow.css?v19" />
-<link rel="stylesheet" href="<?php echo $website['root'];?>wow/static/local-common/css/cms/forums.css?v37" />
-<link rel="stylesheet" href="<?php echo $website['root'];?>wow/static/local-common/css/cms/cms-common.css?v37" />
-<link rel="stylesheet" href="<?php echo $website['root'];?>wow/static/css/cms.css?v19" />
+<link rel="stylesheet" href="<?php echo BASE_URL ?>wow/static/css/wow.css?v19" />
+<link rel="stylesheet" href="<?php echo BASE_URL ?>wow/static/local-common/css/cms/forums.css?v37" />
+<link rel="stylesheet" href="<?php echo BASE_URL ?>wow/static/local-common/css/cms/cms-common.css?v37" />
+<link rel="stylesheet" href="<?php echo BASE_URL ?>wow/static/css/cms.css?v19" />
 <!--[if IE 6]> <link rel="stylesheet" href="/wow/static/css/cms-ie6.css?v19" /><![endif]-->
 <!--[if IE]> <link rel="stylesheet" href="/wow/static/css/wow-ie.css?v19" /><![endif]-->
 <!--[if IE 6]> <link rel="stylesheet" href="/wow/static/css/wow-ie6.css?v19" /><![endif]-->
 <!--[if IE 7]> <link rel="stylesheet" href="/wow/static/css/wow-ie7.css?v19" /><![endif]-->
-<script src="<?php echo $website['root'];?>wow/static/local-common/js/third-party/jquery.js?v37"></script>
-<script src="<?php echo $website['root'];?>wow/static/local-common/js/core.js?v37"></script>
-<script src="<?php echo $website['root'];?>wow/static/local-common/js/tooltip.js?v37"></script>
-<script src="<?php echo $website['root'];?>wow/static/local-common/js/bml.js"></script>
+<script src="<?php echo BASE_URL ?>wow/static/local-common/js/third-party/jquery.js?v37"></script>
+<script src="<?php echo BASE_URL ?>wow/static/local-common/js/core.js?v37"></script>
+<script src="<?php echo BASE_URL ?>wow/static/local-common/js/tooltip.js?v37"></script>
+<script src="<?php echo BASE_URL ?>wow/static/local-common/js/bml.js"></script>
 <script src="http://static.wowhead.com/widgets/power.js"></script>
 <!--[if IE 6]> <script type="text/javascript">//<![CDATA[try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}//]]></script><![endif]-->
 
@@ -59,12 +59,12 @@ $page_cat = "forums";
 		_gaq.push(['_trackPageLoadTime']);
 	//]]>
 </script>
-<link rel="image_src" href="<?php echo $website['root'];?>wow/static/images/icons/facebook/article.jpg" />
+<link rel="image_src" href="<?php echo BASE_URL ?>wow/static/images/icons/facebook/article.jpg" />
 <style type="text/css">
 .loader {
   width:24px;
   height:24px;
-  background: url("<?php echo $website['root'];?>wow/static/images/loaders/canvas-loader.gif") no-repeat;
+  background: url("<?php echo BASE_URL ?>wow/static/images/loaders/canvas-loader.gif") no-repeat;
  }
  
 .errors {
@@ -141,10 +141,10 @@ $page_cat = "forums";
 
 		echo '
 		<ol class="ui-breadcrumb">
-		<li><a href="'.$website['root'].'index.php" rel="np">'.$website['title'].'</a><span class="breadcrumb-arrow"></span></li>
-		<li><a href="'.$website['root'].'forum" rel="np">Forums</a><span class="breadcrumb-arrow"></span></li>
-		<li><a href="'.$website['root'].'forum" rel="np">'.$category['name'].'</a><span class="breadcrumb-arrow"></span></li>
-		<li><a href="'.$website['root'].'forum/category/?f='.$forum['id'].'" rel="np">'.$forum['name'].'</a><span class="breadcrumb-arrow"></span></li>
+		<li><a href="'.BASE_URL.'index.php" rel="np">'.$website['title'].'</a><span class="breadcrumb-arrow"></span></li>
+		<li><a href="'.BASE_URL.'forum" rel="np">Forums</a><span class="breadcrumb-arrow"></span></li>
+		<li><a href="'.BASE_URL.'forum" rel="np">'.$category['name'].'</a><span class="breadcrumb-arrow"></span></li>
+		<li><a href="'.BASE_URL.'forum/category/?f='.$forum['id'].'" rel="np">'.$forum['name'].'</a><span class="breadcrumb-arrow"></span></li>
 		<li class="last"><a href="create-topic/?f='.$forum['id'].'" rel="np">'.$Forum['Forum8'].'</a></li>
 		</ol>';
 
@@ -156,7 +156,7 @@ $page_cat = "forums";
 		echo '
 		<ol class="ui-breadcrumb">
 		<li><a href="/" rel="np">World of Warcraft</a><span class="breadcrumb-arrow"></span></li>
-		<li class="last"><a href="'.$website['root'].'forum" rel="np">Forums</a></li>
+		<li class="last"><a href="'.BASE_URL.'forum" rel="np">Forums</a></li>
 		</ol>
 		';
 		echo '<meta http-equiv="refresh" content="2;url=index.php"/>';
@@ -202,7 +202,7 @@ $page_cat = "forums";
 			echo '<div class="success">';
 			echo ''.$Forum['Forum55'].'';
 			echo '</div>';
-			echo '<meta http-equiv="refresh" content="0;url='.$website['address'].'/forum/category/view-topic/?t='.$thread['id'].'"';
+			echo '<meta http-equiv="refresh" content="0;url='.BASE_URL.'/forum/category/view-topic/?t='.$thread['id'].'"';
 		}
 		echo '<div id="forum-content"></div>';
 	}else{
@@ -224,7 +224,7 @@ $page_cat = "forums";
 								<div class="avatar">
 									<div class="avatar-interior">
 											<a href="#">
-												<img height="84" src="<?php echo $website['root'];?>images/avatars/2d/<?php echo $userInfo['avatar']; ?>" alt="" />
+												<img height="84" src="<?php echo BASE_URL ?>images/avatars/2d/<?php echo $userInfo['avatar']; ?>" alt="" />
 											</a>
 									</div>
 								</div>
@@ -274,7 +274,7 @@ $page_cat = "forums";
 								if($mode == "thread") echo '<input type="text" id="subject" name="subject" value="'.$post['name'].'" class="post-subject" maxlength="55" />';
 								?>
 								<textarea id="postCommand.detail" name="detail" class="post-editor" cols="78" rows="13"><?php echo stripslashes(str_replace("<br />", "", $post['content'])); ?></textarea>
-								<script type="text/javascript" src="<?php echo $website['root'];?>wow/static/local-common/js/bml.js"></script>
+								<script type="text/javascript" src="<?php echo BASE_URL ?>wow/static/local-common/js/bml.js"></script>
 								<script type="text/javascript">
 								//<![CDATA[
 								$(function() {

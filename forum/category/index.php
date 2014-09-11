@@ -6,26 +6,26 @@ include_once("functions.d/GetForumTheme.php");
 ?>
 <!doctype html>
 <head>
-<title><?php echo $website['title']; ?></title>
+<title><?php echo TITLE ?></title>
 <meta content="false" http-equiv="imagetoolbar" />
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
-<meta name="description" content="<?php echo $website['description']; ?>">
-<meta name="keywords" content="<?php echo $website['keywords']; ?>">
-<link rel="shortcut icon" href="<?php echo $website['root'];?>wow/static/local-common/images/favicons/wow.ico" type="image/x-icon" />
+<meta name="description" content="<?php echo DESCRIPTION ?>">
+<meta name="keywords" content="<?php echo KEYWORDS ?>">
+<link rel="shortcut icon" href="<?php echo BASE_URL ?>wow/static/local-common/images/favicons/wow.ico" type="image/x-icon" />
 <link rel="search" type="application/opensearchdescription+xml" href="http://eu.battle.net/en-gb/data/opensearch" title="Battle.net Search" />
-<link rel="stylesheet" type="text/css" media="all" href="<?php echo $website['root'];?>wow/static/local-common/css/common.css?v15" />
-<!--[if IE]><link rel="stylesheet"  href="<?php echo $website['root'];?>wow/static/local-common/css/common-ie.css?v15" /><![endif]-->
-<!--[if IE 6]><link rel="stylesheet"  href="<?php echo $website['root'];?>wow/static/local-common/css/common-ie6.css?v15" /><![endif]-->
-<!--[if IE 7]><link rel="stylesheet" href="<?php echo $website['root'];?>wow/static/local-common/css/common-ie7.css?v15" /><![endif]-->
+<link rel="stylesheet" type="text/css" media="all" href="<?php echo BASE_URL ?>wow/static/local-common/css/common.css?v15" />
+<!--[if IE]><link rel="stylesheet"  href="<?php echo BASE_URL ?>wow/static/local-common/css/common-ie.css?v15" /><![endif]-->
+<!--[if IE 6]><link rel="stylesheet"  href="<?php echo BASE_URL ?>wow/static/local-common/css/common-ie6.css?v15" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="<?php echo BASE_URL ?>wow/static/local-common/css/common-ie7.css?v15" /><![endif]-->
 <?php GetForumTheme(); ?>
-<!--[if IE 6]><link rel="stylesheet" href="<?php echo $website['root'];?>wow/static/css/cms-ie6.css?v4" /><![endif]-->
-<!--[if IE]><link rel="stylesheet" href="<?php echo $website['root'];?>wow/static/css/wow-ie.css?v4" /><![endif]-->
-<!--[if IE 6]><link rel="stylesheet" href="<?php echo $website['root'];?>wow/static/css/wow-ie6.css?v4" /><![endif]-->
-<!--[if IE 7]><link rel="stylesheet" href="<?php echo $website['root'];?>wow/static/css/wow-ie7.css?v4" /><![endif]-->
-<script src="<?php echo $website['root'];?>wow/static/local-common/js/third-party/jquery-1.4.4.min.js"></script>
-<script src="<?php echo $website['root'];?>wow/static/local-common/js/core.js?v15"></script>
-<script src="<?php echo $website['root'];?>wow/static/local-common/js/tooltip.js?v15"></script>
-<script src="<?php echo $website['root'];?>wow/static/local-common/js/cms.js"></script>
+<!--[if IE 6]><link rel="stylesheet" href="<?php echo BASE_URL ?>wow/static/css/cms-ie6.css?v4" /><![endif]-->
+<!--[if IE]><link rel="stylesheet" href="<?php echo BASE_URL ?>wow/static/css/wow-ie.css?v4" /><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" href="<?php echo BASE_URL ?>wow/static/css/wow-ie6.css?v4" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="<?php echo BASE_URL ?>wow/static/css/wow-ie7.css?v4" /><![endif]-->
+<script src="<?php echo BASE_URL ?>wow/static/local-common/js/third-party/jquery-1.4.4.min.js"></script>
+<script src="<?php echo BASE_URL ?>wow/static/local-common/js/core.js?v15"></script>
+<script src="<?php echo BASE_URL ?>wow/static/local-common/js/tooltip.js?v15"></script>
+<script src="<?php echo BASE_URL ?>wow/static/local-common/js/cms.js"></script>
 <!--[if IE 6]> <script type="text/javascript">
 //<![CDATA[
 try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
@@ -45,8 +45,8 @@ Flash.videoBase = 'http://eu.media.blizzard.com/wow/media/videos';
 Flash.ratingImage = 'http://eu.media.blizzard.com/wow/player/rating-pegi.jpg';
 //]]>
 </script>
-<script src="<?php echo $website['root'];?>wow/static/local-common/js/menu.js?v15"></script>
-<script src="<?php echo $website['root'];?>wow/static/js/wow.js?v4"></script>
+<script src="<?php echo BASE_URL ?>wow/static/local-common/js/menu.js?v15"></script>
+<script src="<?php echo BASE_URL ?>wow/static/js/wow.js?v4"></script>
 </head>
 <body class="en-gb logged-in">
 
@@ -75,9 +75,9 @@ Flash.ratingImage = 'http://eu.media.blizzard.com/wow/player/rating-pegi.jpg';
 	}
 	$get_allthreads = mysql_query("SELECT * FROM forum_threads WHERE forumid = '".$forum['id']."'");
 	echo '
-	<li><a href="'.$website['root'].'index.php" rel="np">'.$website['title'].'</a><span class="breadcrumb-arrow"></span></li>
-	<li><a href="'.$website['root'].'forum" rel="np">Forums</a><span class="breadcrumb-arrow"></span></li>
-	<li><a href="'.$website['root'].'forum" rel="np">'.$category['name'].'</a><span class="breadcrumb-arrow"></span></li>
+	<li><a href="'.BASE_URL.'index.php" rel="np">'.$website['title'].'</a><span class="breadcrumb-arrow"></span></li>
+	<li><a href="'.BASE_URL.'forum" rel="np">Forums</a><span class="breadcrumb-arrow"></span></li>
+	<li><a href="'.BASE_URL.'forum" rel="np">'.$category['name'].'</a><span class="breadcrumb-arrow"></span></li>
 	<li class="last"><a href="#" rel="np">'.$forum['name'].'</a></li>
 	';
 	
@@ -86,8 +86,8 @@ Flash.ratingImage = 'http://eu.media.blizzard.com/wow/player/rating-pegi.jpg';
 }else{ $error=1; }
 if($error == 1){
 echo '
-<li><a href="'.$website['root'].'index.php" rel="np">World of Warcraft</a></li>
-<li class="last"><a href="'.$website['root'].'forum" rel="np">Forums</a></li>
+<li><a href="'.BASE_URL.'index.php" rel="np">World of Warcraft</a></li>
+<li class="last"><a href="'.BASE_URL.'forum" rel="np">Forums</a></li>
 ';
 }
 ?>
@@ -109,7 +109,7 @@ echo '
 		   }
 		</style>
 		<center>'.$Forum['Forum36'].'<br /><br /><div class="loader"> </div><br />'.$Forum['Forum37'].'</center>
-		<meta http-equiv="refresh" content="2;url='.$website['root'].'"/>
+		<meta http-equiv="refresh" content="2;url='.BASE_URL.'"/>
 		';
 		}else{ ?>
 		<div class="forum-options">
@@ -253,7 +253,7 @@ echo '
 							<a href="view-topic/?t='.$thread['id'].'" onmouseover="Tooltip.show(this, \'#thread_tt_'.$thread['id'].'\',{ location: \'mouse\' });">
 									<b>'.$thread['name'];
 								if($thread['locked'] != 0){
-								echo ' <img src="'.$website['root'].'wow/static/images/layout/cms/post_locked.gif" alt="" />';
+								echo ' <img src="'.BASE_URL.'wow/static/images/layout/cms/post_locked.gif" alt="" />';
 								}
 								echo '
 							</a></b>
@@ -266,7 +266,7 @@ echo '
 							echo'
 							<span class="type-blizzard">
 								'.$charInfo['name'].'
-								<img src="'.$website['root'].'wow/static/images/layout/cms/icon_blizzard.gif" alt="" />
+								<img src="'.BASE_URL.'wow/static/images/layout/cms/icon_blizzard.gif" alt="" />
 							</span>';
 							}else{
 							echo $charInfo['name'];
@@ -304,7 +304,7 @@ echo '
 								echo '
 								<span class="type-blizzard">
 										'.$posterCharacterx['name'].'
-								</span><img src="'.$website['root'].'wow/static/images/layout/cms/icon_blizzard.png" alt="" />';}else{
+								</span><img src="'.BASE_URL.'wow/static/images/layout/cms/icon_blizzard.png" alt="" />';}else{
 								echo $posterCharacterx['name'];
 								}
 								echo'

@@ -3,10 +3,10 @@
 <div id="sitemap">
 <div class="column">
 <h3 class="bnet">
-<a href="#" tabindex="100"><?php echo $website['title']; ?></a>
+<a href="#" tabindex="100"><?php echo TITLE ?></a>
 </h3>
 <ul>
-<li><a href="<?php echo $website['root']; ?>account_log.php"><?php echo $Account['Account']; ?></a></li>
+<li><a href="<?php echo BASE_URL ?>account_log.php"><?php echo $Account['Account']; ?></a></li>
 <li><a href=""><?php echo $Support['Support']; ?></a></li>
 </ul>
 </div>
@@ -15,7 +15,7 @@
 <a href="#" tabindex="100"><?php echo $Games['Games']; ?></a>
 </h3>
 <ul>
-<li><a href="#"><?php echo $website['title']; ?></a></li>
+<li><a href="#"><?php echo TITLE ?></a></li>
 <li><a href="#"><?php echo $Client_down['Client_down']; ?></a></li>
 </ul>
 </div>
@@ -25,9 +25,9 @@
 </h3>
 <ul>
 <li><a href="#"><?php echo $Account1['Account1']; ?></a></li>
-<li><a href="<?php echo $website['root']; ?>register.php"><?php echo $Account3['Account3']; ?></a></li>
-<li><a href="<?php echo $website['root']; ?>account_log.php"><?php echo $Account4['Account4']; ?></a></li>
-<li><a href="<?php echo $website['root']; ?>account_log.php"><?php echo $Account5['Account5']; ?></a></li>
+<li><a href="<?php echo BASE_URL ?>register.php"><?php echo $Account3['Account3']; ?></a></li>
+<li><a href="<?php echo BASE_URL ?>account_log.php"><?php echo $Account4['Account4']; ?></a></li>
+<li><a href="<?php echo BASE_URL ?>account_log.php"><?php echo $Account5['Account5']; ?></a></li>
 </ul>
 </div>
 <div class="column">
@@ -168,12 +168,12 @@
 	<center>
 		<br>
 			<small><?php echo $copyright3['copyright3']; ?>
-			.<br/><?php echo $copyright['copyright']; ?> - <?php echo date('Y'); ?> <?php echo $website['title']; ?>
+			.<br/><?php echo $copyright['copyright']; ?> - <?php echo date('Y'); ?> <?php echo TITLE ?>
 			.<br/><?php echo $copyright4['copyright4']; ?>
 			</small>
 	</center>
 </div>
-<center><a href="http://aquaflame.org/" height="46" width="190"><img src="<?php echo $website['root'];?>wow/static/images/logos/wof-logo-small.png" height="21px" width="190px"/></center></a>
+<center><a href="http://aquaflame.org/" height="46" width="190"><img src="<?php echo BASE_URL ?>wow/static/images/logos/wof-logo-small.png" height="21px" width="190px"/></center></a>
 </div>
 <span class="clear"><!-- --></span>
 </div>

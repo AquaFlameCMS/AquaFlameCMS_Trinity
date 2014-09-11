@@ -11,14 +11,14 @@ $page_cat = "community";
 <!--[if gt IE 8]><!--><html class="no-js"><!--<![endif]-->
 <html>
 <head>
-<title><?php echo $website['title']; ?> - <?php echo $Community['Community'];?></title>
-<meta name="description" content="<?php echo $website['description']; ?>">
-<meta name="keywords" content="<?php echo $website['keywords']; ?>">
-<link rel="shortcut icon" href="../wow/static/local-common/images/favicons/wow.png" type="image/x-icon"/>
+<title><?php echo TITLE ?> - <?php echo $Community['Community'];?></title>
+<meta name="description" content="<?php echo DESCRIPTION ?>">
+<meta name="keywords" content="<?php echo KEYWORDS ?>">
+<link rel="shortcut icon" href="<?php echo BASE_URL ?>wow/static/local-common/images/favicons/wow.png" type="image/x-icon"/>
 <?php GetCommunityTheme(); ?>
-<script src="../wow/static/local-common/js/third-party/jquery.js?v46"></script>
-<script src="../wow/static/local-common/js/core.js?v46"></script>
-<script src="../wow/static/local-common/js/tooltip.js?v46"></script>
+<script src="<?php echo BASE_URL ?>wow/static/local-common/js/third-party/jquery.js?v46"></script>
+<script src="<?php echo BASE_URL ?>wow/static/local-common/js/core.js?v46"></script>
+<script src="<?php echo BASE_URL ?>wow/static/local-common/js/tooltip.js?v46"></script>
 <!--[if IE 6]> <script type="text/javascript">
 //<![CDATA[
 try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
@@ -37,7 +37,7 @@ include("../header.php");
 				<ol class="ui-breadcrumb">
 					<li itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
 					<a href="/wow/es/" rel="np" class="breadcrumb-arrow" itemprop="url">
-					<span class="breadcrumb-text" itemprop="name"><?php echo $website['title']; ?></span>
+					<span class="breadcrumb-text" itemprop="name"><?php echo TITLE ?></span>
 					</a>
 					</li>
 					<li class="last" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
@@ -67,7 +67,7 @@ include("../header.php");
 								<div class="sidebar-content">
 									<div class="profiles-search-block">
 										<span class="profiles-search-title"><?php echo $Community['character'];?></span>
-										<form action="<?php echo $website['root']; ?>search.php" method="get" autocomplete="off">
+										<form action="<?php echo BASE_URL ?>search.php" method="get" autocomplete="off">
 											<input type="hidden" name="f" value="wowcharacter"/>
 											<input type="text" id="wowcharacter" alt="Name" name="q"/>
 											<button class="ui-button button1" type="submit"><span class="button-left"><span class="button-right"><?php echo $Community['search'];?></span></span></button>
@@ -75,7 +75,7 @@ include("../header.php");
 									</div>
 									<div class="profiles-search-block">
 										<span class="profiles-search-title"><?php echo $Community['guild'];?></span>
-										<form action="<?php echo $website['root']; ?>search.php" method="get" autocomplete="off">
+										<form action="<?php echo BASE_URL ?>search.php" method="get" autocomplete="off">
 											<input type="hidden" name="f" value="wowguild"/>
 											<input type="text" id="wowguild" alt="Name" name="q"/>
 											<button class="ui-button button1" type="submit"><span class="button-left"><span class="button-right"><?php echo $Community['search'];?></span></span></button>
@@ -104,6 +104,7 @@ include("../header.php");
 										<!-- FULL COLUMN -->
 										<div class="group">
 											<?php
+											$server_db=DB;
 											$pve_mode = mysql_query("SELECT * FROM $server_db.pve_mode");
 											while($pve = mysql_fetch_array($pve_mode)){ ?>
 											<a href="<?php echo $pve["link"] ?>">
@@ -250,7 +251,7 @@ include("../header.php");
 								<!-- -->
 								</span>
 								</a>
-								<a href="<?php echo $website['root']; ?>media/send_media.php" class="tosubmit external">Submit</a>
+								<a href="<?php echo BASE_URL ?>media/send_media.php" class="tosubmit external">Submit</a>
 								</li>
 								<li>
 								<a href="#" class="comics block" target="_blank">
@@ -260,7 +261,7 @@ include("../header.php");
 								<!-- -->
 								</span>
 								</a>
-								<a href="<?php echo $website['root']; ?>media/send_media.php" class="tosubmit external">Submit</a>
+								<a href="<?php echo BASE_URL ?>media/send_media.php" class="tosubmit external">Submit</a>
 								</li>
 								<li>
 								<a href="#" class="shreenshot block" target="_blank">
@@ -270,7 +271,7 @@ include("../header.php");
 								<!-- -->
 								</span>
 								</a>
-								<a href="<?php echo $website['root']; ?>media/send_media.php" class="tosubmit external">Submit</a>
+								<a href="<?php echo BASE_URL ?>media/send_media.php" class="tosubmit external">Submit</a>
 								</li>
 								<li>
 								<a href="#" class="wallpaper block" target="_blank">
@@ -280,7 +281,7 @@ include("../header.php");
 								<!-- -->
 								</span>
 								</a>
-								<a href="<?php echo $website['root']; ?>media/send_media.php" class="tosubmit external">Submit</a>
+								<a href="<?php echo BASE_URL ?>media/send_media.php" class="tosubmit external">Submit</a>
 								</li>
 							</ul>
 						</div>
@@ -295,7 +296,7 @@ include("../header.php");
 			</div>
 		</div>
 	</div>
-<script type="text/javascript" src="../wow/static/local-common/js/search.js?v46"></script>
+<script type="text/javascript" src="<?php echo BASE_URL ?>wow/static/local-common/js/search.js?v46"></script>
 <script type="text/javascript">
 //<![CDATA[
 var xsToken = '';

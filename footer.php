@@ -3,11 +3,11 @@
 		<div id="sitemap" class="promotions">
 			<div class="column">
 				<h3 class="bnet">
-				<a href="#" tabindex="100"><?php echo $website['title']; ?>
+				<a href="#" tabindex="100"><?php echo TITLE ?>
 				</a>
 				</h3>
 				<ul>
-					<li><a href="<?php echo $website['root'];?>account_log.php"><?php echo $Account['Account']; ?>
+					<li><a href="<?php echo BASE_URL ?>account_log.php"><?php echo $Account['Account']; ?>
 					</a></li>
 					<li><a href=""><?php echo $Support['Support']; ?>
 					</a></li>
@@ -19,7 +19,7 @@
 				</a>
 				</h3>
 				<ul>
-					<li><a href="#"><?php echo $website['title']; ?>
+					<li><a href="#"><?php echo TITLE ?>
 					</a></li>
 					<li><a href="#"><?php echo $Client_down['Client_down']; ?>
 					</a></li>
@@ -33,11 +33,11 @@
 				<ul>
 					<li><a href="#"><?php echo $Account1['Account1']; ?>
 					</a></li>
-					<li><a href="<?php echo $website['root'];?>register.php"><?php echo $Account3['Account3']; ?>
+					<li><a href="<?php echo BASE_URL ?>register.php"><?php echo $Account3['Account3']; ?>
 					</a></li>
-					<li><a href="<?php echo $website['root'];?>account_log.php"><?php echo $Account4['Account4']; ?>
+					<li><a href="<?php echo BASE_URL ?>account_log.php"><?php echo $Account4['Account4']; ?>
 					</a></li>
-					<li><a href="<?php echo $website['root'];?>account_log.php"><?php echo $Account5['Account5']; ?>
+					<li><a href="<?php echo BASE_URL ?>account_log.php"><?php echo $Account5['Account5']; ?>
 					</a></li>
 				</ul>
 			</div>
@@ -60,15 +60,15 @@
 					<div class="bnet-offer">
 						<!-- -->
 						<div class="bnet-offer-bg">
-							<a href="<?php echo $website['root'];?>register.php" target="_blank" id="ad3023837" class="bnet-offer-image" onclick="BnetAds.trackEvent('campaignId:3023837 - imgId:3023042', 'WoWtrialLatAm', 'wow', true);"> <img src="<?php echo $website['root'];?>wow/static/images/footer/ad_300x100/promo.jpg" width="300" height="100" alt=""/> </a>
+							<a href="<?php echo BASE_URL ?>register.php" target="_blank" id="ad3023837" class="bnet-offer-image" onclick="BnetAds.trackEvent('campaignId:3023837 - imgId:3023042', 'WoWtrialLatAm', 'wow', true);"> <img src="<?php echo BASE_URL ?>wow/static/images/footer/ad_300x100/promo.jpg" width="300" height="100" alt=""/> </a>
 						</div>
 						<script type="text/javascript">
-//<![CDATA[
-if(typeof (BnetAds.addEvent) != "undefined" )
-BnetAds.addEvent(window, 'load', function(){ BnetAds.trackEvent('campaignId:3023837 - imgId:3023042', 'WoWtrialLatAm', 'wow'); } );
-else
-BnetAds.trackEvent('3023837', 'WoWtrialLatAm', 'wow');
-//]]>
+						//<![CDATA[
+						if(typeof (BnetAds.addEvent) != "undefined" )
+						BnetAds.addEvent(window, 'load', function(){ BnetAds.trackEvent('campaignId:3023837 - imgId:3023042', 'WoWtrialLatAm', 'wow'); } );
+						else
+						BnetAds.trackEvent('3023837', 'WoWtrialLatAm', 'wow');
+						//]]>
 						</script>
 					</div>
 				</div>
@@ -79,13 +79,12 @@ BnetAds.trackEvent('3023837', 'WoWtrialLatAm', 'wow');
 		</div>
 		<div id="copyright">
 			<?php
-function curPageName() {
- return substr($_SERVER["SCRIPT_NAME"],strrpos($_SERVER["SCRIPT_NAME"],"/")+1);
-}
-echo '<a tabindex="100" id="change-language" ';
-if (strtoupper(curPageName())<>
-			'ADVANCED.PHP' && strtoupper(curPageName())<>'THREED.PHP'){ echo ' href="javascript:;"';} echo '>' ?> <span><?php echo $website['title'];  echo $Wow3['Wow3']; ?>
-			</span>
+			function curPageName() {
+				return substr($_SERVER["SCRIPT_NAME"],strrpos($_SERVER["SCRIPT_NAME"],"/")+1);
+			}
+			echo '<a tabindex="100" id="change-language" ';
+			if (strtoupper(curPageName())<> 'ADVANCED.PHP' && strtoupper(curPageName())<>'THREED.PHP'){ echo ' href="javascript:;"';} echo '>' ?>
+			<span><?php echo TITLE . $Wow3['Wow3']; ?></span>
 			</a>
 			<span class="clear">
 			<!-- -->
@@ -210,7 +209,7 @@ if (strtoupper(curPageName())<>
 			<center>
 			<br>
 			<small><?php echo $copyright3['copyright3']; ?>
-			.<br/><?php echo $copyright['copyright']; ?> - <?php echo date('Y'); ?> <?php echo $website['title']; ?>
+			.<br/><?php echo $copyright['copyright']; ?> - <?php echo date('Y'); ?> <?php echo TITLE ?>
 			.<br/><?php echo $copyright4['copyright4']; ?>
 			</small>
 			</center>
@@ -223,7 +222,7 @@ if (strtoupper(curPageName())<>
 </div>
 <div id="service">
 	<ul class="service-bar">
-		<li class="service-cell service-home"><a href="<?php echo $website['address']; ?>" tabindex="50" accesskey="1" title="Home">
+		<li class="service-cell service-home"><a href="<?php echo BASE_URL ?>" tabindex="50" accesskey="1" title="Home">
 		<div style="width:45px;">
 			&nbsp;
 		</div>
@@ -231,19 +230,19 @@ if (strtoupper(curPageName())<>
 		<?php if(isset($_SESSION['username'])){ ?>
 		<li class="service-cell service-welcome"><?php echo $Welcome['Welcome']; ?>
 		<?php if ($userInfo['firstName']==""){ echo $globalInfoVar['Anonymous'];} else{echo $userInfo['firstName']; }?>
-		 | <a href="<?php echo $website['root'];?>logout.php"><?php echo $logout['logout']; ?>
+		 | <a href="<?php echo BASE_URL ?>logout.php"><?php echo $logout['logout']; ?>
 		</a></li>
 		<?php }else{ ?>
 		<li class="service-cell service-welcome"><a href="?login.php" onclick="return Login.open()"><?php echo $login['login']; ?>
 		</a><?php echo $or['or']; ?>
-		<a href="<?php echo $website['root'];?>register.php"><?php echo $Account3['Account3']; ?>
+		<a href="<?php echo BASE_URL ?>register.php"><?php echo $Account3['Account3']; ?>
 		</a></li>
 		<?php } ?>
 		<li class="service-cell service-shop">
-		<a href="<?php echo $website['root'];?>shop/" class="service-link"><?php echo $Services['Services']; ?>
+		<a href="<?php echo BASE_URL ?>shop/" class="service-link"><?php echo $Services['Services']; ?>
 		</a>
 		</li>
-		<li class="service-cell service-account"><a href="<?php echo $website['root'];?>account/" class="service-link" tabindex="50" accesskey="3"><?php echo $Account['Account']; ?>
+		<li class="service-cell service-account"><a href="<?php echo BASE_URL ?>account/" class="service-link" tabindex="50" accesskey="3"><?php echo $Account['Account']; ?>
 		</a></li>
 		<?php
 		if (!isset($_SESSION['username']))	{
@@ -316,13 +315,13 @@ if (strtoupper(curPageName())<>
 			<div class="explore-primary">
 				<ul class="explore-nav">
 					<li>
-					<a href="<?php echo $website['root'];?>" tabindex="55"> <strong class="explore-caption"><?php echo $website['title']; ?>
+					<a href="<?php echo BASE_URL ?>" tabindex="55"> <strong class="explore-caption"><?php echo TITLE ?>
 					</strong>
 					<?php echo $Friends['Keepthem']; ?>
 					</a>
 					</li>
 					<li>
-					<a href="<?php echo $website['root'];?>account/" tabindex="55"> <strong class="explore-caption"><?php echo $Account['Account']; ?>
+					<a href="<?php echo BASE_URL ?>account/" tabindex="55"> <strong class="explore-caption"><?php echo $Account['Account']; ?>
 					</strong>
 					<?php echo $Account6['Account6']; ?>
 					</a>
@@ -485,25 +484,25 @@ other: 'Other'
 //]]>
 </script>
 <!doctype html>
-<script src="<?php echo $website['root'];?>wow/static/local-common/js/search.js?v37"></script>
+<script src="<?php echo BASE_URL ?>wow/static/local-common/js/search.js?v37"></script>
 <script type="text/javascript">
 //<![CDATA[
-Core.load("<?php echo $website['root']; ?>wow/static/local-common/js/third-party/jquery-ui-1.8.6.custom.min.js?v46");
-Core.load("<?php echo $website['root']; ?>wow/static/local-common/js/login.js?v46", false, function() {
-Login.embeddedUrl = '<?php echo $website['root']; ?>loginframe.php';
+Core.load("<?php echo BASE_URL ?>wow/static/local-common/js/third-party/jquery-ui-1.8.6.custom.min.js?v46");
+Core.load("<?php echo BASE_URL ?>wow/static/local-common/js/login.js?v46", false, function() {
+Login.embeddedUrl = '<?php echo BASE_URL ?>loginframe.php';
 });
 //]]>
 </script>
-<script src="<?php echo $website['root'];?>wow/static/local-common/js/menu.js?v37"></script>
-<script src="<?php echo $website['root'];?>wow/static/js/wow.js?v19"></script>
+<script src="<?php echo BASE_URL ?>wow/static/local-common/js/menu.js?v37"></script>
+<script src="<?php echo BASE_URL ?>wow/static/js/wow.js?v19"></script>
 <script type="text/javascript">
 //<![CDATA[
 $(function() {
-Menu.initialize('<?php echo $website['root'];?>data/menu.json');
+Menu.initialize('<?php echo BASE_URL ?>data/menu.json');
 });
 //]]>
 </script>
-<script src="<?php echo $website['root'];?>wow/static/local-common/js/cms.js?v37"></script>
+<script src="<?php echo BASE_URL ?>wow/static/local-common/js/cms.js?v37"></script>
 <!--[if lt IE 8]> <script type="text/javascript" src="/wow/static/local-common/js/third-party/jquery.pngFix.pack.js?v37"></script>
 <script type="text/javascript">
 //<![CDATA[

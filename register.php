@@ -10,9 +10,9 @@ $page_cat = "account";
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <html lang="en-gb">
 <head>
-<title><?php echo $re['re']; ?> <?php echo $website['title']; ?></title>
-<meta name="description" content="<?php echo $website['description']; ?>">
-<meta name="keywords" content="<?php echo $website['keywords']; ?>">
+<title><?php echo $re['re']; ?> <?php echo TITLE ?></title>
+<meta name="description" content="<?php echo DESCRIPTION ?>">
+<meta name="keywords" content="<?php echo KEYWORDS ?>">
 <link rel="shortcut icon" href="wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
 <link rel="stylesheet" media="all" href="wow/static/local-common/css/common.css" />
 <link rel="stylesheet" media="all" href="wow/static/css/bnet.css" />
@@ -193,7 +193,7 @@ if (!isset($_SESSION['username'])) {
 <?php
 						  }else{
 ?>
-<p class="privacy-message"><b><?php echo $re['re2']; ?><?php echo $website['title']; ?> <?php echo $re['re3']; ?><a href="" onclick="window.open(this.href); return false;"><?php echo $re['re4']; ?></a>.</p>
+<p class="privacy-message"><b><?php echo $re['re2']; ?><?php echo TITLE ?> <?php echo $re['re3']; ?><a href="" onclick="window.open(this.href); return false;"><?php echo $re['re4']; ?></a>.</p>
 </div>
 <form action="" method="post" id="creation">
 <div class="input-row input-row-select">
@@ -541,7 +541,7 @@ passwordStrength3: 'Strong'
 <label for="agreedToChatPolicy">
 <input type="checkbox" name="agreedToChatPolicy" value="true" id="agreedToChatPolicy" tabindex="1" required="required" />
 <span class="label-text">
-<?php echo $re['re34']; ?><?php echo $website['title']; ?><?php echo $re['re35']; ?> 
+<?php echo $re['re34']; ?><?php echo TITLE ?><?php echo $re['re35']; ?> 
 <span class="input-required">*</span>
 </span>
 </label>
@@ -738,7 +738,7 @@ Core.load("wow/static/local-common/js/third-party/jquery-ui-1.8.6.custom.min.js"
 Core.load("wow/static/local-common/js/third-party/jquery.mousewheel.min.js");
 Core.load("wow/static/local-common/js/third-party/jquery.tinyscrollbar.custom.js");
 Core.load("wow/static/local-common/js/login.js", false, function() {
-Login.embeddedUrl = '<?php echo $website['root'];?>loginframe.php';
+Login.embeddedUrl = '<?php echo BASE_URL ?>loginframe.php';
 });
 //]]>
 </script>

@@ -10,10 +10,10 @@ if(isset($_GET['realm'])) $realmid = intval($_GET['realm']); else $realmid = 1;
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
-<title><?php echo $website['title']; ?> - <?php echo $status['status']; ?></title>
+<title><?php echo TITLE ?> - <?php echo $status['status']; ?></title>
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
-<meta name="description" content="<?php echo $website['description']; ?>">
-<meta name="keywords" content="<?php echo $website['keywords']; ?>">
+<meta name="description" content="<?php echo DESCRIPTION ?>">
+<meta name="keywords" content="<?php echo KEYWORDS ?>">
 <link rel="shortcut icon" href="../../wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
 <link rel="stylesheet" href="../../wow/static/local-common/css/common.css?v17" />
 <link rel="stylesheet" href="../../wow/static/css/wow.css?v7" />
@@ -231,7 +231,7 @@ $realm_count = mysql_num_rows($realms);
 <div class="content-top">
 <div class="content-trail">
 <ol class="ui-breadcrumb">
-<li><a href="index.php" rel="np"><?php echo $website['title']; ?></a>
+<li><a href="index.php" rel="np"><?php echo TITLE ?></a>
 <span class="breadcrumb-arrow"></span></li>
 <li class="last"><a href="" rel="np"><?php echo $Status['RlmStat']; ?></a></li>
 </ol>

@@ -11,10 +11,10 @@ include_once("functions.d/GetGameTheme.php");
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
  <html lang="en-gb">
 <head>
-<title><?php echo $website['title']; ?> - <?php echo $status['status']; ?></title>
+<title><?php echo TITLE ?> - <?php echo $status['status']; ?></title>
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
-<meta name="description" content="<?php echo $website['description']; ?>">
-<meta name="keywords" content="<?php echo $website['keywords']; ?>">
+<meta name="description" content="<?php echo DESCRIPTION ?>">
+<meta name="keywords" content="<?php echo KEYWORDS ?>">
 <link rel="shortcut icon" href="../../wow/static/local-common/images/favicons/wow.png" type="image/x-icon" />
 <?php GetGameTheme(); ?>
 <script src="../../wow/static/local-common/js/third-party/jquery-1.4.4.min.js"></script>
@@ -57,17 +57,17 @@ include("../../header.php");
 			<div class="content-trail">
 				<ol class="ui-breadcrumb">
 					<li itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-					<a href="<?php echo $website['root']; ?>" rel="np" class="breadcrumb-arrow" itemprop="url">
-					<span class="breadcrumb-text" itemprop="name"><?php echo $website['title']; ?></span>
+					<a href="<?php echo BASE_URL ?>" rel="np" class="breadcrumb-arrow" itemprop="url">
+					<span class="breadcrumb-text" itemprop="name"><?php echo TITLE ?></span>
 					</a>
 					</li>
 					<li itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-					<a href="<?php echo $website['root']; ?>game/status/" rel="np" class="breadcrumb-arrow" itemprop="url">
+					<a href="<?php echo BASE_URL ?>game/status/" rel="np" class="breadcrumb-arrow" itemprop="url">
 					<span class="breadcrumb-text" itemprop="name"><?php echo $status['status']; ?></span>
 					</a>
 					</li>
 					<li itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-					<a href="<?php echo $website['root']; ?>game/status/" rel="np" class="breadcrumb-arrow" itemprop="url">
+					<a href="<?php echo BASE_URL ?>game/status/" rel="np" class="breadcrumb-arrow" itemprop="url">
 					<span class="breadcrumb-text" itemprop="name"><?php echo $Status['RealmStat']; ?></span>
 					</a>
 					</li>
@@ -353,7 +353,7 @@ include("../../header.php");
 
 				<tr class="row1">
 				<td>
-				<a href="" class="item-link color-c9"><strong><a href="'.$website['root'].'advanced.php?name='.$raw["name"].'">'.$raw["name"].'</a></strong>
+				<a href="" class="item-link color-c9"><strong><a href="'.BASE_URL.'advanced.php?name='.$raw["name"].'">'.$raw["name"].'</a></strong>
 				</a>
 				</td>
 				<td class="align-center">

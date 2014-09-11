@@ -1,16 +1,20 @@
 <div class="sidebar-module " id="sidebar-sotd" style="">
 <div class="sidebar-title">
-<h3 class="category title-sotd"><a href="<?php echo $website['root']; ?>game/status/"><?php echo $Status['StatRealms']; ?></a></h3></div>
+<h3 class="category title-sotd"><a href="<?php echo BASE_URL ?>game/status/"><?php echo $Status['StatRealms']; ?></a></h3></div>
     <div class="text-area-2" style="font-size:12px">
 		<?php echo $Ind['Ind5']; ?><font color='#FF0000'><?php echo $website['realm']; ?></font>
 	</div>
-    	<div class="text-area-2"><?php echo $Ind['Ind7']; ?><span class="date text-area-2">
-		<?php
-		$acct_sql = mysql_query("SELECT COUNT(*) FROM $server_adb.account");
-		$acc = mysql_result($acct_sql,0,0);
-		echo ("<font color='#FF0000'>$acc</font>");
-		?>
-		<?php echo $Ind['Ind8']; ?></span></div>
+    <div class="text-area-2"><?php echo $Ind['Ind7']; ?>
+		<span class="date text-area-2">
+			<?php
+			$server_adb = DBAUTH;
+			$acct_sql = mysql_query("SELECT COUNT(*) FROM $server_adb.account");
+			$acc = mysql_result($acct_sql,0,0);
+			echo ("<font color='#FF0000'>$acc</font>");
+			?>
+			<?php echo $Ind['Ind8']; ?>
+		</span>
+	</div>
 </div>
 <?php
 
@@ -62,7 +66,7 @@ $population = array(
 	3 => 'New Players',
 	4 => 'New'
 );
-
+$server_cdb = DBCHARS;
 function getPlayers($server_cdb) {
 return mysql_num_rows(mysql_query("SELECT 1 FROM $server_cdb.characters WHERE online = '1'"));
 }

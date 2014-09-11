@@ -26,7 +26,7 @@ include("configs.php");
 			}
 		</style>
 		<script>
-			var targetOrigin = "<?php echo $website['address']; ?>";
+			var targetOrigin = "<?php echo BASE_URL ?>";
 
 			function updateParent(action, key, value) {
 				var obj = { action: action };
@@ -48,8 +48,8 @@ include("configs.php");
 	</head>
   <body>
     <div id="embedded-login">
-	<center><a href="#" height="46" width="190"><img src="<?php echo $website['root'];?>wow/static/images/logos/wof-logo.png" /></a>
-    <br /><h2 class="wuaha2"><?php echo $website['title']; ?></h2></center>
+	<center><a href="#" height="46" width="190"><img src="<?php echo BASE_URL ?>wow/static/images/logos/wof-logo.png" /></a>
+    <br /><h2 class="wuaha2"><?php echo TITLE ?></h2></center>
 	<a id="embedded-close" href="javascript:;" onclick="updateParent('close')"> </a>
   <?php
   
@@ -131,7 +131,7 @@ include("configs.php");
   <?php } }else{
     ?>
     <script>
-    parent.postMessage("{\"action\":\"success\"}", "<?php echo $website['address']; ?>");
+    parent.postMessage("{\"action\":\"success\"}", "<?php echo BASE_URL ?>");
     </script>
     <?php
     echo "<h3><font color='green'>".$Log['Log10']."</font></h3>";
@@ -139,7 +139,7 @@ include("configs.php");
   } ?>
 	  <ul id="help-links">
 		  <li class="icon-pass">
-			<a href="<?php echo $website['root']; ?>forgot-pw.php"><?php echo $Log['Log11']; ?></a>
+			<a href="<?php echo BASE_URL ?>forgot-pw.php"><?php echo $Log['Log11']; ?></a>
 		  </li>
 			<li class="icon-signup">
 			  <?php echo $Log['Log12']; ?><a href="register"><?php echo $Log['Log13']; ?></a>!

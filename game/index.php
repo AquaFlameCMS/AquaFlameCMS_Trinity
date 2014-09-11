@@ -12,26 +12,26 @@ include_once("functions.d/GetGameTheme.php");
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <html>
 <head>
-<title><?php echo $website['title']; ?> - <?php echo $game['1']; ?></title>
+<title><?php echo TITLE ?> - <?php echo $game['1']; ?></title>
 <meta content="false" http-equiv="imagetoolbar" />
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
-<meta name="description" content="<?php echo $website['description']; ?>">
-<meta name="keywords" content="<?php echo $website['keywords']; ?>">
-<link rel="shortcut icon" href="../wow/static/local-common/images/favicons/wow.ico" type="image/x-icon" />
+<meta name="description" content="<?php echo DESCRIPTION ?>">
+<meta name="keywords" content="<?php echo KEYWORDS ?>">
+<link rel="shortcut icon" href="<?php echo BASE_URL ?>wow/static/local-common/images/favicons/wow.ico" type="image/x-icon" />
 <link rel="search" type="application/opensearchdescription+xml" href="http://eu.battle.net/en-gb/data/opensearch" title="Battle.net Search" />
-<!--[if IE]><link rel="stylesheet" href="../wow/static/local-common/css/common-ie.css?v15" /><![endif]-->
-<!--[if IE 6]><link rel="stylesheet" href="../wow/static/local-common/css/common-ie6.css?v15" /><![endif]-->
-<!--[if IE 7]><link rel="stylesheet" href="../wow/static/local-common/css/common-ie7.css?v15" /><![endif]-->
+<!--[if IE]><link rel="stylesheet" href="<?php echo BASE_URL ?>wow/static/local-common/css/common-ie.css?v15" /><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" href="<?php echo BASE_URL ?>wow/static/local-common/css/common-ie6.css?v15" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="<?php echo BASE_URL ?>wow/static/local-common/css/common-ie7.css?v15" /><![endif]-->
 <?php GetGameTheme(); ?>
 <!--[if IE]> <link rel="stylesheet" type="text/css" media="all" href="/wow/static/css/wiki/wiki-ie.css?v35" /><![endif]-->
-<!--[if IE 6]><link rel="stylesheet" href="../wow/static/css/cms-ie6.css?v4" /><![endif]-->
-<!--[if IE]><link rel="stylesheet" href="../wow/static/css/wow-ie.css?v4" /><![endif]-->
-<!--[if IE 6]><link rel="stylesheet" href="../wow/static/css/wow-ie6.css?v4" /><![endif]-->
-<!--[if IE 7]><link rel="stylesheet" href="../wow/static/css/wow-ie7.css?v4" /><![endif]-->
-<script src="../wow/static/local-common/js/third-party/jquery-1.4.4.min.js"></script>
-<script src="../wow/static/local-common/js/core.js?v15"></script>
-<script src="../wow/static/local-common/js/tooltip.js?v15"></script>
-<script src="../wow/static/local-common/js/cms.js"></script>
+<!--[if IE 6]><link rel="stylesheet" href="<?php echo BASE_URL ?>wow/static/css/cms-ie6.css?v4" /><![endif]-->
+<!--[if IE]><link rel="stylesheet" href="<?php echo BASE_URL ?>wow/static/css/wow-ie.css?v4" /><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" href="<?php echo BASE_URL ?>wow/static/css/wow-ie6.css?v4" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="<?php echo BASE_URL ?>wow/static/css/wow-ie7.css?v4" /><![endif]-->
+<script src="<?php echo BASE_URL ?>wow/static/local-common/js/third-party/jquery-1.4.4.min.js"></script>
+<script src="<?php echo BASE_URL ?>wow/static/local-common/js/core.js?v15"></script>
+<script src="<?php echo BASE_URL ?>wow/static/local-common/js/tooltip.js?v15"></script>
+<script src="<?php echo BASE_URL ?>wow/static/local-common/js/cms.js"></script>
 <!--[if IE 6]> <script type="text/javascript">
 //<![CDATA[
 try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
@@ -54,12 +54,12 @@ try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
 			<div class="content-trail">
 				<ol class="ui-breadcrumb">
 					<li itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-					<a href="<?php echo $website['root']; ?>" rel="np" class="breadcrumb-arrow" itemprop="url">
-					<span class="breadcrumb-text" itemprop="name"><?php echo $website['title']; ?></span>
+					<a href="<?php echo BASE_URL ?>" rel="np" class="breadcrumb-arrow" itemprop="url">
+					<span class="breadcrumb-text" itemprop="name"><?php echo TITLE ?></span>
 					</a>
 					</li>
 					<li class="last" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-					<a href="<?php echo $website['root']; ?>game/" rel="np" itemprop="url">
+					<a href="<?php echo BASE_URL ?>game/" rel="np" itemprop="url">
 					<span class="breadcrumb-text" itemprop="name"><?php echo $game['game']; ?></span>
 					</a>
 					</li>
@@ -312,13 +312,13 @@ try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
 							</div>
 							<div class="column" style="margin: 0 19px; width: 250px;">
 								<div class="box first-child">
-									<h2 class="header "><a href="<?php echo $website['root']; ?>zone/"><?php echo $game['37']; ?><span class="arrow"></span></a></h2>
+									<h2 class="header "><a href="<?php echo BASE_URL ?>zone/"><?php echo $game['37']; ?><span class="arrow"></span></a></h2>
 									<ul>
-										<li><a href="<?php echo $website['root']; ?>zone/#expansion=4"><?php echo $game['38']; ?></a></li>
-										<li><a href="<?php echo $website['root']; ?>zone/#expansion=3"><?php echo $game['39']; ?></a></li>
-										<li><a href="<?php echo $website['root']; ?>zone/#expansion=2"><?php echo $game['40']; ?></a></li>
-										<li><a href="<?php echo $website['root']; ?>zone/#expansion=1"><?php echo $game['41']; ?></a></li>
-										<li><a href="<?php echo $website['root']; ?>zone/#expansion=0"><?php echo $game['42']; ?></a></li>
+										<li><a href="<?php echo BASE_URL ?>zone/#expansion=4"><?php echo $game['38']; ?></a></li>
+										<li><a href="<?php echo BASE_URL ?>zone/#expansion=3"><?php echo $game['39']; ?></a></li>
+										<li><a href="<?php echo BASE_URL ?>zone/#expansion=2"><?php echo $game['40']; ?></a></li>
+										<li><a href="<?php echo BASE_URL ?>zone/#expansion=1"><?php echo $game['41']; ?></a></li>
+										<li><a href="<?php echo BASE_URL ?>zone/#expansion=0"><?php echo $game['42']; ?></a></li>
 									</ul>
 								</div>
 								<div class="box">
@@ -352,14 +352,14 @@ try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
 									<h2 class="header "><?php echo $game['56']; ?></h2>
 									<ul>
 										<li>
-										<a href="h<?php echo $website['root']; ?>game/tool/talent-calculator">
+										<a href="h<?php echo BASE_URL ?>game/tool/talent-calculator">
 										<span class="icon-frame frame-14 ">
 										<img src="http://media.blizzard.com/wow/icons/18/ability_marksmanship.jpg" alt="" width="14" height="14"/>
 										</span>
 										<?php echo $game['57']; ?></a>
 										</li>
 										<li>
-										<a href="<?php echo $website['root']; ?>game/status">
+										<a href="<?php echo BASE_URL ?>game/status">
 										<span class="icon-frame frame-14 ">
 										<img src="http://media.blizzard.com/wow/assets/misc/18/realm_status.gif" alt="" width="14" height="14"/>
 										</span>
@@ -528,7 +528,7 @@ try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
 			</div>
 		</div>
 	</div>
-<script type="text/javascript" src="../wow/static/local-common/js/search.js?v46"></script>
+<script type="text/javascript" src="<?php echo BASE_URL ?>wow/static/local-common/js/search.js?v46"></script>
 <script type="text/javascript">
 //<![CDATA[
 var xsToken = '';

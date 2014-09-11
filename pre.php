@@ -7,7 +7,7 @@ $page_cat="pre";
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de-de" class="ff ff25">
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-<title><?php echo $website['title']; ?> - Test TItle</title>
+<title><?php echo TITLE ?> - Test TItle</title>
 <link rel="shortcut icon" href="pre/img/favicon.ico" type="image/x-icon" />
 <script type="text/javascript" src="pre/js/jquery-1.js"></script>
 <script type="text/javascript" src="pre/js/core.js"></script>
@@ -35,7 +35,7 @@ img { border:0 }
 <div class="continue">
 <div class="continue-message">
 <p>
-<a href="<?php echo $website['root']; ?>" tabindex="1">
+<a href="<?php echo BASE_URL ?>" tabindex="1">
 <strong><? echo $Pre['next']; ?></strong>
 </a>
 </p>
@@ -66,10 +66,10 @@ html, body { background: #000 url("pre/img/bg.jpg") 50% 0 no-repeat; padding: 0;
 object, iframe { visibility: hidden; height: 1px; width: 1px; }
 </style>
 <div class="wrapper">
-<a class="learn-more" href="<?php echo $website['root']; ?> test link"></a>
+<a class="learn-more" href="<?php echo BASE_URL ?> test link"></a>
 <div class="legal">
 <div class="copyright">
-<?php echo $copyright3['copyright3']; ?>.<br /><?php echo $copyright['copyright']; ?> - <?php echo date('Y'); ?> <?php echo $website['title']; ?>.<br /><?php echo $copyright4['copyright4']; ?>
+<?php echo $copyright3['copyright3']; ?>.<br /><?php echo $copyright['copyright']; ?> - <?php echo date('Y'); ?> <?php echo TITLE ?>.<br /><?php echo $copyright4['copyright4']; ?>
 </div>
 <script type="text/javascript">
 //<![CDATA[

@@ -2,7 +2,7 @@
 require_once("../../configs.php");
 $page_cat = "security";
 if (!isset($_SESSION['username'])) {
-        header('Location: '.$website['root'].'account_log.php');		
+        header('Location: '.BASE_URL.'account_log.php');		
 }
 ?>
 <!DOCTYPE html>
@@ -12,12 +12,12 @@ if (!isset($_SESSION['username'])) {
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--><html class="no-js"><!--<![endif]-->
 <head>
-<title><?php echo $website['title']; ?> - <?php echo $Serv['Serv31']; ?>
+<title><?php echo TITLE ?> - <?php echo $Serv['Serv31']; ?>
 </title>
 <meta content="false" http-equiv="imagetoolbar"/>
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"/>
-<meta name="description" content="<?php echo $website['description']; ?>">
-<meta name="keywords" content="<?php echo $website['keywords']; ?>">
+<meta name="description" content="<?php echo DESCRIPTION ?>">
+<meta name="keywords" content="<?php echo KEYWORDS ?>">
 <link rel="shortcut icon" href="../../wow/static/local-common/images/favicons/wow.png" type="image/x-icon"/>
 <link rel="stylesheet" href="../../wow/static/local-common/css/common.css?v15"/>
 <!--[if IE]> <link rel="stylesheet" type="text/css" media="all" href="/wow/static/local-common/css/common-ie.css?v46" /><![endif]-->
@@ -47,11 +47,11 @@ try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
 		<div class="content-top-avatar">
 			<div class="content-trail">
 				<ol class="ui-breadcrumb">
-					<li><a href="<?php echo $website['root']; ?>" rel="np" class=""><?php echo $website['title']; ?>
+					<li><a href="<?php echo BASE_URL ?>" rel="np" class=""><?php echo TITLE ?>
 					</a><span class="breadcrumb-arrow"></span></li>
-					<li class=""><a href="<?php echo $website['root']; ?>shop/" rel="np"><?php echo $Shop['shop']; ?>
+					<li class=""><a href="<?php echo BASE_URL ?>shop/" rel="np"><?php echo $Shop['shop']; ?>
 					</a><span class="breadcrumb-arrow"></span></li>
-					<li class="last"><a href="<?php echo $website['root']; ?>shop/avatar/" rel="np">Avatar</a></li>
+					<li class="last"><a href="<?php echo BASE_URL ?>shop/avatar/" rel="np">Avatar</a></li>
 				</ol>
 			</div>
 			<div class="content-bot">
@@ -71,7 +71,7 @@ try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
 .submit {
 	height:38px;
 	width:128px;
-	background:url('<?php echo $website['root']; ?>wow/static/images/services/button.png') no-repeat;
+	background:url('<?php echo BASE_URL ?>wow/static/images/services/button.png') no-repeat;
 	border:0px;
 	color:#E0BB00;
 	text-shadow:0px 0px 2px #000;
@@ -88,7 +88,7 @@ try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
 .loader {
         width:24px;
         height:24px;
-        background: url("<?php echo $website['root']; ?>wow/static/images/loaders/canvas-loader.gif") no-repeat;
+        background: url("<?php echo BASE_URL ?>wow/static/images/loaders/canvas-loader.gif") no-repeat;
        }
 				</style>
 				<center>
@@ -105,7 +105,7 @@ if(@$_POST['avatar'] != ""){
 				</div>
 				<br/>
 				<font color="red">'.$Serv['Serv34'].'</font>
-				<meta http-equiv="refresh" content="2;url='.$website['root'].'shop"/>
+				<meta http-equiv="refresh" content="2;url='.BASE_URL.'shop"/>
 				</center>
 			</div>';
 			}else{
@@ -119,13 +119,13 @@ if(@$_POST['avatar'] != ""){
 				</div>
 				<br/>
 				<font color="aqua">'.$Serv['Serv35'].'</font>
-				<meta http-equiv="refresh" content="2;url='.$website['root'].'shop"/>
+				<meta http-equiv="refresh" content="2;url='.BASE_URL.'shop"/>
 				</center>
 			</div>'; }
 			}else{ ?>
 			<script>
 function colors (color){
-    document.getElementById("image").src="<?php echo $website['root']; ?>images/avatars/2d/"+color;
+    document.getElementById("image").src="<?php echo BASE_URL ?>images/avatars/2d/"+color;
 }
 			</script>
 			<table border="0" width="400">
@@ -134,7 +134,7 @@ function colors (color){
 					<td class="avatar">
 						<center>
 						<div class="avatar portrait-b">
-							<img id="image" src="<?php echo $website['root']; ?>images/avatars/2d/1-0.jpg" />
+							<img id="image" src="<?php echo BASE_URL ?>images/avatars/2d/1-0.jpg" />
 						</div>
 						<select onchange="colors(this.options[this.selectedIndex].value)" name="avatar">
 							<option value="1-0.jpg" selected><?php echo $uplate['r1']; ?>
@@ -187,7 +187,7 @@ echo '
 			<div class="loader">
 			</div>
 			<br/>
-			<meta http-equiv="refresh" content="2;url='.$website['root'].'shop"/>
+			<meta http-equiv="refresh" content="2;url='.BASE_URL.'shop"/>
 			</center>
 		</div>
 		 '; } ?> </center>

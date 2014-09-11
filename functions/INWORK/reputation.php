@@ -74,7 +74,7 @@ _gaq.push(['_trackPageLoadTime']);
 <ol class="ui-breadcrumb">
 <li>
 <a href="index.php" rel="np">
-<?php echo $website['title']; ?>
+<?php echo TITLE ?>
 </a>
 </li>
 <li>
