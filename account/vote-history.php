@@ -83,7 +83,7 @@ try { document.execCommand('BackgroundImageCache', false, true) } catch(e) {}
         ';
             
             while($raw = mysql_fetch_array($sql)){
-                $vote = mysql_fetch_assoc(mysql_query("SELECT * FROM vote WHERE id = '".$raw['voteid']."'"));
+                $vote = mysql_fetch_assoc(mysql_query("SELECT * FROM $server_db.vote WHERE id = '".$raw['voteid']."'"));
                 echo '
                 <tbody>
                 <tr class="parent-row">
