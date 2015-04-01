@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Error 503</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
+  <link rel="shortcut icon" href="../wow/static/local-common/images/wow.png">
+  <!---CSS Files-->
+  <link rel="stylesheet" href="css/core.css">
+  <link rel="stylesheet" href="css/ui.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!---jQuery Files-->
+  <script src="js/jquery.js"></script>
+  <script src="js/functions.js"></script>
+  <script src="js/inputs.js"></script>
+</head>
+<body>
+
+  <div id="wrapper">
+
+    <a href="#" class="page-refresh"></a>
+
+    <div class="err-cont">
+
+      <div class="error-head">
+        <div id="logo"></div>
+        <h1>ERROR</h1>
+      </div>
+
+    <h1 class="error-nr">503</h1>
+
+    <p class="error-msg">Service temporarily unavailable.</p>
+    <p class="error-desc">
+      We have reason to believe our servers have become self-aware.<br>
+      No reason to panic, but you should probably keep a shotgun nearby.
+    </p>
+    <span class="error-act txt-m">Click to refresh</span>
+
+    </div>
+
+  </div><!--END WRAPPER-->
+
+  <span id="load">
+    <img src="img/load.png"><img src="img/spinner.png" id="spinner">
+  </span>
+
+  <!---jQuery Code-->
+  <script type='text/javascript'>
+
+    // LOAD FUNCTIONS
+
+    $.fn.loadfns();
+
+  </script>
+</body>
+</html>

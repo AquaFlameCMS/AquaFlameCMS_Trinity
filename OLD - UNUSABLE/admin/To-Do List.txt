@@ -1,0 +1,29 @@
+= AquaFlame Project -- What has to be Done?! =
+
+1a) Make a Donation Panel.
+1b) Make the following: Character Transfer, Name Change, Faction Change, Appearance Change, Race Change.
+(They need the Donation Panel first)
+
+2) Conquest Criteria + Honor: Needs to be Scripted.
+	   (HTML is simple, need PHP Code)
+
+3) Work on Arena teams, Guild teams 
+	   (Just HTML is ready)
+
+Information about the Footer.
+1) Do not Change the Powered by AquaflameCMS 
+(It's against the Rules of the GNU of our Work)
+2) You can change the: Copyright 2011 - 2012 YOURNAME
+3) You MUST not change the Blizzard Copyrights you can get Sued.
+
+# --------------------------------------------------------------
+# |CMS:                                  |     AquaFlameCMS    |
+# |Based on:                             |http://eu.battle.net |
+# --------------------------------------------------------------
+# |Database version:                             |    0.7.0    |
+# |Website Version:                              |    0.7.0    |
+# |Release Date:                                 | 2010-05-17  |
+# |Latest Update:                                | 2013-05-07  |
+# ----------------------------TEAM------------------------------
+# |Team: FailZorD					       |
+# --------------------------------------------------------------

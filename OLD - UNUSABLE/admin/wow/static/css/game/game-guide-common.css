@@ -1,0 +1,55 @@
+@charset "utf-8";
+
+.ui-button {color:#ffa800;}
+.ui-button:hover {color:#fff;}
+
+.guide-top-nav {background: url("../../images/game/guide/bg-guide-menu.png") 0 0 no-repeat; width: 943px; height: 118px; margin: 7px auto 43px auto; padding: 11px; }
+.guide-top-nav a {display:block; float:left; width:188px; height:118px; position:relative;}
+.guide-top-nav a:hover, .guide-top-nav a.selected {background-image:url("../../images/game/guide/bg-guide-menu.png"); background-repeat:no-repeat;}
+.guide-top-nav a span {font-size:15px; line-height:17px; position:absolute; bottom:17px; left:13px; width:120px;}
+.guide-top-nav a em {font-style:normal;}
+.guide-top-nav a.selected {cursor:default;}
+.guide-top-nav a.selected span {color:#fff;}
+.guide-top-nav a .chapter-mark {display:block;}
+.guide-top-nav a.btn-what-is-wow:hover {background-position:-11px -151px;}
+.guide-top-nav a.btn-getting-started:hover {background-position:-199px -151px;}
+.guide-top-nav a.btn-how-to-play:hover {background-position:-387px -151px;}
+.guide-top-nav a.btn-playing-together:hover {background-position:-575px -151px;}
+.guide-top-nav a.btn-late-game:hover {background-position:-763px -151px;}
+.guide-top-nav a.btn-what-is-wow.selected {background-position:-11px -291px;}
+.guide-top-nav a.btn-getting-started.selected {background-position:-199px -291px;}
+.guide-top-nav a.btn-how-to-play.selected {background-position:-387px -291px;}
+.guide-top-nav a.btn-playing-together.selected {background-position:-575px -291px;}
+.guide-top-nav a.btn-late-game.selected {background-position:-763px -291px;}
+
+/*not used yet*/
+/*.headerplate-right-corner { height: 10px; width: 994px; background: url("../../images/layout/body-bg-baked-topright.jpg") no-repeat 0 0; position:absolute; top: -58px; left: 0; }*/
+
+.guide-intro-part {width:100%; padding-bottom:74px;}
+.guide-section-title a {border-right:1px solid #3f301b; display:inline-block; font-size:14px; line-height:15px; padding-right:9px; margin-left:50px;}
+.guide-section-title em {font-size:14px; line-height:15px; color:#e9bd7f; display:inline-block; margin-left:8px; font-style:normal;}
+.guide-section-title h4 {color:#efe3d2; font:normal 52px/61px Palatino Linotype, Sans-serif; letter-spacing:-2px; margin-left:50px; margin-top:3px; text-shadow: 0 0 5px #241209; color: #EFE3D2; }
+
+.guide-intro-text {margin-left:50px; width:430px; color:#b79855; font-size:16px; line-height:30px;}
+.guide-intro-text p strong {display:block; color:#efe3d2; text-transform:uppercase; font-weight:normal;}
+.guide-intro-text p {margin:30px 0 0 0;}
+
+.guide-sub-desc {color:#e9bd7f; font-size:12px; line-height:22px; margin-left:50px;}
+.guide-sub-desc p {margin:0; padding-bottom:24px;}
+.guide-detail-desc {color:#967648; font-size:12px; line-height:18px; margin:0 0 13px 0;}
+
+.guide-content-title {color:#efe3d2; font:normal 28px/29px Palatino Linotype, Sans-serif; margin:0 0 48px 0; padding-left:50px; display:block;}
+.guide-content-subtitle {color:#f3ecc7; font:normal 16px Palatino Linotype, Sans-serif; margin-left:50px; letter-spacing:1.3px; text-transform:uppercase;}
+
+/* box sections */
+.box { position: relative; color: #967648; min-height: 200px; clear: both; }
+.box.intro { color: #e9bd7f; line-height: 200%; height: auto; min-height: inherit; }
+.box.box-left { padding: 0 525px 100px 50px; }
+.box.box-right { padding: 0 50px 100px 525px; }
+.box .guide-content-subtitle { margin: 0 0 10px 0; padding: 0 0 0 55px; height: 45px; }
+.box .guide-content-subtitle.single-line { line-height: 41px; }
+.box .media-frame { position: absolute; top: 0; }
+.box-left .media-frame { right: 50px; }
+.box-right .media-frame { left: 50px; }
+
+.ie67 .zh-tw .guide-content-title { zoom: 1; }
